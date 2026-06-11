@@ -18,9 +18,11 @@ Run it directly:  python3 derive/build_dashboard_data.py
 Stdlib only — no third-party dependencies.
 """
 
+import html
 import json
 import math
 import os
+import re
 import statistics
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
@@ -40,6 +42,79 @@ def load(*path):
     full = os.path.join(*path)
     with open(full, encoding="utf-8") as fh:
         return json.load(fh)
+
+
+# ---------------------------------------------------------------------------
+# Video taxonomy — a CUSTOM, rule-based classification of channel titles.
+# This is our own grouping, not the channel's: each category is an ordered
+# regex over the (HTML-unescaped) title, the FIRST matching rule wins, and
+# anything no rule matches lands in "Unclassified" rather than being forced
+# into a bucket. The dashboard shows example titles per category so every
+# assignment can be eyeballed against the rules below.
+VIDEO_TAXONOMY = [
+    ("Classic films & TV shows",
+     r"flipper|gilligan|popeye|mchale|sea hunt|mutiny|caine|sand pebbles|"
+     r"sea hawk|mister roberts|petticoat|midway|don winslow|dolphin|"
+     r"tempest|pirate|buccaneer|\bseason (one|two|three|\d+)\b"),
+    ("PSAs & promo spots",
+     r"\(:\d+\)|_\d+ ?sec|\bpsa\b|promo|influencer"),
+    ("Cruising & partner series",
+     r"\bwwtv\b|\bww \d|waves of hope|progressive|\bs\d+ ?e\d+\b|"
+     r"\brbff\b|\btcf\b|\bwsf\b|season review"),
+    ("Life jackets, ECOS & safety gear",
+     r"life jacket|life vest|wear it|wear life|\becos\b|engine cut|"
+     r"kill switch|fire extinguisher|carbon monoxide|first aid|flare|"
+     r"immersion|dressing"),
+    ("Sober boating (BUI)",
+     r"\bbui\b|sober|alcohol|impair|drink"),
+    ("Paddlesports",
+     r"kayak|canoe|paddl|\bsup\b|stand.?up"),
+    ("PWC & tow sports",
+     r"\bpwc\b|jet ski|water ski|wakeboard|tubing|skier|wake sports|"
+     r"wake surf|aquabike"),
+    ("Rules, navigation & boat handling",
+     r"rules|navigat|buoy|chart|anchor|dock|depart|knot|right of way|"
+     r"aids to|steering|pivot|overboard|mooring|\bmob\b|signals|distress|"
+     r"mayday|rescue|engine failure|maintenance|arrival"),
+    ("Kids & family",
+     r"\bkids?\b|family|children|youth|junior"),
+    ("Fishing & hunting",
+     r"fish|angler|hunt"),
+    ("Industry & boat shows",
+     r"yacht|simrad|whaler|marine .{0,12}(resort|group)|championship|"
+     r"boat show"),
+    ("General safety & boating tips",
+     r"safe|safety|tips|boat|marina|launch|fuel|weather|storm|hurricane|"
+     r"water|river|lake|swim|sail|crew|captain|sea\b|drowning|"
+     r"electric shock|mmsi|vhf|\bradio\b|drone|fails"),
+]
+VIDEO_TAXONOMY = [(name, re.compile(pattern, re.IGNORECASE))
+                  for name, pattern in VIDEO_TAXONOMY]
+# Spanish-language detection: distinctive Spanish words, or at least two
+# Spanish function words (a single "de" can appear in English titles).
+SPANISH_STRONG = re.compile(
+    r"embarcacion|seguridad|anclaje|amarre|boya|equilibrio|biblioteca|"
+    r"inspeccion|recursos|remolque|practicas|navegacion|salvavidas|"
+    r"\bcorta\b|asegura|diversion|atun|mejor salir|partida|cinturones",
+    re.IGNORECASE)
+SPANISH_STOPWORDS = re.compile(
+    r"\b(de|la|el|en|del|una|para|con|los|las|tu|y)\b", re.IGNORECASE)
+# Many vintage uploads carry only a bare episode title ("THE PINK PEARL"),
+# so as a last resort before Unclassified, a classic TV-episode runtime
+# (20-35 minutes) assigns them to a bucket whose NAME states the rule.
+EPISODE_RUNTIME = (20 * 60, 35 * 60)
+
+
+def classify_video(title, duration_seconds):
+    t = html.unescape(title or "")
+    if SPANISH_STRONG.search(t) or len(SPANISH_STOPWORDS.findall(t)) >= 2:
+        return "En español"
+    for name, pattern in VIDEO_TAXONOMY:
+        if pattern.search(t):
+            return name
+    if EPISODE_RUNTIME[0] <= (duration_seconds or 0) <= EPISODE_RUNTIME[1]:
+        return "Vintage TV episodes (by 20–35 min runtime)"
+    return "Unclassified"
 
 
 def money_stats(values):
@@ -76,10 +151,15 @@ def main():
 
     # ------------------------------------------------------------------ clubs
     by_state = Counter(c["state"] for c in clubs if c["state"])
+    # Upcoming-class counts per squadron, so the map can show which clubs
+    # are actively teaching right now.
+    classes_by_sqdno = {e["sqdno"]: e["classes"]
+                        for e in schedule_d.get("per_club", [])}
     club_map_points = [
         {"name": c["name"], "state": c["state"], "lat": c["latitude"],
          "lng": c["longitude"],
          "website": bool(c.get("website")),
+         "classes": classes_by_sqdno.get(c.get("sqdno"), 0),
          "sqdno": c.get("sqdno")}
         for c in clubs if c.get("latitude") is not None]
     clubs_block = {
@@ -147,6 +227,10 @@ def main():
     title_counts = Counter(cl["title"] for cl in classes)
     state_counts = Counter(cl["club_state"] for cl in classes
                            if cl["club_state"])
+    state_by_sqdno = {c.get("sqdno"): c.get("state") for c in clubs}
+    most_active = sorted(
+        (e for e in schedule_d.get("per_club", []) if e.get("classes")),
+        key=lambda e: -e["classes"])[:8]
     schedule_block = {
         "total_upcoming": len(classes),
         "clubs_with_classes": schedule_d["_provenance"]["clubs_with_classes"],
@@ -155,12 +239,47 @@ def main():
         "by_month": dict(sorted(classes_by_month.items())),
         "top_titles": title_counts.most_common(12),
         "by_state": dict(state_counts.most_common()),
+        "most_active_clubs": [
+            {"club": e["club"], "state": state_by_sqdno.get(e["sqdno"]),
+             "classes": e["classes"]} for e in most_active],
     }
     log(f"Schedule: {schedule_block['total_upcoming']} upcoming classes at "
         f"{schedule_block['clubs_with_classes']} of "
         f"{schedule_block['clubs_checked']} clubs.")
 
     # -------------------------------------------------------------- education
+    # Join the catalog against the live schedule: which of the 40 catalog
+    # items actually have a class on the calendar somewhere in the country?
+    def edu_path(url):
+        path = (url or "").split("americasboatingclub.org", 1)[-1]
+        return path.replace("/index.php", "", 1).rstrip("/")
+    catalog_by_path = {edu_path(item["url"]): item for item in catalog}
+    catalog_by_title = {item["title"].lower(): item for item in catalog}
+    for item in catalog:
+        item["upcoming_classes"] = 0
+    outside_catalog = Counter()
+    for cl in classes:
+        item = (catalog_by_path.get(edu_path(cl.get("course_url")))
+                or catalog_by_title.get((cl.get("title") or "").lower()))
+        if item:
+            item["upcoming_classes"] += 1
+        else:
+            outside_catalog[cl.get("title") or "untitled"] += 1
+    items_with_upcoming = sum(1 for i in catalog if i["upcoming_classes"])
+    coverage = {
+        "items_with_upcoming": items_with_upcoming,
+        "items_dormant": len(catalog) - items_with_upcoming,
+        "classes_matching_catalog": sum(i["upcoming_classes"]
+                                        for i in catalog),
+        "classes_outside_catalog": sum(outside_catalog.values()),
+        "outside_catalog_titles": outside_catalog.most_common(5),
+    }
+    log(f"Education coverage: {items_with_upcoming} of {len(catalog)} "
+        f"catalog items have at least one upcoming class; "
+        f"{coverage['classes_outside_catalog']} scheduled classes teach "
+        f"offerings outside the catalog "
+        f"(top: {coverage['outside_catalog_titles'][:2]}).")
+
     edu_by_cat = defaultdict(lambda: {"courses": [], "seminars": []})
     for item in catalog:
         edu_by_cat[item["category"]][item["kind"] + "s"].append(item["title"])
@@ -168,6 +287,7 @@ def main():
         "courses": education["counts"]["courses"],
         "seminars": education["counts"]["seminars"],
         "by_category": {cat: v for cat, v in sorted(edu_by_cat.items())},
+        "catalog_coverage": coverage,
         "catalog": catalog,
     }
 
@@ -259,9 +379,58 @@ def main():
             "median_minutes": (round(statistics.median(with_duration) / 60, 1)
                                if with_duration else None),
         }
+    # Feature-length vs short-form: a transparent rule (60 minutes or more
+    # counts as feature-length) splits the classic films from the original
+    # safety shorts.
+    total_hours = sum(durations) / 3600
+    feature_secs = [s for s in durations if s >= 3600]
+    length_mix = {
+        "rule": "runtime of 60 minutes or more counts as feature-length",
+        "feature_videos": len(feature_secs),
+        "feature_hours": round(sum(feature_secs) / 3600, 1),
+        "short_videos": len(videos) - len(feature_secs),
+        "short_hours": round(total_hours - sum(feature_secs) / 3600, 1),
+        "feature_share_of_runtime_pct": (
+            round(sum(feature_secs) / 3600 / total_hours * 100, 1)
+            if total_hours else None),
+    }
+
+    # Custom taxonomy over titles (rules at the top of this file).
+    tax_counts = Counter()
+    tax_hours = defaultdict(float)
+    tax_examples = defaultdict(list)
+    for v in videos:
+        cat = classify_video(v["name"], v["duration_seconds"])
+        tax_counts[cat] += 1
+        tax_hours[cat] += (v["duration_seconds"] or 0) / 3600
+        if len(tax_examples[cat]) < 3:
+            tax_examples[cat].append(html.unescape(v["name"] or ""))
+    taxonomy = {
+        "method": ("Our own grouping, not the channel's: ordered keyword "
+                   "rules over titles, first match wins; Spanish detected "
+                   "by Spanish words; bare titles with a classic 20-35 min "
+                   "episode runtime are bucketed as vintage TV. Whatever "
+                   "no rule matches stays Unclassified — mostly one-off "
+                   "story features and bare cartoon/serial titles with no "
+                   "keyword signal. Rules live in "
+                   "derive/build_dashboard_data.py."),
+        "categories": [
+            {"name": name, "videos": n,
+             "hours": round(tax_hours[name], 1),
+             "examples": tax_examples[name]}
+            for name, n in tax_counts.most_common()],
+    }
+    log(f"Video taxonomy: " + ", ".join(
+        f"{c['name']} {c['videos']}" for c in taxonomy["categories"]) + ".")
+    log(f"Length mix: {length_mix['feature_videos']} feature-length videos "
+        f"hold {length_mix['feature_hours']}h "
+        f"({length_mix['feature_share_of_runtime_pct']}% of all runtime).")
+
     videos_block = {
         "total": len(videos),
         "by_year": by_year,
+        "length_mix": length_mix,
+        "taxonomy": taxonomy,
         "total_runtime_hours": round(sum(durations) / 3600, 1),
         "median_duration_minutes": (round(statistics.median(durations) / 60, 1)
                                     if durations else None),
@@ -284,12 +453,31 @@ def main():
     failures_total = sum(d.get("failed", 0) for d in per_domain.values())
     lastmod_by_year = Counter((e["lastmod"] or "")[:4] or "unknown"
                               for e in content_dates["entries"])
+    broken = pages.get("broken_links", [])
+    def pretty_link_source(src):
+        if src.startswith("sitemap:"):
+            return "the site's own sitemap"
+        if src == "unfetched queue from a previous run":
+            return "an earlier crawl pass"
+        return src
+    from_sitemap = sum(1 for b in broken
+                       if b["linked_from"].startswith("sitemap:"))
+    log(f"Broken links: {len(broken)} URLs 404ed when followed; "
+        f"{from_sitemap} of them are advertised by a site's own sitemap.")
     site_block = {
         "domains_crawled": len(per_domain),
         "pages_fetched": pages_total,
         "fetch_failures": failures_total,
         "per_domain": per_domain,
         "main_site_lastmod_by_year": dict(sorted(lastmod_by_year.items())),
+        "broken_links": {
+            "total": len(broken),
+            "advertised_by_sitemap": from_sitemap,
+            "by_domain": dict(Counter(b["domain"] for b in broken)),
+            "top": [{"url": b["url"],
+                     "linked_from": pretty_link_source(b["linked_from"])}
+                    for b in broken[:12]],
+        },
         "notes": [
             "www.usps.org (the parent organization's legacy site) answered "
             "one request at the start of the session, then became "

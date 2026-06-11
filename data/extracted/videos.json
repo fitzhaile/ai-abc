@@ -2,7 +2,7 @@
  "_provenance": {
   "description": "One record per video page on americasboatingchannel.uscreen.io (/programs/...), read from the schema.org VideoObject JSON-LD each page embeds. Pages lacking that block are counted and skipped, never guessed.",
   "script": "derive/extract.py",
-  "extracted_at": "2026-06-11T20:31:31Z",
+  "extracted_at": "2026-06-11T21:18:16Z",
   "sources": [
    "data/crawl/index.jsonl",
    "data/raw/americasboatingchannel.uscreen.io/"

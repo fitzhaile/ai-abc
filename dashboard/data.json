@@ -55,6 +55,7 @@
     "lat": 64.81,
     "lng": -147.72,
     "website": true,
+    "classes": 0,
     "sqdno": "0076"
    },
    {
@@ -63,6 +64,7 @@
     "lat": 34.744765,
     "lng": -86.670411,
     "website": true,
+    "classes": 0,
     "sqdno": "2400"
    },
    {
@@ -71,6 +73,7 @@
     "lat": 33.469624,
     "lng": -86.806738,
     "website": true,
+    "classes": 0,
     "sqdno": "6105"
    },
    {
@@ -79,6 +82,7 @@
     "lat": 34.142577,
     "lng": -117.260572,
     "website": true,
+    "classes": 0,
     "sqdno": "0195"
    },
    {
@@ -87,6 +91,7 @@
     "lat": 33.62,
     "lng": -117.87,
     "website": true,
+    "classes": 0,
     "sqdno": "0300"
    },
    {
@@ -95,6 +100,7 @@
     "lat": 33.2015,
     "lng": -117.3524,
     "website": true,
+    "classes": 10,
     "sqdno": "5220"
    },
    {
@@ -103,6 +109,7 @@
     "lat": 37.71,
     "lng": -122.16,
     "website": true,
+    "classes": 0,
     "sqdno": "4350"
    },
    {
@@ -111,6 +118,7 @@
     "lat": 32.7133,
     "lng": -117.2366,
     "website": true,
+    "classes": 0,
     "sqdno": "5115"
    },
    {
@@ -119,6 +127,7 @@
     "lat": 38.0213,
     "lng": -121.3806,
     "website": true,
+    "classes": 0,
     "sqdno": "5190"
    },
    {
@@ -127,6 +136,7 @@
     "lat": 34.4,
     "lng": -119.72,
     "website": true,
+    "classes": 0,
     "sqdno": "5235"
    },
    {
@@ -135,6 +145,7 @@
     "lat": 33.6,
     "lng": -117.64,
     "website": true,
+    "classes": 0,
     "sqdno": "5926"
    },
    {
@@ -143,6 +154,7 @@
     "lat": 34.33,
     "lng": -119.31,
     "website": true,
+    "classes": 0,
     "sqdno": "6045"
    },
    {
@@ -151,6 +163,7 @@
     "lat": 38.633418,
     "lng": -121.492052,
     "website": true,
+    "classes": 1,
     "sqdno": "4890"
    },
    {
@@ -159,6 +172,7 @@
     "lat": 37.86,
     "lng": -122.07,
     "website": true,
+    "classes": 0,
     "sqdno": "1530"
    },
    {
@@ -167,6 +181,7 @@
     "lat": 34.29,
     "lng": -118.5,
     "website": true,
+    "classes": 0,
     "sqdno": "5898"
    },
    {
@@ -175,6 +190,7 @@
     "lat": 40.017235,
     "lng": -105.285131,
     "website": true,
+    "classes": 0,
     "sqdno": "0620"
    },
    {
@@ -183,6 +199,7 @@
     "lat": 41.076759,
     "lng": -73.485254,
     "website": true,
+    "classes": 0,
     "sqdno": "1365"
    },
    {
@@ -191,6 +208,7 @@
     "lat": 41.0502,
     "lng": -73.6235,
     "website": true,
+    "classes": 0,
     "sqdno": "0875"
    },
    {
@@ -199,6 +217,7 @@
     "lat": 41.687,
     "lng": -72.7308,
     "website": true,
+    "classes": 0,
     "sqdno": "2220"
    },
    {
@@ -207,6 +226,7 @@
     "lat": 41.3768,
     "lng": -73.4601,
     "website": true,
+    "classes": 0,
     "sqdno": "2730"
    },
    {
@@ -215,6 +235,7 @@
     "lat": 41.611,
     "lng": -72.7774,
     "website": false,
+    "classes": 0,
     "sqdno": "3690"
    },
    {
@@ -223,6 +244,7 @@
     "lat": 41.31,
     "lng": -72.92,
     "website": true,
+    "classes": 0,
     "sqdno": "3705"
    },
    {
@@ -231,6 +253,7 @@
     "lat": 41.09,
     "lng": -73.42,
     "website": true,
+    "classes": 1,
     "sqdno": "3900"
    },
    {
@@ -239,6 +262,7 @@
     "lat": 41.09,
     "lng": -73.55,
     "website": true,
+    "classes": 0,
     "sqdno": "5670"
    },
    {
@@ -247,6 +271,7 @@
     "lat": 41.55,
     "lng": -73.03,
     "website": true,
+    "classes": 0,
     "sqdno": "6150"
    },
    {
@@ -255,6 +280,7 @@
     "lat": 41.7688,
     "lng": -72.508,
     "website": false,
+    "classes": 0,
     "sqdno": "3060"
    },
    {
@@ -263,6 +289,7 @@
     "lat": 41.53,
     "lng": -72.79,
     "website": true,
+    "classes": 0,
     "sqdno": "3210"
    },
    {
@@ -271,6 +298,7 @@
     "lat": 41.585223,
     "lng": -72.612797,
     "website": true,
+    "classes": 0,
     "sqdno": "3300"
    },
    {
@@ -279,6 +307,7 @@
     "lat": 41.350718,
     "lng": -72.106245,
     "website": true,
+    "classes": 0,
     "sqdno": "3720"
    },
    {
@@ -287,6 +316,7 @@
     "lat": 41.714918,
     "lng": -72.213396,
     "website": true,
+    "classes": 0,
     "sqdno": "3915"
    },
    {
@@ -295,6 +325,7 @@
     "lat": 41.13,
     "lng": -73.28,
     "website": true,
+    "classes": 0,
     "sqdno": "4290"
    },
    {
@@ -303,6 +334,7 @@
     "lat": 41.29,
     "lng": -72.36,
     "website": true,
+    "classes": 0,
     "sqdno": "5340"
    },
    {
@@ -311,6 +343,7 @@
     "lat": 39.73,
     "lng": -75.53,
     "website": true,
+    "classes": 0,
     "sqdno": "6270"
    },
    {
@@ -319,6 +352,7 @@
     "lat": 27.48,
     "lng": -82.57,
     "website": true,
+    "classes": 1,
     "sqdno": "0150"
    },
    {
@@ -327,6 +361,7 @@
     "lat": 26.63,
     "lng": -81.99,
     "website": true,
+    "classes": 0,
     "sqdno": "0840"
    },
    {
@@ -335,6 +370,7 @@
     "lat": 27.9797,
     "lng": -82.7794,
     "website": true,
+    "classes": 6,
     "sqdno": "1110"
    },
    {
@@ -343,6 +379,7 @@
     "lat": 29.1935,
     "lng": -81.0536,
     "website": true,
+    "classes": 0,
     "sqdno": "1395"
    },
    {
@@ -351,6 +388,7 @@
     "lat": 26.639,
     "lng": -81.8404,
     "website": true,
+    "classes": 0,
     "sqdno": "1815"
    },
    {
@@ -359,6 +397,7 @@
     "lat": 28.8,
     "lng": -81.88,
     "website": true,
+    "classes": 0,
     "sqdno": "2210"
    },
    {
@@ -367,6 +406,7 @@
     "lat": 30.329882,
     "lng": -81.651672,
     "website": true,
+    "classes": 1,
     "sqdno": "2490"
    },
    {
@@ -375,6 +415,7 @@
     "lat": 24.5796,
     "lng": -81.6849,
     "website": true,
+    "classes": 0,
     "sqdno": "2625"
    },
    {
@@ -383,6 +424,7 @@
     "lat": 28.0327,
     "lng": -81.9518,
     "website": true,
+    "classes": 0,
     "sqdno": "2775"
    },
    {
@@ -391,6 +433,7 @@
     "lat": 27.48,
     "lng": -82.57,
     "website": true,
+    "classes": 2,
     "sqdno": "3055"
    },
    {
@@ -399,6 +442,7 @@
     "lat": 24.727919,
     "lng": -81.038581,
     "website": true,
+    "classes": 0,
     "sqdno": "3105"
    },
    {
@@ -407,6 +451,7 @@
     "lat": 25.94,
     "lng": -81.73,
     "website": true,
+    "classes": 18,
     "sqdno": "3125"
    },
    {
@@ -415,6 +460,7 @@
     "lat": 26.14,
     "lng": -81.79,
     "website": true,
+    "classes": 0,
     "sqdno": "3615"
    },
    {
@@ -423,6 +469,7 @@
     "lat": 26.8027,
     "lng": -80.0791,
     "website": true,
+    "classes": 8,
     "sqdno": "4170"
    },
    {
@@ -431,6 +478,7 @@
     "lat": 26.990475,
     "lng": -82.096372,
     "website": true,
+    "classes": 8,
     "sqdno": "4245"
    },
    {
@@ -439,6 +487,7 @@
     "lat": 30.422282,
     "lng": -87.224763,
     "website": true,
+    "classes": 0,
     "sqdno": "4320"
    },
    {
@@ -447,6 +496,7 @@
     "lat": 26.2789,
     "lng": -80.1171,
     "website": true,
+    "classes": 0,
     "sqdno": "4440"
    },
    {
@@ -455,6 +505,7 @@
     "lat": 26.4973,
     "lng": -81.9071,
     "website": true,
+    "classes": 5,
     "sqdno": "5100"
    },
    {
@@ -463,6 +514,7 @@
     "lat": 26.4514,
     "lng": -82.086825,
     "website": true,
+    "classes": 4,
     "sqdno": "5071"
    },
    {
@@ -471,6 +523,7 @@
     "lat": 27.3109,
     "lng": -82.5195,
     "website": true,
+    "classes": 14,
     "sqdno": "5295"
    },
    {
@@ -479,6 +532,7 @@
     "lat": 28.08,
     "lng": -80.6,
     "website": true,
+    "classes": 0,
     "sqdno": "0330"
    },
    {
@@ -487,6 +541,7 @@
     "lat": 27.196834,
     "lng": -80.253786,
     "website": true,
+    "classes": 0,
     "sqdno": "5010"
    },
    {
@@ -495,6 +550,7 @@
     "lat": 27.789015,
     "lng": -82.677939,
     "website": true,
+    "classes": 2,
     "sqdno": "5040"
    },
    {
@@ -503,6 +559,7 @@
     "lat": 27.95,
     "lng": -82.48,
     "website": true,
+    "classes": 0,
     "sqdno": "5835"
    },
    {
@@ -511,6 +568,7 @@
     "lat": 28.332451,
     "lng": -80.612066,
     "website": true,
+    "classes": 0,
     "sqdno": "1155"
    },
    {
@@ -519,6 +577,7 @@
     "lat": 29.7704,
     "lng": -82.2741,
     "website": true,
+    "classes": 0,
     "sqdno": "1965"
    },
    {
@@ -527,6 +586,7 @@
     "lat": 25.773523,
     "lng": -80.357232,
     "website": false,
+    "classes": 0,
     "sqdno": "3255"
    },
    {
@@ -535,6 +595,7 @@
     "lat": 27.053022,
     "lng": -82.404096,
     "website": true,
+    "classes": 2,
     "sqdno": "6030"
    },
    {
@@ -543,6 +604,7 @@
     "lat": 27.64,
     "lng": -80.39,
     "website": true,
+    "classes": 0,
     "sqdno": "6075"
    },
    {
@@ -551,6 +613,7 @@
     "lat": 33.888,
     "lng": -84.2911,
     "website": true,
+    "classes": 1,
     "sqdno": "0240"
    },
    {
@@ -559,6 +622,7 @@
     "lat": 31.16916,
     "lng": -81.382421,
     "website": true,
+    "classes": 2,
     "sqdno": "2000"
    },
    {
@@ -567,6 +631,7 @@
     "lat": 31.9856,
     "lng": -81.1288,
     "website": true,
+    "classes": 6,
     "sqdno": "5970"
    },
    {
@@ -575,6 +640,7 @@
     "lat": 41.6142,
     "lng": -93.5543,
     "website": true,
+    "classes": 0,
     "sqdno": "1500"
    },
    {
@@ -583,6 +649,7 @@
     "lat": 41.97,
     "lng": -91.66,
     "website": true,
+    "classes": 0,
     "sqdno": "0945"
    },
    {
@@ -591,6 +658,7 @@
     "lat": 42.5274,
     "lng": -92.2718,
     "website": false,
+    "classes": 0,
     "sqdno": "6170"
    },
    {
@@ -599,6 +667,7 @@
     "lat": 42.03,
     "lng": -88.08,
     "website": true,
+    "classes": 0,
     "sqdno": "1935"
    },
    {
@@ -607,6 +676,7 @@
     "lat": 40.74,
     "lng": -89.6,
     "website": true,
+    "classes": 0,
     "sqdno": "2430"
    },
    {
@@ -615,6 +685,7 @@
     "lat": 39.78,
     "lng": -89.64,
     "website": true,
+    "classes": 0,
     "sqdno": "2805"
    },
    {
@@ -623,6 +694,7 @@
     "lat": 40.47,
     "lng": -88.97,
     "website": true,
+    "classes": 0,
     "sqdno": "3316"
    },
    {
@@ -631,6 +703,7 @@
     "lat": 42.3639,
     "lng": -87.8447,
     "website": true,
+    "classes": 0,
     "sqdno": "6195"
    },
    {
@@ -639,6 +712,7 @@
     "lat": 42.16,
     "lng": -87.96,
     "website": true,
+    "classes": 0,
     "sqdno": "5505"
    },
    {
@@ -647,6 +721,7 @@
     "lat": 41.8086,
     "lng": -88.0231,
     "website": true,
+    "classes": 0,
     "sqdno": "1575"
    },
    {
@@ -655,6 +730,7 @@
     "lat": 42.2832,
     "lng": -89.004,
     "website": true,
+    "classes": 0,
     "sqdno": "4770"
    },
    {
@@ -663,6 +739,7 @@
     "lat": 41.71,
     "lng": -86.87,
     "website": true,
+    "classes": 0,
     "sqdno": "3285"
    },
    {
@@ -671,6 +748,7 @@
     "lat": 39.4668,
     "lng": -87.4112,
     "website": true,
+    "classes": 0,
     "sqdno": "6120"
    },
    {
@@ -679,6 +757,7 @@
     "lat": 39.115733,
     "lng": -94.627139,
     "website": true,
+    "classes": 0,
     "sqdno": "2565"
    },
    {
@@ -687,6 +766,7 @@
     "lat": 38.250734,
     "lng": -85.747646,
     "website": true,
+    "classes": 0,
     "sqdno": "2970"
    },
    {
@@ -695,6 +775,7 @@
     "lat": 38.01388,
     "lng": -84.581522,
     "website": true,
+    "classes": 0,
     "sqdno": "0570"
    },
    {
@@ -703,6 +784,7 @@
     "lat": 30.2894,
     "lng": -93.0808,
     "website": true,
+    "classes": 0,
     "sqdno": "2745"
    },
    {
@@ -711,6 +793,7 @@
     "lat": 30.37,
     "lng": -90.08,
     "website": true,
+    "classes": 0,
     "sqdno": "2793"
    },
    {
@@ -719,6 +802,7 @@
     "lat": 30.007081,
     "lng": -90.109384,
     "website": true,
+    "classes": 0,
     "sqdno": "3735"
    },
    {
@@ -727,6 +811,7 @@
     "lat": 30.44,
     "lng": -91.12,
     "website": true,
+    "classes": 0,
     "sqdno": "0375"
    },
    {
@@ -735,6 +820,7 @@
     "lat": 32.47,
     "lng": -93.79,
     "website": true,
+    "classes": 0,
     "sqdno": "5460"
    },
    {
@@ -743,6 +829,7 @@
     "lat": 41.52,
     "lng": -70.66,
     "website": true,
+    "classes": 0,
     "sqdno": "0735"
    },
    {
@@ -751,6 +838,7 @@
     "lat": 41.6607,
     "lng": -70.2924,
     "website": true,
+    "classes": 0,
     "sqdno": "0825"
    },
    {
@@ -759,6 +847,7 @@
     "lat": 42.4456,
     "lng": -71.2304,
     "website": true,
+    "classes": 0,
     "sqdno": "1005"
    },
    {
@@ -767,6 +856,7 @@
     "lat": 42.2971,
     "lng": -71.227,
     "website": true,
+    "classes": 0,
     "sqdno": "2040"
    },
    {
@@ -775,6 +865,7 @@
     "lat": 42.287476,
     "lng": -71.35741,
     "website": true,
+    "classes": 0,
     "sqdno": "3810"
    },
    {
@@ -783,6 +874,7 @@
     "lat": 42.5685,
     "lng": -70.8619,
     "website": true,
+    "classes": 0,
     "sqdno": "0510"
    },
    {
@@ -791,6 +883,7 @@
     "lat": 42.1315,
     "lng": -70.8467,
     "website": true,
+    "classes": 4,
     "sqdno": "4020"
    },
    {
@@ -799,6 +892,7 @@
     "lat": 42.13,
     "lng": -72.75,
     "website": true,
+    "classes": 1,
     "sqdno": "5655"
    },
    {
@@ -807,6 +901,7 @@
     "lat": 42.45,
     "lng": -73.26,
     "website": true,
+    "classes": 0,
     "sqdno": "0480"
    },
    {
@@ -815,6 +910,7 @@
     "lat": 39.2844,
     "lng": -76.5422,
     "website": true,
+    "classes": 0,
     "sqdno": "1560"
    },
    {
@@ -823,6 +919,7 @@
     "lat": 38.946,
     "lng": -76.491,
     "website": true,
+    "classes": 0,
     "sqdno": "0165"
    },
    {
@@ -831,6 +928,7 @@
     "lat": 38.347514,
     "lng": -75.186557,
     "website": true,
+    "classes": 0,
     "sqdno": "3980"
    },
    {
@@ -839,6 +937,7 @@
     "lat": 39.11,
     "lng": -76.55,
     "website": true,
+    "classes": 0,
     "sqdno": "4200"
    },
    {
@@ -847,6 +946,7 @@
     "lat": 38.2267,
     "lng": -76.4333,
     "website": true,
+    "classes": 0,
     "sqdno": "4230"
    },
    {
@@ -855,6 +955,7 @@
     "lat": 38.56,
     "lng": -76.07,
     "website": true,
+    "classes": 0,
     "sqdno": "0765"
    },
    {
@@ -863,6 +964,7 @@
     "lat": 39.066,
     "lng": -76.9783,
     "website": true,
+    "classes": 0,
     "sqdno": "4545"
    },
    {
@@ -871,6 +973,7 @@
     "lat": 43.903,
     "lng": -69.9809,
     "website": true,
+    "classes": 2,
     "sqdno": "6210"
    },
    {
@@ -879,6 +982,7 @@
     "lat": 44.83,
     "lng": -68.78,
     "website": true,
+    "classes": 0,
     "sqdno": "4305"
    },
    {
@@ -887,6 +991,7 @@
     "lat": 44.098538,
     "lng": -70.191619,
     "website": false,
+    "classes": 0,
     "sqdno": "2580"
    },
    {
@@ -895,6 +1000,7 @@
     "lat": 42.57,
     "lng": -83.24,
     "website": true,
+    "classes": 7,
     "sqdno": "0525"
    },
    {
@@ -903,6 +1009,7 @@
     "lat": 42.2945,
     "lng": -83.3741,
     "website": true,
+    "classes": 0,
     "sqdno": "1410"
    },
    {
@@ -911,6 +1018,7 @@
     "lat": 42.347429,
     "lng": -83.060398,
     "website": true,
+    "classes": 0,
     "sqdno": "1515"
    },
    {
@@ -919,6 +1027,7 @@
     "lat": 43.012321,
     "lng": -83.687768,
     "website": true,
+    "classes": 0,
     "sqdno": "1755"
    },
    {
@@ -927,6 +1036,7 @@
     "lat": 44.75,
     "lng": -85.6,
     "website": true,
+    "classes": 0,
     "sqdno": "2025"
    },
    {
@@ -935,6 +1045,7 @@
     "lat": 42.4243,
     "lng": -82.8975,
     "website": true,
+    "classes": 0,
     "sqdno": "2160"
    },
    {
@@ -943,6 +1054,7 @@
     "lat": 42.700784,
     "lng": -84.549005,
     "website": true,
+    "classes": 0,
     "sqdno": "2820"
    },
    {
@@ -951,6 +1063,7 @@
     "lat": 43.5968,
     "lng": -83.9583,
     "website": true,
+    "classes": 0,
     "sqdno": "4920"
    },
    {
@@ -959,6 +1072,7 @@
     "lat": 42.4633,
     "lng": -82.9002,
     "website": true,
+    "classes": 0,
     "sqdno": "4945"
    },
    {
@@ -967,6 +1081,7 @@
     "lat": 42.6814,
     "lng": -82.776,
     "website": true,
+    "classes": 0,
     "sqdno": "0120"
    },
    {
@@ -975,6 +1090,7 @@
     "lat": 42.304247,
     "lng": -83.706756,
     "website": true,
+    "classes": 0,
     "sqdno": "0180"
    },
    {
@@ -983,6 +1099,7 @@
     "lat": 42.577562,
     "lng": -82.894052,
     "website": true,
+    "classes": 0,
     "sqdno": "3540"
    },
    {
@@ -991,6 +1108,7 @@
     "lat": 42.9793,
     "lng": -82.4643,
     "website": true,
+    "classes": 0,
     "sqdno": "4485"
    },
    {
@@ -999,6 +1117,7 @@
     "lat": 42.22,
     "lng": -83.26,
     "website": true,
+    "classes": 0,
     "sqdno": "6345"
    },
    {
@@ -1007,6 +1126,7 @@
     "lat": 46.768475,
     "lng": -92.086497,
     "website": true,
+    "classes": 0,
     "sqdno": "1545"
    },
    {
@@ -1015,6 +1135,7 @@
     "lat": 44.954,
     "lng": -93.4312,
     "website": true,
+    "classes": 0,
     "sqdno": "3405"
    },
    {
@@ -1023,6 +1144,7 @@
     "lat": 44.914007,
     "lng": -93.172747,
     "website": true,
+    "classes": 2,
     "sqdno": "5025"
    },
    {
@@ -1031,6 +1153,7 @@
     "lat": 30.38,
     "lng": -89.06,
     "website": false,
+    "classes": 0,
     "sqdno": "3451"
    },
    {
@@ -1039,6 +1162,7 @@
     "lat": 34.223653,
     "lng": -77.886213,
     "website": true,
+    "classes": 3,
     "sqdno": "0855"
    },
    {
@@ -1047,6 +1171,7 @@
     "lat": 35.1369,
     "lng": -77.1623,
     "website": true,
+    "classes": 0,
     "sqdno": "0870"
    },
    {
@@ -1055,6 +1180,7 @@
     "lat": 35.131586,
     "lng": -80.857749,
     "website": true,
+    "classes": 2,
     "sqdno": "1035"
    },
    {
@@ -1063,6 +1189,7 @@
     "lat": 35.05,
     "lng": -78.87,
     "website": true,
+    "classes": 0,
     "sqdno": "1740"
    },
    {
@@ -1071,6 +1198,7 @@
     "lat": 35.5828,
     "lng": -77.0955,
     "website": true,
+    "classes": 0,
     "sqdno": "4175"
    },
    {
@@ -1079,6 +1207,7 @@
     "lat": 35.775,
     "lng": -78.6336,
     "website": true,
+    "classes": 1,
     "sqdno": "4665"
    },
    {
@@ -1087,6 +1216,7 @@
     "lat": 33.95,
     "lng": -78.39,
     "website": true,
+    "classes": 0,
     "sqdno": "5435"
    },
    {
@@ -1095,6 +1225,7 @@
     "lat": 33.92,
     "lng": -78.02,
     "website": true,
+    "classes": 0,
     "sqdno": "5630"
    },
    {
@@ -1103,6 +1234,7 @@
     "lat": 35.6768,
     "lng": -77.3482,
     "website": true,
+    "classes": 0,
     "sqdno": "5855"
    },
    {
@@ -1111,6 +1243,7 @@
     "lat": 34.72532,
     "lng": -76.753069,
     "website": true,
+    "classes": 0,
     "sqdno": "1810"
    },
    {
@@ -1119,6 +1252,7 @@
     "lat": 35.597075,
     "lng": -82.556533,
     "website": true,
+    "classes": 0,
     "sqdno": "0210"
    },
    {
@@ -1127,6 +1261,7 @@
     "lat": 35.955,
     "lng": -78.9434,
     "website": true,
+    "classes": 0,
     "sqdno": "1590"
    },
    {
@@ -1135,6 +1270,7 @@
     "lat": 36.1131,
     "lng": -80.1983,
     "website": true,
+    "classes": 0,
     "sqdno": "6320"
    },
    {
@@ -1143,6 +1279,7 @@
     "lat": 42.86,
     "lng": -71.61,
     "website": false,
+    "classes": 0,
     "sqdno": "0105"
    },
    {
@@ -1151,6 +1288,7 @@
     "lat": 43.05,
     "lng": -70.78,
     "website": true,
+    "classes": 0,
     "sqdno": "4515"
    },
    {
@@ -1159,6 +1297,7 @@
     "lat": 43.567,
     "lng": -71.4823,
     "website": true,
+    "classes": 0,
     "sqdno": "2794"
    },
    {
@@ -1167,6 +1306,7 @@
     "lat": 39.45,
     "lng": -74.72,
     "website": true,
+    "classes": 1,
     "sqdno": "0015"
    },
    {
@@ -1175,6 +1315,7 @@
     "lat": 40.795236,
     "lng": -74.487288,
     "website": true,
+    "classes": 0,
     "sqdno": "2715"
    },
    {
@@ -1183,6 +1324,7 @@
     "lat": 40.43,
     "lng": -74.2,
     "website": true,
+    "classes": 0,
     "sqdno": "4650"
    },
    {
@@ -1191,6 +1333,7 @@
     "lat": 40.36,
     "lng": -74,
     "website": true,
+    "classes": 0,
     "sqdno": "5475"
    },
    {
@@ -1199,6 +1342,7 @@
     "lat": 40.7142,
     "lng": -74.0692,
     "website": true,
+    "classes": 0,
     "sqdno": "2840"
    },
    {
@@ -1207,6 +1351,7 @@
     "lat": 40.6176,
     "lng": -74.3695,
     "website": true,
+    "classes": 0,
     "sqdno": "6135"
    },
    {
@@ -1215,6 +1360,7 @@
     "lat": 36.23,
     "lng": -115.29,
     "website": true,
+    "classes": 0,
     "sqdno": "2835"
    },
    {
@@ -1223,6 +1369,7 @@
     "lat": 40.76268,
     "lng": -73.774457,
     "website": false,
+    "classes": 1,
     "sqdno": "0390"
    },
    {
@@ -1231,6 +1378,7 @@
     "lat": 40.826065,
     "lng": -73.819581,
     "website": false,
+    "classes": 0,
     "sqdno": "0675"
    },
    {
@@ -1239,6 +1387,7 @@
     "lat": 40.6894,
     "lng": -73.3745,
     "website": true,
+    "classes": 0,
     "sqdno": "0885"
    },
    {
@@ -1247,6 +1396,7 @@
     "lat": 42.2066,
     "lng": -76.8226,
     "website": true,
+    "classes": 0,
     "sqdno": "5400"
    },
    {
@@ -1255,6 +1405,7 @@
     "lat": 40.74,
     "lng": -73.18,
     "website": true,
+    "classes": 1,
     "sqdno": "2070"
    },
    {
@@ -1263,6 +1414,7 @@
     "lat": 43.219563,
     "lng": -77.461587,
     "website": true,
+    "classes": 0,
     "sqdno": "2455"
    },
    {
@@ -1271,6 +1423,7 @@
     "lat": 40.679513,
     "lng": -73.491015,
     "website": true,
+    "classes": 0,
     "sqdno": "2520"
    },
    {
@@ -1279,6 +1432,7 @@
     "lat": 40.743932,
     "lng": -72.876043,
     "website": false,
+    "classes": 0,
     "sqdno": "3510"
    },
    {
@@ -1287,6 +1441,7 @@
     "lat": 40.84,
     "lng": -73.4,
     "website": true,
+    "classes": 0,
     "sqdno": "3645"
    },
    {
@@ -1295,6 +1450,7 @@
     "lat": 40.71,
     "lng": -73.99,
     "website": true,
+    "classes": 0,
     "sqdno": "3885"
    },
    {
@@ -1303,6 +1459,7 @@
     "lat": 40.78,
     "lng": -73.47,
     "website": true,
+    "classes": 0,
     "sqdno": "4125"
    },
    {
@@ -1311,6 +1468,7 @@
     "lat": 40.7718,
     "lng": -72.9949,
     "website": true,
+    "classes": 0,
     "sqdno": "4215"
    },
    {
@@ -1319,6 +1477,7 @@
     "lat": 40.881,
     "lng": -72.5361,
     "website": true,
+    "classes": 0,
     "sqdno": "4260"
    },
    {
@@ -1327,6 +1486,7 @@
     "lat": 40.8387,
     "lng": -73.6912,
     "website": false,
+    "classes": 0,
     "sqdno": "2865"
    },
    {
@@ -1335,6 +1495,7 @@
     "lat": 43.2244,
     "lng": -77.595,
     "website": true,
+    "classes": 0,
     "sqdno": "4755"
    },
    {
@@ -1343,6 +1504,7 @@
     "lat": 40.65,
     "lng": -73.58,
     "website": true,
+    "classes": 0,
     "sqdno": "5430"
    },
    {
@@ -1351,6 +1513,7 @@
     "lat": 40.8903,
     "lng": -73.169,
     "website": true,
+    "classes": 0,
     "sqdno": "5520"
    },
    {
@@ -1359,6 +1522,7 @@
     "lat": 40.58,
     "lng": -74.14,
     "website": true,
+    "classes": 0,
     "sqdno": "5700"
    },
    {
@@ -1367,6 +1531,7 @@
     "lat": 42.1,
     "lng": -75.91,
     "website": true,
+    "classes": 0,
     "sqdno": "5760"
    },
    {
@@ -1375,6 +1540,7 @@
     "lat": 43.0772,
     "lng": -78.8339,
     "website": true,
+    "classes": 0,
     "sqdno": "5775"
    },
    {
@@ -1383,6 +1549,7 @@
     "lat": 43.04,
     "lng": -76.14,
     "website": true,
+    "classes": 1,
     "sqdno": "5790"
    },
    {
@@ -1391,6 +1558,7 @@
     "lat": 42.929958,
     "lng": -76.562605,
     "website": false,
+    "classes": 0,
     "sqdno": "0270"
    },
    {
@@ -1399,6 +1567,7 @@
     "lat": 40.8719,
     "lng": -73.8039,
     "website": true,
+    "classes": 0,
     "sqdno": "1100"
    },
    {
@@ -1407,6 +1576,7 @@
     "lat": 40.67,
     "lng": -73.67,
     "website": true,
+    "classes": 0,
     "sqdno": "2265"
    },
    {
@@ -1415,6 +1585,7 @@
     "lat": 42.448497,
     "lng": -76.492911,
     "website": true,
+    "classes": 0,
     "sqdno": "2460"
    },
    {
@@ -1423,6 +1594,7 @@
     "lat": 43.080094,
     "lng": -73.780644,
     "website": true,
+    "classes": 0,
     "sqdno": "2760"
    },
    {
@@ -1431,6 +1603,7 @@
     "lat": 43.2631,
     "lng": -78.7339,
     "website": true,
+    "classes": 0,
     "sqdno": "2895"
    },
    {
@@ -1439,6 +1612,7 @@
     "lat": 42.66,
     "lng": -73.79,
     "website": true,
+    "classes": 0,
     "sqdno": "3480"
    },
    {
@@ -1447,6 +1621,7 @@
     "lat": 40.71,
     "lng": -73.99,
     "website": true,
+    "classes": 0,
     "sqdno": "3780"
    },
    {
@@ -1455,6 +1630,7 @@
     "lat": 40.930004,
     "lng": -73.101467,
     "website": false,
+    "classes": 0,
     "sqdno": "4035"
    },
    {
@@ -1463,6 +1639,7 @@
     "lat": 40.714915,
     "lng": -73.556088,
     "website": false,
+    "classes": 0,
     "sqdno": "5640"
    },
    {
@@ -1471,6 +1648,7 @@
     "lat": 41.5,
     "lng": -74.02,
     "website": true,
+    "classes": 0,
     "sqdno": "5710"
    },
    {
@@ -1479,6 +1657,7 @@
     "lat": 43.163926,
     "lng": -75.278335,
     "website": true,
+    "classes": 0,
     "sqdno": "6000"
    },
    {
@@ -1487,6 +1666,7 @@
     "lat": 41.1403,
     "lng": -81.4761,
     "website": true,
+    "classes": 0,
     "sqdno": "0045"
    },
    {
@@ -1495,6 +1675,7 @@
     "lat": 41.36,
     "lng": -81.86,
     "website": true,
+    "classes": 0,
     "sqdno": "0495"
    },
    {
@@ -1503,6 +1684,7 @@
     "lat": 40.18,
     "lng": -82.99,
     "website": true,
+    "classes": 0,
     "sqdno": "1185"
    },
    {
@@ -1511,6 +1693,7 @@
     "lat": 39.640187,
     "lng": -84.08245,
     "website": true,
+    "classes": 0,
     "sqdno": "1380"
    },
    {
@@ -1519,6 +1702,7 @@
     "lat": 40.76,
     "lng": -82.52,
     "website": true,
+    "classes": 0,
     "sqdno": "3090"
    },
    {
@@ -1527,6 +1711,7 @@
     "lat": 41.33,
     "lng": -80.72,
     "website": true,
+    "classes": 0,
     "sqdno": "3525"
    },
    {
@@ -1535,6 +1720,7 @@
     "lat": 41.47,
     "lng": -81.85,
     "website": true,
+    "classes": 0,
     "sqdno": "4815"
    },
    {
@@ -1543,6 +1729,7 @@
     "lat": 41.5,
     "lng": -82.93,
     "website": true,
+    "classes": 0,
     "sqdno": "4470"
    },
    {
@@ -1551,6 +1738,7 @@
     "lat": 41.4028,
     "lng": -82.7181,
     "website": true,
+    "classes": 0,
     "sqdno": "5130"
    },
    {
@@ -1559,6 +1747,7 @@
     "lat": 41.3884,
     "lng": -82.3643,
     "website": true,
+    "classes": 0,
     "sqdno": "6060"
    },
    {
@@ -1567,6 +1756,7 @@
     "lat": 41.66,
     "lng": -83.58,
     "website": true,
+    "classes": 0,
     "sqdno": "5910"
    },
    {
@@ -1575,6 +1765,7 @@
     "lat": 40.81,
     "lng": -81.37,
     "website": true,
+    "classes": 0,
     "sqdno": "5685"
    },
    {
@@ -1583,6 +1774,7 @@
     "lat": 35.513645,
     "lng": -97.531908,
     "website": true,
+    "classes": 0,
     "sqdno": "4005"
    },
    {
@@ -1591,6 +1783,7 @@
     "lat": 45.530318,
     "lng": -122.703348,
     "website": true,
+    "classes": 0,
     "sqdno": "0425"
    },
    {
@@ -1599,6 +1792,7 @@
     "lat": 43.362812,
     "lng": -124.233101,
     "website": true,
+    "classes": 0,
     "sqdno": "1215"
    },
    {
@@ -1607,6 +1801,7 @@
     "lat": 45.5026,
     "lng": -122.771,
     "website": true,
+    "classes": 0,
     "sqdno": "4500"
    },
    {
@@ -1615,6 +1810,7 @@
     "lat": 42.125962,
     "lng": -80.08601,
     "website": true,
+    "classes": 0,
     "sqdno": "1635"
    },
    {
@@ -1623,6 +1819,7 @@
     "lat": 39.97,
     "lng": -76.7867,
     "website": true,
+    "classes": 0,
     "sqdno": "6375"
    },
    {
@@ -1631,6 +1828,7 @@
     "lat": 40.03,
     "lng": -75.51,
     "website": true,
+    "classes": 0,
     "sqdno": "3045"
    },
    {
@@ -1639,6 +1837,7 @@
     "lat": 39.95,
     "lng": -75.16,
     "website": true,
+    "classes": 0,
     "sqdno": "1440"
    },
    {
@@ -1647,6 +1846,7 @@
     "lat": 40.6278,
     "lng": -75.3955,
     "website": true,
+    "classes": 0,
     "sqdno": "1455"
    },
    {
@@ -1655,6 +1855,7 @@
     "lat": 40.42,
     "lng": -79.76,
     "website": true,
+    "classes": 0,
     "sqdno": "4395"
    },
    {
@@ -1663,6 +1864,7 @@
     "lat": 40.01,
     "lng": -79.89,
     "website": false,
+    "classes": 1,
     "sqdno": "5895"
    },
    {
@@ -1671,6 +1873,7 @@
     "lat": 18.45,
     "lng": -66.73,
     "website": true,
+    "classes": 0,
     "sqdno": "0192"
    },
    {
@@ -1679,6 +1882,7 @@
     "lat": 18.2551,
     "lng": -65.9776,
     "website": false,
+    "classes": 0,
     "sqdno": "2385"
    },
    {
@@ -1687,6 +1891,7 @@
     "lat": 18.3754,
     "lng": -66.0577,
     "website": true,
+    "classes": 0,
     "sqdno": "5205"
    },
    {
@@ -1695,6 +1900,7 @@
     "lat": 17.99,
     "lng": -67.15,
     "website": false,
+    "classes": 0,
     "sqdno": "0595"
    },
    {
@@ -1703,6 +1909,7 @@
     "lat": 18.4683,
     "lng": -66.1064,
     "website": false,
+    "classes": 0,
     "sqdno": "0895"
    },
    {
@@ -1711,6 +1918,7 @@
     "lat": 18.0179,
     "lng": -66.6229,
     "website": false,
+    "classes": 0,
     "sqdno": "4455"
    },
    {
@@ -1719,6 +1927,7 @@
     "lat": 41.81,
     "lng": -71.46,
     "website": false,
+    "classes": 0,
     "sqdno": "3630"
    },
    {
@@ -1727,6 +1936,7 @@
     "lat": 34.68,
     "lng": -82.95,
     "website": true,
+    "classes": 2,
     "sqdno": "5896"
    },
    {
@@ -1735,6 +1945,7 @@
     "lat": 32.1625,
     "lng": -80.7541,
     "website": true,
+    "classes": 0,
     "sqdno": "2270"
    },
    {
@@ -1743,6 +1954,7 @@
     "lat": 34.0004,
     "lng": -81.033418,
     "website": true,
+    "classes": 0,
     "sqdno": "2785"
    },
    {
@@ -1751,6 +1963,7 @@
     "lat": 33.87,
     "lng": -78.63,
     "website": true,
+    "classes": 0,
     "sqdno": "3890"
    },
    {
@@ -1759,6 +1972,7 @@
     "lat": 33.9231,
     "lng": -82.2423,
     "website": true,
+    "classes": 0,
     "sqdno": "5897"
    },
    {
@@ -1767,6 +1981,7 @@
     "lat": 32.4123,
     "lng": -80.7058,
     "website": true,
+    "classes": 0,
     "sqdno": "0405"
    },
    {
@@ -1775,6 +1990,7 @@
     "lat": 35,
     "lng": -80.94,
     "website": true,
+    "classes": 1,
     "sqdno": "0930"
    },
    {
@@ -1783,6 +1999,7 @@
     "lat": 34.51,
     "lng": -82.64,
     "website": true,
+    "classes": 0,
     "sqdno": "2100"
    },
    {
@@ -1791,6 +2008,7 @@
     "lat": 35.924385,
     "lng": -84.001468,
     "website": true,
+    "classes": 0,
     "sqdno": "2700"
    },
    {
@@ -1799,6 +2017,7 @@
     "lat": 36.2447,
     "lng": -86.616,
     "website": true,
+    "classes": 0,
     "sqdno": "3560"
    },
    {
@@ -1807,6 +2026,7 @@
     "lat": 36.01588,
     "lng": -84.262297,
     "website": true,
+    "classes": 0,
     "sqdno": "3960"
    },
    {
@@ -1815,6 +2035,7 @@
     "lat": 35.061446,
     "lng": -85.247839,
     "website": true,
+    "classes": 0,
     "sqdno": "1050"
    },
    {
@@ -1823,6 +2044,7 @@
     "lat": 35.1,
     "lng": -90,
     "website": false,
+    "classes": 0,
     "sqdno": "3195"
    },
    {
@@ -1831,6 +2053,7 @@
     "lat": 29.689601,
     "lng": -95.510588,
     "website": true,
+    "classes": 8,
     "sqdno": "2370"
    },
    {
@@ -1839,6 +2062,7 @@
     "lat": 26.19,
     "lng": -97.68,
     "website": true,
+    "classes": 0,
     "sqdno": "3005"
    },
    {
@@ -1847,6 +2071,7 @@
     "lat": 30.290671,
     "lng": -97.764809,
     "website": true,
+    "classes": 0,
     "sqdno": "0285"
    },
    {
@@ -1855,6 +2080,7 @@
     "lat": 32.75,
     "lng": -97.33,
     "website": true,
+    "classes": 0,
     "sqdno": "1890"
    },
    {
@@ -1863,6 +2089,7 @@
     "lat": 29.56,
     "lng": -95.02,
     "website": true,
+    "classes": 5,
     "sqdno": "1980"
    },
    {
@@ -1871,6 +2098,7 @@
     "lat": 29.540738,
     "lng": -98.552117,
     "website": true,
+    "classes": 0,
     "sqdno": "5085"
    },
    {
@@ -1879,6 +2107,7 @@
     "lat": 36.73,
     "lng": -76.04,
     "website": true,
+    "classes": 0,
     "sqdno": "6090"
    },
    {
@@ -1887,6 +2116,7 @@
     "lat": 36.730433,
     "lng": -76.593147,
     "website": true,
+    "classes": 0,
     "sqdno": "3600"
    },
    {
@@ -1895,6 +2125,7 @@
     "lat": 37.71,
     "lng": -76.38,
     "website": true,
+    "classes": 3,
     "sqdno": "3850"
    },
    {
@@ -1903,6 +2134,7 @@
     "lat": 38.9398,
     "lng": -77.1677,
     "website": true,
+    "classes": 1,
     "sqdno": "3870"
    },
    {
@@ -1911,6 +2143,7 @@
     "lat": 37.18,
     "lng": -79.63,
     "website": true,
+    "classes": 2,
     "sqdno": "4860"
    },
    {
@@ -1919,6 +2152,7 @@
     "lat": 37.5861,
     "lng": -77.4907,
     "website": true,
+    "classes": 5,
     "sqdno": "4710"
    },
    {
@@ -1927,6 +2161,7 @@
     "lat": 37.317768,
     "lng": -76.763424,
     "website": true,
+    "classes": 0,
     "sqdno": "1156"
    },
    {
@@ -1935,6 +2170,7 @@
     "lat": 18.3436,
     "lng": -64.9314,
     "website": false,
+    "classes": 0,
     "sqdno": "5045"
    },
    {
@@ -1943,6 +2179,7 @@
     "lat": 47.6168,
     "lng": -122.1689,
     "website": true,
+    "classes": 0,
     "sqdno": "0450"
    },
    {
@@ -1951,6 +2188,7 @@
     "lat": 48.74,
     "lng": -122.46,
     "website": true,
+    "classes": 0,
     "sqdno": "0465"
    },
    {
@@ -1959,6 +2197,7 @@
     "lat": 47.59,
     "lng": -122.62,
     "website": true,
+    "classes": 0,
     "sqdno": "0630"
    },
    {
@@ -1967,6 +2206,7 @@
     "lat": 48.32,
     "lng": -122.63,
     "website": true,
+    "classes": 0,
     "sqdno": "1430"
    },
    {
@@ -1975,6 +2215,7 @@
     "lat": 45.64,
     "lng": -122.63,
     "website": true,
+    "classes": 0,
     "sqdno": "1845"
    },
    {
@@ -1983,6 +2224,7 @@
     "lat": 47.66,
     "lng": -122.38,
     "website": true,
+    "classes": 0,
     "sqdno": "5370"
    },
    {
@@ -1991,6 +2233,7 @@
     "lat": 48.42,
     "lng": -122.42,
     "website": true,
+    "classes": 1,
     "sqdno": "5495"
    },
    {
@@ -1999,6 +2242,7 @@
     "lat": 47.29,
     "lng": -122.5,
     "website": true,
+    "classes": 0,
     "sqdno": "5805"
    },
    {
@@ -2007,6 +2251,7 @@
     "lat": 47.988431,
     "lng": -122.200571,
     "website": true,
+    "classes": 1,
     "sqdno": "1680"
    },
    {
@@ -2015,6 +2260,7 @@
     "lat": 48.5377,
     "lng": -123.0836,
     "website": true,
+    "classes": 0,
     "sqdno": "1955"
    },
    {
@@ -2023,6 +2269,7 @@
     "lat": 48.104012,
     "lng": -122.794457,
     "website": true,
+    "classes": 0,
     "sqdno": "4396"
    },
    {
@@ -2031,6 +2278,7 @@
     "lat": 47.6969,
     "lng": -117.4478,
     "website": true,
+    "classes": 0,
     "sqdno": "5565"
    },
    {
@@ -2039,6 +2287,7 @@
     "lat": 44.7605,
     "lng": -89.5918,
     "website": true,
+    "classes": 0,
     "sqdno": "0955"
    },
    {
@@ -2047,6 +2296,7 @@
     "lat": 44.4814,
     "lng": -88.0196,
     "website": true,
+    "classes": 0,
     "sqdno": "2085"
    },
    {
@@ -2055,6 +2305,7 @@
     "lat": 43.072999,
     "lng": -89.452823,
     "website": false,
+    "classes": 0,
     "sqdno": "3030"
    },
    {
@@ -2063,6 +2314,7 @@
     "lat": 45.1882,
     "lng": -87.6383,
     "website": true,
+    "classes": 0,
     "sqdno": "3140"
    },
    {
@@ -2071,6 +2323,7 @@
     "lat": 43.06,
     "lng": -87.96,
     "website": true,
+    "classes": 0,
     "sqdno": "3390"
    },
    {
@@ -2079,6 +2332,7 @@
     "lat": 44.030356,
     "lng": -88.607015,
     "website": true,
+    "classes": 0,
     "sqdno": "4095"
    },
    {
@@ -2087,6 +2341,7 @@
     "lat": 35.7157,
     "lng": 139.8089,
     "website": true,
+    "classes": 0,
     "sqdno": "5900"
    }
   ],
@@ -2213,7 +2468,49 @@
    "CT": 1,
    "NJ": 1,
    "PA": 1
-  }
+  },
+  "most_active_clubs": [
+   {
+    "club": "America's Boating Club Marco Island",
+    "state": "FL",
+    "classes": 18
+   },
+   {
+    "club": "America's Boating Club Sarasota",
+    "state": "FL",
+    "classes": 14
+   },
+   {
+    "club": "America's Boating Club Oceanside",
+    "state": "CA",
+    "classes": 10
+   },
+   {
+    "club": "America's Boating Club Palm Beach",
+    "state": "FL",
+    "classes": 8
+   },
+   {
+    "club": "America's Boating Club Peace River",
+    "state": "FL",
+    "classes": 8
+   },
+   {
+    "club": "America's Boating Club Houston",
+    "state": "TX",
+    "classes": 8
+   },
+   {
+    "club": "America's Boating Club Birmingham",
+    "state": "MI",
+    "classes": 7
+   },
+   {
+    "club": "America's Boating Club Clearwater",
+    "state": "FL",
+    "classes": 6
+   }
+  ]
  },
  "education": {
   "courses": 10,
@@ -2307,6 +2604,26 @@
     ]
    }
   },
+  "catalog_coverage": {
+   "items_with_upcoming": 24,
+   "items_dormant": 16,
+   "classes_matching_catalog": 74,
+   "classes_outside_catalog": 74,
+   "outside_catalog_titles": [
+    [
+     "Basic Boating Course",
+     72
+    ],
+    [
+     "BH Boating with Confidence",
+     1
+    ],
+    [
+     "Cruising Under Power and Sail",
+     1
+    ]
+   ]
+  },
   "catalog": [
    {
     "kind": "course",
@@ -2315,7 +2632,8 @@
     "category_slug": "boat-handling",
     "slug": "boat-handling-course",
     "url": "https://americasboatingclub.org/index.php/courses/boat-handling/boat-handling-course",
-    "description": "Master boating skills with the boat handling course from America's Boating Club | United States Power Squadrons. Enroll today and navigate with confidence."
+    "description": "Master boating skills with the boat handling course from America's Boating Club | United States Power Squadrons. Enroll today and navigate with confidence.",
+    "upcoming_classes": 14
    },
    {
     "kind": "course",
@@ -2324,7 +2642,8 @@
     "category_slug": "boat-handling",
     "slug": "sail",
     "url": "https://americasboatingclub.org/index.php/courses/boat-handling/sail",
-    "description": "Build sailing knowledge and confidence on the water with a sailing course from America’s Boating Club focused on safe, enjoyable sailing."
+    "description": "Build sailing knowledge and confidence on the water with a sailing course from America’s Boating Club focused on safe, enjoyable sailing.",
+    "upcoming_classes": 0
    },
    {
     "kind": "course",
@@ -2333,7 +2652,8 @@
     "category_slug": "boat-systems",
     "slug": "engine-maintenance",
     "url": "https://americasboatingclub.org/index.php/courses/boat-systems/engine-maintenance",
-    "description": "Learn essential engine maintenance skills with a course from America’s Boating Club to improve reliability, performance, and on-the-water confidence."
+    "description": "Learn essential engine maintenance skills with a course from America’s Boating Club to improve reliability, performance, and on-the-water confidence.",
+    "upcoming_classes": 0
    },
    {
     "kind": "course",
@@ -2342,7 +2662,8 @@
     "category_slug": "boat-systems",
     "slug": "marine-communication-systems",
     "url": "https://americasboatingclub.org/index.php/courses/boat-systems/marine-communication-systems",
-    "description": "Build confidence using marine communication systems with guidance from America’s Boating Club focused on safety, best practices, and preparedness."
+    "description": "Build confidence using marine communication systems with guidance from America’s Boating Club focused on safety, best practices, and preparedness.",
+    "upcoming_classes": 0
    },
    {
     "kind": "course",
@@ -2351,7 +2672,8 @@
     "category_slug": "boat-systems",
     "slug": "marine-electrical-systems",
     "url": "https://americasboatingclub.org/index.php/courses/boat-systems/marine-electrical-systems",
-    "description": "Don’t get short circuited. Learn how boat electrical systems work, how to diagnose problems, and how to do simple repairs and upgrades."
+    "description": "Don’t get short circuited. Learn how boat electrical systems work, how to diagnose problems, and how to do simple repairs and upgrades.",
+    "upcoming_classes": 3
    },
    {
     "kind": "course",
@@ -2360,7 +2682,8 @@
     "category_slug": "boat-systems",
     "slug": "radar-for-boaters",
     "url": "https://americasboatingclub.org/index.php/courses/boat-systems/radar-for-boaters",
-    "description": "Build confidence navigating with radar through a Radar for Boaters course from America’s Boating Club designed for safer boating."
+    "description": "Build confidence navigating with radar through a Radar for Boaters course from America’s Boating Club designed for safer boating.",
+    "upcoming_classes": 0
    },
    {
     "kind": "course",
@@ -2369,7 +2692,8 @@
     "category_slug": "navigation",
     "slug": "advanced-marine-navigation",
     "url": "https://americasboatingclub.org/index.php/courses/navigation/advanced-marine-navigation",
-    "description": "Build expert-level navigation skills with an advanced marine navigation course from America’s Boating Club designed for experienced boaters."
+    "description": "Build expert-level navigation skills with an advanced marine navigation course from America’s Boating Club designed for experienced boaters.",
+    "upcoming_classes": 2
    },
    {
     "kind": "course",
@@ -2378,7 +2702,8 @@
     "category_slug": "navigation",
     "slug": "celestial-navigation",
     "url": "https://americasboatingclub.org/index.php/courses/navigation/celestial-navigation",
-    "description": "Build traditional navigation skills with a celestial navigation course from America’s Boating Club designed for confident offshore boating."
+    "description": "Build traditional navigation skills with a celestial navigation course from America’s Boating Club designed for confident offshore boating.",
+    "upcoming_classes": 0
    },
    {
     "kind": "course",
@@ -2387,7 +2712,8 @@
     "category_slug": "navigation",
     "slug": "marine-navigation-course",
     "url": "https://americasboatingclub.org/index.php/courses/navigation/marine-navigation-course",
-    "description": "Learn essential navigation skills with a marine navigation course from America’s Boating Club focused on charts, tides, currents, and safe passage."
+    "description": "Learn essential navigation skills with a marine navigation course from America’s Boating Club focused on charts, tides, currents, and safe passage.",
+    "upcoming_classes": 5
    },
    {
     "kind": "course",
@@ -2396,7 +2722,8 @@
     "category_slug": "navigation",
     "slug": "offshore-navigation",
     "url": "https://americasboatingclub.org/index.php/courses/navigation/offshore-navigation",
-    "description": "America’s Boating Club offers offshore navigation education to help boaters plan routes, manage conditions, and navigate confidently offshore."
+    "description": "America’s Boating Club offers offshore navigation education to help boaters plan routes, manage conditions, and navigate confidently offshore.",
+    "upcoming_classes": 1
    },
    {
     "kind": "seminar",
@@ -2405,7 +2732,8 @@
     "category_slug": "boat-handling",
     "slug": "anchoring-with-assurance",
     "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/anchoring-with-assurance",
-    "description": "Learn expert anchoring techniques with America's Boating Club | United States Power Squadrons, secure your boat with confidence, enroll in a seminar today."
+    "description": "Learn expert anchoring techniques with America's Boating Club | United States Power Squadrons, secure your boat with confidence, enroll in a seminar today.",
+    "upcoming_classes": 7
    },
    {
     "kind": "seminar",
@@ -2414,7 +2742,8 @@
     "category_slug": "boat-handling",
     "slug": "boating-on-rivers-locks-and-lakes",
     "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/boating-on-rivers-locks-and-lakes",
-    "description": "Master inland boating skills with America's Boating Club | United States Power Squadrons, navigate rivers, locks, and lakes safely, register today."
+    "description": "Master inland boating skills with America's Boating Club | United States Power Squadrons, navigate rivers, locks, and lakes safely, register today.",
+    "upcoming_classes": 0
    },
    {
     "kind": "seminar",
@@ -2423,7 +2752,8 @@
     "category_slug": "boat-handling",
     "slug": "boating-with-confidence",
     "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/boating-with-confidence",
-    "description": "Boating with Confidence Seminar | America's Boating Club"
+    "description": "Boating with Confidence Seminar | America's Boating Club",
+    "upcoming_classes": 0
    },
    {
     "kind": "seminar",
@@ -2432,7 +2762,8 @@
     "category_slug": "boat-handling",
     "slug": "confidence-in-docking-and-undocking",
     "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/confidence-in-docking-and-undocking",
-    "description": "Master docking and undocking with America's Boating Club | United States Power Squadrons, improve control and reduce mishaps, register today."
+    "description": "Master docking and undocking with America's Boating Club | United States Power Squadrons, improve control and reduce mishaps, register today.",
+    "upcoming_classes": 5
    },
    {
     "kind": "seminar",
@@ -2441,7 +2772,8 @@
     "category_slug": "boat-handling",
     "slug": "emergencies-on-board",
     "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/emergencies-on-board",
-    "description": "Prepare for onboard emergencies with training from America's Boating Club | United States Power Squadrons, gain vital safety skills and sign up for a seminar."
+    "description": "Prepare for onboard emergencies with training from America's Boating Club | United States Power Squadrons, gain vital safety skills and sign up for a seminar.",
+    "upcoming_classes": 2
    },
    {
     "kind": "seminar",
@@ -2450,7 +2782,8 @@
     "category_slug": "boat-handling",
     "slug": "knots-and-line-handling",
     "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/knots-and-line-handling",
-    "description": "Master essential knots and line handling with America's Boating Club | United States Power Squadrons, refine your boating techniques and register now."
+    "description": "Master essential knots and line handling with America's Boating Club | United States Power Squadrons, refine your boating techniques and register now.",
+    "upcoming_classes": 4
    },
    {
     "kind": "seminar",
@@ -2459,7 +2792,8 @@
     "category_slug": "boat-handling",
     "slug": "rules-of-the-road",
     "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/rules-of-the-road",
-    "description": "Learn and apply boating rules with America's Boating Club | United States Power Squadrons, navigate safely and confidently, and register today."
+    "description": "Learn and apply boating rules with America's Boating Club | United States Power Squadrons, navigate safely and confidently, and register today.",
+    "upcoming_classes": 3
    },
    {
     "kind": "seminar",
@@ -2468,7 +2802,8 @@
     "category_slug": "cruising",
     "slug": "crossing-borders",
     "url": "https://americasboatingclub.org/index.php/seminars/cruising/crossing-borders",
-    "description": "Understand international boating regulations with America's Boating Club | United States Power Squadrons, prepare for global adventures and enroll today."
+    "description": "Understand international boating regulations with America's Boating Club | United States Power Squadrons, prepare for global adventures and enroll today.",
+    "upcoming_classes": 0
    },
    {
     "kind": "seminar",
@@ -2477,7 +2812,8 @@
     "category_slug": "cruising",
     "slug": "cruising-boats-and-systems",
     "url": "https://americasboatingclub.org/index.php/seminars/cruising/cruising-boats-and-systems",
-    "description": "Get expert insights on cruising boat systems with America's Boating Club | United States Power Squadrons, enhance your understanding and register today."
+    "description": "Get expert insights on cruising boat systems with America's Boating Club | United States Power Squadrons, enhance your understanding and register today.",
+    "upcoming_classes": 0
    },
    {
     "kind": "seminar",
@@ -2486,7 +2822,8 @@
     "category_slug": "cruising",
     "slug": "planning-your-cruise",
     "url": "https://americasboatingclub.org/index.php/seminars/cruising/planning-your-cruise",
-    "description": "Plan the perfect cruise with expert guidance from America's Boating Club | United States Power Squadrons, chart your next journey with confidence, start today."
+    "description": "Plan the perfect cruise with expert guidance from America's Boating Club | United States Power Squadrons, chart your next journey with confidence, start today.",
+    "upcoming_classes": 0
    },
    {
     "kind": "seminar",
@@ -2495,7 +2832,8 @@
     "category_slug": "electronics",
     "slug": "ais-electronics-for-boaters",
     "url": "https://americasboatingclub.org/index.php/seminars/electronics/ais-electronics-for-boaters",
-    "description": "Learn to use AIS technology with America's Boating Club | United States Power Squadrons, improve boating communication and safety, sign up today."
+    "description": "Learn to use AIS technology with America's Boating Club | United States Power Squadrons, improve boating communication and safety, sign up today.",
+    "upcoming_classes": 2
    },
    {
     "kind": "seminar",
@@ -2504,7 +2842,8 @@
     "category_slug": "electronics",
     "slug": "how-to-use-gps",
     "url": "https://americasboatingclub.org/index.php/seminars/electronics/how-to-use-gps",
-    "description": "Master GPS navigation with expert training from America's Boating Club | United States Power Squadrons, improve your route planning and enroll today."
+    "description": "Master GPS navigation with expert training from America's Boating Club | United States Power Squadrons, improve your route planning and enroll today.",
+    "upcoming_classes": 2
    },
    {
     "kind": "seminar",
@@ -2513,7 +2852,8 @@
     "category_slug": "electronics",
     "slug": "introduction-to-marine-batteries",
     "url": "https://americasboatingclub.org/index.php/seminars/electronics/introduction-to-marine-batteries",
-    "description": "Get expert tips on both lead-acid and lithium batteries, plus upgrade considerations. | United States Power Squadrons"
+    "description": "Get expert tips on both lead-acid and lithium batteries, plus upgrade considerations. | United States Power Squadrons",
+    "upcoming_classes": 4
    },
    {
     "kind": "seminar",
@@ -2522,7 +2862,8 @@
     "category_slug": "facing-the-environment",
     "slug": "hurricane-preparation-for-boaters",
     "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/hurricane-preparation-for-boaters",
-    "description": "Prepare your boat for hurricane season with America's Boating Club | United States Power Squadrons, protect your vessel with expert advice, learn more today."
+    "description": "Prepare your boat for hurricane season with America's Boating Club | United States Power Squadrons, protect your vessel with expert advice, learn more today.",
+    "upcoming_classes": 1
    },
    {
     "kind": "seminar",
@@ -2531,7 +2872,8 @@
     "category_slug": "facing-the-environment",
     "slug": "marine-weather-forecasting-the-500-millibar-chart",
     "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/marine-weather-forecasting-the-500-millibar-chart",
-    "description": "This seminar covers how to use the 500 millibar upper-air chart to forecast your weather including when and where large storms will develop and how they will move. | United States Power Squadrons, master weather forecasting and keep your boat safe, sign up now. | United States Power Squadrons, enhance your forecasting skills, sign up now."
+    "description": "This seminar covers how to use the 500 millibar upper-air chart to forecast your weather including when and where large storms will develop and how they will move. | United States Power Squadrons, master weather forecasting and keep your boat safe, sign up now. | United States Power Squadrons, enhance your forecasting skills, sign up now.",
+    "upcoming_classes": 0
    },
    {
     "kind": "seminar",
@@ -2540,7 +2882,8 @@
     "category_slug": "facing-the-environment",
     "slug": "modern-weather-forecasting",
     "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/modern-weather-forecasting",
-    "description": "Stay ahead of changing conditions with America's Boating Club | United States Power Squadrons, master weather forecasting and keep your boat safe, sign up now."
+    "description": "Stay ahead of changing conditions with America's Boating Club | United States Power Squadrons, master weather forecasting and keep your boat safe, sign up now.",
+    "upcoming_classes": 2
    },
    {
     "kind": "seminar",
@@ -2549,7 +2892,8 @@
     "category_slug": "facing-the-environment",
     "slug": "tides-and-currents",
     "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/tides-and-currents",
-    "description": "Navigate with confidence by understanding tides and currents with America's Boating Club | United States Power Squadrons, enhance your skills, enroll today."
+    "description": "Navigate with confidence by understanding tides and currents with America's Boating Club | United States Power Squadrons, enhance your skills, enroll today.",
+    "upcoming_classes": 2
    },
    {
     "kind": "seminar",
@@ -2558,7 +2902,8 @@
     "category_slug": "facing-the-environment",
     "slug": "weather-for-boaters",
     "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/weather-for-boaters",
-    "description": "Learn to interpret weather patterns for safer boating with America's Boating Club | United States Power Squadrons, gain knowledge and confidence, sign up today."
+    "description": "Learn to interpret weather patterns for safer boating with America's Boating Club | United States Power Squadrons, gain knowledge and confidence, sign up today.",
+    "upcoming_classes": 2
    },
    {
     "kind": "seminar",
@@ -2567,7 +2912,8 @@
     "category_slug": "hands-on-training",
     "slug": "hands-on-training",
     "url": "https://americasboatingclub.org/index.php/seminars/hands-on-training/hands-on-training",
-    "description": null
+    "description": null,
+    "upcoming_classes": 4
    },
    {
     "kind": "seminar",
@@ -2576,7 +2922,8 @@
     "category_slug": "navigation",
     "slug": "introduction-to-navigation",
     "url": "https://americasboatingclub.org/index.php/seminars/navigation/introduction-to-navigation",
-    "description": "Learn navigation basics with America's Boating Club | United States Power Squadrons, build confidence on the water and navigate safely, enroll today."
+    "description": "Learn navigation basics with America's Boating Club | United States Power Squadrons, build confidence on the water and navigate safely, enroll today.",
+    "upcoming_classes": 1
    },
    {
     "kind": "seminar",
@@ -2585,7 +2932,8 @@
     "category_slug": "navigation",
     "slug": "introduction-to-opencpn",
     "url": "https://americasboatingclub.org/index.php/seminars/navigation/introduction-to-opencpn",
-    "description": null
+    "description": null,
+    "upcoming_classes": 0
    },
    {
     "kind": "seminar",
@@ -2594,7 +2942,8 @@
     "category_slug": "navigation",
     "slug": "mariners-compass",
     "url": "https://americasboatingclub.org/index.php/seminars/navigation/mariners-compass",
-    "description": "Understand how to use a mariner's compass with America's Boating Club | United States Power Squadrons, enhance your navigation skills, sign up now."
+    "description": "Understand how to use a mariner's compass with America's Boating Club | United States Power Squadrons, enhance your navigation skills, sign up now.",
+    "upcoming_classes": 0
    },
    {
     "kind": "seminar",
@@ -2603,7 +2952,8 @@
     "category_slug": "navigation",
     "slug": "using-nautical-charts",
     "url": "https://americasboatingclub.org/index.php/seminars/navigation/using-nautical-charts",
-    "description": "Master nautical charts for precise navigation with America's Boating Club | United States Power Squadrons, improve your skills, enroll today."
+    "description": "Master nautical charts for precise navigation with America's Boating Club | United States Power Squadrons, improve your skills, enroll today.",
+    "upcoming_classes": 1
    },
    {
     "kind": "seminar",
@@ -2612,7 +2962,8 @@
     "category_slug": "safety",
     "slug": "all-about-marine-radio",
     "url": "https://americasboatingclub.org/index.php/seminars/safety/all-about-marine-radio",
-    "description": "Understand marine radio communication with America's Boating Club | United States Power Squadrons, stay connected and safe on the water, enroll now."
+    "description": "Understand marine radio communication with America's Boating Club | United States Power Squadrons, stay connected and safe on the water, enroll now.",
+    "upcoming_classes": 1
    },
    {
     "kind": "seminar",
@@ -2621,7 +2972,8 @@
     "category_slug": "safety",
     "slug": "crew-at-the-helm",
     "url": "https://americasboatingclub.org/index.php/seminars/safety/crew-at-the-helm",
-    "description": "Take the helm with confidence through training from America's Boating Club | United States Power Squadrons, gain expert skills, sign up today."
+    "description": "Take the helm with confidence through training from America's Boating Club | United States Power Squadrons, gain expert skills, sign up today.",
+    "upcoming_classes": 2
    },
    {
     "kind": "seminar",
@@ -2630,7 +2982,8 @@
     "category_slug": "safety",
     "slug": "fuel-and-boating-seminar",
     "url": "https://americasboatingclub.org/index.php/seminars/safety/fuel-and-boating-seminar",
-    "description": "Learn about fuel management and efficiency with America's Boating Club | United States Power Squadrons, maximize your boat's performance, enroll today."
+    "description": "Learn about fuel management and efficiency with America's Boating Club | United States Power Squadrons, maximize your boat's performance, enroll today.",
+    "upcoming_classes": 3
    },
    {
     "kind": "seminar",
@@ -2639,7 +2992,8 @@
     "category_slug": "safety",
     "slug": "man-overboard",
     "url": "https://americasboatingclub.org/index.php/seminars/safety/man-overboard",
-    "description": "Be prepared for a man overboard situation with Be prepared for a man overboard situation with America's Boating Club | United States Power Squadrons, learn resc"
+    "description": "Be prepared for a man overboard situation with Be prepared for a man overboard situation with America's Boating Club | United States Power Squadrons, learn resc",
+    "upcoming_classes": 1
    },
    {
     "kind": "seminar",
@@ -2648,7 +3002,8 @@
     "category_slug": "safety",
     "slug": "propane-systems-on-your-boat",
     "url": "https://americasboatingclub.org/index.php/seminars/safety/propane-systems-on-your-boat",
-    "description": "Understand propane systems and safety with America's Boating Club | United States Power Squadrons, protect your boat and crew, enroll today."
+    "description": "Understand propane systems and safety with America's Boating Club | United States Power Squadrons, protect your boat and crew, enroll today.",
+    "upcoming_classes": 0
    },
    {
     "kind": "seminar",
@@ -2657,7 +3012,8 @@
     "category_slug": "techniques",
     "slug": "paddle-smart",
     "url": "https://americasboatingclub.org/index.php/seminars/techniques/paddle-smart",
-    "description": "Learn safe paddling techniques with America's Boating Club | United States Power Squadrons, improve control and efficiency on the water, sign up now."
+    "description": "Learn safe paddling techniques with America's Boating Club | United States Power Squadrons, improve control and efficiency on the water, sign up now.",
+    "upcoming_classes": 0
    },
    {
     "kind": "seminar",
@@ -2666,7 +3022,8 @@
     "category_slug": "techniques",
     "slug": "trailering-your-boat",
     "url": "https://americasboatingclub.org/index.php/seminars/techniques/trailering-your-boat",
-    "description": "Transport your boat safely with expert tips from America's Boating Club | United States Power Squadrons, avoid common mistakes and sign up today to learn more."
+    "description": "Transport your boat safely with expert tips from America's Boating Club | United States Power Squadrons, avoid common mistakes and sign up today to learn more.",
+    "upcoming_classes": 0
    }
   ]
  },
@@ -4713,6 +5070,169 @@
     "median_minutes": 16.9
    }
   },
+  "length_mix": {
+   "rule": "runtime of 60 minutes or more counts as feature-length",
+   "feature_videos": 25,
+   "feature_hours": 44.4,
+   "short_videos": 1155,
+   "short_hours": 160.1,
+   "feature_share_of_runtime_pct": 21.7
+  },
+  "taxonomy": {
+   "method": "Our own grouping, not the channel's: ordered keyword rules over titles, first match wins; Spanish detected by Spanish words; bare titles with a classic 20-35 min episode runtime are bucketed as vintage TV. Whatever no rule matches stays Unclassified — mostly one-off story features and bare cartoon/serial titles with no keyword signal. Rules live in derive/build_dashboard_data.py.",
+   "categories": [
+    {
+     "name": "Unclassified",
+     "videos": 354,
+     "hours": 32.2,
+     "examples": [
+      "BIG SHIPS",
+      "CAPE FEAR",
+      "COMMERCIAL TRAFFIC"
+     ]
+    },
+    {
+     "name": "General safety & boating tips",
+     "videos": 179,
+     "hours": 23.3,
+     "examples": [
+      "BEST FAILS",
+      "COLUMBIA RIVER BAR",
+      "DEFENSIVE BOATING"
+     ]
+    },
+    {
+     "name": "Vintage TV episodes (by 20–35 min runtime)",
+     "videos": 156,
+     "hours": 66.1,
+     "examples": [
+      "CONQUEST OF NEW PROVIDENCE",
+      "CUTLESS WEDDING",
+      "DEAD RECKONING "
+     ]
+    },
+    {
+     "name": "Classic films & TV shows",
+     "videos": 100,
+     "hours": 53.8,
+     "examples": [
+      "SEASON ONE",
+      "SEASON THREE",
+      "SEASON TWO"
+     ]
+    },
+    {
+     "name": "Paddlesports",
+     "videos": 85,
+     "hours": 3.6,
+     "examples": [
+      "SAFETY TIPS FOR PADDLE SPORTS",
+      "STAND UP PADDLEBOARD SAFETY",
+      "BOAT MAN GOES SUP-ING"
+     ]
+    },
+    {
+     "name": "Rules, navigation & boat handling",
+     "videos": 53,
+     "hours": 3.7,
+     "examples": [
+      "DIGITAL CHARTS AND VIRTUAL ATONS",
+      "NAVIGATING INLETS",
+      "ELECTRONIC VISUAL DISTRESS SIGNALS"
+     ]
+    },
+    {
+     "name": "Life jackets, ECOS & safety gear",
+     "videos": 51,
+     "hours": 2.0,
+     "examples": [
+      "FIRE EXTINGUISHER REGULATIONS",
+      "LIFE JACKET WEAR",
+      "CARBON MONOXIDE DANGERS"
+     ]
+    },
+    {
+     "name": "Cruising & partner series",
+     "videos": 50,
+     "hours": 10.3,
+     "examples": [
+      "WSF ON TWC JULY 4TH",
+      "RBFF ANTHEM",
+      "RBFF BIRDS"
+     ]
+    },
+    {
+     "name": "PSAs & promo spots",
+     "videos": 49,
+     "hours": 1.1,
+     "examples": [
+      "ALEX OTTE (:30)",
+      "ALEX OTTE (:60)",
+      "CYNTHIA & SOPHIE (:60)"
+     ]
+    },
+    {
+     "name": "PWC & tow sports",
+     "videos": 28,
+     "hours": 3.2,
+     "examples": [
+      "OPERATING A PWC ON PLANE",
+      "PWC DEPARTING",
+      "PWC DOCKING"
+     ]
+    },
+    {
+     "name": "En español",
+     "videos": 24,
+     "hours": 1.7,
+     "examples": [
+      " POR SI ACASO - CORTA",
+      "ACTO DE EQUILIBRIO",
+      "ASEGURA TU DIVERSION"
+     ]
+    },
+    {
+     "name": "Industry & boat shows",
+     "videos": 20,
+     "hours": 1.8,
+     "examples": [
+      "COOKING FOR MILLIONAIRES ON A LUXURY SUPER YACHT",
+      "CREW CHEF ON A SUPER YACHT",
+      "WHAT YACHT CREW EAT"
+     ]
+    },
+    {
+     "name": "Sober boating (BUI)",
+     "videos": 12,
+     "hours": 0.5,
+     "examples": [
+      "BUI FATALITIES",
+      "DISPELLING BUI MYTHS",
+      "DANGERS OF BUI"
+     ]
+    },
+    {
+     "name": "Fishing & hunting",
+     "videos": 11,
+     "hours": 0.5,
+     "examples": [
+      "ALWAYS READY - FISHING TV",
+      "HUNTER'S PARADISE",
+      "PRO ANGLER BERNIE SCHULTZ"
+     ]
+    },
+    {
+     "name": "Kids & family",
+     "videos": 8,
+     "hours": 0.6,
+     "examples": [
+      "PROPER SIZING FOR KIDS",
+      "KIDS - WHAT IF YOU FLIP",
+      "PROPER GEAR FOR KIDS"
+     ]
+    }
+   ]
+  },
   "total_runtime_hours": 204.5,
   "median_duration_minutes": 4.1,
   "uploads_by_year": {
@@ -4841,6 +5361,67 @@
    "2025": 127,
    "2026": 34,
    "unknown": 12
+  },
+  "broken_links": {
+   "total": 25,
+   "advertised_by_sitemap": 2,
+   "by_domain": {
+    "americasboatingclub.org": 19,
+    "boatlive365.org": 1,
+    "portal.americasboatingclub.org": 1,
+    "uspsonline.enrolmart.com": 1,
+    "www.americasboatingcourse.com": 3
+   },
+   "top": [
+    {
+     "url": "https://americasboatingclub.org/index.php/about/news-and-information/cold-water-safety-what-you-need-to-know-as-temperatures-drop",
+     "linked_from": "https://americasboatingclub.org/index.php/about/news-and-information/the-importance-of-boat-storage"
+    },
+    {
+     "url": "https://americasboatingclub.org/index.php/benefits",
+     "linked_from": "https://americasboatingclub.org/index.php/about/news-and-information/member-benefit-ditch-navigation"
+    },
+    {
+     "url": "https://americasboatingclub.org/index.php/component/content/article/139?Itemid=161",
+     "linked_from": "https://americasboatingclub.org/index.php/in-person-boating-education"
+    },
+    {
+     "url": "https://americasboatingclub.org/index.php/component/content/article/142?Itemid=265",
+     "linked_from": "https://americasboatingclub.org/index.php/join"
+    },
+    {
+     "url": "https://americasboatingclub.org/index.php/component/content/article/99?Itemid=235",
+     "linked_from": "https://americasboatingclub.org/index.php/learn/select-type-of-boating/sailing/sailing-seminars"
+    },
+    {
+     "url": "https://americasboatingclub.org/index.php/component/content/article/advanced-power-boat-handling-seminar?Itemid=235&catid=18",
+     "linked_from": "https://americasboatingclub.org/index.php?view=article&id=115:in-person-boating-courses&catid=18"
+    },
+    {
+     "url": "https://americasboatingclub.org/index.php/component/content/article/find-a-class-near-you?Itemid=328&catid=2",
+     "linked_from": "https://americasboatingclub.org/index.php/learn/select-type-of-boating/all"
+    },
+    {
+     "url": "https://americasboatingclub.org/index.php/education-matters/in-person-boating-education/piloting/",
+     "linked_from": "https://americasboatingclub.org/index.php?view=article&id=118:dive-deep-with-courses&catid=18"
+    },
+    {
+     "url": "https://americasboatingclub.org/index.php/member-benefits",
+     "linked_from": "an earlier crawl pass"
+    },
+    {
+     "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/tides-and-currents?view=article&id=106:basic-coastal-navigation-seminar&catid=18",
+     "linked_from": "https://americasboatingclub.org/index.php?view=article&id=115:in-person-boating-courses&catid=18"
+    },
+    {
+     "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/weather-for-boaters?view=article&id=105:facing-the-environment-seminar&catid=18",
+     "linked_from": "https://americasboatingclub.org/index.php?view=article&id=115:in-person-boating-courses&catid=18"
+    },
+    {
+     "url": "https://americasboatingclub.org/index.php/seminars/safety/ais-electronics-for-boaters",
+     "linked_from": "https://americasboatingclub.org/index.php/about/news-and-information/why-take-our-boating-safety-classes"
+    }
+   ]
   },
   "notes": [
    "www.usps.org (the parent organization's legacy site) answered one request at the start of the session, then became unreachable from every network tried (local client, browser, and a remote fetcher all timed out), so its pages could not be collected — the site appears to be down or heavily throttled. Its links are still counted in the link graph.",
@@ -4987,7 +5568,7 @@
   }
  },
  "provenance": {
-  "generated_at": "2026-06-11T20:33:18Z",
+  "generated_at": "2026-06-11T21:23:19Z",
   "generator": "derive/build_dashboard_data.py",
   "pipeline": [
    {
@@ -5066,7 +5647,7 @@
    "education_catalog": {
     "description": "Every page under /index.php/courses/<category>/<name> and /index.php/seminars/<category>/<name> on the main site. Titles come from each page's H1, descriptions from its meta description tag.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T20:31:30Z",
+    "extracted_at": "2026-06-11T21:18:15Z",
     "sources": [
      "data/crawl/index.jsonl",
      "data/raw/americasboatingclub.org/"
@@ -5083,7 +5664,7 @@
    "enrolmart_products": {
     "description": "Every EnrolMart page whose HTML contains an <h2 class=\"product-price\"> tag — i.e. an actual product page. Prices are read from that tag verbatim.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T20:31:30Z",
+    "extracted_at": "2026-06-11T21:18:15Z",
     "sources": [
      "data/crawl/index.jsonl",
      "data/raw/uspsonline.enrolmart.com/"
@@ -5100,7 +5681,7 @@
    "videos": {
     "description": "One record per video page on americasboatingchannel.uscreen.io (/programs/...), read from the schema.org VideoObject JSON-LD each page embeds. Pages lacking that block are counted and skipped, never guessed.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T20:31:31Z",
+    "extracted_at": "2026-06-11T21:18:16Z",
     "sources": [
      "data/crawl/index.jsonl",
      "data/raw/americasboatingchannel.uscreen.io/"
@@ -5117,7 +5698,7 @@
    "pages": {
     "description": "One record per URL the crawler handled, with per-domain totals. Source of truth is data/crawl/index.jsonl.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T20:31:30Z",
+    "extracted_at": "2026-06-11T21:18:15Z",
     "sources": [
      "data/crawl/index.jsonl"
     ],
@@ -5147,7 +5728,7 @@
    "link_graph": {
     "description": "Cross-links between the crawled ABC properties, plus every external domain those pages link to, counted from the outlink lists in the crawl index. Club websites come from the interactive club directory capture.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T20:31:31Z",
+    "extracted_at": "2026-06-11T21:18:16Z",
     "sources": [
      "data/crawl/index.jsonl",
      "data/interactive/clubs.json"
@@ -5178,7 +5759,7 @@
    "content_dates": {
     "description": "Per-URL <lastmod> stamps copied from the sitemap XML files the crawler saved. These are the sites' own statements of when each page last changed.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T20:31:31Z",
+    "extracted_at": "2026-06-11T21:18:16Z",
     "sources": [
      "data/crawl/sitemap_americasboatingclub.org_manual.xml"
     ],

@@ -2,7 +2,7 @@
  "_provenance": {
   "description": "One record per URL the crawler handled, with per-domain totals. Source of truth is data/crawl/index.jsonl.",
   "script": "derive/extract.py",
-  "extracted_at": "2026-06-11T20:31:30Z",
+  "extracted_at": "2026-06-11T21:18:15Z",
   "sources": [
    "data/crawl/index.jsonl"
   ],
@@ -69,6 +69,133 @@
    "pdf_recorded": 3
   }
  },
+ "broken_links": [
+  {
+   "url": "https://americasboatingclub.org/index.php/about/news-and-information/cold-water-safety-what-you-need-to-know-as-temperatures-drop",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://americasboatingclub.org/index.php/about/news-and-information/the-importance-of-boat-storage"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/benefits",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://americasboatingclub.org/index.php/about/news-and-information/member-benefit-ditch-navigation"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/component/content/article/139?Itemid=161",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://americasboatingclub.org/index.php/in-person-boating-education"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/component/content/article/142?Itemid=265",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://americasboatingclub.org/index.php/join"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/component/content/article/99?Itemid=235",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://americasboatingclub.org/index.php/learn/select-type-of-boating/sailing/sailing-seminars"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/component/content/article/advanced-power-boat-handling-seminar?Itemid=235&catid=18",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://americasboatingclub.org/index.php?view=article&id=115:in-person-boating-courses&catid=18"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/component/content/article/find-a-class-near-you?Itemid=328&catid=2",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://americasboatingclub.org/index.php/learn/select-type-of-boating/all"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/education-matters/in-person-boating-education/piloting/",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://americasboatingclub.org/index.php?view=article&id=118:dive-deep-with-courses&catid=18"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/member-benefits",
+   "domain": "americasboatingclub.org",
+   "linked_from": "unfetched queue from a previous run"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/tides-and-currents?view=article&id=106:basic-coastal-navigation-seminar&catid=18",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://americasboatingclub.org/index.php?view=article&id=115:in-person-boating-courses&catid=18"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/weather-for-boaters?view=article&id=105:facing-the-environment-seminar&catid=18",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://americasboatingclub.org/index.php?view=article&id=115:in-person-boating-courses&catid=18"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/seminars/safety/ais-electronics-for-boaters",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://americasboatingclub.org/index.php/about/news-and-information/why-take-our-boating-safety-classes"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/seminars/safety/all-about-marine-radio?view=article&id=114:virtual-training&catid=18",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://americasboatingclub.org/index.php?view=article&id=115:in-person-boating-courses&catid=18"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/seminars/safety/man-overboard?view=article&id=111:sail-trim-and-rig-tuning-seminar&catid=18",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://americasboatingclub.org/index.php?view=article&id=115:in-person-boating-courses&catid=18"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/virtual-trainer",
+   "domain": "americasboatingclub.org",
+   "linked_from": "sitemap:https://americasboatingclub.org/index.php?option=com_jmap&view=sitemap&format=xml"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/component/content/article/142?Itemid=265",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://www.americasboatingclub.org/index.php/join"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/component/content/article/99?Itemid=235",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://www.americasboatingclub.org/index.php/learn/select-type-of-boating/sailing/sailing-seminars"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/component/content/article/find-a-class-near-you?Itemid=328&catid=2",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://www.americasboatingclub.org/index.php/get-a-replacement-boating-card"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/member-benefits",
+   "domain": "americasboatingclub.org",
+   "linked_from": "unfetched queue from a previous run"
+  },
+  {
+   "url": "https://boatlive365.org/resources/bobber-water-safety-dog/www.bobber.info",
+   "domain": "boatlive365.org",
+   "linked_from": "https://boatlive365.org/resources/bobber-water-safety-dog/"
+  },
+  {
+   "url": "https://portal.americasboatingclub.org/cdn-cgi/l/email-protection#98d5fdf5fafdeaebf0f1e8d8cdcbc8cbb6f7eaff",
+   "domain": "portal.americasboatingclub.org",
+   "linked_from": "https://portal.americasboatingclub.org/ABC/ABC/News/Member-Benefits.aspx"
+  },
+  {
+   "url": "https://uspsonline.enrolmart.com/cdn-cgi/l/email-protection#b696dadbc5f6c3c5c6c5d9d8dadfd8d398d9c4d1",
+   "domain": "uspsonline.enrolmart.com",
+   "linked_from": "https://uspsonline.enrolmart.com"
+  },
+  {
+   "url": "https://course.americasboatingcourse.com/my-account",
+   "domain": "www.americasboatingcourse.com",
+   "linked_from": "https://course.americasboatingcourse.com/forgot-password"
+  },
+  {
+   "url": "https://www.americasboatingcourse.com/about-us",
+   "domain": "www.americasboatingcourse.com",
+   "linked_from": "https://www.americasboatingcourse.com/"
+  },
+  {
+   "url": "https://www.americasboatingcourse.com/additional-training",
+   "domain": "www.americasboatingcourse.com",
+   "linked_from": "sitemap:https://www.americasboatingcourse.com/sitemap.xml"
+  }
+ ],
  "pages": [
   {
    "url": "https://giveabc.org/save-the-date/",

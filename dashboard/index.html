@@ -203,9 +203,14 @@ table.log tr:hover td{background:rgba(18,48,78,.045)}
 }
 /* ---------------- map ---------------- */
 #clubmap{width:100%;height:auto;display:block}
-#clubmap .dot{fill:#12304e;opacity:.78;transition:r .15s}
-#clubmap .dot.nosite{fill:var(--port-red);opacity:.65}
+#clubmap .dot{fill:#12304e;opacity:.5;transition:r .15s}
+#clubmap .dot.active{fill:var(--buoy-gold);stroke:#12304e;stroke-width:1;opacity:.95}
 #clubmap .dot:hover{opacity:1}
+.sched-dot{
+  display:inline-block;width:7px;height:7px;border-radius:50%;
+  background:var(--buoy-gold);border:1px solid var(--ink);
+  margin-left:6px;vertical-align:1px;
+}
 .maptip{
   position:fixed;pointer-events:none;background:var(--ink);color:#f2ecdd;
   font-family:var(--mono);font-size:11.5px;padding:5px 9px;border-radius:2px;
@@ -308,8 +313,8 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
         <h3>Plotting sheet — every club by coordinate <span class="h3-flag" id="map-flag"></span></h3>
         <svg id="clubmap" viewBox="0 0 920 560" role="img" aria-label="Dot map of clubs"></svg>
         <div class="legend">
-          <span><span class="sw" style="background:#12304e"></span>club with its own website</span>
-          <span><span class="sw" style="background:#b3382e"></span>club without a website link</span>
+          <span><span class="sw" style="background:#c8922a"></span><span id="legend-active">clubs with upcoming classes</span></span>
+          <span><span class="sw" style="background:#12304e"></span>no classes currently scheduled</span>
           <span id="offchart" class="dim"></span>
         </div>
       </div>
@@ -343,14 +348,20 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     <p class="sec-note">The national course catalog comes from the main site's course and seminar pages.
     The live schedule comes from each club's details page — the same page a visitor reaches after
     using "Find a Club".</p>
-    <div class="grid g2e">
+    <div class="grid g3">
       <div class="card">
         <h3>Upcoming classes by start month <span class="h3-flag" id="sched-flag"></span></h3>
         <svg id="monthchart" viewBox="0 0 560 230"></svg>
+        <p class="dim" id="sched-bystate" style="font-size:12px;margin-top:6px"></p>
       </div>
       <div class="card">
         <h3>Most-scheduled classes nationwide</h3>
         <table class="log" id="toptitles"></table>
+      </div>
+      <div class="card">
+        <h3>Busiest schedules</h3>
+        <table class="log" id="busiest"></table>
+        <p class="dim" style="font-size:12px;margin-top:8px">the clubs with the most classes on the calendar</p>
       </div>
     </div>
     <div class="grid g2" style="margin-top:22px">
@@ -408,7 +419,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
       <div class="card"><h3>Running time</h3><div id="durations"></div></div>
       <div class="card"><h3>Longest passages</h3><table class="log" id="longest"></table></div>
     </div>
-    <div class="grid g2e" style="margin-top:22px">
+    <div class="grid g3" style="margin-top:22px">
       <div class="card">
         <h3>Hours of content added per year <span class="h3-flag">with running total</span></h3>
         <svg id="hoursyear" viewBox="0 0 560 210"></svg>
@@ -416,6 +427,10 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
       <div class="card">
         <h3>Typical video length by year</h3>
         <div id="lenyear"></div>
+      </div>
+      <div class="card">
+        <h3>What the channel plays <span class="h3-flag">our own taxonomy</span></h3>
+        <div id="taxonomy"></div>
       </div>
     </div>
   </section>
@@ -442,6 +457,11 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
           <table class="log" id="crosslinks"></table>
         </div>
       </div>
+    </div>
+    <div class="card" style="margin-top:22px">
+      <h3>Dead links found while crawling <span class="h3-flag" id="broken-flag"></span></h3>
+      <table class="log" id="brokentbl"></table>
+      <p class="dim" id="broken-note" style="font-size:12px;margin-top:8px"></p>
     </div>
     <div class="grid g2e" style="margin-top:22px">
       <div class="card"><h3>Top external harbors linked</h3><div id="externals"></div></div>
@@ -596,6 +616,9 @@ kpis.forEach(function(k, i){
   });
   document.getElementById('map-flag').textContent =
     (conus.length + alaska.length + carib.length) + ' plotted';
+  var activeCount = all.filter(function(p){ return p.classes > 0; }).length;
+  document.getElementById('legend-active').textContent =
+    activeCount + ' clubs with upcoming classes';
   document.getElementById('offchart').textContent =
     off.length ? off.length + ' club' + (off.length>1?'s':'') + ' beyond this sheet: ' +
       off.map(function(p){return p.name;}).join(', ') : '';
@@ -618,12 +641,14 @@ kpis.forEach(function(k, i){
   }
   function addDot(X, Y, p, r){
     var c = svgel('circle', {cx:X.toFixed(1), cy:Y.toFixed(1), r:r,
-      class:'dot' + (p.website ? '' : ' nosite')});
+      class:'dot' + (p.classes ? ' active' : '')});
     c.addEventListener('mousemove', function(ev){
       tip.style.opacity = 1;
       tip.style.left = ev.clientX + 'px';
       tip.style.top = ev.clientY + 'px';
-      tip.textContent = p.name + (p.state ? ' · ' + p.state : '');
+      tip.textContent = p.name + (p.state ? ' · ' + p.state : '') +
+        (p.classes ? ' · ' + p.classes + ' upcoming class' +
+          (p.classes > 1 ? 'es' : '') : '');
     });
     c.addEventListener('mouseleave', function(){ tip.style.opacity = 0; });
     svg.appendChild(c);
@@ -776,7 +801,11 @@ document.getElementById('edu-lede').textContent =
   D.education.courses + ' courses · ' + D.education.seminars + ' seminars · ' +
   fmt(D.schedule.total_upcoming) + ' scheduled classes';
 document.getElementById('sched-flag').textContent =
-  D.schedule.clubs_with_classes + ' of ' + D.schedule.clubs_checked + ' clubs have schedules';
+  D.schedule.clubs_with_classes + ' of ' + D.schedule.clubs_checked + ' clubs · ' +
+  (D.schedule.kinds.course || 0) + ' courses / ' + (D.schedule.kinds.seminar || 0) + ' seminars';
+document.getElementById('sched-bystate').textContent =
+  'most classes: ' + Object.entries(D.schedule.by_state).slice(0, 6)
+    .map(function(kv){ return kv[0] + ' ' + kv[1]; }).join(' · ');
 
 /* month columns */
 (function(){
@@ -820,6 +849,20 @@ document.getElementById('sched-flag').textContent =
   });
 })();
 
+/* busiest clubs */
+(function(){
+  var tbl = document.getElementById('busiest');
+  var tr = el('tr'); ['Club', 'State', 'Classes'].forEach(function(h){ tr.appendChild(el('th', {}, h)); });
+  tbl.appendChild(tr);
+  (D.schedule.most_active_clubs || []).forEach(function(c){
+    var row = el('tr');
+    row.appendChild(el('td', {style:'font-size:12.5px'}, c.club));
+    row.appendChild(el('td', {class:'dim'}, c.state || '—'));
+    row.appendChild(el('td', {class:'num'}, String(c.classes)));
+    tbl.appendChild(row);
+  });
+})();
+
 /* catalog chips */
 (function(){
   var wrap = document.getElementById('catalog');
@@ -829,19 +872,41 @@ document.getElementById('sched-flag').textContent =
   legend.appendChild(el('b', {style:'color:var(--ink);font-family:var(--mono)'}, 'C'));
   legend.appendChild(document.createTextNode(' = course, a 6–8 week class  ·  '));
   legend.appendChild(el('b', {style:'color:var(--stbd-green);font-family:var(--mono)'}, 'S'));
-  legend.appendChild(document.createTextNode(' = seminar, a focused 2-hour workshop — as the site describes them'));
+  legend.appendChild(document.createTextNode(' = seminar, a focused 2-hour workshop — as the site describes them · '));
+  legend.appendChild(el('span', {class:'sched-dot'}));
+  legend.appendChild(document.createTextNode(' = has a class on the national calendar right now'));
   wrap.appendChild(legend);
+  var cov = D.education.catalog_coverage;
+  if(cov){
+    var covLine = el('p', {style:'font-size:13px;margin:0 0 12px'});
+    var topOutside = (cov.outside_catalog_titles && cov.outside_catalog_titles[0]) || ['', 0];
+    covLine.innerHTML = '<b>' + cov.items_with_upcoming + ' of ' +
+      (cov.items_with_upcoming + cov.items_dormant) + '</b> catalog items are actually ' +
+      'being taught somewhere right now (' + cov.items_dormant + ' are dormant). ' +
+      'Another <b>' + cov.classes_outside_catalog + '</b> scheduled classes teach offerings ' +
+      'outside this catalog — led by the entry-level “' + topOutside[0] + '” (' +
+      topOutside[1] + ' classes).';
+    wrap.appendChild(covLine);
+  }
+  var itemByTitle = {};
+  (D.education.catalog || []).forEach(function(it){ itemByTitle[it.title] = it; });
+  function addChip(blk, t, cls, letter){
+    var c = el('span', {class:'chip ' + cls});
+    c.appendChild(el('b', {}, letter + ' '));
+    c.appendChild(document.createTextNode(t));
+    var item = itemByTitle[t];
+    if(item && item.upcoming_classes){
+      c.appendChild(el('span', {class:'sched-dot',
+        title: item.upcoming_classes + ' upcoming class' +
+               (item.upcoming_classes > 1 ? 'es' : '')}));
+    }
+    blk.appendChild(c);
+  }
   Object.entries(D.education.by_category).forEach(function(kv){
     var blk = el('div', {class:'cat-block'});
     blk.appendChild(el('div', {class:'cat-name'}, kv[0]));
-    (kv[1].courses||[]).forEach(function(t){
-      var c = el('span', {class:'chip chip-c'}); c.appendChild(el('b', {}, 'C '));
-      c.appendChild(document.createTextNode(t)); blk.appendChild(c);
-    });
-    (kv[1].seminars||[]).forEach(function(t){
-      var c = el('span', {class:'chip chip-s'}); c.appendChild(el('b', {}, 'S '));
-      c.appendChild(document.createTextNode(t)); blk.appendChild(c);
-    });
+    (kv[1].courses||[]).forEach(function(t){ addChip(blk, t, 'chip-c', 'C'); });
+    (kv[1].seminars||[]).forEach(function(t){ addChip(blk, t, 'chip-s', 'S'); });
     wrap.appendChild(blk);
   });
 })();
@@ -1028,6 +1093,22 @@ document.getElementById('vid-lede').textContent =
     fil.textContent = kv[1];
     trk.appendChild(fil); row.appendChild(trk); dw.appendChild(row);
   });
+  if(D.videos.length_mix){
+    var lm = D.videos.length_mix;
+    var mix = el('p', {style:'font-size:13px;margin-top:10px'});
+    mix.innerHTML = '<b>' + lm.feature_videos + '</b> feature-length videos hold <b>' +
+      lm.feature_hours + 'h</b> — ' + lm.feature_share_of_runtime_pct +
+      '% of all runtime (' + lm.rule + ').';
+    dw.appendChild(mix);
+    var bar = el('div', {style:'display:flex;height:12px;margin-top:6px;border:1px solid var(--rule)'});
+    bar.appendChild(el('div', {style:'width:' + lm.feature_share_of_runtime_pct + '%;background:var(--buoy-gold)',
+      title:'feature-length: ' + lm.feature_hours + 'h'}));
+    bar.appendChild(el('div', {style:'flex:1;background:#12304e',
+      title:'short-form: ' + lm.short_hours + 'h'}));
+    dw.appendChild(bar);
+    dw.appendChild(el('p', {class:'dim', style:'font-size:11.5px;margin-top:4px'},
+      'gold = feature-length share of runtime · navy = everything else'));
+  }
 
   var tbl = document.getElementById('longest');
   var tr = el('tr'); ['Video', 'Min'].forEach(function(h){ tr.appendChild(el('th', {}, h)); });
@@ -1077,6 +1158,28 @@ document.getElementById('vid-lede').textContent =
     wrap.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
       'Median runtime of that year’s uploads — the median resists the long classic films that would skew an average.'));
   }
+})();
+
+/* custom taxonomy */
+(function(){
+  var tax = D.videos.taxonomy;
+  if(!tax) return;
+  var wrap = document.getElementById('taxonomy');
+  var max = Math.max.apply(null, tax.categories.map(function(c){return c.videos;}));
+  tax.categories.forEach(function(c, i){
+    var row = el('div', {class:'barrow'});
+    row.appendChild(el('span', {class:'lab',
+      style:'width:168px;font-size:10.5px;line-height:1.25;white-space:normal',
+      title:'e.g. ' + c.examples.join(' · ')}, c.name));
+    var trk = el('div', {class:'trk'});
+    var fil = el('div', {class:'fil',
+      style:'width:' + (c.videos/max*100) + '%;animation-delay:' + (i*35) + 'ms' +
+            (c.name === 'Unclassified' ? ';opacity:.45' : '')});
+    fil.textContent = c.videos;
+    trk.appendChild(fil); row.appendChild(trk); wrap.appendChild(row);
+  });
+  wrap.appendChild(el('p', {class:'dim', style:'font-size:11.5px;margin-top:8px'},
+    tax.method + ' Hover a label for example titles.'));
 })();
 
 /* ---------- CH5 · fleet ---------- */
@@ -1139,6 +1242,28 @@ document.getElementById('fleet-lede').textContent =
     row.appendChild(el('td', {class:'num'}, fmt(e.links)));
     tbl.appendChild(row);
   });
+})();
+
+/* dead links */
+(function(){
+  var bl = D.site.broken_links;
+  if(!bl) return;
+  document.getElementById('broken-flag').textContent =
+    bl.total + ' URLs answered 404';
+  var tbl = document.getElementById('brokentbl');
+  var tr = el('tr');
+  ['Broken URL (404)', 'Linked from'].forEach(function(h){ tr.appendChild(el('th', {}, h)); });
+  tbl.appendChild(tr);
+  bl.top.forEach(function(b){
+    var row = el('tr');
+    row.appendChild(el('td', {style:'font-family:var(--mono);font-size:11px;word-break:break-all'}, b.url));
+    row.appendChild(el('td', {style:'font-family:var(--mono);font-size:11px;word-break:break-all'}, b.linked_from));
+    tbl.appendChild(row);
+  });
+  document.getElementById('broken-note').textContent =
+    'Showing ' + bl.top.length + ' of ' + bl.total + ' dead links; ' +
+    bl.advertised_by_sitemap + ' are advertised by a site’s own sitemap. Per domain: ' +
+    Object.entries(bl.by_domain).map(function(kv){ return kv[0] + ' ' + kv[1]; }).join(' · ') + '.';
 })();
 
 /* externals + club sites */

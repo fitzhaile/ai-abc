@@ -2,7 +2,7 @@
  "_provenance": {
   "description": "Every EnrolMart page whose HTML contains an <h2 class=\"product-price\"> tag — i.e. an actual product page. Prices are read from that tag verbatim.",
   "script": "derive/extract.py",
-  "extracted_at": "2026-06-11T20:31:30Z",
+  "extracted_at": "2026-06-11T21:18:15Z",
   "sources": [
    "data/crawl/index.jsonl",
    "data/raw/uspsonline.enrolmart.com/"

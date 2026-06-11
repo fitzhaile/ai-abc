@@ -110,6 +110,7 @@ def text_of(markup):
 # ---------------------------------------------------------------------------
 def extract_pages(records):
     pages = []
+    broken_links = []
     domain_stats = defaultdict(lambda: Counter())
     for r in records:
         domain_stats[r["domain"]][
@@ -117,6 +118,14 @@ def extract_pages(records):
         outcome = r.get("outcome", "")
         if outcome.startswith("failed"):
             domain_stats[r["domain"]]["failed"] += 1
+            # Dead links are site-health data in their own right: a 404 plus
+            # the page (or sitemap) that pointed at it.
+            if "HTTP Error 404" in outcome:
+                broken_links.append({
+                    "url": r.get("url"),
+                    "domain": r["domain"],
+                    "linked_from": r.get("discovered_from", "unknown"),
+                })
         elif outcome.startswith("skipped"):
             domain_stats[r["domain"]]["skipped"] += 1
         elif r.get("is_pdf"):
@@ -136,6 +145,10 @@ def extract_pages(records):
         log(f"  {d}: {c.get('fetched', 0)} pages fetched, "
             f"{c.get('failed', 0)} failed, {c.get('skipped', 0)} skipped, "
             f"{c.get('pdf_recorded', 0)} PDFs recorded as links.")
+    broken_links.sort(key=lambda b: (b["domain"] != "americasboatingclub.org",
+                                     b["domain"], b["url"]))
+    log(f"  broken links: {len(broken_links)} URLs returned 404 when the "
+        f"crawler followed a link or sitemap entry to them.")
     return {
         "_provenance": provenance(
             "One record per URL the crawler handled, with per-domain "
@@ -143,6 +156,7 @@ def extract_pages(records):
             ["data/crawl/index.jsonl"],
             web_sources=[f"https://{d}/" for d in stats]),
         "per_domain": stats,
+        "broken_links": broken_links,
         "pages": pages,
     }
 
