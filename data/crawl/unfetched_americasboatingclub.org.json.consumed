@@ -1,0 +1,26 @@
+{
+  "explanation": "URLs discovered for this domain but not fetched because the page cap or time limit was reached. Raise max_pages in scrape/crawl.py and re-run; already-fetched pages are skipped automatically.",
+  "count": 4,
+  "urls": [
+    {
+      "url": "https://americasboatingclub.org/learn",
+      "depth": 0,
+      "discovered_from": "https://uspsonline.enrolmart.com"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/member-benefits",
+      "depth": 0,
+      "discovered_from": "https://www.americasboatingcourse.com/about-usps"
+    },
+    {
+      "url": "https://americasboatingclub.org/learn/available-online",
+      "depth": 0,
+      "discovered_from": "https://boatlive365.org/safety-training/"
+    },
+    {
+      "url": "https://americasboatingclub.org/index.php/member-benefits",
+      "depth": 0,
+      "discovered_from": "https://uspsonline.enrolmart.com/pages/about-us"
+    }
+  ]
+}

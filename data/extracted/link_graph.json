@@ -1,0 +1,1383 @@
+{
+ "_provenance": {
+  "description": "Cross-links between the crawled ABC properties, plus every external domain those pages link to, counted from the outlink lists in the crawl index. Club websites come from the interactive club directory capture.",
+  "script": "derive/extract.py",
+  "extracted_at": "2026-06-11T18:28:33Z",
+  "sources": [
+   "data/crawl/index.jsonl",
+   "data/interactive/clubs.json"
+  ]
+ },
+ "abc_cross_links": [
+  {
+   "from": "americasboatingclub.org",
+   "to": "uspsonline.enrolmart.com",
+   "links": 29135
+  },
+  {
+   "from": "americasboatingclub.org",
+   "to": "www.usps.org",
+   "links": 8034
+  },
+  {
+   "from": "americasboatingclub.org",
+   "to": "www.americasboatingcourse.com",
+   "links": 1952
+  },
+  {
+   "from": "americasboatingclub.org",
+   "to": "americasboatingchannel.uscreen.io",
+   "links": 1931
+  },
+  {
+   "from": "americasboatingclub.org",
+   "to": "portal.americasboatingclub.org",
+   "links": 1066
+  },
+  {
+   "from": "americasboatingclub.org",
+   "to": "store.shopusps.org",
+   "links": 1024
+  },
+  {
+   "from": "americasboatingclub.org",
+   "to": "www.uspsonline.org",
+   "links": 1024
+  },
+  {
+   "from": "americasboatingclub.org",
+   "to": "boatlive365.org",
+   "links": 456
+  },
+  {
+   "from": "www.americasboatingcourse.com",
+   "to": "americasboatingclub.org",
+   "links": 381
+  },
+  {
+   "from": "giveabc.org",
+   "to": "americasboatingclub.org",
+   "links": 177
+  },
+  {
+   "from": "uspsonline.enrolmart.com",
+   "to": "americasboatingclub.org",
+   "links": 120
+  },
+  {
+   "from": "www.americasboatingcourse.com",
+   "to": "www.usps.org",
+   "links": 93
+  },
+  {
+   "from": "www.americasboatingcourse.com",
+   "to": "uspsonline.enrolmart.com",
+   "links": 23
+  },
+  {
+   "from": "americasboatingclub.org",
+   "to": "giveabc.org",
+   "links": 20
+  },
+  {
+   "from": "boatlive365.org",
+   "to": "americasboatingclub.org",
+   "links": 13
+  },
+  {
+   "from": "uspsonline.enrolmart.com",
+   "to": "www.usps.org",
+   "links": 4
+  },
+  {
+   "from": "boatlive365.org",
+   "to": "americasboatingchannel.uscreen.io",
+   "links": 3
+  },
+  {
+   "from": "uspsonline.enrolmart.com",
+   "to": "americasboatingchannel.uscreen.io",
+   "links": 2
+  },
+  {
+   "from": "portal.americasboatingclub.org",
+   "to": "www.usps.org",
+   "links": 2
+  },
+  {
+   "from": "uspsonline.enrolmart.com",
+   "to": "www.americasboatingcourse.com",
+   "links": 1
+  },
+  {
+   "from": "giveabc.org",
+   "to": "www.americasboatingcourse.com",
+   "links": 1
+  }
+ ],
+ "external_domains_top100": {
+  "www.facebook.com": 2019,
+  "twitter.com": 1820,
+  "www.instagram.com": 1774,
+  "www.youtube.com": 1344,
+  "linkedin.com": 1253,
+  "www.uscreen.tv?utm_category=product&utm_medium=branding&utm_source=35298&utm_campaign=web&utm_content=powered_by": 1248,
+  "www.tiktok.com": 1247,
+  "www.pinterest.com": 571,
+  "www.linkedin.com": 509,
+  "youtube.com": 452,
+  "maps.app.goo.gl": 67,
+  "enrolmart.com": 55,
+  "x.com": 31,
+  "www.addevent.com": 30,
+  "player.vimeo.com": 23,
+  "facebook.com": 16,
+  "wow.uscgaux.info": 12,
+  "www.boatus.org": 12,
+  "www.uscgboating.org": 11,
+  "www.safeboatingcampaign.com": 10,
+  "uscgboating.org": 9,
+  "www.brunswick.com": 9,
+  "bit.ly": 7,
+  "theensign.org": 7,
+  "www.tumblr.com": 6,
+  "pinterest.com": 6,
+  "www.mcgriff.com": 6,
+  "seascout.org": 6,
+  "www.operationdrywater.org": 6,
+  "drive.google.com": 6,
+  "boatingcompass.org": 5,
+  "www.safeboatingcouncil.org": 5,
+  "www.nasbla.org": 5,
+  "tinyurl.com": 4,
+  "dashboard": 4,
+  "receipts": 4,
+  "my-account": 4,
+  "actions": 4,
+  "ditchnavigation.com": 4,
+  "issuu.com": 4,
+  "instagram.com": 3,
+  "apps.apple.com": 3,
+  "play.google.com": 3,
+  "www.gocoastguard.com": 3,
+  "www.cps-ecp.ca": 3,
+  "www.cgaux.org": 3,
+  "www.noaa.gov": 3,
+  "springaboard.org": 3,
+  "www.fta-vacations.com": 3,
+  "www.capefearpowersquadron.org": 3,
+  "www.wspsboating.org": 3,
+  "www.abcsb.org": 3,
+  "www.verobeachpowersquadron.com": 3,
+  "www.bgcirc.org": 3,
+  "americasboatingclubhouston.org": 3,
+  "uwf.augusoft.net": 3,
+  "getconnectedboating.org": 3,
+  "www.givingtuesday.org": 2,
+  "safetyseal.net": 2,
+  "www.lifejacketvideocontest.com": 2,
+  "tools.google.com": 2,
+  "www.propguard.com": 2,
+  "www.propellersafety.com": 2,
+  "www.seatow.com": 2,
+  "www.sailtraining.org": 2,
+  "danboater.org": 2,
+  "www.uscgq.com": 2,
+  "v": 2,
+  "americasboatingcluboceanside.org": 2,
+  "www.elks622.com": 2,
+  "americasboatingclub.socialtoaster.com": 1,
+  "www.abcboatinsurance.com": 1,
+  "fb.me": 1,
+  "policies.google.com": 1,
+  "www.aboutcookies.org": 1,
+  "www.allaboutcookies.org": 1,
+  "support.google.com": 1,
+  "privacy.microsoft.com": 1,
+  "support.mozilla.org": 1,
+  "www.opera.com": 1,
+  "support.apple.com": 1,
+  "www.youronlinechoices.com": 1,
+  "www.getconnectedboating.org": 1,
+  "www.stopdrowningnow.org": 1,
+  "safeboatingcampaign.com": 1,
+  "www.westmarine.com": 1,
+  "www.cdc.gov": 1,
+  "safeboatingcouncil.org": 1,
+  "www.weather.gov": 1,
+  "americancanoe.org": 1,
+  "ussailing.org": 1,
+  "cgaux.org": 1,
+  "asa.com": 1,
+  "www.ibwss.org": 1,
+  "www.gradywhite.com": 1,
+  "www.navcen.uscg.gov": 1,
+  "www.boatingsafety.com": 1,
+  "www.usace.army.mil": 1,
+  "dnr.alaska.gov": 1,
+  "www.bobber.info": 1
+ },
+ "external_domains_total": 105,
+ "club_websites": [
+  {
+   "club": "North Star Sail and Power Squadron",
+   "state": "AK",
+   "website": "https://www.usps.org/localusps/sss-ntr"
+  },
+  {
+   "club": "America's Boating Club North Alabama",
+   "state": "AL",
+   "website": "https://www.abcnorthalabama.org/"
+  },
+  {
+   "club": "Vulcan Power Squadron",
+   "state": "AL",
+   "website": "https://www.usps.org/localusps/sss-vn"
+  },
+  {
+   "club": "America's Boating Club Arrowhead",
+   "state": "CA",
+   "website": "https://www.usps.org/arrowhead"
+  },
+  {
+   "club": "America's Boating Club Newport",
+   "state": "CA",
+   "website": "https://https://abcnewport.org/"
+  },
+  {
+   "club": "America's Boating Club Oceanside",
+   "state": "CA",
+   "website": "https://usps.org/oceanside/"
+  },
+  {
+   "club": "America's Boating Club Peralta",
+   "state": "CA",
+   "website": "https://www.peraltasquadron.org"
+  },
+  {
+   "club": "America's Boating Club San Diego",
+   "state": "CA",
+   "website": "https://www.sdsps.org"
+  },
+  {
+   "club": "America's Boating Club San Joaquin Delta",
+   "state": "CA",
+   "website": "https://www.sjdps.org"
+  },
+  {
+   "club": "America's Boating Club Santa Barbara",
+   "state": "CA",
+   "website": "https://www.sbsps.net"
+  },
+  {
+   "club": "America's Boating Club Tres Rios",
+   "state": "CA",
+   "website": "https://www.usps.org/localusps/sss-trs"
+  },
+  {
+   "club": "America's Boating Club Ventura",
+   "state": "CA",
+   "website": "https://www.usps.org/localusps/sss-vu"
+  },
+  {
+   "club": "America's Boating Club of Greater Sacramento",
+   "state": "CA",
+   "website": "https://www.usps.org/localusps/sss-smo"
+  },
+  {
+   "club": "Diablo Sail and Power Squadron",
+   "state": "CA",
+   "website": "https://www.usps.org/localusps/sss-di"
+  },
+  {
+   "club": "The Valley Sail and Power Squadron",
+   "state": "CA",
+   "website": "https://www.usps.org/localusps/sss-tvy"
+  },
+  {
+   "club": "America's Boating Club Colorado",
+   "state": "CO",
+   "website": "https://www.usps.org/boulder"
+  },
+  {
+   "club": "America's Boating Club Darien",
+   "state": "CT",
+   "website": "https://dspsct.org"
+  },
+  {
+   "club": "America's Boating Club Greenwich",
+   "state": "CT",
+   "website": "https://greenwichsps.org"
+  },
+  {
+   "club": "America's Boating Club Hartford",
+   "state": "CT",
+   "website": "https://www.usps.org/localusps/hartford"
+  },
+  {
+   "club": "America's Boating Club Lake Candlewood",
+   "state": "CT",
+   "website": "https://www.lakecandlewoodsquadron.org"
+  },
+  {
+   "club": "America's Boating Club New Haven",
+   "state": "CT",
+   "website": "https://www.usps.org/localusps/newhaven"
+  },
+  {
+   "club": "America's Boating Club Norwalk",
+   "state": "CT",
+   "website": "https://www.usps.org/norwalk/"
+  },
+  {
+   "club": "America's Boating Club Stamford",
+   "state": "CT",
+   "website": "https://usps.org/localusps/sss-sm"
+  },
+  {
+   "club": "America's Boating Club Waterbury",
+   "state": "CT",
+   "website": "https://www.usps.org/waterbury"
+  },
+  {
+   "club": "Meriden Power Squadron",
+   "state": "CT",
+   "website": "https://www.usps.org/localusps/sss-mer"
+  },
+  {
+   "club": "Middletown Power Squadron",
+   "state": "CT",
+   "website": "https://www.usps.org/localusps/middletown"
+  },
+  {
+   "club": "New London Power Squadron",
+   "state": "CT",
+   "website": "https://www.newlondonpowersquadron.org"
+  },
+  {
+   "club": "Norwich Power Squadron",
+   "state": "CT",
+   "website": "https://usps.org/localusps/sss-nc"
+  },
+  {
+   "club": "Penfield Power Squadron",
+   "state": "CT",
+   "website": "https://penfieldsailandpowersquadron.org"
+  },
+  {
+   "club": "Saybrook Sail and Power Squadron",
+   "state": "CT",
+   "website": "https://www.usps.org/localusps/saybrook"
+  },
+  {
+   "club": "America's Boating Club Wilmington",
+   "state": "DE",
+   "website": "https://www.abc-wilmington.com"
+  },
+  {
+   "club": "America's Boating Club Anna Maria Island",
+   "state": "FL",
+   "website": "https://www.usps.org/annamaria"
+  },
+  {
+   "club": "America's Boating Club Cape Coral",
+   "state": "FL",
+   "website": "https://ccsaps.org"
+  },
+  {
+   "club": "America's Boating Club Clearwater",
+   "state": "FL",
+   "website": "https://www.abclubclearwater.org/"
+  },
+  {
+   "club": "America's Boating Club Daytona Beach",
+   "state": "FL",
+   "website": "https://Www.abcdb.club"
+  },
+  {
+   "club": "America's Boating Club Ft. Myers",
+   "state": "FL",
+   "website": "https://www.usps.org/localusps/sss-fm"
+  },
+  {
+   "club": "America's Boating Club Harris Chain",
+   "state": "FL",
+   "website": "https://www.harrischain.org"
+  },
+  {
+   "club": "America's Boating Club Jacksonville",
+   "state": "FL",
+   "website": "https://jspsboating.club"
+  },
+  {
+   "club": "America's Boating Club Key West",
+   "state": "FL",
+   "website": "https://www.usps.org/localusps/keywest"
+  },
+  {
+   "club": "America's Boating Club Lakeland",
+   "state": "FL",
+   "website": "https://www.usps.org/localusps/sss-ld"
+  },
+  {
+   "club": "America's Boating Club Manatee",
+   "state": "FL",
+   "website": "https://www.manatee-squadron.org"
+  },
+  {
+   "club": "America's Boating Club Marathon",
+   "state": "FL",
+   "website": "https://www.marathonpowersquadron.org"
+  },
+  {
+   "club": "America's Boating Club Marco Island",
+   "state": "FL",
+   "website": "https://MarcoBoatingClub.org"
+  },
+  {
+   "club": "America's Boating Club Naples",
+   "state": "FL",
+   "website": "https://www.usps.org/localusps/sss-ns"
+  },
+  {
+   "club": "America's Boating Club Palm Beach",
+   "state": "FL",
+   "website": "https://abcpalmbeach.org/"
+  },
+  {
+   "club": "America's Boating Club Peace River",
+   "state": "FL",
+   "website": "https://www.americasboatingclubpeaceriver.org"
+  },
+  {
+   "club": "America's Boating Club Pensacola",
+   "state": "FL",
+   "website": "https://www.usps.org/pensacola"
+  },
+  {
+   "club": "America's Boating Club Pompano Beach",
+   "state": "FL",
+   "website": "https://pompanosafeboating.com/"
+  },
+  {
+   "club": "America's Boating Club San Carlos Bay",
+   "state": "FL",
+   "website": "https://www.scbps.com"
+  },
+  {
+   "club": "America's Boating Club Sanibel Captiva",
+   "state": "FL",
+   "website": "https://www.usps.org/localusps/sancap"
+  },
+  {
+   "club": "America's Boating Club Sarasota",
+   "state": "FL",
+   "website": "https://www.sarasota-boating.org"
+  },
+  {
+   "club": "America's Boating Club South Brevard",
+   "state": "FL",
+   "website": "https://www.abcsb.org"
+  },
+  {
+   "club": "America's Boating Club St Lucie River",
+   "state": "FL",
+   "website": "https://www.SLRPS.org"
+  },
+  {
+   "club": "America's Boating Club St. Petersburg",
+   "state": "FL",
+   "website": "https://www.boating-stpete.org/"
+  },
+  {
+   "club": "America's Boating Club of Tampa Bay",
+   "state": "FL",
+   "website": "https://www.tampaps.org/"
+  },
+  {
+   "club": "Cocoa Beach Sail and Power Squadron",
+   "state": "FL",
+   "website": "https://www.cbsps.org"
+  },
+  {
+   "club": "Gainesville Sail and Power Squadron",
+   "state": "FL",
+   "website": "https://gainesvilleboatingclub.org"
+  },
+  {
+   "club": "Venice Sail and Power Squadron",
+   "state": "FL",
+   "website": "https://www.usps.org/localusps/venice/"
+  },
+  {
+   "club": "Vero Beach Power Squadron",
+   "state": "FL",
+   "website": "https://verobeachpowersquadron.com"
+  },
+  {
+   "club": "America's Boating Club Atlanta",
+   "state": "GA",
+   "website": "https://www.americasboatingclubatlanta.org"
+  },
+  {
+   "club": "America's Boating Club Golden Isles",
+   "state": "GA",
+   "website": "https://www.gisps.org"
+  },
+  {
+   "club": "America's Boating Club Savannah",
+   "state": "GA",
+   "website": "https://www.abclubsavannah.org"
+  },
+  {
+   "club": "America's Boating Club Des Moines",
+   "state": "IA",
+   "website": "https://www.usps.org/localusps/sss-dm"
+  },
+  {
+   "club": "Four Rivers Sail and Power Squadron",
+   "state": "IA",
+   "website": "https://www.d30usps.org/frsp/index.html"
+  },
+  {
+   "club": "America's Boating Club Fox Valley",
+   "state": "IL",
+   "website": "http://www.usps.org/foxvalley"
+  },
+  {
+   "club": "America's Boating Club Illinois Valley",
+   "state": "IL",
+   "website": "https://ilvalleyboating.org"
+  },
+  {
+   "club": "America's Boating Club Land of Lincoln",
+   "state": "IL",
+   "website": "https://www.usps.org/localusps/sss-lol"
+  },
+  {
+   "club": "America's Boating Club Mid Illini",
+   "state": "IL",
+   "website": "https://midilliniusps.weebly.com/"
+  },
+  {
+   "club": "America's Boating Club Waukegan",
+   "state": "IL",
+   "website": "https://www.wspsboating.org"
+  },
+  {
+   "club": "America's Boating Club of the North Shore",
+   "state": "IL",
+   "website": "https://www.skokievalleypowersquadron.org"
+  },
+  {
+   "club": "DuPage Sail and Power Squadron",
+   "state": "IL",
+   "website": "https://www.uspsdupage.org"
+  },
+  {
+   "club": "Rockford Power Squadron",
+   "state": "IL",
+   "website": "https://www.usps.org/localusps/sss-rf"
+  },
+  {
+   "club": "America's Boating Club Michigan City",
+   "state": "IN",
+   "website": "https://www.facebook.com/pages/Michigan-City-Power-Squadron/172857859487718"
+  },
+  {
+   "club": "Wabash Valley Power Squadron",
+   "state": "IN",
+   "website": "https://www.usps.org/localusps/sss-wb"
+  },
+  {
+   "club": "Kansas City Power Squadron",
+   "state": "KS",
+   "website": "https://usps.org/localusps/sss-knc"
+  },
+  {
+   "club": "America's Boating Club Louisville",
+   "state": "KY",
+   "website": "https://LSPS.US"
+  },
+  {
+   "club": "Bluegrass Power Squadron",
+   "state": "KY",
+   "website": "https://www.usps.org/localusps/bluegrass"
+  },
+  {
+   "club": "America's Boating Club Lake Charles",
+   "state": "LA",
+   "website": "https://lcsps.org"
+  },
+  {
+   "club": "America's Boating Club Lake Pontchartrain",
+   "state": "LA",
+   "website": "https://www.usps.org/localusps/sss-lpn"
+  },
+  {
+   "club": "America's Boating Club New Orleans",
+   "state": "LA",
+   "website": "https://www.usps.org/localusps/neworleans"
+  },
+  {
+   "club": "Baton Rouge Sail and Power Squadron",
+   "state": "LA",
+   "website": "https://www.usps.org/localusps/sss-brg"
+  },
+  {
+   "club": "Shreveport Sail and Power Squadron",
+   "state": "LA",
+   "website": "https://usps.org/localusps/sss-svp"
+  },
+  {
+   "club": "America's Boating Club Buzzards Bay",
+   "state": "MA",
+   "website": "https://www.bbsps.org"
+  },
+  {
+   "club": "America's Boating Club Cape Cod",
+   "state": "MA",
+   "website": "https://americasboatingclubcapecod.org"
+  },
+  {
+   "club": "America's Boating Club Charles River",
+   "state": "MA",
+   "website": "https://www.usps.org/localusps/charles"
+  },
+  {
+   "club": "America's Boating Club Great Blue Hill",
+   "state": "MA",
+   "website": "https://www.abc-gbh.org"
+  },
+  {
+   "club": "America's Boating Club MetroWest Boston",
+   "state": "MA",
+   "website": "https://bostonmetrowestboatingclub.org"
+  },
+  {
+   "club": "America's Boating Club North Shore",
+   "state": "MA",
+   "website": "https://www.abcnorthshore.org/"
+  },
+  {
+   "club": "America's Boating Club Old Colony",
+   "state": "MA",
+   "website": "https://www.usps.org/localusps/sss-oy"
+  },
+  {
+   "club": "America's Boating Club Springfield",
+   "state": "MA",
+   "website": "https://www.usps.org/springfield"
+  },
+  {
+   "club": "America's Boating Club the Berkshires",
+   "state": "MA",
+   "website": "https://www.usps.org/localusps/d2/berkshire"
+  },
+  {
+   "club": "America's Boating Club Baltimore",
+   "state": "MD",
+   "website": "https://www.usps.org/localusps/sss-dk"
+  },
+  {
+   "club": "America's Boating Club Kent",
+   "state": "MD",
+   "website": "https://www.aspsmd.org/"
+  },
+  {
+   "club": "America's Boating Club Ocean City",
+   "state": "MD",
+   "website": "https://www.ocusps.org"
+  },
+  {
+   "club": "America's Boating Club Patapsco River",
+   "state": "MD",
+   "website": "https://www.usps.org/localusps/sss-ps"
+  },
+  {
+   "club": "America's Boating Club Southern Maryland",
+   "state": "MD",
+   "website": "https://www.usps.org/localusps/patuxent"
+  },
+  {
+   "club": "Cambridge Sail and Power Squadron",
+   "state": "MD",
+   "website": "https://usps.org/localusps/sss-cg"
+  },
+  {
+   "club": "Potomac River Power Squadron",
+   "state": "MD",
+   "website": "https://www.usps.org/localusps/potomac"
+  },
+  {
+   "club": "America's Boating Club Mid Coast Maine",
+   "state": "ME",
+   "website": "https://usps.org/localusps/sss-ww"
+  },
+  {
+   "club": "America's Boating Club Penobscot Bay",
+   "state": "ME",
+   "website": "https://www.usps.org/localusps/sss-pns"
+  },
+  {
+   "club": "America's Boating Club Birmingham",
+   "state": "MI",
+   "website": "https://www.bpsd9.org"
+  },
+  {
+   "club": "America's Boating Club Dearborn",
+   "state": "MI",
+   "website": "https://www.usps.org/localusps/sss-db"
+  },
+  {
+   "club": "America's Boating Club Detroit",
+   "state": "MI",
+   "website": "https://abcofdetroit.org"
+  },
+  {
+   "club": "America's Boating Club Flint",
+   "state": "MI",
+   "website": "https://www.usps.org/localusps/sss-fl"
+  },
+  {
+   "club": "America's Boating Club Grand Traverse Bay",
+   "state": "MI",
+   "website": "https://www.usps.org/localusps/gtbay"
+  },
+  {
+   "club": "America's Boating Club Grosse Pointe",
+   "state": "MI",
+   "website": "https://gpps-d9.com"
+  },
+  {
+   "club": "America's Boating Club Mid Michigan",
+   "state": "MI",
+   "website": "https://www.usps.org/mid-michigan"
+  },
+  {
+   "club": "America's Boating Club Saginaw Bay",
+   "state": "MI",
+   "website": "https://www.sbpowersquadron.org"
+  },
+  {
+   "club": "America's Boating Club St. Clair Shores",
+   "state": "MI",
+   "website": "https://www.scssps.org"
+  },
+  {
+   "club": "Anchor Bay Power Squadron",
+   "state": "MI",
+   "website": "https://www.usps.org/localusps/anchorbay"
+  },
+  {
+   "club": "Ann Arbor Power Squadron",
+   "state": "MI",
+   "website": "https://www.aaspsq.org"
+  },
+  {
+   "club": "Mount Clemens Power Squadron",
+   "state": "MI",
+   "website": "https://www.usps.org/localusps/sss-mc"
+  },
+  {
+   "club": "Port Huron Sail and Power Squadron",
+   "state": "MI",
+   "website": "https://phpsd9.com"
+  },
+  {
+   "club": "Wyandotte Power Squadron",
+   "state": "MI",
+   "website": "https://usps.org/localusps/sss-wd"
+  },
+  {
+   "club": "America's Boating Club Duluth",
+   "state": "MN",
+   "website": "https://duluthsailandpowersquadron.com"
+  },
+  {
+   "club": "America's Boating Club Minnetonka",
+   "state": "MN",
+   "website": "https://www.minnetonkaps.org"
+  },
+  {
+   "club": "St. Paul Sail and Power Squadron",
+   "state": "MN",
+   "website": "https://www.stpaulsquadron.org"
+  },
+  {
+   "club": "America's Boating Club Cape Fear",
+   "state": "NC",
+   "website": "https://www.capefearsailandpowersquadron.org"
+  },
+  {
+   "club": "America's Boating Club Cape Lookout",
+   "state": "NC",
+   "website": "https://www.clsps.org/."
+  },
+  {
+   "club": "America's Boating Club Charlotte",
+   "state": "NC",
+   "website": "https://www.charlotteboating.org"
+  },
+  {
+   "club": "America's Boating Club Fayetteville",
+   "state": "NC",
+   "website": "https://www.fayettevillesps.wordpress.com"
+  },
+  {
+   "club": "America's Boating Club Pamlico",
+   "state": "NC",
+   "website": "https://www.pamlicosailandpowersquadron.org"
+  },
+  {
+   "club": "America's Boating Club Raleigh",
+   "state": "NC",
+   "website": "https://americasboatingclubofraleigh.org"
+  },
+  {
+   "club": "America's Boating Club Shallotte River",
+   "state": "NC",
+   "website": "https://www.srsps.org"
+  },
+  {
+   "club": "America's Boating Club Southport",
+   "state": "NC",
+   "website": "https://southportboatingclub.com"
+  },
+  {
+   "club": "America's Boating Club Tar River",
+   "state": "NC",
+   "website": "https://www.usps.org/localusps/sss-tar"
+  },
+  {
+   "club": "America's Boating Club of the Crystal Coast",
+   "state": "NC",
+   "website": "https://abc-cc.org"
+  },
+  {
+   "club": "Blue Ridge Sail and Power Squadron",
+   "state": "NC",
+   "website": "https://WWW.usps.org/localusps/sss-blr"
+  },
+  {
+   "club": "Durham Sail and Power Squadron",
+   "state": "NC",
+   "website": "https://www.usps.org/localusps/sss-dhm"
+  },
+  {
+   "club": "Winston Salem Sail and Power Squadron",
+   "state": "NC",
+   "website": "https://www.WSSPS.org"
+  },
+  {
+   "club": "America's Boating Club Portsmouth",
+   "state": "NH",
+   "website": "https://www.usps.org/localusps/sss-pm"
+  },
+  {
+   "club": "New Hampshire Lakes Region",
+   "state": "NH",
+   "website": "https://usps.org/localusps/sss-lks"
+  },
+  {
+   "club": "Absecon Island Power Squadron",
+   "state": "NJ",
+   "website": "https://www.usps.org/localusps/sss-ai"
+  },
+  {
+   "club": "America's Boating Club Lake Hopatcong",
+   "state": "NJ",
+   "website": "https://usps.org/localusps/sss-lw"
+  },
+  {
+   "club": "America's Boating Club Raritan Bay",
+   "state": "NJ",
+   "website": "https://www.rbps.org"
+  },
+  {
+   "club": "America's Boating Club Shrewsbury",
+   "state": "NJ",
+   "website": "https://www.usps.org/localusps/sss-sh"
+  },
+  {
+   "club": "Liberty Harbor Power Squadron",
+   "state": "NJ",
+   "website": "https://www.usps.org/libertyharbor"
+  },
+  {
+   "club": "Watchung Sail and Power Squadron",
+   "state": "NJ",
+   "website": "https://www.watchungsailandpowersquadron.org"
+  },
+  {
+   "club": "Las Vegas Sail & Power Squadron",
+   "state": "NV",
+   "website": "https://www.lvsps.org"
+  },
+  {
+   "club": "America's Boating Club Captree",
+   "state": "NY",
+   "website": "https://www.captreeboaters.com"
+  },
+  {
+   "club": "America's Boating Club Finger Lakes",
+   "state": "NY",
+   "website": "https://www.ABC-FLX.org"
+  },
+  {
+   "club": "America's Boating Club Great South Bay",
+   "state": "NY",
+   "website": "https://BOATgsb.org"
+  },
+  {
+   "club": "America's Boating Club Iroquois",
+   "state": "NY",
+   "website": "https://www.rochester-boating.org"
+  },
+  {
+   "club": "America's Boating Club Jones Beach",
+   "state": "NY",
+   "website": "https://www.usps.org/localusps/sss-jb"
+  },
+  {
+   "club": "America's Boating Club Neptune",
+   "state": "NY",
+   "website": "https://https://www.neptuneboatingclub.com/"
+  },
+  {
+   "club": "America's Boating Club North River",
+   "state": "NY",
+   "website": "https://www.NorthRiverSquadron.org"
+  },
+  {
+   "club": "America's Boating Club Oyster Bay",
+   "state": "NY",
+   "website": "https://www.boatoysterbay.org/"
+  },
+  {
+   "club": "America's Boating Club Patchogue Bay",
+   "state": "NY",
+   "website": "https://www.usps.org/localusps/sss-pt"
+  },
+  {
+   "club": "America's Boating Club Peconic Bay",
+   "state": "NY",
+   "website": "https://www.pbps.us"
+  },
+  {
+   "club": "America's Boating Club Rochester",
+   "state": "NY",
+   "website": "https://www.americasboatingclubrochesterny.org"
+  },
+  {
+   "club": "America's Boating Club Sewanhaka",
+   "state": "NY",
+   "website": "https://www.usps.org/sewan"
+  },
+  {
+   "club": "America's Boating Club Smithtown Bay",
+   "state": "NY",
+   "website": "https://www.usps.org/localusps/smithtown"
+  },
+  {
+   "club": "America's Boating Club Staten Island",
+   "state": "NY",
+   "website": "https://sisps.org"
+  },
+  {
+   "club": "America's Boating Club Susquenango",
+   "state": "NY",
+   "website": "https://www.susquenango.org"
+  },
+  {
+   "club": "America's Boating Club Swiftwater",
+   "state": "NY",
+   "website": "https://www.swiftwater.org"
+  },
+  {
+   "club": "America's Boating Club Syracuse",
+   "state": "NY",
+   "website": "https://www.usps.org/localusps/sss-sy"
+  },
+  {
+   "club": "City Island Sail and Power Squadron",
+   "state": "NY",
+   "website": "https://CityIslandPowerSquadron.org"
+  },
+  {
+   "club": "Hempstead Bay Power Squadron",
+   "state": "NY",
+   "website": "https://www.usps.org/localusps/sss-hb"
+  },
+  {
+   "club": "Ithaca Sail and Power Squadron",
+   "state": "NY",
+   "website": "https://www.usps.org/localusps/ithaca"
+  },
+  {
+   "club": "Lake George Power Squadron",
+   "state": "NY",
+   "website": "https://www.lgps.org"
+  },
+  {
+   "club": "Lockport Sail and Power Squadron",
+   "state": "NY",
+   "website": "https://www.usps.org/lockport"
+  },
+  {
+   "club": "Mohawk Hudson Sail and Power Squadron",
+   "state": "NY",
+   "website": "https://www.usps.org/localusps/sss-mo"
+  },
+  {
+   "club": "New York Sail and Power Squadron",
+   "state": "NY",
+   "website": "https://www.usps.org/localusps/newyork"
+  },
+  {
+   "club": "Storm King Sail and Power Squadron",
+   "state": "NY",
+   "website": "https://www.usps.org/localusps/d2/storm_king"
+  },
+  {
+   "club": "Utica Sail and Power Squadron",
+   "state": "NY",
+   "website": "https://www.usps.org/localusps/sss-ua"
+  },
+  {
+   "club": "Akron Sail and Power Squadron",
+   "state": "OH",
+   "website": "https://www.akronpowersquadron.com"
+  },
+  {
+   "club": "America's Boating Club Berea",
+   "state": "OH",
+   "website": "https://www.bereasailandpowersquadron.org"
+  },
+  {
+   "club": "America's Boating Club Central Ohio",
+   "state": "OH",
+   "website": "https://www.columbussailandpower.org"
+  },
+  {
+   "club": "America's Boating Club Dayton",
+   "state": "OH",
+   "website": "https://www.usps.org/localusps/sss-dy"
+  },
+  {
+   "club": "America's Boating Club Mansfield",
+   "state": "OH",
+   "website": "https://www.usps.org/mansfield"
+  },
+  {
+   "club": "America's Boating Club Mosquito Lake",
+   "state": "OH",
+   "website": "https://www.usps.org/localusps/sss-mql"
+  },
+  {
+   "club": "America's Boating Club North Coast Ohio",
+   "state": "OH",
+   "website": "https://northcoastohiosailandpowersquadron.org/"
+  },
+  {
+   "club": "America's Boating Club Port Clinton",
+   "state": "OH",
+   "website": "https://www.usps.org/localusps/sss-pc"
+  },
+  {
+   "club": "America's Boating Club Sandusky",
+   "state": "OH",
+   "website": "https://www.usps.org/localusps/sandusky"
+  },
+  {
+   "club": "America's Boating Club Vermilion",
+   "state": "OH",
+   "website": "https://www.usps.org/localusps/vermilion"
+  },
+  {
+   "club": "America's Boating Club Western Lake Erie",
+   "state": "OH",
+   "website": "https://www.toledosailandpower.com"
+  },
+  {
+   "club": "Stark County Power Squadron",
+   "state": "OH",
+   "website": "https://starkcountyps.org"
+  },
+  {
+   "club": "Oklahoma City Sail and Power Squadron",
+   "state": "OK",
+   "website": "https://www.usps.org/localusps/ok"
+  },
+  {
+   "club": "America's Boating Club Beaverton",
+   "state": "OR",
+   "website": "https://www.usps.org/localusps/beaverton"
+  },
+  {
+   "club": "America's Boating Club Coos Bay",
+   "state": "OR",
+   "website": "https://www.usps.org/localusps/coos"
+  },
+  {
+   "club": "Portland Power Squadron",
+   "state": "OR",
+   "website": "https://www.usps.org/localusps/sss-pd"
+  },
+  {
+   "club": "America's Boating Club Erie",
+   "state": "PA",
+   "website": "https://www.usps.org/localusps/erie"
+  },
+  {
+   "club": "America's Boating Club South Central Pennsylvania",
+   "state": "PA",
+   "website": "https://yorkboating.org"
+  },
+  {
+   "club": "America's Boating Club Valley Forge",
+   "state": "PA",
+   "website": "https://www.ABCValleyForge.org"
+  },
+  {
+   "club": "Delaware River Sail and Power Squadron",
+   "state": "PA",
+   "website": "https://www.usps.org/localusps/sss-dl"
+  },
+  {
+   "club": "Delhigh Power Squadron",
+   "state": "PA",
+   "website": "https://www.usps.org/delhigh"
+  },
+  {
+   "club": "Pittsburgh Power Squadron",
+   "state": "PA",
+   "website": "https://www.usps.org/localusps/sss-p"
+  },
+  {
+   "club": "America's Boating Club Arecibo",
+   "state": "PR",
+   "website": "https://www.usps.org/arecibo"
+  },
+  {
+   "club": "America's Boating Club San Juan",
+   "state": "PR",
+   "website": "https://www.sanjuanpowersquadron.org"
+  },
+  {
+   "club": "America's Boating Club Golden Corner Lakes",
+   "state": "SC",
+   "website": "https://www.abclubgcl.org"
+  },
+  {
+   "club": "America's Boating Club Hilton Head",
+   "state": "SC",
+   "website": "https://www.americasboatingclubofhiltonhead.org"
+  },
+  {
+   "club": "America's Boating Club Lake Murray",
+   "state": "SC",
+   "website": "https://www.lmpsonline.org"
+  },
+  {
+   "club": "America's Boating Club North Strand",
+   "state": "SC",
+   "website": "https://www.abcnorthstrand.org"
+  },
+  {
+   "club": "America's Boating Club Thurmond Lake",
+   "state": "SC",
+   "website": "https://www.usps.org/localusps/sss-thu"
+  },
+  {
+   "club": "America's Boating Club of Beaufort",
+   "state": "SC",
+   "website": "https://www.usps.org/localusps/beaufort"
+  },
+  {
+   "club": "America's Boating Club of the Catawba",
+   "state": "SC",
+   "website": "https://usps.org/localusps/sss-cat"
+  },
+  {
+   "club": "Lake Hartwell Sail and Power Squadron",
+   "state": "SC",
+   "website": "https://www.lake-hartwell.org"
+  },
+  {
+   "club": "America's Boating Club Knoxville",
+   "state": "TN",
+   "website": "https://abc-k.org"
+  },
+  {
+   "club": "America's Boating Club Music City",
+   "state": "TN",
+   "website": "https://www.MusicCityPowerSquadron.org"
+  },
+  {
+   "club": "America's Boating Club Oak Ridge",
+   "state": "TN",
+   "website": "https://www.usps.org/localusps/oakridge"
+  },
+  {
+   "club": "Chattanooga Sail and Power Squadron",
+   "state": "TN",
+   "website": "https://www.usps.org/localusps/sss-cha"
+  },
+  {
+   "club": "America's Boating Club Houston",
+   "state": "TX",
+   "website": "https://www.americasboatingclubhouston.org"
+  },
+  {
+   "club": "America's Boating Club Lower Rio Grand Valley",
+   "state": "TX",
+   "website": "https://www.usps.org/localusps/sss-lrg"
+  },
+  {
+   "club": "Austin Power Squadron",
+   "state": "TX",
+   "website": "https://www.abcaustin.org"
+  },
+  {
+   "club": "Ft. Worth Power Squadron",
+   "state": "TX",
+   "website": "https://www.usps.org/localusps/sss-fwh"
+  },
+  {
+   "club": "Galveston Bay Sail and Power Squadron",
+   "state": "TX",
+   "website": "https://www.americasboatingclubgalvestonbay.org"
+  },
+  {
+   "club": "San Antonio Sail and Power Squadron",
+   "state": "TX",
+   "website": "https://www.usps.org/localusps/sant"
+  },
+  {
+   "club": "America's Boating Club Coastal Virginia",
+   "state": "VA",
+   "website": "https://www.usps.org/localusps/sss-vr"
+  },
+  {
+   "club": "America's Boating Club Nansemond River",
+   "state": "VA",
+   "website": "https://www.usps.org/localusps/sss-nan"
+  },
+  {
+   "club": "America's Boating Club Northern Neck",
+   "state": "VA",
+   "website": "https://www.usps.org/localusps/sss-nnc"
+  },
+  {
+   "club": "America's Boating Club Northern VIrginia",
+   "state": "VA",
+   "website": "https://www.nvsps.org"
+  },
+  {
+   "club": "America's Boating Club Smith Mountain Lake",
+   "state": "VA",
+   "website": "https://www.usps.org/localusps/sss-sml"
+  },
+  {
+   "club": "America's Boating Club of Richmond",
+   "state": "VA",
+   "website": "https://www.richmondboatclub.com"
+  },
+  {
+   "club": "Colonial Sail and Power Squadron",
+   "state": "VA",
+   "website": "https://www.usps.org/localusps/sss-col"
+  },
+  {
+   "club": "America's Boating Club Bellevue",
+   "state": "WA",
+   "website": "https://www.bellevuepowersquadron.org"
+  },
+  {
+   "club": "America's Boating Club Bellingham",
+   "state": "WA",
+   "website": "https://www.boatingisfun.org"
+  },
+  {
+   "club": "America's Boating Club Bremerton",
+   "state": "WA",
+   "website": "https://www.bremertonpowersquadron.org/"
+  },
+  {
+   "club": "America's Boating Club Deception Pass",
+   "state": "WA",
+   "website": "https://www.deceptionpasssailandpowersquadron.com"
+  },
+  {
+   "club": "America's Boating Club Ft. Vancouver",
+   "state": "WA",
+   "website": "https://www.usps.org/localusps/sss-fvc"
+  },
+  {
+   "club": "America's Boating Club Seattle",
+   "state": "WA",
+   "website": "https://www.seattlesailpowersquadron.org"
+  },
+  {
+   "club": "America's Boating Club Skagit Bay",
+   "state": "WA",
+   "website": "https://www.skagitsquadron.org/"
+  },
+  {
+   "club": "America's Boating Club Tacoma",
+   "state": "WA",
+   "website": "http://www.tacomapowerandsailsquadron.org"
+  },
+  {
+   "club": "America's Boating Club of Snohomish County",
+   "state": "WA",
+   "website": "https://www.boatclubsnoco.org/"
+  },
+  {
+   "club": "America's Boating Club of the San Juan Islands",
+   "state": "WA",
+   "website": "https://abcsji.org"
+  },
+  {
+   "club": "Point Wilson Sail and Power Squadron",
+   "state": "WA",
+   "website": "https://pointwilson.org"
+  },
+  {
+   "club": "Spokane Sail and Power Squadron",
+   "state": "WA",
+   "website": "https://www.inlandnwboating.org"
+  },
+  {
+   "club": "America's Boating Club Central Wisconsin",
+   "state": "WI",
+   "website": "https://usps.org/localusps/sss-cew"
+  },
+  {
+   "club": "America's Boating Club Green Bay",
+   "state": "WI",
+   "website": "https://gbsps.org"
+  },
+  {
+   "club": "America's Boating Club Marinette Menominee",
+   "state": "WI",
+   "website": "https://www.usps.org/localusps/uspsmm"
+  },
+  {
+   "club": "America's Boating Club Milwaukee",
+   "state": "WI",
+   "website": "https://www.milwaukeepowersquadron.org"
+  },
+  {
+   "club": "Oshkosh Power Squadron",
+   "state": "WI",
+   "website": "https://www.usps.org/localusps/sss-oh"
+  },
+  {
+   "club": "Tokyo Sail and Power Squadron",
+   "state": null,
+   "website": "https://www.tspsjapan.org/"
+  }
+ ]
+}

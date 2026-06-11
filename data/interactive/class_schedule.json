@@ -1,0 +1,4357 @@
+{
+ "_provenance": {
+  "description": "National upcoming-class schedule assembled by fetching each club's club-details page (the same page a visitor sees after using Find a Club) and parsing its server-rendered 'Upcoming Educational Courses' section.",
+  "source_url_pattern": "https://americasboatingclub.org/club-details/?sqdno=<sqdno>",
+  "script": "scrape/fetch_club_schedules.py",
+  "fetched_at": "2026-06-11T18:27:42Z",
+  "clubs_checked": 255,
+  "clubs_with_classes": 41,
+  "fetch_failures": 0,
+  "placeholder_rows_excluded": 7,
+  "raw_html_dir": "data/interactive/club_details_html/"
+ },
+ "per_club": [
+  {
+   "sqdno": "0076",
+   "club": "North Star Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2400",
+   "club": "America's Boating Club North Alabama",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6105",
+   "club": "Vulcan Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0195",
+   "club": "America's Boating Club Arrowhead",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0300",
+   "club": "America's Boating Club Newport",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5220",
+   "club": "America's Boating Club Oceanside",
+   "classes": 10,
+   "outcome": "10 classes parsed (1 blank epoch-dated placeholder rows excluded)"
+  },
+  {
+   "sqdno": "4350",
+   "club": "America's Boating Club Peralta",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5115",
+   "club": "America's Boating Club San Diego",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5190",
+   "club": "America's Boating Club San Joaquin Delta",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5235",
+   "club": "America's Boating Club Santa Barbara",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5926",
+   "club": "America's Boating Club Tres Rios",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6045",
+   "club": "America's Boating Club Ventura",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4890",
+   "club": "America's Boating Club of Greater Sacramento",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "1530",
+   "club": "Diablo Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5898",
+   "club": "The Valley Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0620",
+   "club": "America's Boating Club Colorado",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1365",
+   "club": "America's Boating Club Darien",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0875",
+   "club": "America's Boating Club Greenwich",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2220",
+   "club": "America's Boating Club Hartford",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2730",
+   "club": "America's Boating Club Lake Candlewood",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3690",
+   "club": "America's Boating Club New Britain",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3705",
+   "club": "America's Boating Club New Haven",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3900",
+   "club": "America's Boating Club Norwalk",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "5670",
+   "club": "America's Boating Club Stamford",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6150",
+   "club": "America's Boating Club Waterbury",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3060",
+   "club": "Manchester Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3210",
+   "club": "Meriden Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3300",
+   "club": "Middletown Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3720",
+   "club": "New London Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3915",
+   "club": "Norwich Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4290",
+   "club": "Penfield Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5340",
+   "club": "Saybrook Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6270",
+   "club": "America's Boating Club Wilmington",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0150",
+   "club": "America's Boating Club Anna Maria Island",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "0840",
+   "club": "America's Boating Club Cape Coral",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1110",
+   "club": "America's Boating Club Clearwater",
+   "classes": 6,
+   "outcome": "6 classes parsed"
+  },
+  {
+   "sqdno": "1395",
+   "club": "America's Boating Club Daytona Beach",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1815",
+   "club": "America's Boating Club Ft. Myers",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2210",
+   "club": "America's Boating Club Harris Chain",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2490",
+   "club": "America's Boating Club Jacksonville",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "2625",
+   "club": "America's Boating Club Key West",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2775",
+   "club": "America's Boating Club Lakeland",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3055",
+   "club": "America's Boating Club Manatee",
+   "classes": 2,
+   "outcome": "2 classes parsed"
+  },
+  {
+   "sqdno": "3105",
+   "club": "America's Boating Club Marathon",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3125",
+   "club": "America's Boating Club Marco Island",
+   "classes": 18,
+   "outcome": "18 classes parsed"
+  },
+  {
+   "sqdno": "3615",
+   "club": "America's Boating Club Naples",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4170",
+   "club": "America's Boating Club Palm Beach",
+   "classes": 8,
+   "outcome": "8 classes parsed"
+  },
+  {
+   "sqdno": "4245",
+   "club": "America's Boating Club Peace River",
+   "classes": 8,
+   "outcome": "8 classes parsed (6 blank epoch-dated placeholder rows excluded)"
+  },
+  {
+   "sqdno": "4320",
+   "club": "America's Boating Club Pensacola",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4440",
+   "club": "America's Boating Club Pompano Beach",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5100",
+   "club": "America's Boating Club San Carlos Bay",
+   "classes": 5,
+   "outcome": "5 classes parsed"
+  },
+  {
+   "sqdno": "5071",
+   "club": "America's Boating Club Sanibel Captiva",
+   "classes": 4,
+   "outcome": "4 classes parsed"
+  },
+  {
+   "sqdno": "5295",
+   "club": "America's Boating Club Sarasota",
+   "classes": 14,
+   "outcome": "14 classes parsed"
+  },
+  {
+   "sqdno": "0330",
+   "club": "America's Boating Club South Brevard",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5010",
+   "club": "America's Boating Club St Lucie River",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5040",
+   "club": "America's Boating Club St. Petersburg",
+   "classes": 2,
+   "outcome": "2 classes parsed"
+  },
+  {
+   "sqdno": "5835",
+   "club": "America's Boating Club of Tampa Bay",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1155",
+   "club": "Cocoa Beach Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1965",
+   "club": "Gainesville Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3255",
+   "club": "Miami Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6030",
+   "club": "Venice Sail and Power Squadron",
+   "classes": 2,
+   "outcome": "2 classes parsed"
+  },
+  {
+   "sqdno": "6075",
+   "club": "Vero Beach Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0240",
+   "club": "America's Boating Club Atlanta",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "2000",
+   "club": "America's Boating Club Golden Isles",
+   "classes": 2,
+   "outcome": "2 classes parsed"
+  },
+  {
+   "sqdno": "5970",
+   "club": "America's Boating Club Savannah",
+   "classes": 6,
+   "outcome": "6 classes parsed"
+  },
+  {
+   "sqdno": "1500",
+   "club": "America's Boating Club Des Moines",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0945",
+   "club": "Four Rivers Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6170",
+   "club": "Waterloo Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1935",
+   "club": "America's Boating Club Fox Valley",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2430",
+   "club": "America's Boating Club Illinois Valley",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2805",
+   "club": "America's Boating Club Land of Lincoln",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3316",
+   "club": "America's Boating Club Mid Illini",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6195",
+   "club": "America's Boating Club Waukegan",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5505",
+   "club": "America's Boating Club of the North Shore",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1575",
+   "club": "DuPage Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4770",
+   "club": "Rockford Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3285",
+   "club": "America's Boating Club Michigan City",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6120",
+   "club": "Wabash Valley Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2565",
+   "club": "Kansas City Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2970",
+   "club": "America's Boating Club Louisville",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0570",
+   "club": "Bluegrass Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2745",
+   "club": "America's Boating Club Lake Charles",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2793",
+   "club": "America's Boating Club Lake Pontchartrain",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3735",
+   "club": "America's Boating Club New Orleans",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0375",
+   "club": "Baton Rouge Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5460",
+   "club": "Shreveport Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0735",
+   "club": "America's Boating Club Buzzards Bay",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0825",
+   "club": "America's Boating Club Cape Cod",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1005",
+   "club": "America's Boating Club Charles River",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2040",
+   "club": "America's Boating Club Great Blue Hill",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3810",
+   "club": "America's Boating Club MetroWest Boston",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0510",
+   "club": "America's Boating Club North Shore",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4020",
+   "club": "America's Boating Club Old Colony",
+   "classes": 4,
+   "outcome": "4 classes parsed"
+  },
+  {
+   "sqdno": "5655",
+   "club": "America's Boating Club Springfield",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "0480",
+   "club": "America's Boating Club the Berkshires",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1560",
+   "club": "America's Boating Club Baltimore",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0165",
+   "club": "America's Boating Club Kent",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3980",
+   "club": "America's Boating Club Ocean City",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4200",
+   "club": "America's Boating Club Patapsco River",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4230",
+   "club": "America's Boating Club Southern Maryland",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0765",
+   "club": "Cambridge Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4545",
+   "club": "Potomac River Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6210",
+   "club": "America's Boating Club Mid Coast Maine",
+   "classes": 2,
+   "outcome": "2 classes parsed"
+  },
+  {
+   "sqdno": "4305",
+   "club": "America's Boating Club Penobscot Bay",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2580",
+   "club": "Kennebec River Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0525",
+   "club": "America's Boating Club Birmingham",
+   "classes": 7,
+   "outcome": "7 classes parsed"
+  },
+  {
+   "sqdno": "1410",
+   "club": "America's Boating Club Dearborn",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1515",
+   "club": "America's Boating Club Detroit",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1755",
+   "club": "America's Boating Club Flint",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2025",
+   "club": "America's Boating Club Grand Traverse Bay",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2160",
+   "club": "America's Boating Club Grosse Pointe",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2820",
+   "club": "America's Boating Club Mid Michigan",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4920",
+   "club": "America's Boating Club Saginaw Bay",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4945",
+   "club": "America's Boating Club St. Clair Shores",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0120",
+   "club": "Anchor Bay Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0180",
+   "club": "Ann Arbor Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3540",
+   "club": "Mount Clemens Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4485",
+   "club": "Port Huron Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6345",
+   "club": "Wyandotte Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1545",
+   "club": "America's Boating Club Duluth",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3405",
+   "club": "America's Boating Club Minnetonka",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5025",
+   "club": "St. Paul Sail and Power Squadron",
+   "classes": 2,
+   "outcome": "2 classes parsed"
+  },
+  {
+   "sqdno": "3451",
+   "club": "Mississippi Gulf Coast Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0855",
+   "club": "America's Boating Club Cape Fear",
+   "classes": 3,
+   "outcome": "3 classes parsed"
+  },
+  {
+   "sqdno": "0870",
+   "club": "America's Boating Club Cape Lookout",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1035",
+   "club": "America's Boating Club Charlotte",
+   "classes": 2,
+   "outcome": "2 classes parsed"
+  },
+  {
+   "sqdno": "1740",
+   "club": "America's Boating Club Fayetteville",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4175",
+   "club": "America's Boating Club Pamlico",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4665",
+   "club": "America's Boating Club Raleigh",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "5435",
+   "club": "America's Boating Club Shallotte River",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5630",
+   "club": "America's Boating Club Southport",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5855",
+   "club": "America's Boating Club Tar River",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1810",
+   "club": "America's Boating Club of the Crystal Coast",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0210",
+   "club": "Blue Ridge Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1590",
+   "club": "Durham Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6320",
+   "club": "Winston Salem Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0105",
+   "club": "America's Boating Club Amoskeag",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4515",
+   "club": "America's Boating Club Portsmouth",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2794",
+   "club": "New Hampshire Lakes Region",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0015",
+   "club": "Absecon Island Power Squadron",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "2715",
+   "club": "America's Boating Club Lake Hopatcong",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4650",
+   "club": "America's Boating Club Raritan Bay",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5475",
+   "club": "America's Boating Club Shrewsbury",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2840",
+   "club": "Liberty Harbor Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6135",
+   "club": "Watchung Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2835",
+   "club": "Las Vegas Sail & Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0390",
+   "club": "America's Boating Club Bayside",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "0675",
+   "club": "America's Boating Club Bronx",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0885",
+   "club": "America's Boating Club Captree",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5400",
+   "club": "America's Boating Club Finger Lakes",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2070",
+   "club": "America's Boating Club Great South Bay",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "2455",
+   "club": "America's Boating Club Iroquois",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2520",
+   "club": "America's Boating Club Jones Beach",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3510",
+   "club": "America's Boating Club Moriches Bay",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3645",
+   "club": "America's Boating Club Neptune",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3885",
+   "club": "America's Boating Club North River",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4125",
+   "club": "America's Boating Club Oyster Bay",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4215",
+   "club": "America's Boating Club Patchogue Bay",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4260",
+   "club": "America's Boating Club Peconic Bay",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2865",
+   "club": "America's Boating Club Port Washington",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4755",
+   "club": "America's Boating Club Rochester",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5430",
+   "club": "America's Boating Club Sewanhaka",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5520",
+   "club": "America's Boating Club Smithtown Bay",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5700",
+   "club": "America's Boating Club Staten Island",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5760",
+   "club": "America's Boating Club Susquenango",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5775",
+   "club": "America's Boating Club Swiftwater",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5790",
+   "club": "America's Boating Club Syracuse",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "0270",
+   "club": "Auburn Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1100",
+   "club": "City Island Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2265",
+   "club": "Hempstead Bay Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2460",
+   "club": "Ithaca Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2760",
+   "club": "Lake George Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2895",
+   "club": "Lockport Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3480",
+   "club": "Mohawk Hudson Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3780",
+   "club": "New York Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4035",
+   "club": "Old Field Point Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5640",
+   "club": "South Shore",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5710",
+   "club": "Storm King Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6000",
+   "club": "Utica Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0045",
+   "club": "Akron Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0495",
+   "club": "America's Boating Club Berea",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1185",
+   "club": "America's Boating Club Central Ohio",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1380",
+   "club": "America's Boating Club Dayton",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3090",
+   "club": "America's Boating Club Mansfield",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3525",
+   "club": "America's Boating Club Mosquito Lake",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4815",
+   "club": "America's Boating Club North Coast Ohio",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4470",
+   "club": "America's Boating Club Port Clinton",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5130",
+   "club": "America's Boating Club Sandusky",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6060",
+   "club": "America's Boating Club Vermilion",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5910",
+   "club": "America's Boating Club Western Lake Erie",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5685",
+   "club": "Stark County Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4005",
+   "club": "Oklahoma City Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0425",
+   "club": "America's Boating Club Beaverton",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1215",
+   "club": "America's Boating Club Coos Bay",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4500",
+   "club": "Portland Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1635",
+   "club": "America's Boating Club Erie",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6375",
+   "club": "America's Boating Club South Central Pennsylvania",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3045",
+   "club": "America's Boating Club Valley Forge",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1440",
+   "club": "Delaware River Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1455",
+   "club": "Delhigh Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4395",
+   "club": "Pittsburgh Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5895",
+   "club": "Ten Mile Power Squadron",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "0192",
+   "club": "America's Boating Club Arecibo",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2385",
+   "club": "America's Boating Club Humacao",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5205",
+   "club": "America's Boating Club San Juan",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0595",
+   "club": "Boqueron Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0895",
+   "club": "Carolina Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4455",
+   "club": "Ponce Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3630",
+   "club": "America's Boating Club Narragansett Bay",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5896",
+   "club": "America's Boating Club Golden Corner Lakes",
+   "classes": 2,
+   "outcome": "2 classes parsed"
+  },
+  {
+   "sqdno": "2270",
+   "club": "America's Boating Club Hilton Head",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2785",
+   "club": "America's Boating Club Lake Murray",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3890",
+   "club": "America's Boating Club North Strand",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5897",
+   "club": "America's Boating Club Thurmond Lake",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0405",
+   "club": "America's Boating Club of Beaufort",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0930",
+   "club": "America's Boating Club of the Catawba",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "2100",
+   "club": "Lake Hartwell Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2700",
+   "club": "America's Boating Club Knoxville",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3560",
+   "club": "America's Boating Club Music City",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3960",
+   "club": "America's Boating Club Oak Ridge",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1050",
+   "club": "Chattanooga Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3195",
+   "club": "Memphis Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2370",
+   "club": "America's Boating Club Houston",
+   "classes": 8,
+   "outcome": "8 classes parsed"
+  },
+  {
+   "sqdno": "3005",
+   "club": "America's Boating Club Lower Rio Grand Valley",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0285",
+   "club": "Austin Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1890",
+   "club": "Ft. Worth Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1980",
+   "club": "Galveston Bay Sail and Power Squadron",
+   "classes": 5,
+   "outcome": "5 classes parsed"
+  },
+  {
+   "sqdno": "5085",
+   "club": "San Antonio Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "6090",
+   "club": "America's Boating Club Coastal Virginia",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3600",
+   "club": "America's Boating Club Nansemond River",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3850",
+   "club": "America's Boating Club Northern Neck",
+   "classes": 3,
+   "outcome": "3 classes parsed"
+  },
+  {
+   "sqdno": "3870",
+   "club": "America's Boating Club Northern VIrginia",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "4860",
+   "club": "America's Boating Club Smith Mountain Lake",
+   "classes": 2,
+   "outcome": "2 classes parsed"
+  },
+  {
+   "sqdno": "4710",
+   "club": "America's Boating Club of Richmond",
+   "classes": 5,
+   "outcome": "5 classes parsed"
+  },
+  {
+   "sqdno": "1156",
+   "club": "Colonial Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5045",
+   "club": "St. Thomas Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0450",
+   "club": "America's Boating Club Bellevue",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0465",
+   "club": "America's Boating Club Bellingham",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0630",
+   "club": "America's Boating Club Bremerton",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1430",
+   "club": "America's Boating Club Deception Pass",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1845",
+   "club": "America's Boating Club Ft. Vancouver",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5370",
+   "club": "America's Boating Club Seattle",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5495",
+   "club": "America's Boating Club Skagit Bay",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "5805",
+   "club": "America's Boating Club Tacoma",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "1680",
+   "club": "America's Boating Club of Snohomish County",
+   "classes": 1,
+   "outcome": "1 classes parsed"
+  },
+  {
+   "sqdno": "1955",
+   "club": "America's Boating Club of the San Juan Islands",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4396",
+   "club": "Point Wilson Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5565",
+   "club": "Spokane Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "0955",
+   "club": "America's Boating Club Central Wisconsin",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "2085",
+   "club": "America's Boating Club Green Bay",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3030",
+   "club": "America's Boating Club Madison",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3140",
+   "club": "America's Boating Club Marinette Menominee",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "3390",
+   "club": "America's Boating Club Milwaukee",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "4095",
+   "club": "Oshkosh Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  },
+  {
+   "sqdno": "5900",
+   "club": "Tokyo Sail and Power Squadron",
+   "classes": 0,
+   "outcome": "schedule section exists but lists no classes — this club has nothing scheduled right now"
+  }
+ ],
+ "classes": [
+  {
+   "club_name": "America's Boating Club Oceanside",
+   "sqdno": "5220",
+   "club_state": "CA",
+   "title": "BH Anchoring with Assurance",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/anchoring-with-assurance",
+   "begins": "Jun 20 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10053",
+   "registration_code": "S-10053",
+   "kind": "seminar",
+   "venue_lines": [
+    "Oceanside Harbor Jolly Roger Dock",
+    "240 Harbor Dr",
+    "Oceanside CA",
+    "760-468-6212",
+    "text=\"ZGlzdHJpY3QyOHVzcHNAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "district28usps@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Oceanside",
+   "sqdno": "5220",
+   "club_state": "CA",
+   "title": "BH Docking & Undocking",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/confidence-in-docking-and-undocking",
+   "begins": "Jun 20 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10052",
+   "registration_code": "S-10052",
+   "kind": "seminar",
+   "venue_lines": [
+    "Oceanside Harbor Jolly Roger Dock",
+    "240 Harbor Dr",
+    "Oceanside CA",
+    "760-468-6212",
+    "text=\"ZGlzdHJpY3QyOHVzcHNAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "district28usps@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Oceanside",
+   "sqdno": "5220",
+   "club_state": "CA",
+   "title": "BH Anchoring with Assurance",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/anchoring-with-assurance",
+   "begins": "Jun 27 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10054",
+   "registration_code": "S-10054",
+   "kind": "seminar",
+   "venue_lines": [
+    "Oceanside Harbor Jolly Roger Dock",
+    "240 Harbor Dr",
+    "Oceanside CA",
+    "760-468-6212",
+    "text=\"ZGlzdHJpY3QyOHVzcHNAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "district28usps@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Oceanside",
+   "sqdno": "5220",
+   "club_state": "CA",
+   "title": "BH Docking & Undocking",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/confidence-in-docking-and-undocking",
+   "begins": "Jun 27 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10055",
+   "registration_code": "S-10055",
+   "kind": "seminar",
+   "venue_lines": [
+    "Oceanside Harbor Jolly Roger Dock",
+    "240 Harbor Dr",
+    "Oceanside CA",
+    "760-468-6212",
+    "text=\"ZGlzdHJpY3QyOHVzcHNAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "district28usps@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Oceanside",
+   "sqdno": "5220",
+   "club_state": "CA",
+   "title": "Marine Navigation",
+   "course_url": "https://americasboatingclub.org/courses/navigation/marine-navigation-course",
+   "begins": "Jul 02 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18563",
+   "registration_code": "C-18563",
+   "kind": "course",
+   "venue_lines": [
+    "Oceanside Yacht Club",
+    "1950 N Harbor Dr",
+    "Oceanside CA",
+    "760-798-5794",
+    "text=\"Y2lkYWRpZWhsQHNiY2dsb2JhbC5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "cidadiehl@sbcglobal.net"
+  },
+  {
+   "club_name": "America's Boating Club Oceanside",
+   "sqdno": "5220",
+   "club_state": "CA",
+   "title": "Hands-on Training",
+   "course_url": "https://americasboatingclub.org/seminars/techniques/hands-on-training",
+   "begins": "Jul 11 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9902",
+   "registration_code": "S-9902",
+   "kind": "seminar",
+   "venue_lines": [
+    "Oceanside Harbor S Dock",
+    "240 Harbor Dr",
+    "Oceanside CA",
+    "760-468-6212",
+    "text=\"ZGlzdHJpY3QyOHVzcHNAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "district28usps@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Oceanside",
+   "sqdno": "5220",
+   "club_state": "CA",
+   "title": "BH Anchoring with Assurance",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/anchoring-with-assurance",
+   "begins": "Jul 12 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10057",
+   "registration_code": "S-10057",
+   "kind": "seminar",
+   "venue_lines": [
+    "Oceanside Harbor Jolly Roger Dock",
+    "240 Harbor Dr",
+    "Oceanside CA",
+    "760-468-6212",
+    "text=\"ZGlzdHJpY3QyOHVzcHNAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "district28usps@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Oceanside",
+   "sqdno": "5220",
+   "club_state": "CA",
+   "title": "BH Docking & Undocking",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/confidence-in-docking-and-undocking",
+   "begins": "Jul 12 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10056",
+   "registration_code": "S-10056",
+   "kind": "seminar",
+   "venue_lines": [
+    "Oceanside Harbor Jolly Roger Dock",
+    "240 Harbor Dr",
+    "Oceanside CA",
+    "760-468-6212",
+    "text=\"ZGlzdHJpY3QyOHVzcHNAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "district28usps@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Oceanside",
+   "sqdno": "5220",
+   "club_state": "CA",
+   "title": "Hands-on Training",
+   "course_url": "https://americasboatingclub.org/seminars/techniques/hands-on-training",
+   "begins": "Aug 08 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9903",
+   "registration_code": "S-9903",
+   "kind": "seminar",
+   "venue_lines": [
+    "Oceanside Harbor S Dock",
+    "240 Harbor Dr",
+    "Oceanside CA",
+    "760-468-6212",
+    "text=\"ZGlzdHJpY3QyOHVzcHNAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "district28usps@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Oceanside",
+   "sqdno": "5220",
+   "club_state": "CA",
+   "title": "Hands-on Training",
+   "course_url": "https://americasboatingclub.org/seminars/techniques/hands-on-training",
+   "begins": "Sep 12 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9904",
+   "registration_code": "S-9904",
+   "kind": "seminar",
+   "venue_lines": [
+    "Oceanside Harbor S Dock",
+    "240 Harbor Dr",
+    "Oceanside CA",
+    "760-468-6212",
+    "text=\"ZGlzdHJpY3QyOHVzcHNAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "district28usps@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club of Greater Sacramento",
+   "sqdno": "4890",
+   "club_state": "CA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jul 11 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-21524",
+   "registration_code": "C-21524",
+   "kind": "course",
+   "venue_lines": [
+    "Sacramento Marina",
+    "2710 Ramp Wy",
+    "Sacramento CA",
+    "916-782-1240",
+    "text=\"anNjb3RjaGFAeWFob28uY29t\" base=\"\" >"
+   ],
+   "contact_email": "jscotcha@yahoo.com"
+  },
+  {
+   "club_name": "America's Boating Club Norwalk",
+   "sqdno": "3900",
+   "club_state": "CT",
+   "title": "Hands-on Training",
+   "course_url": "https://americasboatingclub.org/seminars/techniques/hands-on-training",
+   "begins": "Jul 25 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10022",
+   "registration_code": "S-10022",
+   "kind": "seminar",
+   "venue_lines": [
+    "Veterans Park Public Boat Ramps",
+    "42 Seaview Ave",
+    "Norwalk CT",
+    "203-274-5550",
+    "text=\"ZWR1Y2F0aW9uQGFtZXJpY2FzYm9hdGluZ2NsdWJvZm5vcndhbGsub3Jn\" base=\"\" >"
+   ],
+   "contact_email": "education@americasboatingclubofnorwalk.org"
+  },
+  {
+   "club_name": "America's Boating Club Anna Maria Island",
+   "sqdno": "0150",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 10 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22069",
+   "registration_code": "C-22069",
+   "kind": "course",
+   "venue_lines": [
+    "Cortez Road Baptist Church",
+    "4411 100 St. W.",
+    "Bradenton FL",
+    "941-758-6199",
+    "text=\"d2ludGVyc2ZqQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "wintersfj@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Clearwater",
+   "sqdno": "1110",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jul 11 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23005",
+   "registration_code": "C-23005",
+   "kind": "course",
+   "venue_lines": [
+    "Clearwater Power Squadron Building",
+    "1851 Palmcrest Ln",
+    "Clearwater FL",
+    "727-483-2062",
+    "text=\"dWJpbGxvc3BAZWFydGhsaW5rLm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "ubillosp@earthlink.net"
+  },
+  {
+   "club_name": "America's Boating Club Clearwater",
+   "sqdno": "1110",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Aug 01 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23006",
+   "registration_code": "C-23006",
+   "kind": "course",
+   "venue_lines": [
+    "Clearwater Power Squadron Building",
+    "1851 Palmcrest Ln",
+    "Clearwater FL",
+    "727-483-2062",
+    "text=\"dWJpbGxvc3BAZWFydGhsaW5rLm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "ubillosp@earthlink.net"
+  },
+  {
+   "club_name": "America's Boating Club Clearwater",
+   "sqdno": "1110",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Sep 12 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23007",
+   "registration_code": "C-23007",
+   "kind": "course",
+   "venue_lines": [
+    "Clearwater Power Squadron Building",
+    "1851 Palmcrest Ln",
+    "Clearwater FL",
+    "727-483-2062",
+    "text=\"dWJpbGxvc3BAZWFydGhsaW5rLm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "ubillosp@earthlink.net"
+  },
+  {
+   "club_name": "America's Boating Club Clearwater",
+   "sqdno": "1110",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 03 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23008",
+   "registration_code": "C-23008",
+   "kind": "course",
+   "venue_lines": [
+    "Clearwater Power Squadron Building",
+    "1851 Palmcrest Ln",
+    "Clearwater FL",
+    "727-483-2062",
+    "text=\"dWJpbGxvc3BAZWFydGhsaW5rLm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "ubillosp@earthlink.net"
+  },
+  {
+   "club_name": "America's Boating Club Clearwater",
+   "sqdno": "1110",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Nov 07 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23009",
+   "registration_code": "C-23009",
+   "kind": "course",
+   "venue_lines": [
+    "Clearwater Power Squadron Building",
+    "1851 Palmcrest Ln",
+    "Clearwater FL",
+    "727-483-2062",
+    "text=\"dWJpbGxvc3BAZWFydGhsaW5rLm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "ubillosp@earthlink.net"
+  },
+  {
+   "club_name": "America's Boating Club Clearwater",
+   "sqdno": "1110",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Dec 05 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-21728",
+   "registration_code": "C-21728",
+   "kind": "course",
+   "venue_lines": [
+    "Clearwater Power Squadron Building",
+    "1851 Palmcrest Ln",
+    "Clearwater FL",
+    "727-483-2062",
+    "text=\"dWJpbGxvc3BAZWFydGhsaW5rLm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "ubillosp@earthlink.net"
+  },
+  {
+   "club_name": "America's Boating Club Jacksonville",
+   "sqdno": "2490",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Aug 22 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22387",
+   "registration_code": "C-22387",
+   "kind": "course",
+   "venue_lines": [
+    "Lambs Yacht Center",
+    "3376 Lakeshore Blvd",
+    "Jacksonville FL",
+    "904-704-2746",
+    "text=\"YW5kZXIxQGJlbGxzb3V0aC5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "ander1@bellsouth.net"
+  },
+  {
+   "club_name": "America's Boating Club Manatee",
+   "sqdno": "3055",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jul 25 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22035",
+   "registration_code": "C-22035",
+   "kind": "course",
+   "venue_lines": [
+    "Boaters World",
+    "5412 E St Rd 64",
+    "Bradenton FL",
+    "941-518-3071",
+    "text=\"TFlCMjA0QGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "LYB204@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Manatee",
+   "sqdno": "3055",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 10 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22965",
+   "registration_code": "C-22965",
+   "kind": "course",
+   "venue_lines": [
+    "Palmetto Library",
+    "923 6 St. W.",
+    "Palmetto FL",
+    "941-518-3071",
+    "text=\"TFlCMjA0QGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "LYB204@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "Introduction to Marine Batteries",
+   "course_url": "https://americasboatingclub.org/",
+   "begins": "Oct 13 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10035",
+   "registration_code": "S-10035",
+   "kind": "seminar",
+   "venue_lines": [
+    "Classroom",
+    "1114 North Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 26 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23051",
+   "registration_code": "C-23051",
+   "kind": "course",
+   "venue_lines": [
+    "Squadron Classroom",
+    "1114 N Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "BH Knots & Line Handling",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/knots-and-line-handling",
+   "begins": "Nov 10 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10036",
+   "registration_code": "S-10036",
+   "kind": "seminar",
+   "venue_lines": [
+    "Classroom",
+    "1114 North Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "Boat Handling",
+   "course_url": "https://americasboatingclub.org/courses/boat-handling/boat-handling-course",
+   "begins": "Nov 13 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18651",
+   "registration_code": "C-18651",
+   "kind": "course",
+   "venue_lines": [
+    "Classroom",
+    "1114 N. Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "Modern Weather Forecasting",
+   "course_url": "https://americasboatingclub.org/seminars/facing-the-environment/modern-weather-forecasting",
+   "begins": "Dec 08 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10037",
+   "registration_code": "S-10037",
+   "kind": "seminar",
+   "venue_lines": [
+    "Classroom",
+    "1114 North Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "Marine Navigation",
+   "course_url": "https://americasboatingclub.org/courses/navigation/marine-navigation-course",
+   "begins": "Jan 07 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18655",
+   "registration_code": "C-18655",
+   "kind": "course",
+   "venue_lines": [
+    "Classroom",
+    "1114 N. Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "Marine Navigation",
+   "course_url": "https://americasboatingclub.org/courses/navigation/marine-navigation-course",
+   "begins": "Jan 08 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18653",
+   "registration_code": "C-18653",
+   "kind": "course",
+   "venue_lines": [
+    "Classroom",
+    "1114 N. Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "BH Anchoring with Assurance",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/anchoring-with-assurance",
+   "begins": "Jan 12 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10039",
+   "registration_code": "S-10039",
+   "kind": "seminar",
+   "venue_lines": [
+    "Classroom",
+    "1114 North Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jan 18 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23052",
+   "registration_code": "C-23052",
+   "kind": "course",
+   "venue_lines": [
+    "Squadron Classroom",
+    "1114 N Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "Boat Handling",
+   "course_url": "https://americasboatingclub.org/courses/boat-handling/boat-handling-course",
+   "begins": "Feb 04 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18654",
+   "registration_code": "C-18654",
+   "kind": "course",
+   "venue_lines": [
+    "Classroom",
+    "1114 N. Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "Boat Handling",
+   "course_url": "https://americasboatingclub.org/courses/boat-handling/boat-handling-course",
+   "begins": "Feb 05 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18652",
+   "registration_code": "C-18652",
+   "kind": "course",
+   "venue_lines": [
+    "Classroom",
+    "1114 N. Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "Tides and Currents",
+   "course_url": "https://americasboatingclub.org/seminars/facing-the-environment/tides-and-currents",
+   "begins": "Feb 09 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10040",
+   "registration_code": "S-10040",
+   "kind": "seminar",
+   "venue_lines": [
+    "Classroom",
+    "1114 North Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "Partner in Command",
+   "course_url": "https://americasboatingclub.org/seminars/safety/crew-at-the-helm",
+   "begins": "Feb 23 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10030",
+   "registration_code": "S-10030",
+   "kind": "seminar",
+   "venue_lines": [
+    "Classroom",
+    "1114 North Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Mar 01 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-21614",
+   "registration_code": "C-21614",
+   "kind": "course",
+   "venue_lines": [
+    "Squadron Classroom",
+    "1114 N Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "AIS Electronics for Boaters",
+   "course_url": "https://americasboatingclub.org/seminars/safety/ais-electronics-for-boaters",
+   "begins": "Mar 10 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10038",
+   "registration_code": "S-10038",
+   "kind": "seminar",
+   "venue_lines": [
+    "Classroom",
+    "1114 North Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "How to Use a Chart",
+   "course_url": "https://americasboatingclub.org/seminars/navigation/using-nautical-charts",
+   "begins": "Mar 16 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10032",
+   "registration_code": "S-10032",
+   "kind": "seminar",
+   "venue_lines": [
+    "Classroom",
+    "1114 North Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "How to Use GPS",
+   "course_url": "https://americasboatingclub.org/seminars/navigation/how-to-use-gps",
+   "begins": "Mar 17 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10033",
+   "registration_code": "S-10033",
+   "kind": "seminar",
+   "venue_lines": [
+    "Classroom",
+    "1114 North Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Marco Island",
+   "sqdno": "3125",
+   "club_state": "FL",
+   "title": "Hurricane Preparation for Boaters",
+   "course_url": "https://americasboatingclub.org/seminars/facing-the-environment/hurricane-preparation-for-boaters",
+   "begins": "Mar 23 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10034",
+   "registration_code": "S-10034",
+   "kind": "seminar",
+   "venue_lines": [
+    "Classroom",
+    "1114 North Collier Blvd",
+    "Marco Island FL",
+    "504-220-6524",
+    "text=\"c2FpbG9udEBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "sailont@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Palm Beach",
+   "sqdno": "4170",
+   "club_state": "FL",
+   "title": "Weather for Boaters",
+   "course_url": "https://americasboatingclub.org/seminars/facing-the-environment/weather-for-boaters",
+   "begins": "Jun 20 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9920",
+   "registration_code": "S-9920",
+   "kind": "seminar",
+   "venue_lines": [
+    "Anchorage Park Activities Bldg",
+    "603 Anchorage Drive",
+    "North Palm Beach FL",
+    "561-758-4253",
+    "text=\"YXJ0ZG9kZDUyQGF0dC5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "artdodd52@att.net"
+  },
+  {
+   "club_name": "America's Boating Club Palm Beach",
+   "sqdno": "4170",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Aug 08 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22823",
+   "registration_code": "C-22823",
+   "kind": "course",
+   "venue_lines": [
+    "Anchorage Park Activities Bldg",
+    "603 Anchorage Drive",
+    "North Palm Beach FL",
+    "561-758-4253",
+    "text=\"c2VvQGFiY3BhbG1iZWFjaC5vcmc=\" base=\"\" >"
+   ],
+   "contact_email": "seo@abcpalmbeach.org"
+  },
+  {
+   "club_name": "America's Boating Club Palm Beach",
+   "sqdno": "4170",
+   "club_state": "FL",
+   "title": "Boat Handling",
+   "course_url": "https://americasboatingclub.org/courses/boat-handling/boat-handling-course",
+   "begins": "Aug 24 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18535",
+   "registration_code": "C-18535",
+   "kind": "course",
+   "venue_lines": [
+    "Anchorage Park Activities Bldg",
+    "603 Anchorage Drive",
+    "North Palm Beach FL",
+    "561-758-4253",
+    "text=\"YXJ0ZG9kZDUyQGF0dC5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "artdodd52@att.net"
+  },
+  {
+   "club_name": "America's Boating Club Palm Beach",
+   "sqdno": "4170",
+   "club_state": "FL",
+   "title": "BH Knots & Line Handling",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/knots-and-line-handling",
+   "begins": "Aug 24 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9922",
+   "registration_code": "S-9922",
+   "kind": "seminar",
+   "venue_lines": [
+    "Anchorage Park Activities Bldg",
+    "603 Anchorage Drive",
+    "North Palm Beach FL",
+    "561-758-4253",
+    "text=\"YXJ0ZG9kZDUyQGF0dC5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "artdodd52@att.net"
+  },
+  {
+   "club_name": "America's Boating Club Palm Beach",
+   "sqdno": "4170",
+   "club_state": "FL",
+   "title": "BH Anchoring with Assurance",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/anchoring-with-assurance",
+   "begins": "Sep 21 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9923",
+   "registration_code": "S-9923",
+   "kind": "seminar",
+   "venue_lines": [
+    "Anchorage Park Activities Bldg",
+    "603 Anchorage Drive",
+    "North Palm Beach FL",
+    "561-758-4253",
+    "text=\"YXJ0ZG9kZDUyQGF0dC5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "artdodd52@att.net"
+  },
+  {
+   "club_name": "America's Boating Club Palm Beach",
+   "sqdno": "4170",
+   "club_state": "FL",
+   "title": "Fuel and Boating",
+   "course_url": "https://americasboatingclub.org/seminars/safety/fuel-and-boating",
+   "begins": "Oct 17 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9924",
+   "registration_code": "S-9924",
+   "kind": "seminar",
+   "venue_lines": [
+    "Anchorage Park Activities Bldg",
+    "603 Anchorage Drive",
+    "North Palm Beach FL",
+    "561-758-4253",
+    "text=\"YXJ0ZG9kZDUyQGF0dC5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "artdodd52@att.net"
+  },
+  {
+   "club_name": "America's Boating Club Palm Beach",
+   "sqdno": "4170",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Nov 14 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-21547",
+   "registration_code": "C-21547",
+   "kind": "course",
+   "venue_lines": [
+    "Anchorage Park Activities Bldg",
+    "603 Anchorage Drive",
+    "North Palm Beach FL",
+    "561-758-4253",
+    "text=\"c2VvQGFiY3BhbG1iZWFjaC5vcmc=\" base=\"\" >"
+   ],
+   "contact_email": "seo@abcpalmbeach.org"
+  },
+  {
+   "club_name": "America's Boating Club Palm Beach",
+   "sqdno": "4170",
+   "club_state": "FL",
+   "title": "BH Rules of the Road",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/rules-of-the-road",
+   "begins": "Nov 21 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9925",
+   "registration_code": "S-9925",
+   "kind": "seminar",
+   "venue_lines": [
+    "Anchorage Park Activities Bldg",
+    "603 Anchorage Drive",
+    "North Palm Beach FL",
+    "561-758-4253",
+    "text=\"YXJ0ZG9kZDUyQGF0dC5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "artdodd52@att.net"
+  },
+  {
+   "club_name": "America's Boating Club Peace River",
+   "sqdno": "4245",
+   "club_state": "FL",
+   "title": "Boat Handling",
+   "course_url": "https://americasboatingclub.org/courses/boat-handling/boat-handling-course",
+   "begins": "Oct 05 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18479",
+   "registration_code": "C-18479",
+   "kind": "course",
+   "venue_lines": [
+    "Peace River Sail & Power Squadron Education Center",
+    "21234 Olean Blvd Ste 8",
+    "Port Charlotte FL",
+    "941-584-5993",
+    "text=\"ZWR1Y2F0aW9uQGFtZXJpY2FzYm9hdGluZ2NsdWJwZWFjZXJpdmVyLm9yZw==\" base=\"\" >"
+   ],
+   "contact_email": "education@americasboatingclubpeaceriver.org"
+  },
+  {
+   "club_name": "America's Boating Club Peace River",
+   "sqdno": "4245",
+   "club_state": "FL",
+   "title": "BH Rules of the Road",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/rules-of-the-road",
+   "begins": "Oct 05 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9982",
+   "registration_code": "S-9982",
+   "kind": "seminar",
+   "venue_lines": [
+    "Education Classroom",
+    "21234 Olean Blvd, Suite 8",
+    "Port Charlotte FL",
+    "610-513-2881",
+    "text=\"bGFicmFuZHQxQHZlcml6b24ubmV0\" base=\"\" >"
+   ],
+   "contact_email": "labrandt1@verizon.net"
+  },
+  {
+   "club_name": "America's Boating Club Peace River",
+   "sqdno": "4245",
+   "club_state": "FL",
+   "title": "BH Docking & Undocking",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/confidence-in-docking-and-undocking",
+   "begins": "Oct 12 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9983",
+   "registration_code": "S-9983",
+   "kind": "seminar",
+   "venue_lines": [
+    "Education Classroom",
+    "21234 Olean Blvd, Suite 8",
+    "Port Charlotte FL",
+    "610-513-2881",
+    "text=\"bGFicmFuZHQxQHZlcml6b24ubmV0\" base=\"\" >"
+   ],
+   "contact_email": "labrandt1@verizon.net"
+  },
+  {
+   "club_name": "America's Boating Club Peace River",
+   "sqdno": "4245",
+   "club_state": "FL",
+   "title": "BH Boating with Confidence",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/boat-handling-with-confidence",
+   "begins": "Oct 19 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9984",
+   "registration_code": "S-9984",
+   "kind": "seminar",
+   "venue_lines": [
+    "Education Classroom",
+    "21234 Olean Blvd, Suite 8",
+    "Port Charlotte FL",
+    "610-513-2881",
+    "text=\"bGFicmFuZHQxQHZlcml6b24ubmV0\" base=\"\" >"
+   ],
+   "contact_email": "labrandt1@verizon.net"
+  },
+  {
+   "club_name": "America's Boating Club Peace River",
+   "sqdno": "4245",
+   "club_state": "FL",
+   "title": "BH Anchoring with Assurance",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/anchoring-with-assurance",
+   "begins": "Oct 26 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9985",
+   "registration_code": "S-9985",
+   "kind": "seminar",
+   "venue_lines": [
+    "Education Classroom",
+    "21234 Olean Blvd, Suite 8",
+    "Port Charlotte FL",
+    "610-513-2881",
+    "text=\"bGFicmFuZHQxQHZlcml6b24ubmV0\" base=\"\" >"
+   ],
+   "contact_email": "labrandt1@verizon.net"
+  },
+  {
+   "club_name": "America's Boating Club Peace River",
+   "sqdno": "4245",
+   "club_state": "FL",
+   "title": "BH Emergencies on Board",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/emergencies-on-board",
+   "begins": "Nov 02 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9986",
+   "registration_code": "S-9986",
+   "kind": "seminar",
+   "venue_lines": [
+    "Education Classroom",
+    "21234 Olean Blvd, Suite 8",
+    "Port Charlotte FL",
+    "610-513-2881",
+    "text=\"bGFicmFuZHQxQHZlcml6b24ubmV0\" base=\"\" >"
+   ],
+   "contact_email": "labrandt1@verizon.net"
+  },
+  {
+   "club_name": "America's Boating Club Peace River",
+   "sqdno": "4245",
+   "club_state": "FL",
+   "title": "BH Knots & Line Handling",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/knots-and-line-handling",
+   "begins": "Nov 09 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9987",
+   "registration_code": "S-9987",
+   "kind": "seminar",
+   "venue_lines": [
+    "Education Classroom",
+    "21234 Olean Blvd, Suite 8",
+    "Port Charlotte FL",
+    "610-513-2881",
+    "text=\"bGFicmFuZHQxQHZlcml6b24ubmV0\" base=\"\" >"
+   ],
+   "contact_email": "labrandt1@verizon.net"
+  },
+  {
+   "club_name": "America's Boating Club Peace River",
+   "sqdno": "4245",
+   "club_state": "FL",
+   "title": "BH Rules of the Road",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/rules-of-the-road",
+   "begins": "Feb 01 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9988",
+   "registration_code": "S-9988",
+   "kind": "seminar",
+   "venue_lines": [
+    "Education Classroom",
+    "21234 Olean Blvd, Suite 8",
+    "Port Charlotte FL",
+    "610-513-2881",
+    "text=\"bGFicmFuZHQxQHZlcml6b24ubmV0\" base=\"\" >"
+   ],
+   "contact_email": "labrandt1@verizon.net"
+  },
+  {
+   "club_name": "America's Boating Club San Carlos Bay",
+   "sqdno": "5100",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 20 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22691",
+   "registration_code": "C-22691",
+   "kind": "course",
+   "venue_lines": [
+    "San Carlos Bay Sail & Power Squadron",
+    "16048 San Carlos Blvd",
+    "Fort Myers FL",
+    "239-466-4040",
+    "text=\"ZG9uanBldGVyc2VuQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "donjpetersen@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club San Carlos Bay",
+   "sqdno": "5100",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Aug 08 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22692",
+   "registration_code": "C-22692",
+   "kind": "course",
+   "venue_lines": [
+    "San Carlos Bay Sail & Power Squadron",
+    "16048 San Carlos Blvd",
+    "Fort Myers FL",
+    "239-466-4040",
+    "text=\"ZG9uanBldGVyc2VuQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "donjpetersen@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club San Carlos Bay",
+   "sqdno": "5100",
+   "club_state": "FL",
+   "title": "Boat Handling",
+   "course_url": "https://americasboatingclub.org/courses/boat-handling/boat-handling-course",
+   "begins": "Oct 01 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18467",
+   "registration_code": "C-18467",
+   "kind": "course",
+   "venue_lines": [
+    "San Carlos Bay Sail & Power Squadron",
+    "16048 San Carlos Blvd",
+    "Fort Myers FL",
+    "702-378-4264",
+    "text=\"ZG9uanBldGVyc2VuQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "donjpetersen@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club San Carlos Bay",
+   "sqdno": "5100",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 03 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22693",
+   "registration_code": "C-22693",
+   "kind": "course",
+   "venue_lines": [
+    "San Carlos Bay Sail & Power Squadron",
+    "16048 San Carlos Blvd",
+    "Fort Myers FL",
+    "239-466-4040",
+    "text=\"ZG9uanBldGVyc2VuQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "donjpetersen@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club San Carlos Bay",
+   "sqdno": "5100",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Dec 05 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-21623",
+   "registration_code": "C-21623",
+   "kind": "course",
+   "venue_lines": [
+    "San Carlos Bay Sail & Power Squadron",
+    "16048 San Carlos Blvd",
+    "Fort Myers FL",
+    "239-466-4040",
+    "text=\"ZG9uanBldGVyc2VuQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "donjpetersen@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Sanibel Captiva",
+   "sqdno": "5071",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Nov 12 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23033",
+   "registration_code": "C-23033",
+   "kind": "course",
+   "venue_lines": [
+    "Sanibel Public Library",
+    "770 Dunlop Road",
+    "Sanibel FL",
+    "313-909-0584",
+    "text=\"cm9iZXJ0Lm9ycjE2NjNAY29tY2FzdC5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "robert.orr1663@comcast.net"
+  },
+  {
+   "club_name": "America's Boating Club Sanibel Captiva",
+   "sqdno": "5071",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jan 11 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23034",
+   "registration_code": "C-23034",
+   "kind": "course",
+   "venue_lines": [
+    "Sanibel Public Library",
+    "770 Dunlop Road",
+    "Sanibel FL",
+    "313-909-0584",
+    "text=\"cm9iZXJ0Lm9ycjE2NjNAY29tY2FzdC5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "robert.orr1663@comcast.net"
+  },
+  {
+   "club_name": "America's Boating Club Sanibel Captiva",
+   "sqdno": "5071",
+   "club_state": "FL",
+   "title": "Boat Handling",
+   "course_url": "https://americasboatingclub.org/courses/boat-handling/boat-handling-course",
+   "begins": "Jan 12 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18620",
+   "registration_code": "C-18620",
+   "kind": "course",
+   "venue_lines": [
+    "St Charles Yacht Club",
+    "15900 St Charles Harbor",
+    "Ft Myers FL",
+    "720-260-0225",
+    "text=\"bWFyeXNob2xkZW5ybkBnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "marysholdenrn@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Sanibel Captiva",
+   "sqdno": "5071",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Feb 18 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22534",
+   "registration_code": "C-22534",
+   "kind": "course",
+   "venue_lines": [
+    "Sanibel Public Library",
+    "770 Dunlop Road",
+    "Sanibel FL",
+    "313-909-0584",
+    "text=\"cm9iZXJ0Lm9ycjE2NjNAY29tY2FzdC5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "robert.orr1663@comcast.net"
+  },
+  {
+   "club_name": "America's Boating Club Sarasota",
+   "sqdno": "5295",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jul 07 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22188",
+   "registration_code": "C-22188",
+   "kind": "course",
+   "venue_lines": [
+    "Sarasota Power Squadron",
+    "2814 Hyde Park Street",
+    "Sarasota FL",
+    "941-371-1284",
+    "text=\"YmFyYmFyYXdvbGZlMTAwNEBnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "barbarawolfe1004@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Sarasota",
+   "sqdno": "5295",
+   "club_state": "FL",
+   "title": "Boat Handling",
+   "course_url": "https://americasboatingclub.org/courses/boat-handling/boat-handling-course",
+   "begins": "Sep 08 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18588",
+   "registration_code": "C-18588",
+   "kind": "course",
+   "venue_lines": [
+    "Sarasota Power Squadron",
+    "2814 Hyde Park Street",
+    "Sarastoa FL",
+    "540-250-6903",
+    "text=\"c2FtZG9ha3NycUBnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "samdoaksrq@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Sarasota",
+   "sqdno": "5295",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Sep 12 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22186",
+   "registration_code": "C-22186",
+   "kind": "course",
+   "venue_lines": [
+    "Sarasota Power Squadron",
+    "2814 Hyde Park Street",
+    "Sarasota FL",
+    "941-371-1284",
+    "text=\"YmFyYmFyYXdvbGZlMTAwNEBnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "barbarawolfe1004@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Sarasota",
+   "sqdno": "5295",
+   "club_state": "FL",
+   "title": "Marine Navigation",
+   "course_url": "https://americasboatingclub.org/courses/navigation/marine-navigation-course",
+   "begins": "Sep 28 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18590",
+   "registration_code": "C-18590",
+   "kind": "course",
+   "venue_lines": [
+    "Sarasota Power Squadron",
+    "2814 Hyde Park Street",
+    "Sarastoa FL",
+    "917-859-6824",
+    "text=\"bWxhbmRpczE3ODJAY29tY2FzdC5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "mlandis1782@comcast.net"
+  },
+  {
+   "club_name": "America's Boating Club Sarasota",
+   "sqdno": "5295",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Nov 10 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22984",
+   "registration_code": "C-22984",
+   "kind": "course",
+   "venue_lines": [
+    "Sarasota Power Squadron",
+    "2814 Hyde Park Street",
+    "Sarasota FL",
+    "941-371-1284",
+    "text=\"YmFyYmFyYXdvbGZlMTAwNEBnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "barbarawolfe1004@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Sarasota",
+   "sqdno": "5295",
+   "club_state": "FL",
+   "title": "Boat Handling",
+   "course_url": "https://americasboatingclub.org/courses/boat-handling/boat-handling-course",
+   "begins": "Dec 01 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18589",
+   "registration_code": "C-18589",
+   "kind": "course",
+   "venue_lines": [
+    "Sarasota Power Squadron",
+    "2814 Hyde Park Street",
+    "Sarastoa FL",
+    "540-250-6903",
+    "text=\"c2FtZG9ha3NycUBnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "samdoaksrq@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Sarasota",
+   "sqdno": "5295",
+   "club_state": "FL",
+   "title": "Marine Navigation",
+   "course_url": "https://americasboatingclub.org/courses/navigation/marine-navigation-course",
+   "begins": "Jan 11 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18596",
+   "registration_code": "C-18596",
+   "kind": "course",
+   "venue_lines": [
+    "Sarasota Power Squadron",
+    "2814 Hyde Park Street",
+    "Sarastoa FL",
+    "917-859-6824",
+    "text=\"bWxhbmRpczE3ODJAY29tY2FzdC5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "mlandis1782@comcast.net"
+  },
+  {
+   "club_name": "America's Boating Club Sarasota",
+   "sqdno": "5295",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jan 12 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22961",
+   "registration_code": "C-22961",
+   "kind": "course",
+   "venue_lines": [
+    "Sarasota Power Squadron",
+    "2814 Hyde Park Street",
+    "Sarasota FL",
+    "941-371-1284",
+    "text=\"YmFyYmFyYXdvbGZlMTAwNEBnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "barbarawolfe1004@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Sarasota",
+   "sqdno": "5295",
+   "club_state": "FL",
+   "title": "Boat Handling",
+   "course_url": "https://americasboatingclub.org/courses/boat-handling/boat-handling-course",
+   "begins": "Feb 16 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18594",
+   "registration_code": "C-18594",
+   "kind": "course",
+   "venue_lines": [
+    "Sarasota Power Squadron",
+    "2814 Hyde Park Street",
+    "Sarastoa FL",
+    "540-250-6903",
+    "text=\"c2FtZG9ha3NycUBnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "samdoaksrq@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Sarasota",
+   "sqdno": "5295",
+   "club_state": "FL",
+   "title": "Advanced Marine Navigation",
+   "course_url": "https://americasboatingclub.org/",
+   "begins": "Feb 17 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18667",
+   "registration_code": "C-18667",
+   "kind": "course",
+   "venue_lines": [
+    "Sarasota Power Squadron",
+    "2814 Hyde Park Street",
+    "Sarastoa FL",
+    "540-250-6903",
+    "text=\"c2FtZG9ha3NycUBnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "samdoaksrq@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Sarasota",
+   "sqdno": "5295",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Mar 13 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22960",
+   "registration_code": "C-22960",
+   "kind": "course",
+   "venue_lines": [
+    "Sarasota Power Squadron",
+    "2814 Hyde Park Street",
+    "Sarasota FL",
+    "941-371-1284",
+    "text=\"YmFyYmFyYXdvbGZlMTAwNEBnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "barbarawolfe1004@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Sarasota",
+   "sqdno": "5295",
+   "club_state": "FL",
+   "title": "Boat Handling",
+   "course_url": "https://americasboatingclub.org/courses/boat-handling/boat-handling-course",
+   "begins": "Apr 06 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18595",
+   "registration_code": "C-18595",
+   "kind": "course",
+   "venue_lines": [
+    "Sarasota Power Squadron",
+    "2814 Hyde Park Street",
+    "Sarastoa FL",
+    "540-250-6903",
+    "text=\"c2FtZG9ha3NycUBnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "samdoaksrq@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Sarasota",
+   "sqdno": "5295",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "May 10 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22185",
+   "registration_code": "C-22185",
+   "kind": "course",
+   "venue_lines": [
+    "Sarasota Power Squadron",
+    "2814 Hyde Park Street",
+    "Sarasota FL",
+    "941-371-1284",
+    "text=\"YmFyYmFyYXdvbGZlMTAwNEBnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "barbarawolfe1004@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Sarasota",
+   "sqdno": "5295",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jul 06 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22962",
+   "registration_code": "C-22962",
+   "kind": "course",
+   "venue_lines": [
+    "Sarasota Power Squadron",
+    "2814 Hyde Park Street",
+    "Sarasota FL",
+    "941-371-1284",
+    "text=\"YmFyYmFyYXdvbGZlMTAwNEBnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "barbarawolfe1004@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club St. Petersburg",
+   "sqdno": "5040",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Sep 12 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22892",
+   "registration_code": "C-22892",
+   "kind": "course",
+   "venue_lines": [
+    "St Petersburg Yacht Club",
+    "11 Central Ave",
+    "St Petersburg FL",
+    "813-633-5149",
+    "text=\"cm9iZXJ0LmVtbWV0dEB5YWhvby5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "robert.emmett@yahoo.com"
+  },
+  {
+   "club_name": "America's Boating Club St. Petersburg",
+   "sqdno": "5040",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 24 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-19538",
+   "registration_code": "C-19538",
+   "kind": "course",
+   "venue_lines": [
+    "St Petersburg Yacht Club",
+    "11 Central Ave",
+    "St Petersburg FL",
+    "813-633-5149",
+    "text=\"cm9iZXJ0LmVtbWV0dEB5YWhvby5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "robert.emmett@yahoo.com"
+  },
+  {
+   "club_name": "Venice Sail and Power Squadron",
+   "sqdno": "6030",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 10 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22999",
+   "registration_code": "C-22999",
+   "kind": "course",
+   "venue_lines": [
+    "City of Venice Florida,police Station Public Conference Rm",
+    "1575 E. Venice Ave",
+    "Venice FL",
+    "941-493-2837",
+    "text=\"c3RpbGVucmFpbGVAdmVyaXpvbi5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "stilenraile@verizon.net"
+  },
+  {
+   "club_name": "Venice Sail and Power Squadron",
+   "sqdno": "6030",
+   "club_state": "FL",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Nov 14 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22750",
+   "registration_code": "C-22750",
+   "kind": "course",
+   "venue_lines": [
+    "City of Venice Florida,police Station Public Conference Rm",
+    "1575 E. Venice Ave",
+    "Venice FL",
+    "941-493-2837",
+    "text=\"c3RpbGVucmFpbGVAdmVyaXpvbi5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "stilenraile@verizon.net"
+  },
+  {
+   "club_name": "America's Boating Club Atlanta",
+   "sqdno": "0240",
+   "club_state": "GA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Aug 08 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22765",
+   "registration_code": "C-22765",
+   "kind": "course",
+   "venue_lines": [
+    "In Person - Instructor Led",
+    "Flowery Branch GA",
+    "770-312-4284",
+    "text=\"YWJjQGFtZXJpY2FzYm9hdGluZ2NsdWJhdGxhbnRhLm9yZw==\" base=\"\" >"
+   ],
+   "contact_email": "abc@americasboatingclubatlanta.org"
+  },
+  {
+   "club_name": "America's Boating Club Golden Isles",
+   "sqdno": "2000",
+   "club_state": "GA",
+   "title": "Tides and Currents",
+   "course_url": "https://americasboatingclub.org/seminars/facing-the-environment/tides-and-currents",
+   "begins": "Jul 16 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10016",
+   "registration_code": "S-10016",
+   "kind": "seminar",
+   "venue_lines": [
+    "Ga Marine Extension",
+    "715 Bay Street",
+    "Brunswick GA",
+    "860-908-4678",
+    "text=\"bGFtYm81MEBpY2xvdWQuY29t\" base=\"\" >"
+   ],
+   "contact_email": "lambo50@icloud.com"
+  },
+  {
+   "club_name": "America's Boating Club Golden Isles",
+   "sqdno": "2000",
+   "club_state": "GA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 03 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-21642",
+   "registration_code": "C-21642",
+   "kind": "course",
+   "venue_lines": [
+    "University of Georgia Extension Building",
+    "715 Bay Street",
+    "Brunswick GA",
+    "229-454-6791",
+    "text=\"bW1veWVAc3VyZnNvdXRoLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "mmoye@surfsouth.com"
+  },
+  {
+   "club_name": "America's Boating Club Savannah",
+   "sqdno": "5970",
+   "club_state": "GA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 13 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22794",
+   "registration_code": "C-22794",
+   "kind": "course",
+   "venue_lines": [
+    "White Bluff Presbyterian Church",
+    "10710 White Bluff Road",
+    "Savannah GA",
+    "952-232-7304",
+    "text=\"a2poeWxhbmRlckBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "kjhylander@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Savannah",
+   "sqdno": "5970",
+   "club_state": "GA",
+   "title": "Modern Weather Forecasting",
+   "course_url": "https://americasboatingclub.org/seminars/facing-the-environment/modern-weather-forecasting",
+   "begins": "Sep 22 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10041",
+   "registration_code": "S-10041",
+   "kind": "seminar",
+   "venue_lines": [
+    "White Bluff Presbyterian Church",
+    "10710 White Bluff Road",
+    "Savannah GA",
+    "952-232-7304",
+    "text=\"a2poeWxhbmRlckBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "kjhylander@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Savannah",
+   "sqdno": "5970",
+   "club_state": "GA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 03 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22798",
+   "registration_code": "C-22798",
+   "kind": "course",
+   "venue_lines": [
+    "White Bluff Presbyterian Church",
+    "10710 White Bluff Road",
+    "Savannah GA",
+    "952-232-7304",
+    "text=\"a2poeWxhbmRlckBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "kjhylander@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Savannah",
+   "sqdno": "5970",
+   "club_state": "GA",
+   "title": "Introduction to Navigation",
+   "course_url": "https://americasboatingclub.org/seminars/navigation/introduction-to-navigation",
+   "begins": "Oct 06 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10042",
+   "registration_code": "S-10042",
+   "kind": "seminar",
+   "venue_lines": [
+    "White Bluff Presbyterian Church",
+    "6 Middle Marsh Retreat",
+    "Savannah GA",
+    "952-232-7304",
+    "text=\"a2poeWxhbmRlckBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "kjhylander@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Savannah",
+   "sqdno": "5970",
+   "club_state": "GA",
+   "title": "Marine Electrical Systems",
+   "course_url": "https://americasboatingclub.org/courses/boat-systems/marine-electrical-systems",
+   "begins": "Oct 13 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18438",
+   "registration_code": "C-18438",
+   "kind": "course",
+   "venue_lines": [
+    "White Bluff Presybterian Church",
+    "10710 White Bluff Road",
+    "Savannah GA",
+    "952-232-7304",
+    "text=\"ZWR1Y2F0aW9uQGFiY2x1YnNhdmFubmFoLm9yZw==\" base=\"\" >"
+   ],
+   "contact_email": "education@abclubsavannah.org"
+  },
+  {
+   "club_name": "America's Boating Club Savannah",
+   "sqdno": "5970",
+   "club_state": "GA",
+   "title": "How to Use GPS",
+   "course_url": "https://americasboatingclub.org/seminars/navigation/how-to-use-gps",
+   "begins": "Nov 06 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10043",
+   "registration_code": "S-10043",
+   "kind": "seminar",
+   "venue_lines": [
+    "White Bluff Presbyterian Church",
+    "10710 White Bluff Road",
+    "Savannah GA",
+    "912-659-2380",
+    "text=\"ZGVuY3VzQGJlbGxzb3V0aC5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "dencus@bellsouth.net"
+  },
+  {
+   "club_name": "America's Boating Club Old Colony",
+   "sqdno": "4020",
+   "club_state": "MA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 28 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23042",
+   "registration_code": "C-23042",
+   "kind": "course",
+   "venue_lines": [
+    "Point Independence Yacht Club",
+    "15 Independence Ln",
+    "Onset MA",
+    "508-331-4298",
+    "text=\"am9obmdyYXNzb0Bjb21jYXN0Lm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "johngrasso@comcast.net"
+  },
+  {
+   "club_name": "America's Boating Club Old Colony",
+   "sqdno": "4020",
+   "club_state": "MA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 28 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-21950",
+   "registration_code": "C-21950",
+   "kind": "course",
+   "venue_lines": [
+    "Point Independence Yacht Club",
+    "15 Independence Ln",
+    "Onset MA",
+    "508-331-4298",
+    "text=\"am9obmdyYXNzb0Bjb21jYXN0Lm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "johngrasso@comcast.net"
+  },
+  {
+   "club_name": "America's Boating Club Old Colony",
+   "sqdno": "4020",
+   "club_state": "MA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 28 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23039",
+   "registration_code": "C-23039",
+   "kind": "course",
+   "venue_lines": [
+    "Point Independence Yacht Club",
+    "15 Independence Ln",
+    "Onset MA",
+    "508-331-4298",
+    "text=\"am9obmdyYXNzb0Bjb21jYXN0Lm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "johngrasso@comcast.net"
+  },
+  {
+   "club_name": "America's Boating Club Old Colony",
+   "sqdno": "4020",
+   "club_state": "MA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 28 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23040",
+   "registration_code": "C-23040",
+   "kind": "course",
+   "venue_lines": [
+    "Point Independence Yacht Club",
+    "15 Independence Ln",
+    "Onset MA",
+    "508-331-4298",
+    "text=\"am9obmdyYXNzb0Bjb21jYXN0Lm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "johngrasso@comcast.net"
+  },
+  {
+   "club_name": "America's Boating Club Springfield",
+   "sqdno": "5655",
+   "club_state": "MA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 07 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22861",
+   "registration_code": "C-22861",
+   "kind": "course",
+   "venue_lines": [
+    "Holyoke Rows",
+    "25 Jones Ferry Road",
+    "Holyoke MA",
+    "413-636-4804",
+    "text=\"cmF2MTMxZW5AYW9sLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "rav131en@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Mid Coast Maine",
+   "sqdno": "6210",
+   "club_state": "ME",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 13 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23044",
+   "registration_code": "C-23044",
+   "kind": "course",
+   "venue_lines": [
+    "Brunswick High School",
+    "116 Maquoit Rd",
+    "Brunswick ME",
+    "207-208-7343",
+    "text=\"QVNFTy5XYXdlbm9ja0BHbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "ASEO.Wawenock@Gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Mid Coast Maine",
+   "sqdno": "6210",
+   "club_state": "ME",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 17 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22140",
+   "registration_code": "C-22140",
+   "kind": "course",
+   "venue_lines": [
+    "Boothbay Ymca",
+    "261 Townsend Avenue",
+    "Boothbay Harbor ME",
+    "207-208-7343",
+    "text=\"QVNFTy5XYXdlbm9ja0BHbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "ASEO.Wawenock@Gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Birmingham",
+   "sqdno": "0525",
+   "club_state": "MI",
+   "title": "Partner in Command",
+   "course_url": "https://americasboatingclub.org/seminars/safety/crew-at-the-helm",
+   "begins": "Jun 13 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9938",
+   "registration_code": "S-9938",
+   "kind": "seminar",
+   "venue_lines": [
+    "Great Lakes Yacht Club",
+    "23900 Jefferson Ave",
+    "St Clair Shores MI",
+    "248-425-9192",
+    "text=\"ZGNmaWFuZGVyQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "dcfiander@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Birmingham",
+   "sqdno": "0525",
+   "club_state": "MI",
+   "title": "BH Emergencies on Board",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/emergencies-on-board",
+   "begins": "Jul 11 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9939",
+   "registration_code": "S-9939",
+   "kind": "seminar",
+   "venue_lines": [
+    "Great Lakes Yacht Club",
+    "23900 Jefferson Ave",
+    "St Clair Shores MI",
+    "248-425-9192",
+    "text=\"ZGNmaWFuZGVyQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "dcfiander@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Birmingham",
+   "sqdno": "0525",
+   "club_state": "MI",
+   "title": "AIS Electronics for Boaters",
+   "course_url": "https://americasboatingclub.org/seminars/safety/ais-electronics-for-boaters",
+   "begins": "Aug 08 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9940",
+   "registration_code": "S-9940",
+   "kind": "seminar",
+   "venue_lines": [
+    "Great Lakes Yacht Club",
+    "23900 Jefferson Ave",
+    "St Clair Shores MI",
+    "248-425-9192",
+    "text=\"ZGNmaWFuZGVyQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "dcfiander@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Birmingham",
+   "sqdno": "0525",
+   "club_state": "MI",
+   "title": "BH Anchoring with Assurance",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/anchoring-with-assurance",
+   "begins": "Sep 19 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9941",
+   "registration_code": "S-9941",
+   "kind": "seminar",
+   "venue_lines": [
+    "Great Lakes Yacht Club",
+    "23900 Jefferson Ave",
+    "St Clair Shores MI",
+    "248-425-9192",
+    "text=\"ZGNmaWFuZGVyQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "dcfiander@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Birmingham",
+   "sqdno": "0525",
+   "club_state": "MI",
+   "title": "BH Docking & Undocking",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/confidence-in-docking-and-undocking",
+   "begins": "Oct 10 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9942",
+   "registration_code": "S-9942",
+   "kind": "seminar",
+   "venue_lines": [
+    "Great Lakes Yacht Club",
+    "23900 Jefferson Ave",
+    "St Clair Shores MI",
+    "248-425-9192",
+    "text=\"ZGNmaWFuZGVyQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "dcfiander@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Birmingham",
+   "sqdno": "0525",
+   "club_state": "MI",
+   "title": "Fuel and Boating",
+   "course_url": "https://americasboatingclub.org/seminars/safety/fuel-and-boating",
+   "begins": "Nov 14 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9943",
+   "registration_code": "S-9943",
+   "kind": "seminar",
+   "venue_lines": [
+    "Great Lakes Yacht Club",
+    "23900 Jefferson Ave",
+    "St Clair Shores MI",
+    "248-425-9192",
+    "text=\"ZGNmaWFuZGVyQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "dcfiander@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Birmingham",
+   "sqdno": "0525",
+   "club_state": "MI",
+   "title": "Man Overboard",
+   "course_url": "https://americasboatingclub.org/seminars/safety/man-overboard",
+   "begins": "Dec 12 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9944",
+   "registration_code": "S-9944",
+   "kind": "seminar",
+   "venue_lines": [
+    "Great Lakes Yacht Club",
+    "23900 Jefferson Ave",
+    "St Clair Shores MI",
+    "248-425-9192",
+    "text=\"ZGNmaWFuZGVyQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "dcfiander@gmail.com"
+  },
+  {
+   "club_name": "St. Paul Sail and Power Squadron",
+   "sqdno": "5025",
+   "club_state": "MN",
+   "title": "BH Knots & Line Handling",
+   "course_url": "https://americasboatingclub.org/seminars/boat-handling/knots-and-line-handling",
+   "begins": "Jun 24 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10050",
+   "registration_code": "S-10050",
+   "kind": "seminar",
+   "venue_lines": [
+    "Bayport Marina Clubhouse",
+    "200 5th Ave. S",
+    "Bayport MN",
+    "651-492-1515",
+    "text=\"a2ptYW5vckBjb21jYXN0Lm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "kjmanor@comcast.net"
+  },
+  {
+   "club_name": "St. Paul Sail and Power Squadron",
+   "sqdno": "5025",
+   "club_state": "MN",
+   "title": "Introduction to Marine Batteries",
+   "course_url": "https://americasboatingclub.org/",
+   "begins": "Aug 29 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10025",
+   "registration_code": "S-10025",
+   "kind": "seminar",
+   "venue_lines": [
+    "Bayport Marina Clubhouse",
+    "200 5th Ave. S",
+    "Bayport MN",
+    "651-492-1515",
+    "text=\"a2ptYW5vckBjb21jYXN0Lm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "kjmanor@comcast.net"
+  },
+  {
+   "club_name": "America's Boating Club Cape Fear",
+   "sqdno": "0855",
+   "club_state": "NC",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Aug 15 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-21848",
+   "registration_code": "C-21848",
+   "kind": "course",
+   "venue_lines": [
+    "Eastwood Community Church, Wilmington Water Tours",
+    "702 Eastwood Rd, Wwt-downtown Wilmington",
+    "Wilmington,nc NC",
+    "703-926-8507",
+    "text=\"d2V0ZWFjaGJvYXRpbmdAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "weteachboating@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Cape Fear",
+   "sqdno": "0855",
+   "club_state": "NC",
+   "title": "Boat Handling",
+   "course_url": "https://americasboatingclub.org/courses/boat-handling/boat-handling-course",
+   "begins": "Sep 10 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18637",
+   "registration_code": "C-18637",
+   "kind": "course",
+   "venue_lines": [
+    "Cape Fear Community College - Union Station Building",
+    "502 N Front Street",
+    "Wilmington NC",
+    "480-363-0776",
+    "text=\"b2p3aGl0ZTNAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "ojwhite3@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Cape Fear",
+   "sqdno": "0855",
+   "club_state": "NC",
+   "title": "Weather for Boaters",
+   "course_url": "https://americasboatingclub.org/seminars/facing-the-environment/weather-for-boaters",
+   "begins": "Nov 21 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10023",
+   "registration_code": "S-10023",
+   "kind": "seminar",
+   "venue_lines": [
+    "Cape Fear Community College - Small Business Center",
+    "402 N. Front Street",
+    "Wilmington NC",
+    "480-363-0776",
+    "text=\"b2p3aGl0ZTNAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "ojwhite3@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Charlotte",
+   "sqdno": "1035",
+   "club_state": "NC",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jul 18 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23061",
+   "registration_code": "C-23061",
+   "kind": "course",
+   "venue_lines": [
+    "Marinemax Hall Marine Lake Wylie ( Lake Wylie Marina)",
+    "310 Blucher Circle",
+    "Lake Wylie SC",
+    "704-301-4074",
+    "text=\"Ym1lY2lAYmVsbHNvdXRoLm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "bmeci@bellsouth.net"
+  },
+  {
+   "club_name": "America's Boating Club Charlotte",
+   "sqdno": "1035",
+   "club_state": "NC",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jul 18 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22919",
+   "registration_code": "C-22919",
+   "kind": "course",
+   "venue_lines": [
+    "Marinemax Hall Marine Lake Wylie ( Lake Wylie Marina)",
+    "310 Blucher Circle",
+    "Lake Wylie NC",
+    "704-301-4074",
+    "text=\"Ym1lY2lAYmVsbHNvdXRoLm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "bmeci@bellsouth.net"
+  },
+  {
+   "club_name": "America's Boating Club Raleigh",
+   "sqdno": "4665",
+   "club_state": "NC",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 27 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-20482",
+   "registration_code": "C-20482",
+   "kind": "course",
+   "venue_lines": [
+    "Resurrection Lutheran School",
+    "100 W Lochmere Dr",
+    "Cary NC",
+    "919-605-4078",
+    "text=\"dG9tdGF5bG9yM0B5YWhvby5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "tomtaylor3@yahoo.com"
+  },
+  {
+   "club_name": "Absecon Island Power Squadron",
+   "sqdno": "0015",
+   "club_state": "NJ",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 30 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18150",
+   "registration_code": "C-18150",
+   "kind": "course",
+   "venue_lines": [
+    "Somers Point Pal",
+    "599 Marks Road",
+    "Somers Point NJ",
+    "609-365-0139",
+    "text=\"YWJzZWNvbmlzbGFuZHBvd2Vyc3F1YWRyb25AZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "abseconislandpowersquadron@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Bayside",
+   "sqdno": "0390",
+   "club_state": "NY",
+   "title": "All About VHF/DSC Marine Radio",
+   "course_url": "https://americasboatingclub.org/seminars/safety/all-about-marine-radio",
+   "begins": "Jun 17 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9998",
+   "registration_code": "S-9998",
+   "kind": "seminar",
+   "venue_lines": [
+    "Virtual",
+    "5235 Leith Place",
+    "Little Neck NY",
+    "718-224-2124",
+    "text=\"ZXVnZW5lLm1vbHRlbmlAdmVyaXpvbi5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "eugene.molteni@verizon.net"
+  },
+  {
+   "club_name": "America's Boating Club Great South Bay",
+   "sqdno": "2070",
+   "club_state": "NY",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 17 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22191",
+   "registration_code": "C-22191",
+   "kind": "course",
+   "venue_lines": [
+    "West Islip Library",
+    "3 Higbie Lane",
+    "West Islip NY",
+    "631-290-8096",
+    "text=\"Ym9sYW5kbWljaGFlbDEyM0BnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "bolandmichael123@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Syracuse",
+   "sqdno": "5790",
+   "club_state": "NY",
+   "title": "Boat Handling",
+   "course_url": "https://americasboatingclub.org/courses/boat-handling/boat-handling-course",
+   "begins": "Sep 15 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18617",
+   "registration_code": "C-18617",
+   "kind": "course",
+   "venue_lines": [
+    "Tess Freedman Home and Hybrid With Zoom",
+    "205 Barrington Rd.",
+    "Syracuse NY",
+    "315-446-6329",
+    "text=\"dGJmcmVlZG1AZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "tbfreedm@gmail.com"
+  },
+  {
+   "club_name": "Ten Mile Power Squadron",
+   "sqdno": "5895",
+   "club_state": "PA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 13 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22879",
+   "registration_code": "C-22879",
+   "kind": "course",
+   "venue_lines": [
+    "Elizabeth Boat Club",
+    "315 N 1st St (water St)",
+    "Elizabeth PA",
+    "412-720-2821",
+    "text=\"bHlubmFicm9ja21hbkBnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "lynnabrockman@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Golden Corner Lakes",
+   "sqdno": "5896",
+   "club_state": "SC",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 27 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-21992",
+   "registration_code": "C-21992",
+   "kind": "course",
+   "venue_lines": [
+    "Oconee Chamber of Commerce",
+    "2 Leas Courtyard Drive",
+    "Seneca SC",
+    "864-972-2434",
+    "text=\"b3picm5AYmVsbHNvdXRoLm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "ozbrn@bellsouth.net"
+  },
+  {
+   "club_name": "America's Boating Club Golden Corner Lakes",
+   "sqdno": "5896",
+   "club_state": "SC",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Sep 15 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23059",
+   "registration_code": "C-23059",
+   "kind": "course",
+   "venue_lines": [
+    "St. Mark's United Methodist Church - Room Tbd",
+    "616 Quincy Rd",
+    "Seneca SC",
+    "864-972-2434",
+    "text=\"b3picm5AYmVsbHNvdXRoLm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "ozbrn@bellsouth.net"
+  },
+  {
+   "club_name": "America's Boating Club of the Catawba",
+   "sqdno": "0930",
+   "club_state": "SC",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Aug 22 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-21900",
+   "registration_code": "C-21900",
+   "kind": "course",
+   "venue_lines": [
+    "Tega Cay Police Dept.",
+    "7705 Tega Cay Drive",
+    "Tega Cay SC",
+    "803-493-2472",
+    "text=\"amltdmFuMTFAY29tcG9yaXVtLm5ldA==\" base=\"\" >"
+   ],
+   "contact_email": "jimvan11@comporium.net"
+  },
+  {
+   "club_name": "America's Boating Club Houston",
+   "sqdno": "2370",
+   "club_state": "TX",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jul 11 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22784",
+   "registration_code": "C-22784",
+   "kind": "course",
+   "venue_lines": [
+    "Home Port",
+    "6910 Bellaire Blvd. #15",
+    "Houston TX",
+    "281-352-0135",
+    "text=\"Z2FtYmVyaGFAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "gamberha@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Houston",
+   "sqdno": "2370",
+   "club_state": "TX",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Aug 01 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22785",
+   "registration_code": "C-22785",
+   "kind": "course",
+   "venue_lines": [
+    "Home Port",
+    "6910 Bellaire Blvd. #15",
+    "Houston TX",
+    "281-352-0135",
+    "text=\"Z2FtYmVyaGFAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "gamberha@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Houston",
+   "sqdno": "2370",
+   "club_state": "TX",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Sep 05 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22786",
+   "registration_code": "C-22786",
+   "kind": "course",
+   "venue_lines": [
+    "Home Port",
+    "6910 Bellaire Blvd. #15",
+    "Houston TX",
+    "281-352-0135",
+    "text=\"Z2FtYmVyaGFAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "gamberha@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Houston",
+   "sqdno": "2370",
+   "club_state": "TX",
+   "title": "Marine Electrical Systems",
+   "course_url": "https://americasboatingclub.org/courses/boat-systems/marine-electrical-systems",
+   "begins": "Sep 15 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18516",
+   "registration_code": "C-18516",
+   "kind": "course",
+   "venue_lines": [
+    "Home Port",
+    "6910 Bellaire Blvd. #15",
+    "Houston TX",
+    "281-469-4302",
+    "text=\"cm9nZXJockBzd2JlbGwubmV0\" base=\"\" >"
+   ],
+   "contact_email": "rogerhr@swbell.net"
+  },
+  {
+   "club_name": "America's Boating Club Houston",
+   "sqdno": "2370",
+   "club_state": "TX",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 03 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22787",
+   "registration_code": "C-22787",
+   "kind": "course",
+   "venue_lines": [
+    "Home Port",
+    "6910 Bellaire Blvd. #15",
+    "Houston TX",
+    "281-352-0135",
+    "text=\"Z2FtYmVyaGFAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "gamberha@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Houston",
+   "sqdno": "2370",
+   "club_state": "TX",
+   "title": "Cruising Under Power and Sail",
+   "course_url": "https://americasboatingclub.org/courses/cruising-under-power-and-sail",
+   "begins": "Nov 03 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18512",
+   "registration_code": "C-18512",
+   "kind": "course",
+   "venue_lines": [
+    "Home Port",
+    "6910 Bellaire Blvd. #15",
+    "Houston TX",
+    "832-512-9582",
+    "text=\"c3RldmVAc2hld2FyZC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "steve@sheward.com"
+  },
+  {
+   "club_name": "America's Boating Club Houston",
+   "sqdno": "2370",
+   "club_state": "TX",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Nov 07 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22788",
+   "registration_code": "C-22788",
+   "kind": "course",
+   "venue_lines": [
+    "Home Port",
+    "6910 Bellaire Blvd. #15",
+    "Houston TX",
+    "281-352-0135",
+    "text=\"Z2FtYmVyaGFAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "gamberha@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Houston",
+   "sqdno": "2370",
+   "club_state": "TX",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jan 09 2027",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-20629",
+   "registration_code": "C-20629",
+   "kind": "course",
+   "venue_lines": [
+    "Home Port",
+    "6910 Bellaire Blvd. #15",
+    "Houston TX",
+    "281-352-0135",
+    "text=\"Z2FtYmVyaGFAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "gamberha@gmail.com"
+  },
+  {
+   "club_name": "Galveston Bay Sail and Power Squadron",
+   "sqdno": "1980",
+   "club_state": "TX",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Aug 01 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22836",
+   "registration_code": "C-22836",
+   "kind": "course",
+   "venue_lines": [
+    "St John's Episcopal Church - Stein Hall",
+    "815 South Broadway",
+    "La Porte TX",
+    "832-385-1357",
+    "text=\"amFtZXMubC5oYW1tb25kNDJAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "james.l.hammond42@gmail.com"
+  },
+  {
+   "club_name": "Galveston Bay Sail and Power Squadron",
+   "sqdno": "1980",
+   "club_state": "TX",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Sep 05 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22837",
+   "registration_code": "C-22837",
+   "kind": "course",
+   "venue_lines": [
+    "St John's Episcopal Church - Stein Hall",
+    "815 South Broadway",
+    "La Porte TX",
+    "832-385-1357",
+    "text=\"amFtZXMubC5oYW1tb25kNDJAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "james.l.hammond42@gmail.com"
+  },
+  {
+   "club_name": "Galveston Bay Sail and Power Squadron",
+   "sqdno": "1980",
+   "club_state": "TX",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Oct 03 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22838",
+   "registration_code": "C-22838",
+   "kind": "course",
+   "venue_lines": [
+    "St John's Episcopal Church - Stein Hall",
+    "815 South Broadway",
+    "La Porte TX",
+    "832-385-1357",
+    "text=\"amFtZXMubC5oYW1tb25kNDJAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "james.l.hammond42@gmail.com"
+  },
+  {
+   "club_name": "Galveston Bay Sail and Power Squadron",
+   "sqdno": "1980",
+   "club_state": "TX",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Nov 07 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22839",
+   "registration_code": "C-22839",
+   "kind": "course",
+   "venue_lines": [
+    "St John's Episcopal Church - Stein Hall",
+    "815 South Broadway",
+    "La Porte TX",
+    "832-385-1357",
+    "text=\"amFtZXMubC5oYW1tb25kNDJAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "james.l.hammond42@gmail.com"
+  },
+  {
+   "club_name": "Galveston Bay Sail and Power Squadron",
+   "sqdno": "1980",
+   "club_state": "TX",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Dec 05 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-19782",
+   "registration_code": "C-19782",
+   "kind": "course",
+   "venue_lines": [
+    "St John's Episcopal Church - Stein Hall",
+    "815 South Broadway",
+    "La Porte TX",
+    "832-385-1357",
+    "text=\"amFtZXMubC5oYW1tb25kNDJAZ21haWwuY29t\" base=\"\" >"
+   ],
+   "contact_email": "james.l.hammond42@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Northern Neck",
+   "sqdno": "3850",
+   "club_state": "VA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 20 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22710",
+   "registration_code": "C-22710",
+   "kind": "course",
+   "venue_lines": [
+    "Nnsps",
+    "453c North Main",
+    "Kilmarnock VA",
+    "804-339-7218",
+    "text=\"c2VvQGFiY25uay5vcmc=\" base=\"\" >"
+   ],
+   "contact_email": "seo@abcnnk.org"
+  },
+  {
+   "club_name": "America's Boating Club Northern Neck",
+   "sqdno": "3850",
+   "club_state": "VA",
+   "title": "Introduction to Marine Batteries",
+   "course_url": "https://americasboatingclub.org/",
+   "begins": "Jun 28 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9974",
+   "registration_code": "S-9974",
+   "kind": "seminar",
+   "venue_lines": [
+    "Nnsps Classroom",
+    "453 C North Main Street",
+    "Kilmarnock VA",
+    "804-339-7218",
+    "text=\"c2FpbGFjMzUwQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "sailac350@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Northern Neck",
+   "sqdno": "3850",
+   "club_state": "VA",
+   "title": "Fuel and Boating",
+   "course_url": "https://americasboatingclub.org/seminars/safety/fuel-and-boating",
+   "begins": "Jun 28 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9975",
+   "registration_code": "S-9975",
+   "kind": "seminar",
+   "venue_lines": [
+    "Nnsps Classroom",
+    "453 C North Main Street",
+    "Kilmarnock VA",
+    "804-339-7218",
+    "text=\"c2FpbGFjMzUwQGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "sailac350@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Northern VIrginia",
+   "sqdno": "3870",
+   "club_state": "VA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 27 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-23021",
+   "registration_code": "C-23021",
+   "kind": "course",
+   "venue_lines": [
+    "Lorton Library",
+    "9520 Richmond Highway",
+    "Lorton VA",
+    "434-296-0569",
+    "text=\"bWxvb3NlQGFvbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "mloose@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club Smith Mountain Lake",
+   "sqdno": "4860",
+   "club_state": "VA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 13 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22927",
+   "registration_code": "C-22927",
+   "kind": "course",
+   "venue_lines": [
+    "Bethlehem Methodist Church",
+    "13586 Old Moneta Rd",
+    "Moneta VA",
+    "540-588-0270",
+    "text=\"c21sc3Rvd0BnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "smlstow@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club Smith Mountain Lake",
+   "sqdno": "4860",
+   "club_state": "VA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jul 25 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22340",
+   "registration_code": "C-22340",
+   "kind": "course",
+   "venue_lines": [
+    "Bethlehem Methodist Church",
+    "13586 Old Moneta Rd",
+    "Moneta VA",
+    "540-588-0270",
+    "text=\"c21sc3Rvd0BnbWFpbC5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "smlstow@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club of Richmond",
+   "sqdno": "4710",
+   "club_state": "VA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 20 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22648",
+   "registration_code": "C-22648",
+   "kind": "course",
+   "venue_lines": [
+    "Olverson's Lodge Creek Marina",
+    "1161 Melrose Road",
+    "Lottsburg VA",
+    "804-370-7061",
+    "text=\"ZGF2ZUBhc2hjcmFmdGluc3VyYW5jZS5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "dave@ashcraftinsurance.com"
+  },
+  {
+   "club_name": "America's Boating Club of Richmond",
+   "sqdno": "4710",
+   "club_state": "VA",
+   "title": "Advanced Marine Navigation",
+   "course_url": "https://americasboatingclub.org/",
+   "begins": "Sep 08 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18664",
+   "registration_code": "C-18664",
+   "kind": "course",
+   "venue_lines": [
+    "On Line",
+    "On Line",
+    "Zoom VA",
+    "804-347-5239",
+    "text=\"amltQGpwemVpZ2xlci5jb20=\" base=\"\" >"
+   ],
+   "contact_email": "jim@jpzeigler.com"
+  },
+  {
+   "club_name": "America's Boating Club of Richmond",
+   "sqdno": "4710",
+   "club_state": "VA",
+   "title": "Introduction to Marine Batteries",
+   "course_url": "https://americasboatingclub.org/",
+   "begins": "Oct 06 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-10044",
+   "registration_code": "S-10044",
+   "kind": "seminar",
+   "venue_lines": [
+    "Zoom",
+    "Richmond VA",
+    "804-338-0873",
+    "text=\"bWF1aWppbTA0QGdtYWlsLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "mauijim04@gmail.com"
+  },
+  {
+   "club_name": "America's Boating Club of Richmond",
+   "sqdno": "4710",
+   "club_state": "VA",
+   "title": "Boat Handling",
+   "course_url": "https://americasboatingclub.org/courses/boat-handling/boat-handling-course",
+   "begins": "Oct 07 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18668",
+   "registration_code": "C-18668",
+   "kind": "course",
+   "venue_lines": [
+    "On Line",
+    "On Line",
+    "Zoom VA",
+    "804-909-2655",
+    "text=\"YmNzaW1wc29uMUBhb2wuY29t\" base=\"\" >"
+   ],
+   "contact_email": "bcsimpson1@aol.com"
+  },
+  {
+   "club_name": "America's Boating Club of Richmond",
+   "sqdno": "4710",
+   "club_state": "VA",
+   "title": "Marine Electrical Systems",
+   "course_url": "https://americasboatingclub.org/courses/boat-systems/marine-electrical-systems",
+   "begins": "Oct 15 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18659",
+   "registration_code": "C-18659",
+   "kind": "course",
+   "venue_lines": [
+    "On Line/virtual",
+    "Po Box 2060",
+    "Kilmarnock VA",
+    "804-240-8591",
+    "text=\"ZnRpbXBhbm9AaW5maW9ubGluZS5uZXQ=\" base=\"\" >"
+   ],
+   "contact_email": "ftimpano@infionline.net"
+  },
+  {
+   "club_name": "America's Boating Club Skagit Bay",
+   "sqdno": "5495",
+   "club_state": "WA",
+   "title": "Basic Boating Course",
+   "course_url": "https://americasboatingclub.org/americas-boating-course",
+   "begins": "Jun 27 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-20684",
+   "registration_code": "C-20684",
+   "kind": "course",
+   "venue_lines": [
+    "Parish Hall At Christ Episcopal Church",
+    "1216 7th Street",
+    "Anacortes WA",
+    "777-555-1234",
+    "text=\"YWRhbUBtYXJpbmVybGF3LmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "adam@marinerlaw.com"
+  },
+  {
+   "club_name": "America's Boating Club of Snohomish County",
+   "sqdno": "1680",
+   "club_state": "WA",
+   "title": "Offshore Navigation",
+   "course_url": "https://americasboatingclub.org/courses/navigation/offshore-navigation",
+   "begins": "Sep 21 2026",
+   "registration_url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-18670",
+   "registration_code": "C-18670",
+   "kind": "course",
+   "venue_lines": [
+    "Everett",
+    "3119 112th Place SE",
+    "Everett WA",
+    "425-422-4721",
+    "text=\"cGZkcHJldHR5ZmFuY3lkdWRlQHlhaG9vLmNvbQ==\" base=\"\" >"
+   ],
+   "contact_email": "pfdprettyfancydude@yahoo.com"
+  }
+ ]
+}

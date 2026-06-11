@@ -1,0 +1,293 @@
+{
+ "_provenance": {
+  "description": "Every EnrolMart page whose HTML contains an <h2 class=\"product-price\"> tag — i.e. an actual product page. Prices are read from that tag verbatim.",
+  "script": "derive/extract.py",
+  "extracted_at": "2026-06-11T18:28:32Z",
+  "sources": [
+   "data/crawl/index.jsonl",
+   "data/raw/uspsonline.enrolmart.com/"
+  ]
+ },
+ "products": [
+  {
+   "title": "AIS Electronics for Boaters",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/ais-electronics-for-boaters"
+  },
+  {
+   "title": "All About Marine Radio",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/all-about-marine-radio"
+  },
+  {
+   "title": "Anchoring with Assurance: Don't Get Carried Away  − Seminar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/anchoring"
+  },
+  {
+   "title": "Boat Handling –– Course",
+   "price_usd": 100.0,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/boat-handling-course"
+  },
+  {
+   "title": "Boating on Rivers, Locks and Lakes",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/boating-on-rivers-locks-and-lakes"
+  },
+  {
+   "title": "Boating with Confidence: Handling Your Boat Underway − Seminar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/boating-with-confidence"
+  },
+  {
+   "title": "Confidence in Docking and Undocking: Slow-Speed Maneuvering − Seminar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/docking"
+  },
+  {
+   "title": "Crew at the Helm",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/crew-at-the-helm"
+  },
+  {
+   "title": "Crossing Borders",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/crossing-borders"
+  },
+  {
+   "title": "Cruise With Confidence: The Complete Guide to Cruising under Power and Sail",
+   "price_usd": 100.0,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/cruising-under-power-and-sail"
+  },
+  {
+   "title": "Cruising Boats and Systems",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/cruising-boats-and-systems"
+  },
+  {
+   "title": "Emergencies Onboard: Preparation for Handling Common Problems − Seminar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/emergencies-onboard"
+  },
+  {
+   "title": "How to Use GPS - 2024",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/how-to-use-gps"
+  },
+  {
+   "title": "Hurricane Preparation for Boaters",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/hurricane-preparation-for-boaters"
+  },
+  {
+   "title": "Introduction to Marine Batteries",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/intro-marine-batteries"
+  },
+  {
+   "title": "Introduction to Navigation - Seminar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/intro-to-nav"
+  },
+  {
+   "title": "Introduction to OpenCPN",
+   "price_usd": 0.0,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/introduction-to-opencpn"
+  },
+  {
+   "title": "Knots and Line Handling: The Knots You Need to Know − Seminar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/knots"
+  },
+  {
+   "title": "Living Aboard While Cruising - Webinar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/living-aboard"
+  },
+  {
+   "title": "Marine Navigation Course",
+   "price_usd": 100.0,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/marine-navigation"
+  },
+  {
+   "title": "Marine Weather Forecasting: the 500 millibar Chart – Seminar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/the-500-millibar-chart"
+  },
+  {
+   "title": "Modern Weather Forecasting - Seminar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/modern-weather-forecasting"
+  },
+  {
+   "title": "Ocean Currents and Computer Navigation  − Webinar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/ocean-currents"
+  },
+  {
+   "title": "Ocean Waves − Webinar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/ocean-waves"
+  },
+  {
+   "title": "Paddle Smart - Seminar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/paddle-smart"
+  },
+  {
+   "title": "Personal Watercraft Operations - Webinar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/pwc"
+  },
+  {
+   "title": "Planning Your Boating Cruise",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/planning-your-boating-cruise"
+  },
+  {
+   "title": "Propane Systems on Your Boat",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/propane-systems-on-your-boat"
+  },
+  {
+   "title": "Rules of the Road:  A Practical Approach − Seminar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/rules-of-the-road"
+  },
+  {
+   "title": "Thunderstorms 2023 - seminar",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/thunderstorms-2023"
+  },
+  {
+   "title": "Trailering Your Boat",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/trailering"
+  },
+  {
+   "title": "Using Nautical Charts",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/nautical-charts"
+  },
+  {
+   "title": "Weather",
+   "price_usd": 100.0,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/weather"
+  },
+  {
+   "title": "Weather for Boaters 2023",
+   "price_usd": 34.95,
+   "section": "courses",
+   "type": "online course",
+   "url": "https://uspsonline.enrolmart.com/courses/weather-for-boaters-2023"
+  },
+  {
+   "title": "2025 Holiday Special",
+   "price_usd": 169.9,
+   "section": "course-packages",
+   "type": "package",
+   "url": "https://uspsonline.enrolmart.com/course-packages/2025-holiday-special"
+  },
+  {
+   "title": "BOC - Offshore Navigator",
+   "price_usd": 62.91,
+   "section": "course-packages",
+   "type": "package",
+   "url": "https://uspsonline.enrolmart.com/course-packages/boc-offshore-navigator"
+  },
+  {
+   "title": "Boating Skills Package",
+   "price_usd": 200.0,
+   "section": "course-packages",
+   "type": "package",
+   "url": "https://uspsonline.enrolmart.com/course-packages/boating-skills-package"
+  },
+  {
+   "title": "Inland Boating Package",
+   "price_usd": 104.85,
+   "section": "course-packages",
+   "type": "package",
+   "url": "https://uspsonline.enrolmart.com/course-packages/inland-boating-package"
+  },
+  {
+   "title": "Marine Electronics",
+   "price_usd": 104.85,
+   "section": "course-packages",
+   "type": "package",
+   "url": "https://uspsonline.enrolmart.com/course-packages/marine-electronics"
+  },
+  {
+   "title": "Ready, Set, Launch!",
+   "price_usd": 69.9,
+   "section": "course-packages",
+   "type": "package",
+   "url": "https://uspsonline.enrolmart.com/course-packages/ready-set-launch"
+  }
+ ]
+}

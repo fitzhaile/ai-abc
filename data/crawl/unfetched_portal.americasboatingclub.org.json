@@ -1,0 +1,11 @@
+{
+  "explanation": "URLs discovered for this domain but not fetched because the page cap or time limit was reached. Raise max_pages in scrape/crawl.py and re-run; already-fetched pages are skipped automatically.",
+  "count": 1,
+  "urls": [
+    {
+      "url": "https://portal.americasboatingclub.org/iCore/Contacts/Sign_In.aspx",
+      "depth": 0,
+      "discovered_from": "https://americasboatingclub.org/learn"
+    }
+  ]
+}

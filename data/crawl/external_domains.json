@@ -1,0 +1,25 @@
+{
+  "explanation": "Domains linked from crawled ABC pages that were NOT crawled because they are outside the configured ABC scope. Review this list to spot any ABC-related property that should be added to DOMAINS in scrape/crawl.py.",
+  "link_counts": {
+    "www.instagram.com": 1025,
+    "www.facebook.com": 1025,
+    "www.youtube.com": 1023,
+    "twitter.com": 999,
+    "www.uscreen.tv": 998,
+    "linkedin.com": 997,
+    "www.tiktok.com": 997,
+    "x.com": 25,
+    "issuu.com": 4,
+    "tinyurl.com": 3,
+    "www.pinterest.com": 2,
+    "youtube.com": 2,
+    "www.linkedin.com": 2,
+    "www.elks622.com": 2,
+    "www.mcgriff.com": 1,
+    "theensign.org": 1,
+    "www.magcloud.com": 1,
+    "www.aspsmd.org": 1,
+    "www.harriscrabhouse.com": 1,
+    "www.ftc.gov": 1
+  }
+}

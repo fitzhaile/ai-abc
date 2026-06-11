@@ -1,0 +1,2359 @@
+{
+ "_provenance": {
+  "description": "Every product listed in the Ship's Store catalog (store.shopusps.org, a NetSuite SiteBuilder store), harvested from the category listing pages which show each product's name, item code and price.",
+  "source_url": "https://store.shopusps.org/Catalog/",
+  "script": "scrape/fetch_store_catalog.py",
+  "mode": "re-parsed from raw HTML saved by an earlier fetch run",
+  "fetched_at": "2026-06-11T16:12:36Z",
+  "crawl_delay_honored_seconds": 20,
+  "pages_visited": [
+   {
+    "path": "/Catalog/",
+    "title": "Products",
+    "products_listed": 0,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Advanced-Boating-Courses/",
+    "title": "Advanced Boating Courses",
+    "products_listed": 7,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Apparel/",
+    "title": "Apparel",
+    "products_listed": 0,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Boating-Accessories/",
+    "title": "Boating Accessories",
+    "products_listed": 2,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Books-DVDs-/",
+    "title": "Books, DVD's, & Learning Materials",
+    "products_listed": 13,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Captain/",
+    "title": "Captain's Licenses",
+    "products_listed": 3,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Change-of-Watch/",
+    "title": "Change of Watch",
+    "products_listed": 0,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Childrens/",
+    "title": "Childrens",
+    "products_listed": 0,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Clearance/",
+    "title": "Clearance",
+    "products_listed": 14,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/District/",
+    "title": "District",
+    "products_listed": 13,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Education-and-Licensing/",
+    "title": "Education and Licensing",
+    "products_listed": 1,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Executive-Supplies/",
+    "title": "Executive Supplies",
+    "products_listed": 2,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Flags/",
+    "title": "Flags",
+    "products_listed": 28,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Gift-Ideas/",
+    "title": "Gift Ideas",
+    "products_listed": 0,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Insignia-Tabs/",
+    "title": "Insignia & Tabs",
+    "products_listed": 38,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Insignia-and-Flags/",
+    "title": "Insignia and Flags",
+    "products_listed": 0,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Jackets-Hats-Bags-More/",
+    "title": "Jackets, Hats, Bags & More",
+    "products_listed": 18,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Jewelry/",
+    "title": "Jewelry",
+    "products_listed": 13,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Mens/",
+    "title": "Men’s",
+    "products_listed": 10,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Miscellaneous/",
+    "title": "Miscellaneous",
+    "products_listed": 10,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Plaques/",
+    "title": "Plaques",
+    "products_listed": 0,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Safety-and-Electronics/",
+    "title": "VSC and Safety",
+    "products_listed": 0,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Sale/",
+    "title": "Sale",
+    "products_listed": 0,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/See-Whats-New/",
+    "title": "See What's New",
+    "products_listed": 4,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Squadron/",
+    "title": "Squadron",
+    "products_listed": 13,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Travel-Galley-Items/",
+    "title": "Travel & Galley Items",
+    "products_listed": 15,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/USPS-100th-Anniversary-Book/",
+    "title": "USPS 100th Anniversary Book",
+    "products_listed": 0,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Vessel-Safety-Check-Supplies/",
+    "title": "Vessel Safety Check Supplies",
+    "products_listed": 2,
+    "outcome": "re-parsed from saved HTML"
+   },
+   {
+    "path": "/Catalog/Womens/",
+    "title": "Women’s",
+    "products_listed": 11,
+    "outcome": "re-parsed from saved HTML"
+   }
+  ],
+  "unique_products": 217
+ },
+ "products": [
+  {
+   "url": "https://store.shopusps.org/Catalog/Books-DVDs-/1170101.html",
+   "name": "4 X 15 Plotter",
+   "item_code": "1170101",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Books-DVDs-/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Books-DVDs-/ARRL-General-Class-License-Manual.html",
+   "name": "ARRL General Class License Manual 8th Edition",
+   "item_code": "0188103",
+   "price_min": 29.95,
+   "price_max": 29.95,
+   "listed_under": [
+    "/Catalog/Books-DVDs-/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Gray-Blanket.html",
+   "name": "America's Boating  Club Gray Blanket",
+   "item_code": "0555934",
+   "price_min": 30.0,
+   "price_max": 30.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Americas-Boating-Club-Gray-Blanket.html",
+   "name": "America's Boating  Club Gray Blanket",
+   "item_code": "0555934",
+   "price_min": 30.0,
+   "price_max": 30.0,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Briefcase.html",
+   "name": "America's Boating Club Briefcase",
+   "item_code": "0555712",
+   "price_min": 42.0,
+   "price_max": 42.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Americas-Boating-Club-Briefcase.html",
+   "name": "America's Boating Club Briefcase",
+   "item_code": "0555712",
+   "price_min": 42.0,
+   "price_max": 42.0,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Clearance/Americas-Boating-Club-Bucket-Hat-Small-Medium.html",
+   "name": "America's Boating Club Bucket Hat Small/Medium",
+   "item_code": "0555931",
+   "price_min": 20.0,
+   "price_max": 20.0,
+   "listed_under": [
+    "/Catalog/Clearance/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Cap-Navy.html",
+   "name": "America's Boating Club Cap - Navy",
+   "item_code": "0555938",
+   "price_min": 15.0,
+   "price_max": 15.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Cap-Navy_2.html",
+   "name": "America's Boating Club Cap - Stone",
+   "item_code": "0555944",
+   "price_min": 15.0,
+   "price_max": 15.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Collapsible-Tote.html",
+   "name": "America's Boating Club Collapsible Tote",
+   "item_code": "0555706",
+   "price_min": 40.0,
+   "price_max": 40.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Miscellaneous/Americas-Boating-Club-Collapsible-Tote.html",
+   "name": "America's Boating Club Collapsible Tote",
+   "item_code": "0555706",
+   "price_min": 40.0,
+   "price_max": 40.0,
+   "listed_under": [
+    "/Catalog/Miscellaneous/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Americas-Boating-Club-Collapsible-Tote.html",
+   "name": "America's Boating Club Collapsible Tote",
+   "item_code": "0555706",
+   "price_min": 40.0,
+   "price_max": 40.0,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Mens/Americas-Boating-Club-Columbias-Mens-Fishing-Shirt.html",
+   "name": "America's Boating Club Columbia Tamiami Men's Fishing Shirt",
+   "item_code": "1500317",
+   "price_min": 64.0,
+   "price_max": 73.0,
+   "listed_under": [
+    "/Catalog/Mens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Clearance/Americas-Boating-Course-Devon-Jones-Glen-Plaid-Grey-Mens-shirt.html",
+   "name": "America's Boating Club Devon & Jones Glen Plaid Grey Men's Shirt",
+   "item_code": "1500271",
+   "price_min": 32.0,
+   "price_max": 32.0,
+   "listed_under": [
+    "/Catalog/Clearance/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Mens/Devon-Jones-Mens-Dress-Shirt.html",
+   "name": "America's Boating Club Devon & Jones Men's Dress Shirt",
+   "item_code": "1500270",
+   "price_min": 32.0,
+   "price_max": 32.0,
+   "listed_under": [
+    "/Catalog/Mens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Dry-Pouch.html",
+   "name": "America's Boating Club Dry Pouch",
+   "item_code": "0555943",
+   "price_min": 15.0,
+   "price_max": 15.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/See-Whats-New/Americas-Boating-Club-Dry-Pouch.html",
+   "name": "America's Boating Club Dry Pouch",
+   "item_code": "0555943",
+   "price_min": 15.0,
+   "price_max": 15.0,
+   "listed_under": [
+    "/Catalog/See-Whats-New/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Course-Ladies-Sweater.html",
+   "name": "America's Boating Club Ladies Sweater",
+   "item_code": "1555444",
+   "price_min": 50.0,
+   "price_max": 50.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Womens/Americas-Boating-Course-Ladies-Sweater.html",
+   "name": "America's Boating Club Ladies Sweater",
+   "item_code": "1555444",
+   "price_min": 50.0,
+   "price_max": 50.0,
+   "listed_under": [
+    "/Catalog/Womens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Red-Luggage-Tag.html",
+   "name": "America's Boating Club Luggage Tag",
+   "item_code": "0555031",
+   "price_min": 2.0,
+   "price_max": 2.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Luggage-Tag.html",
+   "name": "America's Boating Club Luggage Tag",
+   "item_code": "0555708",
+   "price_min": 5.0,
+   "price_max": 5.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Miscellaneous/Americas-Boating-Club-Luggage-Tag.html",
+   "name": "America's Boating Club Luggage Tag",
+   "item_code": "0555708",
+   "price_min": 5.0,
+   "price_max": 5.0,
+   "listed_under": [
+    "/Catalog/Miscellaneous/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Red-Luggage-Tag.html",
+   "name": "America's Boating Club Luggage Tag",
+   "item_code": "0555031",
+   "price_min": 2.0,
+   "price_max": 2.0,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Americas-Boating-Club-Luggage-Tag.html",
+   "name": "America's Boating Club Luggage Tag",
+   "item_code": "0555708",
+   "price_min": 5.0,
+   "price_max": 5.0,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Mens-Packable-Rain-Coat.html",
+   "name": "America's Boating Club Men's Packable Rain Coat",
+   "item_code": "1555442",
+   "price_min": 60.0,
+   "price_max": 60.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Mens/Americas-Boating-Club-Mens-Packable-Rain-Coat.html",
+   "name": "America's Boating Club Men's Packable Rain Coat",
+   "item_code": "1555442",
+   "price_min": 60.0,
+   "price_max": 60.0,
+   "listed_under": [
+    "/Catalog/Mens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Clearance/Americas.html",
+   "name": "America's Boating Club Men's red polo",
+   "item_code": "1500321",
+   "price_min": 25.0,
+   "price_max": 25.0,
+   "listed_under": [
+    "/Catalog/Clearance/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Americas-Boating-Club-Patch.html",
+   "name": "America's Boating Club Patch - Glue on",
+   "item_code": "0555257",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Patch.html",
+   "name": "America's Boating Club Patch - Glue on",
+   "item_code": "0555257",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Miscellaneous/Americas-Boating-Club-Patch.html",
+   "name": "America's Boating Club Patch - Glue on",
+   "item_code": "0555257",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Miscellaneous/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Americas-Boating-Club-Patch-Sew-on.html",
+   "name": "America's Boating Club Patch - Sew on",
+   "item_code": "0555258",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Patch-Sew-on.html",
+   "name": "America's Boating Club Patch - Sew on",
+   "item_code": "0555258",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Miscellaneous/Americas-Boating-Club-Patch-Sew-on.html",
+   "name": "America's Boating Club Patch - Sew on",
+   "item_code": "0555258",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Miscellaneous/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Executive-Supplies/Americas-Boating-Club-Pedova-Zippered-Navy-Padfolio.html",
+   "name": "America's Boating Club Pedova Zippered Navy Padfolio",
+   "item_code": "0555295",
+   "price_min": 40.0,
+   "price_max": 40.0,
+   "listed_under": [
+    "/Catalog/Executive-Supplies/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Miscellaneous/Americas-Boating-Club-Pedova-Zippered-Navy-Padfolio.html",
+   "name": "America's Boating Club Pedova Zippered Navy Padfolio",
+   "item_code": "0555295",
+   "price_min": 40.0,
+   "price_max": 40.0,
+   "listed_under": [
+    "/Catalog/Miscellaneous/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Americas-Boating-Club-Pedova-Zippered-Navy-Padfolio.html",
+   "name": "America's Boating Club Pedova Zippered Navy Padfolio",
+   "item_code": "0555295",
+   "price_min": 40.0,
+   "price_max": 40.0,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Miscellaneous/Americas-Boating-Club-Soft-Sunglasses.html",
+   "name": "America's Boating Club Soft Sunglasses",
+   "item_code": "0555701",
+   "price_min": 5.0,
+   "price_max": 5.0,
+   "listed_under": [
+    "/Catalog/Miscellaneous/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Americas-Boating-Club-Soft-Sunglasses.html",
+   "name": "America's Boating Club Soft Sunglasses",
+   "item_code": "0555701",
+   "price_min": 5.0,
+   "price_max": 5.0,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Clearance/Americas-Boating-Club-Vansport-Electric-Blue-Ladys-V-neck.html",
+   "name": "America's Boating Club Vansport Electric Blue Lady's V-neck",
+   "item_code": "1500272",
+   "price_min": 24.0,
+   "price_max": 24.0,
+   "listed_under": [
+    "/Catalog/Clearance/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Womens/Americas-Boating-Club-Womens-Fishing-Shirt.html",
+   "name": "America's Boating Club Women's Performance Shirt",
+   "item_code": "1500322",
+   "price_min": 45.0,
+   "price_max": 45.0,
+   "listed_under": [
+    "/Catalog/Womens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Miscellaneous/Americas-Boating-Club-Zippered-Sunglass-Case.html",
+   "name": "America's Boating Club Zippered Sunglass Case",
+   "item_code": "0555702",
+   "price_min": 5.0,
+   "price_max": 5.0,
+   "listed_under": [
+    "/Catalog/Miscellaneous/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Americas-Boating-Club-Zippered-Sunglass-Case.html",
+   "name": "America's Boating Club Zippered Sunglass Case",
+   "item_code": "0555702",
+   "price_min": 5.0,
+   "price_max": 5.0,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Advanced-Boating-Courses/Americas-Boating-Course_2.html",
+   "name": "America's Boating Course",
+   "item_code": "America",
+   "price_min": null,
+   "price_max": null,
+   "listed_under": [
+    "/Catalog/Advanced-Boating-Courses/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Education-and-Licensing/Americas-Boating-Course_2.html",
+   "name": "America's Boating Course",
+   "item_code": "America",
+   "price_min": null,
+   "price_max": null,
+   "listed_under": [
+    "/Catalog/Education-and-Licensing/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Captain/Assistance-Towing-Endorsement-Deluxe-Edition.html",
+   "name": "Assistance Towing Endorsement (Deluxe Edition)",
+   "item_code": "0598103",
+   "price_min": 125.0,
+   "price_max": 125.0,
+   "listed_under": [
+    "/Catalog/Captain/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Captain/Auxiliary-Sailing-Endorsement-Deluxe-Edition.html",
+   "name": "Auxiliary Sailing Endorsement (Deluxe Edition)",
+   "item_code": "0598102",
+   "price_min": 125.0,
+   "price_max": 125.0,
+   "listed_under": [
+    "/Catalog/Captain/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Miscellaneous/Bamboo-Cutting-Board.html",
+   "name": "Bamboo Cutting Board",
+   "item_code": "0555940",
+   "price_min": 20.0,
+   "price_max": 20.0,
+   "listed_under": [
+    "/Catalog/Miscellaneous/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Bamboo-Cutting-Board.html",
+   "name": "Bamboo Cutting Board",
+   "item_code": "0555940",
+   "price_min": 20.0,
+   "price_max": 20.0,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Clearance/Belt-Black-w-USPS-buckle.html",
+   "name": "Black Web Belt w/ USPS buckle",
+   "item_code": "0555291",
+   "price_min": 30.0,
+   "price_max": 30.0,
+   "listed_under": [
+    "/Catalog/Clearance/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Clearance/Magnetic-Pocket-Blazer-Patch.html",
+   "name": "Blazer Patch, Drop-in",
+   "item_code": "0555322",
+   "price_min": 25.0,
+   "price_max": 25.0,
+   "listed_under": [
+    "/Catalog/Clearance/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0188130.html",
+   "name": "Boat Owners Guide to GMDSS",
+   "item_code": "0188130",
+   "price_min": 6.5,
+   "price_max": 6.5,
+   "listed_under": [
+    "/Catalog/Books-DVDs-/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Bow-Tie-Black-w-band.html",
+   "name": "Bow Tie Black w/band",
+   "item_code": "0555198",
+   "price_min": 15.0,
+   "price_max": 15.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Bow-Tie-Black-w-clip.html",
+   "name": "Bow Tie Black w/clip",
+   "item_code": "0555197",
+   "price_min": 14.0,
+   "price_max": 14.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Clearance/Certified-Instructor-Polo-Mens.html",
+   "name": "Certified Instructor Polo - Men's",
+   "item_code": "1500037",
+   "price_min": 5.0,
+   "price_max": 5.0,
+   "listed_under": [
+    "/Catalog/Clearance/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Certified-Instuctor-Lapel-Pin.html",
+   "name": "Certified Instuctor Lapel Pin",
+   "item_code": "0594015",
+   "price_min": 5.0,
+   "price_max": 5.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Colorado-Trail-Boonie-Cap.html",
+   "name": "Colorado Trail Boonie Cap",
+   "item_code": "0555941",
+   "price_min": 28.0,
+   "price_max": 28.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/See-Whats-New/Colorado-Trail-Boonie-Cap.html",
+   "name": "Colorado Trail Boonie Cap",
+   "item_code": "0555941",
+   "price_min": 28.0,
+   "price_max": 28.0,
+   "listed_under": [
+    "/Catalog/See-Whats-New/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jewelry/Communicator-Pin.html",
+   "name": "Communicator Pin",
+   "item_code": "0555106",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Jewelry/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Clearance/Devon-Jones-America.html",
+   "name": "Devon & Jones America's Boating Club Men's White Polo",
+   "item_code": "1500275",
+   "price_min": 22.08,
+   "price_max": 22.08,
+   "listed_under": [
+    "/Catalog/Clearance/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Mens/Devon-Jones-America.html",
+   "name": "Devon & Jones America's Boating Club Men's White Polo",
+   "item_code": "1500275",
+   "price_min": 22.08,
+   "price_max": 22.08,
+   "listed_under": [
+    "/Catalog/Mens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Womens/Devon-Jones-Americas.html",
+   "name": "Devon & Jones America's Boating club Ladies White Polo",
+   "item_code": "1500274",
+   "price_min": 38.0,
+   "price_max": 38.0,
+   "listed_under": [
+    "/Catalog/Womens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Womens/Devon-Jones-Ladies-Perfect-Fit-Grey.html",
+   "name": "Devon & Jones Ladies Perfect Fit Grey",
+   "item_code": "1555447",
+   "price_min": 40.0,
+   "price_max": 53.0,
+   "listed_under": [
+    "/Catalog/Womens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Womens/Devon-Jones-Ladies-Perfect-Fit-Red.html",
+   "name": "Devon & Jones Ladies Perfect Fit Red",
+   "item_code": "1555448",
+   "price_min": 40.0,
+   "price_max": 40.0,
+   "listed_under": [
+    "/Catalog/Womens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Advanced-Boating-Courses/Engine-Maintenance.html",
+   "name": "Engine Maintenance",
+   "item_code": "0175108",
+   "price_min": 65.0,
+   "price_max": 65.0,
+   "listed_under": [
+    "/Catalog/Advanced-Boating-Courses/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Ensign-12-X-18.html",
+   "name": "Ensign 12 X 18",
+   "item_code": "0555131",
+   "price_min": 32.0,
+   "price_max": 32.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Ensign-16x24.html",
+   "name": "Ensign 16 x 24",
+   "item_code": "0555132",
+   "price_min": 35.0,
+   "price_max": 35.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Ensign-20-X-30.html",
+   "name": "Ensign 20 X 30",
+   "item_code": "0555133",
+   "price_min": 45.0,
+   "price_max": 45.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Ensign-24-X-36.html",
+   "name": "Ensign 24 X 36",
+   "item_code": "0555134",
+   "price_min": 55.0,
+   "price_max": 55.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Ensign-30-X-45.html",
+   "name": "Ensign 30 X 45",
+   "item_code": "0555135",
+   "price_min": 99.0,
+   "price_max": 99.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Ensign-36-X-54.html",
+   "name": "Ensign 36 X 54",
+   "item_code": "0555136",
+   "price_min": 175.0,
+   "price_max": 175.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/District/Flag-District-Aide.html",
+   "name": "Flag - District Aide",
+   "item_code": "0555324",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/District/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-District-Aide.html",
+   "name": "Flag - District Aide",
+   "item_code": "0555324",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/District/Flag-District-Commander.html",
+   "name": "Flag - District Commander",
+   "item_code": "0555307",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/District/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-District-Commander.html",
+   "name": "Flag - District Commander",
+   "item_code": "0555307",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/District/Flag-District_2.html",
+   "name": "Flag - District First Lieutentant",
+   "item_code": "0555309",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/District/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-District_2.html",
+   "name": "Flag - District First Lieutentant",
+   "item_code": "0555309",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/District/Flag-District-Flag-Lieutenant.html",
+   "name": "Flag - District Flag Lieutenant",
+   "item_code": "0555311",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/District/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-District-Flag-Lieutenant.html",
+   "name": "Flag - District Flag Lieutenant",
+   "item_code": "0555311",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/District/Flag-District-Lieutenant.html",
+   "name": "Flag - District Lieutenant",
+   "item_code": "0555310",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/District/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-District-Lieutenant.html",
+   "name": "Flag - District Lieutenant",
+   "item_code": "0555310",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/District/Flag-District.html",
+   "name": "Flag - District Lieutentant Commander",
+   "item_code": "0555308",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/District/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-District.html",
+   "name": "Flag - District Lieutentant Commander",
+   "item_code": "0555308",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/District/Flag-District-Past-Commander.html",
+   "name": "Flag - District Past Commander",
+   "item_code": "0555306",
+   "price_min": 27.0,
+   "price_max": 27.0,
+   "listed_under": [
+    "/Catalog/District/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-District-Past-Commander.html",
+   "name": "Flag - District Past Commander",
+   "item_code": "0555306",
+   "price_min": 27.0,
+   "price_max": 27.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/District/Flag-District-Past-Lieutenant-Commander.html",
+   "name": "Flag - District Past Lieutenant Commander",
+   "item_code": "0555323",
+   "price_min": 25.0,
+   "price_max": 25.0,
+   "listed_under": [
+    "/Catalog/District/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-District-Past-Lieutenant-Commander.html",
+   "name": "Flag - District Past Lieutenant Commander",
+   "item_code": "0555323",
+   "price_min": 25.0,
+   "price_max": 25.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/0555327.html",
+   "name": "Flag - P/R/C",
+   "item_code": "0555327",
+   "price_min": 25.0,
+   "price_max": 25.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/0555321.html",
+   "name": "Flag - R/C",
+   "item_code": "0555321",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-Squadron-Commander.html",
+   "name": "Flag - Squadron Commander",
+   "item_code": "0555301",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Squadron/Flag-Squadron-Commander.html",
+   "name": "Flag - Squadron Commander",
+   "item_code": "0555301",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Squadron/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-Squadron-First-L.html",
+   "name": "Flag - Squadron First Lieutentant",
+   "item_code": "0555303",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Squadron/Flag-Squadron-First-L.html",
+   "name": "Flag - Squadron First Lieutentant",
+   "item_code": "0555303",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Squadron/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-Squadron-Flag-Lieutentant.html",
+   "name": "Flag - Squadron Flag Lieutentant",
+   "item_code": "0555305",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Squadron/Flag-Squadron-Flag-Lieutentant.html",
+   "name": "Flag - Squadron Flag Lieutentant",
+   "item_code": "0555305",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Squadron/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-Squadron-L.html",
+   "name": "Flag - Squadron Lieutentant",
+   "item_code": "0555304",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Squadron/Flag-Squadron-L.html",
+   "name": "Flag - Squadron Lieutentant",
+   "item_code": "0555304",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Squadron/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-Squadron.html",
+   "name": "Flag - Squadron Lieutentant Commander",
+   "item_code": "0555302",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Squadron/Flag-Squadron.html",
+   "name": "Flag - Squadron Lieutentant Commander",
+   "item_code": "0555302",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Squadron/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-Squadron-Past-Commander.html",
+   "name": "Flag - Squadron Past Commander",
+   "item_code": "0555300",
+   "price_min": 27.0,
+   "price_max": 27.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Squadron/Flag-Squadron-Past-Commander.html",
+   "name": "Flag - Squadron Past Commander",
+   "item_code": "0555300",
+   "price_min": 27.0,
+   "price_max": 27.0,
+   "listed_under": [
+    "/Catalog/Squadron/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-Squadron-Past-Lieutentant-Commander.html",
+   "name": "Flag - Squadron Past Lieutentant Commander",
+   "item_code": "0555325",
+   "price_min": 27.0,
+   "price_max": 27.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Squadron/Flag-Squadron-Past-Lieutentant-Commander.html",
+   "name": "Flag - Squadron Past Lieutentant Commander",
+   "item_code": "0555325",
+   "price_min": 27.0,
+   "price_max": 27.0,
+   "listed_under": [
+    "/Catalog/Squadron/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Staf-Cdr-Flag.html",
+   "name": "Flag - Staf/Cdr",
+   "item_code": "0555312",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Flag-P-Natl-Flag-LT.html",
+   "name": "Flag P/Natl/Flag/LT",
+   "item_code": "0555294",
+   "price_min": 25.0,
+   "price_max": 25.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Books-DVDs-/GPS-for-Mariners-2nd-Edition.html",
+   "name": "GPS for Mariners 2nd Edition",
+   "item_code": "0187101",
+   "price_min": 17.0,
+   "price_max": 17.0,
+   "listed_under": [
+    "/Catalog/Books-DVDs-/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Advanced-Boating-Courses/Junior-Navigation.html",
+   "name": "Junior Navigation",
+   "item_code": "0369107",
+   "price_min": 110.0,
+   "price_max": 110.0,
+   "listed_under": [
+    "/Catalog/Advanced-Boating-Courses/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0188124.html",
+   "name": "Knots, Bends, & Hitches",
+   "item_code": "0188124",
+   "price_min": 6.5,
+   "price_max": 6.5,
+   "listed_under": [
+    "/Catalog/Books-DVDs-/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Clearance/Ladies-ABC-certified-instructor-polo.html",
+   "name": "Ladies ABC certified instructor polo",
+   "item_code": "1500313",
+   "price_min": 5.0,
+   "price_max": 5.0,
+   "listed_under": [
+    "/Catalog/Clearance/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Clearance/Americas-Boating-Club-Scarf.html",
+   "name": "Ladies Charleston Fringed Scarf",
+   "item_code": "0555933",
+   "price_min": 20.0,
+   "price_max": 20.0,
+   "listed_under": [
+    "/Catalog/Clearance/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/See-Whats-New/Ladies-Core-Soft-Shell-Vest.html",
+   "name": "Ladies Core Soft Shell Vest",
+   "item_code": "1555454",
+   "price_min": 50.0,
+   "price_max": 52.0,
+   "listed_under": [
+    "/Catalog/See-Whats-New/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Womens/Ladies-Core-Soft-Shell-Vest.html",
+   "name": "Ladies Core Soft Shell Vest",
+   "item_code": "1555454",
+   "price_min": 50.0,
+   "price_max": 52.0,
+   "listed_under": [
+    "/Catalog/Womens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Womens/Ladies-Relaxed-Jersey-V-Neck-T-Shirt.html",
+   "name": "Ladies' Relaxed Jersey V-Neck T-Shirt",
+   "item_code": "1555461",
+   "price_min": 12.0,
+   "price_max": 12.0,
+   "listed_under": [
+    "/Catalog/Womens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Lapel-Pin-Cdr.html",
+   "name": "Lapel Pin Cdr",
+   "item_code": "0555157",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jewelry/Lapel-Pin-Cdr.html",
+   "name": "Lapel Pin Cdr",
+   "item_code": "0555157",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Jewelry/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Squadron/Lapel-Pin-Cdr.html",
+   "name": "Lapel Pin Cdr",
+   "item_code": "0555157",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Squadron/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/District/Lapel-Pin-D-C.html",
+   "name": "Lapel Pin D/C",
+   "item_code": "0555161",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/District/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Lapel-Pin-D-C.html",
+   "name": "Lapel Pin D/C",
+   "item_code": "0555161",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jewelry/Lapel-Pin-D-C.html",
+   "name": "Lapel Pin D/C",
+   "item_code": "0555161",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Jewelry/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/District/Lapel-Pin-D-Lt-C.html",
+   "name": "Lapel Pin D/Lt/C",
+   "item_code": "0555162",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/District/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Lapel-Pin-D-Lt-C.html",
+   "name": "Lapel Pin D/Lt/C",
+   "item_code": "0555162",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jewelry/Lapel-Pin-D-Lt-C.html",
+   "name": "Lapel Pin D/Lt/C",
+   "item_code": "0555162",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Jewelry/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Lapel-Pin-Lt-C.html",
+   "name": "Lapel Pin Lt/C",
+   "item_code": "0555158",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jewelry/Lapel-Pin-Lt-C.html",
+   "name": "Lapel Pin Lt/C",
+   "item_code": "0555158",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Jewelry/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Squadron/Lapel-Pin-Lt-C.html",
+   "name": "Lapel Pin Lt/C",
+   "item_code": "0555158",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Squadron/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Lapel-Pin-R-C.html",
+   "name": "Lapel Pin R/C",
+   "item_code": "0555163",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jewelry/Lapel-Pin-R-C.html",
+   "name": "Lapel Pin R/C",
+   "item_code": "0555163",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Jewelry/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Lapel-Pin-Stf-C.html",
+   "name": "Lapel Pin Stf/C",
+   "item_code": "0555165",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jewelry/Lapel-Pin-Stf-C.html",
+   "name": "Lapel Pin Stf/C",
+   "item_code": "0555165",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Jewelry/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Lid-straw-for-24oz-Tumbler.html",
+   "name": "Lid and straw for 24oz Tumbler",
+   "item_code": "0555054",
+   "price_min": 0.5,
+   "price_max": 0.5,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Advanced-Boating-Courses/Marine-Communication-Systems.html",
+   "name": "Marine Communication Systems",
+   "item_code": "0177112",
+   "price_min": 65.0,
+   "price_max": 65.0,
+   "listed_under": [
+    "/Catalog/Advanced-Boating-Courses/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Advanced-Boating-Courses/Marine-Electrical-Systems.html",
+   "name": "Marine Electrical Systems",
+   "item_code": "0177110",
+   "price_min": 55.0,
+   "price_max": 55.0,
+   "listed_under": [
+    "/Catalog/Advanced-Boating-Courses/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0188104.html",
+   "name": "Mariners Compass Guide",
+   "item_code": "0188104",
+   "price_min": 6.0,
+   "price_max": 6.0,
+   "listed_under": [
+    "/Catalog/Books-DVDs-/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Membership-Pin.html",
+   "name": "Membership Pin",
+   "item_code": "0555159",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jewelry/Membership-Pin.html",
+   "name": "Membership Pin",
+   "item_code": "0555159",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Jewelry/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Mens/Mens-1-4-Zip-Pullover.html",
+   "name": "Men's 1/4-Zip Pullover",
+   "item_code": "1555464",
+   "price_min": 47.0,
+   "price_max": 56.0,
+   "listed_under": [
+    "/Catalog/Mens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/See-Whats-New/Mens-1-4-Zip-Pullover.html",
+   "name": "Men's 1/4-Zip Pullover",
+   "item_code": "1555464",
+   "price_min": 47.0,
+   "price_max": 56.0,
+   "listed_under": [
+    "/Catalog/See-Whats-New/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Mens/Mens-Short-Sleeve-T-Shirt.html",
+   "name": "Men's Short Sleeve T-Shirt",
+   "item_code": "1555460",
+   "price_min": 25.0,
+   "price_max": 28.0,
+   "listed_under": [
+    "/Catalog/Mens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Mens/Mens-White-Polo.html",
+   "name": "Men's White Polo",
+   "item_code": "1555458",
+   "price_min": 40.0,
+   "price_max": 46.0,
+   "listed_under": [
+    "/Catalog/Mens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-10-MM.html",
+   "name": "Merit Mark Tab 10 MM",
+   "item_code": "0555473",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-15-MM.html",
+   "name": "Merit Mark Tab 15 MM",
+   "item_code": "0555474",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-20-MM.html",
+   "name": "Merit Mark Tab 20 MM",
+   "item_code": "0555475",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-25-MM.html",
+   "name": "Merit Mark Tab 25 MM",
+   "item_code": "0555476",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-30-MM.html",
+   "name": "Merit Mark Tab 30 MM",
+   "item_code": "0555477",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-35-MM.html",
+   "name": "Merit Mark Tab 35 MM",
+   "item_code": "0555478",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-40-MM.html",
+   "name": "Merit Mark Tab 40 MM",
+   "item_code": "0555479",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-45-MM.html",
+   "name": "Merit Mark Tab 45 MM",
+   "item_code": "0555480",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-5-MM.html",
+   "name": "Merit Mark Tab 5 MM",
+   "item_code": "0555472",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-50-MM.html",
+   "name": "Merit Mark Tab 50 MM",
+   "item_code": "0555481",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Advanced-Boating-Courses/Navigation_2.html",
+   "name": "Navigation",
+   "item_code": "0368118",
+   "price_min": 110.0,
+   "price_max": 110.0,
+   "listed_under": [
+    "/Catalog/Advanced-Boating-Courses/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0188107.html",
+   "name": "Navigational Astronomy",
+   "item_code": "0188107",
+   "price_min": 6.0,
+   "price_max": 6.0,
+   "listed_under": [
+    "/Catalog/Books-DVDs-/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Captain/OUPV-Upgrade-to-Master-Deluxe-Edition.html",
+   "name": "OUPV Upgrade to Master (Deluxe Edition)",
+   "item_code": "0598104",
+   "price_min": 325.0,
+   "price_max": 325.0,
+   "listed_under": [
+    "/Catalog/Captain/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Executive-Supplies/Official-USPS-Gold-Shirt-Buttons.html",
+   "name": "Official USPS Gold Shirt Buttons",
+   "item_code": "0555138",
+   "price_min": 15.0,
+   "price_max": 15.0,
+   "listed_under": [
+    "/Catalog/Executive-Supplies/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Official-USPS-Gold-Shirt-Buttons.html",
+   "name": "Official USPS Gold Shirt Buttons",
+   "item_code": "0555138",
+   "price_min": 15.0,
+   "price_max": 15.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jewelry/Official-USPS-Gold-Shirt-Buttons.html",
+   "name": "Official USPS Gold Shirt Buttons",
+   "item_code": "0555138",
+   "price_min": 15.0,
+   "price_max": 15.0,
+   "listed_under": [
+    "/Catalog/Jewelry/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Past-Commander-Lapel-Pin.html",
+   "name": "Past Commander Lapel Pin",
+   "item_code": "0555464",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jewelry/Past-Commander-Lapel-Pin.html",
+   "name": "Past Commander Lapel Pin",
+   "item_code": "0555464",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Jewelry/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Squadron/Past-Commander-Lapel-Pin.html",
+   "name": "Past Commander Lapel Pin",
+   "item_code": "0555464",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Squadron/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/District/Past-D-C-Lapel-Pin.html",
+   "name": "Past D/C Lapel Pin",
+   "item_code": "0555467",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/District/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Past-D-C-Lapel-Pin.html",
+   "name": "Past D/C Lapel Pin",
+   "item_code": "0555467",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jewelry/Past-D-C-Lapel-Pin.html",
+   "name": "Past D/C Lapel Pin",
+   "item_code": "0555467",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Jewelry/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Past-R-C-Lapel-Pin.html",
+   "name": "Past R/C Lapel Pin",
+   "item_code": "0555461",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jewelry/Past-R-C-Lapel-Pin.html",
+   "name": "Past R/C Lapel Pin",
+   "item_code": "0555461",
+   "price_min": 7.0,
+   "price_max": 7.0,
+   "listed_under": [
+    "/Catalog/Jewelry/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0188131.html",
+   "name": "Plotting and Labeling Standards",
+   "item_code": "0188131",
+   "price_min": 6.0,
+   "price_max": 6.0,
+   "listed_under": [
+    "/Catalog/Books-DVDs-/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/Port-Captain-Flags.html",
+   "name": "Port Captain Flags",
+   "item_code": "0555299",
+   "price_min": 22.0,
+   "price_max": 22.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Port-Captain-Patch.html",
+   "name": "Port Captain Patch",
+   "item_code": "0555582",
+   "price_min": 3.0,
+   "price_max": 3.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0188105.html",
+   "name": "Predicted Log Guide",
+   "item_code": "0188105",
+   "price_min": 9.0,
+   "price_max": 9.0,
+   "listed_under": [
+    "/Catalog/Books-DVDs-/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Boating-Accessories/Quick-Reference-Boating-Cards.html",
+   "name": "Quick Reference Boating Cards",
+   "item_code": "0758100",
+   "price_min": 6.0,
+   "price_max": 6.0,
+   "listed_under": [
+    "/Catalog/Boating-Accessories/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Black-Regulation-Tie.html",
+   "name": "Regulation Black Tie - 57\"",
+   "item_code": "0555199",
+   "price_min": 15.0,
+   "price_max": 15.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Advanced-Boating-Courses/Sail.html",
+   "name": "Sail",
+   "item_code": "0166130",
+   "price_min": 65.0,
+   "price_max": 65.0,
+   "listed_under": [
+    "/Catalog/Advanced-Boating-Courses/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Sew-on-Blazer-Patch.html",
+   "name": "Sew on Blazer Patch",
+   "item_code": "0555255",
+   "price_min": 15.0,
+   "price_max": 15.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-Cdr.html",
+   "name": "Shoulder Boards - Cdr",
+   "item_code": "0555314",
+   "price_min": 33.0,
+   "price_max": 33.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Squadron/Shoulder-Boards-Cdr.html",
+   "name": "Shoulder Boards - Cdr",
+   "item_code": "0555314",
+   "price_min": 33.0,
+   "price_max": 33.0,
+   "listed_under": [
+    "/Catalog/Squadron/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/District/Shoulder-Boards-D-C.html",
+   "name": "Shoulder Boards - D/C",
+   "item_code": "0555317",
+   "price_min": 33.0,
+   "price_max": 33.0,
+   "listed_under": [
+    "/Catalog/District/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-D-C.html",
+   "name": "Shoulder Boards - D/C",
+   "item_code": "0555317",
+   "price_min": 33.0,
+   "price_max": 33.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/District/Shoulder-Boards-D-Lt-C.html",
+   "name": "Shoulder Boards - D/Lt/C",
+   "item_code": "0555318",
+   "price_min": 33.0,
+   "price_max": 33.0,
+   "listed_under": [
+    "/Catalog/District/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-D-Lt-C.html",
+   "name": "Shoulder Boards - D/Lt/C",
+   "item_code": "0555318",
+   "price_min": 33.0,
+   "price_max": 33.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-Lt-C.html",
+   "name": "Shoulder Boards - Lt/C",
+   "item_code": "0555313",
+   "price_min": 33.0,
+   "price_max": 33.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Squadron/Shoulder-Boards-Lt-C.html",
+   "name": "Shoulder Boards - Lt/C",
+   "item_code": "0555313",
+   "price_min": 33.0,
+   "price_max": 33.0,
+   "listed_under": [
+    "/Catalog/Squadron/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-P-C.html",
+   "name": "Shoulder Boards - P/C",
+   "item_code": "0555315",
+   "price_min": 33.0,
+   "price_max": 33.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Squadron/Shoulder-Boards-P-C.html",
+   "name": "Shoulder Boards - P/C",
+   "item_code": "0555315",
+   "price_min": 33.0,
+   "price_max": 33.0,
+   "listed_under": [
+    "/Catalog/Squadron/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-P-D-C.html",
+   "name": "Shoulder Boards - P/D/C",
+   "item_code": "0555316",
+   "price_min": 33.0,
+   "price_max": 33.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-P-R-C.html",
+   "name": "Shoulder Boards - P/R/C",
+   "item_code": "0555401",
+   "price_min": 32.0,
+   "price_max": 32.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-P-Stf-C.html",
+   "name": "Shoulder Boards - P/Stf/C",
+   "item_code": "0555403",
+   "price_min": 32.0,
+   "price_max": 32.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-R-C.html",
+   "name": "Shoulder Boards - R/C",
+   "item_code": "0555402",
+   "price_min": 32.0,
+   "price_max": 32.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-Stf-C.html",
+   "name": "Shoulder Boards - Stf/C",
+   "item_code": "0555404",
+   "price_min": 32.0,
+   "price_max": 32.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Straws-for-16oz-Tumblers.html",
+   "name": "Straws for 16oz Tumblers",
+   "item_code": "0555081",
+   "price_min": 4.5,
+   "price_max": 4.5,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Straws-for-24oz-Tumblers.html",
+   "name": "Straws for 24oz Tumblers",
+   "item_code": "0555082",
+   "price_min": 4.5,
+   "price_max": 4.5,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/-Tervis-Tumbler-Travel-Lid-Straw-for-the-16oz-Tumbler.html",
+   "name": "Tervis Tumbler Travel Lid and Straw for the 16oz. Tumbler",
+   "item_code": "0555050",
+   "price_min": 0.5,
+   "price_max": 0.5,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0193103.html",
+   "name": "Trailering Your Boat",
+   "item_code": "0193103",
+   "price_min": 15.0,
+   "price_max": 15.0,
+   "listed_under": [
+    "/Catalog/Books-DVDs-/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Clearance/USPS-Americas-Boating-Club-Devon-Jones-French-Blue-Ladies-Polo.html",
+   "name": "USPS America's Boating Club Devon & Jones French Blue Ladies Polo",
+   "item_code": "1500265",
+   "price_min": 24.0,
+   "price_max": 24.0,
+   "listed_under": [
+    "/Catalog/Clearance/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Boating-Accessories/USPS-Cruise-Pennant.html",
+   "name": "USPS Cruise Pennant",
+   "item_code": "0555191",
+   "price_min": 27.0,
+   "price_max": 27.0,
+   "listed_under": [
+    "/Catalog/Boating-Accessories/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/USPS-Cruise-Pennant.html",
+   "name": "USPS Cruise Pennant",
+   "item_code": "0555191",
+   "price_min": 27.0,
+   "price_max": 27.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Books-DVDs-/USPS-Guide-Introduction-to-Sailing.html",
+   "name": "USPS Guide - Introduction to Sailing",
+   "item_code": "0188110",
+   "price_min": 4.0,
+   "price_max": 4.0,
+   "listed_under": [
+    "/Catalog/Books-DVDs-/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Miscellaneous/USPS-License-Plate.html",
+   "name": "USPS License Plate",
+   "item_code": "0555065",
+   "price_min": 12.0,
+   "price_max": 12.0,
+   "listed_under": [
+    "/Catalog/Miscellaneous/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/USPS-License-Plate.html",
+   "name": "USPS License Plate",
+   "item_code": "0555065",
+   "price_min": 12.0,
+   "price_max": 12.0,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/USPS-Metal-Key-Chain.html",
+   "name": "USPS Metal Key Chain",
+   "item_code": "0555058",
+   "price_min": 4.5,
+   "price_max": 4.5,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Miscellaneous/USPS-Metal-Key-Chain.html",
+   "name": "USPS Metal Key Chain",
+   "item_code": "0555058",
+   "price_min": 4.5,
+   "price_max": 4.5,
+   "listed_under": [
+    "/Catalog/Miscellaneous/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/USPS-Metal-Key-Chain.html",
+   "name": "USPS Metal Key Chain",
+   "item_code": "0555058",
+   "price_min": 4.5,
+   "price_max": 4.5,
+   "listed_under": [
+    "/Catalog/Travel-Galley-Items/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/USPS-Official-Emblem-Silk-Tie.html",
+   "name": "USPS Official Emblem Silk Tie",
+   "item_code": "0555664",
+   "price_min": 38.0,
+   "price_max": 38.0,
+   "listed_under": [
+    "/Catalog/Jackets-Hats-Bags-More/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Books-DVDs-/1173116.html",
+   "name": "Ultra Light Divider",
+   "item_code": "1173116",
+   "price_min": 12.0,
+   "price_max": 12.0,
+   "listed_under": [
+    "/Catalog/Books-DVDs-/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Womens/UltraClub-Ladies-Classic-Wrinkle-Resistant-Short-Sleeve-Oxford.html",
+   "name": "UltraClub Ladies' Classic Wrinkle-Resistant Short-Sleeve Oxford",
+   "item_code": "1555445",
+   "price_min": 45.0,
+   "price_max": 45.0,
+   "listed_under": [
+    "/Catalog/Womens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Mens/UltraClub-Mens-Classic-Wrinkle-Resistant-Short-Sleeve-Oxford.html",
+   "name": "UltraClub Men's Classic Wrinkle-Resistant Short-Sleeve Oxford",
+   "item_code": "1555446",
+   "price_min": 45.0,
+   "price_max": 51.0,
+   "listed_under": [
+    "/Catalog/Mens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Mens/Unisex-T-Shirt.html",
+   "name": "Unisex T-Shirt",
+   "item_code": "1555465",
+   "price_min": 23.0,
+   "price_max": 29.0,
+   "listed_under": [
+    "/Catalog/Mens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Womens/Unisex-T-Shirt.html",
+   "name": "Unisex T-Shirt",
+   "item_code": "1555465",
+   "price_min": 23.0,
+   "price_max": 29.0,
+   "listed_under": [
+    "/Catalog/Womens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Mens/Unisex-UV-Daybreak-Shirt.html",
+   "name": "Unisex UV Daybreak Shirt",
+   "item_code": "1555459",
+   "price_min": 45.0,
+   "price_max": 45.0,
+   "listed_under": [
+    "/Catalog/Mens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Womens/Unisex-UV-Daybreak-Shirt.html",
+   "name": "Unisex UV Daybreak Shirt",
+   "item_code": "1555459",
+   "price_min": 45.0,
+   "price_max": 45.0,
+   "listed_under": [
+    "/Catalog/Womens/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Flags/VE-Flag-12x18.html",
+   "name": "VE Flag 12x18",
+   "item_code": "0522737",
+   "price_min": 33.0,
+   "price_max": 33.0,
+   "listed_under": [
+    "/Catalog/Flags/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/VE-Patch.html",
+   "name": "VE Patch",
+   "item_code": "0522728",
+   "price_min": 6.0,
+   "price_max": 6.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Vessel-Safety-Check-Supplies/VE-Patch.html",
+   "name": "VE Patch",
+   "item_code": "0522728",
+   "price_min": 6.0,
+   "price_max": 6.0,
+   "listed_under": [
+    "/Catalog/Vessel-Safety-Check-Supplies/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/VE-Pin.html",
+   "name": "VE Pin",
+   "item_code": "0522727",
+   "price_min": 6.0,
+   "price_max": 6.0,
+   "listed_under": [
+    "/Catalog/Insignia-Tabs/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Jewelry/VE-Pin.html",
+   "name": "VE Pin",
+   "item_code": "0522727",
+   "price_min": 6.0,
+   "price_max": 6.0,
+   "listed_under": [
+    "/Catalog/Jewelry/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Vessel-Safety-Check-Supplies/VE-Pin.html",
+   "name": "VE Pin",
+   "item_code": "0522727",
+   "price_min": 6.0,
+   "price_max": 6.0,
+   "listed_under": [
+    "/Catalog/Vessel-Safety-Check-Supplies/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Clearance/VSC-Polo-Shirt-Ladies.html",
+   "name": "VSC Polo Shirt, Ladies",
+   "item_code": "1500010",
+   "price_min": 5.0,
+   "price_max": 5.0,
+   "listed_under": [
+    "/Catalog/Clearance/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Clearance/VSC-Polo-Shirt-Mens.html",
+   "name": "VSC Polo Shirt, Men's",
+   "item_code": "1500011",
+   "price_min": 5.0,
+   "price_max": 5.0,
+   "listed_under": [
+    "/Catalog/Clearance/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0188127.html",
+   "name": "Water Sports Learning Guide",
+   "item_code": "0188127",
+   "price_min": 6.0,
+   "price_max": 6.0,
+   "listed_under": [
+    "/Catalog/Books-DVDs-/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Clearance/White-Belt-w-Buckle.html",
+   "name": "White Web Belt w/ USPS Buckle",
+   "item_code": "0555254",
+   "price_min": 15.0,
+   "price_max": 15.0,
+   "listed_under": [
+    "/Catalog/Clearance/"
+   ]
+  },
+  {
+   "url": "https://store.shopusps.org/Catalog/Womens/Womens-Open-Front-Cardigan-Sweater.html",
+   "name": "Women's Open Front Cardigan Sweater",
+   "item_code": "1555463",
+   "price_min": 60.0,
+   "price_max": 60.0,
+   "listed_under": [
+    "/Catalog/Womens/"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,200 @@
+[2026-06-11T15:24:40Z] Crawl starting for 1 domains: giveabc.org
+[2026-06-11T15:24:43Z] giveabc.org: https://giveabc.org/sitemap.xml is a sitemap INDEX with 4 sub-sitemaps; reading each one.
+[2026-06-11T15:24:44Z] giveabc.org: sitemap https://giveabc.org/post-sitemap.xml lists 6 URLs.
+[2026-06-11T15:24:44Z] giveabc.org: sitemap https://giveabc.org/page-sitemap.xml lists 30 URLs.
+[2026-06-11T15:24:45Z] giveabc.org: sitemap https://giveabc.org/give_forms-sitemap.xml lists 6 URLs.
+[2026-06-11T15:24:45Z] giveabc.org: sitemap https://giveabc.org/post_tag-sitemap.xml lists 4 URLs.
+[2026-06-11T15:24:50Z] giveabc.org: page cap of 3 reached — 43 discovered URLs were NOT fetched. They are listed in unfetched_giveabc.org.json; raise max_pages for this domain and re-run to get them (already-fetched pages are skipped on resume).
+[2026-06-11T15:24:50Z] ======================================================================
+[2026-06-11T15:24:50Z] Crawl finished in 0.2 minutes. Per-domain results:
+[2026-06-11T15:24:50Z]   giveabc.org: 3 fetched, 0 skipped, 0 failed, 43 left unfetched at cap
+[2026-06-11T15:24:50Z] Index: /Users/fhaile/Dropbox/Sites/FH Website/ai-abc/data/crawl/index.jsonl
+[2026-06-11T15:24:50Z] External (uncrawled) domains report: /Users/fhaile/Dropbox/Sites/FH Website/ai-abc/data/crawl/external_domains.json
+[2026-06-11T15:25:10Z] Resuming: found 3 URLs already handled in a previous run; they will not be fetched again.
+[2026-06-11T15:25:10Z] Crawl starting for 10 domains: americasboatingclub.org, www.usps.org, www.americasboatingcourse.com, americasboatingchannel.uscreen.io, boatlive365.org, giveabc.org, uspsonline.enrolmart.com, store.shopusps.org, portal.americasboatingclub.org, www.uspsonline.org
+[2026-06-11T15:25:11Z] www.americasboatingcourse.com: could not fetch robots.txt (HTTPError: HTTP Error 404: Not Found) — treating as 'no rules', keeping our own delay and skip list.
+[2026-06-11T15:25:11Z] www.uspsonline.org: could not fetch robots.txt (HTTPError: HTTP Error 404: Not Found) — treating as 'no rules', keeping our own delay and skip list.
+[2026-06-11T15:25:11Z] www.uspsonline.org: queue exhausted after 0 pages — every discovered in-scope URL was handled.
+[2026-06-11T15:25:11Z] www.americasboatingcourse.com: sitemap https://www.americasboatingcourse.com/sitemap.xml lists 67 URLs.
+[2026-06-11T15:25:11Z] americasboatingclub.org: sitemap https://americasboatingclub.org/index.php?option=com_jmap&view=sitemap&format=xml lists 251 URLs.
+[2026-06-11T15:25:11Z] americasboatingchannel.uscreen.io: sitemap https://americasboatingchannel.uscreen.io/sitemap.xml lists 1246 URLs.
+[2026-06-11T15:25:11Z] uspsonline.enrolmart.com: sitemap https://uspsonline.enrolmart.com/sitemap.xml lists 43 URLs.
+[2026-06-11T15:25:11Z] giveabc.org: https://giveabc.org/sitemap.xml is a sitemap INDEX with 4 sub-sitemaps; reading each one.
+[2026-06-11T15:25:11Z] boatlive365.org: https://boatlive365.org/sitemap_index.xml is a sitemap INDEX with 4 sub-sitemaps; reading each one.
+[2026-06-11T15:25:11Z] giveabc.org: sitemap https://giveabc.org/post-sitemap.xml lists 6 URLs.
+[2026-06-11T15:25:12Z] giveabc.org: sitemap https://giveabc.org/page-sitemap.xml lists 30 URLs.
+[2026-06-11T15:25:12Z] giveabc.org: sitemap https://giveabc.org/give_forms-sitemap.xml lists 6 URLs.
+[2026-06-11T15:25:12Z] giveabc.org: sitemap https://giveabc.org/post_tag-sitemap.xml lists 4 URLs.
+[2026-06-11T15:25:13Z] boatlive365.org: sitemap https://boatlive365.org/page-sitemap.xml lists 20 URLs.
+[2026-06-11T15:25:13Z] boatlive365.org: sitemap https://boatlive365.org/resource-sitemap.xml lists 49 URLs.
+[2026-06-11T15:25:14Z] boatlive365.org: sitemap https://boatlive365.org/topic-sitemap.xml lists 11 URLs.
+[2026-06-11T15:25:14Z] boatlive365.org: sitemap https://boatlive365.org/resource_type-sitemap.xml lists 8 URLs.
+[2026-06-11T15:25:19Z] portal.americasboatingclub.org: page cap of 5 reached — 12 discovered URLs were NOT fetched. They are listed in unfetched_portal.americasboatingclub.org.json; raise max_pages for this domain and re-run to get them (already-fetched pages are skipped on resume).
+[2026-06-11T15:25:30Z] www.usps.org: could not fetch robots.txt (URLError: <urlopen error timed out>) — treating as 'no rules', keeping our own delay and skip list.
+[2026-06-11T15:25:30Z] store.shopusps.org: could not fetch robots.txt (TimeoutError: The read operation timed out) — treating as 'no rules', keeping our own delay and skip list.
+[2026-06-11T15:25:37Z] www.americasboatingcourse.com: progress — 25 pages fetched, 45 queued.
+[2026-06-11T15:25:42Z] americasboatingchannel.uscreen.io: progress — 25 pages fetched, 1221 queued.
+[2026-06-11T15:25:45Z] americasboatingclub.org: progress — 25 pages fetched, 230 queued.
+[2026-06-11T15:25:51Z] boatlive365.org: progress — 25 pages fetched, 71 queued.
+[2026-06-11T15:25:51Z] uspsonline.enrolmart.com: progress — 25 pages fetched, 86 queued.
+[2026-06-11T15:25:52Z] giveabc.org: progress — 25 pages fetched, 19 queued.
+[2026-06-11T15:26:01Z] store.shopusps.org: sitemap https://store.shopusps.org/sitemap.xml could not be fetched (TimeoutError) — relying on link-following instead.
+[2026-06-11T15:26:04Z] www.americasboatingcourse.com: progress — 50 pages fetched, 21 queued.
+[2026-06-11T15:26:07Z] www.usps.org: URLError on https://www.usps.org/ — retrying once in 10s.
+[2026-06-11T15:26:12Z] americasboatingchannel.uscreen.io: progress — 50 pages fetched, 1196 queued.
+[2026-06-11T15:26:17Z] uspsonline.enrolmart.com: FAILED https://uspsonline.enrolmart.com/cdn-cgi/l/email-protection#b696dadbc5f6c3c5c6c5d9d8dadfd8d398d9c4d1 (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:26:17Z] giveabc.org: queue exhausted after 41 pages — every discovered in-scope URL was handled.
+[2026-06-11T15:26:20Z] americasboatingclub.org: progress — 50 pages fetched, 206 queued.
+[2026-06-11T15:26:20Z] www.americasboatingcourse.com: FAILED https://www.americasboatingcourse.com/additional-training (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:26:23Z] www.americasboatingcourse.com: FAILED https://www.americasboatingcourse.com/about-us (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:26:26Z] www.americasboatingcourse.com: InvalidURL on https://www.americasboatingcourse.com/Take%20this seminar online — retrying once in 10s.
+[2026-06-11T15:26:26Z] uspsonline.enrolmart.com: progress — 50 pages fetched, 26 queued.
+[2026-06-11T15:26:27Z] boatlive365.org: progress — 50 pages fetched, 59 queued.
+[2026-06-11T15:26:33Z] uspsonline.enrolmart.com: queue exhausted after 55 pages — every discovered in-scope URL was handled.
+[2026-06-11T15:26:36Z] www.americasboatingcourse.com: FAILED https://www.americasboatingcourse.com/Take%20this seminar online (InvalidURL: URL can't contain control characters. '/Take%20this seminar online' (found at least ' '))
+[2026-06-11T15:26:40Z] www.americasboatingcourse.com: FAILED https://course.americasboatingcourse.com/my-account (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:26:40Z] www.americasboatingcourse.com: queue exhausted after 71 pages — every discovered in-scope URL was handled.
+[2026-06-11T15:26:42Z] americasboatingchannel.uscreen.io: progress — 75 pages fetched, 1171 queued.
+[2026-06-11T15:26:52Z] www.usps.org: FAILED https://www.usps.org/ (URLError: <urlopen error timed out>)
+[2026-06-11T15:26:52Z] www.usps.org: queue exhausted after 0 pages — every discovered in-scope URL was handled.
+[2026-06-11T15:26:55Z] americasboatingclub.org: progress — 75 pages fetched, 204 queued.
+[2026-06-11T15:26:56Z] store.shopusps.org: TimeoutError on https://store.shopusps.org/ — retrying once in 10s.
+[2026-06-11T15:27:03Z] boatlive365.org: progress — 75 pages fetched, 52 queued.
+[2026-06-11T15:27:13Z] americasboatingchannel.uscreen.io: progress — 100 pages fetched, 1146 queued.
+[2026-06-11T15:27:29Z] boatlive365.org: FAILED https://boatlive365.org/resources/bobber-water-safety-dog/www.bobber.info (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:27:30Z] americasboatingclub.org: progress — 100 pages fetched, 185 queued.
+[2026-06-11T15:27:41Z] store.shopusps.org: FAILED https://store.shopusps.org/ (TimeoutError: The read operation timed out)
+[2026-06-11T15:27:41Z] store.shopusps.org: queue exhausted after 0 pages — every discovered in-scope URL was handled.
+[2026-06-11T15:27:42Z] boatlive365.org: progress — 100 pages fetched, 9 queued.
+[2026-06-11T15:27:43Z] americasboatingchannel.uscreen.io: progress — 125 pages fetched, 1121 queued.
+[2026-06-11T15:28:03Z] boatlive365.org: queue exhausted after 114 pages — every discovered in-scope URL was handled.
+[2026-06-11T15:28:05Z] americasboatingclub.org: progress — 125 pages fetched, 165 queued.
+[2026-06-11T15:28:12Z] americasboatingchannel.uscreen.io: progress — 150 pages fetched, 1096 queued.
+[2026-06-11T15:28:39Z] americasboatingclub.org: progress — 150 pages fetched, 141 queued.
+[2026-06-11T15:28:42Z] americasboatingchannel.uscreen.io: progress — 175 pages fetched, 1071 queued.
+[2026-06-11T15:29:13Z] americasboatingchannel.uscreen.io: progress — 200 pages fetched, 1046 queued.
+[2026-06-11T15:29:14Z] americasboatingclub.org: progress — 175 pages fetched, 119 queued.
+[2026-06-11T15:29:53Z] americasboatingclub.org: progress — 200 pages fetched, 102 queued.
+[2026-06-11T15:29:55Z] americasboatingchannel.uscreen.io: progress — 225 pages fetched, 1021 queued.
+[2026-06-11T15:30:27Z] americasboatingclub.org: progress — 225 pages fetched, 82 queued.
+[2026-06-11T15:30:28Z] americasboatingchannel.uscreen.io: progress — 250 pages fetched, 996 queued.
+[2026-06-11T15:30:28Z] americasboatingchannel.uscreen.io: page cap of 250 reached — 996 discovered URLs were NOT fetched. They are listed in unfetched_americasboatingchannel.uscreen.io.json; raise max_pages for this domain and re-run to get them (already-fetched pages are skipped on resume).
+[2026-06-11T15:30:58Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/virtual-trainer (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:31:04Z] americasboatingclub.org: progress — 250 pages fetched, 58 queued.
+[2026-06-11T15:31:08Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/component/content/article/99?Itemid=235 (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:31:13Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/seminars/facing-the-environment/weather-for-boaters?view=article&id=105:facing-the-environment-seminar&catid=18 (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:31:14Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/seminars/facing-the-environment/tides-and-currents?view=article&id=106:basic-coastal-navigation-seminar&catid=18 (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:31:20Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/seminars/safety/man-overboard?view=article&id=111:sail-trim-and-rig-tuning-seminar&catid=18 (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:31:24Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/component/content/article/advanced-power-boat-handling-seminar?Itemid=235&catid=18 (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:31:28Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/seminars/safety/all-about-marine-radio?view=article&id=114:virtual-training&catid=18 (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:32:14Z] americasboatingclub.org: URLError on https://americasboatingclub.org/find-a-course-near-you/ — retrying once in 10s.
+[2026-06-11T15:33:00Z] americasboatingclub.org: FAILED https://americasboatingclub.org/find-a-course-near-you/ (URLError: <urlopen error timed out>)
+[2026-06-11T15:33:01Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/education-matters/in-person-boating-education/piloting/ (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:33:02Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/component/content/article/139?Itemid=161 (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:33:03Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/component/content/article/find-a-class-near-you?Itemid=328&catid=2 (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:33:11Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/seminars/safety/ais-electronics-for-boaters (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:33:13Z] americasboatingclub.org: progress — 275 pages fetched, 102 queued.
+[2026-06-11T15:33:50Z] americasboatingclub.org: URLError on https://americasboatingclub.org/index.php/find-a-class-near-you — retrying once in 10s.
+[2026-06-11T15:34:35Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/find-a-class-near-you (URLError: <urlopen error timed out>)
+[2026-06-11T15:34:41Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/about/news-and-information/cold-water-safety-what-you-need-to-know-as-temperatures-drop (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:34:46Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/benefits (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:34:58Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/component/content/article/142?Itemid=265 (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:35:12Z] americasboatingclub.org: progress — 300 pages fetched, 92 queued.
+[2026-06-11T15:35:46Z] americasboatingclub.org: progress — 325 pages fetched, 204 queued.
+[2026-06-11T15:36:21Z] americasboatingclub.org: progress — 350 pages fetched, 185 queued.
+[2026-06-11T15:36:57Z] americasboatingclub.org: progress — 375 pages fetched, 160 queued.
+[2026-06-11T15:37:20Z] americasboatingclub.org: FAILED https://www.americasboatingclub.org/index.php/component/content/article/find-a-class-near-you?Itemid=328&catid=2 (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:37:21Z] americasboatingclub.org: FAILED https://www.americasboatingclub.org/index.php/component/content/article/99?Itemid=235 (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:37:23Z] americasboatingclub.org: FAILED https://www.americasboatingclub.org/index.php/component/content/article/142?Itemid=265 (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:37:35Z] americasboatingclub.org: progress — 400 pages fetched, 139 queued.
+[2026-06-11T15:38:09Z] americasboatingclub.org: progress — 425 pages fetched, 122 queued.
+[2026-06-11T15:38:44Z] americasboatingclub.org: progress — 450 pages fetched, 102 queued.
+[2026-06-11T15:38:44Z] americasboatingclub.org: page cap of 450 reached — 102 discovered URLs were NOT fetched. They are listed in unfetched_americasboatingclub.org.json; raise max_pages for this domain and re-run to get them (already-fetched pages are skipped on resume).
+[2026-06-11T15:38:44Z] americasboatingclub.org: second pass — 4 URLs for this domain were discovered on OTHER ABC domains; fetching them now (same caps and delays apply).
+[2026-06-11T15:38:44Z] americasboatingclub.org: second pass skipped — page cap already used up. The 4 cross-domain URLs are listed in unfetched_americasboatingclub.org.json.
+[2026-06-11T15:38:44Z] www.usps.org: second pass — 31 URLs for this domain were discovered on OTHER ABC domains; fetching them now (same caps and delays apply).
+[2026-06-11T15:39:04Z] www.usps.org: could not fetch robots.txt (URLError: <urlopen error timed out>) — treating as 'no rules', keeping our own delay and skip list.
+[2026-06-11T15:39:40Z] www.usps.org: URLError on https://www.usps.org/cgi-bin-nat/eddept/800/cfindx.cgi — retrying once in 10s.
+[2026-06-11T15:41:01Z] www.usps.org: URLError on https://www.usps.org/php/mmsi_new/mmsiLogin.php?ret_link=index.php — retrying once in 10s.
+[2026-06-11T15:42:23Z] www.usps.org: URLError on https://www.usps.org/php/eddept/glossary/glossary.php — retrying once in 10s.
+[2026-06-11T15:43:44Z] www.usps.org: URLError on https://www.usps.org/php/mmsi_new/ — retrying once in 10s.
+[2026-06-11T15:45:05Z] www.usps.org: URLError on https://www.usps.org/php/reservations_new/meetings.php — retrying once in 10s.
+[2026-06-11T15:46:26Z] www.usps.org: URLError on https://usps.org/springfield — retrying once in 10s.
+[2026-06-11T15:47:48Z] www.usps.org: URLError on http://www.usps.org/national/eddept/s/main.htm — retrying once in 10s.
+[2026-06-11T15:49:09Z] www.usps.org: URLError on http://www.usps.org/cgi-bin-nat/eddept/cfind.cgi — retrying once in 10s.
+[2026-06-11T15:50:30Z] www.usps.org: URLError on http://www.usps.org/national/eddept/p/main.htm — retrying once in 10s.
+[2026-06-11T15:51:01Z] Stop signal received — workers will dump their queues and exit cleanly. Re-running the script resumes where this run left off.
+[2026-06-11T15:52:02Z] Resuming: found 1136 URLs already handled in a previous run; they will not be fetched again.
+[2026-06-11T15:52:02Z] Crawl starting for 4 domains: americasboatingclub.org, americasboatingchannel.uscreen.io, giveabc.org, portal.americasboatingclub.org
+[2026-06-11T15:52:03Z] portal.americasboatingclub.org: picked up 12 URLs left unfetched by a previous run (file renamed to *.consumed).
+[2026-06-11T15:52:03Z] americasboatingclub.org: sitemap https://americasboatingclub.org/index.php?option=com_jmap&view=sitemap&format=xml lists 251 URLs.
+[2026-06-11T15:52:03Z] americasboatingclub.org: picked up 4 URLs left unfetched by a previous run (file renamed to *.consumed).
+[2026-06-11T15:52:03Z] americasboatingchannel.uscreen.io: sitemap https://americasboatingchannel.uscreen.io/sitemap.xml lists 1246 URLs.
+[2026-06-11T15:52:03Z] americasboatingchannel.uscreen.io: picked up 996 URLs left unfetched by a previous run (file renamed to *.consumed).
+[2026-06-11T15:52:04Z] giveabc.org: https://giveabc.org/sitemap.xml is a sitemap INDEX with 4 sub-sitemaps; reading each one.
+[2026-06-11T15:52:05Z] giveabc.org: sitemap https://giveabc.org/post-sitemap.xml lists 6 URLs.
+[2026-06-11T15:52:05Z] giveabc.org: sitemap https://giveabc.org/page-sitemap.xml lists 30 URLs.
+[2026-06-11T15:52:05Z] americasboatingclub.org: FAILED https://www.americasboatingclub.org/index.php/member-benefits (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:52:06Z] giveabc.org: sitemap https://giveabc.org/give_forms-sitemap.xml lists 6 URLs.
+[2026-06-11T15:52:06Z] giveabc.org: sitemap https://giveabc.org/post_tag-sitemap.xml lists 4 URLs.
+[2026-06-11T15:52:06Z] giveabc.org: picked up 43 URLs left unfetched by a previous run (file renamed to *.consumed).
+[2026-06-11T15:52:06Z] giveabc.org: queue exhausted after 0 pages — every discovered in-scope URL was handled.
+[2026-06-11T15:52:08Z] americasboatingclub.org: FAILED https://americasboatingclub.org/index.php/member-benefits (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:52:08Z] americasboatingclub.org: queue exhausted after 2 pages — every discovered in-scope URL was handled.
+[2026-06-11T15:52:24Z] portal.americasboatingclub.org: HTTP 403 on https://portal.americasboatingclub.org/ABC/ABC/Fundraising/Donate_Now.aspx — waiting 10s and retrying once.
+[2026-06-11T15:52:33Z] americasboatingchannel.uscreen.io: progress — 25 pages fetched, 971 queued.
+[2026-06-11T15:52:34Z] portal.americasboatingclub.org: FAILED https://portal.americasboatingclub.org/ABC/ABC/Fundraising/Donate_Now.aspx (HTTPError: HTTP Error 403: Forbidden)
+[2026-06-11T15:52:43Z] portal.americasboatingclub.org: HTTP 403 on https://portal.americasboatingclub.org/Shared_Content/Membership/FamilyJoin/CreateAccount.aspx — waiting 10s and retrying once.
+[2026-06-11T15:52:54Z] portal.americasboatingclub.org: FAILED https://portal.americasboatingclub.org/Shared_Content/Membership/FamilyJoin/CreateAccount.aspx (HTTPError: HTTP Error 403: Forbidden)
+[2026-06-11T15:52:56Z] portal.americasboatingclub.org: FAILED https://portal.americasboatingclub.org/cdn-cgi/l/email-protection#98d5fdf5fafdeaebf0f1e8d8cdcbc8cbb6f7eaff (HTTPError: HTTP Error 404: Not Found)
+[2026-06-11T15:53:03Z] americasboatingchannel.uscreen.io: progress — 50 pages fetched, 946 queued.
+[2026-06-11T15:53:14Z] portal.americasboatingclub.org: progress — 25 pages fetched, 20 queued.
+[2026-06-11T15:53:14Z] portal.americasboatingclub.org: page cap of 25 reached — 20 discovered URLs were NOT fetched. They are listed in unfetched_portal.americasboatingclub.org.json; raise max_pages for this domain and re-run to get them (already-fetched pages are skipped on resume).
+[2026-06-11T15:53:34Z] americasboatingchannel.uscreen.io: progress — 75 pages fetched, 921 queued.
+[2026-06-11T15:54:04Z] americasboatingchannel.uscreen.io: progress — 100 pages fetched, 896 queued.
+[2026-06-11T15:54:34Z] americasboatingchannel.uscreen.io: progress — 125 pages fetched, 871 queued.
+[2026-06-11T15:55:04Z] americasboatingchannel.uscreen.io: progress — 150 pages fetched, 846 queued.
+[2026-06-11T15:55:35Z] americasboatingchannel.uscreen.io: progress — 175 pages fetched, 821 queued.
+[2026-06-11T15:56:05Z] americasboatingchannel.uscreen.io: progress — 200 pages fetched, 796 queued.
+[2026-06-11T15:56:35Z] americasboatingchannel.uscreen.io: progress — 225 pages fetched, 771 queued.
+[2026-06-11T15:57:05Z] americasboatingchannel.uscreen.io: progress — 250 pages fetched, 746 queued.
+[2026-06-11T15:57:36Z] americasboatingchannel.uscreen.io: progress — 275 pages fetched, 721 queued.
+[2026-06-11T15:58:05Z] americasboatingchannel.uscreen.io: progress — 300 pages fetched, 696 queued.
+[2026-06-11T15:58:35Z] americasboatingchannel.uscreen.io: progress — 325 pages fetched, 671 queued.
+[2026-06-11T15:59:07Z] americasboatingchannel.uscreen.io: progress — 350 pages fetched, 646 queued.
+[2026-06-11T15:59:38Z] americasboatingchannel.uscreen.io: progress — 375 pages fetched, 621 queued.
+[2026-06-11T16:00:11Z] americasboatingchannel.uscreen.io: progress — 400 pages fetched, 596 queued.
+[2026-06-11T16:00:44Z] americasboatingchannel.uscreen.io: progress — 425 pages fetched, 571 queued.
+[2026-06-11T16:01:14Z] americasboatingchannel.uscreen.io: progress — 450 pages fetched, 546 queued.
+[2026-06-11T16:01:45Z] americasboatingchannel.uscreen.io: progress — 475 pages fetched, 521 queued.
+[2026-06-11T16:02:17Z] americasboatingchannel.uscreen.io: progress — 500 pages fetched, 496 queued.
+[2026-06-11T16:02:50Z] americasboatingchannel.uscreen.io: progress — 525 pages fetched, 471 queued.
+[2026-06-11T16:03:20Z] americasboatingchannel.uscreen.io: progress — 550 pages fetched, 446 queued.
+[2026-06-11T16:03:51Z] americasboatingchannel.uscreen.io: progress — 575 pages fetched, 421 queued.
+[2026-06-11T16:04:21Z] americasboatingchannel.uscreen.io: progress — 600 pages fetched, 396 queued.
+[2026-06-11T16:04:53Z] americasboatingchannel.uscreen.io: progress — 625 pages fetched, 371 queued.
+[2026-06-11T16:05:23Z] americasboatingchannel.uscreen.io: progress — 650 pages fetched, 346 queued.
+[2026-06-11T16:05:55Z] americasboatingchannel.uscreen.io: progress — 675 pages fetched, 321 queued.
+[2026-06-11T16:06:26Z] americasboatingchannel.uscreen.io: progress — 700 pages fetched, 296 queued.
+[2026-06-11T16:06:59Z] americasboatingchannel.uscreen.io: progress — 725 pages fetched, 271 queued.
+[2026-06-11T16:07:31Z] americasboatingchannel.uscreen.io: progress — 750 pages fetched, 246 queued.
+[2026-06-11T16:08:01Z] americasboatingchannel.uscreen.io: progress — 775 pages fetched, 221 queued.
+[2026-06-11T16:08:31Z] americasboatingchannel.uscreen.io: progress — 800 pages fetched, 196 queued.
+[2026-06-11T16:09:02Z] americasboatingchannel.uscreen.io: progress — 825 pages fetched, 171 queued.
+[2026-06-11T16:09:32Z] americasboatingchannel.uscreen.io: progress — 850 pages fetched, 146 queued.
+[2026-06-11T16:10:02Z] americasboatingchannel.uscreen.io: progress — 875 pages fetched, 121 queued.
+[2026-06-11T16:10:33Z] americasboatingchannel.uscreen.io: progress — 900 pages fetched, 96 queued.
+[2026-06-11T16:11:03Z] americasboatingchannel.uscreen.io: progress — 925 pages fetched, 71 queued.
+[2026-06-11T16:11:41Z] americasboatingchannel.uscreen.io: progress — 950 pages fetched, 48 queued.
+[2026-06-11T16:12:11Z] americasboatingchannel.uscreen.io: progress — 975 pages fetched, 23 queued.
+[2026-06-11T16:12:41Z] americasboatingchannel.uscreen.io: queue exhausted after 998 pages — every discovered in-scope URL was handled.
+[2026-06-11T16:12:41Z] portal.americasboatingclub.org: second pass — 1 URLs for this domain were discovered on OTHER ABC domains; fetching them now (same caps and delays apply).
+[2026-06-11T16:12:42Z] portal.americasboatingclub.org: second pass skipped — page cap already used up. The 1 cross-domain URLs are listed in unfetched_portal.americasboatingclub.org.json.
+[2026-06-11T16:12:42Z] ======================================================================
+[2026-06-11T16:12:42Z] Crawl finished in 20.7 minutes. Per-domain results:
+[2026-06-11T16:12:42Z]   americasboatingclub.org: 2 fetched, 0 skipped, 2 failed
+[2026-06-11T16:12:42Z]   americasboatingchannel.uscreen.io: 998 fetched, 0 skipped, 0 failed
+[2026-06-11T16:12:42Z]   giveabc.org: 0 fetched, 0 skipped, 0 failed
+[2026-06-11T16:12:42Z]   portal.americasboatingclub.org: 25 fetched, 0 skipped, 3 failed, 20 left unfetched at cap
+[2026-06-11T16:12:42Z] Index: /Users/fhaile/Dropbox/Sites/FH Website/ai-abc/data/crawl/index.jsonl
+[2026-06-11T16:12:42Z] External (uncrawled) domains report: /Users/fhaile/Dropbox/Sites/FH Website/ai-abc/data/crawl/external_domains.json

@@ -1,0 +1,142 @@
+{
+ "_provenance": {
+  "description": "ABC-branded storefronts on vendor domains, linked from the Ship's Store homepage. C.P. Dean product data comes from Shopify's public collection products.json, which cpdean.com's robots.txt explicitly marks as crawlable.",
+  "script": "scrape/fetch_satellite_stores.py",
+  "fetched_at": "2026-06-11T15:55:36Z",
+  "sources": [
+   "https://abcvesselexaminer.brandingbygeiger.com/",
+   "https://cpdean.com/collections/awards/products.json?limit=250"
+  ]
+ },
+ "geiger_vessel_examiner_store": {
+  "url": "https://abcvesselexaminer.brandingbygeiger.com/",
+  "page_title": "ABC Vessel Examiner Site - Closed",
+  "status": "closed as of 05/18/2026",
+  "headings": [
+   "ABC Vessel Examiner Site",
+   "Closed as of 05/18/2026"
+  ]
+ },
+ "cpdean_awards_collection": {
+  "source_url": "https://cpdean.com/collections/awards/products.json?limit=250",
+  "products": [
+   {
+    "title": "Stainless Steel Tumbler",
+    "handle": "stainless-steel-tumbler",
+    "url": "https://cpdean.com/products/stainless-steel-tumbler",
+    "product_type": "Drinkware",
+    "price_min": 30.0,
+    "price_max": 30.0,
+    "n_variants": 1
+   },
+   {
+    "title": "Plaque with white plate featuring local squadron burgee",
+    "handle": "plaque-with-white-plate-and-squadron-burgee",
+    "url": "https://cpdean.com/products/plaque-with-white-plate-and-squadron-burgee",
+    "product_type": "Plaque",
+    "price_min": 36.0,
+    "price_max": 42.0,
+    "n_variants": 3
+   },
+   {
+    "title": "Senior Member Plaque",
+    "handle": "senior-member-plaque",
+    "url": "https://cpdean.com/products/senior-member-plaque",
+    "product_type": "Plaque",
+    "price_min": 36.0,
+    "price_max": 36.0,
+    "n_variants": 1
+   },
+   {
+    "title": "Round Top Glass Award",
+    "handle": "round-top-glass-award",
+    "url": "https://cpdean.com/products/round-top-glass-award",
+    "product_type": "Glass",
+    "price_min": 37.5,
+    "price_max": 46.5,
+    "n_variants": 3
+   },
+   {
+    "title": "Plaque with White Plate featuring the America's Boating Club Logo",
+    "handle": "plaque-with-abc-logo",
+    "url": "https://cpdean.com/products/plaque-with-abc-logo",
+    "product_type": "Plaque",
+    "price_min": 36.0,
+    "price_max": 42.0,
+    "n_variants": 3
+   },
+   {
+    "title": "Halo Acrylic Award",
+    "handle": "halo-acrylic-award",
+    "url": "https://cpdean.com/products/halo-acrylic-award",
+    "product_type": "Acrylic",
+    "price_min": 55.99,
+    "price_max": 63.99,
+    "n_variants": 2
+   },
+   {
+    "title": "Past Commanders Plaque",
+    "handle": "past-commanders-plaque",
+    "url": "https://cpdean.com/products/past-commanders-plaque",
+    "product_type": "Plaque",
+    "price_min": 119.99,
+    "price_max": 119.99,
+    "n_variants": 1
+   },
+   {
+    "title": "Sail Acrylic Award",
+    "handle": "sail-acrylic-award",
+    "url": "https://cpdean.com/products/sail-acrylic-award",
+    "product_type": "Acrylic",
+    "price_min": 120.0,
+    "price_max": 120.0,
+    "n_variants": 1
+   },
+   {
+    "title": "Past Commander Gavel Plaque",
+    "handle": "pc-gavel-plaque",
+    "url": "https://cpdean.com/products/pc-gavel-plaque",
+    "product_type": "Plaque",
+    "price_min": 115.0,
+    "price_max": 115.0,
+    "n_variants": 1
+   },
+   {
+    "title": "Plaque with Blue Marble Plate",
+    "handle": "plaque-with-blue-marble-plate",
+    "url": "https://cpdean.com/products/plaque-with-blue-marble-plate",
+    "product_type": "Plaque",
+    "price_min": 36.0,
+    "price_max": 42.0,
+    "n_variants": 3
+   },
+   {
+    "title": "America's Boating Club Name Tag with Magnet Backing",
+    "handle": "name-tag-with-magnet-backing",
+    "url": "https://cpdean.com/products/name-tag-with-magnet-backing",
+    "product_type": "Name Tag",
+    "price_min": 8.0,
+    "price_max": 8.0,
+    "n_variants": 1
+   },
+   {
+    "title": "America's Boating Club Name Tag with Clutch Backing",
+    "handle": "americas-boating-club-name-tag",
+    "url": "https://cpdean.com/products/americas-boating-club-name-tag",
+    "product_type": "Name Tag",
+    "price_min": 8.0,
+    "price_max": 8.0,
+    "n_variants": 1
+   },
+   {
+    "title": "America's Boating Club Name Tag with Pin Backing",
+    "handle": "name-tag-with-pin-backing",
+    "url": "https://cpdean.com/products/name-tag-with-pin-backing",
+    "product_type": "Name Tag",
+    "price_min": 8.0,
+    "price_max": 8.0,
+    "n_variants": 1
+   }
+  ]
+ }
+}

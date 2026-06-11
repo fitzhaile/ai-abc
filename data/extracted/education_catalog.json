@@ -1,0 +1,377 @@
+{
+ "_provenance": {
+  "description": "Every page under /index.php/courses/<category>/<name> and /index.php/seminars/<category>/<name> on the main site. Titles come from each page's H1, descriptions from its meta description tag.",
+  "script": "derive/extract.py",
+  "extracted_at": "2026-06-11T18:28:32Z",
+  "sources": [
+   "data/crawl/index.jsonl",
+   "data/raw/americasboatingclub.org/"
+  ]
+ },
+ "counts": {
+  "courses": 10,
+  "seminars": 30
+ },
+ "catalog": [
+  {
+   "kind": "course",
+   "title": "Boat Handling",
+   "category": "Boat Handling",
+   "category_slug": "boat-handling",
+   "slug": "boat-handling-course",
+   "url": "https://americasboatingclub.org/index.php/courses/boat-handling/boat-handling-course",
+   "description": "Master boating skills with the boat handling course from America's Boating Club | United States Power Squadrons. Enroll today and navigate with confidence."
+  },
+  {
+   "kind": "course",
+   "title": "Sail",
+   "category": "Boat Handling",
+   "category_slug": "boat-handling",
+   "slug": "sail",
+   "url": "https://americasboatingclub.org/index.php/courses/boat-handling/sail",
+   "description": "Build sailing knowledge and confidence on the water with a sailing course from America’s Boating Club focused on safe, enjoyable sailing."
+  },
+  {
+   "kind": "course",
+   "title": "Engine Maintenance",
+   "category": "Boat Systems",
+   "category_slug": "boat-systems",
+   "slug": "engine-maintenance",
+   "url": "https://americasboatingclub.org/index.php/courses/boat-systems/engine-maintenance",
+   "description": "Learn essential engine maintenance skills with a course from America’s Boating Club to improve reliability, performance, and on-the-water confidence."
+  },
+  {
+   "kind": "course",
+   "title": "Marine Communication Systems",
+   "category": "Boat Systems",
+   "category_slug": "boat-systems",
+   "slug": "marine-communication-systems",
+   "url": "https://americasboatingclub.org/index.php/courses/boat-systems/marine-communication-systems",
+   "description": "Build confidence using marine communication systems with guidance from America’s Boating Club focused on safety, best practices, and preparedness."
+  },
+  {
+   "kind": "course",
+   "title": "Marine Electrical Systems",
+   "category": "Boat Systems",
+   "category_slug": "boat-systems",
+   "slug": "marine-electrical-systems",
+   "url": "https://americasboatingclub.org/index.php/courses/boat-systems/marine-electrical-systems",
+   "description": "Don’t get short circuited. Learn how boat electrical systems work, how to diagnose problems, and how to do simple repairs and upgrades."
+  },
+  {
+   "kind": "course",
+   "title": "Radar for Boaters",
+   "category": "Boat Systems",
+   "category_slug": "boat-systems",
+   "slug": "radar-for-boaters",
+   "url": "https://americasboatingclub.org/index.php/courses/boat-systems/radar-for-boaters",
+   "description": "Build confidence navigating with radar through a Radar for Boaters course from America’s Boating Club designed for safer boating."
+  },
+  {
+   "kind": "course",
+   "title": "Advanced Marine Navigation",
+   "category": "Navigation",
+   "category_slug": "navigation",
+   "slug": "advanced-marine-navigation",
+   "url": "https://americasboatingclub.org/index.php/courses/navigation/advanced-marine-navigation",
+   "description": "Build expert-level navigation skills with an advanced marine navigation course from America’s Boating Club designed for experienced boaters."
+  },
+  {
+   "kind": "course",
+   "title": "Celestial Navigation",
+   "category": "Navigation",
+   "category_slug": "navigation",
+   "slug": "celestial-navigation",
+   "url": "https://americasboatingclub.org/index.php/courses/navigation/celestial-navigation",
+   "description": "Build traditional navigation skills with a celestial navigation course from America’s Boating Club designed for confident offshore boating."
+  },
+  {
+   "kind": "course",
+   "title": "Marine Navigation",
+   "category": "Navigation",
+   "category_slug": "navigation",
+   "slug": "marine-navigation-course",
+   "url": "https://americasboatingclub.org/index.php/courses/navigation/marine-navigation-course",
+   "description": "Learn essential navigation skills with a marine navigation course from America’s Boating Club focused on charts, tides, currents, and safe passage."
+  },
+  {
+   "kind": "course",
+   "title": "Offshore Navigation",
+   "category": "Navigation",
+   "category_slug": "navigation",
+   "slug": "offshore-navigation",
+   "url": "https://americasboatingclub.org/index.php/courses/navigation/offshore-navigation",
+   "description": "America’s Boating Club offers offshore navigation education to help boaters plan routes, manage conditions, and navigate confidently offshore."
+  },
+  {
+   "kind": "seminar",
+   "title": "Anchoring With Assurance",
+   "category": "Boat Handling",
+   "category_slug": "boat-handling",
+   "slug": "anchoring-with-assurance",
+   "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/anchoring-with-assurance",
+   "description": "Learn expert anchoring techniques with America's Boating Club | United States Power Squadrons, secure your boat with confidence, enroll in a seminar today."
+  },
+  {
+   "kind": "seminar",
+   "title": "Boating On Rivers Locks And Lakes",
+   "category": "Boat Handling",
+   "category_slug": "boat-handling",
+   "slug": "boating-on-rivers-locks-and-lakes",
+   "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/boating-on-rivers-locks-and-lakes",
+   "description": "Master inland boating skills with America's Boating Club | United States Power Squadrons, navigate rivers, locks, and lakes safely, register today."
+  },
+  {
+   "kind": "seminar",
+   "title": "Boating With Confidence",
+   "category": "Boat Handling",
+   "category_slug": "boat-handling",
+   "slug": "boating-with-confidence",
+   "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/boating-with-confidence",
+   "description": "Boating with Confidence Seminar | America's Boating Club"
+  },
+  {
+   "kind": "seminar",
+   "title": "Confidence In Docking And Undocking",
+   "category": "Boat Handling",
+   "category_slug": "boat-handling",
+   "slug": "confidence-in-docking-and-undocking",
+   "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/confidence-in-docking-and-undocking",
+   "description": "Master docking and undocking with America's Boating Club | United States Power Squadrons, improve control and reduce mishaps, register today."
+  },
+  {
+   "kind": "seminar",
+   "title": "Emergencies On Board",
+   "category": "Boat Handling",
+   "category_slug": "boat-handling",
+   "slug": "emergencies-on-board",
+   "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/emergencies-on-board",
+   "description": "Prepare for onboard emergencies with training from America's Boating Club | United States Power Squadrons, gain vital safety skills and sign up for a seminar."
+  },
+  {
+   "kind": "seminar",
+   "title": "Knots And Line Handling",
+   "category": "Boat Handling",
+   "category_slug": "boat-handling",
+   "slug": "knots-and-line-handling",
+   "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/knots-and-line-handling",
+   "description": "Master essential knots and line handling with America's Boating Club | United States Power Squadrons, refine your boating techniques and register now."
+  },
+  {
+   "kind": "seminar",
+   "title": "Rules Of The Road",
+   "category": "Boat Handling",
+   "category_slug": "boat-handling",
+   "slug": "rules-of-the-road",
+   "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/rules-of-the-road",
+   "description": "Learn and apply boating rules with America's Boating Club | United States Power Squadrons, navigate safely and confidently, and register today."
+  },
+  {
+   "kind": "seminar",
+   "title": "Crossing Borders",
+   "category": "Cruising",
+   "category_slug": "cruising",
+   "slug": "crossing-borders",
+   "url": "https://americasboatingclub.org/index.php/seminars/cruising/crossing-borders",
+   "description": "Understand international boating regulations with America's Boating Club | United States Power Squadrons, prepare for global adventures and enroll today."
+  },
+  {
+   "kind": "seminar",
+   "title": "Cruising Boats and Systems Seminar",
+   "category": "Cruising",
+   "category_slug": "cruising",
+   "slug": "cruising-boats-and-systems",
+   "url": "https://americasboatingclub.org/index.php/seminars/cruising/cruising-boats-and-systems",
+   "description": "Get expert insights on cruising boat systems with America's Boating Club | United States Power Squadrons, enhance your understanding and register today."
+  },
+  {
+   "kind": "seminar",
+   "title": "Planning Your Cruise Seminar",
+   "category": "Cruising",
+   "category_slug": "cruising",
+   "slug": "planning-your-cruise",
+   "url": "https://americasboatingclub.org/index.php/seminars/cruising/planning-your-cruise",
+   "description": "Plan the perfect cruise with expert guidance from America's Boating Club | United States Power Squadrons, chart your next journey with confidence, start today."
+  },
+  {
+   "kind": "seminar",
+   "title": "AIS Electronics For Boaters",
+   "category": "Electronics",
+   "category_slug": "electronics",
+   "slug": "ais-electronics-for-boaters",
+   "url": "https://americasboatingclub.org/index.php/seminars/electronics/ais-electronics-for-boaters",
+   "description": "Learn to use AIS technology with America's Boating Club | United States Power Squadrons, improve boating communication and safety, sign up today."
+  },
+  {
+   "kind": "seminar",
+   "title": "How to Use GPS",
+   "category": "Electronics",
+   "category_slug": "electronics",
+   "slug": "how-to-use-gps",
+   "url": "https://americasboatingclub.org/index.php/seminars/electronics/how-to-use-gps",
+   "description": "Master GPS navigation with expert training from America's Boating Club | United States Power Squadrons, improve your route planning and enroll today."
+  },
+  {
+   "kind": "seminar",
+   "title": "Introduction to Marine Batteries",
+   "category": "Electronics",
+   "category_slug": "electronics",
+   "slug": "introduction-to-marine-batteries",
+   "url": "https://americasboatingclub.org/index.php/seminars/electronics/introduction-to-marine-batteries",
+   "description": "Get expert tips on both lead-acid and lithium batteries, plus upgrade considerations. | United States Power Squadrons"
+  },
+  {
+   "kind": "seminar",
+   "title": "Hurricane Preparation For Boaters",
+   "category": "Facing The Environment",
+   "category_slug": "facing-the-environment",
+   "slug": "hurricane-preparation-for-boaters",
+   "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/hurricane-preparation-for-boaters",
+   "description": "Prepare your boat for hurricane season with America's Boating Club | United States Power Squadrons, protect your vessel with expert advice, learn more today."
+  },
+  {
+   "kind": "seminar",
+   "title": "Marine Weather Forecasting: The 500 Millibar Chart",
+   "category": "Facing The Environment",
+   "category_slug": "facing-the-environment",
+   "slug": "marine-weather-forecasting-the-500-millibar-chart",
+   "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/marine-weather-forecasting-the-500-millibar-chart",
+   "description": "This seminar covers how to use the 500 millibar upper-air chart to forecast your weather including when and where large storms will develop and how they will move. | United States Power Squadrons, master weather forecasting and keep your boat safe, sign up now. | United States Power Squadrons, enhance your forecasting skills, sign up now."
+  },
+  {
+   "kind": "seminar",
+   "title": "Modern Weather Forecasting",
+   "category": "Facing The Environment",
+   "category_slug": "facing-the-environment",
+   "slug": "modern-weather-forecasting",
+   "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/modern-weather-forecasting",
+   "description": "Stay ahead of changing conditions with America's Boating Club | United States Power Squadrons, master weather forecasting and keep your boat safe, sign up now."
+  },
+  {
+   "kind": "seminar",
+   "title": "Tides And Currents",
+   "category": "Facing The Environment",
+   "category_slug": "facing-the-environment",
+   "slug": "tides-and-currents",
+   "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/tides-and-currents",
+   "description": "Navigate with confidence by understanding tides and currents with America's Boating Club | United States Power Squadrons, enhance your skills, enroll today."
+  },
+  {
+   "kind": "seminar",
+   "title": "Weather For Boaters",
+   "category": "Facing The Environment",
+   "category_slug": "facing-the-environment",
+   "slug": "weather-for-boaters",
+   "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/weather-for-boaters",
+   "description": "Learn to interpret weather patterns for safer boating with America's Boating Club | United States Power Squadrons, gain knowledge and confidence, sign up today."
+  },
+  {
+   "kind": "seminar",
+   "title": "Hands-on Training",
+   "category": "Hands On Training",
+   "category_slug": "hands-on-training",
+   "slug": "hands-on-training",
+   "url": "https://americasboatingclub.org/index.php/seminars/hands-on-training/hands-on-training",
+   "description": null
+  },
+  {
+   "kind": "seminar",
+   "title": "Introduction To Navigation",
+   "category": "Navigation",
+   "category_slug": "navigation",
+   "slug": "introduction-to-navigation",
+   "url": "https://americasboatingclub.org/index.php/seminars/navigation/introduction-to-navigation",
+   "description": "Learn navigation basics with America's Boating Club | United States Power Squadrons, build confidence on the water and navigate safely, enroll today."
+  },
+  {
+   "kind": "seminar",
+   "title": "Introduction To OpenCPN",
+   "category": "Navigation",
+   "category_slug": "navigation",
+   "slug": "introduction-to-opencpn",
+   "url": "https://americasboatingclub.org/index.php/seminars/navigation/introduction-to-opencpn",
+   "description": null
+  },
+  {
+   "kind": "seminar",
+   "title": "Mariner's Compass",
+   "category": "Navigation",
+   "category_slug": "navigation",
+   "slug": "mariners-compass",
+   "url": "https://americasboatingclub.org/index.php/seminars/navigation/mariners-compass",
+   "description": "Understand how to use a mariner's compass with America's Boating Club | United States Power Squadrons, enhance your navigation skills, sign up now."
+  },
+  {
+   "kind": "seminar",
+   "title": "Using Nautical Charts",
+   "category": "Navigation",
+   "category_slug": "navigation",
+   "slug": "using-nautical-charts",
+   "url": "https://americasboatingclub.org/index.php/seminars/navigation/using-nautical-charts",
+   "description": "Master nautical charts for precise navigation with America's Boating Club | United States Power Squadrons, improve your skills, enroll today."
+  },
+  {
+   "kind": "seminar",
+   "title": "All About Marine Radio",
+   "category": "Safety",
+   "category_slug": "safety",
+   "slug": "all-about-marine-radio",
+   "url": "https://americasboatingclub.org/index.php/seminars/safety/all-about-marine-radio",
+   "description": "Understand marine radio communication with America's Boating Club | United States Power Squadrons, stay connected and safe on the water, enroll now."
+  },
+  {
+   "kind": "seminar",
+   "title": "Crew At The Helm",
+   "category": "Safety",
+   "category_slug": "safety",
+   "slug": "crew-at-the-helm",
+   "url": "https://americasboatingclub.org/index.php/seminars/safety/crew-at-the-helm",
+   "description": "Take the helm with confidence through training from America's Boating Club | United States Power Squadrons, gain expert skills, sign up today."
+  },
+  {
+   "kind": "seminar",
+   "title": "Fuel And Boating",
+   "category": "Safety",
+   "category_slug": "safety",
+   "slug": "fuel-and-boating-seminar",
+   "url": "https://americasboatingclub.org/index.php/seminars/safety/fuel-and-boating-seminar",
+   "description": "Learn about fuel management and efficiency with America's Boating Club | United States Power Squadrons, maximize your boat's performance, enroll today."
+  },
+  {
+   "kind": "seminar",
+   "title": "Man Overboard",
+   "category": "Safety",
+   "category_slug": "safety",
+   "slug": "man-overboard",
+   "url": "https://americasboatingclub.org/index.php/seminars/safety/man-overboard",
+   "description": "Be prepared for a man overboard situation with Be prepared for a man overboard situation with America's Boating Club | United States Power Squadrons, learn resc"
+  },
+  {
+   "kind": "seminar",
+   "title": "Propane Systems On Your Boat",
+   "category": "Safety",
+   "category_slug": "safety",
+   "slug": "propane-systems-on-your-boat",
+   "url": "https://americasboatingclub.org/index.php/seminars/safety/propane-systems-on-your-boat",
+   "description": "Understand propane systems and safety with America's Boating Club | United States Power Squadrons, protect your boat and crew, enroll today."
+  },
+  {
+   "kind": "seminar",
+   "title": "Paddle Smart",
+   "category": "Techniques",
+   "category_slug": "techniques",
+   "slug": "paddle-smart",
+   "url": "https://americasboatingclub.org/index.php/seminars/techniques/paddle-smart",
+   "description": "Learn safe paddling techniques with America's Boating Club | United States Power Squadrons, improve control and efficiency on the water, sign up now."
+  },
+  {
+   "kind": "seminar",
+   "title": "Trailering Your Boat",
+   "category": "Techniques",
+   "category_slug": "techniques",
+   "slug": "trailering-your-boat",
+   "url": "https://americasboatingclub.org/index.php/seminars/techniques/trailering-your-boat",
+   "description": "Transport your boat safely with expert tips from America's Boating Club | United States Power Squadrons, avoid common mistakes and sign up today to learn more."
+  }
+ ]
+}

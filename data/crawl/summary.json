@@ -1,0 +1,67 @@
+{
+  "finished_at": "2026-06-11T16:12:42Z",
+  "duration_minutes": 20.7,
+  "per_domain": {
+    "americasboatingclub.org": {
+      "fetched": 2,
+      "skipped": 0,
+      "failed": 2,
+      "capped": 0
+    },
+    "www.usps.org": {
+      "fetched": 0,
+      "skipped": 0,
+      "failed": 0,
+      "capped": 0
+    },
+    "www.americasboatingcourse.com": {
+      "fetched": 0,
+      "skipped": 0,
+      "failed": 0,
+      "capped": 0
+    },
+    "americasboatingchannel.uscreen.io": {
+      "fetched": 998,
+      "skipped": 0,
+      "failed": 0,
+      "capped": 0
+    },
+    "boatlive365.org": {
+      "fetched": 0,
+      "skipped": 0,
+      "failed": 0,
+      "capped": 0
+    },
+    "giveabc.org": {
+      "fetched": 0,
+      "skipped": 0,
+      "failed": 0,
+      "capped": 0
+    },
+    "uspsonline.enrolmart.com": {
+      "fetched": 0,
+      "skipped": 0,
+      "failed": 0,
+      "capped": 0
+    },
+    "store.shopusps.org": {
+      "fetched": 0,
+      "skipped": 0,
+      "failed": 0,
+      "capped": 0
+    },
+    "portal.americasboatingclub.org": {
+      "fetched": 25,
+      "skipped": 0,
+      "failed": 3,
+      "capped": 20
+    },
+    "www.uspsonline.org": {
+      "fetched": 0,
+      "skipped": 0,
+      "failed": 0,
+      "capped": 0
+    }
+  },
+  "total_records": 1030
+}

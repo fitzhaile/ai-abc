@@ -1,0 +1,66 @@
+{
+  "explanation": "URLs discovered for this domain but not fetched because the page cap or time limit was reached. Raise max_pages in scrape/crawl.py and re-run; already-fetched pages are skipped automatically.",
+  "count": 12,
+  "urls": [
+    {
+      "url": "https://portal.americasboatingclub.org/ABC/News/About.aspx",
+      "depth": 1,
+      "discovered_from": "https://portal.americasboatingclub.org/"
+    },
+    {
+      "url": "https://portal.americasboatingclub.org/ABC/ABC/News/News.aspx",
+      "depth": 1,
+      "discovered_from": "https://portal.americasboatingclub.org/"
+    },
+    {
+      "url": "https://portal.americasboatingclub.org/ABC/News/Bridge.aspx",
+      "depth": 1,
+      "discovered_from": "https://portal.americasboatingclub.org/"
+    },
+    {
+      "url": "https://portal.americasboatingclub.org/ABC/ABC/News/Leadership.aspx",
+      "depth": 1,
+      "discovered_from": "https://portal.americasboatingclub.org/"
+    },
+    {
+      "url": "https://portal.americasboatingclub.org/ABC/Shared_Content/Membership/USPS-ABC-Join.aspx",
+      "depth": 1,
+      "discovered_from": "https://portal.americasboatingclub.org/"
+    },
+    {
+      "url": "https://portal.americasboatingclub.org/ABC/ABC/News/Member-Benefits.aspx",
+      "depth": 1,
+      "discovered_from": "https://portal.americasboatingclub.org/"
+    },
+    {
+      "url": "https://portal.americasboatingclub.org/Events/Event_List/iCore/Events/Events_List.aspx?DisplayAreaOptions=No",
+      "depth": 1,
+      "discovered_from": "https://portal.americasboatingclub.org/"
+    },
+    {
+      "url": "https://portal.americasboatingclub.org/2026AnnualMeeting",
+      "depth": 1,
+      "discovered_from": "https://portal.americasboatingclub.org/"
+    },
+    {
+      "url": "https://portal.americasboatingclub.org/ABC/ABC/Events/Event_Catalog.aspx",
+      "depth": 1,
+      "discovered_from": "https://portal.americasboatingclub.org/"
+    },
+    {
+      "url": "https://portal.americasboatingclub.org/ABC/ABC/Events/Event_Calendar.aspx",
+      "depth": 1,
+      "discovered_from": "https://portal.americasboatingclub.org/"
+    },
+    {
+      "url": "https://portal.americasboatingclub.org/ABC/ABC/Fundraising/Donate_Now.aspx",
+      "depth": 1,
+      "discovered_from": "https://portal.americasboatingclub.org/"
+    },
+    {
+      "url": "https://portal.americasboatingclub.org/Communities/iCore/Communities/CommunitiesList.aspx",
+      "depth": 1,
+      "discovered_from": "https://portal.americasboatingclub.org/"
+    }
+  ]
+}
