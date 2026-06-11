@@ -1,0 +1,15 @@
+# Render Blueprint — deploys the dashboard as a static site.
+# https://render.com/docs/blueprint-spec
+#
+# The site is fully pre-built: dashboard/index.html plus the generated
+# dashboard/data.js are committed to the repo, so there is no build step.
+# To publish refreshed data, re-run the pipeline locally
+# (python3 derive/extract.py && python3 derive/build_dashboard_data.py),
+# commit the regenerated dashboard/data.js + data.json, and push — Render
+# auto-deploys on push.
+services:
+  - name: abc-ecosystem-dashboard
+    type: web
+    runtime: static
+    staticPublishPath: dashboard
+    buildCommand: ""

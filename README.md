@@ -97,6 +97,16 @@ explicit "what was left unfetched" reports, resumable crawls, and a hard
 wall-clock limit. The find-a-club searches replay the exact form POST the
 page itself makes, a handful of times, seconds apart.
 
+## Deploying (Render)
+
+`render.yaml` defines the dashboard as a Render **static site** publishing
+the `dashboard/` directory with no build step (the generated `data.js` is
+committed). To set it up: push this repo to GitHub, then in the Render
+dashboard choose **New → Blueprint**, select the repo, and approve the
+`abc-ecosystem-dashboard` service it finds. Every later `git push` to the
+default branch auto-deploys. To publish refreshed data, re-run the pipeline
+and commit the regenerated `dashboard/data.js` + `data.json`.
+
 ## Layout
 
 ```
