@@ -15,11 +15,11 @@ At the start of every session, explicitly read and follow the current CLAUDE.md 
 - When proposing implementation plans, explicitly consider whether the result improves or weakens natural-language debuggability.
 
 ## No fabricated data — numbers, facts, citations
-- **Never write a number that came from memory, estimation, or "looks about right"** — not in code, UI constants, data files, documentation, or prose. Every figure must be either (a) computed by a runnable script from project source data, or (b) quoted from a retrievable source that was actually checked in this session.
-- **Never attach a citation the source can't back.** If the cited source has no value for something, display "n/a" / say "no published estimate" — do not substitute an estimate under the source's name.
-- **The same applies to non-numeric claims**: names, dates, quotes, URLs, legal/statutory statements, and descriptions of companies or people must be verified against a source or explicitly labeled unverified. Never fill a gap with a plausible invention.
-- **Every displayed constant must be regenerable.** If a value cannot be reproduced by the project's derivation tooling or traced to a cited source, treat it as a defect: flag it and fix or remove it — never propagate it.
-- **Verification means re-deriving**, not eyeballing: before claiming data is correct, re-run the derivation and diff it against what is displayed. Plausibility is not verification.
+- Never write a number that came from memory, estimation, or "looks about right" — not in code, UI constants, data files, documentation, or prose. Every figure must be either (a) computed by a runnable script from project source data, or (b) quoted from a retrievable source that was actually checked in this session.
+- Never attach a citation the source can't back. If the cited source has no value for something, display "n/a" / say "no published estimate" — do not substitute an estimate under the source's name.
+- The same applies to non-numeric claims: names, dates, quotes, URLs, legal/statutory statements, and descriptions of companies or people must be verified against a source or explicitly labeled unverified. Never fill a gap with a plausible invention.
+- Every displayed constant must be regenerable. If a value cannot be reproduced by the project's derivation tooling or traced to a cited source, treat it as a defect: flag it and fix or remove it — never propagate it.
+- Verification means re-deriving, not eyeballing: before claiming data is correct, re-run the derivation and diff it against what is displayed. Plausibility is not verification.
 - Rationale: in the Kingston dashboard project, an AI-authored commit shipped hand-invented ZIP income figures labeled as Census data — including a value for which no Census estimate exists. This class of error must never recur, in any project.
 
 ## Approval before action
