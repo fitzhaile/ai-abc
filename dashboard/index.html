@@ -78,9 +78,25 @@ header.mast::after{ /* faint compass rose */
   margin-top:16px;font-family:var(--mono);font-size:11.5px;color:#9fb2c4;
   text-transform:uppercase;letter-spacing:.08em;
 }
+/* ---------------- top deck: masthead + tabs stick together ---------------- */
+.topdeck{position:sticky;top:0;z-index:60}
+/* Once you scroll, the masthead condenses to a slim brand bar instead of
+   vanishing — the title and tabs stay pinned, the prose folds away. */
+header.mast{transition:padding .3s ease}
+.mast h1{transition:font-size .3s ease,letter-spacing .3s ease}
+.mast .kicker,.mast .sub,.mast .stamp{
+  max-height:150px;overflow:hidden;
+  transition:max-height .3s ease,opacity .22s ease,margin .3s ease;
+}
+.topdeck.condensed .mast{padding:11px 28px 9px}
+.topdeck.condensed .mast h1{font-size:19px;letter-spacing:.09em}
+.topdeck.condensed .mast h1 br,
+.topdeck.condensed .mast h1 em{display:none}
+.topdeck.condensed .mast .kicker,
+.topdeck.condensed .mast .sub,
+.topdeck.condensed .mast .stamp{max-height:0;opacity:0;margin:0}
 /* ---------------- tab navigation ---------------- */
 .tabbar{
-  position:sticky;top:0;z-index:60;
   background:var(--paper);
   border-bottom:2px solid var(--ink);
   box-shadow:0 8px 20px -16px rgba(18,48,78,.65);
@@ -266,6 +282,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
 </head>
 <body>
 
+<div class="topdeck" id="topdeck">
 <header class="mast">
   <div class="mast-inner">
     <div class="kicker">Ecosystem survey · scraped &amp; interactive data</div>
@@ -281,6 +298,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
 <nav class="tabbar" aria-label="Dashboard sections">
   <div class="tabs" id="tabs" role="tablist"></div>
 </nav>
+</div><!-- /topdeck -->
 
 <div id="fatal">
   <h2>No data on board</h2>
@@ -510,11 +528,24 @@ function activateTab(id, updateHash){
     if(btn) btn.setAttribute('aria-selected', on ? 'true' : 'false');
   });
   // Switching tabs always puts you back at the top of the page, even if
-  // you were scrolled deep into the previous tab.
-  try { window.scrollTo({top:0, left:0, behavior:'instant'}); }
+  // you were scrolled deep into the previous tab — smoothly, unless the
+  // user prefers reduced motion.
+  try { window.scrollTo({top:0, left:0,
+                         behavior: reduceMotion ? 'instant' : 'smooth'}); }
   catch(e){ window.scrollTo(0, 0); }
   if(updateHash) history.replaceState(null, '', '#' + id);
 }
+// Condense the masthead once scrolled; the two thresholds (80 down, 20 up)
+// keep it from flickering right at the boundary.
+var topdeck = document.getElementById('topdeck');
+function updateDeck(){
+  if(!topdeck) return;
+  var y = window.scrollY;
+  if(y > 80) topdeck.classList.add('condensed');
+  else if(y < 20) topdeck.classList.remove('condensed');
+}
+window.addEventListener('scroll', updateDeck, {passive:true});
+updateDeck();
 // In-page links that point at a tab section (e.g. the masthead's
 // "Sources & Soundings" link) switch tabs instead of jumping to a
 // hidden element.
