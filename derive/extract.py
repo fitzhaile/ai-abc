@@ -56,9 +56,14 @@ def now_iso():
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def provenance(description, sources):
-    return {"description": description, "script": "derive/extract.py",
-            "extracted_at": now_iso(), "sources": sources}
+def provenance(description, sources, web_sources=None):
+    """web_sources: the live URLs the underlying evidence was fetched from
+    (computed from the data itself, never typed from memory)."""
+    block = {"description": description, "script": "derive/extract.py",
+             "extracted_at": now_iso(), "sources": sources}
+    if web_sources:
+        block["web_sources"] = sorted(set(web_sources))
+    return block
 
 
 def read_html(record):
@@ -135,7 +140,8 @@ def extract_pages(records):
         "_provenance": provenance(
             "One record per URL the crawler handled, with per-domain "
             "totals. Source of truth is data/crawl/index.jsonl.",
-            ["data/crawl/index.jsonl"]),
+            ["data/crawl/index.jsonl"],
+            web_sources=[f"https://{d}/" for d in stats]),
         "per_domain": stats,
         "pages": pages,
     }
@@ -192,13 +198,20 @@ def extract_education(records):
     log(f"  education catalog: {n_courses} courses and {n_seminars} seminars "
         f"found ({no_desc} pages had no meta description — left null, not "
         f"invented).")
+    edu_prefixes = []
+    for item in catalog:
+        m = re.match(r"(https://[^/]+/index\.php/(?:courses|seminars)/)",
+                     item["url"])
+        if m:
+            edu_prefixes.append(m.group(1))
     return {
         "_provenance": provenance(
             "Every page under /index.php/courses/<category>/<name> and "
             "/index.php/seminars/<category>/<name> on the main site. "
             "Titles come from each page's H1, descriptions from its meta "
             "description tag.",
-            ["data/crawl/index.jsonl", "data/raw/americasboatingclub.org/"]),
+            ["data/crawl/index.jsonl", "data/raw/americasboatingclub.org/"],
+            web_sources=edu_prefixes),
         "counts": {"courses": n_courses, "seminars": n_seminars},
         "catalog": catalog,
     }
@@ -248,12 +261,18 @@ def extract_enrolmart(records):
         f"({sum(1 for p in products if p['type'] == 'package')} packages, "
         f"{sum(1 for p in products if p['type'] == 'online course')} online "
         f"courses).")
+    enrol_roots = []
+    for p in products:
+        m = re.match(r"(https://[^/]+/[a-z-]+/)", p["url"])
+        if m:
+            enrol_roots.append(m.group(1))
     return {
         "_provenance": provenance(
             "Every EnrolMart page whose HTML contains an <h2 "
             "class=\"product-price\"> tag — i.e. an actual product page. "
             "Prices are read from that tag verbatim.",
-            ["data/crawl/index.jsonl", "data/raw/uspsonline.enrolmart.com/"]),
+            ["data/crawl/index.jsonl", "data/raw/uspsonline.enrolmart.com/"],
+            web_sources=enrol_roots),
         "products": products,
     }
 
@@ -316,6 +335,13 @@ def extract_videos(records):
     log(f"  videos: {len(videos)} program pages with VideoObject JSON-LD "
         f"({no_jsonld} program pages without it were skipped); total "
         f"runtime {total_h:.1f} hours.")
+    video_sources = list(
+        _crawl.DOMAINS["americasboatingchannel.uscreen.io"]["seeds"])
+    for v in videos:
+        m = re.match(r"(https://[^/]+/)", v["url"])
+        if m:
+            video_sources.append(m.group(1) + "programs/...")
+            break
     return {
         "_provenance": provenance(
             "One record per video page on americasboatingchannel.uscreen.io "
@@ -323,7 +349,8 @@ def extract_videos(records):
             "each page embeds. Pages lacking that block are counted and "
             "skipped, never guessed.",
             ["data/crawl/index.jsonl",
-             "data/raw/americasboatingchannel.uscreen.io/"]),
+             "data/raw/americasboatingchannel.uscreen.io/"],
+            web_sources=video_sources),
         "skipped_pages_without_jsonld": no_jsonld,
         "videos": videos,
     }
@@ -372,7 +399,8 @@ def extract_link_graph(records):
             "external domain those pages link to, counted from the outlink "
             "lists in the crawl index. Club websites come from the "
             "interactive club directory capture.",
-            ["data/crawl/index.jsonl", "data/interactive/clubs.json"]),
+            ["data/crawl/index.jsonl", "data/interactive/clubs.json"],
+            web_sources=[f"https://{r['domain']}/" for r in records]),
         "abc_cross_links": [
             {"from": a, "to": b, "links": n}
             for (a, b), n in sorted(cross.items(), key=lambda kv: -kv[1])],
@@ -393,12 +421,15 @@ SITEMAP_ENTRY = re.compile(
 
 def extract_content_dates():
     entries = []
+    sitemap_urls = []
     files = sorted(f for f in os.listdir(CRAWL_DIR)
                    if f.startswith("sitemap_") and f.endswith(".xml"))
     for fname in files:
         with open(os.path.join(CRAWL_DIR, fname), encoding="utf-8") as fh:
             xml = fh.read()
         domain = fname.split("_")[1]
+        sitemap_urls.extend(
+            _crawl.DOMAINS.get(domain, {}).get("sitemaps", []))
         n = 0
         for loc, lastmod in SITEMAP_ENTRY.findall(xml):
             if "<sitemapindex" in xml[:400]:
@@ -419,7 +450,8 @@ def extract_content_dates():
             "Per-URL <lastmod> stamps copied from the sitemap XML files the "
             "crawler saved. These are the sites' own statements of when "
             "each page last changed.",
-            [os.path.join("data", "crawl", f) for f in files]),
+            [os.path.join("data", "crawl", f) for f in files],
+            web_sources=sitemap_urls),
         "entries": entries,
     }
 

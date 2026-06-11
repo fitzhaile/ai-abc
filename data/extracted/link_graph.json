@@ -2,10 +2,21 @@
  "_provenance": {
   "description": "Cross-links between the crawled ABC properties, plus every external domain those pages link to, counted from the outlink lists in the crawl index. Club websites come from the interactive club directory capture.",
   "script": "derive/extract.py",
-  "extracted_at": "2026-06-11T18:28:33Z",
+  "extracted_at": "2026-06-11T19:47:04Z",
   "sources": [
    "data/crawl/index.jsonl",
    "data/interactive/clubs.json"
+  ],
+  "web_sources": [
+   "https://americasboatingchannel.uscreen.io/",
+   "https://americasboatingclub.org/",
+   "https://boatlive365.org/",
+   "https://giveabc.org/",
+   "https://portal.americasboatingclub.org/",
+   "https://store.shopusps.org/",
+   "https://uspsonline.enrolmart.com/",
+   "https://www.americasboatingcourse.com/",
+   "https://www.usps.org/"
   ]
  },
  "abc_cross_links": [

@@ -4900,7 +4900,7 @@
   }
  },
  "provenance": {
-  "generated_at": "2026-06-11T18:28:33Z",
+  "generated_at": "2026-06-11T19:50:59Z",
   "generator": "derive/build_dashboard_data.py",
   "pipeline": [
    {
@@ -4931,7 +4931,10 @@
     "script": "scrape/fetch_club_locations.py",
     "strategy": "oversized-radius circles (server honors radius 3000 mi beyond the UI's 500 mi cap)",
     "fetched_at": "2026-06-11T15:32:33Z",
-    "unique_clubs": 255
+    "unique_clubs": 255,
+    "links": [
+     "https://americasboatingclub.org/index.php/find-a-club-near-you"
+    ]
    },
    "class_schedule": {
     "description": "National upcoming-class schedule assembled by fetching each club's club-details page (the same page a visitor sees after using Find a Club) and parsing its server-rendered 'Upcoming Educational Courses' section.",
@@ -4942,7 +4945,10 @@
     "clubs_with_classes": 41,
     "fetch_failures": 0,
     "placeholder_rows_excluded": 7,
-    "raw_html_dir": "data/interactive/club_details_html/"
+    "raw_html_dir": "data/interactive/club_details_html/",
+    "links": [
+     "https://americasboatingclub.org/club-details/?sqdno=<sqdno>"
+    ]
    },
    "store_products": {
     "description": "Every product listed in the Ship's Store catalog (store.shopusps.org, a NetSuite SiteBuilder store), harvested from the category listing pages which show each product's name, item code and price.",
@@ -4951,7 +4957,10 @@
     "mode": "re-parsed from raw HTML saved by an earlier fetch run",
     "fetched_at": "2026-06-11T16:12:36Z",
     "crawl_delay_honored_seconds": 20,
-    "unique_products": 217
+    "unique_products": 217,
+    "links": [
+     "https://store.shopusps.org/Catalog/"
+    ]
    },
    "satellite_stores": {
     "description": "ABC-branded storefronts on vendor domains, linked from the Ship's Store homepage. C.P. Dean product data comes from Shopify's public collection products.json, which cpdean.com's robots.txt explicitly marks as crawlable.",
@@ -4960,58 +4969,136 @@
     "sources": [
      "https://abcvesselexaminer.brandingbygeiger.com/",
      "https://cpdean.com/collections/awards/products.json?limit=250"
+    ],
+    "links": [
+     "https://abcvesselexaminer.brandingbygeiger.com/",
+     "https://cpdean.com/collections/awards/products.json?limit=250"
     ]
    },
    "education_catalog": {
     "description": "Every page under /index.php/courses/<category>/<name> and /index.php/seminars/<category>/<name> on the main site. Titles come from each page's H1, descriptions from its meta description tag.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T18:28:32Z",
+    "extracted_at": "2026-06-11T19:47:04Z",
     "sources": [
      "data/crawl/index.jsonl",
      "data/raw/americasboatingclub.org/"
+    ],
+    "web_sources": [
+     "https://americasboatingclub.org/index.php/courses/",
+     "https://americasboatingclub.org/index.php/seminars/"
+    ],
+    "links": [
+     "https://americasboatingclub.org/index.php/courses/",
+     "https://americasboatingclub.org/index.php/seminars/"
     ]
    },
    "enrolmart_products": {
     "description": "Every EnrolMart page whose HTML contains an <h2 class=\"product-price\"> tag — i.e. an actual product page. Prices are read from that tag verbatim.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T18:28:32Z",
+    "extracted_at": "2026-06-11T19:47:04Z",
     "sources": [
      "data/crawl/index.jsonl",
      "data/raw/uspsonline.enrolmart.com/"
+    ],
+    "web_sources": [
+     "https://uspsonline.enrolmart.com/course-packages/",
+     "https://uspsonline.enrolmart.com/courses/"
+    ],
+    "links": [
+     "https://uspsonline.enrolmart.com/course-packages/",
+     "https://uspsonline.enrolmart.com/courses/"
     ]
    },
    "videos": {
     "description": "One record per video page on americasboatingchannel.uscreen.io (/programs/...), read from the schema.org VideoObject JSON-LD each page embeds. Pages lacking that block are counted and skipped, never guessed.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T18:28:33Z",
+    "extracted_at": "2026-06-11T19:47:04Z",
     "sources": [
      "data/crawl/index.jsonl",
      "data/raw/americasboatingchannel.uscreen.io/"
+    ],
+    "web_sources": [
+     "https://americasboatingchannel.uscreen.io/catalog",
+     "https://americasboatingchannel.uscreen.io/programs/..."
+    ],
+    "links": [
+     "https://americasboatingchannel.uscreen.io/catalog",
+     "https://americasboatingchannel.uscreen.io/programs/..."
     ]
    },
    "pages": {
     "description": "One record per URL the crawler handled, with per-domain totals. Source of truth is data/crawl/index.jsonl.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T18:28:32Z",
+    "extracted_at": "2026-06-11T19:47:04Z",
     "sources": [
      "data/crawl/index.jsonl"
+    ],
+    "web_sources": [
+     "https://americasboatingchannel.uscreen.io/",
+     "https://americasboatingclub.org/",
+     "https://boatlive365.org/",
+     "https://giveabc.org/",
+     "https://portal.americasboatingclub.org/",
+     "https://store.shopusps.org/",
+     "https://uspsonline.enrolmart.com/",
+     "https://www.americasboatingcourse.com/",
+     "https://www.usps.org/"
+    ],
+    "links": [
+     "https://americasboatingchannel.uscreen.io/",
+     "https://americasboatingclub.org/",
+     "https://boatlive365.org/",
+     "https://giveabc.org/",
+     "https://portal.americasboatingclub.org/",
+     "https://store.shopusps.org/",
+     "https://uspsonline.enrolmart.com/",
+     "https://www.americasboatingcourse.com/",
+     "https://www.usps.org/"
     ]
    },
    "link_graph": {
     "description": "Cross-links between the crawled ABC properties, plus every external domain those pages link to, counted from the outlink lists in the crawl index. Club websites come from the interactive club directory capture.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T18:28:33Z",
+    "extracted_at": "2026-06-11T19:47:04Z",
     "sources": [
      "data/crawl/index.jsonl",
      "data/interactive/clubs.json"
+    ],
+    "web_sources": [
+     "https://americasboatingchannel.uscreen.io/",
+     "https://americasboatingclub.org/",
+     "https://boatlive365.org/",
+     "https://giveabc.org/",
+     "https://portal.americasboatingclub.org/",
+     "https://store.shopusps.org/",
+     "https://uspsonline.enrolmart.com/",
+     "https://www.americasboatingcourse.com/",
+     "https://www.usps.org/"
+    ],
+    "links": [
+     "https://americasboatingchannel.uscreen.io/",
+     "https://americasboatingclub.org/",
+     "https://boatlive365.org/",
+     "https://giveabc.org/",
+     "https://portal.americasboatingclub.org/",
+     "https://store.shopusps.org/",
+     "https://uspsonline.enrolmart.com/",
+     "https://www.americasboatingcourse.com/",
+     "https://www.usps.org/"
     ]
    },
    "content_dates": {
     "description": "Per-URL <lastmod> stamps copied from the sitemap XML files the crawler saved. These are the sites' own statements of when each page last changed.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T18:28:33Z",
+    "extracted_at": "2026-06-11T19:47:04Z",
     "sources": [
      "data/crawl/sitemap_americasboatingclub.org_manual.xml"
+    ],
+    "web_sources": [
+     "https://americasboatingclub.org/index.php?option=com_jmap&view=sitemap&format=xml"
+    ],
+    "links": [
+     "https://americasboatingclub.org/index.php?option=com_jmap&view=sitemap&format=xml"
     ]
    }
   }

@@ -282,6 +282,29 @@ def main():
     store_prov.pop("pages_visited", None)
     provenance_block["dataset_sources"]["store_products"] = store_prov
 
+    # Give every dataset a uniform "links" list: the live URLs its evidence
+    # was fetched from. Each provenance flavor records them under a
+    # different key (source_url, source_url_pattern, web_sources, or a
+    # sources list that mixes URLs with local file paths) — collect only
+    # actual URLs, never invent one.
+    for name, prov in provenance_block["dataset_sources"].items():
+        prov = dict(prov)
+        links = []
+        for key in ("source_url", "source_url_pattern"):
+            if prov.get(key):
+                links.append(prov[key])
+        links.extend(prov.get("web_sources", []))
+        links.extend(s for s in prov.get("sources", [])
+                     if isinstance(s, str) and s.startswith("http"))
+        seen = set()
+        prov["links"] = [u for u in links
+                         if not (u in seen or seen.add(u))]
+        if not prov["links"]:
+            log(f"  note: dataset '{name}' has no web-source links in its "
+                f"provenance — the Sources panel will say so instead of "
+                f"showing a link.")
+        provenance_block["dataset_sources"][name] = prov
+
     data = {
         "clubs": clubs_block,
         "schedule": schedule_block,

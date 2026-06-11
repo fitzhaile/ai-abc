@@ -2,9 +2,20 @@
  "_provenance": {
   "description": "One record per URL the crawler handled, with per-domain totals. Source of truth is data/crawl/index.jsonl.",
   "script": "derive/extract.py",
-  "extracted_at": "2026-06-11T18:28:32Z",
+  "extracted_at": "2026-06-11T19:47:04Z",
   "sources": [
    "data/crawl/index.jsonl"
+  ],
+  "web_sources": [
+   "https://americasboatingchannel.uscreen.io/",
+   "https://americasboatingclub.org/",
+   "https://boatlive365.org/",
+   "https://giveabc.org/",
+   "https://portal.americasboatingclub.org/",
+   "https://store.shopusps.org/",
+   "https://uspsonline.enrolmart.com/",
+   "https://www.americasboatingcourse.com/",
+   "https://www.usps.org/"
   ]
  },
  "per_domain": {

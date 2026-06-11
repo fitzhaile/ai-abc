@@ -78,6 +78,29 @@ header.mast::after{ /* faint compass rose */
   margin-top:16px;font-family:var(--mono);font-size:11.5px;color:#9fb2c4;
   text-transform:uppercase;letter-spacing:.08em;
 }
+/* ---------------- tab navigation ---------------- */
+.tabbar{
+  position:sticky;top:0;z-index:60;
+  background:var(--paper);
+  border-bottom:2px solid var(--ink);
+  box-shadow:0 8px 20px -16px rgba(18,48,78,.65);
+}
+.tabbar .tabs{
+  max-width:1240px;margin:0 auto;padding:0 28px;
+  display:flex;flex-wrap:wrap;align-items:stretch;
+}
+.tabbar button{
+  appearance:none;border:none;background:none;cursor:pointer;
+  font-family:var(--display);font-size:12px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink-soft);
+  padding:13px 15px 11px;border-bottom:3px solid transparent;
+}
+.tabbar button:hover{color:var(--ink);border-bottom-color:var(--rule)}
+.tabbar button[aria-selected="true"]{
+  color:var(--paper);background:var(--ink);border-bottom-color:var(--buoy-gold);
+}
+.tabbar button .tno{color:var(--buoy-gold);margin-right:7px;font-size:10px}
+@media(max-width:700px){.tabbar button{padding:10px 10px 8px;font-size:11px;letter-spacing:.1em}}
 /* ---------------- layout ---------------- */
 main{max-width:1240px;margin:0 auto;padding:8px 28px 80px}
 section{margin-top:54px}
@@ -190,7 +213,7 @@ table.log tr:hover td{background:rgba(18,48,78,.045)}
 .maptip{
   position:fixed;pointer-events:none;background:var(--ink);color:#f2ecdd;
   font-family:var(--mono);font-size:11.5px;padding:5px 9px;border-radius:2px;
-  opacity:0;transform:translate(-50%,-130%);white-space:nowrap;z-index:50;
+  opacity:0;transform:translate(-50%,-130%);white-space:nowrap;z-index:70;
   box-shadow:0 6px 18px -6px rgba(0,0,0,.5);
 }
 .legend{display:flex;gap:18px;font-size:12.5px;color:var(--ink-soft);margin-top:8px;flex-wrap:wrap}
@@ -221,6 +244,11 @@ dl.sources dt{font-family:var(--display);font-size:11px;letter-spacing:.14em;tex
 dl.sources dd{font-size:12.5px;color:var(--ink-soft)}
 dl.sources dd code{font-family:var(--mono);font-size:11px}
 dl.sources dd .when{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint)}
+.src-links{margin-top:5px}
+.src-link{
+  display:block;font-family:var(--mono);font-size:10.5px;line-height:1.6;
+  word-break:break-all;color:var(--ink);text-decoration-color:var(--buoy-gold);
+}
 footer{
   margin-top:60px;border-top:2px solid var(--ink);padding:18px 28px 40px;
   font-size:12.5px;color:var(--ink-soft);max-width:1240px;margin-left:auto;margin-right:auto;
@@ -250,6 +278,10 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   </div>
 </header>
 
+<nav class="tabbar" aria-label="Dashboard sections">
+  <div class="tabs" id="tabs" role="tablist"></div>
+</nav>
+
 <div id="fatal">
   <h2>No data on board</h2>
   <p>The dashboard could not find <code>window.DASHBOARD_DATA</code>. The generated data file is
@@ -265,7 +297,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   <div class="kpis" id="kpis"></div>
 
   <!-- 1. CLUB NETWORK -->
-  <section id="clubs">
+  <section id="clubs" role="tabpanel" hidden>
     <div class="sec-head"><span class="no">CH 1</span><h2>The Club Network</h2>
       <span class="lede" id="clubs-lede"></span></div>
     <p class="sec-note">Plotted from the coordinates the find-a-club search returns. Like a position
@@ -294,7 +326,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   </section>
 
   <!-- 2. EDUCATION -->
-  <section id="education">
+  <section id="education" role="tabpanel" hidden>
     <div class="sec-head"><span class="no">CH 2</span><h2>Education Under Way</h2>
       <span class="lede" id="edu-lede"></span></div>
     <p class="sec-note">The national course catalog comes from the main site's course and seminar pages.
@@ -324,7 +356,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   </section>
 
   <!-- 3. COMMERCE -->
-  <section id="commerce">
+  <section id="commerce" role="tabpanel" hidden>
     <div class="sec-head"><span class="no">CH 3</span><h2>Ship's Store &amp; Commerce</h2>
       <span class="lede" id="com-lede"></span></div>
     <p class="sec-note">The Ship's Store catalog was walked at the 20-second pace its robots.txt
@@ -344,7 +376,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   </section>
 
   <!-- 4. CHANNEL -->
-  <section id="channel">
+  <section id="channel" role="tabpanel" hidden>
     <div class="sec-head"><span class="no">CH 4</span><h2>America's Boating Channel</h2>
       <span class="lede" id="vid-lede"></span></div>
     <p class="sec-note">Every video page on the channel embeds machine-readable metadata
@@ -357,7 +389,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   </section>
 
   <!-- 5. SITE & CRAWL -->
-  <section id="fleet">
+  <section id="fleet" role="tabpanel" hidden>
     <div class="sec-head"><span class="no">CH 5</span><h2>The Web Fleet Itself</h2>
       <span class="lede" id="fleet-lede"></span></div>
     <p class="sec-note">What was crawled, what failed, and how the properties link to one another.
@@ -386,7 +418,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   </section>
 
   <!-- 6. PROVENANCE -->
-  <section id="provenance">
+  <section id="provenance" role="tabpanel" hidden>
     <div class="sec-head"><span class="no">CH 6</span><h2>Sources &amp; Soundings</h2>
       <span class="lede">every figure regenerable</span></div>
     <div class="titleblock" style="margin-top:18px">
@@ -449,6 +481,60 @@ function countUp(node, target){
 /* ---------- masthead stamp ---------- */
 document.getElementById('stamp').textContent =
   'Edition generated ' + D.provenance.generated_at + ' UTC · by ' + D.provenance.generator;
+
+/* ---------- tabs ---------- */
+var TABS = [
+  ['clubs',      'CH 1', 'Club Network'],
+  ['education',  'CH 2', 'Education'],
+  ['commerce',   'CH 3', 'Commerce'],
+  ['channel',    'CH 4', 'Channel'],
+  ['fleet',      'CH 5', 'Web Fleet'],
+  ['provenance', 'CH 6', 'Sources']
+];
+var tabsWrap = document.getElementById('tabs');
+TABS.forEach(function(t){
+  var b = el('button', {role:'tab', 'aria-selected':'false',
+                        'aria-controls':t[0], 'data-tab':t[0]});
+  b.appendChild(el('span', {class:'tno'}, t[1]));
+  b.appendChild(document.createTextNode(t[2]));
+  b.addEventListener('click', function(){ activateTab(t[0], true); });
+  tabsWrap.appendChild(b);
+});
+function activateTab(id, updateHash){
+  if(!TABS.some(function(t){ return t[0] === id; })) id = TABS[0][0];
+  TABS.forEach(function(t){
+    var panel = document.getElementById(t[0]);
+    var btn = tabsWrap.querySelector('[data-tab="' + t[0] + '"]');
+    var on = t[0] === id;
+    if(panel) panel.hidden = !on;
+    if(btn) btn.setAttribute('aria-selected', on ? 'true' : 'false');
+  });
+  // Switching tabs always puts you back at the top of the page, even if
+  // you were scrolled deep into the previous tab.
+  try { window.scrollTo({top:0, left:0, behavior:'instant'}); }
+  catch(e){ window.scrollTo(0, 0); }
+  if(updateHash) history.replaceState(null, '', '#' + id);
+}
+// In-page links that point at a tab section (e.g. the masthead's
+// "Sources & Soundings" link) switch tabs instead of jumping to a
+// hidden element.
+document.addEventListener('click', function(ev){
+  var a = ev.target.closest ? ev.target.closest('a[href^="#"]') : null;
+  if(!a) return;
+  var id = (a.getAttribute('href') || '').slice(1);
+  if(TABS.some(function(t){ return t[0] === id; })){
+    ev.preventDefault();
+    activateTab(id, true);
+  }
+});
+// Editing the URL hash by hand (or following an external deep link while
+// the page is already open) also switches tabs. Tab clicks use
+// replaceState, which does not fire this event, so there is no double
+// handling.
+window.addEventListener('hashchange', function(){
+  activateTab((location.hash || '').replace('#', '') || TABS[0][0], false);
+});
+activateTab((location.hash || '').replace('#', '') || TABS[0][0], false);
 
 /* ---------- KPI strip ---------- */
 var totalProducts = D.commerce.ships_store.products + D.commerce.enrolmart.products + D.commerce.cpdean_awards.products;
@@ -938,6 +1024,24 @@ document.getElementById('fleet-lede').textContent =
     dd.appendChild(document.createTextNode(kv[1].description + ' '));
     var when = kv[1].fetched_at || kv[1].extracted_at;
     if(when){ dd.appendChild(el('span', {class:'when'}, '[' + when + ']')); }
+    var links = kv[1].links || [];
+    if(links.length){
+      var lw = el('div', {class:'src-links'});
+      links.forEach(function(u){
+        // Entries containing placeholders (<sqdno>, "...") are URL
+        // patterns, shown as text; real URLs become links.
+        if(/[<>]|\.\.\./.test(u)){
+          lw.appendChild(el('span', {class:'src-link dim'}, u));
+        } else {
+          lw.appendChild(el('a', {class:'src-link', href:u,
+                                  target:'_blank', rel:'noopener'}, u));
+        }
+      });
+      dd.appendChild(lw);
+    } else {
+      dd.appendChild(el('div', {class:'src-link dim'},
+        'no live URL — computed from already-collected local files'));
+    }
     div.appendChild(dt); div.appendChild(dd); dl.appendChild(div);
   });
 })();
