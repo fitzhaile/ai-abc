@@ -24,6 +24,7 @@ import math
 import os
 import re
 import statistics
+import unicodedata
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 
@@ -104,17 +105,36 @@ SPANISH_STOPWORDS = re.compile(
 # (20-35 minutes) assigns them to a bucket whose NAME states the rule.
 EPISODE_RUNTIME = (20 * 60, 35 * 60)
 
+# Frozen one-time AI labeling pass for titles no rule matches (see that
+# file's provenance). It is a committed dataset, so re-running this script
+# stays deterministic. Missing file = labels simply don't apply.
+LABELS_PATH = os.path.join(PROJECT_ROOT, "data", "labels",
+                           "video_title_labels.json")
+try:
+    with open(LABELS_PATH, encoding="utf-8") as _fh:
+        VIDEO_TITLE_LABELS = json.load(_fh)["labels"]
+except OSError:
+    VIDEO_TITLE_LABELS = {}
+
+
+def _label_key(title):
+    return unicodedata.normalize("NFC", html.unescape(title or "").strip())
+
 
 def classify_video(title, duration_seconds):
+    """Returns (category, how) where how is 'rule', 'label', or None."""
     t = html.unescape(title or "")
     if SPANISH_STRONG.search(t) or len(SPANISH_STOPWORDS.findall(t)) >= 2:
-        return "En español"
+        return "En español", "rule"
     for name, pattern in VIDEO_TAXONOMY:
         if pattern.search(t):
-            return name
+            return name, "rule"
     if EPISODE_RUNTIME[0] <= (duration_seconds or 0) <= EPISODE_RUNTIME[1]:
-        return "Vintage TV episodes (by 20–35 min runtime)"
-    return "Unclassified"
+        return "Vintage TV episodes (by 20–35 min runtime)", "rule"
+    labeled = VIDEO_TITLE_LABELS.get(_label_key(title))
+    if labeled:
+        return labeled, "label"
+    return "Unclassified", None
 
 
 def money_stats(values):
@@ -395,25 +415,31 @@ def main():
             if total_hours else None),
     }
 
-    # Custom taxonomy over titles (rules at the top of this file).
+    # Custom taxonomy over titles (rules at the top of this file, plus the
+    # frozen one-time labeling pass for titles no rule matches).
     tax_counts = Counter()
     tax_hours = defaultdict(float)
     tax_examples = defaultdict(list)
+    labeled_count = 0
     for v in videos:
-        cat = classify_video(v["name"], v["duration_seconds"])
+        cat, how = classify_video(v["name"], v["duration_seconds"])
+        if how == "label":
+            labeled_count += 1
         tax_counts[cat] += 1
         tax_hours[cat] += (v["duration_seconds"] or 0) / 3600
         if len(tax_examples[cat]) < 3:
             tax_examples[cat].append(html.unescape(v["name"] or ""))
     taxonomy = {
         "method": ("Our own grouping, not the channel's: ordered keyword "
-                   "rules over titles, first match wins; Spanish detected "
+                   "rules over titles (first match wins; Spanish detected "
                    "by Spanish words; bare titles with a classic 20-35 min "
-                   "episode runtime are bucketed as vintage TV. Whatever "
-                   "no rule matches stays Unclassified — mostly one-off "
-                   "story features and bare cartoon/serial titles with no "
-                   "keyword signal. Rules live in "
-                   "derive/build_dashboard_data.py."),
+                   "episode runtime count as vintage TV), plus a one-time "
+                   f"AI labeling pass that placed {labeled_count} titles "
+                   "no rule matched (frozen in data/labels/"
+                   "video_title_labels.json with its own provenance). "
+                   "Titles neither rules nor the labeler could place "
+                   "stay Unclassified."),
+        "llm_labeled_videos": labeled_count,
         "categories": [
             {"name": name, "videos": n,
              "hours": round(tax_hours[name], 1),

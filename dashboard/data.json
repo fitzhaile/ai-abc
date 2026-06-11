@@ -5079,26 +5079,27 @@
    "feature_share_of_runtime_pct": 21.7
   },
   "taxonomy": {
-   "method": "Our own grouping, not the channel's: ordered keyword rules over titles, first match wins; Spanish detected by Spanish words; bare titles with a classic 20-35 min episode runtime are bucketed as vintage TV. Whatever no rule matches stays Unclassified — mostly one-off story features and bare cartoon/serial titles with no keyword signal. Rules live in derive/build_dashboard_data.py.",
+   "method": "Our own grouping, not the channel's: ordered keyword rules over titles (first match wins; Spanish detected by Spanish words; bare titles with a classic 20-35 min episode runtime count as vintage TV), plus a one-time AI labeling pass that placed 294 titles no rule matched (frozen in data/labels/video_title_labels.json with its own provenance). Titles neither rules nor the labeler could place stay Unclassified.",
+   "llm_labeled_videos": 294,
    "categories": [
     {
-     "name": "Unclassified",
-     "videos": 354,
-     "hours": 32.2,
-     "examples": [
-      "BIG SHIPS",
-      "CAPE FEAR",
-      "COMMERCIAL TRAFFIC"
-     ]
-    },
-    {
      "name": "General safety & boating tips",
-     "videos": 179,
-     "hours": 23.3,
+     "videos": 224,
+     "hours": 25.9,
      "examples": [
       "BEST FAILS",
       "COLUMBIA RIVER BAR",
       "DEFENSIVE BOATING"
+     ]
+    },
+    {
+     "name": "Classic films & TV shows",
+     "videos": 173,
+     "hours": 71.7,
+     "examples": [
+      "SEASON SIX",
+      "SEASON FIVE",
+      "SEASON FOUR"
      ]
     },
     {
@@ -5112,19 +5113,9 @@
      ]
     },
     {
-     "name": "Classic films & TV shows",
-     "videos": 100,
-     "hours": 53.8,
-     "examples": [
-      "SEASON ONE",
-      "SEASON THREE",
-      "SEASON TWO"
-     ]
-    },
-    {
      "name": "Paddlesports",
-     "videos": 85,
-     "hours": 3.6,
+     "videos": 106,
+     "hours": 4.3,
      "examples": [
       "SAFETY TIPS FOR PADDLE SPORTS",
       "STAND UP PADDLEBOARD SAFETY",
@@ -5133,18 +5124,18 @@
     },
     {
      "name": "Rules, navigation & boat handling",
-     "videos": 53,
-     "hours": 3.7,
+     "videos": 80,
+     "hours": 5.6,
      "examples": [
-      "DIGITAL CHARTS AND VIRTUAL ATONS",
-      "NAVIGATING INLETS",
-      "ELECTRONIC VISUAL DISTRESS SIGNALS"
+      "BIG SHIPS",
+      "COMMERCIAL TRAFFIC",
+      "DIGITAL CHARTS AND VIRTUAL ATONS"
      ]
     },
     {
      "name": "Life jackets, ECOS & safety gear",
-     "videos": 51,
-     "hours": 2.0,
+     "videos": 67,
+     "hours": 2.3,
      "examples": [
       "FIRE EXTINGUISHER REGULATIONS",
       "LIFE JACKET WEAR",
@@ -5153,18 +5144,28 @@
     },
     {
      "name": "Cruising & partner series",
-     "videos": 50,
-     "hours": 10.3,
+     "videos": 61,
+     "hours": 11.3,
      "examples": [
+      "CAPE FEAR",
       "WSF ON TWC JULY 4TH",
-      "RBFF ANTHEM",
-      "RBFF BIRDS"
+      "RBFF ANTHEM"
+     ]
+    },
+    {
+     "name": "Unclassified",
+     "videos": 60,
+     "hours": 2.5,
+     "examples": [
+      "ODE TO THE OCEAN",
+      "AWAY WITH THE WIND",
+      "BALANCING ACT"
      ]
     },
     {
      "name": "PSAs & promo spots",
-     "videos": 49,
-     "hours": 1.1,
+     "videos": 58,
+     "hours": 1.2,
      "examples": [
       "ALEX OTTE (:30)",
       "ALEX OTTE (:60)",
@@ -5173,8 +5174,8 @@
     },
     {
      "name": "PWC & tow sports",
-     "videos": 28,
-     "hours": 3.2,
+     "videos": 46,
+     "hours": 5.1,
      "examples": [
       "OPERATING A PWC ON PLANE",
       "PWC DEPARTING",
@@ -5182,19 +5183,9 @@
      ]
     },
     {
-     "name": "En español",
-     "videos": 24,
-     "hours": 1.7,
-     "examples": [
-      " POR SI ACASO - CORTA",
-      "ACTO DE EQUILIBRIO",
-      "ASEGURA TU DIVERSION"
-     ]
-    },
-    {
      "name": "Industry & boat shows",
-     "videos": 20,
-     "hours": 1.8,
+     "videos": 45,
+     "hours": 2.8,
      "examples": [
       "COOKING FOR MILLIONAIRES ON A LUXURY SUPER YACHT",
       "CREW CHEF ON A SUPER YACHT",
@@ -5202,23 +5193,43 @@
      ]
     },
     {
-     "name": "Sober boating (BUI)",
-     "videos": 12,
-     "hours": 0.5,
+     "name": "En español",
+     "videos": 41,
+     "hours": 2.5,
      "examples": [
-      "BUI FATALITIES",
-      "DISPELLING BUI MYTHS",
-      "DANGERS OF BUI"
+      " POR SI ACASO - CORTA",
+      "ACTO DE EQUILIBRIO",
+      "ASEGURA TU DIVERSION"
+     ]
+    },
+    {
+     "name": "Close calls & survivor stories",
+     "videos": 20,
+     "hours": 1.1,
+     "examples": [
+      "HAULOVER",
+      "HAULOVER INLET",
+      "TOTAL IDIOTS"
      ]
     },
     {
      "name": "Fishing & hunting",
-     "videos": 11,
-     "hours": 0.5,
+     "videos": 17,
+     "hours": 0.6,
      "examples": [
       "ALWAYS READY - FISHING TV",
       "HUNTER'S PARADISE",
       "PRO ANGLER BERNIE SCHULTZ"
+     ]
+    },
+    {
+     "name": "Sober boating (BUI)",
+     "videos": 15,
+     "hours": 0.6,
+     "examples": [
+      "BUI FATALITIES",
+      "DISPELLING BUI MYTHS",
+      "DANGERS OF BUI"
      ]
     },
     {
@@ -5229,6 +5240,16 @@
       "PROPER SIZING FOR KIDS",
       "KIDS - WHAT IF YOU FLIP",
       "PROPER GEAR FOR KIDS"
+     ]
+    },
+    {
+     "name": "En français",
+     "videos": 3,
+     "hours": 0.2,
+     "examples": [
+      "06_votre Guide Étape Par Étape Pour Remorquer Et Mettre À L'Eau Votre Bateau En Toute Sécurité",
+      "07_pourquoi Mon Escadrille Devrait-Elle Offrir Des Vérifications De Courtoisie(Vcep)",
+      "08_comment Sortir Votre Bateau De L'Eau Et L'Arrimer Pour Le Remorquer"
      ]
     }
    ]
@@ -5568,7 +5589,7 @@
   }
  },
  "provenance": {
-  "generated_at": "2026-06-11T21:23:19Z",
+  "generated_at": "2026-06-11T22:45:24Z",
   "generator": "derive/build_dashboard_data.py",
   "pipeline": [
    {
