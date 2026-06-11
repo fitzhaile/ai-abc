@@ -302,11 +302,16 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
 
 <div id="fatal">
   <h2>No data on board</h2>
-  <p>The dashboard could not find <code>window.DASHBOARD_DATA</code>. The generated data file is
-  missing or failed to load.</p>
-  <p style="margin-top:10px">What to check next: run <code>python3 derive/build_dashboard_data.py</code>
-  from the project root — it writes <code>dashboard/data.js</code>, which this page loads. If that
-  script complains about missing inputs, run <code>python3 derive/extract.py</code> first.</p>
+  <p>The dashboard tried to load its data file (<code>data.js</code>) three times and still could
+  not find <code>window.DASHBOARD_DATA</code>.</p>
+  <p style="margin-top:10px"><strong>Viewing the deployed site?</strong> This is usually a deploy
+  that is still settling or a stale CDN edge — wait a minute and hard-refresh
+  (Cmd/Ctrl+Shift+R). If it keeps happening, check the Render deploy logs and confirm the
+  publish directory contains both <code>index.html</code> and <code>data.js</code>.</p>
+  <p style="margin-top:10px"><strong>Running locally?</strong> Run
+  <code>python3 derive/build_dashboard_data.py</code> from the project root — it writes
+  <code>dashboard/data.js</code>, which this page loads. If that script complains about missing
+  inputs, run <code>python3 derive/extract.py</code> first.</p>
 </div>
 
 <main id="app" hidden>
@@ -462,11 +467,9 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
 <script>
 (function(){
 "use strict";
+function showFatal(){ document.getElementById('fatal').style.display = 'block'; }
+function boot(){
 var D = window.DASHBOARD_DATA;
-if(!D){
-  document.getElementById('fatal').style.display='block';
-  return;
-}
 document.getElementById('app').hidden = false;
 
 /* ---------- helpers ---------- */
@@ -1081,6 +1084,32 @@ document.getElementById('foot-line').textContent =
   'America’s Boating Club ecosystem chart · generated ' + D.provenance.generated_at +
   ' UTC · ' + fmt(D.site.pages_fetched) + ' pages across ' + D.site.domains_crawled +
   ' domains · all figures computed by derive/build_dashboard_data.py';
+}
+
+// Boot — retrying the data file first if needed. Right after a deploy, a
+// CDN edge can serve this page while data.js is still propagating; rather
+// than stranding the visitor on the error box, fetch it again (with a
+// cache-busting query) up to three times before giving up.
+if(window.DASHBOARD_DATA){
+  boot();
+} else {
+  var attempts = 0;
+  (function retryData(){
+    attempts++;
+    var s = document.createElement('script');
+    s.src = 'data.js?retry=' + attempts + '&t=' + Date.now();
+    s.onload = function(){
+      if(window.DASHBOARD_DATA) boot();
+      else if(attempts < 3) setTimeout(retryData, attempts * 1500);
+      else showFatal();
+    };
+    s.onerror = function(){
+      if(attempts < 3) setTimeout(retryData, attempts * 1500);
+      else showFatal();
+    };
+    document.head.appendChild(s);
+  })();
+}
 })();
 </script>
 </body>
