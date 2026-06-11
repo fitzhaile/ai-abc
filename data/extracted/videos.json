@@ -2,14 +2,14 @@
  "_provenance": {
   "description": "One record per video page on americasboatingchannel.uscreen.io (/programs/...), read from the schema.org VideoObject JSON-LD each page embeds. Pages lacking that block are counted and skipped, never guessed.",
   "script": "derive/extract.py",
-  "extracted_at": "2026-06-11T19:47:04Z",
+  "extracted_at": "2026-06-11T20:31:31Z",
   "sources": [
    "data/crawl/index.jsonl",
    "data/raw/americasboatingchannel.uscreen.io/"
   ],
   "web_sources": [
    "https://americasboatingchannel.uscreen.io/catalog",
-   "https://americasboatingchannel.uscreen.io/programs/..."
+   "https://americasboatingchannel.uscreen.io/programs/best-fails-05700e"
   ]
  },
  "skipped_pages_without_jsonld": 0,

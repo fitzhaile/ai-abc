@@ -2,7 +2,7 @@
  "_provenance": {
   "description": "One record per URL the crawler handled, with per-domain totals. Source of truth is data/crawl/index.jsonl.",
   "script": "derive/extract.py",
-  "extracted_at": "2026-06-11T19:47:04Z",
+  "extracted_at": "2026-06-11T20:31:30Z",
   "sources": [
    "data/crawl/index.jsonl"
   ],

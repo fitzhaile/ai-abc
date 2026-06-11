@@ -2,7 +2,7 @@
  "_provenance": {
   "description": "Cross-links between the crawled ABC properties, plus every external domain those pages link to, counted from the outlink lists in the crawl index. Club websites come from the interactive club directory capture.",
   "script": "derive/extract.py",
-  "extracted_at": "2026-06-11T19:47:04Z",
+  "extracted_at": "2026-06-11T20:31:31Z",
   "sources": [
    "data/crawl/index.jsonl",
    "data/interactive/clubs.json"

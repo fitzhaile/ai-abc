@@ -62,10 +62,6 @@ header.mast::after{ /* faint compass rose */
   box-shadow:inset 0 0 0 38px rgba(242,236,221,.05), inset 0 0 0 39px rgba(242,236,221,.18);
 }
 .mast-inner{max-width:1240px;margin:0 auto;position:relative;z-index:1}
-.mast .kicker{
-  font-family:var(--display);letter-spacing:.42em;font-size:11.5px;
-  text-transform:uppercase;color:var(--buoy-gold);margin-bottom:10px;
-}
 .mast h1{
   font-family:var(--display);font-weight:600;letter-spacing:.045em;
   font-size:clamp(26px,4.2vw,44px);text-transform:uppercase;line-height:1.08;
@@ -74,27 +70,8 @@ header.mast::after{ /* faint compass rose */
 .mast .sub{
   margin-top:12px;max-width:860px;color:#c7d3df;font-size:14.5px;
 }
-.mast .stamp{
-  margin-top:16px;font-family:var(--mono);font-size:11.5px;color:#9fb2c4;
-  text-transform:uppercase;letter-spacing:.08em;
-}
-/* ---------------- top deck: masthead + tabs stick together ---------------- */
+/* ---------------- top deck: the whole masthead + tabs stay pinned ---------------- */
 .topdeck{position:sticky;top:0;z-index:60}
-/* Once you scroll, the masthead condenses to a slim brand bar instead of
-   vanishing — the title and tabs stay pinned, the prose folds away. */
-header.mast{transition:padding .3s ease}
-.mast h1{transition:font-size .3s ease,letter-spacing .3s ease}
-.mast .kicker,.mast .sub,.mast .stamp{
-  max-height:150px;overflow:hidden;
-  transition:max-height .3s ease,opacity .22s ease,margin .3s ease;
-}
-.topdeck.condensed .mast{padding:11px 28px 9px}
-.topdeck.condensed .mast h1{font-size:19px;letter-spacing:.09em}
-.topdeck.condensed .mast h1 br,
-.topdeck.condensed .mast h1 em{display:none}
-.topdeck.condensed .mast .kicker,
-.topdeck.condensed .mast .sub,
-.topdeck.condensed .mast .stamp{max-height:0;opacity:0;margin:0}
 /* ---------------- tab navigation ---------------- */
 .tabbar{
   background:var(--paper);
@@ -115,7 +92,6 @@ header.mast{transition:padding .3s ease}
 .tabbar button[aria-selected="true"]{
   color:var(--paper);background:var(--ink);border-bottom-color:var(--buoy-gold);
 }
-.tabbar button .tno{color:var(--buoy-gold);margin-right:7px;font-size:10px}
 @media(max-width:700px){.tabbar button{padding:10px 10px 8px;font-size:11px;letter-spacing:.1em}}
 /* ---------------- layout ---------------- */
 main{max-width:1240px;margin:0 auto;padding:8px 28px 80px}
@@ -215,7 +191,11 @@ table.log tr:hover td{background:rgba(18,48,78,.045)}
   display:inline-block;border:1px solid var(--rule);background:#fffdf6;
   font-size:12.5px;padding:2px 9px;margin:2px 3px 2px 0;border-radius:2px;
 }
-.chip b{font-family:var(--mono);font-size:11px;color:var(--ink-soft)}
+.chip b{font-family:var(--mono);font-size:11px}
+.chip-c{border-left:3px solid var(--ink)}
+.chip-c b{color:var(--ink)}
+.chip-s{border-left:3px solid var(--stbd-green)}
+.chip-s b{color:var(--stbd-green)}
 .cat-block{margin-bottom:10px}
 .cat-block .cat-name{
   font-family:var(--display);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
@@ -285,13 +265,11 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
 <div class="topdeck" id="topdeck">
 <header class="mast">
   <div class="mast-inner">
-    <div class="kicker">Ecosystem survey · scraped &amp; interactive data</div>
     <h1>America's Boating Club<br><em>Data Chart of the Whole Fleet</em></h1>
     <p class="sub">Every figure on this chart was computed by script from pages crawled across the
     America's Boating Club web ecosystem and from data captured by interacting with its club locator,
     schedule pages, and storefronts. Nothing here is typed in by hand — see the
     <a href="#provenance" style="color:#e8d9ae">Sources &amp; Soundings</a> block.</p>
-    <div class="stamp" id="stamp">data.js not loaded</div>
   </div>
 </header>
 
@@ -346,6 +324,16 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
       <div class="card"><h3>Most clubs</h3><div id="topstates"></div></div>
       <div class="card"><h3>Beyond the states</h3><div id="overseas"></div></div>
     </div>
+    <div class="grid g2e" style="margin-top:22px">
+      <div class="card">
+        <h3>What the clubs call themselves <span class="h3-flag">rebrand watch</span></h3>
+        <div id="naming"></div>
+      </div>
+      <div class="card">
+        <h3>Distance to the nearest fellow club <span class="h3-flag" id="nn-flag"></span></h3>
+        <div id="nndist"></div>
+      </div>
+    </div>
   </section>
 
   <!-- 2. EDUCATION -->
@@ -367,7 +355,8 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     </div>
     <div class="grid g2" style="margin-top:22px">
       <div class="card">
-        <h3>Course &amp; seminar catalog by subject</h3>
+        <h3>Course &amp; seminar catalog by subject
+          <span class="h3-flag">C = course · S = seminar</span></h3>
         <div id="catalog"></div>
       </div>
       <div class="card">
@@ -396,6 +385,16 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
       </div>
       <p class="dim" style="font-size:12px;margin-top:8px">scroll for the full manifest — every product is listed</p>
     </div>
+    <div class="grid g2e" style="margin-top:22px">
+      <div class="card">
+        <h3>Ship's Store price bands <span class="h3-flag">by lowest listed price</span></h3>
+        <div id="pricehist"></div>
+      </div>
+      <div class="card">
+        <h3>Price ranges across the three storefronts</h3>
+        <svg id="rangeplot" viewBox="0 0 560 190"></svg>
+      </div>
+    </div>
   </section>
 
   <!-- 4. CHANNEL -->
@@ -408,6 +407,16 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
       <div class="card"><h3>Videos published per year</h3><svg id="yearchart" viewBox="0 0 360 210"></svg></div>
       <div class="card"><h3>Running time</h3><div id="durations"></div></div>
       <div class="card"><h3>Longest passages</h3><table class="log" id="longest"></table></div>
+    </div>
+    <div class="grid g2e" style="margin-top:22px">
+      <div class="card">
+        <h3>Hours of content added per year <span class="h3-flag">with running total</span></h3>
+        <svg id="hoursyear" viewBox="0 0 560 210"></svg>
+      </div>
+      <div class="card">
+        <h3>Typical video length by year</h3>
+        <div id="lenyear"></div>
+      </div>
     </div>
   </section>
 
@@ -499,25 +508,20 @@ function countUp(node, target){
   requestAnimationFrame(step);
 }
 
-/* ---------- masthead stamp ---------- */
-document.getElementById('stamp').textContent =
-  'Edition generated ' + D.provenance.generated_at + ' UTC · by ' + D.provenance.generator;
-
 /* ---------- tabs ---------- */
 var TABS = [
-  ['clubs',      'CH 1', 'Club Network'],
-  ['education',  'CH 2', 'Education'],
-  ['commerce',   'CH 3', 'Commerce'],
-  ['channel',    'CH 4', 'Channel'],
-  ['fleet',      'CH 5', 'Web Fleet'],
-  ['provenance', 'CH 6', 'Sources']
+  ['clubs',      'Club Network'],
+  ['education',  'Education'],
+  ['commerce',   'Commerce'],
+  ['channel',    'Channel'],
+  ['fleet',      'Web Fleet'],
+  ['provenance', 'Sources']
 ];
 var tabsWrap = document.getElementById('tabs');
 TABS.forEach(function(t){
   var b = el('button', {role:'tab', 'aria-selected':'false',
                         'aria-controls':t[0], 'data-tab':t[0]});
-  b.appendChild(el('span', {class:'tno'}, t[1]));
-  b.appendChild(document.createTextNode(t[2]));
+  b.appendChild(document.createTextNode(t[1]));
   b.addEventListener('click', function(){ activateTab(t[0], true); });
   tabsWrap.appendChild(b);
 });
@@ -538,17 +542,6 @@ function activateTab(id, updateHash){
   catch(e){ window.scrollTo(0, 0); }
   if(updateHash) history.replaceState(null, '', '#' + id);
 }
-// Condense the masthead once scrolled; the two thresholds (80 down, 20 up)
-// keep it from flickering right at the boundary.
-var topdeck = document.getElementById('topdeck');
-function updateDeck(){
-  if(!topdeck) return;
-  var y = window.scrollY;
-  if(y > 80) topdeck.classList.add('condensed');
-  else if(y < 20) topdeck.classList.remove('condensed');
-}
-window.addEventListener('scroll', updateDeck, {passive:true});
-updateDeck();
 // In-page links that point at a tab section (e.g. the masthead's
 // "Sources & Soundings" link) switch tabs instead of jumping to a
 // hidden element.
@@ -742,6 +735,42 @@ document.getElementById('clubs-lede').textContent =
   }
 })();
 
+/* naming eras + nearest-neighbor distances */
+(function(){
+  if(D.clubs.naming){
+    var wrapN = document.getElementById('naming');
+    var entries = Object.entries(D.clubs.naming);
+    var max = Math.max.apply(null, entries.map(function(kv){return kv[1];}));
+    entries.forEach(function(kv, i){
+      var row = el('div', {class:'barrow'});
+      row.appendChild(el('span', {class:'lab', style:'width:200px;font-size:11px'}, kv[0]));
+      var trk = el('div', {class:'trk'});
+      var fil = el('div', {class:'fil', style:'width:'+(kv[1]/max*100)+'%;animation-delay:'+(i*45)+'ms'});
+      fil.textContent = kv[1];
+      trk.appendChild(fil); row.appendChild(trk); wrapN.appendChild(row);
+    });
+    wrapN.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
+      'Counted from each club’s directory name: the “America’s Boating Club …” rebrand vs the legacy squadron names.'));
+  }
+  if(D.clubs.nearest_neighbor){
+    var nn = D.clubs.nearest_neighbor;
+    document.getElementById('nn-flag').textContent = 'median ' + nn.median_miles + ' mi';
+    var wrapD = document.getElementById('nndist');
+    var max2 = Math.max.apply(null, nn.buckets.map(function(kv){return kv[1];}));
+    nn.buckets.forEach(function(kv, i){
+      var row = el('div', {class:'barrow'});
+      row.appendChild(el('span', {class:'lab', style:'width:90px'}, kv[0]));
+      var trk = el('div', {class:'trk'});
+      var fil = el('div', {class:'fil alt', style:'width:'+(kv[1]/max2*100)+'%;animation-delay:'+(i*45)+'ms'});
+      fil.textContent = kv[1];
+      trk.appendChild(fil); row.appendChild(trk); wrapD.appendChild(row);
+    });
+    wrapD.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
+      'Straight-line miles from each club to its closest neighbor, computed from the directory coordinates (' +
+      nn.clubs_measured + ' clubs; overseas units included).'));
+  }
+})();
+
 /* ---------- CH2 · education ---------- */
 document.getElementById('edu-lede').textContent =
   D.education.courses + ' courses · ' + D.education.seminars + ' seminars · ' +
@@ -794,21 +823,27 @@ document.getElementById('sched-flag').textContent =
 /* catalog chips */
 (function(){
   var wrap = document.getElementById('catalog');
+  // Legend up top. The wording is the site's own: it describes "6-8 week
+  // courses" and "focused 2-hour workshop" seminars on its learn pages.
+  var legend = el('p', {style:'font-size:12.5px;margin:0 0 10px'});
+  legend.appendChild(el('b', {style:'color:var(--ink);font-family:var(--mono)'}, 'C'));
+  legend.appendChild(document.createTextNode(' = course, a 6–8 week class  ·  '));
+  legend.appendChild(el('b', {style:'color:var(--stbd-green);font-family:var(--mono)'}, 'S'));
+  legend.appendChild(document.createTextNode(' = seminar, a focused 2-hour workshop — as the site describes them'));
+  wrap.appendChild(legend);
   Object.entries(D.education.by_category).forEach(function(kv){
     var blk = el('div', {class:'cat-block'});
     blk.appendChild(el('div', {class:'cat-name'}, kv[0]));
     (kv[1].courses||[]).forEach(function(t){
-      var c = el('span', {class:'chip'}); c.appendChild(el('b', {}, 'C '));
+      var c = el('span', {class:'chip chip-c'}); c.appendChild(el('b', {}, 'C '));
       c.appendChild(document.createTextNode(t)); blk.appendChild(c);
     });
     (kv[1].seminars||[]).forEach(function(t){
-      var c = el('span', {class:'chip'}); c.appendChild(el('b', {}, 'S '));
+      var c = el('span', {class:'chip chip-s'}); c.appendChild(el('b', {}, 'S '));
       c.appendChild(document.createTextNode(t)); blk.appendChild(c);
     });
     wrap.appendChild(blk);
   });
-  wrap.appendChild(el('p',{class:'dim',style:'font-size:12px;margin-top:6px'},
-    'C = course (multi-session) · S = seminar (single-session) · from the main site catalog pages'));
 })();
 
 /* enrolmart */
@@ -902,6 +937,57 @@ document.getElementById('com-lede').textContent =
   });
 })();
 
+/* price bands + cross-store range plot */
+(function(){
+  var hist = D.commerce.ships_store.price_histogram;
+  if(hist){
+    var wrap = document.getElementById('pricehist');
+    var max = Math.max.apply(null, hist.map(function(kv){return kv[1];}));
+    hist.forEach(function(kv, i){
+      var row = el('div', {class:'barrow'});
+      row.appendChild(el('span', {class:'lab', style:'width:92px'}, kv[0]));
+      var trk = el('div', {class:'trk'});
+      var fil = el('div', {class:'fil', style:'width:'+(kv[1]/max*100)+'%;animation-delay:'+(i*45)+'ms'});
+      fil.textContent = kv[1];
+      trk.appendChild(fil); row.appendChild(trk); wrap.appendChild(row);
+    });
+    if(D.commerce.ships_store.unpriced_items){
+      wrap.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
+        D.commerce.ships_store.unpriced_items + ' item(s) list no price on the catalog pages and are not banded.'));
+    }
+  }
+  var svg = document.getElementById('rangeplot');
+  var stores = [
+    ['Ship’s Store', D.commerce.ships_store.price_stats],
+    ['EnrolMart', D.commerce.enrolmart.price_stats],
+    ['C.P. Dean', D.commerce.cpdean_awards.price_stats]
+  ].filter(function(s){ return s[1]; });
+  if(svg && stores.length){
+    var W=560, H=190, padL=104, padR=86;
+    var maxV = Math.max.apply(null, stores.map(function(s){return s[1].max;}));
+    function X(v){ return padL + (v/maxV)*(W-padL-padR); }
+    stores.forEach(function(s, i){
+      var st = s[1], y = 42 + i*46;
+      var name = svgel('text',{x:8,y:y+4,'font-size':'11'});
+      name.textContent = s[0]; svg.appendChild(name);
+      svg.appendChild(svgel('line',{x1:X(st.min),y1:y,x2:X(st.max),y2:y,
+        stroke:'#12304e','stroke-width':2}));
+      [[st.min,3.5,'#12304e'],[st.median,5,'#c8922a'],[st.max,3.5,'#12304e']]
+        .forEach(function(pt){
+          svg.appendChild(svgel('circle',{cx:X(pt[0]),cy:y,r:pt[1],fill:pt[2]}));
+        });
+      var lab = svgel('text',{x:X(st.max)+8,y:y+4,'font-size':'10'});
+      lab.textContent = usd(st.min)+' – '+usd(st.max);
+      svg.appendChild(lab);
+      var med = svgel('text',{x:X(st.median),y:y-12,'font-size':'10','text-anchor':'middle'});
+      med.textContent = 'med ' + usd(st.median); svg.appendChild(med);
+    });
+    var cap = svgel('text',{x:8,y:H-8,'font-size':'10'});
+    cap.textContent = 'per-item prices from the captured catalogs; gold dot = median';
+    svg.appendChild(cap);
+  }
+})();
+
 /* ---------- CH4 · channel ---------- */
 document.getElementById('vid-lede').textContent =
   fmt(D.videos.total) + ' videos · ' + fmt(D.videos.total_runtime_hours) + ' hours';
@@ -952,6 +1038,45 @@ document.getElementById('vid-lede').textContent =
     row.appendChild(el('td', {class:'num'}, String(v.minutes)));
     tbl.appendChild(row);
   });
+})();
+
+/* per-year hours + typical video length */
+(function(){
+  var by = D.videos.by_year;
+  if(!by) return;
+  var years = Object.keys(by).sort();
+  var svg = document.getElementById('hoursyear');
+  if(svg && years.length){
+    var W=560, H=210, pad=34, bw=(W-2*pad)/years.length;
+    var max = Math.max.apply(null, years.map(function(y){return by[y].hours;}));
+    years.forEach(function(yr, i){
+      var d = by[yr];
+      var h = (d.hours/max)*(H-82), x = pad+i*bw;
+      svg.appendChild(svgel('rect',{x:x+4,y:H-48-h,width:Math.max(bw-8,3),height:h,fill:'#12304e'}));
+      var t = svgel('text',{x:x+bw/2,y:H-48-h-6,'text-anchor':'middle','font-size':'10.5'});
+      t.textContent = d.hours + 'h'; svg.appendChild(t);
+      var lab = svgel('text',{x:x+bw/2,y:H-30,'text-anchor':'middle','font-size':'10'});
+      lab.textContent = yr; svg.appendChild(lab);
+      var cum = svgel('text',{x:x+bw/2,y:H-15,'text-anchor':'middle','font-size':'9',fill:'#7d8fa3'});
+      cum.textContent = 'total ' + d.cumulative_hours; svg.appendChild(cum);
+    });
+    svg.appendChild(svgel('line',{x1:pad,y1:H-48,x2:W-pad,y2:H-48,stroke:'#12304e','stroke-width':1.5}));
+  }
+  var wrap = document.getElementById('lenyear');
+  if(wrap && years.length){
+    var max2 = Math.max.apply(null, years.map(function(y){return by[y].median_minutes||0;}));
+    years.forEach(function(yr, i){
+      var d = by[yr];
+      var row = el('div', {class:'barrow'});
+      row.appendChild(el('span', {class:'lab'}, yr));
+      var trk = el('div', {class:'trk'});
+      var fil = el('div', {class:'fil alt', style:'width:'+((d.median_minutes||0)/max2*100)+'%;animation-delay:'+(i*45)+'ms'});
+      fil.textContent = (d.median_minutes===null ? 'n/a' : d.median_minutes + ' min');
+      trk.appendChild(fil); row.appendChild(trk); wrap.appendChild(row);
+    });
+    wrap.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
+      'Median runtime of that year’s uploads — the median resists the long classic films that would skew an average.'));
+  }
 })();
 
 /* ---------- CH5 · fleet ---------- */

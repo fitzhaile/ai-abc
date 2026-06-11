@@ -2,7 +2,7 @@
  "_provenance": {
   "description": "Every page under /index.php/courses/<category>/<name> and /index.php/seminars/<category>/<name> on the main site. Titles come from each page's H1, descriptions from its meta description tag.",
   "script": "derive/extract.py",
-  "extracted_at": "2026-06-11T19:47:04Z",
+  "extracted_at": "2026-06-11T20:31:30Z",
   "sources": [
    "data/crawl/index.jsonl",
    "data/raw/americasboatingclub.org/"

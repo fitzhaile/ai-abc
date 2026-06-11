@@ -337,11 +337,10 @@ def extract_videos(records):
         f"runtime {total_h:.1f} hours.")
     video_sources = list(
         _crawl.DOMAINS["americasboatingchannel.uscreen.io"]["seeds"])
-    for v in videos:
-        m = re.match(r"(https://[^/]+/)", v["url"])
-        if m:
-            video_sources.append(m.group(1) + "programs/...")
-            break
+    if videos:
+        # One real program page as a clickable example of the per-video
+        # sources (every video has its own /programs/<slug> page).
+        video_sources.append(videos[0]["url"])
     return {
         "_provenance": provenance(
             "One record per video page on americasboatingchannel.uscreen.io "

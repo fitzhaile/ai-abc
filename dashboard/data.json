@@ -2089,7 +2089,39 @@
     "website": true,
     "sqdno": "5900"
    }
-  ]
+  ],
+  "naming": {
+   "“America's Boating Club …”": 176,
+   "“… Sail and Power Squadron”": 43,
+   "“… Power Squadron”": 34,
+   "other naming": 2
+  },
+  "nearest_neighbor": {
+   "clubs_measured": 255,
+   "median_miles": 21.3,
+   "buckets": [
+    [
+     "under 10 mi",
+     52
+    ],
+    [
+     "10–25 mi",
+     89
+    ],
+    [
+     "25–50 mi",
+     64
+    ],
+    [
+     "50–100 mi",
+     32
+    ],
+    [
+     "over 100 mi",
+     18
+    ]
+   ]
+  }
  },
  "schedule": {
   "total_upcoming": 148,
@@ -2648,6 +2680,29 @@
     "median": 22.0,
     "mean": 24.93
    },
+   "price_histogram": [
+    [
+     "under $10",
+     80
+    ],
+    [
+     "$10–25",
+     53
+    ],
+    [
+     "$25–50",
+     62
+    ],
+    [
+     "$50–100",
+     14
+    ],
+    [
+     "$100 and up",
+     6
+    ]
+   ],
+   "unpriced_items": 2,
    "by_category": {
     "Insignia Tabs": 38,
     "Flags": 28,
@@ -4626,6 +4681,38 @@
  },
  "videos": {
   "total": 1180,
+  "by_year": {
+   "2022": {
+    "videos": 193,
+    "hours": 44.7,
+    "cumulative_hours": 44.7,
+    "median_minutes": 6.5
+   },
+   "2023": {
+    "videos": 853,
+    "hours": 140.3,
+    "cumulative_hours": 185.0,
+    "median_minutes": 3.6
+   },
+   "2024": {
+    "videos": 125,
+    "hours": 17.5,
+    "cumulative_hours": 202.5,
+    "median_minutes": 2.5
+   },
+   "2025": {
+    "videos": 7,
+    "hours": 1.5,
+    "cumulative_hours": 203.9,
+    "median_minutes": 3.9
+   },
+   "2026": {
+    "videos": 2,
+    "hours": 0.6,
+    "cumulative_hours": 204.5,
+    "median_minutes": 16.9
+   }
+  },
   "total_runtime_hours": 204.5,
   "median_duration_minutes": 4.1,
   "uploads_by_year": {
@@ -4900,7 +4987,7 @@
   }
  },
  "provenance": {
-  "generated_at": "2026-06-11T19:50:59Z",
+  "generated_at": "2026-06-11T20:33:18Z",
   "generator": "derive/build_dashboard_data.py",
   "pipeline": [
    {
@@ -4937,7 +5024,7 @@
     ]
    },
    "class_schedule": {
-    "description": "National upcoming-class schedule assembled by fetching each club's club-details page (the same page a visitor sees after using Find a Club) and parsing its server-rendered 'Upcoming Educational Courses' section.",
+    "description": "National upcoming-class schedule assembled by fetching each club's club-details page (the same page a visitor sees after using Find a Club) and parsing its server-rendered 'Upcoming Educational Courses' section. The link below opens one real club's page; the sqdno query parameter is that club's squadron number — change it to view any other club's schedule.",
     "source_url_pattern": "https://americasboatingclub.org/club-details/?sqdno=<sqdno>",
     "script": "scrape/fetch_club_schedules.py",
     "fetched_at": "2026-06-11T18:27:42Z",
@@ -4946,8 +5033,9 @@
     "fetch_failures": 0,
     "placeholder_rows_excluded": 7,
     "raw_html_dir": "data/interactive/club_details_html/",
+    "example_url": "https://americasboatingclub.org/club-details/?sqdno=5220",
     "links": [
-     "https://americasboatingclub.org/club-details/?sqdno=<sqdno>"
+     "https://americasboatingclub.org/club-details/?sqdno=5220"
     ]
    },
    "store_products": {
@@ -4978,7 +5066,7 @@
    "education_catalog": {
     "description": "Every page under /index.php/courses/<category>/<name> and /index.php/seminars/<category>/<name> on the main site. Titles come from each page's H1, descriptions from its meta description tag.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T19:47:04Z",
+    "extracted_at": "2026-06-11T20:31:30Z",
     "sources": [
      "data/crawl/index.jsonl",
      "data/raw/americasboatingclub.org/"
@@ -4995,7 +5083,7 @@
    "enrolmart_products": {
     "description": "Every EnrolMart page whose HTML contains an <h2 class=\"product-price\"> tag — i.e. an actual product page. Prices are read from that tag verbatim.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T19:47:04Z",
+    "extracted_at": "2026-06-11T20:31:30Z",
     "sources": [
      "data/crawl/index.jsonl",
      "data/raw/uspsonline.enrolmart.com/"
@@ -5012,24 +5100,24 @@
    "videos": {
     "description": "One record per video page on americasboatingchannel.uscreen.io (/programs/...), read from the schema.org VideoObject JSON-LD each page embeds. Pages lacking that block are counted and skipped, never guessed.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T19:47:04Z",
+    "extracted_at": "2026-06-11T20:31:31Z",
     "sources": [
      "data/crawl/index.jsonl",
      "data/raw/americasboatingchannel.uscreen.io/"
     ],
     "web_sources": [
      "https://americasboatingchannel.uscreen.io/catalog",
-     "https://americasboatingchannel.uscreen.io/programs/..."
+     "https://americasboatingchannel.uscreen.io/programs/best-fails-05700e"
     ],
     "links": [
      "https://americasboatingchannel.uscreen.io/catalog",
-     "https://americasboatingchannel.uscreen.io/programs/..."
+     "https://americasboatingchannel.uscreen.io/programs/best-fails-05700e"
     ]
    },
    "pages": {
     "description": "One record per URL the crawler handled, with per-domain totals. Source of truth is data/crawl/index.jsonl.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T19:47:04Z",
+    "extracted_at": "2026-06-11T20:31:30Z",
     "sources": [
      "data/crawl/index.jsonl"
     ],
@@ -5059,7 +5147,7 @@
    "link_graph": {
     "description": "Cross-links between the crawled ABC properties, plus every external domain those pages link to, counted from the outlink lists in the crawl index. Club websites come from the interactive club directory capture.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T19:47:04Z",
+    "extracted_at": "2026-06-11T20:31:31Z",
     "sources": [
      "data/crawl/index.jsonl",
      "data/interactive/clubs.json"
@@ -5090,7 +5178,7 @@
    "content_dates": {
     "description": "Per-URL <lastmod> stamps copied from the sitemap XML files the crawler saved. These are the sites' own statements of when each page last changed.",
     "script": "derive/extract.py",
-    "extracted_at": "2026-06-11T19:47:04Z",
+    "extracted_at": "2026-06-11T20:31:31Z",
     "sources": [
      "data/crawl/sitemap_americasboatingclub.org_manual.xml"
     ],

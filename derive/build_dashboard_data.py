@@ -19,6 +19,7 @@ Stdlib only — no third-party dependencies.
 """
 
 import json
+import math
 import os
 import statistics
 from collections import Counter, defaultdict
@@ -91,9 +92,48 @@ def main():
         "outside_us_states": [c["name"] for c in clubs if not c["state"]],
         "map_points": club_map_points,
     }
+    # Naming eras: the rebrand to "America's Boating Club ..." vs the legacy
+    # "... Sail and Power Squadron" names, counted from the directory names.
+    def naming_bucket(name):
+        n = name.lower().replace("’", "'")
+        if "america's boating club" in n:
+            return "“America's Boating Club …”"
+        if "sail and power squadron" in n:
+            return "“… Sail and Power Squadron”"
+        if "power squadron" in n:
+            return "“… Power Squadron”"
+        return "other naming"
+    clubs_block["naming"] = dict(Counter(
+        naming_bucket(c["name"]) for c in clubs).most_common())
+
+    # Distance from each club to its nearest fellow club (great-circle,
+    # 3958.8 = Earth's mean radius in miles for the haversine formula).
+    def haversine_miles(a, b):
+        lat1, lng1, lat2, lng2 = map(
+            math.radians, [a["latitude"], a["longitude"],
+                           b["latitude"], b["longitude"]])
+        h = (math.sin((lat2 - lat1) / 2) ** 2
+             + math.cos(lat1) * math.cos(lat2)
+             * math.sin((lng2 - lng1) / 2) ** 2)
+        return 3958.8 * 2 * math.asin(math.sqrt(h))
+    located = [c for c in clubs if c.get("latitude") is not None
+               and c.get("longitude") is not None]
+    nn_miles = [min(haversine_miles(a, b) for b in located if b is not a)
+                for a in located]
+    nn_bands = [("under 10 mi", 0, 10), ("10–25 mi", 10, 25),
+                ("25–50 mi", 25, 50), ("50–100 mi", 50, 100),
+                ("over 100 mi", 100, float("inf"))]
+    clubs_block["nearest_neighbor"] = {
+        "clubs_measured": len(nn_miles),
+        "median_miles": round(statistics.median(nn_miles), 1),
+        "buckets": [[label, sum(1 for d in nn_miles if lo <= d < hi)]
+                    for label, lo, hi in nn_bands],
+    }
     log(f"Clubs: {clubs_block['total']} total across "
         f"{clubs_block['states_with_clubs']} states; "
-        f"{clubs_block['with_website']} have websites.")
+        f"{clubs_block['with_website']} have websites; naming split "
+        f"{clubs_block['naming']}; median nearest-neighbor distance "
+        f"{clubs_block['nearest_neighbor']['median_miles']} mi.")
 
     # --------------------------------------------------------------- schedule
     classes_by_month = Counter()
@@ -141,12 +181,22 @@ def main():
                 for u in p["listed_under"]}
         for cat in cats:
             store_by_category[cat or "Catalog root"] += 1
+    # Price bands for the Ship's Store (by each product's lowest price).
+    price_bands = [("under $10", 0, 10), ("$10–25", 10, 25),
+                   ("$25–50", 25, 50), ("$50–100", 50, 100),
+                   ("$100 and up", 100, float("inf"))]
+    priced_values = [p["price_min"] for p in store_products
+                     if p["price_min"] is not None]
+    price_histogram = [[label, sum(1 for v in priced_values if lo <= v < hi)]
+                       for label, lo, hi in price_bands]
     enrol_products = enrolmart["products"]
     cpdean = satellite["cpdean_awards_collection"]["products"]
     commerce_block = {
         "ships_store": {
             "products": len(store_products),
             "price_stats": money_stats(store_prices),
+            "price_histogram": price_histogram,
+            "unpriced_items": len(store_products) - len(priced_values),
             "by_category": dict(store_by_category.most_common()),
             "items": [{"name": p["name"], "price_min": p["price_min"],
                        "price_max": p["price_max"],
@@ -188,8 +238,30 @@ def main():
         elif s < 600: buckets["5-10 min"] += 1
         elif s < 1200: buckets["10-20 min"] += 1
         else: buckets["over 20 min"] += 1
+    # Per-year picture: hours added, running total, and the median runtime
+    # of that year's uploads (medians resist the long classic films).
+    per_year_secs = defaultdict(list)
+    for v in videos:
+        year = (v["upload_date"] or "")[:4]
+        if year:
+            per_year_secs[year].append(v["duration_seconds"] or 0)
+    by_year = {}
+    running_hours = 0.0
+    for year in sorted(per_year_secs):
+        secs = per_year_secs[year]
+        hours = sum(secs) / 3600
+        running_hours += hours
+        with_duration = [s for s in secs if s]
+        by_year[year] = {
+            "videos": len(secs),
+            "hours": round(hours, 1),
+            "cumulative_hours": round(running_hours, 1),
+            "median_minutes": (round(statistics.median(with_duration) / 60, 1)
+                               if with_duration else None),
+        }
     videos_block = {
         "total": len(videos),
+        "by_year": by_year,
         "total_runtime_hours": round(sum(durations) / 3600, 1),
         "median_duration_minutes": (round(statistics.median(durations) / 60, 1)
                                     if durations else None),
@@ -282,17 +354,37 @@ def main():
     store_prov.pop("pages_visited", None)
     provenance_block["dataset_sources"]["store_products"] = store_prov
 
+    # The per-club schedule source is a URL *pattern* (?sqdno=<squadron
+    # number>); fill the placeholder with a real squadron number from the
+    # data so the Sources panel can show a working, clickable example.
+    sched_prov = dict(provenance_block["dataset_sources"]["class_schedule"])
+    example_sqdno = next(
+        (e["sqdno"] for e in schedule_d.get("per_club", []) if e.get("classes")),
+        clubs[0].get("sqdno") if clubs else None)
+    pattern = sched_prov.get("source_url_pattern", "")
+    if example_sqdno and "<sqdno>" in pattern:
+        sched_prov["example_url"] = pattern.replace("<sqdno>",
+                                                    str(example_sqdno))
+        sched_prov["description"] += (
+            " The link below opens one real club's page; the sqdno query "
+            "parameter is that club's squadron number — change it to view "
+            "any other club's schedule.")
+    provenance_block["dataset_sources"]["class_schedule"] = sched_prov
+
     # Give every dataset a uniform "links" list: the live URLs its evidence
     # was fetched from. Each provenance flavor records them under a
-    # different key (source_url, source_url_pattern, web_sources, or a
-    # sources list that mixes URLs with local file paths) — collect only
-    # actual URLs, never invent one.
+    # different key (source_url, example_url for filled-in patterns,
+    # web_sources, or a sources list that mixes URLs with local file
+    # paths) — collect only actual URLs, never invent one.
     for name, prov in provenance_block["dataset_sources"].items():
         prov = dict(prov)
         links = []
-        for key in ("source_url", "source_url_pattern"):
-            if prov.get(key):
-                links.append(prov[key])
+        if prov.get("source_url"):
+            links.append(prov["source_url"])
+        if prov.get("example_url"):
+            links.append(prov["example_url"])
+        elif prov.get("source_url_pattern"):
+            links.append(prov["source_url_pattern"])
         links.extend(prov.get("web_sources", []))
         links.extend(s for s in prov.get("sources", [])
                      if isinstance(s, str) and s.startswith("http"))
