@@ -1,0 +1,5019 @@
+{
+ "clubs": {
+  "total": 255,
+  "states_with_clubs": 38,
+  "by_state": {
+   "NY": 33,
+   "FL": 29,
+   "CT": 16,
+   "MI": 14,
+   "NC": 13,
+   "CA": 12,
+   "OH": 12,
+   "WA": 12,
+   "MA": 9,
+   "IL": 8,
+   "SC": 8,
+   "MD": 7,
+   "PA": 7,
+   "VA": 7,
+   "NJ": 6,
+   "PR": 6,
+   "TX": 6,
+   "WI": 6,
+   "LA": 5,
+   "TN": 5,
+   "GA": 3,
+   "IA": 3,
+   "ME": 3,
+   "MN": 3,
+   "NH": 3,
+   "OR": 3,
+   "AL": 2,
+   "IN": 2,
+   "KY": 2,
+   "AK": 1,
+   "CO": 1,
+   "DE": 1,
+   "KS": 1,
+   "MS": 1,
+   "NV": 1,
+   "OK": 1,
+   "RI": 1,
+   "VI": 1
+  },
+  "with_website": 232,
+  "with_email": 255,
+  "with_facebook": 93,
+  "outside_us_states": [
+   "Tokyo Sail and Power Squadron"
+  ],
+  "map_points": [
+   {
+    "name": "North Star Sail and Power Squadron",
+    "state": "AK",
+    "lat": 64.81,
+    "lng": -147.72,
+    "website": true,
+    "sqdno": "0076"
+   },
+   {
+    "name": "America's Boating Club North Alabama",
+    "state": "AL",
+    "lat": 34.744765,
+    "lng": -86.670411,
+    "website": true,
+    "sqdno": "2400"
+   },
+   {
+    "name": "Vulcan Power Squadron",
+    "state": "AL",
+    "lat": 33.469624,
+    "lng": -86.806738,
+    "website": true,
+    "sqdno": "6105"
+   },
+   {
+    "name": "America's Boating Club Arrowhead",
+    "state": "CA",
+    "lat": 34.142577,
+    "lng": -117.260572,
+    "website": true,
+    "sqdno": "0195"
+   },
+   {
+    "name": "America's Boating Club Newport",
+    "state": "CA",
+    "lat": 33.62,
+    "lng": -117.87,
+    "website": true,
+    "sqdno": "0300"
+   },
+   {
+    "name": "America's Boating Club Oceanside",
+    "state": "CA",
+    "lat": 33.2015,
+    "lng": -117.3524,
+    "website": true,
+    "sqdno": "5220"
+   },
+   {
+    "name": "America's Boating Club Peralta",
+    "state": "CA",
+    "lat": 37.71,
+    "lng": -122.16,
+    "website": true,
+    "sqdno": "4350"
+   },
+   {
+    "name": "America's Boating Club San Diego",
+    "state": "CA",
+    "lat": 32.7133,
+    "lng": -117.2366,
+    "website": true,
+    "sqdno": "5115"
+   },
+   {
+    "name": "America's Boating Club San Joaquin Delta",
+    "state": "CA",
+    "lat": 38.0213,
+    "lng": -121.3806,
+    "website": true,
+    "sqdno": "5190"
+   },
+   {
+    "name": "America's Boating Club Santa Barbara",
+    "state": "CA",
+    "lat": 34.4,
+    "lng": -119.72,
+    "website": true,
+    "sqdno": "5235"
+   },
+   {
+    "name": "America's Boating Club Tres Rios",
+    "state": "CA",
+    "lat": 33.6,
+    "lng": -117.64,
+    "website": true,
+    "sqdno": "5926"
+   },
+   {
+    "name": "America's Boating Club Ventura",
+    "state": "CA",
+    "lat": 34.33,
+    "lng": -119.31,
+    "website": true,
+    "sqdno": "6045"
+   },
+   {
+    "name": "America's Boating Club of Greater Sacramento",
+    "state": "CA",
+    "lat": 38.633418,
+    "lng": -121.492052,
+    "website": true,
+    "sqdno": "4890"
+   },
+   {
+    "name": "Diablo Sail and Power Squadron",
+    "state": "CA",
+    "lat": 37.86,
+    "lng": -122.07,
+    "website": true,
+    "sqdno": "1530"
+   },
+   {
+    "name": "The Valley Sail and Power Squadron",
+    "state": "CA",
+    "lat": 34.29,
+    "lng": -118.5,
+    "website": true,
+    "sqdno": "5898"
+   },
+   {
+    "name": "America's Boating Club Colorado",
+    "state": "CO",
+    "lat": 40.017235,
+    "lng": -105.285131,
+    "website": true,
+    "sqdno": "0620"
+   },
+   {
+    "name": "America's Boating Club Darien",
+    "state": "CT",
+    "lat": 41.076759,
+    "lng": -73.485254,
+    "website": true,
+    "sqdno": "1365"
+   },
+   {
+    "name": "America's Boating Club Greenwich",
+    "state": "CT",
+    "lat": 41.0502,
+    "lng": -73.6235,
+    "website": true,
+    "sqdno": "0875"
+   },
+   {
+    "name": "America's Boating Club Hartford",
+    "state": "CT",
+    "lat": 41.687,
+    "lng": -72.7308,
+    "website": true,
+    "sqdno": "2220"
+   },
+   {
+    "name": "America's Boating Club Lake Candlewood",
+    "state": "CT",
+    "lat": 41.3768,
+    "lng": -73.4601,
+    "website": true,
+    "sqdno": "2730"
+   },
+   {
+    "name": "America's Boating Club New Britain",
+    "state": "CT",
+    "lat": 41.611,
+    "lng": -72.7774,
+    "website": false,
+    "sqdno": "3690"
+   },
+   {
+    "name": "America's Boating Club New Haven",
+    "state": "CT",
+    "lat": 41.31,
+    "lng": -72.92,
+    "website": true,
+    "sqdno": "3705"
+   },
+   {
+    "name": "America's Boating Club Norwalk",
+    "state": "CT",
+    "lat": 41.09,
+    "lng": -73.42,
+    "website": true,
+    "sqdno": "3900"
+   },
+   {
+    "name": "America's Boating Club Stamford",
+    "state": "CT",
+    "lat": 41.09,
+    "lng": -73.55,
+    "website": true,
+    "sqdno": "5670"
+   },
+   {
+    "name": "America's Boating Club Waterbury",
+    "state": "CT",
+    "lat": 41.55,
+    "lng": -73.03,
+    "website": true,
+    "sqdno": "6150"
+   },
+   {
+    "name": "Manchester Power Squadron",
+    "state": "CT",
+    "lat": 41.7688,
+    "lng": -72.508,
+    "website": false,
+    "sqdno": "3060"
+   },
+   {
+    "name": "Meriden Power Squadron",
+    "state": "CT",
+    "lat": 41.53,
+    "lng": -72.79,
+    "website": true,
+    "sqdno": "3210"
+   },
+   {
+    "name": "Middletown Power Squadron",
+    "state": "CT",
+    "lat": 41.585223,
+    "lng": -72.612797,
+    "website": true,
+    "sqdno": "3300"
+   },
+   {
+    "name": "New London Power Squadron",
+    "state": "CT",
+    "lat": 41.350718,
+    "lng": -72.106245,
+    "website": true,
+    "sqdno": "3720"
+   },
+   {
+    "name": "Norwich Power Squadron",
+    "state": "CT",
+    "lat": 41.714918,
+    "lng": -72.213396,
+    "website": true,
+    "sqdno": "3915"
+   },
+   {
+    "name": "Penfield Power Squadron",
+    "state": "CT",
+    "lat": 41.13,
+    "lng": -73.28,
+    "website": true,
+    "sqdno": "4290"
+   },
+   {
+    "name": "Saybrook Sail and Power Squadron",
+    "state": "CT",
+    "lat": 41.29,
+    "lng": -72.36,
+    "website": true,
+    "sqdno": "5340"
+   },
+   {
+    "name": "America's Boating Club Wilmington",
+    "state": "DE",
+    "lat": 39.73,
+    "lng": -75.53,
+    "website": true,
+    "sqdno": "6270"
+   },
+   {
+    "name": "America's Boating Club Anna Maria Island",
+    "state": "FL",
+    "lat": 27.48,
+    "lng": -82.57,
+    "website": true,
+    "sqdno": "0150"
+   },
+   {
+    "name": "America's Boating Club Cape Coral",
+    "state": "FL",
+    "lat": 26.63,
+    "lng": -81.99,
+    "website": true,
+    "sqdno": "0840"
+   },
+   {
+    "name": "America's Boating Club Clearwater",
+    "state": "FL",
+    "lat": 27.9797,
+    "lng": -82.7794,
+    "website": true,
+    "sqdno": "1110"
+   },
+   {
+    "name": "America's Boating Club Daytona Beach",
+    "state": "FL",
+    "lat": 29.1935,
+    "lng": -81.0536,
+    "website": true,
+    "sqdno": "1395"
+   },
+   {
+    "name": "America's Boating Club Ft. Myers",
+    "state": "FL",
+    "lat": 26.639,
+    "lng": -81.8404,
+    "website": true,
+    "sqdno": "1815"
+   },
+   {
+    "name": "America's Boating Club Harris Chain",
+    "state": "FL",
+    "lat": 28.8,
+    "lng": -81.88,
+    "website": true,
+    "sqdno": "2210"
+   },
+   {
+    "name": "America's Boating Club Jacksonville",
+    "state": "FL",
+    "lat": 30.329882,
+    "lng": -81.651672,
+    "website": true,
+    "sqdno": "2490"
+   },
+   {
+    "name": "America's Boating Club Key West",
+    "state": "FL",
+    "lat": 24.5796,
+    "lng": -81.6849,
+    "website": true,
+    "sqdno": "2625"
+   },
+   {
+    "name": "America's Boating Club Lakeland",
+    "state": "FL",
+    "lat": 28.0327,
+    "lng": -81.9518,
+    "website": true,
+    "sqdno": "2775"
+   },
+   {
+    "name": "America's Boating Club Manatee",
+    "state": "FL",
+    "lat": 27.48,
+    "lng": -82.57,
+    "website": true,
+    "sqdno": "3055"
+   },
+   {
+    "name": "America's Boating Club Marathon",
+    "state": "FL",
+    "lat": 24.727919,
+    "lng": -81.038581,
+    "website": true,
+    "sqdno": "3105"
+   },
+   {
+    "name": "America's Boating Club Marco Island",
+    "state": "FL",
+    "lat": 25.94,
+    "lng": -81.73,
+    "website": true,
+    "sqdno": "3125"
+   },
+   {
+    "name": "America's Boating Club Naples",
+    "state": "FL",
+    "lat": 26.14,
+    "lng": -81.79,
+    "website": true,
+    "sqdno": "3615"
+   },
+   {
+    "name": "America's Boating Club Palm Beach",
+    "state": "FL",
+    "lat": 26.8027,
+    "lng": -80.0791,
+    "website": true,
+    "sqdno": "4170"
+   },
+   {
+    "name": "America's Boating Club Peace River",
+    "state": "FL",
+    "lat": 26.990475,
+    "lng": -82.096372,
+    "website": true,
+    "sqdno": "4245"
+   },
+   {
+    "name": "America's Boating Club Pensacola",
+    "state": "FL",
+    "lat": 30.422282,
+    "lng": -87.224763,
+    "website": true,
+    "sqdno": "4320"
+   },
+   {
+    "name": "America's Boating Club Pompano Beach",
+    "state": "FL",
+    "lat": 26.2789,
+    "lng": -80.1171,
+    "website": true,
+    "sqdno": "4440"
+   },
+   {
+    "name": "America's Boating Club San Carlos Bay",
+    "state": "FL",
+    "lat": 26.4973,
+    "lng": -81.9071,
+    "website": true,
+    "sqdno": "5100"
+   },
+   {
+    "name": "America's Boating Club Sanibel Captiva",
+    "state": "FL",
+    "lat": 26.4514,
+    "lng": -82.086825,
+    "website": true,
+    "sqdno": "5071"
+   },
+   {
+    "name": "America's Boating Club Sarasota",
+    "state": "FL",
+    "lat": 27.3109,
+    "lng": -82.5195,
+    "website": true,
+    "sqdno": "5295"
+   },
+   {
+    "name": "America's Boating Club South Brevard",
+    "state": "FL",
+    "lat": 28.08,
+    "lng": -80.6,
+    "website": true,
+    "sqdno": "0330"
+   },
+   {
+    "name": "America's Boating Club St Lucie River",
+    "state": "FL",
+    "lat": 27.196834,
+    "lng": -80.253786,
+    "website": true,
+    "sqdno": "5010"
+   },
+   {
+    "name": "America's Boating Club St. Petersburg",
+    "state": "FL",
+    "lat": 27.789015,
+    "lng": -82.677939,
+    "website": true,
+    "sqdno": "5040"
+   },
+   {
+    "name": "America's Boating Club of Tampa Bay",
+    "state": "FL",
+    "lat": 27.95,
+    "lng": -82.48,
+    "website": true,
+    "sqdno": "5835"
+   },
+   {
+    "name": "Cocoa Beach Sail and Power Squadron",
+    "state": "FL",
+    "lat": 28.332451,
+    "lng": -80.612066,
+    "website": true,
+    "sqdno": "1155"
+   },
+   {
+    "name": "Gainesville Sail and Power Squadron",
+    "state": "FL",
+    "lat": 29.7704,
+    "lng": -82.2741,
+    "website": true,
+    "sqdno": "1965"
+   },
+   {
+    "name": "Miami Sail and Power Squadron",
+    "state": "FL",
+    "lat": 25.773523,
+    "lng": -80.357232,
+    "website": false,
+    "sqdno": "3255"
+   },
+   {
+    "name": "Venice Sail and Power Squadron",
+    "state": "FL",
+    "lat": 27.053022,
+    "lng": -82.404096,
+    "website": true,
+    "sqdno": "6030"
+   },
+   {
+    "name": "Vero Beach Power Squadron",
+    "state": "FL",
+    "lat": 27.64,
+    "lng": -80.39,
+    "website": true,
+    "sqdno": "6075"
+   },
+   {
+    "name": "America's Boating Club Atlanta",
+    "state": "GA",
+    "lat": 33.888,
+    "lng": -84.2911,
+    "website": true,
+    "sqdno": "0240"
+   },
+   {
+    "name": "America's Boating Club Golden Isles",
+    "state": "GA",
+    "lat": 31.16916,
+    "lng": -81.382421,
+    "website": true,
+    "sqdno": "2000"
+   },
+   {
+    "name": "America's Boating Club Savannah",
+    "state": "GA",
+    "lat": 31.9856,
+    "lng": -81.1288,
+    "website": true,
+    "sqdno": "5970"
+   },
+   {
+    "name": "America's Boating Club Des Moines",
+    "state": "IA",
+    "lat": 41.6142,
+    "lng": -93.5543,
+    "website": true,
+    "sqdno": "1500"
+   },
+   {
+    "name": "Four Rivers Sail and Power Squadron",
+    "state": "IA",
+    "lat": 41.97,
+    "lng": -91.66,
+    "website": true,
+    "sqdno": "0945"
+   },
+   {
+    "name": "Waterloo Sail and Power Squadron",
+    "state": "IA",
+    "lat": 42.5274,
+    "lng": -92.2718,
+    "website": false,
+    "sqdno": "6170"
+   },
+   {
+    "name": "America's Boating Club Fox Valley",
+    "state": "IL",
+    "lat": 42.03,
+    "lng": -88.08,
+    "website": true,
+    "sqdno": "1935"
+   },
+   {
+    "name": "America's Boating Club Illinois Valley",
+    "state": "IL",
+    "lat": 40.74,
+    "lng": -89.6,
+    "website": true,
+    "sqdno": "2430"
+   },
+   {
+    "name": "America's Boating Club Land of Lincoln",
+    "state": "IL",
+    "lat": 39.78,
+    "lng": -89.64,
+    "website": true,
+    "sqdno": "2805"
+   },
+   {
+    "name": "America's Boating Club Mid Illini",
+    "state": "IL",
+    "lat": 40.47,
+    "lng": -88.97,
+    "website": true,
+    "sqdno": "3316"
+   },
+   {
+    "name": "America's Boating Club Waukegan",
+    "state": "IL",
+    "lat": 42.3639,
+    "lng": -87.8447,
+    "website": true,
+    "sqdno": "6195"
+   },
+   {
+    "name": "America's Boating Club of the North Shore",
+    "state": "IL",
+    "lat": 42.16,
+    "lng": -87.96,
+    "website": true,
+    "sqdno": "5505"
+   },
+   {
+    "name": "DuPage Sail and Power Squadron",
+    "state": "IL",
+    "lat": 41.8086,
+    "lng": -88.0231,
+    "website": true,
+    "sqdno": "1575"
+   },
+   {
+    "name": "Rockford Power Squadron",
+    "state": "IL",
+    "lat": 42.2832,
+    "lng": -89.004,
+    "website": true,
+    "sqdno": "4770"
+   },
+   {
+    "name": "America's Boating Club Michigan City",
+    "state": "IN",
+    "lat": 41.71,
+    "lng": -86.87,
+    "website": true,
+    "sqdno": "3285"
+   },
+   {
+    "name": "Wabash Valley Power Squadron",
+    "state": "IN",
+    "lat": 39.4668,
+    "lng": -87.4112,
+    "website": true,
+    "sqdno": "6120"
+   },
+   {
+    "name": "Kansas City Power Squadron",
+    "state": "KS",
+    "lat": 39.115733,
+    "lng": -94.627139,
+    "website": true,
+    "sqdno": "2565"
+   },
+   {
+    "name": "America's Boating Club Louisville",
+    "state": "KY",
+    "lat": 38.250734,
+    "lng": -85.747646,
+    "website": true,
+    "sqdno": "2970"
+   },
+   {
+    "name": "Bluegrass Power Squadron",
+    "state": "KY",
+    "lat": 38.01388,
+    "lng": -84.581522,
+    "website": true,
+    "sqdno": "0570"
+   },
+   {
+    "name": "America's Boating Club Lake Charles",
+    "state": "LA",
+    "lat": 30.2894,
+    "lng": -93.0808,
+    "website": true,
+    "sqdno": "2745"
+   },
+   {
+    "name": "America's Boating Club Lake Pontchartrain",
+    "state": "LA",
+    "lat": 30.37,
+    "lng": -90.08,
+    "website": true,
+    "sqdno": "2793"
+   },
+   {
+    "name": "America's Boating Club New Orleans",
+    "state": "LA",
+    "lat": 30.007081,
+    "lng": -90.109384,
+    "website": true,
+    "sqdno": "3735"
+   },
+   {
+    "name": "Baton Rouge Sail and Power Squadron",
+    "state": "LA",
+    "lat": 30.44,
+    "lng": -91.12,
+    "website": true,
+    "sqdno": "0375"
+   },
+   {
+    "name": "Shreveport Sail and Power Squadron",
+    "state": "LA",
+    "lat": 32.47,
+    "lng": -93.79,
+    "website": true,
+    "sqdno": "5460"
+   },
+   {
+    "name": "America's Boating Club Buzzards Bay",
+    "state": "MA",
+    "lat": 41.52,
+    "lng": -70.66,
+    "website": true,
+    "sqdno": "0735"
+   },
+   {
+    "name": "America's Boating Club Cape Cod",
+    "state": "MA",
+    "lat": 41.6607,
+    "lng": -70.2924,
+    "website": true,
+    "sqdno": "0825"
+   },
+   {
+    "name": "America's Boating Club Charles River",
+    "state": "MA",
+    "lat": 42.4456,
+    "lng": -71.2304,
+    "website": true,
+    "sqdno": "1005"
+   },
+   {
+    "name": "America's Boating Club Great Blue Hill",
+    "state": "MA",
+    "lat": 42.2971,
+    "lng": -71.227,
+    "website": true,
+    "sqdno": "2040"
+   },
+   {
+    "name": "America's Boating Club MetroWest Boston",
+    "state": "MA",
+    "lat": 42.287476,
+    "lng": -71.35741,
+    "website": true,
+    "sqdno": "3810"
+   },
+   {
+    "name": "America's Boating Club North Shore",
+    "state": "MA",
+    "lat": 42.5685,
+    "lng": -70.8619,
+    "website": true,
+    "sqdno": "0510"
+   },
+   {
+    "name": "America's Boating Club Old Colony",
+    "state": "MA",
+    "lat": 42.1315,
+    "lng": -70.8467,
+    "website": true,
+    "sqdno": "4020"
+   },
+   {
+    "name": "America's Boating Club Springfield",
+    "state": "MA",
+    "lat": 42.13,
+    "lng": -72.75,
+    "website": true,
+    "sqdno": "5655"
+   },
+   {
+    "name": "America's Boating Club the Berkshires",
+    "state": "MA",
+    "lat": 42.45,
+    "lng": -73.26,
+    "website": true,
+    "sqdno": "0480"
+   },
+   {
+    "name": "America's Boating Club Baltimore",
+    "state": "MD",
+    "lat": 39.2844,
+    "lng": -76.5422,
+    "website": true,
+    "sqdno": "1560"
+   },
+   {
+    "name": "America's Boating Club Kent",
+    "state": "MD",
+    "lat": 38.946,
+    "lng": -76.491,
+    "website": true,
+    "sqdno": "0165"
+   },
+   {
+    "name": "America's Boating Club Ocean City",
+    "state": "MD",
+    "lat": 38.347514,
+    "lng": -75.186557,
+    "website": true,
+    "sqdno": "3980"
+   },
+   {
+    "name": "America's Boating Club Patapsco River",
+    "state": "MD",
+    "lat": 39.11,
+    "lng": -76.55,
+    "website": true,
+    "sqdno": "4200"
+   },
+   {
+    "name": "America's Boating Club Southern Maryland",
+    "state": "MD",
+    "lat": 38.2267,
+    "lng": -76.4333,
+    "website": true,
+    "sqdno": "4230"
+   },
+   {
+    "name": "Cambridge Sail and Power Squadron",
+    "state": "MD",
+    "lat": 38.56,
+    "lng": -76.07,
+    "website": true,
+    "sqdno": "0765"
+   },
+   {
+    "name": "Potomac River Power Squadron",
+    "state": "MD",
+    "lat": 39.066,
+    "lng": -76.9783,
+    "website": true,
+    "sqdno": "4545"
+   },
+   {
+    "name": "America's Boating Club Mid Coast Maine",
+    "state": "ME",
+    "lat": 43.903,
+    "lng": -69.9809,
+    "website": true,
+    "sqdno": "6210"
+   },
+   {
+    "name": "America's Boating Club Penobscot Bay",
+    "state": "ME",
+    "lat": 44.83,
+    "lng": -68.78,
+    "website": true,
+    "sqdno": "4305"
+   },
+   {
+    "name": "Kennebec River Sail and Power Squadron",
+    "state": "ME",
+    "lat": 44.098538,
+    "lng": -70.191619,
+    "website": false,
+    "sqdno": "2580"
+   },
+   {
+    "name": "America's Boating Club Birmingham",
+    "state": "MI",
+    "lat": 42.57,
+    "lng": -83.24,
+    "website": true,
+    "sqdno": "0525"
+   },
+   {
+    "name": "America's Boating Club Dearborn",
+    "state": "MI",
+    "lat": 42.2945,
+    "lng": -83.3741,
+    "website": true,
+    "sqdno": "1410"
+   },
+   {
+    "name": "America's Boating Club Detroit",
+    "state": "MI",
+    "lat": 42.347429,
+    "lng": -83.060398,
+    "website": true,
+    "sqdno": "1515"
+   },
+   {
+    "name": "America's Boating Club Flint",
+    "state": "MI",
+    "lat": 43.012321,
+    "lng": -83.687768,
+    "website": true,
+    "sqdno": "1755"
+   },
+   {
+    "name": "America's Boating Club Grand Traverse Bay",
+    "state": "MI",
+    "lat": 44.75,
+    "lng": -85.6,
+    "website": true,
+    "sqdno": "2025"
+   },
+   {
+    "name": "America's Boating Club Grosse Pointe",
+    "state": "MI",
+    "lat": 42.4243,
+    "lng": -82.8975,
+    "website": true,
+    "sqdno": "2160"
+   },
+   {
+    "name": "America's Boating Club Mid Michigan",
+    "state": "MI",
+    "lat": 42.700784,
+    "lng": -84.549005,
+    "website": true,
+    "sqdno": "2820"
+   },
+   {
+    "name": "America's Boating Club Saginaw Bay",
+    "state": "MI",
+    "lat": 43.5968,
+    "lng": -83.9583,
+    "website": true,
+    "sqdno": "4920"
+   },
+   {
+    "name": "America's Boating Club St. Clair Shores",
+    "state": "MI",
+    "lat": 42.4633,
+    "lng": -82.9002,
+    "website": true,
+    "sqdno": "4945"
+   },
+   {
+    "name": "Anchor Bay Power Squadron",
+    "state": "MI",
+    "lat": 42.6814,
+    "lng": -82.776,
+    "website": true,
+    "sqdno": "0120"
+   },
+   {
+    "name": "Ann Arbor Power Squadron",
+    "state": "MI",
+    "lat": 42.304247,
+    "lng": -83.706756,
+    "website": true,
+    "sqdno": "0180"
+   },
+   {
+    "name": "Mount Clemens Power Squadron",
+    "state": "MI",
+    "lat": 42.577562,
+    "lng": -82.894052,
+    "website": true,
+    "sqdno": "3540"
+   },
+   {
+    "name": "Port Huron Sail and Power Squadron",
+    "state": "MI",
+    "lat": 42.9793,
+    "lng": -82.4643,
+    "website": true,
+    "sqdno": "4485"
+   },
+   {
+    "name": "Wyandotte Power Squadron",
+    "state": "MI",
+    "lat": 42.22,
+    "lng": -83.26,
+    "website": true,
+    "sqdno": "6345"
+   },
+   {
+    "name": "America's Boating Club Duluth",
+    "state": "MN",
+    "lat": 46.768475,
+    "lng": -92.086497,
+    "website": true,
+    "sqdno": "1545"
+   },
+   {
+    "name": "America's Boating Club Minnetonka",
+    "state": "MN",
+    "lat": 44.954,
+    "lng": -93.4312,
+    "website": true,
+    "sqdno": "3405"
+   },
+   {
+    "name": "St. Paul Sail and Power Squadron",
+    "state": "MN",
+    "lat": 44.914007,
+    "lng": -93.172747,
+    "website": true,
+    "sqdno": "5025"
+   },
+   {
+    "name": "Mississippi Gulf Coast Sail and Power Squadron",
+    "state": "MS",
+    "lat": 30.38,
+    "lng": -89.06,
+    "website": false,
+    "sqdno": "3451"
+   },
+   {
+    "name": "America's Boating Club Cape Fear",
+    "state": "NC",
+    "lat": 34.223653,
+    "lng": -77.886213,
+    "website": true,
+    "sqdno": "0855"
+   },
+   {
+    "name": "America's Boating Club Cape Lookout",
+    "state": "NC",
+    "lat": 35.1369,
+    "lng": -77.1623,
+    "website": true,
+    "sqdno": "0870"
+   },
+   {
+    "name": "America's Boating Club Charlotte",
+    "state": "NC",
+    "lat": 35.131586,
+    "lng": -80.857749,
+    "website": true,
+    "sqdno": "1035"
+   },
+   {
+    "name": "America's Boating Club Fayetteville",
+    "state": "NC",
+    "lat": 35.05,
+    "lng": -78.87,
+    "website": true,
+    "sqdno": "1740"
+   },
+   {
+    "name": "America's Boating Club Pamlico",
+    "state": "NC",
+    "lat": 35.5828,
+    "lng": -77.0955,
+    "website": true,
+    "sqdno": "4175"
+   },
+   {
+    "name": "America's Boating Club Raleigh",
+    "state": "NC",
+    "lat": 35.775,
+    "lng": -78.6336,
+    "website": true,
+    "sqdno": "4665"
+   },
+   {
+    "name": "America's Boating Club Shallotte River",
+    "state": "NC",
+    "lat": 33.95,
+    "lng": -78.39,
+    "website": true,
+    "sqdno": "5435"
+   },
+   {
+    "name": "America's Boating Club Southport",
+    "state": "NC",
+    "lat": 33.92,
+    "lng": -78.02,
+    "website": true,
+    "sqdno": "5630"
+   },
+   {
+    "name": "America's Boating Club Tar River",
+    "state": "NC",
+    "lat": 35.6768,
+    "lng": -77.3482,
+    "website": true,
+    "sqdno": "5855"
+   },
+   {
+    "name": "America's Boating Club of the Crystal Coast",
+    "state": "NC",
+    "lat": 34.72532,
+    "lng": -76.753069,
+    "website": true,
+    "sqdno": "1810"
+   },
+   {
+    "name": "Blue Ridge Sail and Power Squadron",
+    "state": "NC",
+    "lat": 35.597075,
+    "lng": -82.556533,
+    "website": true,
+    "sqdno": "0210"
+   },
+   {
+    "name": "Durham Sail and Power Squadron",
+    "state": "NC",
+    "lat": 35.955,
+    "lng": -78.9434,
+    "website": true,
+    "sqdno": "1590"
+   },
+   {
+    "name": "Winston Salem Sail and Power Squadron",
+    "state": "NC",
+    "lat": 36.1131,
+    "lng": -80.1983,
+    "website": true,
+    "sqdno": "6320"
+   },
+   {
+    "name": "America's Boating Club Amoskeag",
+    "state": "NH",
+    "lat": 42.86,
+    "lng": -71.61,
+    "website": false,
+    "sqdno": "0105"
+   },
+   {
+    "name": "America's Boating Club Portsmouth",
+    "state": "NH",
+    "lat": 43.05,
+    "lng": -70.78,
+    "website": true,
+    "sqdno": "4515"
+   },
+   {
+    "name": "New Hampshire Lakes Region",
+    "state": "NH",
+    "lat": 43.567,
+    "lng": -71.4823,
+    "website": true,
+    "sqdno": "2794"
+   },
+   {
+    "name": "Absecon Island Power Squadron",
+    "state": "NJ",
+    "lat": 39.45,
+    "lng": -74.72,
+    "website": true,
+    "sqdno": "0015"
+   },
+   {
+    "name": "America's Boating Club Lake Hopatcong",
+    "state": "NJ",
+    "lat": 40.795236,
+    "lng": -74.487288,
+    "website": true,
+    "sqdno": "2715"
+   },
+   {
+    "name": "America's Boating Club Raritan Bay",
+    "state": "NJ",
+    "lat": 40.43,
+    "lng": -74.2,
+    "website": true,
+    "sqdno": "4650"
+   },
+   {
+    "name": "America's Boating Club Shrewsbury",
+    "state": "NJ",
+    "lat": 40.36,
+    "lng": -74,
+    "website": true,
+    "sqdno": "5475"
+   },
+   {
+    "name": "Liberty Harbor Power Squadron",
+    "state": "NJ",
+    "lat": 40.7142,
+    "lng": -74.0692,
+    "website": true,
+    "sqdno": "2840"
+   },
+   {
+    "name": "Watchung Sail and Power Squadron",
+    "state": "NJ",
+    "lat": 40.6176,
+    "lng": -74.3695,
+    "website": true,
+    "sqdno": "6135"
+   },
+   {
+    "name": "Las Vegas Sail & Power Squadron",
+    "state": "NV",
+    "lat": 36.23,
+    "lng": -115.29,
+    "website": true,
+    "sqdno": "2835"
+   },
+   {
+    "name": "America's Boating Club Bayside",
+    "state": "NY",
+    "lat": 40.76268,
+    "lng": -73.774457,
+    "website": false,
+    "sqdno": "0390"
+   },
+   {
+    "name": "America's Boating Club Bronx",
+    "state": "NY",
+    "lat": 40.826065,
+    "lng": -73.819581,
+    "website": false,
+    "sqdno": "0675"
+   },
+   {
+    "name": "America's Boating Club Captree",
+    "state": "NY",
+    "lat": 40.6894,
+    "lng": -73.3745,
+    "website": true,
+    "sqdno": "0885"
+   },
+   {
+    "name": "America's Boating Club Finger Lakes",
+    "state": "NY",
+    "lat": 42.2066,
+    "lng": -76.8226,
+    "website": true,
+    "sqdno": "5400"
+   },
+   {
+    "name": "America's Boating Club Great South Bay",
+    "state": "NY",
+    "lat": 40.74,
+    "lng": -73.18,
+    "website": true,
+    "sqdno": "2070"
+   },
+   {
+    "name": "America's Boating Club Iroquois",
+    "state": "NY",
+    "lat": 43.219563,
+    "lng": -77.461587,
+    "website": true,
+    "sqdno": "2455"
+   },
+   {
+    "name": "America's Boating Club Jones Beach",
+    "state": "NY",
+    "lat": 40.679513,
+    "lng": -73.491015,
+    "website": true,
+    "sqdno": "2520"
+   },
+   {
+    "name": "America's Boating Club Moriches Bay",
+    "state": "NY",
+    "lat": 40.743932,
+    "lng": -72.876043,
+    "website": false,
+    "sqdno": "3510"
+   },
+   {
+    "name": "America's Boating Club Neptune",
+    "state": "NY",
+    "lat": 40.84,
+    "lng": -73.4,
+    "website": true,
+    "sqdno": "3645"
+   },
+   {
+    "name": "America's Boating Club North River",
+    "state": "NY",
+    "lat": 40.71,
+    "lng": -73.99,
+    "website": true,
+    "sqdno": "3885"
+   },
+   {
+    "name": "America's Boating Club Oyster Bay",
+    "state": "NY",
+    "lat": 40.78,
+    "lng": -73.47,
+    "website": true,
+    "sqdno": "4125"
+   },
+   {
+    "name": "America's Boating Club Patchogue Bay",
+    "state": "NY",
+    "lat": 40.7718,
+    "lng": -72.9949,
+    "website": true,
+    "sqdno": "4215"
+   },
+   {
+    "name": "America's Boating Club Peconic Bay",
+    "state": "NY",
+    "lat": 40.881,
+    "lng": -72.5361,
+    "website": true,
+    "sqdno": "4260"
+   },
+   {
+    "name": "America's Boating Club Port Washington",
+    "state": "NY",
+    "lat": 40.8387,
+    "lng": -73.6912,
+    "website": false,
+    "sqdno": "2865"
+   },
+   {
+    "name": "America's Boating Club Rochester",
+    "state": "NY",
+    "lat": 43.2244,
+    "lng": -77.595,
+    "website": true,
+    "sqdno": "4755"
+   },
+   {
+    "name": "America's Boating Club Sewanhaka",
+    "state": "NY",
+    "lat": 40.65,
+    "lng": -73.58,
+    "website": true,
+    "sqdno": "5430"
+   },
+   {
+    "name": "America's Boating Club Smithtown Bay",
+    "state": "NY",
+    "lat": 40.8903,
+    "lng": -73.169,
+    "website": true,
+    "sqdno": "5520"
+   },
+   {
+    "name": "America's Boating Club Staten Island",
+    "state": "NY",
+    "lat": 40.58,
+    "lng": -74.14,
+    "website": true,
+    "sqdno": "5700"
+   },
+   {
+    "name": "America's Boating Club Susquenango",
+    "state": "NY",
+    "lat": 42.1,
+    "lng": -75.91,
+    "website": true,
+    "sqdno": "5760"
+   },
+   {
+    "name": "America's Boating Club Swiftwater",
+    "state": "NY",
+    "lat": 43.0772,
+    "lng": -78.8339,
+    "website": true,
+    "sqdno": "5775"
+   },
+   {
+    "name": "America's Boating Club Syracuse",
+    "state": "NY",
+    "lat": 43.04,
+    "lng": -76.14,
+    "website": true,
+    "sqdno": "5790"
+   },
+   {
+    "name": "Auburn Power Squadron",
+    "state": "NY",
+    "lat": 42.929958,
+    "lng": -76.562605,
+    "website": false,
+    "sqdno": "0270"
+   },
+   {
+    "name": "City Island Sail and Power Squadron",
+    "state": "NY",
+    "lat": 40.8719,
+    "lng": -73.8039,
+    "website": true,
+    "sqdno": "1100"
+   },
+   {
+    "name": "Hempstead Bay Power Squadron",
+    "state": "NY",
+    "lat": 40.67,
+    "lng": -73.67,
+    "website": true,
+    "sqdno": "2265"
+   },
+   {
+    "name": "Ithaca Sail and Power Squadron",
+    "state": "NY",
+    "lat": 42.448497,
+    "lng": -76.492911,
+    "website": true,
+    "sqdno": "2460"
+   },
+   {
+    "name": "Lake George Power Squadron",
+    "state": "NY",
+    "lat": 43.080094,
+    "lng": -73.780644,
+    "website": true,
+    "sqdno": "2760"
+   },
+   {
+    "name": "Lockport Sail and Power Squadron",
+    "state": "NY",
+    "lat": 43.2631,
+    "lng": -78.7339,
+    "website": true,
+    "sqdno": "2895"
+   },
+   {
+    "name": "Mohawk Hudson Sail and Power Squadron",
+    "state": "NY",
+    "lat": 42.66,
+    "lng": -73.79,
+    "website": true,
+    "sqdno": "3480"
+   },
+   {
+    "name": "New York Sail and Power Squadron",
+    "state": "NY",
+    "lat": 40.71,
+    "lng": -73.99,
+    "website": true,
+    "sqdno": "3780"
+   },
+   {
+    "name": "Old Field Point Power Squadron",
+    "state": "NY",
+    "lat": 40.930004,
+    "lng": -73.101467,
+    "website": false,
+    "sqdno": "4035"
+   },
+   {
+    "name": "South Shore",
+    "state": "NY",
+    "lat": 40.714915,
+    "lng": -73.556088,
+    "website": false,
+    "sqdno": "5640"
+   },
+   {
+    "name": "Storm King Sail and Power Squadron",
+    "state": "NY",
+    "lat": 41.5,
+    "lng": -74.02,
+    "website": true,
+    "sqdno": "5710"
+   },
+   {
+    "name": "Utica Sail and Power Squadron",
+    "state": "NY",
+    "lat": 43.163926,
+    "lng": -75.278335,
+    "website": true,
+    "sqdno": "6000"
+   },
+   {
+    "name": "Akron Sail and Power Squadron",
+    "state": "OH",
+    "lat": 41.1403,
+    "lng": -81.4761,
+    "website": true,
+    "sqdno": "0045"
+   },
+   {
+    "name": "America's Boating Club Berea",
+    "state": "OH",
+    "lat": 41.36,
+    "lng": -81.86,
+    "website": true,
+    "sqdno": "0495"
+   },
+   {
+    "name": "America's Boating Club Central Ohio",
+    "state": "OH",
+    "lat": 40.18,
+    "lng": -82.99,
+    "website": true,
+    "sqdno": "1185"
+   },
+   {
+    "name": "America's Boating Club Dayton",
+    "state": "OH",
+    "lat": 39.640187,
+    "lng": -84.08245,
+    "website": true,
+    "sqdno": "1380"
+   },
+   {
+    "name": "America's Boating Club Mansfield",
+    "state": "OH",
+    "lat": 40.76,
+    "lng": -82.52,
+    "website": true,
+    "sqdno": "3090"
+   },
+   {
+    "name": "America's Boating Club Mosquito Lake",
+    "state": "OH",
+    "lat": 41.33,
+    "lng": -80.72,
+    "website": true,
+    "sqdno": "3525"
+   },
+   {
+    "name": "America's Boating Club North Coast Ohio",
+    "state": "OH",
+    "lat": 41.47,
+    "lng": -81.85,
+    "website": true,
+    "sqdno": "4815"
+   },
+   {
+    "name": "America's Boating Club Port Clinton",
+    "state": "OH",
+    "lat": 41.5,
+    "lng": -82.93,
+    "website": true,
+    "sqdno": "4470"
+   },
+   {
+    "name": "America's Boating Club Sandusky",
+    "state": "OH",
+    "lat": 41.4028,
+    "lng": -82.7181,
+    "website": true,
+    "sqdno": "5130"
+   },
+   {
+    "name": "America's Boating Club Vermilion",
+    "state": "OH",
+    "lat": 41.3884,
+    "lng": -82.3643,
+    "website": true,
+    "sqdno": "6060"
+   },
+   {
+    "name": "America's Boating Club Western Lake Erie",
+    "state": "OH",
+    "lat": 41.66,
+    "lng": -83.58,
+    "website": true,
+    "sqdno": "5910"
+   },
+   {
+    "name": "Stark County Power Squadron",
+    "state": "OH",
+    "lat": 40.81,
+    "lng": -81.37,
+    "website": true,
+    "sqdno": "5685"
+   },
+   {
+    "name": "Oklahoma City Sail and Power Squadron",
+    "state": "OK",
+    "lat": 35.513645,
+    "lng": -97.531908,
+    "website": true,
+    "sqdno": "4005"
+   },
+   {
+    "name": "America's Boating Club Beaverton",
+    "state": "OR",
+    "lat": 45.530318,
+    "lng": -122.703348,
+    "website": true,
+    "sqdno": "0425"
+   },
+   {
+    "name": "America's Boating Club Coos Bay",
+    "state": "OR",
+    "lat": 43.362812,
+    "lng": -124.233101,
+    "website": true,
+    "sqdno": "1215"
+   },
+   {
+    "name": "Portland Power Squadron",
+    "state": "OR",
+    "lat": 45.5026,
+    "lng": -122.771,
+    "website": true,
+    "sqdno": "4500"
+   },
+   {
+    "name": "America's Boating Club Erie",
+    "state": "PA",
+    "lat": 42.125962,
+    "lng": -80.08601,
+    "website": true,
+    "sqdno": "1635"
+   },
+   {
+    "name": "America's Boating Club South Central Pennsylvania",
+    "state": "PA",
+    "lat": 39.97,
+    "lng": -76.7867,
+    "website": true,
+    "sqdno": "6375"
+   },
+   {
+    "name": "America's Boating Club Valley Forge",
+    "state": "PA",
+    "lat": 40.03,
+    "lng": -75.51,
+    "website": true,
+    "sqdno": "3045"
+   },
+   {
+    "name": "Delaware River Sail and Power Squadron",
+    "state": "PA",
+    "lat": 39.95,
+    "lng": -75.16,
+    "website": true,
+    "sqdno": "1440"
+   },
+   {
+    "name": "Delhigh Power Squadron",
+    "state": "PA",
+    "lat": 40.6278,
+    "lng": -75.3955,
+    "website": true,
+    "sqdno": "1455"
+   },
+   {
+    "name": "Pittsburgh Power Squadron",
+    "state": "PA",
+    "lat": 40.42,
+    "lng": -79.76,
+    "website": true,
+    "sqdno": "4395"
+   },
+   {
+    "name": "Ten Mile Power Squadron",
+    "state": "PA",
+    "lat": 40.01,
+    "lng": -79.89,
+    "website": false,
+    "sqdno": "5895"
+   },
+   {
+    "name": "America's Boating Club Arecibo",
+    "state": "PR",
+    "lat": 18.45,
+    "lng": -66.73,
+    "website": true,
+    "sqdno": "0192"
+   },
+   {
+    "name": "America's Boating Club Humacao",
+    "state": "PR",
+    "lat": 18.2551,
+    "lng": -65.9776,
+    "website": false,
+    "sqdno": "2385"
+   },
+   {
+    "name": "America's Boating Club San Juan",
+    "state": "PR",
+    "lat": 18.3754,
+    "lng": -66.0577,
+    "website": true,
+    "sqdno": "5205"
+   },
+   {
+    "name": "Boqueron Power Squadron",
+    "state": "PR",
+    "lat": 17.99,
+    "lng": -67.15,
+    "website": false,
+    "sqdno": "0595"
+   },
+   {
+    "name": "Carolina Sail and Power Squadron",
+    "state": "PR",
+    "lat": 18.4683,
+    "lng": -66.1064,
+    "website": false,
+    "sqdno": "0895"
+   },
+   {
+    "name": "Ponce Power Squadron",
+    "state": "PR",
+    "lat": 18.0179,
+    "lng": -66.6229,
+    "website": false,
+    "sqdno": "4455"
+   },
+   {
+    "name": "America's Boating Club Narragansett Bay",
+    "state": "RI",
+    "lat": 41.81,
+    "lng": -71.46,
+    "website": false,
+    "sqdno": "3630"
+   },
+   {
+    "name": "America's Boating Club Golden Corner Lakes",
+    "state": "SC",
+    "lat": 34.68,
+    "lng": -82.95,
+    "website": true,
+    "sqdno": "5896"
+   },
+   {
+    "name": "America's Boating Club Hilton Head",
+    "state": "SC",
+    "lat": 32.1625,
+    "lng": -80.7541,
+    "website": true,
+    "sqdno": "2270"
+   },
+   {
+    "name": "America's Boating Club Lake Murray",
+    "state": "SC",
+    "lat": 34.0004,
+    "lng": -81.033418,
+    "website": true,
+    "sqdno": "2785"
+   },
+   {
+    "name": "America's Boating Club North Strand",
+    "state": "SC",
+    "lat": 33.87,
+    "lng": -78.63,
+    "website": true,
+    "sqdno": "3890"
+   },
+   {
+    "name": "America's Boating Club Thurmond Lake",
+    "state": "SC",
+    "lat": 33.9231,
+    "lng": -82.2423,
+    "website": true,
+    "sqdno": "5897"
+   },
+   {
+    "name": "America's Boating Club of Beaufort",
+    "state": "SC",
+    "lat": 32.4123,
+    "lng": -80.7058,
+    "website": true,
+    "sqdno": "0405"
+   },
+   {
+    "name": "America's Boating Club of the Catawba",
+    "state": "SC",
+    "lat": 35,
+    "lng": -80.94,
+    "website": true,
+    "sqdno": "0930"
+   },
+   {
+    "name": "Lake Hartwell Sail and Power Squadron",
+    "state": "SC",
+    "lat": 34.51,
+    "lng": -82.64,
+    "website": true,
+    "sqdno": "2100"
+   },
+   {
+    "name": "America's Boating Club Knoxville",
+    "state": "TN",
+    "lat": 35.924385,
+    "lng": -84.001468,
+    "website": true,
+    "sqdno": "2700"
+   },
+   {
+    "name": "America's Boating Club Music City",
+    "state": "TN",
+    "lat": 36.2447,
+    "lng": -86.616,
+    "website": true,
+    "sqdno": "3560"
+   },
+   {
+    "name": "America's Boating Club Oak Ridge",
+    "state": "TN",
+    "lat": 36.01588,
+    "lng": -84.262297,
+    "website": true,
+    "sqdno": "3960"
+   },
+   {
+    "name": "Chattanooga Sail and Power Squadron",
+    "state": "TN",
+    "lat": 35.061446,
+    "lng": -85.247839,
+    "website": true,
+    "sqdno": "1050"
+   },
+   {
+    "name": "Memphis Sail and Power Squadron",
+    "state": "TN",
+    "lat": 35.1,
+    "lng": -90,
+    "website": false,
+    "sqdno": "3195"
+   },
+   {
+    "name": "America's Boating Club Houston",
+    "state": "TX",
+    "lat": 29.689601,
+    "lng": -95.510588,
+    "website": true,
+    "sqdno": "2370"
+   },
+   {
+    "name": "America's Boating Club Lower Rio Grand Valley",
+    "state": "TX",
+    "lat": 26.19,
+    "lng": -97.68,
+    "website": true,
+    "sqdno": "3005"
+   },
+   {
+    "name": "Austin Power Squadron",
+    "state": "TX",
+    "lat": 30.290671,
+    "lng": -97.764809,
+    "website": true,
+    "sqdno": "0285"
+   },
+   {
+    "name": "Ft. Worth Power Squadron",
+    "state": "TX",
+    "lat": 32.75,
+    "lng": -97.33,
+    "website": true,
+    "sqdno": "1890"
+   },
+   {
+    "name": "Galveston Bay Sail and Power Squadron",
+    "state": "TX",
+    "lat": 29.56,
+    "lng": -95.02,
+    "website": true,
+    "sqdno": "1980"
+   },
+   {
+    "name": "San Antonio Sail and Power Squadron",
+    "state": "TX",
+    "lat": 29.540738,
+    "lng": -98.552117,
+    "website": true,
+    "sqdno": "5085"
+   },
+   {
+    "name": "America's Boating Club Coastal Virginia",
+    "state": "VA",
+    "lat": 36.73,
+    "lng": -76.04,
+    "website": true,
+    "sqdno": "6090"
+   },
+   {
+    "name": "America's Boating Club Nansemond River",
+    "state": "VA",
+    "lat": 36.730433,
+    "lng": -76.593147,
+    "website": true,
+    "sqdno": "3600"
+   },
+   {
+    "name": "America's Boating Club Northern Neck",
+    "state": "VA",
+    "lat": 37.71,
+    "lng": -76.38,
+    "website": true,
+    "sqdno": "3850"
+   },
+   {
+    "name": "America's Boating Club Northern VIrginia",
+    "state": "VA",
+    "lat": 38.9398,
+    "lng": -77.1677,
+    "website": true,
+    "sqdno": "3870"
+   },
+   {
+    "name": "America's Boating Club Smith Mountain Lake",
+    "state": "VA",
+    "lat": 37.18,
+    "lng": -79.63,
+    "website": true,
+    "sqdno": "4860"
+   },
+   {
+    "name": "America's Boating Club of Richmond",
+    "state": "VA",
+    "lat": 37.5861,
+    "lng": -77.4907,
+    "website": true,
+    "sqdno": "4710"
+   },
+   {
+    "name": "Colonial Sail and Power Squadron",
+    "state": "VA",
+    "lat": 37.317768,
+    "lng": -76.763424,
+    "website": true,
+    "sqdno": "1156"
+   },
+   {
+    "name": "St. Thomas Sail and Power Squadron",
+    "state": "VI",
+    "lat": 18.3436,
+    "lng": -64.9314,
+    "website": false,
+    "sqdno": "5045"
+   },
+   {
+    "name": "America's Boating Club Bellevue",
+    "state": "WA",
+    "lat": 47.6168,
+    "lng": -122.1689,
+    "website": true,
+    "sqdno": "0450"
+   },
+   {
+    "name": "America's Boating Club Bellingham",
+    "state": "WA",
+    "lat": 48.74,
+    "lng": -122.46,
+    "website": true,
+    "sqdno": "0465"
+   },
+   {
+    "name": "America's Boating Club Bremerton",
+    "state": "WA",
+    "lat": 47.59,
+    "lng": -122.62,
+    "website": true,
+    "sqdno": "0630"
+   },
+   {
+    "name": "America's Boating Club Deception Pass",
+    "state": "WA",
+    "lat": 48.32,
+    "lng": -122.63,
+    "website": true,
+    "sqdno": "1430"
+   },
+   {
+    "name": "America's Boating Club Ft. Vancouver",
+    "state": "WA",
+    "lat": 45.64,
+    "lng": -122.63,
+    "website": true,
+    "sqdno": "1845"
+   },
+   {
+    "name": "America's Boating Club Seattle",
+    "state": "WA",
+    "lat": 47.66,
+    "lng": -122.38,
+    "website": true,
+    "sqdno": "5370"
+   },
+   {
+    "name": "America's Boating Club Skagit Bay",
+    "state": "WA",
+    "lat": 48.42,
+    "lng": -122.42,
+    "website": true,
+    "sqdno": "5495"
+   },
+   {
+    "name": "America's Boating Club Tacoma",
+    "state": "WA",
+    "lat": 47.29,
+    "lng": -122.5,
+    "website": true,
+    "sqdno": "5805"
+   },
+   {
+    "name": "America's Boating Club of Snohomish County",
+    "state": "WA",
+    "lat": 47.988431,
+    "lng": -122.200571,
+    "website": true,
+    "sqdno": "1680"
+   },
+   {
+    "name": "America's Boating Club of the San Juan Islands",
+    "state": "WA",
+    "lat": 48.5377,
+    "lng": -123.0836,
+    "website": true,
+    "sqdno": "1955"
+   },
+   {
+    "name": "Point Wilson Sail and Power Squadron",
+    "state": "WA",
+    "lat": 48.104012,
+    "lng": -122.794457,
+    "website": true,
+    "sqdno": "4396"
+   },
+   {
+    "name": "Spokane Sail and Power Squadron",
+    "state": "WA",
+    "lat": 47.6969,
+    "lng": -117.4478,
+    "website": true,
+    "sqdno": "5565"
+   },
+   {
+    "name": "America's Boating Club Central Wisconsin",
+    "state": "WI",
+    "lat": 44.7605,
+    "lng": -89.5918,
+    "website": true,
+    "sqdno": "0955"
+   },
+   {
+    "name": "America's Boating Club Green Bay",
+    "state": "WI",
+    "lat": 44.4814,
+    "lng": -88.0196,
+    "website": true,
+    "sqdno": "2085"
+   },
+   {
+    "name": "America's Boating Club Madison",
+    "state": "WI",
+    "lat": 43.072999,
+    "lng": -89.452823,
+    "website": false,
+    "sqdno": "3030"
+   },
+   {
+    "name": "America's Boating Club Marinette Menominee",
+    "state": "WI",
+    "lat": 45.1882,
+    "lng": -87.6383,
+    "website": true,
+    "sqdno": "3140"
+   },
+   {
+    "name": "America's Boating Club Milwaukee",
+    "state": "WI",
+    "lat": 43.06,
+    "lng": -87.96,
+    "website": true,
+    "sqdno": "3390"
+   },
+   {
+    "name": "Oshkosh Power Squadron",
+    "state": "WI",
+    "lat": 44.030356,
+    "lng": -88.607015,
+    "website": true,
+    "sqdno": "4095"
+   },
+   {
+    "name": "Tokyo Sail and Power Squadron",
+    "state": null,
+    "lat": 35.7157,
+    "lng": 139.8089,
+    "website": true,
+    "sqdno": "5900"
+   }
+  ]
+ },
+ "schedule": {
+  "total_upcoming": 148,
+  "clubs_with_classes": 41,
+  "clubs_checked": 255,
+  "kinds": {
+   "seminar": 50,
+   "course": 98
+  },
+  "by_month": {
+   "2026-06": 25,
+   "2026-07": 15,
+   "2026-08": 14,
+   "2026-09": 17,
+   "2026-10": 29,
+   "2026-11": 16,
+   "2026-12": 6,
+   "2027-01": 9,
+   "2027-02": 8,
+   "2027-03": 6,
+   "2027-04": 1,
+   "2027-05": 1,
+   "2027-07": 1
+  },
+  "top_titles": [
+   [
+    "Basic Boating Course",
+    72
+   ],
+   [
+    "Boat Handling",
+    14
+   ],
+   [
+    "BH Anchoring with Assurance",
+    7
+   ],
+   [
+    "BH Docking & Undocking",
+    5
+   ],
+   [
+    "Marine Navigation",
+    5
+   ],
+   [
+    "Hands-on Training",
+    4
+   ],
+   [
+    "Introduction to Marine Batteries",
+    4
+   ],
+   [
+    "BH Knots & Line Handling",
+    4
+   ],
+   [
+    "Fuel and Boating",
+    3
+   ],
+   [
+    "BH Rules of the Road",
+    3
+   ],
+   [
+    "Marine Electrical Systems",
+    3
+   ],
+   [
+    "Modern Weather Forecasting",
+    2
+   ]
+  ],
+  "by_state": {
+   "FL": 71,
+   "TX": 13,
+   "CA": 11,
+   "VA": 11,
+   "GA": 9,
+   "MI": 7,
+   "NC": 6,
+   "MA": 5,
+   "NY": 3,
+   "SC": 3,
+   "ME": 2,
+   "MN": 2,
+   "WA": 2,
+   "CT": 1,
+   "NJ": 1,
+   "PA": 1
+  }
+ },
+ "education": {
+  "courses": 10,
+  "seminars": 30,
+  "by_category": {
+   "Boat Handling": {
+    "courses": [
+     "Boat Handling",
+     "Sail"
+    ],
+    "seminars": [
+     "Anchoring With Assurance",
+     "Boating On Rivers Locks And Lakes",
+     "Boating With Confidence",
+     "Confidence In Docking And Undocking",
+     "Emergencies On Board",
+     "Knots And Line Handling",
+     "Rules Of The Road"
+    ]
+   },
+   "Boat Systems": {
+    "courses": [
+     "Engine Maintenance",
+     "Marine Communication Systems",
+     "Marine Electrical Systems",
+     "Radar for Boaters"
+    ],
+    "seminars": []
+   },
+   "Cruising": {
+    "courses": [],
+    "seminars": [
+     "Crossing Borders",
+     "Cruising Boats and Systems Seminar",
+     "Planning Your Cruise Seminar"
+    ]
+   },
+   "Electronics": {
+    "courses": [],
+    "seminars": [
+     "AIS Electronics For Boaters",
+     "How to Use GPS",
+     "Introduction to Marine Batteries"
+    ]
+   },
+   "Facing The Environment": {
+    "courses": [],
+    "seminars": [
+     "Hurricane Preparation For Boaters",
+     "Marine Weather Forecasting: The 500 Millibar Chart",
+     "Modern Weather Forecasting",
+     "Tides And Currents",
+     "Weather For Boaters"
+    ]
+   },
+   "Hands On Training": {
+    "courses": [],
+    "seminars": [
+     "Hands-on Training"
+    ]
+   },
+   "Navigation": {
+    "courses": [
+     "Advanced Marine Navigation",
+     "Celestial Navigation",
+     "Marine Navigation",
+     "Offshore Navigation"
+    ],
+    "seminars": [
+     "Introduction To Navigation",
+     "Introduction To OpenCPN",
+     "Mariner's Compass",
+     "Using Nautical Charts"
+    ]
+   },
+   "Safety": {
+    "courses": [],
+    "seminars": [
+     "All About Marine Radio",
+     "Crew At The Helm",
+     "Fuel And Boating",
+     "Man Overboard",
+     "Propane Systems On Your Boat"
+    ]
+   },
+   "Techniques": {
+    "courses": [],
+    "seminars": [
+     "Paddle Smart",
+     "Trailering Your Boat"
+    ]
+   }
+  },
+  "catalog": [
+   {
+    "kind": "course",
+    "title": "Boat Handling",
+    "category": "Boat Handling",
+    "category_slug": "boat-handling",
+    "slug": "boat-handling-course",
+    "url": "https://americasboatingclub.org/index.php/courses/boat-handling/boat-handling-course",
+    "description": "Master boating skills with the boat handling course from America's Boating Club | United States Power Squadrons. Enroll today and navigate with confidence."
+   },
+   {
+    "kind": "course",
+    "title": "Sail",
+    "category": "Boat Handling",
+    "category_slug": "boat-handling",
+    "slug": "sail",
+    "url": "https://americasboatingclub.org/index.php/courses/boat-handling/sail",
+    "description": "Build sailing knowledge and confidence on the water with a sailing course from America’s Boating Club focused on safe, enjoyable sailing."
+   },
+   {
+    "kind": "course",
+    "title": "Engine Maintenance",
+    "category": "Boat Systems",
+    "category_slug": "boat-systems",
+    "slug": "engine-maintenance",
+    "url": "https://americasboatingclub.org/index.php/courses/boat-systems/engine-maintenance",
+    "description": "Learn essential engine maintenance skills with a course from America’s Boating Club to improve reliability, performance, and on-the-water confidence."
+   },
+   {
+    "kind": "course",
+    "title": "Marine Communication Systems",
+    "category": "Boat Systems",
+    "category_slug": "boat-systems",
+    "slug": "marine-communication-systems",
+    "url": "https://americasboatingclub.org/index.php/courses/boat-systems/marine-communication-systems",
+    "description": "Build confidence using marine communication systems with guidance from America’s Boating Club focused on safety, best practices, and preparedness."
+   },
+   {
+    "kind": "course",
+    "title": "Marine Electrical Systems",
+    "category": "Boat Systems",
+    "category_slug": "boat-systems",
+    "slug": "marine-electrical-systems",
+    "url": "https://americasboatingclub.org/index.php/courses/boat-systems/marine-electrical-systems",
+    "description": "Don’t get short circuited. Learn how boat electrical systems work, how to diagnose problems, and how to do simple repairs and upgrades."
+   },
+   {
+    "kind": "course",
+    "title": "Radar for Boaters",
+    "category": "Boat Systems",
+    "category_slug": "boat-systems",
+    "slug": "radar-for-boaters",
+    "url": "https://americasboatingclub.org/index.php/courses/boat-systems/radar-for-boaters",
+    "description": "Build confidence navigating with radar through a Radar for Boaters course from America’s Boating Club designed for safer boating."
+   },
+   {
+    "kind": "course",
+    "title": "Advanced Marine Navigation",
+    "category": "Navigation",
+    "category_slug": "navigation",
+    "slug": "advanced-marine-navigation",
+    "url": "https://americasboatingclub.org/index.php/courses/navigation/advanced-marine-navigation",
+    "description": "Build expert-level navigation skills with an advanced marine navigation course from America’s Boating Club designed for experienced boaters."
+   },
+   {
+    "kind": "course",
+    "title": "Celestial Navigation",
+    "category": "Navigation",
+    "category_slug": "navigation",
+    "slug": "celestial-navigation",
+    "url": "https://americasboatingclub.org/index.php/courses/navigation/celestial-navigation",
+    "description": "Build traditional navigation skills with a celestial navigation course from America’s Boating Club designed for confident offshore boating."
+   },
+   {
+    "kind": "course",
+    "title": "Marine Navigation",
+    "category": "Navigation",
+    "category_slug": "navigation",
+    "slug": "marine-navigation-course",
+    "url": "https://americasboatingclub.org/index.php/courses/navigation/marine-navigation-course",
+    "description": "Learn essential navigation skills with a marine navigation course from America’s Boating Club focused on charts, tides, currents, and safe passage."
+   },
+   {
+    "kind": "course",
+    "title": "Offshore Navigation",
+    "category": "Navigation",
+    "category_slug": "navigation",
+    "slug": "offshore-navigation",
+    "url": "https://americasboatingclub.org/index.php/courses/navigation/offshore-navigation",
+    "description": "America’s Boating Club offers offshore navigation education to help boaters plan routes, manage conditions, and navigate confidently offshore."
+   },
+   {
+    "kind": "seminar",
+    "title": "Anchoring With Assurance",
+    "category": "Boat Handling",
+    "category_slug": "boat-handling",
+    "slug": "anchoring-with-assurance",
+    "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/anchoring-with-assurance",
+    "description": "Learn expert anchoring techniques with America's Boating Club | United States Power Squadrons, secure your boat with confidence, enroll in a seminar today."
+   },
+   {
+    "kind": "seminar",
+    "title": "Boating On Rivers Locks And Lakes",
+    "category": "Boat Handling",
+    "category_slug": "boat-handling",
+    "slug": "boating-on-rivers-locks-and-lakes",
+    "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/boating-on-rivers-locks-and-lakes",
+    "description": "Master inland boating skills with America's Boating Club | United States Power Squadrons, navigate rivers, locks, and lakes safely, register today."
+   },
+   {
+    "kind": "seminar",
+    "title": "Boating With Confidence",
+    "category": "Boat Handling",
+    "category_slug": "boat-handling",
+    "slug": "boating-with-confidence",
+    "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/boating-with-confidence",
+    "description": "Boating with Confidence Seminar | America's Boating Club"
+   },
+   {
+    "kind": "seminar",
+    "title": "Confidence In Docking And Undocking",
+    "category": "Boat Handling",
+    "category_slug": "boat-handling",
+    "slug": "confidence-in-docking-and-undocking",
+    "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/confidence-in-docking-and-undocking",
+    "description": "Master docking and undocking with America's Boating Club | United States Power Squadrons, improve control and reduce mishaps, register today."
+   },
+   {
+    "kind": "seminar",
+    "title": "Emergencies On Board",
+    "category": "Boat Handling",
+    "category_slug": "boat-handling",
+    "slug": "emergencies-on-board",
+    "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/emergencies-on-board",
+    "description": "Prepare for onboard emergencies with training from America's Boating Club | United States Power Squadrons, gain vital safety skills and sign up for a seminar."
+   },
+   {
+    "kind": "seminar",
+    "title": "Knots And Line Handling",
+    "category": "Boat Handling",
+    "category_slug": "boat-handling",
+    "slug": "knots-and-line-handling",
+    "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/knots-and-line-handling",
+    "description": "Master essential knots and line handling with America's Boating Club | United States Power Squadrons, refine your boating techniques and register now."
+   },
+   {
+    "kind": "seminar",
+    "title": "Rules Of The Road",
+    "category": "Boat Handling",
+    "category_slug": "boat-handling",
+    "slug": "rules-of-the-road",
+    "url": "https://americasboatingclub.org/index.php/seminars/boat-handling/rules-of-the-road",
+    "description": "Learn and apply boating rules with America's Boating Club | United States Power Squadrons, navigate safely and confidently, and register today."
+   },
+   {
+    "kind": "seminar",
+    "title": "Crossing Borders",
+    "category": "Cruising",
+    "category_slug": "cruising",
+    "slug": "crossing-borders",
+    "url": "https://americasboatingclub.org/index.php/seminars/cruising/crossing-borders",
+    "description": "Understand international boating regulations with America's Boating Club | United States Power Squadrons, prepare for global adventures and enroll today."
+   },
+   {
+    "kind": "seminar",
+    "title": "Cruising Boats and Systems Seminar",
+    "category": "Cruising",
+    "category_slug": "cruising",
+    "slug": "cruising-boats-and-systems",
+    "url": "https://americasboatingclub.org/index.php/seminars/cruising/cruising-boats-and-systems",
+    "description": "Get expert insights on cruising boat systems with America's Boating Club | United States Power Squadrons, enhance your understanding and register today."
+   },
+   {
+    "kind": "seminar",
+    "title": "Planning Your Cruise Seminar",
+    "category": "Cruising",
+    "category_slug": "cruising",
+    "slug": "planning-your-cruise",
+    "url": "https://americasboatingclub.org/index.php/seminars/cruising/planning-your-cruise",
+    "description": "Plan the perfect cruise with expert guidance from America's Boating Club | United States Power Squadrons, chart your next journey with confidence, start today."
+   },
+   {
+    "kind": "seminar",
+    "title": "AIS Electronics For Boaters",
+    "category": "Electronics",
+    "category_slug": "electronics",
+    "slug": "ais-electronics-for-boaters",
+    "url": "https://americasboatingclub.org/index.php/seminars/electronics/ais-electronics-for-boaters",
+    "description": "Learn to use AIS technology with America's Boating Club | United States Power Squadrons, improve boating communication and safety, sign up today."
+   },
+   {
+    "kind": "seminar",
+    "title": "How to Use GPS",
+    "category": "Electronics",
+    "category_slug": "electronics",
+    "slug": "how-to-use-gps",
+    "url": "https://americasboatingclub.org/index.php/seminars/electronics/how-to-use-gps",
+    "description": "Master GPS navigation with expert training from America's Boating Club | United States Power Squadrons, improve your route planning and enroll today."
+   },
+   {
+    "kind": "seminar",
+    "title": "Introduction to Marine Batteries",
+    "category": "Electronics",
+    "category_slug": "electronics",
+    "slug": "introduction-to-marine-batteries",
+    "url": "https://americasboatingclub.org/index.php/seminars/electronics/introduction-to-marine-batteries",
+    "description": "Get expert tips on both lead-acid and lithium batteries, plus upgrade considerations. | United States Power Squadrons"
+   },
+   {
+    "kind": "seminar",
+    "title": "Hurricane Preparation For Boaters",
+    "category": "Facing The Environment",
+    "category_slug": "facing-the-environment",
+    "slug": "hurricane-preparation-for-boaters",
+    "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/hurricane-preparation-for-boaters",
+    "description": "Prepare your boat for hurricane season with America's Boating Club | United States Power Squadrons, protect your vessel with expert advice, learn more today."
+   },
+   {
+    "kind": "seminar",
+    "title": "Marine Weather Forecasting: The 500 Millibar Chart",
+    "category": "Facing The Environment",
+    "category_slug": "facing-the-environment",
+    "slug": "marine-weather-forecasting-the-500-millibar-chart",
+    "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/marine-weather-forecasting-the-500-millibar-chart",
+    "description": "This seminar covers how to use the 500 millibar upper-air chart to forecast your weather including when and where large storms will develop and how they will move. | United States Power Squadrons, master weather forecasting and keep your boat safe, sign up now. | United States Power Squadrons, enhance your forecasting skills, sign up now."
+   },
+   {
+    "kind": "seminar",
+    "title": "Modern Weather Forecasting",
+    "category": "Facing The Environment",
+    "category_slug": "facing-the-environment",
+    "slug": "modern-weather-forecasting",
+    "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/modern-weather-forecasting",
+    "description": "Stay ahead of changing conditions with America's Boating Club | United States Power Squadrons, master weather forecasting and keep your boat safe, sign up now."
+   },
+   {
+    "kind": "seminar",
+    "title": "Tides And Currents",
+    "category": "Facing The Environment",
+    "category_slug": "facing-the-environment",
+    "slug": "tides-and-currents",
+    "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/tides-and-currents",
+    "description": "Navigate with confidence by understanding tides and currents with America's Boating Club | United States Power Squadrons, enhance your skills, enroll today."
+   },
+   {
+    "kind": "seminar",
+    "title": "Weather For Boaters",
+    "category": "Facing The Environment",
+    "category_slug": "facing-the-environment",
+    "slug": "weather-for-boaters",
+    "url": "https://americasboatingclub.org/index.php/seminars/facing-the-environment/weather-for-boaters",
+    "description": "Learn to interpret weather patterns for safer boating with America's Boating Club | United States Power Squadrons, gain knowledge and confidence, sign up today."
+   },
+   {
+    "kind": "seminar",
+    "title": "Hands-on Training",
+    "category": "Hands On Training",
+    "category_slug": "hands-on-training",
+    "slug": "hands-on-training",
+    "url": "https://americasboatingclub.org/index.php/seminars/hands-on-training/hands-on-training",
+    "description": null
+   },
+   {
+    "kind": "seminar",
+    "title": "Introduction To Navigation",
+    "category": "Navigation",
+    "category_slug": "navigation",
+    "slug": "introduction-to-navigation",
+    "url": "https://americasboatingclub.org/index.php/seminars/navigation/introduction-to-navigation",
+    "description": "Learn navigation basics with America's Boating Club | United States Power Squadrons, build confidence on the water and navigate safely, enroll today."
+   },
+   {
+    "kind": "seminar",
+    "title": "Introduction To OpenCPN",
+    "category": "Navigation",
+    "category_slug": "navigation",
+    "slug": "introduction-to-opencpn",
+    "url": "https://americasboatingclub.org/index.php/seminars/navigation/introduction-to-opencpn",
+    "description": null
+   },
+   {
+    "kind": "seminar",
+    "title": "Mariner's Compass",
+    "category": "Navigation",
+    "category_slug": "navigation",
+    "slug": "mariners-compass",
+    "url": "https://americasboatingclub.org/index.php/seminars/navigation/mariners-compass",
+    "description": "Understand how to use a mariner's compass with America's Boating Club | United States Power Squadrons, enhance your navigation skills, sign up now."
+   },
+   {
+    "kind": "seminar",
+    "title": "Using Nautical Charts",
+    "category": "Navigation",
+    "category_slug": "navigation",
+    "slug": "using-nautical-charts",
+    "url": "https://americasboatingclub.org/index.php/seminars/navigation/using-nautical-charts",
+    "description": "Master nautical charts for precise navigation with America's Boating Club | United States Power Squadrons, improve your skills, enroll today."
+   },
+   {
+    "kind": "seminar",
+    "title": "All About Marine Radio",
+    "category": "Safety",
+    "category_slug": "safety",
+    "slug": "all-about-marine-radio",
+    "url": "https://americasboatingclub.org/index.php/seminars/safety/all-about-marine-radio",
+    "description": "Understand marine radio communication with America's Boating Club | United States Power Squadrons, stay connected and safe on the water, enroll now."
+   },
+   {
+    "kind": "seminar",
+    "title": "Crew At The Helm",
+    "category": "Safety",
+    "category_slug": "safety",
+    "slug": "crew-at-the-helm",
+    "url": "https://americasboatingclub.org/index.php/seminars/safety/crew-at-the-helm",
+    "description": "Take the helm with confidence through training from America's Boating Club | United States Power Squadrons, gain expert skills, sign up today."
+   },
+   {
+    "kind": "seminar",
+    "title": "Fuel And Boating",
+    "category": "Safety",
+    "category_slug": "safety",
+    "slug": "fuel-and-boating-seminar",
+    "url": "https://americasboatingclub.org/index.php/seminars/safety/fuel-and-boating-seminar",
+    "description": "Learn about fuel management and efficiency with America's Boating Club | United States Power Squadrons, maximize your boat's performance, enroll today."
+   },
+   {
+    "kind": "seminar",
+    "title": "Man Overboard",
+    "category": "Safety",
+    "category_slug": "safety",
+    "slug": "man-overboard",
+    "url": "https://americasboatingclub.org/index.php/seminars/safety/man-overboard",
+    "description": "Be prepared for a man overboard situation with Be prepared for a man overboard situation with America's Boating Club | United States Power Squadrons, learn resc"
+   },
+   {
+    "kind": "seminar",
+    "title": "Propane Systems On Your Boat",
+    "category": "Safety",
+    "category_slug": "safety",
+    "slug": "propane-systems-on-your-boat",
+    "url": "https://americasboatingclub.org/index.php/seminars/safety/propane-systems-on-your-boat",
+    "description": "Understand propane systems and safety with America's Boating Club | United States Power Squadrons, protect your boat and crew, enroll today."
+   },
+   {
+    "kind": "seminar",
+    "title": "Paddle Smart",
+    "category": "Techniques",
+    "category_slug": "techniques",
+    "slug": "paddle-smart",
+    "url": "https://americasboatingclub.org/index.php/seminars/techniques/paddle-smart",
+    "description": "Learn safe paddling techniques with America's Boating Club | United States Power Squadrons, improve control and efficiency on the water, sign up now."
+   },
+   {
+    "kind": "seminar",
+    "title": "Trailering Your Boat",
+    "category": "Techniques",
+    "category_slug": "techniques",
+    "slug": "trailering-your-boat",
+    "url": "https://americasboatingclub.org/index.php/seminars/techniques/trailering-your-boat",
+    "description": "Transport your boat safely with expert tips from America's Boating Club | United States Power Squadrons, avoid common mistakes and sign up today to learn more."
+   }
+  ]
+ },
+ "commerce": {
+  "ships_store": {
+   "products": 217,
+   "price_stats": {
+    "count": 215,
+    "min": 0.5,
+    "max": 325.0,
+    "median": 22.0,
+    "mean": 24.93
+   },
+   "by_category": {
+    "Insignia Tabs": 38,
+    "Flags": 28,
+    "Jackets Hats Bags More": 18,
+    "Travel Galley Items": 15,
+    "Clearance": 14,
+    "Books DVDs ": 13,
+    "Jewelry": 13,
+    "District": 13,
+    "Squadron": 13,
+    "Womens": 11,
+    "Miscellaneous": 10,
+    "Mens": 10,
+    "Advanced Boating Courses": 7,
+    "See Whats New": 4,
+    "Captain": 3,
+    "Executive Supplies": 2,
+    "Boating Accessories": 2,
+    "Vessel Safety Check Supplies": 2,
+    "Education and Licensing": 1
+   },
+   "items": [
+    {
+     "name": "4 X 15 Plotter",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "1170101",
+     "url": "https://store.shopusps.org/Catalog/Books-DVDs-/1170101.html"
+    },
+    {
+     "name": "ARRL General Class License Manual 8th Edition",
+     "price_min": 29.95,
+     "price_max": 29.95,
+     "item_code": "0188103",
+     "url": "https://store.shopusps.org/Catalog/Books-DVDs-/ARRL-General-Class-License-Manual.html"
+    },
+    {
+     "name": "America's Boating  Club Gray Blanket",
+     "price_min": 30.0,
+     "price_max": 30.0,
+     "item_code": "0555934",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Gray-Blanket.html"
+    },
+    {
+     "name": "America's Boating  Club Gray Blanket",
+     "price_min": 30.0,
+     "price_max": 30.0,
+     "item_code": "0555934",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Americas-Boating-Club-Gray-Blanket.html"
+    },
+    {
+     "name": "America's Boating Club Briefcase",
+     "price_min": 42.0,
+     "price_max": 42.0,
+     "item_code": "0555712",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Briefcase.html"
+    },
+    {
+     "name": "America's Boating Club Briefcase",
+     "price_min": 42.0,
+     "price_max": 42.0,
+     "item_code": "0555712",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Americas-Boating-Club-Briefcase.html"
+    },
+    {
+     "name": "America's Boating Club Bucket Hat Small/Medium",
+     "price_min": 20.0,
+     "price_max": 20.0,
+     "item_code": "0555931",
+     "url": "https://store.shopusps.org/Catalog/Clearance/Americas-Boating-Club-Bucket-Hat-Small-Medium.html"
+    },
+    {
+     "name": "America's Boating Club Cap - Navy",
+     "price_min": 15.0,
+     "price_max": 15.0,
+     "item_code": "0555938",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Cap-Navy.html"
+    },
+    {
+     "name": "America's Boating Club Cap - Stone",
+     "price_min": 15.0,
+     "price_max": 15.0,
+     "item_code": "0555944",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Cap-Navy_2.html"
+    },
+    {
+     "name": "America's Boating Club Collapsible Tote",
+     "price_min": 40.0,
+     "price_max": 40.0,
+     "item_code": "0555706",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Collapsible-Tote.html"
+    },
+    {
+     "name": "America's Boating Club Collapsible Tote",
+     "price_min": 40.0,
+     "price_max": 40.0,
+     "item_code": "0555706",
+     "url": "https://store.shopusps.org/Catalog/Miscellaneous/Americas-Boating-Club-Collapsible-Tote.html"
+    },
+    {
+     "name": "America's Boating Club Collapsible Tote",
+     "price_min": 40.0,
+     "price_max": 40.0,
+     "item_code": "0555706",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Americas-Boating-Club-Collapsible-Tote.html"
+    },
+    {
+     "name": "America's Boating Club Columbia Tamiami Men's Fishing Shirt",
+     "price_min": 64.0,
+     "price_max": 73.0,
+     "item_code": "1500317",
+     "url": "https://store.shopusps.org/Catalog/Mens/Americas-Boating-Club-Columbias-Mens-Fishing-Shirt.html"
+    },
+    {
+     "name": "America's Boating Club Devon & Jones Glen Plaid Grey Men's Shirt",
+     "price_min": 32.0,
+     "price_max": 32.0,
+     "item_code": "1500271",
+     "url": "https://store.shopusps.org/Catalog/Clearance/Americas-Boating-Course-Devon-Jones-Glen-Plaid-Grey-Mens-shirt.html"
+    },
+    {
+     "name": "America's Boating Club Devon & Jones Men's Dress Shirt",
+     "price_min": 32.0,
+     "price_max": 32.0,
+     "item_code": "1500270",
+     "url": "https://store.shopusps.org/Catalog/Mens/Devon-Jones-Mens-Dress-Shirt.html"
+    },
+    {
+     "name": "America's Boating Club Dry Pouch",
+     "price_min": 15.0,
+     "price_max": 15.0,
+     "item_code": "0555943",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Dry-Pouch.html"
+    },
+    {
+     "name": "America's Boating Club Dry Pouch",
+     "price_min": 15.0,
+     "price_max": 15.0,
+     "item_code": "0555943",
+     "url": "https://store.shopusps.org/Catalog/See-Whats-New/Americas-Boating-Club-Dry-Pouch.html"
+    },
+    {
+     "name": "America's Boating Club Ladies Sweater",
+     "price_min": 50.0,
+     "price_max": 50.0,
+     "item_code": "1555444",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Course-Ladies-Sweater.html"
+    },
+    {
+     "name": "America's Boating Club Ladies Sweater",
+     "price_min": 50.0,
+     "price_max": 50.0,
+     "item_code": "1555444",
+     "url": "https://store.shopusps.org/Catalog/Womens/Americas-Boating-Course-Ladies-Sweater.html"
+    },
+    {
+     "name": "America's Boating Club Luggage Tag",
+     "price_min": 2.0,
+     "price_max": 2.0,
+     "item_code": "0555031",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Red-Luggage-Tag.html"
+    },
+    {
+     "name": "America's Boating Club Luggage Tag",
+     "price_min": 5.0,
+     "price_max": 5.0,
+     "item_code": "0555708",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Luggage-Tag.html"
+    },
+    {
+     "name": "America's Boating Club Luggage Tag",
+     "price_min": 5.0,
+     "price_max": 5.0,
+     "item_code": "0555708",
+     "url": "https://store.shopusps.org/Catalog/Miscellaneous/Americas-Boating-Club-Luggage-Tag.html"
+    },
+    {
+     "name": "America's Boating Club Luggage Tag",
+     "price_min": 2.0,
+     "price_max": 2.0,
+     "item_code": "0555031",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Red-Luggage-Tag.html"
+    },
+    {
+     "name": "America's Boating Club Luggage Tag",
+     "price_min": 5.0,
+     "price_max": 5.0,
+     "item_code": "0555708",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Americas-Boating-Club-Luggage-Tag.html"
+    },
+    {
+     "name": "America's Boating Club Men's Packable Rain Coat",
+     "price_min": 60.0,
+     "price_max": 60.0,
+     "item_code": "1555442",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Mens-Packable-Rain-Coat.html"
+    },
+    {
+     "name": "America's Boating Club Men's Packable Rain Coat",
+     "price_min": 60.0,
+     "price_max": 60.0,
+     "item_code": "1555442",
+     "url": "https://store.shopusps.org/Catalog/Mens/Americas-Boating-Club-Mens-Packable-Rain-Coat.html"
+    },
+    {
+     "name": "America's Boating Club Men's red polo",
+     "price_min": 25.0,
+     "price_max": 25.0,
+     "item_code": "1500321",
+     "url": "https://store.shopusps.org/Catalog/Clearance/Americas.html"
+    },
+    {
+     "name": "America's Boating Club Patch - Glue on",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555257",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Americas-Boating-Club-Patch.html"
+    },
+    {
+     "name": "America's Boating Club Patch - Glue on",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555257",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Patch.html"
+    },
+    {
+     "name": "America's Boating Club Patch - Glue on",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555257",
+     "url": "https://store.shopusps.org/Catalog/Miscellaneous/Americas-Boating-Club-Patch.html"
+    },
+    {
+     "name": "America's Boating Club Patch - Sew on",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555258",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Americas-Boating-Club-Patch-Sew-on.html"
+    },
+    {
+     "name": "America's Boating Club Patch - Sew on",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555258",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Americas-Boating-Club-Patch-Sew-on.html"
+    },
+    {
+     "name": "America's Boating Club Patch - Sew on",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555258",
+     "url": "https://store.shopusps.org/Catalog/Miscellaneous/Americas-Boating-Club-Patch-Sew-on.html"
+    },
+    {
+     "name": "America's Boating Club Pedova Zippered Navy Padfolio",
+     "price_min": 40.0,
+     "price_max": 40.0,
+     "item_code": "0555295",
+     "url": "https://store.shopusps.org/Catalog/Executive-Supplies/Americas-Boating-Club-Pedova-Zippered-Navy-Padfolio.html"
+    },
+    {
+     "name": "America's Boating Club Pedova Zippered Navy Padfolio",
+     "price_min": 40.0,
+     "price_max": 40.0,
+     "item_code": "0555295",
+     "url": "https://store.shopusps.org/Catalog/Miscellaneous/Americas-Boating-Club-Pedova-Zippered-Navy-Padfolio.html"
+    },
+    {
+     "name": "America's Boating Club Pedova Zippered Navy Padfolio",
+     "price_min": 40.0,
+     "price_max": 40.0,
+     "item_code": "0555295",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Americas-Boating-Club-Pedova-Zippered-Navy-Padfolio.html"
+    },
+    {
+     "name": "America's Boating Club Soft Sunglasses",
+     "price_min": 5.0,
+     "price_max": 5.0,
+     "item_code": "0555701",
+     "url": "https://store.shopusps.org/Catalog/Miscellaneous/Americas-Boating-Club-Soft-Sunglasses.html"
+    },
+    {
+     "name": "America's Boating Club Soft Sunglasses",
+     "price_min": 5.0,
+     "price_max": 5.0,
+     "item_code": "0555701",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Americas-Boating-Club-Soft-Sunglasses.html"
+    },
+    {
+     "name": "America's Boating Club Vansport Electric Blue Lady's V-neck",
+     "price_min": 24.0,
+     "price_max": 24.0,
+     "item_code": "1500272",
+     "url": "https://store.shopusps.org/Catalog/Clearance/Americas-Boating-Club-Vansport-Electric-Blue-Ladys-V-neck.html"
+    },
+    {
+     "name": "America's Boating Club Women's Performance Shirt",
+     "price_min": 45.0,
+     "price_max": 45.0,
+     "item_code": "1500322",
+     "url": "https://store.shopusps.org/Catalog/Womens/Americas-Boating-Club-Womens-Fishing-Shirt.html"
+    },
+    {
+     "name": "America's Boating Club Zippered Sunglass Case",
+     "price_min": 5.0,
+     "price_max": 5.0,
+     "item_code": "0555702",
+     "url": "https://store.shopusps.org/Catalog/Miscellaneous/Americas-Boating-Club-Zippered-Sunglass-Case.html"
+    },
+    {
+     "name": "America's Boating Club Zippered Sunglass Case",
+     "price_min": 5.0,
+     "price_max": 5.0,
+     "item_code": "0555702",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Americas-Boating-Club-Zippered-Sunglass-Case.html"
+    },
+    {
+     "name": "America's Boating Course",
+     "price_min": null,
+     "price_max": null,
+     "item_code": "America",
+     "url": "https://store.shopusps.org/Catalog/Advanced-Boating-Courses/Americas-Boating-Course_2.html"
+    },
+    {
+     "name": "America's Boating Course",
+     "price_min": null,
+     "price_max": null,
+     "item_code": "America",
+     "url": "https://store.shopusps.org/Catalog/Education-and-Licensing/Americas-Boating-Course_2.html"
+    },
+    {
+     "name": "Assistance Towing Endorsement (Deluxe Edition)",
+     "price_min": 125.0,
+     "price_max": 125.0,
+     "item_code": "0598103",
+     "url": "https://store.shopusps.org/Catalog/Captain/Assistance-Towing-Endorsement-Deluxe-Edition.html"
+    },
+    {
+     "name": "Auxiliary Sailing Endorsement (Deluxe Edition)",
+     "price_min": 125.0,
+     "price_max": 125.0,
+     "item_code": "0598102",
+     "url": "https://store.shopusps.org/Catalog/Captain/Auxiliary-Sailing-Endorsement-Deluxe-Edition.html"
+    },
+    {
+     "name": "Bamboo Cutting Board",
+     "price_min": 20.0,
+     "price_max": 20.0,
+     "item_code": "0555940",
+     "url": "https://store.shopusps.org/Catalog/Miscellaneous/Bamboo-Cutting-Board.html"
+    },
+    {
+     "name": "Bamboo Cutting Board",
+     "price_min": 20.0,
+     "price_max": 20.0,
+     "item_code": "0555940",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Bamboo-Cutting-Board.html"
+    },
+    {
+     "name": "Black Web Belt w/ USPS buckle",
+     "price_min": 30.0,
+     "price_max": 30.0,
+     "item_code": "0555291",
+     "url": "https://store.shopusps.org/Catalog/Clearance/Belt-Black-w-USPS-buckle.html"
+    },
+    {
+     "name": "Blazer Patch, Drop-in",
+     "price_min": 25.0,
+     "price_max": 25.0,
+     "item_code": "0555322",
+     "url": "https://store.shopusps.org/Catalog/Clearance/Magnetic-Pocket-Blazer-Patch.html"
+    },
+    {
+     "name": "Boat Owners Guide to GMDSS",
+     "price_min": 6.5,
+     "price_max": 6.5,
+     "item_code": "0188130",
+     "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0188130.html"
+    },
+    {
+     "name": "Bow Tie Black w/band",
+     "price_min": 15.0,
+     "price_max": 15.0,
+     "item_code": "0555198",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Bow-Tie-Black-w-band.html"
+    },
+    {
+     "name": "Bow Tie Black w/clip",
+     "price_min": 14.0,
+     "price_max": 14.0,
+     "item_code": "0555197",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Bow-Tie-Black-w-clip.html"
+    },
+    {
+     "name": "Certified Instructor Polo - Men's",
+     "price_min": 5.0,
+     "price_max": 5.0,
+     "item_code": "1500037",
+     "url": "https://store.shopusps.org/Catalog/Clearance/Certified-Instructor-Polo-Mens.html"
+    },
+    {
+     "name": "Certified Instuctor Lapel Pin",
+     "price_min": 5.0,
+     "price_max": 5.0,
+     "item_code": "0594015",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Certified-Instuctor-Lapel-Pin.html"
+    },
+    {
+     "name": "Colorado Trail Boonie Cap",
+     "price_min": 28.0,
+     "price_max": 28.0,
+     "item_code": "0555941",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Colorado-Trail-Boonie-Cap.html"
+    },
+    {
+     "name": "Colorado Trail Boonie Cap",
+     "price_min": 28.0,
+     "price_max": 28.0,
+     "item_code": "0555941",
+     "url": "https://store.shopusps.org/Catalog/See-Whats-New/Colorado-Trail-Boonie-Cap.html"
+    },
+    {
+     "name": "Communicator Pin",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555106",
+     "url": "https://store.shopusps.org/Catalog/Jewelry/Communicator-Pin.html"
+    },
+    {
+     "name": "Devon & Jones America's Boating Club Men's White Polo",
+     "price_min": 22.08,
+     "price_max": 22.08,
+     "item_code": "1500275",
+     "url": "https://store.shopusps.org/Catalog/Clearance/Devon-Jones-America.html"
+    },
+    {
+     "name": "Devon & Jones America's Boating Club Men's White Polo",
+     "price_min": 22.08,
+     "price_max": 22.08,
+     "item_code": "1500275",
+     "url": "https://store.shopusps.org/Catalog/Mens/Devon-Jones-America.html"
+    },
+    {
+     "name": "Devon & Jones America's Boating club Ladies White Polo",
+     "price_min": 38.0,
+     "price_max": 38.0,
+     "item_code": "1500274",
+     "url": "https://store.shopusps.org/Catalog/Womens/Devon-Jones-Americas.html"
+    },
+    {
+     "name": "Devon & Jones Ladies Perfect Fit Grey",
+     "price_min": 40.0,
+     "price_max": 53.0,
+     "item_code": "1555447",
+     "url": "https://store.shopusps.org/Catalog/Womens/Devon-Jones-Ladies-Perfect-Fit-Grey.html"
+    },
+    {
+     "name": "Devon & Jones Ladies Perfect Fit Red",
+     "price_min": 40.0,
+     "price_max": 40.0,
+     "item_code": "1555448",
+     "url": "https://store.shopusps.org/Catalog/Womens/Devon-Jones-Ladies-Perfect-Fit-Red.html"
+    },
+    {
+     "name": "Engine Maintenance",
+     "price_min": 65.0,
+     "price_max": 65.0,
+     "item_code": "0175108",
+     "url": "https://store.shopusps.org/Catalog/Advanced-Boating-Courses/Engine-Maintenance.html"
+    },
+    {
+     "name": "Ensign 12 X 18",
+     "price_min": 32.0,
+     "price_max": 32.0,
+     "item_code": "0555131",
+     "url": "https://store.shopusps.org/Catalog/Flags/Ensign-12-X-18.html"
+    },
+    {
+     "name": "Ensign 16 x 24",
+     "price_min": 35.0,
+     "price_max": 35.0,
+     "item_code": "0555132",
+     "url": "https://store.shopusps.org/Catalog/Flags/Ensign-16x24.html"
+    },
+    {
+     "name": "Ensign 20 X 30",
+     "price_min": 45.0,
+     "price_max": 45.0,
+     "item_code": "0555133",
+     "url": "https://store.shopusps.org/Catalog/Flags/Ensign-20-X-30.html"
+    },
+    {
+     "name": "Ensign 24 X 36",
+     "price_min": 55.0,
+     "price_max": 55.0,
+     "item_code": "0555134",
+     "url": "https://store.shopusps.org/Catalog/Flags/Ensign-24-X-36.html"
+    },
+    {
+     "name": "Ensign 30 X 45",
+     "price_min": 99.0,
+     "price_max": 99.0,
+     "item_code": "0555135",
+     "url": "https://store.shopusps.org/Catalog/Flags/Ensign-30-X-45.html"
+    },
+    {
+     "name": "Ensign 36 X 54",
+     "price_min": 175.0,
+     "price_max": 175.0,
+     "item_code": "0555136",
+     "url": "https://store.shopusps.org/Catalog/Flags/Ensign-36-X-54.html"
+    },
+    {
+     "name": "Flag - District Aide",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555324",
+     "url": "https://store.shopusps.org/Catalog/District/Flag-District-Aide.html"
+    },
+    {
+     "name": "Flag - District Aide",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555324",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-District-Aide.html"
+    },
+    {
+     "name": "Flag - District Commander",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555307",
+     "url": "https://store.shopusps.org/Catalog/District/Flag-District-Commander.html"
+    },
+    {
+     "name": "Flag - District Commander",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555307",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-District-Commander.html"
+    },
+    {
+     "name": "Flag - District First Lieutentant",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555309",
+     "url": "https://store.shopusps.org/Catalog/District/Flag-District_2.html"
+    },
+    {
+     "name": "Flag - District First Lieutentant",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555309",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-District_2.html"
+    },
+    {
+     "name": "Flag - District Flag Lieutenant",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555311",
+     "url": "https://store.shopusps.org/Catalog/District/Flag-District-Flag-Lieutenant.html"
+    },
+    {
+     "name": "Flag - District Flag Lieutenant",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555311",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-District-Flag-Lieutenant.html"
+    },
+    {
+     "name": "Flag - District Lieutenant",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555310",
+     "url": "https://store.shopusps.org/Catalog/District/Flag-District-Lieutenant.html"
+    },
+    {
+     "name": "Flag - District Lieutenant",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555310",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-District-Lieutenant.html"
+    },
+    {
+     "name": "Flag - District Lieutentant Commander",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555308",
+     "url": "https://store.shopusps.org/Catalog/District/Flag-District.html"
+    },
+    {
+     "name": "Flag - District Lieutentant Commander",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555308",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-District.html"
+    },
+    {
+     "name": "Flag - District Past Commander",
+     "price_min": 27.0,
+     "price_max": 27.0,
+     "item_code": "0555306",
+     "url": "https://store.shopusps.org/Catalog/District/Flag-District-Past-Commander.html"
+    },
+    {
+     "name": "Flag - District Past Commander",
+     "price_min": 27.0,
+     "price_max": 27.0,
+     "item_code": "0555306",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-District-Past-Commander.html"
+    },
+    {
+     "name": "Flag - District Past Lieutenant Commander",
+     "price_min": 25.0,
+     "price_max": 25.0,
+     "item_code": "0555323",
+     "url": "https://store.shopusps.org/Catalog/District/Flag-District-Past-Lieutenant-Commander.html"
+    },
+    {
+     "name": "Flag - District Past Lieutenant Commander",
+     "price_min": 25.0,
+     "price_max": 25.0,
+     "item_code": "0555323",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-District-Past-Lieutenant-Commander.html"
+    },
+    {
+     "name": "Flag - P/R/C",
+     "price_min": 25.0,
+     "price_max": 25.0,
+     "item_code": "0555327",
+     "url": "https://store.shopusps.org/Catalog/Flags/0555327.html"
+    },
+    {
+     "name": "Flag - R/C",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555321",
+     "url": "https://store.shopusps.org/Catalog/Flags/0555321.html"
+    },
+    {
+     "name": "Flag - Squadron Commander",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555301",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-Squadron-Commander.html"
+    },
+    {
+     "name": "Flag - Squadron Commander",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555301",
+     "url": "https://store.shopusps.org/Catalog/Squadron/Flag-Squadron-Commander.html"
+    },
+    {
+     "name": "Flag - Squadron First Lieutentant",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555303",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-Squadron-First-L.html"
+    },
+    {
+     "name": "Flag - Squadron First Lieutentant",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555303",
+     "url": "https://store.shopusps.org/Catalog/Squadron/Flag-Squadron-First-L.html"
+    },
+    {
+     "name": "Flag - Squadron Flag Lieutentant",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555305",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-Squadron-Flag-Lieutentant.html"
+    },
+    {
+     "name": "Flag - Squadron Flag Lieutentant",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555305",
+     "url": "https://store.shopusps.org/Catalog/Squadron/Flag-Squadron-Flag-Lieutentant.html"
+    },
+    {
+     "name": "Flag - Squadron Lieutentant",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555304",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-Squadron-L.html"
+    },
+    {
+     "name": "Flag - Squadron Lieutentant",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555304",
+     "url": "https://store.shopusps.org/Catalog/Squadron/Flag-Squadron-L.html"
+    },
+    {
+     "name": "Flag - Squadron Lieutentant Commander",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555302",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-Squadron.html"
+    },
+    {
+     "name": "Flag - Squadron Lieutentant Commander",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555302",
+     "url": "https://store.shopusps.org/Catalog/Squadron/Flag-Squadron.html"
+    },
+    {
+     "name": "Flag - Squadron Past Commander",
+     "price_min": 27.0,
+     "price_max": 27.0,
+     "item_code": "0555300",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-Squadron-Past-Commander.html"
+    },
+    {
+     "name": "Flag - Squadron Past Commander",
+     "price_min": 27.0,
+     "price_max": 27.0,
+     "item_code": "0555300",
+     "url": "https://store.shopusps.org/Catalog/Squadron/Flag-Squadron-Past-Commander.html"
+    },
+    {
+     "name": "Flag - Squadron Past Lieutentant Commander",
+     "price_min": 27.0,
+     "price_max": 27.0,
+     "item_code": "0555325",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-Squadron-Past-Lieutentant-Commander.html"
+    },
+    {
+     "name": "Flag - Squadron Past Lieutentant Commander",
+     "price_min": 27.0,
+     "price_max": 27.0,
+     "item_code": "0555325",
+     "url": "https://store.shopusps.org/Catalog/Squadron/Flag-Squadron-Past-Lieutentant-Commander.html"
+    },
+    {
+     "name": "Flag - Staf/Cdr",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555312",
+     "url": "https://store.shopusps.org/Catalog/Flags/Staf-Cdr-Flag.html"
+    },
+    {
+     "name": "Flag P/Natl/Flag/LT",
+     "price_min": 25.0,
+     "price_max": 25.0,
+     "item_code": "0555294",
+     "url": "https://store.shopusps.org/Catalog/Flags/Flag-P-Natl-Flag-LT.html"
+    },
+    {
+     "name": "GPS for Mariners 2nd Edition",
+     "price_min": 17.0,
+     "price_max": 17.0,
+     "item_code": "0187101",
+     "url": "https://store.shopusps.org/Catalog/Books-DVDs-/GPS-for-Mariners-2nd-Edition.html"
+    },
+    {
+     "name": "Junior Navigation",
+     "price_min": 110.0,
+     "price_max": 110.0,
+     "item_code": "0369107",
+     "url": "https://store.shopusps.org/Catalog/Advanced-Boating-Courses/Junior-Navigation.html"
+    },
+    {
+     "name": "Knots, Bends, & Hitches",
+     "price_min": 6.5,
+     "price_max": 6.5,
+     "item_code": "0188124",
+     "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0188124.html"
+    },
+    {
+     "name": "Ladies ABC certified instructor polo",
+     "price_min": 5.0,
+     "price_max": 5.0,
+     "item_code": "1500313",
+     "url": "https://store.shopusps.org/Catalog/Clearance/Ladies-ABC-certified-instructor-polo.html"
+    },
+    {
+     "name": "Ladies Charleston Fringed Scarf",
+     "price_min": 20.0,
+     "price_max": 20.0,
+     "item_code": "0555933",
+     "url": "https://store.shopusps.org/Catalog/Clearance/Americas-Boating-Club-Scarf.html"
+    },
+    {
+     "name": "Ladies Core Soft Shell Vest",
+     "price_min": 50.0,
+     "price_max": 52.0,
+     "item_code": "1555454",
+     "url": "https://store.shopusps.org/Catalog/See-Whats-New/Ladies-Core-Soft-Shell-Vest.html"
+    },
+    {
+     "name": "Ladies Core Soft Shell Vest",
+     "price_min": 50.0,
+     "price_max": 52.0,
+     "item_code": "1555454",
+     "url": "https://store.shopusps.org/Catalog/Womens/Ladies-Core-Soft-Shell-Vest.html"
+    },
+    {
+     "name": "Ladies' Relaxed Jersey V-Neck T-Shirt",
+     "price_min": 12.0,
+     "price_max": 12.0,
+     "item_code": "1555461",
+     "url": "https://store.shopusps.org/Catalog/Womens/Ladies-Relaxed-Jersey-V-Neck-T-Shirt.html"
+    },
+    {
+     "name": "Lapel Pin Cdr",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555157",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Lapel-Pin-Cdr.html"
+    },
+    {
+     "name": "Lapel Pin Cdr",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555157",
+     "url": "https://store.shopusps.org/Catalog/Jewelry/Lapel-Pin-Cdr.html"
+    },
+    {
+     "name": "Lapel Pin Cdr",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555157",
+     "url": "https://store.shopusps.org/Catalog/Squadron/Lapel-Pin-Cdr.html"
+    },
+    {
+     "name": "Lapel Pin D/C",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555161",
+     "url": "https://store.shopusps.org/Catalog/District/Lapel-Pin-D-C.html"
+    },
+    {
+     "name": "Lapel Pin D/C",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555161",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Lapel-Pin-D-C.html"
+    },
+    {
+     "name": "Lapel Pin D/C",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555161",
+     "url": "https://store.shopusps.org/Catalog/Jewelry/Lapel-Pin-D-C.html"
+    },
+    {
+     "name": "Lapel Pin D/Lt/C",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555162",
+     "url": "https://store.shopusps.org/Catalog/District/Lapel-Pin-D-Lt-C.html"
+    },
+    {
+     "name": "Lapel Pin D/Lt/C",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555162",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Lapel-Pin-D-Lt-C.html"
+    },
+    {
+     "name": "Lapel Pin D/Lt/C",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555162",
+     "url": "https://store.shopusps.org/Catalog/Jewelry/Lapel-Pin-D-Lt-C.html"
+    },
+    {
+     "name": "Lapel Pin Lt/C",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555158",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Lapel-Pin-Lt-C.html"
+    },
+    {
+     "name": "Lapel Pin Lt/C",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555158",
+     "url": "https://store.shopusps.org/Catalog/Jewelry/Lapel-Pin-Lt-C.html"
+    },
+    {
+     "name": "Lapel Pin Lt/C",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555158",
+     "url": "https://store.shopusps.org/Catalog/Squadron/Lapel-Pin-Lt-C.html"
+    },
+    {
+     "name": "Lapel Pin R/C",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555163",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Lapel-Pin-R-C.html"
+    },
+    {
+     "name": "Lapel Pin R/C",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555163",
+     "url": "https://store.shopusps.org/Catalog/Jewelry/Lapel-Pin-R-C.html"
+    },
+    {
+     "name": "Lapel Pin Stf/C",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555165",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Lapel-Pin-Stf-C.html"
+    },
+    {
+     "name": "Lapel Pin Stf/C",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555165",
+     "url": "https://store.shopusps.org/Catalog/Jewelry/Lapel-Pin-Stf-C.html"
+    },
+    {
+     "name": "Lid and straw for 24oz Tumbler",
+     "price_min": 0.5,
+     "price_max": 0.5,
+     "item_code": "0555054",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Lid-straw-for-24oz-Tumbler.html"
+    },
+    {
+     "name": "Marine Communication Systems",
+     "price_min": 65.0,
+     "price_max": 65.0,
+     "item_code": "0177112",
+     "url": "https://store.shopusps.org/Catalog/Advanced-Boating-Courses/Marine-Communication-Systems.html"
+    },
+    {
+     "name": "Marine Electrical Systems",
+     "price_min": 55.0,
+     "price_max": 55.0,
+     "item_code": "0177110",
+     "url": "https://store.shopusps.org/Catalog/Advanced-Boating-Courses/Marine-Electrical-Systems.html"
+    },
+    {
+     "name": "Mariners Compass Guide",
+     "price_min": 6.0,
+     "price_max": 6.0,
+     "item_code": "0188104",
+     "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0188104.html"
+    },
+    {
+     "name": "Membership Pin",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555159",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Membership-Pin.html"
+    },
+    {
+     "name": "Membership Pin",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555159",
+     "url": "https://store.shopusps.org/Catalog/Jewelry/Membership-Pin.html"
+    },
+    {
+     "name": "Men's 1/4-Zip Pullover",
+     "price_min": 47.0,
+     "price_max": 56.0,
+     "item_code": "1555464",
+     "url": "https://store.shopusps.org/Catalog/Mens/Mens-1-4-Zip-Pullover.html"
+    },
+    {
+     "name": "Men's 1/4-Zip Pullover",
+     "price_min": 47.0,
+     "price_max": 56.0,
+     "item_code": "1555464",
+     "url": "https://store.shopusps.org/Catalog/See-Whats-New/Mens-1-4-Zip-Pullover.html"
+    },
+    {
+     "name": "Men's Short Sleeve T-Shirt",
+     "price_min": 25.0,
+     "price_max": 28.0,
+     "item_code": "1555460",
+     "url": "https://store.shopusps.org/Catalog/Mens/Mens-Short-Sleeve-T-Shirt.html"
+    },
+    {
+     "name": "Men's White Polo",
+     "price_min": 40.0,
+     "price_max": 46.0,
+     "item_code": "1555458",
+     "url": "https://store.shopusps.org/Catalog/Mens/Mens-White-Polo.html"
+    },
+    {
+     "name": "Merit Mark Tab 10 MM",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555473",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-10-MM.html"
+    },
+    {
+     "name": "Merit Mark Tab 15 MM",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555474",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-15-MM.html"
+    },
+    {
+     "name": "Merit Mark Tab 20 MM",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555475",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-20-MM.html"
+    },
+    {
+     "name": "Merit Mark Tab 25 MM",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555476",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-25-MM.html"
+    },
+    {
+     "name": "Merit Mark Tab 30 MM",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555477",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-30-MM.html"
+    },
+    {
+     "name": "Merit Mark Tab 35 MM",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555478",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-35-MM.html"
+    },
+    {
+     "name": "Merit Mark Tab 40 MM",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555479",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-40-MM.html"
+    },
+    {
+     "name": "Merit Mark Tab 45 MM",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555480",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-45-MM.html"
+    },
+    {
+     "name": "Merit Mark Tab 5 MM",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555472",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-5-MM.html"
+    },
+    {
+     "name": "Merit Mark Tab 50 MM",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555481",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Merit-Mark-Tab-50-MM.html"
+    },
+    {
+     "name": "Navigation",
+     "price_min": 110.0,
+     "price_max": 110.0,
+     "item_code": "0368118",
+     "url": "https://store.shopusps.org/Catalog/Advanced-Boating-Courses/Navigation_2.html"
+    },
+    {
+     "name": "Navigational Astronomy",
+     "price_min": 6.0,
+     "price_max": 6.0,
+     "item_code": "0188107",
+     "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0188107.html"
+    },
+    {
+     "name": "OUPV Upgrade to Master (Deluxe Edition)",
+     "price_min": 325.0,
+     "price_max": 325.0,
+     "item_code": "0598104",
+     "url": "https://store.shopusps.org/Catalog/Captain/OUPV-Upgrade-to-Master-Deluxe-Edition.html"
+    },
+    {
+     "name": "Official USPS Gold Shirt Buttons",
+     "price_min": 15.0,
+     "price_max": 15.0,
+     "item_code": "0555138",
+     "url": "https://store.shopusps.org/Catalog/Executive-Supplies/Official-USPS-Gold-Shirt-Buttons.html"
+    },
+    {
+     "name": "Official USPS Gold Shirt Buttons",
+     "price_min": 15.0,
+     "price_max": 15.0,
+     "item_code": "0555138",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Official-USPS-Gold-Shirt-Buttons.html"
+    },
+    {
+     "name": "Official USPS Gold Shirt Buttons",
+     "price_min": 15.0,
+     "price_max": 15.0,
+     "item_code": "0555138",
+     "url": "https://store.shopusps.org/Catalog/Jewelry/Official-USPS-Gold-Shirt-Buttons.html"
+    },
+    {
+     "name": "Past Commander Lapel Pin",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555464",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Past-Commander-Lapel-Pin.html"
+    },
+    {
+     "name": "Past Commander Lapel Pin",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555464",
+     "url": "https://store.shopusps.org/Catalog/Jewelry/Past-Commander-Lapel-Pin.html"
+    },
+    {
+     "name": "Past Commander Lapel Pin",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555464",
+     "url": "https://store.shopusps.org/Catalog/Squadron/Past-Commander-Lapel-Pin.html"
+    },
+    {
+     "name": "Past D/C Lapel Pin",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555467",
+     "url": "https://store.shopusps.org/Catalog/District/Past-D-C-Lapel-Pin.html"
+    },
+    {
+     "name": "Past D/C Lapel Pin",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555467",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Past-D-C-Lapel-Pin.html"
+    },
+    {
+     "name": "Past D/C Lapel Pin",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555467",
+     "url": "https://store.shopusps.org/Catalog/Jewelry/Past-D-C-Lapel-Pin.html"
+    },
+    {
+     "name": "Past R/C Lapel Pin",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555461",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Past-R-C-Lapel-Pin.html"
+    },
+    {
+     "name": "Past R/C Lapel Pin",
+     "price_min": 7.0,
+     "price_max": 7.0,
+     "item_code": "0555461",
+     "url": "https://store.shopusps.org/Catalog/Jewelry/Past-R-C-Lapel-Pin.html"
+    },
+    {
+     "name": "Plotting and Labeling Standards",
+     "price_min": 6.0,
+     "price_max": 6.0,
+     "item_code": "0188131",
+     "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0188131.html"
+    },
+    {
+     "name": "Port Captain Flags",
+     "price_min": 22.0,
+     "price_max": 22.0,
+     "item_code": "0555299",
+     "url": "https://store.shopusps.org/Catalog/Flags/Port-Captain-Flags.html"
+    },
+    {
+     "name": "Port Captain Patch",
+     "price_min": 3.0,
+     "price_max": 3.0,
+     "item_code": "0555582",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Port-Captain-Patch.html"
+    },
+    {
+     "name": "Predicted Log Guide",
+     "price_min": 9.0,
+     "price_max": 9.0,
+     "item_code": "0188105",
+     "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0188105.html"
+    },
+    {
+     "name": "Quick Reference Boating Cards",
+     "price_min": 6.0,
+     "price_max": 6.0,
+     "item_code": "0758100",
+     "url": "https://store.shopusps.org/Catalog/Boating-Accessories/Quick-Reference-Boating-Cards.html"
+    },
+    {
+     "name": "Regulation Black Tie - 57\"",
+     "price_min": 15.0,
+     "price_max": 15.0,
+     "item_code": "0555199",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/Black-Regulation-Tie.html"
+    },
+    {
+     "name": "Sail",
+     "price_min": 65.0,
+     "price_max": 65.0,
+     "item_code": "0166130",
+     "url": "https://store.shopusps.org/Catalog/Advanced-Boating-Courses/Sail.html"
+    },
+    {
+     "name": "Sew on Blazer Patch",
+     "price_min": 15.0,
+     "price_max": 15.0,
+     "item_code": "0555255",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Sew-on-Blazer-Patch.html"
+    },
+    {
+     "name": "Shoulder Boards - Cdr",
+     "price_min": 33.0,
+     "price_max": 33.0,
+     "item_code": "0555314",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-Cdr.html"
+    },
+    {
+     "name": "Shoulder Boards - Cdr",
+     "price_min": 33.0,
+     "price_max": 33.0,
+     "item_code": "0555314",
+     "url": "https://store.shopusps.org/Catalog/Squadron/Shoulder-Boards-Cdr.html"
+    },
+    {
+     "name": "Shoulder Boards - D/C",
+     "price_min": 33.0,
+     "price_max": 33.0,
+     "item_code": "0555317",
+     "url": "https://store.shopusps.org/Catalog/District/Shoulder-Boards-D-C.html"
+    },
+    {
+     "name": "Shoulder Boards - D/C",
+     "price_min": 33.0,
+     "price_max": 33.0,
+     "item_code": "0555317",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-D-C.html"
+    },
+    {
+     "name": "Shoulder Boards - D/Lt/C",
+     "price_min": 33.0,
+     "price_max": 33.0,
+     "item_code": "0555318",
+     "url": "https://store.shopusps.org/Catalog/District/Shoulder-Boards-D-Lt-C.html"
+    },
+    {
+     "name": "Shoulder Boards - D/Lt/C",
+     "price_min": 33.0,
+     "price_max": 33.0,
+     "item_code": "0555318",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-D-Lt-C.html"
+    },
+    {
+     "name": "Shoulder Boards - Lt/C",
+     "price_min": 33.0,
+     "price_max": 33.0,
+     "item_code": "0555313",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-Lt-C.html"
+    },
+    {
+     "name": "Shoulder Boards - Lt/C",
+     "price_min": 33.0,
+     "price_max": 33.0,
+     "item_code": "0555313",
+     "url": "https://store.shopusps.org/Catalog/Squadron/Shoulder-Boards-Lt-C.html"
+    },
+    {
+     "name": "Shoulder Boards - P/C",
+     "price_min": 33.0,
+     "price_max": 33.0,
+     "item_code": "0555315",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-P-C.html"
+    },
+    {
+     "name": "Shoulder Boards - P/C",
+     "price_min": 33.0,
+     "price_max": 33.0,
+     "item_code": "0555315",
+     "url": "https://store.shopusps.org/Catalog/Squadron/Shoulder-Boards-P-C.html"
+    },
+    {
+     "name": "Shoulder Boards - P/D/C",
+     "price_min": 33.0,
+     "price_max": 33.0,
+     "item_code": "0555316",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-P-D-C.html"
+    },
+    {
+     "name": "Shoulder Boards - P/R/C",
+     "price_min": 32.0,
+     "price_max": 32.0,
+     "item_code": "0555401",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-P-R-C.html"
+    },
+    {
+     "name": "Shoulder Boards - P/Stf/C",
+     "price_min": 32.0,
+     "price_max": 32.0,
+     "item_code": "0555403",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-P-Stf-C.html"
+    },
+    {
+     "name": "Shoulder Boards - R/C",
+     "price_min": 32.0,
+     "price_max": 32.0,
+     "item_code": "0555402",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-R-C.html"
+    },
+    {
+     "name": "Shoulder Boards - Stf/C",
+     "price_min": 32.0,
+     "price_max": 32.0,
+     "item_code": "0555404",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/Shoulder-Boards-Stf-C.html"
+    },
+    {
+     "name": "Straws for 16oz Tumblers",
+     "price_min": 4.5,
+     "price_max": 4.5,
+     "item_code": "0555081",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Straws-for-16oz-Tumblers.html"
+    },
+    {
+     "name": "Straws for 24oz Tumblers",
+     "price_min": 4.5,
+     "price_max": 4.5,
+     "item_code": "0555082",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/Straws-for-24oz-Tumblers.html"
+    },
+    {
+     "name": "Tervis Tumbler Travel Lid and Straw for the 16oz. Tumbler",
+     "price_min": 0.5,
+     "price_max": 0.5,
+     "item_code": "0555050",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/-Tervis-Tumbler-Travel-Lid-Straw-for-the-16oz-Tumbler.html"
+    },
+    {
+     "name": "Trailering Your Boat",
+     "price_min": 15.0,
+     "price_max": 15.0,
+     "item_code": "0193103",
+     "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0193103.html"
+    },
+    {
+     "name": "USPS America's Boating Club Devon & Jones French Blue Ladies Polo",
+     "price_min": 24.0,
+     "price_max": 24.0,
+     "item_code": "1500265",
+     "url": "https://store.shopusps.org/Catalog/Clearance/USPS-Americas-Boating-Club-Devon-Jones-French-Blue-Ladies-Polo.html"
+    },
+    {
+     "name": "USPS Cruise Pennant",
+     "price_min": 27.0,
+     "price_max": 27.0,
+     "item_code": "0555191",
+     "url": "https://store.shopusps.org/Catalog/Boating-Accessories/USPS-Cruise-Pennant.html"
+    },
+    {
+     "name": "USPS Cruise Pennant",
+     "price_min": 27.0,
+     "price_max": 27.0,
+     "item_code": "0555191",
+     "url": "https://store.shopusps.org/Catalog/Flags/USPS-Cruise-Pennant.html"
+    },
+    {
+     "name": "USPS Guide - Introduction to Sailing",
+     "price_min": 4.0,
+     "price_max": 4.0,
+     "item_code": "0188110",
+     "url": "https://store.shopusps.org/Catalog/Books-DVDs-/USPS-Guide-Introduction-to-Sailing.html"
+    },
+    {
+     "name": "USPS License Plate",
+     "price_min": 12.0,
+     "price_max": 12.0,
+     "item_code": "0555065",
+     "url": "https://store.shopusps.org/Catalog/Miscellaneous/USPS-License-Plate.html"
+    },
+    {
+     "name": "USPS License Plate",
+     "price_min": 12.0,
+     "price_max": 12.0,
+     "item_code": "0555065",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/USPS-License-Plate.html"
+    },
+    {
+     "name": "USPS Metal Key Chain",
+     "price_min": 4.5,
+     "price_max": 4.5,
+     "item_code": "0555058",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/USPS-Metal-Key-Chain.html"
+    },
+    {
+     "name": "USPS Metal Key Chain",
+     "price_min": 4.5,
+     "price_max": 4.5,
+     "item_code": "0555058",
+     "url": "https://store.shopusps.org/Catalog/Miscellaneous/USPS-Metal-Key-Chain.html"
+    },
+    {
+     "name": "USPS Metal Key Chain",
+     "price_min": 4.5,
+     "price_max": 4.5,
+     "item_code": "0555058",
+     "url": "https://store.shopusps.org/Catalog/Travel-Galley-Items/USPS-Metal-Key-Chain.html"
+    },
+    {
+     "name": "USPS Official Emblem Silk Tie",
+     "price_min": 38.0,
+     "price_max": 38.0,
+     "item_code": "0555664",
+     "url": "https://store.shopusps.org/Catalog/Jackets-Hats-Bags-More/USPS-Official-Emblem-Silk-Tie.html"
+    },
+    {
+     "name": "Ultra Light Divider",
+     "price_min": 12.0,
+     "price_max": 12.0,
+     "item_code": "1173116",
+     "url": "https://store.shopusps.org/Catalog/Books-DVDs-/1173116.html"
+    },
+    {
+     "name": "UltraClub Ladies' Classic Wrinkle-Resistant Short-Sleeve Oxford",
+     "price_min": 45.0,
+     "price_max": 45.0,
+     "item_code": "1555445",
+     "url": "https://store.shopusps.org/Catalog/Womens/UltraClub-Ladies-Classic-Wrinkle-Resistant-Short-Sleeve-Oxford.html"
+    },
+    {
+     "name": "UltraClub Men's Classic Wrinkle-Resistant Short-Sleeve Oxford",
+     "price_min": 45.0,
+     "price_max": 51.0,
+     "item_code": "1555446",
+     "url": "https://store.shopusps.org/Catalog/Mens/UltraClub-Mens-Classic-Wrinkle-Resistant-Short-Sleeve-Oxford.html"
+    },
+    {
+     "name": "Unisex T-Shirt",
+     "price_min": 23.0,
+     "price_max": 29.0,
+     "item_code": "1555465",
+     "url": "https://store.shopusps.org/Catalog/Mens/Unisex-T-Shirt.html"
+    },
+    {
+     "name": "Unisex T-Shirt",
+     "price_min": 23.0,
+     "price_max": 29.0,
+     "item_code": "1555465",
+     "url": "https://store.shopusps.org/Catalog/Womens/Unisex-T-Shirt.html"
+    },
+    {
+     "name": "Unisex UV Daybreak Shirt",
+     "price_min": 45.0,
+     "price_max": 45.0,
+     "item_code": "1555459",
+     "url": "https://store.shopusps.org/Catalog/Mens/Unisex-UV-Daybreak-Shirt.html"
+    },
+    {
+     "name": "Unisex UV Daybreak Shirt",
+     "price_min": 45.0,
+     "price_max": 45.0,
+     "item_code": "1555459",
+     "url": "https://store.shopusps.org/Catalog/Womens/Unisex-UV-Daybreak-Shirt.html"
+    },
+    {
+     "name": "VE Flag 12x18",
+     "price_min": 33.0,
+     "price_max": 33.0,
+     "item_code": "0522737",
+     "url": "https://store.shopusps.org/Catalog/Flags/VE-Flag-12x18.html"
+    },
+    {
+     "name": "VE Patch",
+     "price_min": 6.0,
+     "price_max": 6.0,
+     "item_code": "0522728",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/VE-Patch.html"
+    },
+    {
+     "name": "VE Patch",
+     "price_min": 6.0,
+     "price_max": 6.0,
+     "item_code": "0522728",
+     "url": "https://store.shopusps.org/Catalog/Vessel-Safety-Check-Supplies/VE-Patch.html"
+    },
+    {
+     "name": "VE Pin",
+     "price_min": 6.0,
+     "price_max": 6.0,
+     "item_code": "0522727",
+     "url": "https://store.shopusps.org/Catalog/Insignia-Tabs/VE-Pin.html"
+    },
+    {
+     "name": "VE Pin",
+     "price_min": 6.0,
+     "price_max": 6.0,
+     "item_code": "0522727",
+     "url": "https://store.shopusps.org/Catalog/Jewelry/VE-Pin.html"
+    },
+    {
+     "name": "VE Pin",
+     "price_min": 6.0,
+     "price_max": 6.0,
+     "item_code": "0522727",
+     "url": "https://store.shopusps.org/Catalog/Vessel-Safety-Check-Supplies/VE-Pin.html"
+    },
+    {
+     "name": "VSC Polo Shirt, Ladies",
+     "price_min": 5.0,
+     "price_max": 5.0,
+     "item_code": "1500010",
+     "url": "https://store.shopusps.org/Catalog/Clearance/VSC-Polo-Shirt-Ladies.html"
+    },
+    {
+     "name": "VSC Polo Shirt, Men's",
+     "price_min": 5.0,
+     "price_max": 5.0,
+     "item_code": "1500011",
+     "url": "https://store.shopusps.org/Catalog/Clearance/VSC-Polo-Shirt-Mens.html"
+    },
+    {
+     "name": "Water Sports Learning Guide",
+     "price_min": 6.0,
+     "price_max": 6.0,
+     "item_code": "0188127",
+     "url": "https://store.shopusps.org/Catalog/Books-DVDs-/0188127.html"
+    },
+    {
+     "name": "White Web Belt w/ USPS Buckle",
+     "price_min": 15.0,
+     "price_max": 15.0,
+     "item_code": "0555254",
+     "url": "https://store.shopusps.org/Catalog/Clearance/White-Belt-w-Buckle.html"
+    },
+    {
+     "name": "Women's Open Front Cardigan Sweater",
+     "price_min": 60.0,
+     "price_max": 60.0,
+     "item_code": "1555463",
+     "url": "https://store.shopusps.org/Catalog/Womens/Womens-Open-Front-Cardigan-Sweater.html"
+    }
+   ]
+  },
+  "enrolmart": {
+   "products": 40,
+   "online_courses": 34,
+   "packages": 6,
+   "price_stats": {
+    "count": 40,
+    "min": 0.0,
+    "max": 200.0,
+    "median": 34.95,
+    "mean": 53.15
+   },
+   "items": [
+    {
+     "title": "AIS Electronics for Boaters",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/ais-electronics-for-boaters"
+    },
+    {
+     "title": "All About Marine Radio",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/all-about-marine-radio"
+    },
+    {
+     "title": "Anchoring with Assurance: Don't Get Carried Away  − Seminar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/anchoring"
+    },
+    {
+     "title": "Boat Handling –– Course",
+     "price_usd": 100.0,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/boat-handling-course"
+    },
+    {
+     "title": "Boating on Rivers, Locks and Lakes",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/boating-on-rivers-locks-and-lakes"
+    },
+    {
+     "title": "Boating with Confidence: Handling Your Boat Underway − Seminar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/boating-with-confidence"
+    },
+    {
+     "title": "Confidence in Docking and Undocking: Slow-Speed Maneuvering − Seminar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/docking"
+    },
+    {
+     "title": "Crew at the Helm",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/crew-at-the-helm"
+    },
+    {
+     "title": "Crossing Borders",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/crossing-borders"
+    },
+    {
+     "title": "Cruise With Confidence: The Complete Guide to Cruising under Power and Sail",
+     "price_usd": 100.0,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/cruising-under-power-and-sail"
+    },
+    {
+     "title": "Cruising Boats and Systems",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/cruising-boats-and-systems"
+    },
+    {
+     "title": "Emergencies Onboard: Preparation for Handling Common Problems − Seminar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/emergencies-onboard"
+    },
+    {
+     "title": "How to Use GPS - 2024",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/how-to-use-gps"
+    },
+    {
+     "title": "Hurricane Preparation for Boaters",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/hurricane-preparation-for-boaters"
+    },
+    {
+     "title": "Introduction to Marine Batteries",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/intro-marine-batteries"
+    },
+    {
+     "title": "Introduction to Navigation - Seminar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/intro-to-nav"
+    },
+    {
+     "title": "Introduction to OpenCPN",
+     "price_usd": 0.0,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/introduction-to-opencpn"
+    },
+    {
+     "title": "Knots and Line Handling: The Knots You Need to Know − Seminar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/knots"
+    },
+    {
+     "title": "Living Aboard While Cruising - Webinar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/living-aboard"
+    },
+    {
+     "title": "Marine Navigation Course",
+     "price_usd": 100.0,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/marine-navigation"
+    },
+    {
+     "title": "Marine Weather Forecasting: the 500 millibar Chart – Seminar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/the-500-millibar-chart"
+    },
+    {
+     "title": "Modern Weather Forecasting - Seminar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/modern-weather-forecasting"
+    },
+    {
+     "title": "Ocean Currents and Computer Navigation  − Webinar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/ocean-currents"
+    },
+    {
+     "title": "Ocean Waves − Webinar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/ocean-waves"
+    },
+    {
+     "title": "Paddle Smart - Seminar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/paddle-smart"
+    },
+    {
+     "title": "Personal Watercraft Operations - Webinar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/pwc"
+    },
+    {
+     "title": "Planning Your Boating Cruise",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/planning-your-boating-cruise"
+    },
+    {
+     "title": "Propane Systems on Your Boat",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/propane-systems-on-your-boat"
+    },
+    {
+     "title": "Rules of the Road:  A Practical Approach − Seminar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/rules-of-the-road"
+    },
+    {
+     "title": "Thunderstorms 2023 - seminar",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/thunderstorms-2023"
+    },
+    {
+     "title": "Trailering Your Boat",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/trailering"
+    },
+    {
+     "title": "Using Nautical Charts",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/nautical-charts"
+    },
+    {
+     "title": "Weather",
+     "price_usd": 100.0,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/weather"
+    },
+    {
+     "title": "Weather for Boaters 2023",
+     "price_usd": 34.95,
+     "section": "courses",
+     "type": "online course",
+     "url": "https://uspsonline.enrolmart.com/courses/weather-for-boaters-2023"
+    },
+    {
+     "title": "2025 Holiday Special",
+     "price_usd": 169.9,
+     "section": "course-packages",
+     "type": "package",
+     "url": "https://uspsonline.enrolmart.com/course-packages/2025-holiday-special"
+    },
+    {
+     "title": "BOC - Offshore Navigator",
+     "price_usd": 62.91,
+     "section": "course-packages",
+     "type": "package",
+     "url": "https://uspsonline.enrolmart.com/course-packages/boc-offshore-navigator"
+    },
+    {
+     "title": "Boating Skills Package",
+     "price_usd": 200.0,
+     "section": "course-packages",
+     "type": "package",
+     "url": "https://uspsonline.enrolmart.com/course-packages/boating-skills-package"
+    },
+    {
+     "title": "Inland Boating Package",
+     "price_usd": 104.85,
+     "section": "course-packages",
+     "type": "package",
+     "url": "https://uspsonline.enrolmart.com/course-packages/inland-boating-package"
+    },
+    {
+     "title": "Marine Electronics",
+     "price_usd": 104.85,
+     "section": "course-packages",
+     "type": "package",
+     "url": "https://uspsonline.enrolmart.com/course-packages/marine-electronics"
+    },
+    {
+     "title": "Ready, Set, Launch!",
+     "price_usd": 69.9,
+     "section": "course-packages",
+     "type": "package",
+     "url": "https://uspsonline.enrolmart.com/course-packages/ready-set-launch"
+    }
+   ]
+  },
+  "cpdean_awards": {
+   "products": 13,
+   "price_stats": {
+    "count": 13,
+    "min": 8.0,
+    "max": 120.0,
+    "median": 36.0,
+    "mean": 49.73
+   },
+   "items": [
+    {
+     "title": "Stainless Steel Tumbler",
+     "handle": "stainless-steel-tumbler",
+     "url": "https://cpdean.com/products/stainless-steel-tumbler",
+     "product_type": "Drinkware",
+     "price_min": 30.0,
+     "price_max": 30.0,
+     "n_variants": 1
+    },
+    {
+     "title": "Plaque with white plate featuring local squadron burgee",
+     "handle": "plaque-with-white-plate-and-squadron-burgee",
+     "url": "https://cpdean.com/products/plaque-with-white-plate-and-squadron-burgee",
+     "product_type": "Plaque",
+     "price_min": 36.0,
+     "price_max": 42.0,
+     "n_variants": 3
+    },
+    {
+     "title": "Senior Member Plaque",
+     "handle": "senior-member-plaque",
+     "url": "https://cpdean.com/products/senior-member-plaque",
+     "product_type": "Plaque",
+     "price_min": 36.0,
+     "price_max": 36.0,
+     "n_variants": 1
+    },
+    {
+     "title": "Round Top Glass Award",
+     "handle": "round-top-glass-award",
+     "url": "https://cpdean.com/products/round-top-glass-award",
+     "product_type": "Glass",
+     "price_min": 37.5,
+     "price_max": 46.5,
+     "n_variants": 3
+    },
+    {
+     "title": "Plaque with White Plate featuring the America's Boating Club Logo",
+     "handle": "plaque-with-abc-logo",
+     "url": "https://cpdean.com/products/plaque-with-abc-logo",
+     "product_type": "Plaque",
+     "price_min": 36.0,
+     "price_max": 42.0,
+     "n_variants": 3
+    },
+    {
+     "title": "Halo Acrylic Award",
+     "handle": "halo-acrylic-award",
+     "url": "https://cpdean.com/products/halo-acrylic-award",
+     "product_type": "Acrylic",
+     "price_min": 55.99,
+     "price_max": 63.99,
+     "n_variants": 2
+    },
+    {
+     "title": "Past Commanders Plaque",
+     "handle": "past-commanders-plaque",
+     "url": "https://cpdean.com/products/past-commanders-plaque",
+     "product_type": "Plaque",
+     "price_min": 119.99,
+     "price_max": 119.99,
+     "n_variants": 1
+    },
+    {
+     "title": "Sail Acrylic Award",
+     "handle": "sail-acrylic-award",
+     "url": "https://cpdean.com/products/sail-acrylic-award",
+     "product_type": "Acrylic",
+     "price_min": 120.0,
+     "price_max": 120.0,
+     "n_variants": 1
+    },
+    {
+     "title": "Past Commander Gavel Plaque",
+     "handle": "pc-gavel-plaque",
+     "url": "https://cpdean.com/products/pc-gavel-plaque",
+     "product_type": "Plaque",
+     "price_min": 115.0,
+     "price_max": 115.0,
+     "n_variants": 1
+    },
+    {
+     "title": "Plaque with Blue Marble Plate",
+     "handle": "plaque-with-blue-marble-plate",
+     "url": "https://cpdean.com/products/plaque-with-blue-marble-plate",
+     "product_type": "Plaque",
+     "price_min": 36.0,
+     "price_max": 42.0,
+     "n_variants": 3
+    },
+    {
+     "title": "America's Boating Club Name Tag with Magnet Backing",
+     "handle": "name-tag-with-magnet-backing",
+     "url": "https://cpdean.com/products/name-tag-with-magnet-backing",
+     "product_type": "Name Tag",
+     "price_min": 8.0,
+     "price_max": 8.0,
+     "n_variants": 1
+    },
+    {
+     "title": "America's Boating Club Name Tag with Clutch Backing",
+     "handle": "americas-boating-club-name-tag",
+     "url": "https://cpdean.com/products/americas-boating-club-name-tag",
+     "product_type": "Name Tag",
+     "price_min": 8.0,
+     "price_max": 8.0,
+     "n_variants": 1
+    },
+    {
+     "title": "America's Boating Club Name Tag with Pin Backing",
+     "handle": "name-tag-with-pin-backing",
+     "url": "https://cpdean.com/products/name-tag-with-pin-backing",
+     "product_type": "Name Tag",
+     "price_min": 8.0,
+     "price_max": 8.0,
+     "n_variants": 1
+    }
+   ]
+  },
+  "geiger_vessel_examiner": {
+   "url": "https://abcvesselexaminer.brandingbygeiger.com/",
+   "page_title": "ABC Vessel Examiner Site - Closed",
+   "status": "closed as of 05/18/2026",
+   "headings": [
+    "ABC Vessel Examiner Site",
+    "Closed as of 05/18/2026"
+   ]
+  }
+ },
+ "videos": {
+  "total": 1180,
+  "total_runtime_hours": 204.5,
+  "median_duration_minutes": 4.1,
+  "uploads_by_year": {
+   "2022": 193,
+   "2023": 853,
+   "2024": 125,
+   "2025": 7,
+   "2026": 2
+  },
+  "duration_buckets": [
+   [
+    "under 2 min",
+    372
+   ],
+   [
+    "2-5 min",
+    251
+   ],
+   [
+    "5-10 min",
+    179
+   ],
+   [
+    "10-20 min",
+    36
+   ],
+   [
+    "over 20 min",
+    288
+   ]
+  ],
+  "longest": [
+   {
+    "name": "MUTINY ON THE BOUNTY",
+    "minutes": 185.4
+   },
+   {
+    "name": "The Sand Pebbles1",
+    "minutes": 179.0
+   },
+   {
+    "name": "Mutiny On The Bounty -1935",
+    "minutes": 132.7
+   },
+   {
+    "name": "Midway",
+    "minutes": 131.5
+   },
+   {
+    "name": "THE SEA HAWK",
+    "minutes": 127.7
+   },
+   {
+    "name": "THE CAINE MUTINY",
+    "minutes": 124.6
+   },
+   {
+    "name": "Mister Roberts",
+    "minutes": 121.0
+   },
+   {
+    "name": "OPERATION PETTICOAT",
+    "minutes": 120.4
+   }
+  ]
+ },
+ "site": {
+  "domains_crawled": 9,
+  "pages_fetched": 2043,
+  "fetch_failures": 41,
+  "per_domain": {
+   "americasboatingchannel.uscreen.io": {
+    "fetched": 1248
+   },
+   "americasboatingclub.org": {
+    "fetched": 452,
+    "other": 23,
+    "failed": 21,
+    "skipped": 2
+   },
+   "boatlive365.org": {
+    "fetched": 114,
+    "other": 32,
+    "pdf_recorded": 23,
+    "skipped": 8,
+    "failed": 1
+   },
+   "giveabc.org": {
+    "fetched": 44,
+    "other": 3,
+    "skipped": 3
+   },
+   "portal.americasboatingclub.org": {
+    "fetched": 30,
+    "other": 4,
+    "skipped": 1,
+    "failed": 3
+   },
+   "store.shopusps.org": {
+    "other": 1,
+    "failed": 1,
+    "fetched": 29
+   },
+   "uspsonline.enrolmart.com": {
+    "fetched": 55,
+    "other": 71,
+    "failed": 1,
+    "skipped": 70
+   },
+   "www.americasboatingcourse.com": {
+    "fetched": 71,
+    "other": 4,
+    "failed": 4
+   },
+   "www.usps.org": {
+    "other": 14,
+    "failed": 10,
+    "skipped": 1,
+    "pdf_recorded": 3
+   }
+  },
+  "main_site_lastmod_by_year": {
+   "2022": 7,
+   "2023": 4,
+   "2024": 67,
+   "2025": 127,
+   "2026": 34,
+   "unknown": 12
+  },
+  "notes": [
+   "www.usps.org (the parent organization's legacy site) answered one request at the start of the session, then became unreachable from every network tried (local client, browser, and a remote fetcher all timed out), so its pages could not be collected — the site appears to be down or heavily throttled. Its links are still counted in the link graph.",
+   "portal.americasboatingclub.org is a members-only iMIS portal; only its public login/news pages were collected.",
+   "store.shopusps.org's robots.txt asks crawlers to wait 20 seconds between requests, which was honored."
+  ]
+ },
+ "ecosystem": {
+  "abc_cross_links": [
+   {
+    "from": "americasboatingclub.org",
+    "to": "uspsonline.enrolmart.com",
+    "links": 29135
+   },
+   {
+    "from": "americasboatingclub.org",
+    "to": "www.usps.org",
+    "links": 8034
+   },
+   {
+    "from": "americasboatingclub.org",
+    "to": "www.americasboatingcourse.com",
+    "links": 1952
+   },
+   {
+    "from": "americasboatingclub.org",
+    "to": "americasboatingchannel.uscreen.io",
+    "links": 1931
+   },
+   {
+    "from": "americasboatingclub.org",
+    "to": "portal.americasboatingclub.org",
+    "links": 1066
+   },
+   {
+    "from": "americasboatingclub.org",
+    "to": "store.shopusps.org",
+    "links": 1024
+   },
+   {
+    "from": "americasboatingclub.org",
+    "to": "www.uspsonline.org",
+    "links": 1024
+   },
+   {
+    "from": "americasboatingclub.org",
+    "to": "boatlive365.org",
+    "links": 456
+   },
+   {
+    "from": "www.americasboatingcourse.com",
+    "to": "americasboatingclub.org",
+    "links": 381
+   },
+   {
+    "from": "giveabc.org",
+    "to": "americasboatingclub.org",
+    "links": 177
+   },
+   {
+    "from": "uspsonline.enrolmart.com",
+    "to": "americasboatingclub.org",
+    "links": 120
+   },
+   {
+    "from": "www.americasboatingcourse.com",
+    "to": "www.usps.org",
+    "links": 93
+   },
+   {
+    "from": "www.americasboatingcourse.com",
+    "to": "uspsonline.enrolmart.com",
+    "links": 23
+   },
+   {
+    "from": "americasboatingclub.org",
+    "to": "giveabc.org",
+    "links": 20
+   },
+   {
+    "from": "boatlive365.org",
+    "to": "americasboatingclub.org",
+    "links": 13
+   },
+   {
+    "from": "uspsonline.enrolmart.com",
+    "to": "www.usps.org",
+    "links": 4
+   },
+   {
+    "from": "boatlive365.org",
+    "to": "americasboatingchannel.uscreen.io",
+    "links": 3
+   },
+   {
+    "from": "uspsonline.enrolmart.com",
+    "to": "americasboatingchannel.uscreen.io",
+    "links": 2
+   },
+   {
+    "from": "portal.americasboatingclub.org",
+    "to": "www.usps.org",
+    "links": 2
+   },
+   {
+    "from": "uspsonline.enrolmart.com",
+    "to": "www.americasboatingcourse.com",
+    "links": 1
+   },
+   {
+    "from": "giveabc.org",
+    "to": "www.americasboatingcourse.com",
+    "links": 1
+   }
+  ],
+  "club_websites_total": 232,
+  "external_domains_total": 105,
+  "top_external_domains": {
+   "www.facebook.com": 2019,
+   "twitter.com": 1820,
+   "www.instagram.com": 1774,
+   "www.youtube.com": 1344,
+   "linkedin.com": 1253,
+   "www.uscreen.tv?utm_category=product&utm_medium=branding&utm_source=35298&utm_campaign=web&utm_content=powered_by": 1248,
+   "www.tiktok.com": 1247,
+   "www.pinterest.com": 571,
+   "www.linkedin.com": 509,
+   "youtube.com": 452,
+   "maps.app.goo.gl": 67,
+   "enrolmart.com": 55,
+   "x.com": 31,
+   "www.addevent.com": 30,
+   "player.vimeo.com": 23,
+   "facebook.com": 16,
+   "wow.uscgaux.info": 12,
+   "www.boatus.org": 12,
+   "www.uscgboating.org": 11,
+   "www.safeboatingcampaign.com": 10,
+   "uscgboating.org": 9,
+   "www.brunswick.com": 9,
+   "bit.ly": 7,
+   "theensign.org": 7,
+   "www.tumblr.com": 6
+  }
+ },
+ "provenance": {
+  "generated_at": "2026-06-11T18:28:33Z",
+  "generator": "derive/build_dashboard_data.py",
+  "pipeline": [
+   {
+    "stage": "crawl",
+    "script": "scrape/crawl.py",
+    "evidence": "data/crawl/index.jsonl + data/raw/<domain>/*.html"
+   },
+   {
+    "stage": "interactive captures",
+    "script": "scrape/fetch_club_locations.py, scrape/fetch_club_schedules.py, scrape/fetch_store_catalog.py, scrape/fetch_satellite_stores.py",
+    "evidence": "data/interactive/*.json (+ raw responses/HTML)"
+   },
+   {
+    "stage": "extract",
+    "script": "derive/extract.py",
+    "evidence": "data/extracted/*.json"
+   },
+   {
+    "stage": "derive",
+    "script": "derive/build_dashboard_data.py",
+    "evidence": "dashboard/data.json (this file's source)"
+   }
+  ],
+  "dataset_sources": {
+   "clubs": {
+    "description": "Complete club/squadron directory obtained by replaying the find-a-club search (Joomla com_mymaplocations) that the americasboatingclub.org page itself performs, across overlapping circles that blanket all US states, territories and overseas locations.",
+    "source_url": "https://americasboatingclub.org/index.php/find-a-club-near-you",
+    "script": "scrape/fetch_club_locations.py",
+    "strategy": "oversized-radius circles (server honors radius 3000 mi beyond the UI's 500 mi cap)",
+    "fetched_at": "2026-06-11T15:32:33Z",
+    "unique_clubs": 255
+   },
+   "class_schedule": {
+    "description": "National upcoming-class schedule assembled by fetching each club's club-details page (the same page a visitor sees after using Find a Club) and parsing its server-rendered 'Upcoming Educational Courses' section.",
+    "source_url_pattern": "https://americasboatingclub.org/club-details/?sqdno=<sqdno>",
+    "script": "scrape/fetch_club_schedules.py",
+    "fetched_at": "2026-06-11T18:27:42Z",
+    "clubs_checked": 255,
+    "clubs_with_classes": 41,
+    "fetch_failures": 0,
+    "placeholder_rows_excluded": 7,
+    "raw_html_dir": "data/interactive/club_details_html/"
+   },
+   "store_products": {
+    "description": "Every product listed in the Ship's Store catalog (store.shopusps.org, a NetSuite SiteBuilder store), harvested from the category listing pages which show each product's name, item code and price.",
+    "source_url": "https://store.shopusps.org/Catalog/",
+    "script": "scrape/fetch_store_catalog.py",
+    "mode": "re-parsed from raw HTML saved by an earlier fetch run",
+    "fetched_at": "2026-06-11T16:12:36Z",
+    "crawl_delay_honored_seconds": 20,
+    "unique_products": 217
+   },
+   "satellite_stores": {
+    "description": "ABC-branded storefronts on vendor domains, linked from the Ship's Store homepage. C.P. Dean product data comes from Shopify's public collection products.json, which cpdean.com's robots.txt explicitly marks as crawlable.",
+    "script": "scrape/fetch_satellite_stores.py",
+    "fetched_at": "2026-06-11T15:55:36Z",
+    "sources": [
+     "https://abcvesselexaminer.brandingbygeiger.com/",
+     "https://cpdean.com/collections/awards/products.json?limit=250"
+    ]
+   },
+   "education_catalog": {
+    "description": "Every page under /index.php/courses/<category>/<name> and /index.php/seminars/<category>/<name> on the main site. Titles come from each page's H1, descriptions from its meta description tag.",
+    "script": "derive/extract.py",
+    "extracted_at": "2026-06-11T18:28:32Z",
+    "sources": [
+     "data/crawl/index.jsonl",
+     "data/raw/americasboatingclub.org/"
+    ]
+   },
+   "enrolmart_products": {
+    "description": "Every EnrolMart page whose HTML contains an <h2 class=\"product-price\"> tag — i.e. an actual product page. Prices are read from that tag verbatim.",
+    "script": "derive/extract.py",
+    "extracted_at": "2026-06-11T18:28:32Z",
+    "sources": [
+     "data/crawl/index.jsonl",
+     "data/raw/uspsonline.enrolmart.com/"
+    ]
+   },
+   "videos": {
+    "description": "One record per video page on americasboatingchannel.uscreen.io (/programs/...), read from the schema.org VideoObject JSON-LD each page embeds. Pages lacking that block are counted and skipped, never guessed.",
+    "script": "derive/extract.py",
+    "extracted_at": "2026-06-11T18:28:33Z",
+    "sources": [
+     "data/crawl/index.jsonl",
+     "data/raw/americasboatingchannel.uscreen.io/"
+    ]
+   },
+   "pages": {
+    "description": "One record per URL the crawler handled, with per-domain totals. Source of truth is data/crawl/index.jsonl.",
+    "script": "derive/extract.py",
+    "extracted_at": "2026-06-11T18:28:32Z",
+    "sources": [
+     "data/crawl/index.jsonl"
+    ]
+   },
+   "link_graph": {
+    "description": "Cross-links between the crawled ABC properties, plus every external domain those pages link to, counted from the outlink lists in the crawl index. Club websites come from the interactive club directory capture.",
+    "script": "derive/extract.py",
+    "extracted_at": "2026-06-11T18:28:33Z",
+    "sources": [
+     "data/crawl/index.jsonl",
+     "data/interactive/clubs.json"
+    ]
+   },
+   "content_dates": {
+    "description": "Per-URL <lastmod> stamps copied from the sitemap XML files the crawler saved. These are the sites' own statements of when each page last changed.",
+    "script": "derive/extract.py",
+    "extracted_at": "2026-06-11T18:28:33Z",
+    "sources": [
+     "data/crawl/sitemap_americasboatingclub.org_manual.xml"
+    ]
+   }
+  }
+ }
+}

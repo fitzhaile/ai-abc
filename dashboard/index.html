@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>America's Boating Club — Ecosystem Chart</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2312304e'/%3E%3Ccircle cx='8' cy='8' r='4' fill='%23f5efe2'/%3E%3Ccircle cx='8' cy='8' r='1.6' fill='%23b3382e'/%3E%3C/svg%3E">
+<style>
+/* ============================================================
+   CHART-PAPER THEME
+   Visual language of a NOAA plotting sheet: cream paper, navy
+   ink, hairline graticule, stencil headers, log-book tables.
+   ============================================================ */
+:root{
+  --paper:#f5efe2;
+  --paper-deep:#ede4d0;
+  --ink:#12304e;
+  --ink-soft:#3f5a76;
+  --ink-faint:#7d8fa3;
+  --rule:#c9bda4;
+  --port-red:#b3382e;     /* port buoy red — failures, closures */
+  --stbd-green:#2e6e4e;   /* starboard green — healthy, fetched */
+  --buoy-gold:#c8922a;
+  --card:#faf6ec;
+  --mono:"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --display:"Futura","Gill Sans","Avenir Next Condensed","Trebuchet MS",sans-serif;
+  --body:"Iowan Old Style",Palatino,"Palatino Linotype",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:
+    repeating-linear-gradient(0deg,transparent 0 47px,rgba(18,48,78,.045) 47px 48px),
+    repeating-linear-gradient(90deg,transparent 0 47px,rgba(18,48,78,.045) 47px 48px),
+    radial-gradient(ellipse at 20% -10%,#fbf7ee 0%,var(--paper) 55%,var(--paper-deep) 100%);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:15.5px;
+  line-height:1.55;
+}
+/* ---------------- masthead ---------------- */
+header.mast{
+  background:linear-gradient(180deg,#0e2742 0%,#12304e 80%,#1a3c5e 100%);
+  color:#f2ecdd;
+  padding:34px 28px 30px;
+  position:relative;
+  overflow:hidden;
+  border-bottom:5px double var(--buoy-gold);
+}
+header.mast::after{ /* faint compass rose */
+  content:"";
+  position:absolute;right:-90px;top:-120px;width:380px;height:380px;
+  background:
+    conic-gradient(from 0deg,
+      rgba(242,236,221,.16) 0deg 2deg, transparent 2deg 88deg,
+      rgba(242,236,221,.16) 88deg 92deg, transparent 92deg 178deg,
+      rgba(242,236,221,.16) 178deg 182deg, transparent 182deg 268deg,
+      rgba(242,236,221,.16) 268deg 272deg, transparent 272deg 358deg,
+      rgba(242,236,221,.16) 358deg 360deg);
+  border:1px solid rgba(242,236,221,.25);
+  border-radius:50%;
+  box-shadow:inset 0 0 0 38px rgba(242,236,221,.05), inset 0 0 0 39px rgba(242,236,221,.18);
+}
+.mast-inner{max-width:1240px;margin:0 auto;position:relative;z-index:1}
+.mast .kicker{
+  font-family:var(--display);letter-spacing:.42em;font-size:11.5px;
+  text-transform:uppercase;color:var(--buoy-gold);margin-bottom:10px;
+}
+.mast h1{
+  font-family:var(--display);font-weight:600;letter-spacing:.045em;
+  font-size:clamp(26px,4.2vw,44px);text-transform:uppercase;line-height:1.08;
+}
+.mast h1 em{font-style:normal;color:#cfddec}
+.mast .sub{
+  margin-top:12px;max-width:860px;color:#c7d3df;font-size:14.5px;
+}
+.mast .stamp{
+  margin-top:16px;font-family:var(--mono);font-size:11.5px;color:#9fb2c4;
+  text-transform:uppercase;letter-spacing:.08em;
+}
+/* ---------------- layout ---------------- */
+main{max-width:1240px;margin:0 auto;padding:8px 28px 80px}
+section{margin-top:54px}
+.sec-head{
+  display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--ink);
+  padding-bottom:6px;margin-bottom:4px;
+}
+.sec-head .no{
+  font-family:var(--display);font-size:13px;letter-spacing:.18em;color:var(--paper);
+  background:var(--ink);padding:3px 9px 2px;
+}
+.sec-head h2{
+  font-family:var(--display);font-weight:600;text-transform:uppercase;
+  letter-spacing:.14em;font-size:19px;
+}
+.sec-head .lede{margin-left:auto;font-size:13px;color:var(--ink-soft);font-style:italic}
+.sec-note{font-size:13.5px;color:var(--ink-soft);margin:8px 0 18px;max-width:900px}
+.grid{display:grid;gap:22px}
+.g2{grid-template-columns:3fr 2fr}
+.g2e{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:1fr 1fr 1fr}
+@media(max-width:980px){.g2,.g2e,.g3{grid-template-columns:1fr}}
+.card{
+  background:var(--card);
+  border:1px solid var(--rule);
+  box-shadow:0 1px 0 rgba(18,48,78,.08), 0 10px 26px -18px rgba(18,48,78,.35);
+  padding:18px 20px;
+  position:relative;
+}
+.card h3{
+  font-family:var(--display);font-size:12.5px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ink-soft);margin-bottom:12px;
+  border-bottom:1px solid var(--rule);padding-bottom:7px;
+}
+.card .h3-flag{float:right;font-family:var(--mono);font-size:10.5px;color:var(--ink-faint)}
+/* ---------------- KPI strip ---------------- */
+.kpis{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  border:2px solid var(--ink);background:var(--card);margin-top:34px;
+  box-shadow:0 14px 30px -20px rgba(18,48,78,.5);
+}
+.kpi{
+  padding:16px 16px 14px;border-right:1px solid var(--rule);
+  animation:rise .7s cubic-bezier(.2,.7,.2,1) both;
+}
+.kpi:last-child{border-right:none}
+.kpi .v{
+  font-family:var(--display);font-weight:600;font-size:clamp(26px,3vw,38px);
+  letter-spacing:.02em;line-height:1;color:var(--ink);
+}
+.kpi .u{font-size:12px;color:var(--port-red);font-family:var(--mono)}
+.kpi .l{
+  margin-top:6px;font-family:var(--display);font-size:10.5px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);
+}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* ---------------- charts ---------------- */
+svg text{font-family:var(--mono);fill:var(--ink-soft)}
+.axis line,.axis path{stroke:var(--rule)}
+.barrow{display:flex;align-items:center;gap:10px;margin:5px 0;font-size:13px}
+.barrow .lab{width:42px;text-align:right;font-family:var(--mono);font-size:12px;color:var(--ink-soft);flex:none}
+.barrow .trk{flex:1;background:rgba(18,48,78,.07);height:15px;position:relative}
+.barrow .fil{
+  height:100%;background:linear-gradient(90deg,#1d4569,#12304e);
+  display:flex;align-items:center;justify-content:flex-end;
+  color:#e9eff5;font-family:var(--mono);font-size:10.5px;padding-right:5px;
+  min-width:2px;transform-origin:left;animation:grow .8s cubic-bezier(.2,.7,.2,1) both;
+}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.barrow .fil.alt{background:linear-gradient(90deg,#3b7a5c,#2e6e4e)}
+/* ---------------- tables ---------------- */
+table.log{width:100%;border-collapse:collapse;font-size:13.5px}
+table.log th{
+  font-family:var(--display);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-soft);text-align:left;border-bottom:2px solid var(--ink);
+  padding:4px 8px 6px;
+}
+table.log td{border-bottom:1px solid var(--rule);padding:6px 8px;vertical-align:top}
+table.log td.num{font-family:var(--mono);font-size:12.5px;text-align:right;white-space:nowrap}
+table.log tr:hover td{background:rgba(18,48,78,.045)}
+.ok{color:var(--stbd-green);font-weight:bold}
+.bad{color:var(--port-red);font-weight:bold}
+.dim{color:var(--ink-faint)}
+/* ---------------- notice to mariners ---------------- */
+.notice{
+  border:2px solid var(--port-red);background:#fbf1ec;padding:14px 18px;margin:14px 0;
+}
+.notice .nt{
+  font-family:var(--display);letter-spacing:.22em;font-size:11.5px;color:var(--port-red);
+  text-transform:uppercase;margin-bottom:6px;
+}
+.notice p{font-size:13.5px;margin:4px 0;color:#5d2a23}
+/* ---------------- chips ---------------- */
+.chip{
+  display:inline-block;border:1px solid var(--rule);background:#fffdf6;
+  font-size:12.5px;padding:2px 9px;margin:2px 3px 2px 0;border-radius:2px;
+}
+.chip b{font-family:var(--mono);font-size:11px;color:var(--ink-soft)}
+.cat-block{margin-bottom:10px}
+.cat-block .cat-name{
+  font-family:var(--display);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--buoy-gold);margin:8px 0 3px;
+}
+/* ---------------- map ---------------- */
+#clubmap{width:100%;height:auto;display:block}
+#clubmap .dot{fill:#12304e;opacity:.78;transition:r .15s}
+#clubmap .dot.nosite{fill:var(--port-red);opacity:.65}
+#clubmap .dot:hover{opacity:1}
+.maptip{
+  position:fixed;pointer-events:none;background:var(--ink);color:#f2ecdd;
+  font-family:var(--mono);font-size:11.5px;padding:5px 9px;border-radius:2px;
+  opacity:0;transform:translate(-50%,-130%);white-space:nowrap;z-index:50;
+  box-shadow:0 6px 18px -6px rgba(0,0,0,.5);
+}
+.legend{display:flex;gap:18px;font-size:12.5px;color:var(--ink-soft);margin-top:8px;flex-wrap:wrap}
+.legend .sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+/* ---------------- provenance / title block ---------------- */
+.titleblock{
+  border:3px double var(--ink);background:var(--card);padding:22px 26px;
+  position:relative;
+}
+.titleblock::before{
+  content:"SOURCES & SOUNDINGS";
+  position:absolute;top:-12px;left:24px;background:var(--paper);
+  font-family:var(--display);font-size:12px;letter-spacing:.3em;color:var(--ink);
+  padding:0 10px;
+}
+.titleblock .tb-head{font-size:13.5px;color:var(--ink-soft);max-width:880px;margin-bottom:14px}
+.pipe{display:flex;flex-wrap:wrap;gap:0;margin:10px 0 18px;align-items:stretch}
+.pipe .stage{
+  border:1px solid var(--ink);padding:8px 14px;font-size:12px;background:#fffdf6;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.pipe .stage b{font-family:var(--display);letter-spacing:.1em;font-size:11px;text-transform:uppercase}
+.pipe .stage code{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft)}
+.pipe .arrow{align-self:center;padding:0 8px;color:var(--buoy-gold);font-size:18px}
+dl.sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:10px 26px}
+dl.sources>div{border-left:3px solid var(--buoy-gold);padding:2px 0 2px 10px}
+dl.sources dt{font-family:var(--display);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+dl.sources dd{font-size:12.5px;color:var(--ink-soft)}
+dl.sources dd code{font-family:var(--mono);font-size:11px}
+dl.sources dd .when{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint)}
+footer{
+  margin-top:60px;border-top:2px solid var(--ink);padding:18px 28px 40px;
+  font-size:12.5px;color:var(--ink-soft);max-width:1240px;margin-left:auto;margin-right:auto;
+}
+footer code{font-family:var(--mono);font-size:11px}
+#fatal{
+  max-width:760px;margin:80px auto;border:2px solid var(--port-red);
+  background:#fbf1ec;padding:30px;font-size:15px;display:none;
+}
+#fatal h2{color:var(--port-red);font-family:var(--display);letter-spacing:.1em;margin-bottom:10px}
+#fatal code{font-family:var(--mono);background:#fff;padding:1px 6px}
+.smallcaps{font-variant:small-caps;letter-spacing:.04em}
+a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="mast-inner">
+    <div class="kicker">Ecosystem survey · scraped &amp; interactive data</div>
+    <h1>America's Boating Club<br><em>Data Chart of the Whole Fleet</em></h1>
+    <p class="sub">Every figure on this chart was computed by script from pages crawled across the
+    America's Boating Club web ecosystem and from data captured by interacting with its club locator,
+    schedule pages, and storefronts. Nothing here is typed in by hand — see the
+    <a href="#provenance" style="color:#e8d9ae">Sources &amp; Soundings</a> block.</p>
+    <div class="stamp" id="stamp">data.js not loaded</div>
+  </div>
+</header>
+
+<div id="fatal">
+  <h2>No data on board</h2>
+  <p>The dashboard could not find <code>window.DASHBOARD_DATA</code>. The generated data file is
+  missing or failed to load.</p>
+  <p style="margin-top:10px">What to check next: run <code>python3 derive/build_dashboard_data.py</code>
+  from the project root — it writes <code>dashboard/data.js</code>, which this page loads. If that
+  script complains about missing inputs, run <code>python3 derive/extract.py</code> first.</p>
+</div>
+
+<main id="app" hidden>
+
+  <!-- KPI strip -->
+  <div class="kpis" id="kpis"></div>
+
+  <!-- 1. CLUB NETWORK -->
+  <section id="clubs">
+    <div class="sec-head"><span class="no">CH 1</span><h2>The Club Network</h2>
+      <span class="lede" id="clubs-lede"></span></div>
+    <p class="sec-note">Plotted from the coordinates the find-a-club search returns. Like a position
+    plotting sheet, there is no coastline here — the clubs themselves draw the map.</p>
+    <div class="grid g2">
+      <div class="card">
+        <h3>Plotting sheet — every club by coordinate <span class="h3-flag" id="map-flag"></span></h3>
+        <svg id="clubmap" viewBox="0 0 920 560" role="img" aria-label="Dot map of clubs"></svg>
+        <div class="legend">
+          <span><span class="sw" style="background:#12304e"></span>club with its own website</span>
+          <span><span class="sw" style="background:#b3382e"></span>club without a website link</span>
+          <span id="offchart" class="dim"></span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Clubs per state <span class="h3-flag">top 18</span></h3>
+        <div id="statebars"></div>
+        <div id="stateRest" class="dim" style="font-size:12px;margin-top:8px"></div>
+      </div>
+    </div>
+    <div class="grid g3" style="margin-top:22px">
+      <div class="card"><h3>Reachability</h3><div id="reach"></div></div>
+      <div class="card"><h3>Most clubs</h3><div id="topstates"></div></div>
+      <div class="card"><h3>Beyond the states</h3><div id="overseas"></div></div>
+    </div>
+  </section>
+
+  <!-- 2. EDUCATION -->
+  <section id="education">
+    <div class="sec-head"><span class="no">CH 2</span><h2>Education Under Way</h2>
+      <span class="lede" id="edu-lede"></span></div>
+    <p class="sec-note">The national course catalog comes from the main site's course and seminar pages.
+    The live schedule comes from each club's details page — the same page a visitor reaches after
+    using "Find a Club".</p>
+    <div class="grid g2e">
+      <div class="card">
+        <h3>Upcoming classes by start month <span class="h3-flag" id="sched-flag"></span></h3>
+        <svg id="monthchart" viewBox="0 0 560 230"></svg>
+      </div>
+      <div class="card">
+        <h3>Most-scheduled classes nationwide</h3>
+        <table class="log" id="toptitles"></table>
+      </div>
+    </div>
+    <div class="grid g2" style="margin-top:22px">
+      <div class="card">
+        <h3>Course &amp; seminar catalog by subject</h3>
+        <div id="catalog"></div>
+      </div>
+      <div class="card">
+        <h3>Online study (EnrolMart) pricing</h3>
+        <div id="enrolstats"></div>
+        <table class="log" id="enrolpkgs"></table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. COMMERCE -->
+  <section id="commerce">
+    <div class="sec-head"><span class="no">CH 3</span><h2>Ship's Store &amp; Commerce</h2>
+      <span class="lede" id="com-lede"></span></div>
+    <p class="sec-note">The Ship's Store catalog was walked at the 20-second pace its robots.txt
+    requests. Satellite storefronts on vendor domains are charted, including one that has gone dark.</p>
+    <div class="grid g3">
+      <div class="card"><h3>Ship's Store by department</h3><div id="storecats"></div></div>
+      <div class="card"><h3>Price soundings (USD)</h3><div id="pricestats"></div></div>
+      <div class="card"><h3>Satellite storefronts</h3><div id="satellites"></div></div>
+    </div>
+    <div class="card" style="margin-top:22px">
+      <h3>Ship's Store manifest <span class="h3-flag" id="manifest-flag"></span></h3>
+      <div style="max-height:420px;overflow-y:auto;border-bottom:1px solid var(--rule)">
+        <table class="log" id="manifest"></table>
+      </div>
+      <p class="dim" style="font-size:12px;margin-top:8px">scroll for the full manifest — every product is listed</p>
+    </div>
+  </section>
+
+  <!-- 4. CHANNEL -->
+  <section id="channel">
+    <div class="sec-head"><span class="no">CH 4</span><h2>America's Boating Channel</h2>
+      <span class="lede" id="vid-lede"></span></div>
+    <p class="sec-note">Every video page on the channel embeds machine-readable metadata
+    (schema.org VideoObject); this is the fleet-wide tally.</p>
+    <div class="grid g3">
+      <div class="card"><h3>Videos published per year</h3><svg id="yearchart" viewBox="0 0 360 210"></svg></div>
+      <div class="card"><h3>Running time</h3><div id="durations"></div></div>
+      <div class="card"><h3>Longest passages</h3><table class="log" id="longest"></table></div>
+    </div>
+  </section>
+
+  <!-- 5. SITE & CRAWL -->
+  <section id="fleet">
+    <div class="sec-head"><span class="no">CH 5</span><h2>The Web Fleet Itself</h2>
+      <span class="lede" id="fleet-lede"></span></div>
+    <p class="sec-note">What was crawled, what failed, and how the properties link to one another.
+    Honest soundings: caps, blocks and gaps are reported, not hidden.</p>
+    <div class="grid g2">
+      <div class="card">
+        <h3>Crawl log by domain</h3>
+        <table class="log" id="domains"></table>
+        <div id="crawlnotes"></div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Main-site content freshness <span class="h3-flag">sitemap lastmod</span></h3>
+          <svg id="freshchart" viewBox="0 0 460 180"></svg>
+        </div>
+        <div class="card" style="margin-top:22px">
+          <h3>How the properties link to each other</h3>
+          <table class="log" id="crosslinks"></table>
+        </div>
+      </div>
+    </div>
+    <div class="grid g2e" style="margin-top:22px">
+      <div class="card"><h3>Top external harbors linked</h3><div id="externals"></div></div>
+      <div class="card"><h3>The long tail: local club websites</h3><div id="clubsites"></div></div>
+    </div>
+  </section>
+
+  <!-- 6. PROVENANCE -->
+  <section id="provenance">
+    <div class="sec-head"><span class="no">CH 6</span><h2>Sources &amp; Soundings</h2>
+      <span class="lede">every figure regenerable</span></div>
+    <div class="titleblock" style="margin-top:18px">
+      <p class="tb-head">This chart was assembled by a four-stage pipeline. Each stage is an
+      independently runnable script; re-running the pipeline against the saved raw data reproduces
+      every number shown above. If a value cannot be traced through this block, it is a defect.</p>
+      <div class="pipe" id="pipeline"></div>
+      <dl class="sources" id="sources"></dl>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span id="foot-line">—</span><br>
+  Regenerate: <code>python3 derive/extract.py &amp;&amp; python3 derive/build_dashboard_data.py</code>
+  &nbsp;·&nbsp; Raw evidence: <code>data/raw/</code>, <code>data/interactive/</code>, <code>data/crawl/index.jsonl</code>
+</footer>
+
+<div class="maptip" id="maptip"></div>
+
+<script src="data.js"></script>
+<script>
+(function(){
+"use strict";
+var D = window.DASHBOARD_DATA;
+if(!D){
+  document.getElementById('fatal').style.display='block';
+  return;
+}
+document.getElementById('app').hidden = false;
+
+/* ---------- helpers ---------- */
+function el(tag, attrs, text){
+  var e = document.createElement(tag);
+  if(attrs) Object.keys(attrs).forEach(function(k){ e.setAttribute(k, attrs[k]); });
+  if(text !== undefined) e.textContent = text;
+  return e;
+}
+function svgel(tag, attrs){
+  var e = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  if(attrs) Object.keys(attrs).forEach(function(k){ e.setAttribute(k, attrs[k]); });
+  return e;
+}
+function fmt(n){ return (n===null||n===undefined) ? 'n/a' : n.toLocaleString('en-US'); }
+function usd(n){ return (n===null||n===undefined) ? 'n/a' : '$' + n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function countUp(node, target){
+  if(reduceMotion || target === null || target === undefined || typeof target !== 'number'){ node.textContent = fmt(target); return; }
+  var t0 = null, dur = 900;
+  function step(ts){
+    if(!t0) t0 = ts;
+    var p = Math.min(1,(ts-t0)/dur); p = 1-Math.pow(1-p,3);
+    node.textContent = fmt(Math.round(target*p));
+    if(p<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+/* ---------- masthead stamp ---------- */
+document.getElementById('stamp').textContent =
+  'Edition generated ' + D.provenance.generated_at + ' UTC · by ' + D.provenance.generator;
+
+/* ---------- KPI strip ---------- */
+var totalProducts = D.commerce.ships_store.products + D.commerce.enrolmart.products + D.commerce.cpdean_awards.products;
+var kpis = [
+  [D.clubs.total, 'Local clubs located'],
+  [D.clubs.states_with_clubs, 'States with a club'],
+  [D.schedule.total_upcoming, 'Classes on the calendar'],
+  [D.education.courses + D.education.seminars, 'Courses & seminars taught'],
+  [totalProducts, 'Products across 3 stores'],
+  [D.videos.total, 'Channel videos'],
+  [D.site.pages_fetched, 'Pages crawled'],
+];
+var kwrap = document.getElementById('kpis');
+kpis.forEach(function(k, i){
+  var d = el('div', {class:'kpi', style:'animation-delay:'+(i*70)+'ms'});
+  var v = el('div', {class:'v'}, '0');
+  d.appendChild(v);
+  d.appendChild(el('div', {class:'l'}, k[1]));
+  kwrap.appendChild(d);
+  countUp(v, k[0]);
+});
+
+/* ---------- CH1 · club map (Albers equal-area conic for CONUS+PR) ---------- */
+(function(){
+  var all = D.clubs.map_points;
+  var conus = [], alaska = [], carib = [], off = [];
+  all.forEach(function(p){
+    if(p.lng >= -60) off.push(p);              // e.g. Tokyo
+    else if(p.lat > 50) alaska.push(p);        // Alaska
+    else if(p.lat < 20) carib.push(p);         // Puerto Rico / USVI
+    else conus.push(p);
+  });
+  document.getElementById('map-flag').textContent =
+    (conus.length + alaska.length + carib.length) + ' plotted';
+  document.getElementById('offchart').textContent =
+    off.length ? off.length + ' club' + (off.length>1?'s':'') + ' beyond this sheet: ' +
+      off.map(function(p){return p.name;}).join(', ') : '';
+
+  var svg = document.getElementById('clubmap');
+  var tip = document.getElementById('maptip');
+  var W=920, H=560;
+  var d2r = Math.PI/180;
+
+  function albers(p1d, p2d, lat0d, lng0d){
+    var p1=p1d*d2r, p2=p2d*d2r, lat0=lat0d*d2r, lng0=lng0d*d2r;
+    var n=(Math.sin(p1)+Math.sin(p2))/2;
+    var C=Math.cos(p1)*Math.cos(p1)+2*n*Math.sin(p1);
+    var rho0=Math.sqrt(C-2*n*Math.sin(lat0))/n;
+    return function(lat,lng){
+      var rho=Math.sqrt(C-2*n*Math.sin(lat*d2r))/n;
+      var th=n*(lng*d2r-lng0);
+      return [rho*Math.sin(th), rho0-rho*Math.cos(th)];
+    };
+  }
+  function addDot(X, Y, p, r){
+    var c = svgel('circle', {cx:X.toFixed(1), cy:Y.toFixed(1), r:r,
+      class:'dot' + (p.website ? '' : ' nosite')});
+    c.addEventListener('mousemove', function(ev){
+      tip.style.opacity = 1;
+      tip.style.left = ev.clientX + 'px';
+      tip.style.top = ev.clientY + 'px';
+      tip.textContent = p.name + (p.state ? ' · ' + p.state : '');
+    });
+    c.addEventListener('mouseleave', function(){ tip.style.opacity = 0; });
+    svg.appendChild(c);
+  }
+  // Draw one chart panel: project pts, fit into frame, optional graticule+box
+  function panel(pts, project, frame, opts){
+    if(!pts.length) return;
+    var proj = pts.map(function(p){ var xy=project(p.lat,p.lng); return {p:p,x:xy[0],y:xy[1]}; });
+    var xs=proj.map(function(q){return q.x;}), ys=proj.map(function(q){return q.y;});
+    var minx=Math.min.apply(null,xs), maxx=Math.max.apply(null,xs)||minx+1e-6;
+    var miny=Math.min.apply(null,ys), maxy=Math.max.apply(null,ys)||miny+1e-6;
+    var s=Math.min(frame.w/(maxx-minx||1e-6), frame.h/(maxy-miny||1e-6));
+    var ox=frame.x+(frame.w-(maxx-minx)*s)/2, oy=frame.y+(frame.h-(maxy-miny)*s)/2;
+    function place(x,y){ return [ox+(x-minx)*s, frame.y+frame.h-(oy-frame.y)-(y-miny)*s]; }
+    if(opts && opts.grat){
+      for(var lat=opts.grat.lat0; lat<=opts.grat.lat1; lat+=5){
+        var path='';
+        for(var lng=opts.grat.lng0; lng<=opts.grat.lng1; lng+=2){
+          var xy=project(lat,lng), P=place(xy[0],xy[1]);
+          path+=(path?'L':'M')+P[0].toFixed(1)+' '+P[1].toFixed(1);
+        }
+        svg.appendChild(svgel('path',{d:path,fill:'none',stroke:'rgba(18,48,78,.13)','stroke-width':1}));
+      }
+      for(var lng2=opts.grat.lng0; lng2<=opts.grat.lng1; lng2+=5){
+        var path2='';
+        for(var lat2=opts.grat.lat0; lat2<=opts.grat.lat1; lat2+=1){
+          var xy2=project(lat2,lng2), P2=place(xy2[0],xy2[1]);
+          path2+=(path2?'L':'M')+P2[0].toFixed(1)+' '+P2[1].toFixed(1);
+        }
+        svg.appendChild(svgel('path',{d:path2,fill:'none',stroke:'rgba(18,48,78,.13)','stroke-width':1}));
+      }
+    }
+    if(opts && opts.box){
+      svg.appendChild(svgel('rect',{x:frame.x-10,y:frame.y-18,width:frame.w+20,height:frame.h+28,
+        fill:'rgba(18,48,78,.03)',stroke:'rgba(18,48,78,.35)','stroke-width':1,'stroke-dasharray':'4 3'}));
+      var lab=svgel('text',{x:frame.x-4,y:frame.y-6,'font-size':'10.5','letter-spacing':'.15em'});
+      lab.textContent=opts.box; svg.appendChild(lab);
+    }
+    proj.forEach(function(q){
+      var P=place(q.x,q.y);
+      addDot(P[0],P[1],q.p,opts&&opts.r||4.2);
+    });
+  }
+
+  // Main CONUS sheet (Albers, the classic US parameters)
+  panel(conus, albers(29.5,45.5,23,-96), {x:40,y:30,w:840,h:380},
+        {grat:{lat0:25,lat1:50,lng0:-126,lng1:-64}});
+  // Insets, like any proper US chart
+  panel(alaska, albers(55,65,50,-154), {x:60,y:470,w:150,h:60},
+        {box:'ALASKA',r:4.6});
+  panel(carib, albers(17,19,16,-66), {x:660,y:470,w:190,h:60},
+        {box:'PUERTO RICO & USVI',r:4.6});
+})();
+
+document.getElementById('clubs-lede').textContent =
+  fmt(D.clubs.total) + ' clubs · ' + D.clubs.states_with_clubs + ' states';
+
+/* state bars */
+(function(){
+  var entries = Object.entries(D.clubs.by_state);
+  var top = entries.slice(0, 18);
+  var max = top.length ? top[0][1] : 1;
+  var wrap = document.getElementById('statebars');
+  top.forEach(function(kv, i){
+    var row = el('div', {class:'barrow'});
+    row.appendChild(el('span', {class:'lab'}, kv[0]));
+    var trk = el('div', {class:'trk'});
+    var fil = el('div', {class:'fil', style:'width:'+(kv[1]/max*100)+'%;animation-delay:'+(i*45)+'ms'});
+    fil.textContent = kv[1];
+    trk.appendChild(fil); row.appendChild(trk); wrap.appendChild(row);
+  });
+  var rest = entries.slice(18);
+  if(rest.length){
+    var restTotal = rest.reduce(function(a,kv){return a+kv[1];},0);
+    document.getElementById('stateRest').textContent =
+      '+ ' + rest.length + ' more states/territories with ' + restTotal + ' clubs between them';
+  }
+})();
+
+/* reachability + top states + overseas */
+(function(){
+  var r = document.getElementById('reach');
+  [['with a website', D.clubs.with_website],
+   ['with a contact email', D.clubs.with_email],
+   ['with a Facebook page', D.clubs.with_facebook]].forEach(function(kv){
+    var row = el('div', {class:'barrow'});
+    row.appendChild(el('span', {class:'lab', style:'width:120px'}, kv[0]));
+    var trk = el('div', {class:'trk'});
+    var fil = el('div', {class:'fil alt', style:'width:'+(kv[1]/D.clubs.total*100)+'%'});
+    fil.textContent = kv[1] + ' / ' + D.clubs.total;
+    trk.appendChild(fil); row.appendChild(trk); r.appendChild(row);
+  });
+  var ts = document.getElementById('topstates');
+  Object.entries(D.clubs.by_state).slice(0,5).forEach(function(kv){
+    var p = el('div', {style:'display:flex;justify-content:space-between;border-bottom:1px solid var(--rule);padding:4px 0'});
+    p.appendChild(el('span', {}, kv[0]));
+    var b = el('b', {style:'font-family:var(--mono)'}, kv[1] + ' clubs');
+    p.appendChild(b); ts.appendChild(p);
+  });
+  var ov = document.getElementById('overseas');
+  if(D.clubs.outside_us_states.length){
+    D.clubs.outside_us_states.forEach(function(name){
+      ov.appendChild(el('p', {style:'font-size:13.5px'}, name));
+    });
+    ov.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
+      'Clubs whose directory address has no US state — charted by name only.'));
+  } else {
+    ov.appendChild(el('p', {class:'dim'}, 'Every club in the directory lists a US state.'));
+  }
+})();
+
+/* ---------- CH2 · education ---------- */
+document.getElementById('edu-lede').textContent =
+  D.education.courses + ' courses · ' + D.education.seminars + ' seminars · ' +
+  fmt(D.schedule.total_upcoming) + ' scheduled classes';
+document.getElementById('sched-flag').textContent =
+  D.schedule.clubs_with_classes + ' of ' + D.schedule.clubs_checked + ' clubs have schedules';
+
+/* month columns */
+(function(){
+  var entries = Object.entries(D.schedule.by_month).filter(function(kv){return kv[0]!=='unparsed';});
+  if(!entries.length) return;
+  var svg = document.getElementById('monthchart');
+  var W=560,H=230,pad=30,bw=(W-2*pad)/entries.length;
+  var max = Math.max.apply(null, entries.map(function(kv){return kv[1];}));
+  entries.forEach(function(kv,i){
+    var h = (kv[1]/max)*(H-70);
+    var x = pad+i*bw;
+    svg.appendChild(svgel('rect',{x:x+3,y:H-40-h,width:Math.max(bw-6,3),height:h,fill:'#12304e'}));
+    var t = svgel('text',{x:x+bw/2,y:H-40-h-6,'text-anchor':'middle','font-size':'11'});
+    t.textContent = kv[1]; svg.appendChild(t);
+    var lab = svgel('text',{x:x+bw/2,y:H-22,'text-anchor':'middle','font-size':'10'});
+    lab.textContent = kv[0].slice(2).replace('-','·'); svg.appendChild(lab);
+  });
+  svg.appendChild(svgel('line',{x1:pad,y1:H-40,x2:W-pad,y2:H-40,stroke:'#12304e','stroke-width':1.5}));
+  var cap = svgel('text',{x:pad,y:H-6,'font-size':'10'});
+  cap.textContent = 'start month (YY·MM), from each club-details page';
+  svg.appendChild(cap);
+})();
+
+/* top titles table */
+(function(){
+  var tbl = document.getElementById('toptitles');
+  var tr = el('tr'); ['Class', 'Type', 'Offerings'].forEach(function(h){ tr.appendChild(el('th', {}, h)); });
+  tbl.appendChild(tr);
+  var kindByTitle = {};
+  // derive type per title from the schedule kinds, fall back via catalog
+  (D.schedule.top_titles||[]).forEach(function(kv){
+    var row = el('tr');
+    row.appendChild(el('td', {}, kv[0]));
+    var kind = '—';
+    var inCatalog = D.education.catalog.filter(function(c){ return c.title.toLowerCase() === kv[0].toLowerCase(); });
+    if(inCatalog.length) kind = inCatalog[0].kind;
+    else if(/course/i.test(kv[0])) kind = 'course';
+    row.appendChild(el('td', {class:'dim'}, kind));
+    row.appendChild(el('td', {class:'num'}, String(kv[1])));
+    tbl.appendChild(row);
+  });
+})();
+
+/* catalog chips */
+(function(){
+  var wrap = document.getElementById('catalog');
+  Object.entries(D.education.by_category).forEach(function(kv){
+    var blk = el('div', {class:'cat-block'});
+    blk.appendChild(el('div', {class:'cat-name'}, kv[0]));
+    (kv[1].courses||[]).forEach(function(t){
+      var c = el('span', {class:'chip'}); c.appendChild(el('b', {}, 'C '));
+      c.appendChild(document.createTextNode(t)); blk.appendChild(c);
+    });
+    (kv[1].seminars||[]).forEach(function(t){
+      var c = el('span', {class:'chip'}); c.appendChild(el('b', {}, 'S '));
+      c.appendChild(document.createTextNode(t)); blk.appendChild(c);
+    });
+    wrap.appendChild(blk);
+  });
+  wrap.appendChild(el('p',{class:'dim',style:'font-size:12px;margin-top:6px'},
+    'C = course (multi-session) · S = seminar (single-session) · from the main site catalog pages'));
+})();
+
+/* enrolmart */
+(function(){
+  var st = D.commerce.enrolmart.price_stats;
+  var wrap = document.getElementById('enrolstats');
+  if(st){
+    var line = el('p', {style:'font-size:13.5px;margin-bottom:10px'});
+    line.innerHTML = '<b>' + D.commerce.enrolmart.products + '</b> priced offerings — ' +
+      '<b>' + D.commerce.enrolmart.online_courses + '</b> online courses, ' +
+      '<b>' + D.commerce.enrolmart.packages + '</b> bundles. ' +
+      'Cheapest ' + usd(st.min) + ', dearest ' + usd(st.max) + ', median ' + usd(st.median) + '.';
+    wrap.appendChild(line);
+  }
+  var tbl = document.getElementById('enrolpkgs');
+  var tr = el('tr'); ['Bundle / course (selection)', '', 'Price'].forEach(function(h){ tr.appendChild(el('th', {}, h)); });
+  tbl.appendChild(tr);
+  var pkgs = D.commerce.enrolmart.items.filter(function(p){return p.type==='package';});
+  var courses = D.commerce.enrolmart.items.filter(function(p){return p.type!=='package';})
+                 .sort(function(a,b){return b.price_usd-a.price_usd;}).slice(0,6);
+  pkgs.concat(courses).forEach(function(p){
+    var row = el('tr');
+    var td = el('td'); var a = el('a', {href:p.url, target:'_blank', rel:'noopener'}, p.title); td.appendChild(a);
+    row.appendChild(td);
+    row.appendChild(el('td', {class:'dim'}, p.type));
+    row.appendChild(el('td', {class:'num'}, usd(p.price_usd)));
+    tbl.appendChild(row);
+  });
+})();
+
+/* ---------- CH3 · commerce ---------- */
+document.getElementById('com-lede').textContent =
+  fmt(totalProducts) + ' products · 3 storefronts + 1 closed';
+(function(){
+  var sc = document.getElementById('storecats');
+  var cats = Object.entries(D.commerce.ships_store.by_category)
+    .filter(function(kv){ return kv[0].toLowerCase() !== 'catalog root'; }).slice(0, 12);
+  var max = cats.length ? Math.max.apply(null, cats.map(function(kv){return kv[1];})) : 1;
+  cats.forEach(function(kv, i){
+    var row = el('div', {class:'barrow'});
+    row.appendChild(el('span', {class:'lab', style:'width:150px;text-transform:capitalize'}, kv[0]));
+    var trk = el('div', {class:'trk'});
+    var fil = el('div', {class:'fil', style:'width:'+(kv[1]/max*100)+'%;animation-delay:'+(i*40)+'ms'});
+    fil.textContent = kv[1];
+    trk.appendChild(fil); row.appendChild(trk); sc.appendChild(row);
+  });
+  sc.appendChild(el('p',{class:'dim',style:'font-size:12px;margin-top:6px'},
+    'a product can sail under several departments'));
+
+  var ps = document.getElementById('pricestats');
+  [['Ship’s Store', D.commerce.ships_store.price_stats],
+   ['EnrolMart (study)', D.commerce.enrolmart.price_stats],
+   ['C.P. Dean (awards)', D.commerce.cpdean_awards.price_stats]].forEach(function(kv){
+    var blk = el('div', {style:'border-bottom:1px solid var(--rule);padding:7px 0'});
+    blk.appendChild(el('div', {style:'font-family:var(--display);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)'}, kv[0]));
+    var s = kv[1];
+    blk.appendChild(el('div', {style:'font-family:var(--mono);font-size:12.5px;margin-top:2px'},
+      s ? (s.count + ' items · ' + usd(s.min) + ' – ' + usd(s.max) + ' · median ' + usd(s.median)) : 'no priced items captured'));
+    ps.appendChild(blk);
+  });
+
+  var sat = document.getElementById('satellites');
+  var g = D.commerce.geiger_vessel_examiner;
+  var notice = el('div', {class:'notice', style:'margin-top:2px'});
+  notice.appendChild(el('div', {class:'nt'}, 'Notice to Mariners'));
+  var p1 = el('p'); p1.innerHTML = '<b>' + (g.page_title || 'ABC Vessel Examiner Site') + '</b> — the vessel-examiner gear store at <span style="font-family:var(--mono);font-size:11px">abcvesselexaminer.brandingbygeiger.com</span> reports: <b>' + g.status + '</b>.';
+  notice.appendChild(p1);
+  sat.appendChild(notice);
+  var cp = el('p', {style:'font-size:13.5px;margin-top:10px'});
+  cp.innerHTML = '<b>C.P. Dean Co.</b> hosts the official awards collection — <b>' +
+    D.commerce.cpdean_awards.products + '</b> ABC-branded plaques, tumblers and trophies (full list in data/interactive/satellite_stores.json).';
+  sat.appendChild(cp);
+})();
+
+/* manifest table */
+(function(){
+  var items = D.commerce.ships_store.items.slice().sort(function(a,b){ return (b.price_min||0)-(a.price_min||0); });
+  document.getElementById('manifest-flag').textContent = items.length + ' products, priciest first';
+  var tbl = document.getElementById('manifest');
+  var tr = el('tr'); ['Product', 'Item code', 'Price'].forEach(function(h){ tr.appendChild(el('th', {}, h)); });
+  tbl.appendChild(tr);
+  items.forEach(function(p){
+    var row = el('tr');
+    var td = el('td'); var a = el('a', {href:p.url, target:'_blank', rel:'noopener'}, p.name); td.appendChild(a);
+    row.appendChild(td);
+    row.appendChild(el('td', {class:'dim', style:'font-family:var(--mono);font-size:11.5px'}, p.item_code || 'n/a'));
+    var price = (p.price_min===null) ? 'n/a' :
+      (p.price_min===p.price_max ? usd(p.price_min) : usd(p.price_min) + ' – ' + usd(p.price_max));
+    row.appendChild(el('td', {class:'num'}, price));
+    tbl.appendChild(row);
+  });
+})();
+
+/* ---------- CH4 · channel ---------- */
+document.getElementById('vid-lede').textContent =
+  fmt(D.videos.total) + ' videos · ' + fmt(D.videos.total_runtime_hours) + ' hours';
+(function(){
+  var entries = Object.entries(D.videos.uploads_by_year).filter(function(kv){return kv[0]!=='unknown';});
+  var svg = document.getElementById('yearchart');
+  if(entries.length){
+    var W=360,H=210,pad=26,bw=(W-2*pad)/entries.length;
+    var max = Math.max.apply(null, entries.map(function(kv){return kv[1];}));
+    entries.forEach(function(kv,i){
+      var h=(kv[1]/max)*(H-66), x=pad+i*bw;
+      svg.appendChild(svgel('rect',{x:x+3,y:H-36-h,width:Math.max(bw-6,3),height:h,fill:'#2e6e4e'}));
+      var t=svgel('text',{x:x+bw/2,y:H-36-h-5,'text-anchor':'middle','font-size':'10.5'});
+      t.textContent=kv[1]; svg.appendChild(t);
+      var lab=svgel('text',{x:x+bw/2,y:H-20,'text-anchor':'middle','font-size':'10'});
+      lab.textContent="'"+kv[0].slice(2); svg.appendChild(lab);
+    });
+    svg.appendChild(svgel('line',{x1:pad,y1:H-36,x2:W-pad,y2:H-36,stroke:'#12304e','stroke-width':1.5}));
+  }
+  var unknown = D.videos.uploads_by_year.unknown;
+  if(unknown){
+    var cap=svgel('text',{x:26,y:H-4,'font-size':'10'});
+    cap.textContent = '+' + unknown + ' videos without an upload date';
+    svg.appendChild(cap);
+  }
+
+  var dw = document.getElementById('durations');
+  var line = el('p', {style:'font-size:13.5px;margin-bottom:8px'});
+  line.innerHTML = 'Total runtime <b>' + fmt(D.videos.total_runtime_hours) + ' hours</b>; the median video runs <b>' +
+    fmt(D.videos.median_duration_minutes) + ' min</b>.';
+  dw.appendChild(line);
+  var max2 = Math.max.apply(null, D.videos.duration_buckets.map(function(kv){return kv[1];}));
+  D.videos.duration_buckets.forEach(function(kv){
+    var row = el('div', {class:'barrow'});
+    row.appendChild(el('span', {class:'lab', style:'width:86px'}, kv[0]));
+    var trk = el('div', {class:'trk'});
+    var fil = el('div', {class:'fil alt', style:'width:'+(kv[1]/max2*100)+'%'});
+    fil.textContent = kv[1];
+    trk.appendChild(fil); row.appendChild(trk); dw.appendChild(row);
+  });
+
+  var tbl = document.getElementById('longest');
+  var tr = el('tr'); ['Video', 'Min'].forEach(function(h){ tr.appendChild(el('th', {}, h)); });
+  tbl.appendChild(tr);
+  D.videos.longest.forEach(function(v){
+    var row = el('tr');
+    row.appendChild(el('td', {}, v.name));
+    row.appendChild(el('td', {class:'num'}, String(v.minutes)));
+    tbl.appendChild(row);
+  });
+})();
+
+/* ---------- CH5 · fleet ---------- */
+document.getElementById('fleet-lede').textContent =
+  D.site.domains_crawled + ' domains · ' + fmt(D.site.pages_fetched) + ' pages · ' +
+  fmt(D.site.fetch_failures) + ' failures';
+(function(){
+  var tbl = document.getElementById('domains');
+  var tr = el('tr'); ['Domain', 'Fetched', 'Failed', 'Skipped', 'PDFs'].forEach(function(h){ tr.appendChild(el('th', {}, h)); });
+  tbl.appendChild(tr);
+  Object.entries(D.site.per_domain).forEach(function(kv){
+    var row = el('tr');
+    row.appendChild(el('td', {style:'font-family:var(--mono);font-size:12px'}, kv[0]));
+    var f = kv[1].fetched||0, fl = kv[1].failed||0;
+    var tdF = el('td', {class:'num'}); tdF.appendChild(el('span', {class: f? 'ok':'bad'}, String(f))); row.appendChild(tdF);
+    var tdX = el('td', {class:'num'}); tdX.appendChild(el('span', {class: fl? 'bad':'dim'}, String(fl))); row.appendChild(tdX);
+    row.appendChild(el('td', {class:'num dim'}, String(kv[1].skipped||0)));
+    row.appendChild(el('td', {class:'num dim'}, String(kv[1].pdf_recorded||0)));
+    tbl.appendChild(row);
+  });
+  var notes = document.getElementById('crawlnotes');
+  D.site.notes.forEach(function(n){
+    var box = el('div', {class:'notice'});
+    box.appendChild(el('div', {class:'nt'}, 'Notice to Mariners'));
+    box.appendChild(el('p', {}, n));
+    notes.appendChild(box);
+  });
+})();
+
+/* freshness columns */
+(function(){
+  var entries = Object.entries(D.site.main_site_lastmod_by_year).filter(function(kv){return kv[0]!=='unknown';});
+  if(!entries.length) return;
+  var svg = document.getElementById('freshchart');
+  var W=460,H=180,pad=26,bw=(W-2*pad)/entries.length;
+  var max = Math.max.apply(null, entries.map(function(kv){return kv[1];}));
+  entries.forEach(function(kv,i){
+    var h=(kv[1]/max)*(H-62), x=pad+i*bw;
+    svg.appendChild(svgel('rect',{x:x+4,y:H-34-h,width:Math.max(bw-8,3),height:h,fill:'#c8922a'}));
+    var t=svgel('text',{x:x+bw/2,y:H-34-h-5,'text-anchor':'middle','font-size':'10.5'});
+    t.textContent=kv[1]; svg.appendChild(t);
+    var lab=svgel('text',{x:x+bw/2,y:H-18,'text-anchor':'middle','font-size':'10'});
+    lab.textContent=kv[0]; svg.appendChild(lab);
+  });
+  svg.appendChild(svgel('line',{x1:pad,y1:H-34,x2:W-pad,y2:H-34,stroke:'#12304e','stroke-width':1.5}));
+  var cap=svgel('text',{x:pad,y:H-4,'font-size':'10'});
+  cap.textContent='pages last modified per year, per the site’s own sitemap';
+  svg.appendChild(cap);
+})();
+
+/* cross links */
+(function(){
+  var tbl = document.getElementById('crosslinks');
+  var tr = el('tr'); ['From', 'To', 'Links'].forEach(function(h){ tr.appendChild(el('th', {}, h)); });
+  tbl.appendChild(tr);
+  D.ecosystem.abc_cross_links.slice(0, 12).forEach(function(e){
+    var row = el('tr');
+    row.appendChild(el('td', {style:'font-family:var(--mono);font-size:11.5px'}, e.from));
+    row.appendChild(el('td', {style:'font-family:var(--mono);font-size:11.5px'}, e.to));
+    row.appendChild(el('td', {class:'num'}, fmt(e.links)));
+    tbl.appendChild(row);
+  });
+})();
+
+/* externals + club sites */
+(function(){
+  var ex = document.getElementById('externals');
+  var entries = Object.entries(D.ecosystem.top_external_domains).slice(0, 14);
+  var max = entries.length ? entries[0][1] : 1;
+  entries.forEach(function(kv){
+    var row = el('div', {class:'barrow'});
+    row.appendChild(el('span', {class:'lab', style:'width:210px;overflow:hidden;text-overflow:ellipsis;font-size:11px'}, kv[0]));
+    var trk = el('div', {class:'trk'});
+    var fil = el('div', {class:'fil', style:'width:'+(kv[1]/max*100)+'%'});
+    fil.textContent = fmt(kv[1]);
+    trk.appendChild(fil); row.appendChild(trk); ex.appendChild(row);
+  });
+  ex.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
+    D.ecosystem.external_domains_total + ' distinct external domains were linked in total'));
+
+  var cs = document.getElementById('clubsites');
+  var p = el('p', {style:'font-size:14px'});
+  p.innerHTML = 'Beyond the ' + D.site.domains_crawled + ' national properties crawled, the club directory points to <b>' +
+    D.ecosystem.club_websites_total + ' local club websites</b> — each one its own harbor, listed in data/extracted/link_graph.json.';
+  cs.appendChild(p);
+})();
+
+/* ---------- CH6 · provenance ---------- */
+(function(){
+  var pipe = document.getElementById('pipeline');
+  D.provenance.pipeline.forEach(function(st, i){
+    if(i){ var a = el('span', {class:'arrow'}, '➜'); pipe.appendChild(a); }
+    var s = el('div', {class:'stage'});
+    s.appendChild(el('b', {}, st.stage));
+    s.appendChild(el('code', {}, st.script));
+    s.appendChild(el('code', {style:'color:var(--ink-faint)'}, st.evidence));
+    pipe.appendChild(s);
+  });
+  var dl = document.getElementById('sources');
+  Object.entries(D.provenance.dataset_sources).forEach(function(kv){
+    var div = el('div');
+    var dt = el('dt', {}, kv[0].replace(/_/g, ' '));
+    var dd = el('dd');
+    dd.appendChild(document.createTextNode(kv[1].description + ' '));
+    var when = kv[1].fetched_at || kv[1].extracted_at;
+    if(when){ dd.appendChild(el('span', {class:'when'}, '[' + when + ']')); }
+    div.appendChild(dt); div.appendChild(dd); dl.appendChild(div);
+  });
+})();
+
+document.getElementById('foot-line').textContent =
+  'America’s Boating Club ecosystem chart · generated ' + D.provenance.generated_at +
+  ' UTC · ' + fmt(D.site.pages_fetched) + ' pages across ' + D.site.domains_crawled +
+  ' domains · all figures computed by derive/build_dashboard_data.py';
+})();
+</script>
+</body>
+</html>
