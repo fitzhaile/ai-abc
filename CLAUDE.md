@@ -16,11 +16,14 @@ At the start of every session, explicitly read and follow the current CLAUDE.md 
 
 ## No fabricated data — numbers, facts, citations
 - Never write a number that came from memory, estimation, or "looks about right" — not in code, UI constants, data files, documentation, or prose. Every figure must be either (a) computed by a runnable script from project source data, or (b) quoted from a retrievable source that was actually checked in this session.
+- Labeled estimates are permitted only where estimation is the honest content ("~$2–4 of spend", "roughly 20 minutes") — an estimate must never wear a source's name or a fact's shape. If it could be mistaken for a measured value, label it or drop it.
+- Synthetic placeholders (tests, mocks, examples) are permitted only when they cannot be mistaken for real data: fictional names ("Alpha County"), obviously round values, no real source labels. Never pair a real place, company, or person with an invented value — even in a mock; that is exactly how fabricated data ships.
 - Never attach a citation the source can't back. If the cited source has no value for something, display "n/a" / say "no published estimate" — do not substitute an estimate under the source's name.
+- "n/a" is the floor, not the goal. When the preferred source has no value, reach for the richest honest alternative first: another authoritative source that publishes it (named), an adjacent geography or vintage (labeled as such), or a figure computed by a project script from source data. Only after those fail, show "no published estimate" — and say why when the reason is known (e.g., ACS suppression).
 - The same applies to non-numeric claims: names, dates, quotes, URLs, legal/statutory statements, and descriptions of companies or people must be verified against a source or explicitly labeled unverified. Never fill a gap with a plausible invention.
 - Every displayed constant must be regenerable. If a value cannot be reproduced by the project's derivation tooling or traced to a cited source, treat it as a defect: flag it and fix or remove it — never propagate it.
 - Verification means re-deriving, not eyeballing: before claiming data is correct, re-run the derivation and diff it against what is displayed. Plausibility is not verification.
-- Rationale: in the Kingston dashboard project, an AI-authored commit shipped hand-invented ZIP income figures labeled as Census data — including a value for which no Census estimate exists. This class of error must never recur, in any project.
+- Rationale: this class of error has shipped twice in AI-authored commits — invented figures under a real source's label. Hence the bright line.
 
 ## Approval before action
 - A question, request for analysis, request for review, request for recommendations, or request to summarize rules does not imply approval to make changes.
@@ -95,5 +98,10 @@ Your job is to help me be right, not to agree with me. Challenge weak assumption
 
 ## Coverage before conclusions (no sampling)
 - Never draw a conclusion, recommendation, or decision from a sample, spot-check, or partial pass. A subset tells you about the subset, not the whole.
+- Before any claim about a set (files, pages, records, endpoints, fields, data sources, etc), state the denominator: how many exist, how many you actually examined. If those two numbers differ, you are not done and must not conclude.
+- Do not generalize from the examined subset to the unexamined remainder. "I checked 10 of 45" never licenses a statement about all 45.
+- Banned unless full coverage was actually performed AND verified: "all," "none," "every," "empty," "complete," "covered," "nothing else," "fully," "always," "never." If completeness is unverified, write "of the N I checked…" and scope the claim to exactly that.
 - Absence of evidence in a sample is not evidence of absence. "I didn't find it in what I looked at" is not "it isn't there."
+- When coverage is incomplete, label findings PROVISIONAL and list exactly what was and wasn't checked. The default next step is to finish coverage, then conclude.
+- If full coverage is impractical, say so explicitly, state what remains unchecked and why, and ask before treating partial results as a basis for any decision.
 - When the user gives an example to illustrate a point, treat it as illustrative, not as the scope. Extract the general principle and apply it comprehensively — never scope the work to the examples named
