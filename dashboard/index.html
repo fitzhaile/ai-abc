@@ -122,8 +122,12 @@ section{margin-top:54px}
   font-family:var(--display);font-size:12.5px;letter-spacing:.2em;
   text-transform:uppercase;color:var(--ink-soft);margin-bottom:12px;
   border-bottom:1px solid var(--rule);padding-bottom:7px;
+  display:flex;flex-wrap:wrap;align-items:baseline;column-gap:10px;row-gap:3px;
 }
-.card .h3-flag{float:right;font-family:var(--mono);font-size:10.5px;color:var(--ink-faint)}
+.card .h3-flag{
+  margin-left:auto;text-align:right;white-space:nowrap;
+  font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);
+}
 /* ---------------- KPI strip ---------------- */
 .kpis{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
@@ -151,15 +155,22 @@ svg text{font-family:var(--mono);fill:var(--ink-soft)}
 .axis line,.axis path{stroke:var(--rule)}
 .barrow{display:flex;align-items:center;gap:10px;margin:5px 0;font-size:13px}
 .barrow .lab{width:42px;text-align:right;font-family:var(--mono);font-size:12px;color:var(--ink-soft);flex:none}
-.barrow .trk{flex:1;background:rgba(18,48,78,.07);height:15px;position:relative}
+.barrow .trk{flex:1;background:rgba(18,48,78,.07);height:24px;position:relative}
 .barrow .fil{
   height:100%;background:linear-gradient(90deg,#1d4569,#12304e);
   display:flex;align-items:center;justify-content:flex-end;
-  color:#e9eff5;font-family:var(--mono);font-size:10.5px;padding-right:5px;
+  color:#e9eff5;font-family:var(--mono);font-size:12px;padding-right:5px;
   min-width:2px;transform-origin:left;animation:grow .8s cubic-bezier(.2,.7,.2,1) both;
 }
 @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .barrow .fil.alt{background:linear-gradient(90deg,#3b7a5c,#2e6e4e)}
+/* value label printed beside a bar too short to hold it */
+.barrow .ext{
+  position:absolute;top:50%;transform:translateY(-50%);
+  font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);white-space:nowrap;
+}
+/* per-row running-total column (hours-per-year chart) */
+.barrow .runtot{flex:none;font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);white-space:nowrap}
 /* ---------------- tables ---------------- */
 table.log{width:100%;border-collapse:collapse;font-size:13.5px}
 table.log th{
@@ -418,7 +429,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     <div class="grid g3" style="margin-top:22px">
       <div class="card">
         <h3>Hours of content added per year <span class="h3-flag">with running total</span></h3>
-        <svg id="hoursyear" viewBox="0 0 560 210"></svg>
+        <div id="hoursyear"></div>
       </div>
       <div class="card">
         <h3>Typical video length by year</h3>
@@ -508,6 +519,15 @@ function svgel(tag, attrs){
   var e = document.createElementNS('http://www.w3.org/2000/svg', tag);
   if(attrs) Object.keys(attrs).forEach(function(k){ e.setAttribute(k, attrs[k]); });
   return e;
+}
+/* Bar labels: print the value inside the bar when the bar is wide enough to
+   hold it (pct of the track >= minPct), otherwise just past the bar's end —
+   white text inside a sliver of a bar spills onto the pale track and is
+   unreadable. minPct is per chart: longer labels and narrower tracks need a
+   higher cutoff. */
+function placeBarLabel(trk, fil, pct, text, minPct){
+  if(pct >= minPct){ fil.textContent = text; }
+  else { trk.appendChild(el('span', {class:'ext', style:'left:calc(' + pct + '% + 6px)'}, String(text))); }
 }
 function fmt(n){ return (n===null||n===undefined) ? 'n/a' : n.toLocaleString('en-US'); }
 function usd(n){ return (n===null||n===undefined) ? 'n/a' : '$' + n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
@@ -712,8 +732,9 @@ document.getElementById('clubs-lede').textContent =
     var row = el('div', {class:'barrow'});
     row.appendChild(el('span', {class:'lab'}, kv[0]));
     var trk = el('div', {class:'trk'});
-    var fil = el('div', {class:'fil', style:'width:'+(kv[1]/max*100)+'%;animation-delay:'+(i*45)+'ms'});
-    fil.textContent = kv[1];
+    var pct = kv[1]/max*100;
+    var fil = el('div', {class:'fil', style:'width:'+pct+'%;animation-delay:'+(i*45)+'ms'});
+    placeBarLabel(trk, fil, pct, kv[1], 10);
     trk.appendChild(fil); row.appendChild(trk); wrap.appendChild(row);
   });
   var rest = entries.slice(18);
@@ -733,8 +754,9 @@ document.getElementById('clubs-lede').textContent =
     var row = el('div', {class:'barrow'});
     row.appendChild(el('span', {class:'lab', style:'width:120px'}, kv[0]));
     var trk = el('div', {class:'trk'});
-    var fil = el('div', {class:'fil alt', style:'width:'+(kv[1]/D.clubs.total*100)+'%'});
-    fil.textContent = kv[1] + ' / ' + D.clubs.total;
+    var pct = kv[1]/D.clubs.total*100;
+    var fil = el('div', {class:'fil alt', style:'width:'+pct+'%'});
+    placeBarLabel(trk, fil, pct, kv[1] + ' / ' + D.clubs.total, 40);
     trk.appendChild(fil); row.appendChild(trk); r.appendChild(row);
   });
   var ts = document.getElementById('topstates');
@@ -766,8 +788,9 @@ document.getElementById('clubs-lede').textContent =
       var row = el('div', {class:'barrow'});
       row.appendChild(el('span', {class:'lab', style:'width:200px;font-size:11px'}, kv[0]));
       var trk = el('div', {class:'trk'});
-      var fil = el('div', {class:'fil', style:'width:'+(kv[1]/max*100)+'%;animation-delay:'+(i*45)+'ms'});
-      fil.textContent = kv[1];
+      var pct = kv[1]/max*100;
+      var fil = el('div', {class:'fil', style:'width:'+pct+'%;animation-delay:'+(i*45)+'ms'});
+      placeBarLabel(trk, fil, pct, kv[1], 18);
       trk.appendChild(fil); row.appendChild(trk); wrapN.appendChild(row);
     });
     wrapN.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
@@ -782,8 +805,9 @@ document.getElementById('clubs-lede').textContent =
       var row = el('div', {class:'barrow'});
       row.appendChild(el('span', {class:'lab', style:'width:90px'}, kv[0]));
       var trk = el('div', {class:'trk'});
-      var fil = el('div', {class:'fil alt', style:'width:'+(kv[1]/max2*100)+'%;animation-delay:'+(i*45)+'ms'});
-      fil.textContent = kv[1];
+      var pct = kv[1]/max2*100;
+      var fil = el('div', {class:'fil alt', style:'width:'+pct+'%;animation-delay:'+(i*45)+'ms'});
+      placeBarLabel(trk, fil, pct, kv[1], 15);
       trk.appendChild(fil); row.appendChild(trk); wrapD.appendChild(row);
     });
     wrapD.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
@@ -947,8 +971,9 @@ document.getElementById('com-lede').textContent =
     var row = el('div', {class:'barrow'});
     row.appendChild(el('span', {class:'lab', style:'width:150px;text-transform:capitalize'}, kv[0]));
     var trk = el('div', {class:'trk'});
-    var fil = el('div', {class:'fil', style:'width:'+(kv[1]/max*100)+'%;animation-delay:'+(i*40)+'ms'});
-    fil.textContent = kv[1];
+    var pct = kv[1]/max*100;
+    var fil = el('div', {class:'fil', style:'width:'+pct+'%;animation-delay:'+(i*40)+'ms'});
+    placeBarLabel(trk, fil, pct, kv[1], 18);
     trk.appendChild(fil); row.appendChild(trk); sc.appendChild(row);
   });
   sc.appendChild(el('p',{class:'dim',style:'font-size:12px;margin-top:6px'},
@@ -1008,8 +1033,9 @@ document.getElementById('com-lede').textContent =
       var row = el('div', {class:'barrow'});
       row.appendChild(el('span', {class:'lab', style:'width:92px'}, kv[0]));
       var trk = el('div', {class:'trk'});
-      var fil = el('div', {class:'fil', style:'width:'+(kv[1]/max*100)+'%;animation-delay:'+(i*45)+'ms'});
-      fil.textContent = kv[1];
+      var pct = kv[1]/max*100;
+      var fil = el('div', {class:'fil', style:'width:'+pct+'%;animation-delay:'+(i*45)+'ms'});
+      placeBarLabel(trk, fil, pct, kv[1], 12);
       trk.appendChild(fil); row.appendChild(trk); wrap.appendChild(row);
     });
     if(D.commerce.ships_store.unpriced_items){
@@ -1085,8 +1111,9 @@ document.getElementById('vid-lede').textContent =
     var row = el('div', {class:'barrow'});
     row.appendChild(el('span', {class:'lab', style:'width:86px'}, kv[0]));
     var trk = el('div', {class:'trk'});
-    var fil = el('div', {class:'fil alt', style:'width:'+(kv[1]/max2*100)+'%'});
-    fil.textContent = kv[1];
+    var pct = kv[1]/max2*100;
+    var fil = el('div', {class:'fil alt', style:'width:'+pct+'%'});
+    placeBarLabel(trk, fil, pct, kv[1], 12);
     trk.appendChild(fil); row.appendChild(trk); dw.appendChild(row);
   });
   if(D.videos.length_mix){
@@ -1122,22 +1149,24 @@ document.getElementById('vid-lede').textContent =
   var by = D.videos.by_year;
   if(!by) return;
   var years = Object.keys(by).sort();
-  var svg = document.getElementById('hoursyear');
-  if(svg && years.length){
-    var W=560, H=210, pad=34, bw=(W-2*pad)/years.length;
+  var hwrap = document.getElementById('hoursyear');
+  if(hwrap && years.length){
     var max = Math.max.apply(null, years.map(function(y){return by[y].hours;}));
+    /* every running-total cell gets the widest row's width so the bar tracks align */
+    var totCh = Math.max.apply(null, years.map(function(y){return ('total ' + by[y].cumulative_hours).length;}));
     years.forEach(function(yr, i){
       var d = by[yr];
-      var h = (d.hours/max)*(H-82), x = pad+i*bw;
-      svg.appendChild(svgel('rect',{x:x+4,y:H-48-h,width:Math.max(bw-8,3),height:h,fill:'#12304e'}));
-      var t = svgel('text',{x:x+bw/2,y:H-48-h-6,'text-anchor':'middle','font-size':'10.5'});
-      t.textContent = d.hours + 'h'; svg.appendChild(t);
-      var lab = svgel('text',{x:x+bw/2,y:H-30,'text-anchor':'middle','font-size':'10'});
-      lab.textContent = yr; svg.appendChild(lab);
-      var cum = svgel('text',{x:x+bw/2,y:H-15,'text-anchor':'middle','font-size':'9',fill:'#7d8fa3'});
-      cum.textContent = 'total ' + d.cumulative_hours; svg.appendChild(cum);
+      var row = el('div', {class:'barrow'});
+      row.appendChild(el('span', {class:'lab'}, yr));
+      var trk = el('div', {class:'trk'});
+      var pct = d.hours/max*100;
+      var fil = el('div', {class:'fil', style:'width:'+pct+'%;animation-delay:'+(i*45)+'ms'});
+      placeBarLabel(trk, fil, pct, d.hours + 'h', 20);
+      trk.appendChild(fil);
+      row.appendChild(trk);
+      row.appendChild(el('span', {class:'runtot', style:'width:'+totCh+'ch'}, 'total ' + d.cumulative_hours));
+      hwrap.appendChild(row);
     });
-    svg.appendChild(svgel('line',{x1:pad,y1:H-48,x2:W-pad,y2:H-48,stroke:'#12304e','stroke-width':1.5}));
   }
   var wrap = document.getElementById('lenyear');
   if(wrap && years.length){
@@ -1147,8 +1176,9 @@ document.getElementById('vid-lede').textContent =
       var row = el('div', {class:'barrow'});
       row.appendChild(el('span', {class:'lab'}, yr));
       var trk = el('div', {class:'trk'});
-      var fil = el('div', {class:'fil alt', style:'width:'+((d.median_minutes||0)/max2*100)+'%;animation-delay:'+(i*45)+'ms'});
-      fil.textContent = (d.median_minutes===null ? 'n/a' : d.median_minutes + ' min');
+      var pct = (d.median_minutes||0)/max2*100;
+      var fil = el('div', {class:'fil alt', style:'width:'+pct+'%;animation-delay:'+(i*45)+'ms'});
+      placeBarLabel(trk, fil, pct, (d.median_minutes===null ? 'n/a' : d.median_minutes + ' min'), 30);
       trk.appendChild(fil); row.appendChild(trk); wrap.appendChild(row);
     });
     wrap.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
@@ -1168,10 +1198,11 @@ document.getElementById('vid-lede').textContent =
       style:'width:168px;font-size:10.5px;line-height:1.25;white-space:normal',
       title:'e.g. ' + c.examples.join(' · ')}, c.name));
     var trk = el('div', {class:'trk'});
+    var pct = c.videos/max*100;
     var fil = el('div', {class:'fil',
-      style:'width:' + (c.videos/max*100) + '%;animation-delay:' + (i*35) + 'ms' +
+      style:'width:' + pct + '%;animation-delay:' + (i*35) + 'ms' +
             (c.name === 'Unclassified' ? ';opacity:.45' : '')});
-    fil.textContent = c.videos;
+    placeBarLabel(trk, fil, pct, c.videos, 20);
     trk.appendChild(fil); row.appendChild(trk); wrap.appendChild(row);
   });
   wrap.appendChild(el('p', {class:'dim', style:'font-size:11.5px;margin-top:8px'},
@@ -1271,8 +1302,9 @@ document.getElementById('fleet-lede').textContent =
     var row = el('div', {class:'barrow'});
     row.appendChild(el('span', {class:'lab', style:'width:210px;overflow:hidden;text-overflow:ellipsis;font-size:11px'}, kv[0]));
     var trk = el('div', {class:'trk'});
-    var fil = el('div', {class:'fil', style:'width:'+(kv[1]/max*100)+'%'});
-    fil.textContent = fmt(kv[1]);
+    var pct = kv[1]/max*100;
+    var fil = el('div', {class:'fil', style:'width:'+pct+'%'});
+    placeBarLabel(trk, fil, pct, fmt(kv[1]), 15);
     trk.appendChild(fil); row.appendChild(trk); ex.appendChild(row);
   });
   ex.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
