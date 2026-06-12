@@ -358,7 +358,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     <div class="grid g3">
       <div class="card">
         <h3>Upcoming classes by start month <span class="h3-flag" id="sched-flag"></span></h3>
-        <svg id="monthchart" viewBox="0 0 560 230"></svg>
+        <div id="monthchart"></div>
         <p class="dim" id="sched-bystate" style="font-size:12px;margin-top:6px"></p>
       </div>
       <div class="card">
@@ -827,26 +827,23 @@ document.getElementById('sched-bystate').textContent =
   'most classes: ' + Object.entries(D.schedule.by_state).slice(0, 6)
     .map(function(kv){ return kv[0] + ' ' + kv[1]; }).join(' · ');
 
-/* month columns */
+/* months as horizontal bars */
 (function(){
   var entries = Object.entries(D.schedule.by_month).filter(function(kv){return kv[0]!=='unparsed';});
   if(!entries.length) return;
-  var svg = document.getElementById('monthchart');
-  var W=560,H=230,pad=30,bw=(W-2*pad)/entries.length;
+  var wrap = document.getElementById('monthchart');
   var max = Math.max.apply(null, entries.map(function(kv){return kv[1];}));
   entries.forEach(function(kv,i){
-    var h = (kv[1]/max)*(H-70);
-    var x = pad+i*bw;
-    svg.appendChild(svgel('rect',{x:x+3,y:H-40-h,width:Math.max(bw-6,3),height:h,fill:'#12304e'}));
-    var t = svgel('text',{x:x+bw/2,y:H-40-h-6,'text-anchor':'middle','font-size':'11'});
-    t.textContent = kv[1]; svg.appendChild(t);
-    var lab = svgel('text',{x:x+bw/2,y:H-22,'text-anchor':'middle','font-size':'10'});
-    lab.textContent = kv[0].slice(2).replace('-','·'); svg.appendChild(lab);
+    var row = el('div', {class:'barrow'});
+    row.appendChild(el('span', {class:'lab'}, kv[0].slice(2).replace('-','·')));
+    var trk = el('div', {class:'trk'});
+    var pct = kv[1]/max*100;
+    var fil = el('div', {class:'fil', style:'width:'+pct+'%;animation-delay:'+(i*45)+'ms'});
+    placeBarLabel(trk, fil, pct, kv[1], 12);
+    trk.appendChild(fil); row.appendChild(trk); wrap.appendChild(row);
   });
-  svg.appendChild(svgel('line',{x1:pad,y1:H-40,x2:W-pad,y2:H-40,stroke:'#12304e','stroke-width':1.5}));
-  var cap = svgel('text',{x:pad,y:H-6,'font-size':'10'});
-  cap.textContent = 'start month (YY·MM), from each club-details page';
-  svg.appendChild(cap);
+  wrap.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
+    'start month (YY·MM), from each club-details page'));
 })();
 
 /* top titles table */
