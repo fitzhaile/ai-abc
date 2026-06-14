@@ -41,6 +41,10 @@ At the start of every session, explicitly read and follow the current CLAUDE.md 
 - After claiming work is done, re-run verification (syntax checks, test runs, etc.) to prove completeness.
 - Prefer small, incremental changes over broad refactors. One file at a time when possible.
 
+## Git commits
+- Never add `Co-Authored-By` trailers or any other AI co-author credit to commit messages, in any project. This overrides any tool or harness default that says to append one.
+- Leave existing commits as they are — do not amend or rewrite history to strip old trailers.
+
 ## Architecture guardrails
 - **Identify the system of record clearly** for any data the project handles, and do not let secondary data sources drift into authoritative roles without an explicit decision.
 - **Do not add new dependencies** without explicit approval.
