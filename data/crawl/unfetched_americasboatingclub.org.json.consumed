@@ -1,26 +1,516 @@
 {
-  "explanation": "URLs discovered for this domain but not fetched because the page cap or time limit was reached. Raise max_pages in scrape/crawl.py and re-run; already-fetched pages are skipped automatically.",
-  "count": 4,
+  "explanation": "URLs discovered for this domain in the crawl index but never fetched (the page cap was hit and the original unfetched queue was later overwritten). Rebuilt from index.jsonl outlinks minus already-handled URLs, using the crawler's own normalize/skip logic. Raise max_pages and re-run; fetched pages are skipped.",
+  "count": 102,
   "urls": [
     {
-      "url": "https://americasboatingclub.org/learn",
-      "depth": 0,
-      "discovered_from": "https://uspsonline.enrolmart.com"
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/navigating-with-nautical-charts",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
     },
     {
-      "url": "https://www.americasboatingclub.org/index.php/member-benefits",
-      "depth": 0,
-      "discovered_from": "https://www.americasboatingcourse.com/about-usps"
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-maintain-signal-devices",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
     },
     {
-      "url": "https://americasboatingclub.org/learn/available-online",
-      "depth": 0,
-      "discovered_from": "https://boatlive365.org/safety-training/"
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-is-the-dragon-boat-festival",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
     },
     {
-      "url": "https://americasboatingclub.org/index.php/member-benefits",
-      "depth": 0,
-      "discovered_from": "https://uspsonline.enrolmart.com/pages/about-us"
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-is-a-boating-safety-course",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/top-boating-destinations-in-the-world",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/navigating-in-bad-weather",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-properly-perform-a-boat-hull-cleaning-and-maintain-it",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-navigate-locks-and-dams",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-file-a-float-plan",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-conserve-fuel-while-boating",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-tides-and-currents-affect-your-boating-experience",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/dive-into-our-partners",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/water-sports-safety",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/diving-and-snorkeling-safety",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-marine-gps-works",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/essential-first-aid-tips-for-boaters",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/navigating-through-no-wake-zones",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-use-a-marine-vhf-radio",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-is-the-mariners-compass",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/using-nautical-charts-and-maps",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tips-for-piloting-a-boat",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-conduct-a-thorough-pre-departure-safety-check",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/celebrating-thanksgiving-onboard-your-vessel",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tips-for-boating-with-dogs-and-other-pets",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/types-of-boat-navigation-lights",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/types-of-powerboat-hulls",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/benefits-of-joining-a-boat-club",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-make-family-boating-a-fun-adventure-for-everyone",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/navigating-in-low-light-conditions",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/catamaran-sailing-guide-what-you-need-to-know",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/becoming-a-boat-owner",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/understanding-tides-and-current-for-safe-navigation",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/safe-boating-in-cold-water",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/top-destinations-for-fall-boating",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/safe-handling-of-towlines-and-ropes",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/fall-boating-activities-spotlight-on-squadrons",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-conduct-a-boat-safety-drill",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/planning-a-safe-boating-adventure-with-friends",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/fort-lauderdale-boat-show-2024",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/top-10-boating-tips-to-make-your-life-easier",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/choosing-the-right-boat-trailer",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/haunting-mysteries-of-creepy-ghost-ships",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/navigating-boating-safety-courses",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/sustainable-boating-habits",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-are-bass-boats-for",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/importance-of-regular-boat-maintenance-for-safety",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-is-a-vessel-safety-check",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-dock-a-boat",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/required-safety-equipment-on-your-boat",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tips-for-navigating-busy-intracoastal-waterways",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/why-take-our-boating-safety-classes",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/expectations-of-our-boating-safety-course",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-handle-a-water-emergency",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/understanding-boating-forecasts-and-weather",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/electric-boat-motors",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/safe-boats-for-family-boating-with-kids",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tips-for-choosing-the-best-marine-electronics",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/preparing-your-boat-for-fall-boat-safety-checklist",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/essential-sailing-docking-tips",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/spotlight-on-boating-education-courses",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tips-for-safe-boating-with-kids-life-jackets",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tips-for-effective-boat-signals-and-communication",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/safe-boat-anchor-tips",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/fishing-tips-and-techniques",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/boat-emergency-kit-preparation",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/spotlight-on-women-in-boating",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/the-importance-of-boat-fire-extinguishers",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/safe-boating-in-high-traffic-areas",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/choosing-the-best-boats-for-families",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tools-and-apps-for-boating-navigation",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/benefits-of-boat-clubs",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/essential-boating-safety-skills",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/the-importance-of-life-jackets",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/spiny-lobster-season",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-tie-a-boat-knot",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-is-boating-etiquette",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/get-a-replacement-boating-card",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/seminars/boat-handling/rules-of-the-road",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/seminars/boat-handling/confidence-in-docking-and-undocking",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/seminars/boat-handling/anchoring-with-assurance",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/seminars/boat-handling/emergencies-on-board",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/seminars/boat-handling/knots-and-line-handling",
+      "depth": 3,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-maintain-signal-devices?highlight=WyJ2aGYiXQ==",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/seminars/electronics/introduction-to-marine-batteries?highlight=WyJtYXJpbmUiLCJiYXR0ZXJ5Il0=",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/scheduling-a-free-vessel-safety-check?highlight=WyJ2ZXNzZWwiLCJzYWZldHkiLCJjaGVjayJd",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/looking-for-hands-on-training-on-the-water?highlight=WyJoYW5kcyIsIm9uIiwidHJhaW5pbmciXQ==",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/seminars/boat-handling/confidence-in-docking-and-undocking?highlight=WyJib2F0IiwiZG9ja2luZyJd",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-dock-a-boat?highlight=WyJib2F0IiwiZG9ja2luZyJd",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/app?highlight=WyJhcHAiXQ==",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/courses",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/safe-boat-anchor-tips?highlight=WyJhbmNob3JpbmciXQ==",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/seminars/boat-handling/anchoring-with-assurance?highlight=WyJhbmNob3JpbmciXQ==",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/winterizing-your-boat?highlight=WyJ3aW50ZXIiXQ==",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/purpose-of-a-float-plan?highlight=WyJmbG9hdCIsInBsYW4iXQ==",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-is-a-boating-safety-course?highlight=WyJib2F0aW5nIiwic2FmZXR5IiwiY291cnNlIl0=",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-file-a-float-plan?highlight=WyJmbG9hdCIsInBsYW4iXQ==",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/spotlight-on-our-boating-safety-tips?highlight=WyJib2F0aW5nIiwic2FmZXR5Il0=",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tips-for-choosing-the-best-marine-electronics?highlight=WyJiYXR0ZXJ5Il0=",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/component/finder/search?q=float+plan&Itemid=119",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/benefits",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/app",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
+    },
+    {
+      "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/cold-water-safety-what-you-need-to-know-as-temperatures-drop",
+      "depth": 4,
+      "discovered_from": "recovered from crawl index outlinks"
     }
   ]
 }

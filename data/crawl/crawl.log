@@ -198,3 +198,30 @@
 [2026-06-11T16:12:42Z]   portal.americasboatingclub.org: 25 fetched, 0 skipped, 3 failed, 20 left unfetched at cap
 [2026-06-11T16:12:42Z] Index: /Users/fhaile/Dropbox/Sites/FH Website/ai-abc/data/crawl/index.jsonl
 [2026-06-11T16:12:42Z] External (uncrawled) domains report: /Users/fhaile/Dropbox/Sites/FH Website/ai-abc/data/crawl/external_domains.json
+[2026-06-12T21:54:06Z] Resuming: found 2195 URLs already handled in a previous run; they will not be fetched again.
+[2026-06-12T21:54:06Z] Crawl starting for 1 domains: www.usps.org
+[2026-06-12T21:54:26Z] www.usps.org: could not fetch robots.txt (URLError: <urlopen error timed out>) — treating as 'no rules', keeping our own delay and skip list.
+[2026-06-12T21:54:26Z] www.usps.org: queue exhausted after 0 pages — every discovered in-scope URL was handled.
+[2026-06-12T21:54:26Z] ======================================================================
+[2026-06-12T21:54:26Z] Crawl finished in 0.3 minutes. Per-domain results:
+[2026-06-12T21:54:26Z]   www.usps.org: 0 fetched, 0 skipped, 0 failed
+[2026-06-12T21:54:26Z] Index: /Users/fhaile/Dropbox/Sites/FH Website/ai-abc/data/crawl/index.jsonl
+[2026-06-12T21:54:26Z] External (uncrawled) domains report: /Users/fhaile/Dropbox/Sites/FH Website/ai-abc/data/crawl/external_domains.json
+[2026-06-14T01:10:02Z] Resuming: found 2195 URLs already handled in a previous run; they will not be fetched again.
+[2026-06-14T01:10:02Z] Crawl starting for 1 domains: americasboatingclub.org
+[2026-06-14T01:10:04Z] americasboatingclub.org: sitemap https://americasboatingclub.org/index.php?option=com_jmap&view=sitemap&format=xml lists 251 URLs.
+[2026-06-14T01:10:04Z] americasboatingclub.org: picked up 102 URLs left unfetched by a previous run (file renamed to *.consumed).
+[2026-06-14T01:10:41Z] americasboatingclub.org: progress — 25 pages fetched, 79 queued.
+[2026-06-14T01:11:17Z] americasboatingclub.org: progress — 50 pages fetched, 55 queued.
+[2026-06-14T01:11:51Z] americasboatingclub.org: progress — 75 pages fetched, 32 queued.
+[2026-06-14T01:12:27Z] americasboatingclub.org: FAILED https://www.americasboatingclub.org/index.php/benefits (HTTPError: HTTP Error 404: Not Found)
+[2026-06-14T01:12:29Z] americasboatingclub.org: progress — 100 pages fetched, 6 queued.
+[2026-06-14T01:12:30Z] americasboatingclub.org: FAILED https://www.americasboatingclub.org/index.php/about/news-and-information/cold-water-safety-what-you-need-to-know-as-temperatures-drop (HTTPError: HTTP Error 404: Not Found)
+[2026-06-14T01:12:31Z] americasboatingclub.org: FAILED https://www.americasboatingclub.org/index.php/find-a-class-near-you (HTTPError: HTTP Error 404: Not Found)
+[2026-06-14T01:12:35Z] americasboatingclub.org: FAILED https://www.americasboatingclub.org/index.php/seminars/safety/ais-electronics-for-boaters (HTTPError: HTTP Error 404: Not Found)
+[2026-06-14T01:12:36Z] americasboatingclub.org: queue exhausted after 103 pages — every discovered in-scope URL was handled.
+[2026-06-14T01:12:36Z] ======================================================================
+[2026-06-14T01:12:36Z] Crawl finished in 2.6 minutes. Per-domain results:
+[2026-06-14T01:12:36Z]   americasboatingclub.org: 103 fetched, 0 skipped, 4 failed
+[2026-06-14T01:12:36Z] Index: /Users/fhaile/Dropbox/Sites/FH Website/ai-abc/data/crawl/index.jsonl
+[2026-06-14T01:12:36Z] External (uncrawled) domains report: /Users/fhaile/Dropbox/Sites/FH Website/ai-abc/data/crawl/external_domains.json

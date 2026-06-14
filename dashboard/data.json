@@ -5254,6 +5254,129 @@
     }
    ]
   },
+  "catalog_categories": {
+   "categories": [
+    {
+     "name": "MOVIES FOR BOATERS",
+     "videos": 24
+    },
+    {
+     "name": "LIVE FROM MIAMI",
+     "videos": 23
+    },
+    {
+     "name": "BOATING NEWS",
+     "videos": 22
+    },
+    {
+     "name": "LIVE FROM TORONTO",
+     "videos": 22
+    },
+    {
+     "name": "USA WATER SKI & WAKE SPORTS",
+     "videos": 19
+    },
+    {
+     "name": "AMERICA'S BOATING CHANNEL",
+     "videos": 18
+    },
+    {
+     "name": "BOAT RACES",
+     "videos": 16
+    },
+    {
+     "name": "MILITARY FILMS",
+     "videos": 15
+    },
+    {
+     "name": "WATER WAYS TV",
+     "videos": 14
+    },
+    {
+     "name": "BOAT FAILS",
+     "videos": 13
+    },
+    {
+     "name": "NASBLA",
+     "videos": 12
+    },
+    {
+     "name": "CANBOAT / NAUTISAVOIR",
+     "videos": 12
+    },
+    {
+     "name": "WATER SPORTS FOUNDATION",
+     "videos": 11
+    },
+    {
+     "name": "YACHT LIFE TV",
+     "videos": 11
+    },
+    {
+     "name": "BOATING TV PROGRAMS",
+     "videos": 10
+    },
+    {
+     "name": "SEA TOW FOUNDATION",
+     "videos": 10
+    },
+    {
+     "name": "DISCOVER BOATING",
+     "videos": 10
+    },
+    {
+     "name": "BOATING CARTOONS",
+     "videos": 9
+    },
+    {
+     "name": "WATER SOLUTIONS GROUP",
+     "videos": 9
+    },
+    {
+     "name": "NATIONAL SAFE BOATING COUNCIL",
+     "videos": 7
+    },
+    {
+     "name": "AMERICAN CANOE ASSOCIATION",
+     "videos": 6
+    },
+    {
+     "name": "COOKING ON BOARD",
+     "videos": 6
+    },
+    {
+     "name": "JENN NOLAN FISHING",
+     "videos": 6
+    },
+    {
+     "name": "US SAILING TEAM",
+     "videos": 5
+    },
+    {
+     "name": "THE CORPS FOUNDATION",
+     "videos": 5
+    },
+    {
+     "name": "FEATURED NOW",
+     "videos": 2
+    },
+    {
+     "name": "AMERICAN WHITEWATER",
+     "videos": 2
+    },
+    {
+     "name": "SAFE KIDS WORLDWIDE",
+     "videos": 2
+    },
+    {
+     "name": "SAFE BOATING VIDEO FIESTA 2024",
+     "videos": 1
+    }
+   ],
+   "captured": "2026-06-13",
+   "source": "americasboatingchannel.uscreen.io/catalog",
+   "note": "Catalog merchandising categories; a video may appear in more than one category, so counts do not sum to the channel total."
+  },
   "total_runtime_hours": 204.5,
   "median_duration_minutes": 4.1,
   "uploads_by_year": {
@@ -5588,8 +5711,230 @@
    "www.tumblr.com": 6
   }
  },
+ "tech": {
+  "_about": "Per-property analytics tags and tech platform, detected from saved raw HTML by derive/detect_tech.py. Blank analytics = scanned, none found. 'not crawled' = no pages on disk (site down or root errored). Nothing here is taken from the external audit.",
+  "generated_by": "derive/detect_tech.py",
+  "raw_source": "data/raw/<domain>/*.html",
+  "properties": [
+   {
+    "pages_scanned": 551,
+    "ga4": [
+     "G-0M1N6DYNBW",
+     "G-GGW5NS7YYS"
+    ],
+    "universal_analytics": [],
+    "gtm": [],
+    "meta_pixel_pages": 0,
+    "platform": "Joomla · Helix Ultimate",
+    "platform_evidence": "generator meta \"Helix Ultimate - The Most Popular Joomla! Template Framework.\"",
+    "generator_meta": "Helix Ultimate - The Most Popular Joomla! Template Framework.",
+    "social": [
+     "facebook.com/uspowersquadrons",
+     "instagram.com/americasboatingclub",
+     "linkedin.com/company/americasboatingclub",
+     "twitter.com/uspsabc",
+     "youtube.com/user/uspowersquadrons"
+    ],
+    "domain": "americasboatingclub.org",
+    "role": "Public flagship site",
+    "crawled": true
+   },
+   {
+    "domain": "usps.org",
+    "role": "Legacy parent / member site — unreachable during crawl (timed out)",
+    "crawled": false,
+    "pages_scanned": 0,
+    "ga4": [],
+    "universal_analytics": [],
+    "gtm": [],
+    "meta_pixel_pages": 0,
+    "platform": null,
+    "platform_evidence": "site not crawled",
+    "social": [],
+    "generator_meta": null
+   },
+   {
+    "pages_scanned": 30,
+    "ga4": [],
+    "universal_analytics": [],
+    "gtm": [
+     "GTM-TRBZFNR5",
+     "GTM-WSML766R"
+    ],
+    "meta_pixel_pages": 0,
+    "platform": "ASP.NET WebForms (iMIS portal)",
+    "platform_evidence": "__VIEWSTATE/__doPostBack on 30/30 pages",
+    "generator_meta": null,
+    "social": [
+     "facebook.com/uspowersquadrons",
+     "instagram.com/americasboatingclub",
+     "x.com/uspsabc",
+     "youtube.com/@uspowersquadrons"
+    ],
+    "domain": "portal.americasboatingclub.org",
+    "role": "Membership portal — join, events, donations",
+    "crawled": true
+   },
+   {
+    "pages_scanned": 29,
+    "ga4": [],
+    "universal_analytics": [
+     "UA-86785424-1"
+    ],
+    "gtm": [],
+    "meta_pixel_pages": 0,
+    "platform": null,
+    "platform_evidence": "no high-confidence platform signal in crawled pages",
+    "generator_meta": null,
+    "social": [
+     "facebook.com/uspowersquadrons",
+     "twitter.com/boatingisfun",
+     "youtube.com/user/uspowersquadrons"
+    ],
+    "domain": "store.shopusps.org",
+    "role": "Ship's Store",
+    "crawled": true
+   },
+   {
+    "pages_scanned": 41,
+    "ga4": [
+     "G-VJTV793EJH"
+    ],
+    "universal_analytics": [],
+    "gtm": [],
+    "meta_pixel_pages": 41,
+    "platform": "WordPress · GiveWP (Give v4.11.0)",
+    "platform_evidence": "generator meta \"Give v4.11.0\"",
+    "generator_meta": "Give v4.11.0",
+    "social": [
+     "facebook.com/uspowersquadrons",
+     "instagram.com/americasboatingclub",
+     "linkedin.com/in/americasboatingclub",
+     "twitter.com/boatingisfun"
+    ],
+    "domain": "giveabc.org",
+    "role": "Donation site",
+    "crawled": true
+   },
+   {
+    "pages_scanned": 70,
+    "ga4": [
+     "G-HVGVGVG5N3"
+    ],
+    "universal_analytics": [],
+    "gtm": [
+     "GTM-K3R6XKX2",
+     "GTM-TS5TD9PR"
+    ],
+    "meta_pixel_pages": 0,
+    "platform": "Joomla",
+    "platform_evidence": "/index.php/ routing on 66/70 pages (SEF off)",
+    "generator_meta": null,
+    "social": [],
+    "domain": "americasboatingcourse.com",
+    "role": "Flagship course marketing site",
+    "crawled": true
+   },
+   {
+    "domain": "course.americasboatingcourse.com",
+    "role": "Paid courseware (LMS) — root returned a server error during crawl",
+    "crawled": false,
+    "pages_scanned": 0,
+    "ga4": [],
+    "universal_analytics": [],
+    "gtm": [],
+    "meta_pixel_pages": 0,
+    "platform": null,
+    "platform_evidence": "site not crawled",
+    "social": [],
+    "generator_meta": null
+   },
+   {
+    "pages_scanned": 55,
+    "ga4": [
+     "G-G3B4J16WQZ"
+    ],
+    "universal_analytics": [],
+    "gtm": [],
+    "meta_pixel_pages": 0,
+    "platform": "EnrolMart (vendor LMS)",
+    "platform_evidence": "\"powered by EnrolMart\" on 55/55 pages",
+    "generator_meta": null,
+    "social": [
+     "facebook.com/uspowersquadrons",
+     "twitter.com/uspsabc",
+     "youtube.com/@americasboatingchannel"
+    ],
+    "domain": "uspsonline.enrolmart.com",
+    "role": "Online seminars store (LMS)",
+    "crawled": true
+   },
+   {
+    "pages_scanned": 1,
+    "ga4": [
+     "G-BV2GHPRPWE"
+    ],
+    "universal_analytics": [],
+    "gtm": [],
+    "meta_pixel_pages": 0,
+    "platform": "Moodle",
+    "platform_evidence": "moodle markers on 1/1 pages",
+    "generator_meta": null,
+    "social": [],
+    "domain": "uspsonline.org",
+    "role": "'Other online courses' (LMS) — homepage captured live 2026-06-13",
+    "crawled": true
+   },
+   {
+    "pages_scanned": 1246,
+    "ga4": [
+     "G-SXXS5T8DGP"
+    ],
+    "universal_analytics": [],
+    "gtm": [],
+    "meta_pixel_pages": 0,
+    "platform": "Uscreen (hosted video)",
+    "platform_evidence": "uscreen asset markers on 1246/1246 pages",
+    "generator_meta": null,
+    "social": [
+     "facebook.com/americasboatingchannel",
+     "instagram.com/americasboatingchannel",
+     "linkedin.com/company/americas-boating-channel",
+     "tiktok.com/@americasboatingchannel",
+     "twitter.com/americasboating",
+     "youtube.com/@americasboatingchannel",
+     "youtube.com/americasboatingchannel",
+     "youtube.com/channel/UC1c_rFyt1fGqvdiSauAijAg"
+    ],
+    "domain": "americasboatingchannel.com",
+    "role": "Video channel",
+    "crawled": true
+   },
+   {
+    "pages_scanned": 112,
+    "ga4": [
+     "G-V9DQ6333MC"
+    ],
+    "universal_analytics": [],
+    "gtm": [
+     "GTM-5QZZJD8"
+    ],
+    "meta_pixel_pages": 112,
+    "platform": "WordPress",
+    "platform_evidence": "wp-content/wp-includes on 112/112 pages",
+    "generator_meta": null,
+    "social": [
+     "facebook.com/goboatlive365",
+     "youtube.com/@americasboatingchannel"
+    ],
+    "domain": "boatlive365.org",
+    "role": "Safety-culture campaign site",
+    "crawled": true
+   }
+  ]
+ },
  "provenance": {
-  "generated_at": "2026-06-11T22:45:24Z",
+  "generated_at": "2026-06-14T01:13:11Z",
   "generator": "derive/build_dashboard_data.py",
   "pipeline": [
    {

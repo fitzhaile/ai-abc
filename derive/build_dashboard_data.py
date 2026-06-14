@@ -452,11 +452,37 @@ def main():
         f"hold {length_mix['feature_hours']}h "
         f"({length_mix['feature_share_of_runtime_pct']}% of all runtime).")
 
+    # The channel's OWN catalog categories, captured live from the Uscreen
+    # storefront (data/interactive/channel_categories.json). This is distinct
+    # from our rule-based `taxonomy` above: these are the categories a visitor
+    # actually sees in the channel's Category filter, with the real per-category
+    # video counts. Optional — if the capture file is absent, the dashboard
+    # falls back to a clear "not captured" note rather than failing.
+    catalog_categories = None
+    cat_path = os.path.join(INTERACTIVE, "channel_categories.json")
+    if os.path.exists(cat_path):
+        cc = load(cat_path)
+        catalog_categories = {
+            "categories": [{"name": c["name"], "videos": c["videos"]}
+                           for c in cc.get("categories", [])],
+            "captured": cc.get("captured"),
+            "source": cc.get("source"),
+            "note": cc.get("note"),
+        }
+        log(f"Channel catalog: {len(catalog_categories['categories'])} "
+            f"categories captured from the live storefront "
+            f"(captured {catalog_categories['captured']}).")
+    else:
+        log(f"Channel catalog: no capture at {cat_path} — the dashboard's "
+            f"category chart will say it wasn't captured. Re-capture from "
+            f"americasboatingchannel.uscreen.io/catalog if needed.")
+
     videos_block = {
         "total": len(videos),
         "by_year": by_year,
         "length_mix": length_mix,
         "taxonomy": taxonomy,
+        "catalog_categories": catalog_categories,
         "total_runtime_hours": round(sum(durations) / 3600, 1),
         "median_duration_minutes": (round(statistics.median(durations) / 60, 1)
                                     if durations else None),
@@ -611,6 +637,24 @@ def main():
                 f"showing a link.")
         provenance_block["dataset_sources"][name] = prov
 
+    # Per-property analytics + tech platform, detected from raw HTML by
+    # derive/detect_tech.py. Loaded from its JSON so this build stays a pure
+    # assembler; if the inventory is missing, the dashboard says so rather than
+    # inventing rows.
+    tech_block = None
+    tech_path = os.path.join(EXTRACTED, "tech_inventory.json")
+    if os.path.exists(tech_path):
+        tech_block = load(tech_path)
+        crawled = sum(1 for p in tech_block["properties"] if p["crawled"])
+        with_ga = sum(1 for p in tech_block["properties"]
+                      if p["ga4"] or p["gtm"] or p["universal_analytics"])
+        log(f"Tech inventory: {len(tech_block['properties'])} properties "
+            f"({crawled} crawled, {with_ga} with analytics tags detected).")
+    else:
+        log(f"Tech inventory: no file at {tech_path} — run "
+            f"`python3 derive/detect_tech.py` first. The Web Fleet analytics "
+            f"matrix and platform table will show a 'not generated' note.")
+
     data = {
         "clubs": clubs_block,
         "schedule": schedule_block,
@@ -619,6 +663,7 @@ def main():
         "videos": videos_block,
         "site": site_block,
         "ecosystem": ecosystem_block,
+        "tech": tech_block,
         "provenance": provenance_block,
     }
 

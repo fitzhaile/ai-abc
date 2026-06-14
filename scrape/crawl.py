@@ -73,7 +73,11 @@ DOMAINS = {
             "https://americasboatingclub.org/index.php?option=com_jmap&view=sitemap&format=xml"
         ],
         "delay": 0.8,
-        "max_pages": 450,
+        # Raised from 450 (which truncated the crawl) to fetch the ~102 pages
+        # discovered-but-unfetched at the old cap plus whatever they link onward
+        # to, until the queue exhausts. If this cap is ever hit again the log
+        # says so and dumps the remainder.
+        "max_pages": 1500,
         "max_depth": 4,
     },
     "www.usps.org": {

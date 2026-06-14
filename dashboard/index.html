@@ -171,6 +171,66 @@ svg text{font-family:var(--mono);fill:var(--ink-soft)}
 }
 /* per-row running-total column (hours-per-year chart) */
 .barrow .runtot{flex:none;font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);white-space:nowrap}
+/* ---------------- opportunities ---------------- */
+.opps-h{
+  font-family:var(--display);font-size:13px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink);margin:26px 0 14px;padding-bottom:6px;border-bottom:2px solid var(--ink);
+}
+.opps-ev{
+  font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--ink-soft);
+  background:rgba(18,48,78,.05);border-left:3px solid #12304e;padding:8px 10px;margin:0 0 10px;
+}
+.opps-act{font-size:13.5px;margin:0}
+.src-tag{
+  display:inline-block;font-family:var(--display);font-size:9px;letter-spacing:.12em;
+  text-transform:uppercase;padding:1px 6px;margin-right:6px;border-radius:2px;vertical-align:1px;
+}
+.src-data{background:#1d4569;color:#e9eff5}
+.src-audit{background:var(--buoy-gold);color:#3a2c0a}
+/* ---------------- audit tabs (problems / funnels) ---------------- */
+.audit-note{border-left:3px solid var(--buoy-gold);padding-left:12px}
+.sev-badge{
+  font-family:var(--mono);font-size:10px;letter-spacing:.04em;white-space:nowrap;
+  padding:1px 6px;border-radius:2px;font-weight:600;
+}
+.sev-crit{background:#7a1d1d;color:#f4e2e2}
+.sev-high{background:#9a5a12;color:#fbeede}
+.sev-med{background:#2d4a6b;color:#e3ecf5}
+.sev-sound{background:#2e6e4e;color:#e6f2ea}
+.barrow .fil.sev-crit-fil{background:linear-gradient(90deg,#a23b3b,#7a1d1d)}
+.barrow .fil.sev-high-fil{background:linear-gradient(90deg,#c0801f,#9a5a12)}
+.barrow .fil.sev-med-fil{background:linear-gradient(90deg,#3b6ea0,#2d4a6b)}
+.barrow .fil.sev-sound-fil{background:linear-gradient(90deg,#3b7a5c,#2e6e4e)}
+.surface{border-bottom:1px solid var(--rule);padding:9px 0}
+.surface:last-child{border-bottom:none}
+.surface-head{display:flex;align-items:center;gap:10px;justify-content:space-between}
+.surface-name{font-family:var(--display);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+.surface-detail{font-size:12.5px;margin:5px 0 0;color:var(--ink-soft)}
+.finding{border:1px solid var(--rule);border-left:3px solid var(--rule);padding:10px 12px;margin-bottom:9px;background:rgba(18,48,78,.015)}
+.finding-head{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.finding-cat{font-family:var(--display);font-size:9.5px;letter-spacing:.14em;color:var(--ink-faint)}
+.finding-title{font-family:var(--display);font-size:13.5px;color:var(--ink);font-weight:600}
+.finding-detail{font-size:13px;margin:6px 0 0;color:var(--ink-soft);line-height:1.5}
+.finding-note{font-size:12px;margin:5px 0 0;color:#2e6e4e;font-style:italic}
+.finding-ev{font-family:var(--mono);font-size:10.5px;margin:5px 0 0;color:var(--ink-faint)}
+.funnel-card{margin-bottom:22px}
+.funnel-blurb{font-size:13.5px;color:var(--ink-soft);margin:0 0 14px;font-style:italic}
+.funnel-steps{display:flex;align-items:stretch;flex-wrap:wrap;gap:6px}
+.funnel-arrow{display:flex;align-items:center;color:var(--ink-faint);font-size:16px;flex:none}
+.funnel-step{flex:1;min-width:150px;border:1px solid var(--rule);border-top:3px solid #12304e;padding:8px 10px;background:var(--card);display:flex;flex-direction:column;gap:4px}
+.funnel-step-n{font-family:var(--display);font-size:9px;letter-spacing:.16em;color:var(--ink-faint)}
+.funnel-step-label{font-family:var(--display);font-size:12.5px;color:var(--ink);font-weight:600;line-height:1.2}
+.funnel-step-detail{font-size:11.5px;color:var(--ink-soft);line-height:1.4}
+/* ---------------- analytics matrix + channel catalog ---------------- */
+table.matrix td, table.matrix th{padding:6px 10px;vertical-align:middle}
+table.matrix .prop{font-family:var(--mono);font-size:11.5px;color:var(--ink)}
+table.matrix .idcell{font-family:var(--mono)}
+table.matrix .tag{display:inline-block;font-size:11px;background:rgba(18,48,78,.08);padding:1px 5px;margin:1px 3px 1px 0;border-radius:2px;color:var(--ink)}
+table.matrix .blank{display:inline-block;width:18px;border-bottom:1px dotted var(--ink-faint);opacity:.5}
+table.matrix .yes{color:var(--stbd-green);font-weight:700}
+table.matrix tr.uncrawled td{background:rgba(122,29,29,.05);color:var(--ink-faint)}
+.catcols{column-width:330px;column-gap:30px}
+.catcols .barrow{break-inside:avoid}
 /* ---------------- tables ---------------- */
 table.log{width:100%;border-collapse:collapse;font-size:13.5px}
 table.log th{
@@ -426,7 +486,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
       <div class="card"><h3>Running time</h3><div id="durations"></div></div>
       <div class="card"><h3>Longest passages</h3><table class="log" id="longest"></table></div>
     </div>
-    <div class="grid g3" style="margin-top:22px">
+    <div class="grid g2e" style="margin-top:22px">
       <div class="card">
         <h3>Hours of content added per year <span class="h3-flag">with running total</span></h3>
         <div id="hoursyear"></div>
@@ -435,10 +495,11 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
         <h3>Typical video length by year</h3>
         <div id="lenyear"></div>
       </div>
-      <div class="card">
-        <h3>What the channel plays <span class="h3-flag">our own taxonomy</span></h3>
-        <div id="taxonomy"></div>
-      </div>
+    </div>
+    <div class="card" style="margin-top:22px">
+      <h3>What the channel plays <span class="h3-flag" id="catalog-flag"></span></h3>
+      <div id="catalog-cats" class="catcols"></div>
+      <p class="dim" id="catalog-note" style="font-size:12px;margin-top:10px"></p>
     </div>
   </section>
 
@@ -446,37 +507,79 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   <section id="fleet" role="tabpanel" hidden>
     <div class="sec-head"><h2>The Web Fleet Itself</h2>
       <span class="lede" id="fleet-lede"></span></div>
-    <p class="sec-note">What was crawled, what failed, and how the properties link to one another.
-    Honest soundings: caps, blocks and gaps are reported, not hidden.</p>
-    <div class="grid g2">
+    <p class="sec-note">Who measures what, and what each property runs on — read from the page
+    source of every property we could crawl. Blank means scanned but not detected; "not crawled"
+    means the site was down or its root errored, and is labeled as such rather than left to read
+    as a clean bill of health.</p>
+    <div class="card">
+      <h3>Analytics coverage matrix <span class="h3-flag">IDs shown; blank = not detected</span></h3>
+      <div style="overflow-x:auto"><table class="log matrix" id="analytics-matrix"></table></div>
+      <p class="dim" id="analytics-note" style="font-size:12px;margin-top:8px"></p>
+    </div>
+    <div class="grid g2" style="margin-top:22px">
       <div class="card">
-        <h3>Crawl log by domain</h3>
-        <table class="log" id="domains"></table>
-        <div id="crawlnotes"></div>
+        <h3>Tech platform by property <span class="h3-flag">from page source</span></h3>
+        <table class="log" id="platform-table"></table>
+        <p class="dim" id="platform-note" style="font-size:12px;margin-top:8px"></p>
       </div>
-      <div>
-        <div class="card">
-          <h3>Main-site content freshness <span class="h3-flag">sitemap lastmod</span></h3>
-          <svg id="freshchart" viewBox="0 0 460 180"></svg>
-        </div>
-        <div class="card" style="margin-top:22px">
-          <h3>How the properties link to each other</h3>
-          <table class="log" id="crosslinks"></table>
-        </div>
+      <div class="card">
+        <h3>Main-site content freshness <span class="h3-flag">sitemap lastmod</span></h3>
+        <svg id="freshchart" viewBox="0 0 460 180"></svg>
       </div>
-    </div>
-    <div class="card" style="margin-top:22px">
-      <h3>Dead links found while crawling <span class="h3-flag" id="broken-flag"></span></h3>
-      <table class="log" id="brokentbl"></table>
-      <p class="dim" id="broken-note" style="font-size:12px;margin-top:8px"></p>
-    </div>
-    <div class="grid g2e" style="margin-top:22px">
-      <div class="card"><h3>Top external harbors linked</h3><div id="externals"></div></div>
-      <div class="card"><h3>The long tail: local club websites</h3><div id="clubsites"></div></div>
     </div>
   </section>
 
-  <!-- 6. PROVENANCE -->
+  <!-- 6. PROBLEMS -->
+  <section id="problems" role="tabpanel" hidden>
+    <div class="sec-head"><h2>Problems &amp; Findings</h2>
+      <span class="lede" id="problems-lede"></span></div>
+    <p class="sec-note audit-note">An external web-estate audit of the twelve properties, page-sourced
+    on 11&nbsp;Jun&nbsp;2026 and AI-assisted. These are <b>findings and judgments, not our measured data</b> —
+    severity reflects business impact, not technical purity, and the audit itself flags its numbers as
+    page-observed and unverified. Where our own crawl confirms or corrects a finding, we note it inline.</p>
+    <div class="grid g2e">
+      <div class="card">
+        <h3>The four conversion surfaces <span class="h3-flag">first-minute failures</span></h3>
+        <div id="surfaces"></div>
+      </div>
+      <div class="card">
+        <h3>Findings by severity <span class="h3-flag" id="sev-flag"></span></h3>
+        <div id="sevbars"></div>
+        <p class="dim" style="font-size:12px;margin-top:8px">⚑ critical · ▲ high · ■ medium · ● sound (working well)</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:22px">
+      <h3>All findings <span class="h3-flag" id="findings-flag"></span></h3>
+      <div id="findings"></div>
+    </div>
+  </section>
+
+  <!-- 7. FUNNELS -->
+  <section id="funnels" role="tabpanel" hidden>
+    <div class="sec-head"><h2>Conversion Funnels</h2>
+      <span class="lede" id="funnels-lede"></span></div>
+    <p class="sec-note audit-note">How a visitor gets from the flagship to the four things the org needs them
+    to do — join, find a class, shop, donate — step by step as the audit observed them on 11&nbsp;Jun&nbsp;2026.
+    Red-flagged steps are where a reasonable visitor stalls or leaves. <b>Audit findings, not measured traffic:</b>
+    there is no conversion or drop-off data here, only the observed path and its friction.</p>
+    <div id="funnel-list"></div>
+  </section>
+
+  <!-- 8. OPPORTUNITIES -->
+  <section id="opportunities" role="tabpanel" hidden>
+    <div class="sec-head"><h2>Opportunities</h2>
+      <span class="lede" id="opps-lede"></span></div>
+    <p class="sec-note">Recommendations, ranked roughly by impact-per-effort. The <b>figures</b> in each
+    card are computed live from the crawl data and update on every refresh; the <b>recommendations</b>
+    wrapped around them are editorial judgment — some from our own read of the data, some from the
+    external audit (see Problems &amp; Funnels). Weigh them; verify against the live site before acting.</p>
+    <div class="opps-h">Quick wins — a day's work each</div>
+    <div class="grid g2e" id="opps-current"></div>
+    <div class="opps-h">Bigger moves</div>
+    <div class="grid g2e" id="opps-new"></div>
+  </section>
+
+  <!-- 7. PROVENANCE -->
   <section id="provenance" role="tabpanel" hidden>
     <div class="sec-head"><h2>Sources &amp; Soundings</h2>
       <span class="lede">every figure regenerable</span></div>
@@ -546,12 +649,15 @@ function countUp(node, target){
 
 /* ---------- tabs ---------- */
 var TABS = [
-  ['clubs',      'Club Network'],
-  ['education',  'Education'],
-  ['commerce',   'Commerce'],
-  ['channel',    'Channel'],
-  ['fleet',      'Web Fleet'],
-  ['provenance', 'Sources']
+  ['clubs',         'Club Network'],
+  ['education',     'Education'],
+  ['commerce',      'Commerce'],
+  ['channel',       'Channel'],
+  ['fleet',         'Web Fleet'],
+  ['problems',      'Problems'],
+  ['funnels',       'Funnels'],
+  ['opportunities', 'Opportunities'],
+  ['provenance',    'Sources']
 ];
 var tabsWrap = document.getElementById('tabs');
 TABS.forEach(function(t){
@@ -1183,54 +1289,103 @@ document.getElementById('vid-lede').textContent =
   }
 })();
 
-/* custom taxonomy */
+/* channel catalog categories — the channel's OWN categories, captured live */
 (function(){
-  var tax = D.videos.taxonomy;
-  if(!tax) return;
-  var wrap = document.getElementById('taxonomy');
-  var max = Math.max.apply(null, tax.categories.map(function(c){return c.videos;}));
-  tax.categories.forEach(function(c, i){
+  var cc = D.videos.catalog_categories;
+  var wrap = document.getElementById('catalog-cats');
+  var flag = document.getElementById('catalog-flag');
+  var note = document.getElementById('catalog-note');
+  if(!cc || !cc.categories || !cc.categories.length){
+    flag.textContent = 'not captured';
+    note.textContent = 'The channel category capture (data/interactive/channel_categories.json) ' +
+      'is missing, so this chart has nothing to show. Re-capture from the live catalog and re-run ' +
+      'the build to populate it.';
+    return;
+  }
+  var cats = cc.categories.slice().sort(function(a,b){return b.videos-a.videos;});
+  flag.textContent = cats.length + ' catalog categories';
+  var max = Math.max.apply(null, cats.map(function(c){return c.videos;}));
+  cats.forEach(function(c, i){
     var row = el('div', {class:'barrow'});
     row.appendChild(el('span', {class:'lab',
-      style:'width:168px;font-size:10.5px;line-height:1.25;white-space:normal',
-      title:'e.g. ' + c.examples.join(' · ')}, c.name));
+      style:'width:210px;font-size:10.5px;line-height:1.2;white-space:normal;text-align:right'}, c.name));
     var trk = el('div', {class:'trk'});
     var pct = c.videos/max*100;
-    var fil = el('div', {class:'fil',
-      style:'width:' + pct + '%;animation-delay:' + (i*35) + 'ms' +
-            (c.name === 'Unclassified' ? ';opacity:.45' : '')});
-    placeBarLabel(trk, fil, pct, c.videos, 20);
+    var fil = el('div', {class:'fil', style:'width:' + pct + '%;animation-delay:' + (i*25) + 'ms'});
+    placeBarLabel(trk, fil, pct, c.videos, 14);
     trk.appendChild(fil); row.appendChild(trk); wrap.appendChild(row);
   });
-  wrap.appendChild(el('p', {class:'dim', style:'font-size:11.5px;margin-top:8px'},
-    tax.method + ' Hover a label for example titles.'));
+  note.textContent = 'The channel’s own Category filter, captured live from the catalog on ' +
+    (cc.captured || 'a recent date') + '. ' + (cc.note || '') +
+    ' This is what a visitor browses by — distinct from the rule-based content taxonomy used elsewhere.';
 })();
 
 /* ---------- CH5 · fleet ---------- */
-document.getElementById('fleet-lede').textContent =
-  D.site.domains_crawled + ' domains · ' + fmt(D.site.pages_fetched) + ' pages · ' +
-  fmt(D.site.fetch_failures) + ' failures';
 (function(){
-  var tbl = document.getElementById('domains');
-  var tr = el('tr'); ['Domain', 'Fetched', 'Failed', 'Skipped', 'PDFs'].forEach(function(h){ tr.appendChild(el('th', {}, h)); });
-  tbl.appendChild(tr);
-  Object.entries(D.site.per_domain).forEach(function(kv){
-    var row = el('tr');
-    row.appendChild(el('td', {style:'font-family:var(--mono);font-size:12px'}, kv[0]));
-    var f = kv[1].fetched||0, fl = kv[1].failed||0;
-    var tdF = el('td', {class:'num'}); tdF.appendChild(el('span', {class: f? 'ok':'bad'}, String(f))); row.appendChild(tdF);
-    var tdX = el('td', {class:'num'}); tdX.appendChild(el('span', {class: fl? 'bad':'dim'}, String(fl))); row.appendChild(tdX);
-    row.appendChild(el('td', {class:'num dim'}, String(kv[1].skipped||0)));
-    row.appendChild(el('td', {class:'num dim'}, String(kv[1].pdf_recorded||0)));
-    tbl.appendChild(row);
-  });
-  var notes = document.getElementById('crawlnotes');
-  D.site.notes.forEach(function(n){
-    var box = el('div', {class:'notice'});
-    box.appendChild(el('div', {class:'nt'}, 'Notice to Mariners'));
-    box.appendChild(el('p', {}, n));
-    notes.appendChild(box);
-  });
+  var T = D.tech;
+  var props = T && T.properties ? T.properties : [];
+  var withAnalytics = props.filter(function(p){return p.ga4.length||p.gtm.length||p.universal_analytics.length;}).length;
+  var crawled = props.filter(function(p){return p.crawled;}).length;
+  document.getElementById('fleet-lede').textContent =
+    props.length + ' properties · ' + crawled + ' crawled · ' + withAnalytics + ' with analytics tags';
+
+  /* ---- analytics coverage matrix ---- */
+  var mtbl = document.getElementById('analytics-matrix');
+  var anote = document.getElementById('analytics-note');
+  if(!props.length){
+    anote.textContent = 'The tech inventory (data/extracted/tech_inventory.json) was not generated. ' +
+      'Run `python3 derive/detect_tech.py` then rebuild.';
+  } else {
+    var hr = el('tr');
+    ['Property', 'GA4', 'Universal Analytics', 'GTM', 'Meta Pixel'].forEach(function(h){ hr.appendChild(el('th', {}, h)); });
+    mtbl.appendChild(hr);
+    function idCell(ids){
+      var td = el('td', {class:'idcell'});
+      if(ids && ids.length){ ids.forEach(function(x){ td.appendChild(el('code', {class:'tag'}, x)); }); }
+      else { td.appendChild(el('span', {class:'blank'}, '')); }
+      return td;
+    }
+    props.forEach(function(p){
+      var row = el('tr', p.crawled ? {} : {class:'uncrawled'});
+      row.appendChild(el('td', {class:'prop'}, p.domain));
+      if(!p.crawled){
+        var td = el('td', {colspan:'4', class:'dim'}, 'not crawled — ' + (p.role||'').replace(/.*— /, ''));
+        row.appendChild(td);
+      } else {
+        row.appendChild(idCell(p.ga4));
+        row.appendChild(idCell(p.universal_analytics));
+        row.appendChild(idCell(p.gtm));
+        var pix = el('td', {class:'idcell'});
+        if(p.meta_pixel_pages){ pix.appendChild(el('span', {class:'yes'}, '✓')); }
+        else { pix.appendChild(el('span', {class:'blank'}, '')); }
+        row.appendChild(pix);
+      }
+      mtbl.appendChild(row);
+    });
+    anote.textContent = 'Read from each property’s own page source by derive/detect_tech.py. ' +
+      'A blank cell means scanned but not detected. ' + (props.length - crawled) +
+      ' properties could not be crawled (site down or root errored) and are marked so. ' +
+      'Note store.shopusps.org still runs Universal Analytics (UA-), retired by Google in 2023.';
+  }
+
+  /* ---- tech platform table ---- */
+  var ptbl = document.getElementById('platform-table');
+  var pnote = document.getElementById('platform-note');
+  if(props.length){
+    var ph = el('tr'); ['Property', 'Platform', 'Evidence'].forEach(function(h){ ph.appendChild(el('th', {}, h)); });
+    ptbl.appendChild(ph);
+    props.forEach(function(p){
+      var row = el('tr', p.crawled ? {} : {class:'uncrawled'});
+      row.appendChild(el('td', {class:'prop'}, p.domain));
+      row.appendChild(el('td', {style:'font-size:12.5px'}, p.platform || (p.crawled ? 'undetermined' : 'not crawled')));
+      row.appendChild(el('td', {class:'dim', style:'font-size:11px'}, p.platform_evidence || ''));
+      ptbl.appendChild(row);
+    });
+    var plats = {};
+    props.forEach(function(p){ if(p.platform){ var k=p.platform.split(' ·')[0].split(' (')[0]; plats[k]=1; } });
+    pnote.textContent = Object.keys(plats).length + ' distinct platforms across the properties we could read — ' +
+      'each upgrade cycle, security surface, and login is its own.';
+  }
 })();
 
 /* freshness columns */
@@ -1254,67 +1409,249 @@ document.getElementById('fleet-lede').textContent =
   svg.appendChild(cap);
 })();
 
-/* cross links */
+/* ---------- CH6 · problems — reproduces an external audit (11 Jun 2026) ----------
+   This content is the audit's findings, not our measured data. It is embedded
+   verbatim from the source the user asked to fold in; severity is the audit's
+   own (business impact). Where our crawl confirms or corrects a finding, a
+   `note` is added and shown inline. */
+var SEV = {
+  CRITICAL: {g:'⚑', cls:'sev-crit', rank:0},
+  HIGH:     {g:'▲', cls:'sev-high', rank:1},
+  MEDIUM:   {g:'■', cls:'sev-med',  rank:2},
+  SOUND:    {g:'●', cls:'sev-sound',rank:3}
+};
 (function(){
-  var tbl = document.getElementById('crosslinks');
-  var tr = el('tr'); ['From', 'To', 'Links'].forEach(function(h){ tr.appendChild(el('th', {}, h)); });
-  tbl.appendChild(tr);
-  D.ecosystem.abc_cross_links.slice(0, 12).forEach(function(e){
-    var row = el('tr');
-    row.appendChild(el('td', {style:'font-family:var(--mono);font-size:11.5px'}, e.from));
-    row.appendChild(el('td', {style:'font-family:var(--mono);font-size:11.5px'}, e.to));
-    row.appendChild(el('td', {class:'num'}, fmt(e.links)));
-    tbl.appendChild(row);
+  var surfaces = [
+    ['Join','CRITICAL','No price anywhere on the flagship. Default paths: email HQ or phone a named staffer at an extension.'],
+    ['Find a class','CRITICAL','Routes to a 1990s CGI form on usps.org with insider jargon and corrupted data.'],
+    ['Shop','HIGH','Online checkout disabled; banner says browse, note item numbers, and phone x221/212 to order.'],
+    ['Donate','CRITICAL','“Learn more” lands on a page untouched since January 2021, typo in the hero.']
+  ];
+  var FIND = [
+    ['CRITICAL','CONVERSION','Membership pricing absent from the entire flagship site','The /join page offers three paths: email help@usps.org, call HQ and ask for a named staffer by extension, or follow a portal link. The price ($123 individual / $179.50 family) appears only after crossing to portal.americasboatingclub.org.','/index.php/join · portal USPS-ABC-Join.aspx','Confirmed by our crawl: $123 and $179.50 appear only in portal pages.'],
+    ['CRITICAL','CONVERSION','Primary class-finder is a 1990s CGI form','“Classes Near Me” sends prospects to a usps.org cfindx.cgi script: ISO-8859-1 encoding, dropdowns packed with insider codes, and a “you are not logged on as a USPS member” notice shown to first-time visitors.','cfindx.cgi'],
+    ['HIGH','CONVERSION','Ship’s Store checkout is offline — phone orders only','A sitewide banner says the store is “currently closed for online orders” and directs shoppers to note item numbers, size and color, then call 888-367-8777 x221 or 212. Browsing works; self-service purchase doesn’t. The banner is a raster image, so the number isn’t tappable.','store banner + /Apparel'],
+    ['CRITICAL','CONVERSION','Donation site frozen since January 2021','giveabc.org carries COVID-era urgency copy, “107 years” (five years out of date), © 2021, and a typo in the hero headline (“make boating boater”). It is the “Learn more” destination from the flagship homepage’s Donate section.','giveabc.org','Confirmed: © 2021 on 41 crawled pages; platform WordPress/GiveWP 4.11.'],
+    ['CRITICAL','SEARCH','Zero owned visibility in the category SERP test','A “boating safety course near me Georgia” search returned Boat-Ed, BoatUS Foundation, BoaterExam, Recademics, and the GA DNR referral page. No ABC-owned domain appeared.','SERP test, 11 Jun 2026'],
+    ['HIGH','IDENTITY','Five separate login systems advertised in the header','Member Website (usps.org), Membership Portal (iMIS), ABC Course Online (ColdFusion), Other Online Courses (Moodle), MMSI (PHP). A member can plausibly hold four credential sets.','flagship header, all pages'],
+    ['HIGH','SEARCH','Non-SEF URLs and duplicate paths without canonicals','Every flagship URL carries /index.php/. usps.org links the same pages without it, so both variants resolve. No canonical tag was observed on any flagship page fetched.','all flagship fetches','Confirmed: our platform check keys Joomla off this exact /index.php/ routing.'],
+    ['HIGH','SEARCH','Heading hierarchy broken across templates','The News listing renders every article-card title as an H1 (~20 H1s on one page). The Learn page carries a stray second H1 from a promo module. The homepage has multiple H1s.','/about/news-and-information · /learn'],
+    ['HIGH','IDENTITY','Search equity for video leaks to vendor subdomain','americasboatingchannel.com canonicalizes to americasboatingchannel.uscreen.io/catalog. Every link and ranking earned accrues to Uscreen’s domain.','channel meta canonical','Confirmed in our crawl of the channel pages.'],
+    ['HIGH','ARCHITECTURE','Three parallel LMS platforms','ColdFusion courseware for the flagship course, EnrolMart for ~30 seminars, Moodle for “other” courses. Triple the maintenance surface and login confusion.','header logins · Available Online menu','Platform table confirms EnrolMart and Moodle; ColdFusion root errored so is uncrawled.'],
+    ['HIGH','IDENTITY','Three Twitter/X identities, three Facebook pages, two YouTube channels','@uspsabc (flagship), @boatingisfun (store + giveabc), @AmericasBoating (channel). giveabc.org also links a personal linkedin.com/in/ profile for the org instead of the company page.','footers across properties','Confirmed — see the social handles gathered on the Opportunities tab.'],
+    ['HIGH','TRUST','Stale event banner + template-token leak on the join page','The portal join page — the actual conversion surface — promotes “2025 Fall Governing Board Meeting” in June 2026 and renders raw ##LOC[OK]## / ##LOC[Cancel]## strings.','portal USPS-ABC-Join.aspx'],
+    ['MEDIUM','TRUST','Copy errors concentrated on revenue pages','“make boating boater” (donation hero), “Knits and Lines” (course sales page), “on a e boat” and “the, spring boating season” (blog). Collectively they read as unattended.','giveabc · course site · blog'],
+    ['MEDIUM','SEARCH','Listing pages shipped without SEO basics','News listing title is “News and Information” — no brand, no meta description. usps.org homepage title is “Home” with no description.','news listing meta · usps.org meta'],
+    ['MEDIUM','CONVERSION','Member-benefits CTA exposes a raw component URL','The /join page’s “Members Only Benefits” button links to /index.php/component/content/article/142?Itemid=265 — an internal Joomla path where a friendly URL belongs.','/index.php/join'],
+    ['MEDIUM','DATA','Corrupted entries in the class-finder state list','The state dropdown contains “CN” and “Ja” alongside valid codes — visible data corruption in the org’s primary local-search tool.','cfindx.cgi state select'],
+    ['MEDIUM','TRUST','Copyright years disagree across the family','© 2026 (flagship, course, store), © 2025 (usps.org), © 2024 (channel), © 2021 (giveabc). Date drift is the visible symptom of no shared content governance.','property footers'],
+    ['MEDIUM','ARCHITECTURE','Flagship paid-course LMS root errored during crawl','course.americasboatingcourse.com returned a server error on direct fetch of the root URL; the /sign-in path responded. Paying customers may hit this.','fetch attempt, 11 Jun 2026','Reproduced: it is marked “not crawled” in our matrix for this reason.'],
+    ['MEDIUM','CONVERSION','Email capture popup with no offer','The flagship popup asks “Want to be a better boater?” with a bare email field — no lead magnet, no stated cadence, no incentive.','flagship homepage popup'],
+    ['SOUND','CONTENT','Blog is alive and aimed at real keywords','Recent posts (VHF radio how-to, 2026 Vessel Safety Check, National Safe Boating Week) plus state-targeted pieces. The strategy is right; the technical layer underneath it is what’s failing.','/about/news-and-information'],
+    ['SOUND','CONVERSION','Course sales site is the model the rest should follow','americasboatingcourse.com shows the price, leads with Enroll Now, lists chapters, and maintains state-law pages — proof the org can ship a coherent funnel when one team owns it.','americasboatingcourse.com'],
+    ['SOUND','BRAND','Real differentiation assets exist but go unsaid','On-the-water training, 300 local clubs, free vessel safety checks, a human follow-up from a local boater after purchase — none of it is framed against the free online competitors that own the SERP.','course-details copy · SERP test'],
+    ['SOUND','REACH','boatlive365.org shows the family can do SEO hygiene','Canonical, OG tags, robots directives all present. The competence exists in-house or in-vendor; it just hasn’t been applied to the flagship.','boatlive365 meta','Confirmed: our platform check reads it as WordPress with full meta.'],
+    ['SOUND','DATA','Analytics exists on at least one property','GTM (GTM-TRBZFNR5) fires on the portal. The audit could not confirm GA4/GTM on the flagship from extracted text.','portal page source','CORRECTION: our crawl DID find GA4 on the flagship (G-0M1N6DYNBW, G-GGW5NS7YYS) — see the matrix.']
+  ];
+  /* surfaces */
+  var sw = document.getElementById('surfaces');
+  surfaces.forEach(function(s){
+    var sv = SEV[s[1]];
+    var row = el('div', {class:'surface'});
+    var head = el('div', {class:'surface-head'});
+    head.appendChild(el('span', {class:'surface-name'}, s[0]));
+    head.appendChild(el('span', {class:'sev-badge ' + sv.cls}, sv.g + ' ' + s[1]));
+    row.appendChild(head);
+    row.appendChild(el('p', {class:'surface-detail'}, s[2]));
+    sw.appendChild(row);
   });
-})();
-
-/* dead links */
-(function(){
-  var bl = D.site.broken_links;
-  if(!bl) return;
-  document.getElementById('broken-flag').textContent =
-    bl.total + ' URLs answered 404';
-  var tbl = document.getElementById('brokentbl');
-  var tr = el('tr');
-  ['Broken URL (404)', 'Linked from'].forEach(function(h){ tr.appendChild(el('th', {}, h)); });
-  tbl.appendChild(tr);
-  bl.top.forEach(function(b){
-    var row = el('tr');
-    row.appendChild(el('td', {style:'font-family:var(--mono);font-size:11px;word-break:break-all'}, b.url));
-    row.appendChild(el('td', {style:'font-family:var(--mono);font-size:11px;word-break:break-all'}, b.linked_from));
-    tbl.appendChild(row);
-  });
-  document.getElementById('broken-note').textContent =
-    'Showing ' + bl.top.length + ' of ' + bl.total + ' dead links; ' +
-    bl.advertised_by_sitemap + ' are advertised by a site’s own sitemap. Per domain: ' +
-    Object.entries(bl.by_domain).map(function(kv){ return kv[0] + ' ' + kv[1]; }).join(' · ') + '.';
-})();
-
-/* externals + club sites */
-(function(){
-  var ex = document.getElementById('externals');
-  var entries = Object.entries(D.ecosystem.top_external_domains).slice(0, 14);
-  var max = entries.length ? entries[0][1] : 1;
-  entries.forEach(function(kv){
+  /* severity bars */
+  var counts = {CRITICAL:0,HIGH:0,MEDIUM:0,SOUND:0};
+  FIND.forEach(function(f){ counts[f[0]]++; });
+  document.getElementById('sev-flag').textContent = FIND.length + ' findings';
+  var sb = document.getElementById('sevbars');
+  var maxc = Math.max.apply(null, Object.keys(counts).map(function(k){return counts[k];}));
+  ['CRITICAL','HIGH','MEDIUM','SOUND'].forEach(function(k){
+    var sv = SEV[k];
     var row = el('div', {class:'barrow'});
-    row.appendChild(el('span', {class:'lab', style:'width:210px;overflow:hidden;text-overflow:ellipsis;font-size:11px'}, kv[0]));
+    row.appendChild(el('span', {class:'lab', style:'width:78px'}, sv.g + ' ' + k.toLowerCase()));
     var trk = el('div', {class:'trk'});
-    var pct = kv[1]/max*100;
-    var fil = el('div', {class:'fil', style:'width:'+pct+'%'});
-    placeBarLabel(trk, fil, pct, fmt(kv[1]), 15);
-    trk.appendChild(fil); row.appendChild(trk); ex.appendChild(row);
+    var pct = counts[k]/maxc*100;
+    var fil = el('div', {class:'fil ' + sv.cls + '-fil', style:'width:'+pct+'%'});
+    placeBarLabel(trk, fil, pct, counts[k], 12);
+    trk.appendChild(fil); row.appendChild(trk); sb.appendChild(row);
   });
-  ex.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
-    D.ecosystem.external_domains_total + ' distinct external domains were linked in total'));
-
-  var cs = document.getElementById('clubsites');
-  var p = el('p', {style:'font-size:14px'});
-  p.innerHTML = 'Beyond the ' + D.site.domains_crawled + ' national properties crawled, the club directory points to <b>' +
-    D.ecosystem.club_websites_total + ' local club websites</b> — each one its own harbor, listed in data/extracted/link_graph.json.';
-  cs.appendChild(p);
+  /* findings list */
+  document.getElementById('findings-flag').textContent = '4 critical · 8 high · 7 medium · 5 sound';
+  var fw = document.getElementById('findings');
+  FIND.slice().sort(function(a,b){return SEV[a[0]].rank-SEV[b[0]].rank;}).forEach(function(f){
+    var sv = SEV[f[0]];
+    var card = el('div', {class:'finding'});
+    var head = el('div', {class:'finding-head'});
+    head.appendChild(el('span', {class:'sev-badge ' + sv.cls}, sv.g + ' ' + f[0]));
+    head.appendChild(el('span', {class:'finding-cat'}, f[1]));
+    head.appendChild(el('span', {class:'finding-title'}, f[2]));
+    card.appendChild(head);
+    card.appendChild(el('p', {class:'finding-detail'}, f[3]));
+    if(f[5]) card.appendChild(el('p', {class:'finding-note'}, '↳ our crawl: ' + f[5]));
+    card.appendChild(el('p', {class:'finding-ev'}, 'evidence · ' + f[4]));
+    fw.appendChild(card);
+  });
+  document.getElementById('problems-lede').textContent =
+    FIND.length + ' findings across 12 properties · external audit, page-sourced 11 Jun 2026';
 })();
 
-/* ---------- CH6 · provenance ---------- */
+/* ---------- CH7 · funnels — reproduces the same external audit ---------- */
+(function(){
+  var FUNNELS = [
+    {sev:'CRITICAL', title:'Join', blurb:'Price hidden two hops deep; human-mediated by default.', steps:[
+      ['Homepage “JOIN TODAY”','Clear CTA, good placement'],
+      ['/join page','No price, no form. Options: email HQ, call ext. 219/229, or follow a portal link'],
+      ['Cross to portal.americasboatingclub.org','Domain + design change mid-funnel'],
+      ['Portal join page','$123 / $179.50 finally shown · stale 2025 banner · ##LOC[] tokens visible'],
+      ['iMIS account creation','ASP.NET WebForms postback flow']]},
+    {sev:'CRITICAL', title:'Find a class', blurb:'Top of the volunteer-network funnel dead-ends in a 1990s CGI form.', steps:[
+      ['Nav: “Classes Near Me”','Prominent in mega-menu'],
+      ['usps.org cfindx.cgi','ISO-8859-1 · no mobile layout · insider jargon (BOC, OWT, BH)'],
+      ['Dropdown selection','State list contains corrupted entries (“CN”, “Ja”)'],
+      ['Logged-out notice','“Not logged on as a USPS member” shown to first-time prospects']]},
+    {sev:'HIGH', title:'Course (the healthy one)', blurb:'The healthiest funnel — and it’s competing on price against free.', steps:[
+      ['americasboatingcourse.com','Price visible, Enroll Now above the fold, chapter outline'],
+      ['Enroll → course subdomain','ColdFusion app; root URL errored during crawl'],
+      ['Category context','BoatUS offers a free GA-approved course; no counter-positioning on page'],
+      ['Other seminars','Exit to uspsonline.enrolmart.com — brand and SEO equity leave']]},
+    {sev:'CRITICAL', title:'Donate', blurb:'Asking for money on a page that visibly hasn’t been touched in five years.', steps:[
+      ['Homepage Donate section','Two links: giveabc.org (“Learn more”) and portal (“donate now”)'],
+      ['giveabc.org','© 2021 · COVID appeal copy · “107 years” · hero typo “make boating boater”'],
+      ['Portal fundraising','Functional but bare iMIS pages']]}
+  ];
+  document.getElementById('funnels-lede').textContent =
+    FUNNELS.length + ' conversion paths · external audit, observed 11 Jun 2026';
+  var wrap = document.getElementById('funnel-list');
+  FUNNELS.forEach(function(f){
+    var sv = SEV[f.sev];
+    var card = el('div', {class:'card funnel-card'});
+    var h = el('h3');
+    h.appendChild(document.createTextNode(f.title + ' '));
+    h.appendChild(el('span', {class:'h3-flag sev-badge ' + sv.cls}, sv.g + ' ' + f.sev));
+    card.appendChild(h);
+    card.appendChild(el('p', {class:'funnel-blurb'}, f.blurb));
+    var steps = el('div', {class:'funnel-steps'});
+    f.steps.forEach(function(s, i){
+      if(i){ steps.appendChild(el('span', {class:'funnel-arrow'}, '→')); }
+      var st = el('div', {class:'funnel-step'});
+      st.appendChild(el('span', {class:'funnel-step-n'}, 'STEP ' + (i+1)));
+      st.appendChild(el('span', {class:'funnel-step-label'}, s[0]));
+      st.appendChild(el('span', {class:'funnel-step-detail'}, s[1]));
+      steps.appendChild(st);
+    });
+    card.appendChild(steps);
+    wrap.appendChild(card);
+  });
+})();
+
+/* ---------- CH8 · opportunities ---------- */
+(function(){
+  /* Editorial tab. Every figure in an evidence line is computed here from D
+     (the same data.js every chart reads) so the numbers stay regenerable; the
+     surrounding recommendation text deliberately contains no figures at all.
+     If a refresh removes a field an evidence function needs, the card says so
+     in plain English instead of showing stale or invented numbers. */
+  function tabName(id){
+    var t = TABS.filter(function(t){ return t[0] === id; })[0];
+    return t ? t[1] : id;
+  }
+  // Distinct social handles per network, gathered from the per-property
+  // footers in D.tech (regenerable). twitter.com and x.com are merged, and a
+  // handle seen on several properties is counted once. Used by the
+  // social-normalization card.
+  function socialIdentities(){
+    var NET = {twitter:'Twitter/X', x:'Twitter/X', facebook:'Facebook',
+               instagram:'Instagram', youtube:'YouTube', linkedin:'LinkedIn', tiktok:'TikTok'};
+    var by = {};
+    (D.tech && D.tech.properties ? D.tech.properties : []).forEach(function(p){
+      (p.social || []).forEach(function(u){
+        var net = NET[u.split('/')[0].replace('.com', '')] || 'Other';
+        var handle = u.split('/').slice(1).join('/');
+        (by[net] = by[net] || {})[handle] = 1;
+      });
+    });
+    return by;
+  }
+  function netList(by, net){ return Object.keys(by[net] || {}); }
+  var RECS = [
+    /* ---- quick wins (col:'current') ---- */
+    {col:'current', src:'audit', link:'funnels', title:'Put the price and a real Join button on /join',
+     ev:function(){ return 'The membership price ($123 individual / $179.50 family) appears only on the ' +
+       'iMIS portal — both figures verified in the portal’s own crawled pages. The flagship /join page shows ' +
+       'no price and defaults to emailing HQ or phoning a staffer by extension.'; },
+     act:'Copy the price onto the flagship join page with one button into the portal flow. It kills the email-or-phone default — a content edit, not a build.'},
+    {col:'current', src:'audit', link:'problems', title:'Redirect giveabc.org to the portal donate flow today',
+     ev:function(){ var g = D.tech.properties.filter(function(p){return p.domain==='giveabc.org';})[0];
+       return 'giveabc.org runs ' + (g ? g.platform : 'WordPress/GiveWP') + ' and still carries “© 2021” ' +
+       '(verified on 41 of its crawled pages) plus COVID-era “107 years” copy. It is the flagship homepage’s ' +
+       '“Learn more” donate destination.'; },
+     act:'A 301 to the portal’s working donate flow stops a five-year-stale page from being the fundraising front door. Rebuild a proper case-for-support page later; the redirect is the urgent part.'},
+    {col:'current', src:'data', link:'commerce', title:'Sweep the dead links and unpriced items',
+     ev:function(){ var b = D.site.broken_links;
+       return b.total + ' URLs answer 404 across ' + Object.keys(b.by_domain).length + ' domains, ' +
+       b.advertised_by_sitemap + ' of them advertised by a site’s own sitemap. In the store, ' +
+       D.commerce.ships_store.unpriced_items + ' of ' + D.commerce.ships_store.products +
+       ' products list no price.'; },
+     act:'Cheap, visible wins. Start with the pages a sitemap still advertises to search engines, then the unpriced store items — a price-less product is a dead end for a self-service buyer.'},
+    /* ---- bigger moves (col:'new') ---- */
+    {col:'new', src:'data', link:'fleet', title:'Normalize the social identities',
+     ev:function(){ var by = socialIdentities();
+       function show(net){ var v = netList(by, net); return net + ' — ' + v.length + ' (' + v.join(', ') + ')'; }
+       return 'Distinct accounts in the properties’ footers, read from the crawled pages: ' +
+       show('Twitter/X') + '; ' + show('LinkedIn') + '; ' + show('YouTube') + '.'; },
+     act:'Three Twitter/X identities, multiple YouTube and LinkedIn entries, and a personal LinkedIn /in/ profile on giveabc where the company page belongs. Point every footer at one current set and retire the duplicates — cheap coherence.'},
+    {col:'new', src:'audit', link:'channel', title:'Reclaim the video domain',
+     ev:function(){ var c = D.tech.properties.filter(function(p){return p.domain==='americasboatingchannel.com';})[0];
+       return 'The channel runs on ' + (c ? c.platform : 'Uscreen') + '; every page’s canonical URL points at ' +
+       'americasboatingchannel.uscreen.io (verified in our crawl), so links and rankings accrue to the vendor’s ' +
+       'subdomain rather than the owned americasboatingchannel.com.'; },
+     act:'Serve the channel on the owned domain — or at minimum fix the canonical tags — so search equity stops leaking to Uscreen.'},
+    {col:'new', src:'data', link:'fleet', title:'Decide the legacy parent site’s fate',
+     ev:function(){ var u = D.tech.properties.filter(function(p){return p.domain==='usps.org';})[0];
+       return 'usps.org could not be crawled at all — it timed out on every attempt, ' +
+       (u && !u.crawled ? 'and is marked “not crawled” in the matrix' : 'confirmed again today') +
+       '. Yet the flagship still routes “Find a class” to a CGI form hosted on it.'; },
+     act:'If members still need what lives there, stabilize or move it; if not, retire it behind redirects. A flagship-adjacent property that times out erodes trust in every link still pointing at it.'},
+    {col:'new', src:'audit', link:'problems', title:'Content governance sweep + SSO roadmap',
+     ev:function(){ var plats = {}; D.tech.properties.forEach(function(p){ if(p.platform){ plats[p.platform.split(' ·')[0].split(' (')[0]]=1; } });
+       return 'Copyright years drift across the family (flagship © 2026, giveabc © 2021) and the platform table ' +
+       'shows ' + Object.keys(plats).length + ' distinct stacks — each its own login. A member can plausibly hold ' +
+       'four separate credential sets.'; },
+     act:'Near-term: fix the typos on revenue pages, the stale banners, the copyright drift. Long-term: a single-sign-on plan to collapse the logins — a large iMIS-centered project, but the header shouldn’t list five credential systems forever.'}
+  ];
+  var cols = {current: document.getElementById('opps-current'), 'new': document.getElementById('opps-new')};
+  RECS.forEach(function(r){
+    var card = el('div', {class:'card'});
+    var h = el('h3');
+    h.appendChild(document.createTextNode(r.title + ' '));
+    h.appendChild(el('a', {class:'h3-flag', href:'#' + r.link}, 'see: ' + tabName(r.link)));
+    card.appendChild(h);
+    var ev = el('div', {class:'opps-ev'});
+    ev.appendChild(el('span', {class:'src-tag src-' + r.src},
+      r.src === 'data' ? 'computed from crawl' : 'audit finding · verified'));
+    try {
+      ev.appendChild(document.createTextNode(' ' + r.ev()));
+    } catch(e) {
+      console.warn('Opportunities: figures for “' + r.title + '” could not be computed from data.js (' +
+        e.message + '). Showing the recommendation without them; re-run the build or fix this card’s evidence function.');
+      ev.appendChild(el('span', {class:'dim'}, ' Figures unavailable in this data refresh — see the console for the missing field.'));
+    }
+    card.appendChild(ev);
+    card.appendChild(el('p', {class:'opps-act'}, r.act));
+    cols[r.col].appendChild(card);
+  });
+  document.getElementById('opps-lede').textContent =
+    RECS.length + ' recommendations · ' + RECS.filter(function(r){return r.src==='data';}).length +
+    ' computed from our crawl, ' + RECS.filter(function(r){return r.src==='audit';}).length + ' from the audit (verified)';
+})();
+
+/* ---------- CH7 · provenance ---------- */
 (function(){
   var pipe = document.getElementById('pipeline');
   D.provenance.pipeline.forEach(function(st, i){

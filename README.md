@@ -19,6 +19,28 @@ a saved raw HTML page or captured API response, and the dashboard's
 "Sources & Soundings" section names the script and source behind each dataset.
 If a value cannot be traced through that chain, it is a defect.
 
+The deliberately editorial surfaces are three tabs, each labeled as such in the
+UI:
+
+- **Opportunities** — drafted recommendations. Figures in each card are either
+  computed from `data.js` at render time (tagged "computed from crawl") or
+  quoted from the audit below and verified against our own crawl (tagged "audit
+  finding · verified").
+- **Problems** and **Funnels** — these reproduce an *external web-estate audit*
+  (page-sourced 11 Jun 2026, AI-assisted, carrying its own "unverified" caveat).
+  They are findings and judgment, **not our measured data**, and say so at the
+  top of each tab. Where our crawl confirms or corrects a finding, an inline
+  note marks it — including one correction: the audit could not confirm flagship
+  analytics, but our crawl found GA4 on it (shown in the Web Fleet matrix).
+
+The **Web Fleet** analytics matrix and tech-platform table, by contrast, *are*
+measured data: `derive/detect_tech.py` reads every property's saved page source
+and reports only IDs/platforms it can point to, with the evidence; a property it
+could not crawl is labeled "not crawled" rather than left blank. The channel's
+category counts on the **Channel** tab were captured live from the Uscreen
+catalog into `data/interactive/channel_categories.json` (a browser capture, not
+a `scrape/` script) and spot-verified against the per-category pages.
+
 ## Pipeline (each stage independently runnable)
 
 ```
@@ -41,6 +63,11 @@ If a value cannot be traced through that chain, it is a defect.
 3. EXTRACT        python3 derive/extract.py        (offline: reads only disk)
                   → data/extracted/*.json  (pages, education catalog, EnrolMart
                     products, videos, link graph, sitemap lastmod dates)
+
+3b. TECH SWEEP    python3 derive/detect_tech.py    (offline: reads data/raw/)
+                  → data/extracted/tech_inventory.json  (per-property analytics
+                    tags + tech platform + social handles, with the page-source
+                    evidence for each — powers the Web Fleet matrix/table)
 
 4. DERIVE         python3 derive/build_dashboard_data.py    (offline)
                   → dashboard/data.js + dashboard/data.json
@@ -72,12 +99,14 @@ files from capped runs.
 
 - **www.usps.org could not be crawled.** It answered one request at the start
   of the session, then timed out from every network tried (local, browser,
-  remote fetcher) for the rest of the session. The trade-off: its pages are
-  absent from the corpus; its inbound/outbound links still appear in the link
-  graph. Operator-visible consequence: the dashboard's crawl log shows
-  0 fetched / 10 failed for it, with a Notice to Mariners explaining why.
-  Re-run `python3 scrape/crawl.py --domains www.usps.org` when the site is
-  reachable again.
+  remote fetcher), and was still down on a 2026-06-13 re-check. The trade-off:
+  its pages are absent from the corpus; its inbound/outbound links still appear
+  in the link graph. Operator-visible consequence: it shows as **"not crawled"**
+  in the Web Fleet analytics matrix and platform table (a labeled gap, not a
+  blank that reads as "measured, found nothing"). Re-run
+  `python3 scrape/crawl.py --domains www.usps.org` when the site is reachable
+  again. The same applies to `course.americasboatingcourse.com`, whose root
+  returned a server error during the crawl (only `/sign-in` responded).
 - **portal.americasboatingclub.org is login-gated** (iMIS). Only its public
   login/news pages (25) were fetched; 20 deeper URLs were left at the page cap
   and are listed in `data/crawl/unfetched_portal.americasboatingclub.org.json`.
