@@ -193,10 +193,12 @@ svg text{font-family:var(--mono);fill:var(--ink-soft)}
   font-family:var(--mono);font-size:10px;letter-spacing:.04em;white-space:nowrap;
   padding:1px 6px;border-radius:2px;font-weight:600;
 }
-.sev-crit{background:#7a1d1d;color:#f4e2e2}
-.sev-high{background:#9a5a12;color:#fbeede}
-.sev-med{background:#2d4a6b;color:#e3ecf5}
-.sev-sound{background:#2e6e4e;color:#e6f2ea}
+/* Compound with .sev-badge so the badge's own light text wins over the muted
+   .card .h3-flag color when a badge sits inside a card heading (Funnels tab). */
+.sev-badge.sev-crit{background:#7a1d1d;color:#ffe1e1}
+.sev-badge.sev-high{background:#9a5a12;color:#fbeede}
+.sev-badge.sev-med{background:#2d4a6b;color:#e3ecf5}
+.sev-badge.sev-sound{background:#2e6e4e;color:#e6f2ea}
 .barrow .fil.sev-crit-fil{background:linear-gradient(90deg,#a23b3b,#7a1d1d)}
 .barrow .fil.sev-high-fil{background:linear-gradient(90deg,#c0801f,#9a5a12)}
 .barrow .fil.sev-med-fil{background:linear-gradient(90deg,#3b6ea0,#2d4a6b)}
