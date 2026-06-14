@@ -16,7 +16,7 @@ schedule, and the storefront catalogs.
 **The dashboard never contains a hand-typed number.** Every figure is computed
 by `derive/build_dashboard_data.py` from files on disk, every record traces to
 a saved raw HTML page or captured API response, and the dashboard's
-"Sources & Soundings" section names the script and source behind each dataset.
+"Sources & Methods" section names the script and source behind each dataset.
 If a value cannot be traced through that chain, it is a defect.
 
 The deliberately editorial surfaces are three tabs, each labeled as such in the
@@ -31,9 +31,9 @@ UI:
   They are findings and judgment, **not our measured data**, and say so at the
   top of each tab. Where our crawl confirms or corrects a finding, an inline
   note marks it — including one correction: the audit could not confirm flagship
-  analytics, but our crawl found GA4 on it (shown in the Web Fleet matrix).
+  analytics, but our crawl found GA4 on it (shown in the Web Properties matrix).
 
-The **Web Fleet** analytics matrix and tech-platform table, by contrast, *are*
+The **Web Properties** analytics matrix and tech-platform table, by contrast, *are*
 measured data: `derive/detect_tech.py` reads every property's saved page source
 and reports only IDs/platforms it can point to, with the evidence; a property it
 could not crawl is labeled "not crawled" rather than left blank. The channel's
@@ -67,7 +67,7 @@ a `scrape/` script) and spot-verified against the per-category pages.
 3b. TECH SWEEP    python3 derive/detect_tech.py    (offline: reads data/raw/)
                   → data/extracted/tech_inventory.json  (per-property analytics
                     tags + tech platform + social handles, with the page-source
-                    evidence for each — powers the Web Fleet matrix/table)
+                    evidence for each — powers the Web Properties matrix/table)
 
 4. DERIVE         python3 derive/build_dashboard_data.py    (offline)
                   → dashboard/data.js + dashboard/data.json
@@ -102,7 +102,7 @@ files from capped runs.
   remote fetcher), and was still down on a 2026-06-13 re-check. The trade-off:
   its pages are absent from the corpus; its inbound/outbound links still appear
   in the link graph. Operator-visible consequence: it shows as **"not crawled"**
-  in the Web Fleet analytics matrix and platform table (a labeled gap, not a
+  in the Web Properties analytics matrix and platform table (a labeled gap, not a
   blank that reads as "measured, found nothing"). Re-run
   `python3 scrape/crawl.py --domains www.usps.org` when the site is reachable
   again. The same applies to `course.americasboatingcourse.com`, whose root

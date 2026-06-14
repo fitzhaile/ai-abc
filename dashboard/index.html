@@ -244,7 +244,7 @@ table.log tr:hover td{background:rgba(18,48,78,.045)}
 .ok{color:var(--stbd-green);font-weight:bold}
 .bad{color:var(--port-red);font-weight:bold}
 .dim{color:var(--ink-faint)}
-/* ---------------- notice to mariners ---------------- */
+/* ---------------- storefront notice ---------------- */
 .notice{
   border:2px solid var(--port-red);background:#fbf1ec;padding:14px 18px;margin:14px 0;
 }
@@ -292,7 +292,7 @@ table.log tr:hover td{background:rgba(18,48,78,.045)}
   position:relative;
 }
 .titleblock::before{
-  content:"SOURCES & SOUNDINGS";
+  content:"SOURCES & METHODS";
   position:absolute;top:-12px;left:24px;background:var(--paper);
   font-family:var(--display);font-size:12px;letter-spacing:.3em;color:var(--ink);
   padding:0 10px;
@@ -337,11 +337,11 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
 <div class="topdeck" id="topdeck">
 <header class="mast">
   <div class="mast-inner">
-    <h1>America's Boating Club<br><em>Data Chart of the Whole Fleet</em></h1>
+    <h1>America's Boating Club<br><em>A Data Chart of the Web Ecosystem</em></h1>
     <p class="sub">Every figure on this chart was computed by script from pages crawled across the
     America's Boating Club web ecosystem and from data captured by interacting with its club locator,
     schedule pages, and storefronts. Nothing here is typed in by hand — see the
-    <a href="#provenance" style="color:#e8d9ae">Sources &amp; Soundings</a> block.</p>
+    <a href="#provenance" style="color:#e8d9ae">Sources &amp; Methods</a> block.</p>
   </div>
 </header>
 
@@ -373,11 +373,11 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   <section id="clubs" role="tabpanel" hidden>
     <div class="sec-head"><h2>The Club Network</h2>
       <span class="lede" id="clubs-lede"></span></div>
-    <p class="sec-note">Plotted from the coordinates the find-a-club search returns. Like a position
-    plotting sheet, there is no coastline here — the clubs themselves draw the map.</p>
+    <p class="sec-note">Plotted from the coordinates the find-a-club search returns. There is no
+    basemap here — the clubs themselves draw the shape.</p>
     <div class="grid g2">
       <div class="card">
-        <h3>Plotting sheet — every club by coordinate <span class="h3-flag" id="map-flag"></span></h3>
+        <h3>Every club by coordinate <span class="h3-flag" id="map-flag"></span></h3>
         <svg id="clubmap" viewBox="0 0 920 560" role="img" aria-label="Dot map of clubs"></svg>
         <div class="legend">
           <span><span class="sw" style="background:#c8922a"></span><span id="legend-active">clubs with upcoming classes</span></span>
@@ -410,7 +410,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
 
   <!-- 2. EDUCATION -->
   <section id="education" role="tabpanel" hidden>
-    <div class="sec-head"><h2>Education Under Way</h2>
+    <div class="sec-head"><h2>Education &amp; Training</h2>
       <span class="lede" id="edu-lede"></span></div>
     <p class="sec-note">The national course catalog comes from the main site's course and seminar pages.
     The live schedule comes from each club's details page — the same page a visitor reaches after
@@ -453,15 +453,15 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     requests. Satellite storefronts on vendor domains are charted, including one that has gone dark.</p>
     <div class="grid g3">
       <div class="card"><h3>Ship's Store by department</h3><div id="storecats"></div></div>
-      <div class="card"><h3>Price soundings (USD)</h3><div id="pricestats"></div></div>
+      <div class="card"><h3>Price summary (USD)</h3><div id="pricestats"></div></div>
       <div class="card"><h3>Satellite storefronts</h3><div id="satellites"></div></div>
     </div>
     <div class="card" style="margin-top:22px">
-      <h3>Ship's Store manifest <span class="h3-flag" id="manifest-flag"></span></h3>
+      <h3>Ship's Store — full product list <span class="h3-flag" id="manifest-flag"></span></h3>
       <div style="max-height:420px;overflow-y:auto;border-bottom:1px solid var(--rule)">
         <table class="log" id="manifest"></table>
       </div>
-      <p class="dim" style="font-size:12px;margin-top:8px">scroll for the full manifest — every product is listed</p>
+      <p class="dim" style="font-size:12px;margin-top:8px">scroll for the full list — every product is listed</p>
     </div>
     <div class="grid g2e" style="margin-top:22px">
       <div class="card">
@@ -480,11 +480,11 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     <div class="sec-head"><h2>America's Boating Channel</h2>
       <span class="lede" id="vid-lede"></span></div>
     <p class="sec-note">Every video page on the channel embeds machine-readable metadata
-    (schema.org VideoObject); this is the fleet-wide tally.</p>
+    (schema.org VideoObject); this is the channel-wide tally.</p>
     <div class="grid g3">
       <div class="card"><h3>Videos published per year</h3><svg id="yearchart" viewBox="0 0 360 210"></svg></div>
       <div class="card"><h3>Running time</h3><div id="durations"></div></div>
-      <div class="card"><h3>Longest passages</h3><table class="log" id="longest"></table></div>
+      <div class="card"><h3>Longest videos</h3><table class="log" id="longest"></table></div>
     </div>
     <div class="grid g2e" style="margin-top:22px">
       <div class="card">
@@ -505,7 +505,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
 
   <!-- 5. SITE & CRAWL -->
   <section id="fleet" role="tabpanel" hidden>
-    <div class="sec-head"><h2>The Web Fleet Itself</h2>
+    <div class="sec-head"><h2>The Web Properties</h2>
       <span class="lede" id="fleet-lede"></span></div>
     <p class="sec-note">Who measures what, and what each property runs on — read from the page
     source of every property we could crawl. Blank means scanned but not detected; "not crawled"
@@ -581,7 +581,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
 
   <!-- 7. PROVENANCE -->
   <section id="provenance" role="tabpanel" hidden>
-    <div class="sec-head"><h2>Sources &amp; Soundings</h2>
+    <div class="sec-head"><h2>Sources &amp; Methods</h2>
       <span class="lede">every figure regenerable</span></div>
     <div class="titleblock" style="margin-top:18px">
       <p class="tb-head">This chart was assembled by a four-stage pipeline. Each stage is an
@@ -653,7 +653,7 @@ var TABS = [
   ['education',     'Education'],
   ['commerce',      'Commerce'],
   ['channel',       'Channel'],
-  ['fleet',         'Web Fleet'],
+  ['fleet',         'Web Properties'],
   ['problems',      'Problems'],
   ['funnels',       'Funnels'],
   ['opportunities', 'Opportunities'],
@@ -685,7 +685,7 @@ function activateTab(id, updateHash){
   if(updateHash) history.replaceState(null, '', '#' + id);
 }
 // In-page links that point at a tab section (e.g. the masthead's
-// "Sources & Soundings" link) switch tabs instead of jumping to a
+// "Sources & Methods" link) switch tabs instead of jumping to a
 // hidden element.
 document.addEventListener('click', function(ev){
   var a = ev.target.closest ? ev.target.closest('a[href^="#"]') : null;
@@ -1097,7 +1097,7 @@ document.getElementById('com-lede').textContent =
   var sat = document.getElementById('satellites');
   var g = D.commerce.geiger_vessel_examiner;
   var notice = el('div', {class:'notice', style:'margin-top:2px'});
-  notice.appendChild(el('div', {class:'nt'}, 'Notice to Mariners'));
+  notice.appendChild(el('div', {class:'nt'}, 'Storefront notice'));
   var p1 = el('p'); p1.innerHTML = '<b>' + (g.page_title || 'ABC Vessel Examiner Site') + '</b> — the vessel-examiner gear store at <span style="font-family:var(--mono);font-size:11px">abcvesselexaminer.brandingbygeiger.com</span> reports: <b>' + g.status + '</b>.';
   notice.appendChild(p1);
   sat.appendChild(notice);
