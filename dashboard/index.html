@@ -186,7 +186,7 @@ svg text{font-family:var(--mono);fill:var(--ink-soft)}
   text-transform:uppercase;padding:1px 6px;margin-right:6px;border-radius:2px;vertical-align:1px;
 }
 .src-data{background:#1d4569;color:#e9eff5}
-.src-audit{background:var(--buoy-gold);color:#3a2c0a}
+.src-audit{background:#9a5a12;color:#fff}
 /* ---------------- audit tabs (problems / funnels) ---------------- */
 .audit-note{border-left:3px solid var(--buoy-gold);padding-left:12px}
 .sev-badge{
@@ -203,6 +203,11 @@ svg text{font-family:var(--mono);fill:var(--ink-soft)}
 .barrow .fil.sev-high-fil{background:linear-gradient(90deg,#c0801f,#9a5a12)}
 .barrow .fil.sev-med-fil{background:linear-gradient(90deg,#3b6ea0,#2d4a6b)}
 .barrow .fil.sev-sound-fil{background:linear-gradient(90deg,#3b7a5c,#2e6e4e)}
+/* Findings-by-severity bars at double the default thickness. */
+#sevbars .barrow{margin:9px 0}
+#sevbars .barrow .trk{height:48px}
+#sevbars .barrow .fil{font-size:15px}
+#sevbars .barrow .ext{font-size:14px}
 .surface{border-bottom:1px solid var(--rule);padding:9px 0}
 .surface:last-child{border-bottom:none}
 .surface-head{display:flex;align-items:center;gap:10px;justify-content:space-between}
@@ -220,6 +225,10 @@ svg text{font-family:var(--mono);fill:var(--ink-soft)}
 .funnel-steps{display:flex;align-items:stretch;flex-wrap:wrap;gap:6px}
 .funnel-arrow{display:flex;align-items:center;color:var(--ink-faint);font-size:16px;flex:none}
 .funnel-step{flex:1;min-width:150px;border:1px solid var(--rule);border-top:3px solid #12304e;padding:8px 10px;background:var(--card);display:flex;flex-direction:column;gap:4px}
+a.funnel-step{text-decoration:none;cursor:pointer;transition:border-top-color .15s,background .15s,box-shadow .15s}
+a.funnel-step:hover{border-top-color:var(--port-red);background:rgba(18,48,78,.05);box-shadow:0 4px 12px -8px rgba(18,48,78,.5)}
+a.funnel-step:hover .funnel-step-label{text-decoration:underline;text-decoration-color:var(--port-red);text-underline-offset:2px}
+.funnel-step-ext{color:var(--port-red)}
 .funnel-step-n{font-family:var(--display);font-size:9px;letter-spacing:.16em;color:var(--ink-faint)}
 .funnel-step-label{font-family:var(--display);font-size:12.5px;color:var(--ink);font-weight:600;line-height:1.2}
 .funnel-step-detail{font-size:11.5px;color:var(--ink-soft);line-height:1.4}
@@ -489,7 +498,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     <p class="sec-note">Every video page on the channel embeds machine-readable metadata
     (schema.org VideoObject); this is the channel-wide tally.</p>
     <div class="grid g3">
-      <div class="card"><h3>Videos published per year</h3><svg id="yearchart" viewBox="0 0 360 210"></svg></div>
+      <div class="card"><h3>Videos published per year</h3><svg id="yearchart" viewBox="0 0 360 210"></svg><div id="yearchart-note"></div></div>
       <div class="card"><h3>Running time</h3><div id="durations"></div></div>
       <div class="card"><h3>Longest videos</h3><table class="log" id="longest"></table></div>
     </div>
@@ -1103,7 +1112,7 @@ document.getElementById('com-lede').textContent =
   [['Ship’s Store', D.commerce.ships_store.price_stats],
    ['EnrolMart (study)', D.commerce.enrolmart.price_stats],
    ['C.P. Dean (awards)', D.commerce.cpdean_awards.price_stats]].forEach(function(kv){
-    var blk = el('div', {style:'border-bottom:1px solid var(--rule);padding:7px 0'});
+    var blk = el('div', {style:'border-bottom:1px solid var(--rule);padding:16px 0'});
     blk.appendChild(el('div', {style:'font-family:var(--display);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)'}, kv[0]));
     var s = kv[1];
     blk.appendChild(el('div', {style:'font-family:var(--mono);font-size:12.5px;margin-top:2px'},
@@ -1219,6 +1228,27 @@ document.getElementById('vid-lede').textContent =
     var cap=svgel('text',{x:26,y:H-4,'font-size':'10'});
     cap.textContent = '+' + unknown + ' videos without an upload date';
     svg.appendChild(cap);
+  }
+  // Fill the card below the chart with total/peak context the bars don't state.
+  if(entries.length){
+    var total = D.videos.total;
+    var peak = entries.reduce(function(a,kv){return kv[1]>a[1]?kv:a;}, entries[0]);
+    var sincePeak = entries.filter(function(kv){return kv[0] > peak[0];})
+      .reduce(function(a,kv){return a+kv[1];}, 0);
+    var note = document.getElementById('yearchart-note');
+    var strip = el('div', {class:'fresh-stats'});
+    [[fmt(total),'total videos'],[peak[0],'busiest year'],[fmt(sincePeak),'added since']].forEach(function(s){
+      var b = el('div', {class:'fresh-stat'});
+      b.appendChild(el('div', {class:'fresh-stat-v'}, s[0]));
+      b.appendChild(el('div', {class:'fresh-stat-l'}, s[1]));
+      strip.appendChild(b);
+    });
+    note.appendChild(strip);
+    var yp = el('p', {class:'dim', style:'font-size:12px;margin-top:10px;line-height:1.55'});
+    yp.innerHTML = '<b>' + peak[0] + '</b> alone added <b>' + fmt(peak[1]) + '</b> videos — ' +
+      Math.round(peak[1]/total*100) + '% of the library — then publishing fell off sharply: just <b>' +
+      fmt(sincePeak) + '</b> across the years since.';
+    note.appendChild(yp);
   }
 
   var dw = document.getElementById('durations');
@@ -1549,30 +1579,33 @@ var SEV = {
 
 /* ---------- CH7 · funnels — reproduces the same external audit ---------- */
 (function(){
+  // Each step's 3rd element is the live URL of that place on the site, taken
+  // from the crawl index and re-checked reachable on 2026-06-14. A step with no
+  // URL (e.g. "Category context") isn't a page, so it stays non-clickable.
   var FUNNELS = [
     {sev:'CRITICAL', title:'Join', blurb:'Price hidden two hops deep; human-mediated by default.', steps:[
-      ['Homepage “JOIN TODAY”','Clear CTA, good placement'],
-      ['/join page','No price, no form. Options: email HQ, call ext. 219/229, or follow a portal link'],
-      ['Cross to portal.americasboatingclub.org','Domain + design change mid-funnel'],
-      ['Portal join page','$123 / $179.50 finally shown · stale 2025 banner · ##LOC[] tokens visible'],
-      ['iMIS account creation','ASP.NET WebForms postback flow']]},
+      ['Homepage “JOIN TODAY”','Clear CTA, good placement','https://americasboatingclub.org/'],
+      ['/join page','No price, no form. Options: email HQ, call ext. 219/229, or follow a portal link','https://americasboatingclub.org/index.php/join'],
+      ['Cross to portal.americasboatingclub.org','Domain + design change mid-funnel','https://portal.americasboatingclub.org/'],
+      ['Portal join page','$123 / $179.50 finally shown · stale 2025 banner · ##LOC[] tokens visible','https://portal.americasboatingclub.org/Shared_Content/Membership/USPS-ABC-Join.aspx'],
+      ['iMIS account creation','ASP.NET WebForms postback flow','https://portal.americasboatingclub.org/Shared_Content/Membership/USPS-ABC-Join.aspx']]},
     {sev:'CRITICAL', title:'Find a class', blurb:'Top of the volunteer-network funnel dead-ends in a 1990s CGI form.', steps:[
-      ['Nav: “Classes Near Me”','Prominent in mega-menu'],
-      ['usps.org cfindx.cgi','ISO-8859-1 · no mobile layout · insider jargon (BOC, OWT, BH)'],
-      ['Dropdown selection','State list contains corrupted entries (“CN”, “Ja”)'],
-      ['Logged-out notice','“Not logged on as a USPS member” shown to first-time prospects']]},
+      ['Nav: “Classes Near Me”','Prominent in mega-menu','https://americasboatingclub.org/'],
+      ['usps.org cfindx.cgi','ISO-8859-1 · no mobile layout · insider jargon (BOC, OWT, BH)','https://www.usps.org/cgi-bin-nat/eddept/800/cfindx.cgi'],
+      ['Dropdown selection','State list contains corrupted entries (“CN”, “Ja”)','https://www.usps.org/cgi-bin-nat/eddept/800/cfindx.cgi'],
+      ['Logged-out notice','“Not logged on as a USPS member” shown to first-time prospects','https://www.usps.org/cgi-bin-nat/eddept/800/cfindx.cgi']]},
     {sev:'HIGH', title:'Course (the healthy one)', blurb:'The healthiest funnel — and it’s competing on price against free.', steps:[
-      ['americasboatingcourse.com','Price visible, Enroll Now above the fold, chapter outline'],
-      ['Enroll → course subdomain','ColdFusion app; root URL errored during crawl'],
+      ['americasboatingcourse.com','Price visible, Enroll Now above the fold, chapter outline','https://www.americasboatingcourse.com/'],
+      ['Enroll → course subdomain','ColdFusion app; root URL errored during crawl','https://course.americasboatingcourse.com/'],
       ['Category context','BoatUS offers a free GA-approved course; no counter-positioning on page'],
-      ['Other seminars','Exit to uspsonline.enrolmart.com — brand and SEO equity leave']]},
+      ['Other seminars','Exit to uspsonline.enrolmart.com — brand and SEO equity leave','https://uspsonline.enrolmart.com/']]},
     {sev:'CRITICAL', title:'Donate', blurb:'Asking for money on a page that visibly hasn’t been touched in five years.', steps:[
-      ['Homepage Donate section','Two links: giveabc.org (“Learn more”) and portal (“donate now”)'],
-      ['giveabc.org','© 2021 · COVID appeal copy · “107 years” · hero typo “make boating boater”'],
-      ['Portal fundraising','Functional but bare iMIS pages']]}
+      ['Homepage Donate section','Two links: giveabc.org (“Learn more”) and portal (“donate now”)','https://americasboatingclub.org/'],
+      ['giveabc.org','© 2021 · COVID appeal copy · “107 years” · hero typo “make boating boater”','https://giveabc.org/'],
+      ['Portal fundraising','Functional but bare iMIS pages','https://portal.americasboatingclub.org/']]}
   ];
   document.getElementById('funnels-lede').textContent =
-    FUNNELS.length + ' conversion paths · external audit, observed 11 Jun 2026';
+    FUNNELS.length + ' conversion paths · click a step to open that page · audit observed 11 Jun 2026';
   var wrap = document.getElementById('funnel-list');
   FUNNELS.forEach(function(f){
     var sv = SEV[f.sev];
@@ -1585,8 +1618,14 @@ var SEV = {
     var steps = el('div', {class:'funnel-steps'});
     f.steps.forEach(function(s, i){
       if(i){ steps.appendChild(el('span', {class:'funnel-arrow'}, '→')); }
-      var st = el('div', {class:'funnel-step'});
-      st.appendChild(el('span', {class:'funnel-step-n'}, 'STEP ' + (i+1)));
+      var url = s[2];
+      var st = url
+        ? el('a', {class:'funnel-step funnel-step-link', href:url,
+                   target:'_blank', rel:'noopener noreferrer', title:'Open ' + url})
+        : el('div', {class:'funnel-step'});
+      var n = el('span', {class:'funnel-step-n'}, 'STEP ' + (i+1));
+      if(url) n.appendChild(el('span', {class:'funnel-step-ext'}, ' ↗'));
+      st.appendChild(n);
       st.appendChild(el('span', {class:'funnel-step-label'}, s[0]));
       st.appendChild(el('span', {class:'funnel-step-detail'}, s[1]));
       steps.appendChild(st);
