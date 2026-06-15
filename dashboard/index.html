@@ -625,8 +625,8 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
 
 <footer>
   <span id="foot-line">—</span><br>
-  Regenerate: <code>python3 derive/extract.py &amp;&amp; python3 derive/build_dashboard_data.py</code>
-  &nbsp;·&nbsp; Raw evidence: <code>data/raw/</code>, <code>data/interactive/</code>, <code>data/crawl/index.jsonl</code>
+  Every figure is measured directly from the source — none estimated, none entered by hand,
+  and every record traces back to a page or response captured from the live sites.
 </footer>
 
 <div class="maptip" id="maptip"></div>
@@ -1911,10 +1911,16 @@ function severityLegend(intro){
   });
 })();
 
-document.getElementById('foot-line').textContent =
-  'America’s Boating Club ecosystem chart · generated ' + D.provenance.generated_at +
-  ' UTC · ' + fmt(D.site.pages_fetched) + ' pages across ' + D.site.domains_crawled +
-  ' domains · all figures computed by derive/build_dashboard_data.py';
+(function(){
+  // Human-readable compile date from the ISO timestamp (e.g. "June 15, 2026").
+  var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(D.provenance.generated_at || '');
+  var months = ['January','February','March','April','May','June','July','August',
+                'September','October','November','December'];
+  var when = m ? months[+m[2]-1] + ' ' + (+m[3]) + ', ' + m[1] : D.provenance.generated_at;
+  document.getElementById('foot-line').textContent =
+    'America’s Boating Club ecosystem chart · compiled ' + when + ' · ' +
+    fmt(D.site.pages_fetched) + ' pages surveyed across ' + D.site.domains_crawled + ' web properties';
+})();
 }
 
 // Boot — retrying the data file first if needed. Right after a deploy, a
