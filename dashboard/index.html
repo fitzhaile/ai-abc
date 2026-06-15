@@ -233,6 +233,11 @@ table.matrix .yes{color:var(--stbd-green);font-weight:700}
 table.matrix tr.uncrawled td{background:rgba(122,29,29,.05);color:var(--ink-faint)}
 .catcols{column-width:330px;column-gap:30px}
 .catcols .barrow{break-inside:avoid}
+.fresh-stats{display:flex;border-top:1px solid var(--rule);margin-top:16px}
+.fresh-stat{flex:1;padding:11px 4px 3px;text-align:center;border-right:1px solid var(--rule)}
+.fresh-stat:last-child{border-right:none}
+.fresh-stat-v{font-family:var(--display);font-weight:600;font-size:22px;color:var(--ink);line-height:1}
+.fresh-stat-l{font-family:var(--display);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px}
 /* ---------------- tables ---------------- */
 table.log{width:100%;border-collapse:collapse;font-size:13.5px}
 table.log th{
@@ -526,7 +531,8 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
       </div>
       <div class="card">
         <h3>Main-site content freshness <span class="h3-flag">sitemap lastmod</span></h3>
-        <svg id="freshchart" viewBox="0 0 460 180"></svg>
+        <svg id="freshchart" viewBox="0 0 460 260"></svg>
+        <div id="fresh-summary"></div>
       </div>
     </div>
   </section>
@@ -943,7 +949,8 @@ document.getElementById('sched-bystate').textContent =
   var max = Math.max.apply(null, entries.map(function(kv){return kv[1];}));
   entries.forEach(function(kv,i){
     var row = el('div', {class:'barrow'});
-    row.appendChild(el('span', {class:'lab'}, kv[0].slice(2).replace('-','·')));
+    var ym = kv[0].split('-');  // "2026-06" -> month-first "06·26"
+    row.appendChild(el('span', {class:'lab'}, ym[1] + '·' + ym[0].slice(2)));
     var trk = el('div', {class:'trk'});
     var pct = kv[1]/max*100;
     var fil = el('div', {class:'fil', style:'width:'+pct+'%;animation-delay:'+(i*45)+'ms'});
@@ -951,7 +958,7 @@ document.getElementById('sched-bystate').textContent =
     trk.appendChild(fil); row.appendChild(trk); wrap.appendChild(row);
   });
   wrap.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
-    'start month (YY·MM), from each club-details page'));
+    'start month (MM·YY), from each club-details page'));
 })();
 
 /* top titles table */
@@ -964,14 +971,22 @@ document.getElementById('sched-bystate').textContent =
   (D.schedule.top_titles||[]).forEach(function(kv){
     var row = el('tr');
     row.appendChild(el('td', {}, kv[0]));
-    var kind = '—';
+    var kind = null;
     var inCatalog = D.education.catalog.filter(function(c){ return c.title.toLowerCase() === kv[0].toLowerCase(); });
     if(inCatalog.length) kind = inCatalog[0].kind;
     else if(/course/i.test(kv[0])) kind = 'course';
-    row.appendChild(el('td', {class:'dim'}, kind));
+    var tdK = el('td', {class:'dim'});
+    if(kind){ tdK.textContent = kind; }
+    else {
+      tdK.textContent = 'off-catalog'; tdK.style.fontStyle = 'italic';
+      tdK.setAttribute('title', 'Scheduled under a title not in the national course/seminar catalog — type unknown.');
+    }
+    row.appendChild(tdK);
     row.appendChild(el('td', {class:'num'}, String(kv[1])));
     tbl.appendChild(row);
   });
+  tbl.parentNode.appendChild(el('p', {class:'dim', style:'font-size:11px;margin-top:8px;line-height:1.5'},
+    '“off-catalog” = scheduled under a title that isn’t in the national course/seminar catalog, so its type isn’t known.'));
 })();
 
 /* busiest clubs */
@@ -1364,9 +1379,11 @@ document.getElementById('vid-lede').textContent =
       }
       mtbl.appendChild(row);
     });
+    var uncrawled = props.length - crawled;
     anote.textContent = 'Read from each property’s own page source by derive/detect_tech.py. ' +
-      'A blank cell means scanned but not detected. ' + (props.length - crawled) +
-      ' properties could not be crawled (site down or root errored) and are marked so. ' +
+      'A blank cell means scanned but not detected. ' +
+      (uncrawled ? uncrawled + ' propert' + (uncrawled===1?'y':'ies') +
+        ' could not be crawled (site down or root errored) and are marked so. ' : '') +
       'Note store.shopusps.org still runs Universal Analytics (UA-), retired by Google in 2023.';
   }
 
@@ -1390,12 +1407,13 @@ document.getElementById('vid-lede').textContent =
   }
 })();
 
-/* freshness columns */
+/* freshness columns + summary (sized to sit alongside the platform table) */
 (function(){
-  var entries = Object.entries(D.site.main_site_lastmod_by_year).filter(function(kv){return kv[0]!=='unknown';});
+  var byYear = D.site.main_site_lastmod_by_year;
+  var entries = Object.entries(byYear).filter(function(kv){return kv[0]!=='unknown';});
   if(!entries.length) return;
   var svg = document.getElementById('freshchart');
-  var W=460,H=180,pad=26,bw=(W-2*pad)/entries.length;
+  var W=460,H=260,pad=26,bw=(W-2*pad)/entries.length;
   var max = Math.max.apply(null, entries.map(function(kv){return kv[1];}));
   entries.forEach(function(kv,i){
     var h=(kv[1]/max)*(H-62), x=pad+i*bw;
@@ -1409,6 +1427,32 @@ document.getElementById('vid-lede').textContent =
   var cap=svgel('text',{x:pad,y:H-4,'font-size':'10'});
   cap.textContent='pages last modified per year, per the site’s own sitemap';
   svg.appendChild(cap);
+
+  // Stat strip + a factual read below the chart — adds the undated count the
+  // chart drops and a recency figure, all from the same lastmod data.
+  var years = entries.map(function(kv){return kv[0];}).sort();
+  var dated = entries.reduce(function(a,kv){return a+kv[1];},0);
+  var undated = byYear.unknown || 0;
+  var total = dated + undated;
+  var peak = entries.reduce(function(a,kv){return kv[1]>a[1]?kv:a;}, entries[0]);
+  var recentYears = years.slice(-2);
+  var recent = recentYears.reduce(function(a,y){return a+(byYear[y]||0);},0);
+  var recentPct = Math.round(recent/dated*100);
+  var wrap = document.getElementById('fresh-summary');
+  var strip = el('div', {class:'fresh-stats'});
+  [[fmt(dated),'pages dated'],[fmt(undated),'no date'],[peak[0],'freshest year']].forEach(function(s){
+    var b = el('div', {class:'fresh-stat'});
+    b.appendChild(el('div', {class:'fresh-stat-v'}, s[0]));
+    b.appendChild(el('div', {class:'fresh-stat-l'}, s[1]));
+    strip.appendChild(b);
+  });
+  wrap.appendChild(strip);
+  var p = el('p', {class:'dim', style:'font-size:12.5px;margin-top:12px;line-height:1.55'});
+  p.innerHTML = '<b>' + fmt(dated) + '</b> of <b>' + fmt(total) + '</b> sitemap URLs carry a lastmod date; <b>' +
+    fmt(undated) + '</b> list none. <b>' + recentPct + '%</b> of the dated pages were last modified in ' +
+    recentYears[0] + '–' + recentYears[recentYears.length-1] + ', the freshest stretch; the oldest dated pages go back to ' +
+    years[0] + '.';
+  wrap.appendChild(p);
 })();
 
 /* ---------- CH6 · problems — reproduces an external audit (11 Jun 2026) ----------
