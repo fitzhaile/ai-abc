@@ -74,16 +74,22 @@ header.mast::after{ /* faint compass rose */
 .topdeck{position:sticky;top:0;z-index:60}
 /* ---------------- tab navigation ---------------- */
 .tabbar{
+  position:relative;
   background:var(--paper);
   border-bottom:2px solid var(--ink);
   box-shadow:0 8px 20px -16px rgba(18,48,78,.65);
 }
 .tabbar .tabs{
   max-width:1240px;margin:0 auto;padding:0 28px;
-  display:flex;flex-wrap:wrap;align-items:stretch;
+  display:flex;flex-wrap:nowrap;align-items:stretch;
+  overflow-x:auto;overflow-y:hidden;
+  scroll-behavior:smooth;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;            /* the row scrolls; the scrollbar is hidden */
 }
+.tabbar .tabs::-webkit-scrollbar{display:none}
 .tabbar button{
   appearance:none;border:none;background:none;cursor:pointer;
+  flex:0 0 auto;white-space:nowrap;   /* never wrap or shrink — one continuous line */
   font-family:var(--display);font-size:12px;letter-spacing:.15em;
   text-transform:uppercase;color:var(--ink-soft);
   padding:13px 15px 11px;border-bottom:3px solid transparent;
@@ -92,7 +98,31 @@ header.mast::after{ /* faint compass rose */
 .tabbar button[aria-selected="true"]{
   color:var(--paper);background:var(--ink);border-bottom-color:var(--buoy-gold);
 }
-@media(max-width:700px){.tabbar button{padding:10px 10px 8px;font-size:11px;letter-spacing:.1em}}
+/* "more tabs this way" affordance: a paper fade + a gently nudging chevron at
+   the right edge, shown by JS (.more-right) only while the row can still scroll
+   right. Both are click-through so they never block the tab underneath. */
+.tabbar::before{
+  content:"";position:absolute;top:0;right:0;bottom:0;width:74px;z-index:2;
+  background:linear-gradient(to right, rgba(245,239,226,0), var(--paper) 68%);
+  opacity:0;transition:opacity .18s ease;pointer-events:none;
+}
+.tabbar::after{
+  content:"\203A";position:absolute;top:50%;right:11px;z-index:3;
+  transform:translateY(-50%);
+  font-family:var(--display);font-weight:700;font-size:27px;line-height:1;
+  color:var(--ink);opacity:0;transition:opacity .18s ease;pointer-events:none;
+  animation:tabNudge 1.2s ease-in-out infinite;
+}
+.tabbar.more-right::before,.tabbar.more-right::after{opacity:1}
+@keyframes tabNudge{
+  0%,100%{transform:translateY(-50%) translateX(0)}
+  50%{transform:translateY(-50%) translateX(5px)}
+}
+@media(prefers-reduced-motion:reduce){.tabbar::after{animation:none}}
+@media(max-width:700px){
+  .tabbar .tabs{padding:0 16px}
+  .tabbar button{padding:10px 11px 8px;font-size:11px;letter-spacing:.1em}
+}
 /* ---------------- layout ---------------- */
 main{max-width:1240px;margin:0 auto;padding:8px 28px 80px}
 section{margin-top:54px}
@@ -716,6 +746,17 @@ TABS.forEach(function(t){
   b.addEventListener('click', function(){ activateTab(t[0], true); });
   tabsWrap.appendChild(b);
 });
+// On narrow screens the tab row scrolls horizontally. Show the right-edge
+// "more this way" chevron whenever there is still tab row to the right of the
+// viewport, and hide it once you have scrolled to the end.
+var tabbarEl = tabsWrap.parentNode;
+function updateNavScroll(){
+  if(!tabbarEl) return;
+  var more = tabsWrap.scrollWidth - tabsWrap.clientWidth - tabsWrap.scrollLeft > 4;
+  tabbarEl.classList.toggle('more-right', more);
+}
+tabsWrap.addEventListener('scroll', updateNavScroll, {passive:true});
+window.addEventListener('resize', updateNavScroll);
 function activateTab(id, updateHash){
   if(!TABS.some(function(t){ return t[0] === id; })) id = TABS[0][0];
   TABS.forEach(function(t){
@@ -725,6 +766,18 @@ function activateTab(id, updateHash){
     if(panel) panel.hidden = !on;
     if(btn) btn.setAttribute('aria-selected', on ? 'true' : 'false');
   });
+  // Keep the active tab visible in the scrolling row — center it when the row
+  // is wider than the screen so the current section is never hidden off-edge.
+  var activeBtn = tabsWrap.querySelector('[data-tab="' + id + '"]');
+  if(activeBtn){
+    var cRect = tabsWrap.getBoundingClientRect();
+    var bRect = activeBtn.getBoundingClientRect();
+    var target = (bRect.left - cRect.left + tabsWrap.scrollLeft)
+                 - (tabsWrap.clientWidth - bRect.width) / 2;
+    try { tabsWrap.scrollTo({left: Math.max(0, target),
+                            behavior: reduceMotion ? 'auto' : 'smooth'}); }
+    catch(e){ tabsWrap.scrollLeft = Math.max(0, target); }
+  }
   // Switching tabs always puts you back at the top of the page, even if
   // you were scrolled deep into the previous tab — smoothly, unless the
   // user prefers reduced motion.
@@ -753,6 +806,7 @@ window.addEventListener('hashchange', function(){
   activateTab((location.hash || '').replace('#', '') || TABS[0][0], false);
 });
 activateTab((location.hash || '').replace('#', '') || TABS[0][0], false);
+updateNavScroll();
 
 /* ---------- KPI strip ---------- */
 var totalProducts = D.commerce.ships_store.products + D.commerce.enrolmart.products + D.commerce.cpdean_awards.products;
