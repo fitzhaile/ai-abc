@@ -44,8 +44,8 @@ OUT = os.path.join(ROOT, "data", "extracted", "tech_inventory.json")
 PROPERTIES = [
     ("americasboatingclub.org",            "americasboatingclub.org",
      "Public flagship site"),
-    ("usps.org",                           None,
-     "Legacy parent / member site — unreachable during crawl (timed out)"),
+    ("usps.org",                           "www.usps.org",
+     "Legacy parent / member site — homepage captured live 2026-06-14"),
     ("portal.americasboatingclub.org",     "portal.americasboatingclub.org",
      "Membership portal — join, events, donations"),
     ("store.shopusps.org",                 "store.shopusps.org",
@@ -54,8 +54,8 @@ PROPERTIES = [
      "Donation site"),
     ("americasboatingcourse.com",          "www.americasboatingcourse.com",
      "Flagship course marketing site"),
-    ("course.americasboatingcourse.com",   None,
-     "Paid courseware (LMS) — root returned a server error during crawl"),
+    ("course.americasboatingcourse.com",   "course.americasboatingcourse.com",
+     "Paid courseware (LMS) — login-gated; sign-in page captured live 2026-06-14"),
     ("uspsonline.enrolmart.com",           "uspsonline.enrolmart.com",
      "Online seminars store (LMS)"),
     ("uspsonline.org",                     "www.uspsonline.org",
@@ -81,6 +81,10 @@ ENROLMART_RE = re.compile(r"powered by enrolmart", re.IGNORECASE)
 # Joomla with search-engine-friendly URLs turned off routes everything through
 # /index.php/ — the same signature the (generator-confirmed) flagship carries.
 INDEXPHP_RE = re.compile(r"/index\.php/")
+# A form that POSTs to a .php endpoint (e.g. a login form action="…/sign-in.php")
+# is strong evidence of a hand-rolled PHP backend, used only as a last resort
+# after the CMS-specific signals above so it never overrides Joomla/WordPress.
+PHP_FORM_RE = re.compile(r'<form[^>]+action=["\'][^"\']*\.php\b', re.IGNORECASE)
 
 # Social profile links in a property's footer. We keep real account URLs and
 # drop share/intent/widget/legal endpoints so the "social accounts" list is the
@@ -136,7 +140,7 @@ def clean_social(host, handle):
 
 
 def platform_from_signals(generators, vstate, wp, uscreen, moodle,
-                          enrolmart, indexphp, n):
+                          enrolmart, indexphp, php_form, n):
     """Pick the most specific platform a majority of pages support, with the
     evidence that justifies it. Returns (label, evidence) or (None, reason)."""
     # Generator tag is the strongest, most explicit signal.
@@ -166,6 +170,9 @@ def platform_from_signals(generators, vstate, wp, uscreen, moodle,
     if indexphp >= half:
         return ("Joomla",
                 f"/index.php/ routing on {indexphp}/{n} pages (SEF off)")
+    if php_form:
+        return ("Custom PHP",
+                f"form posts to a .php endpoint on {php_form}/{n} pages")
     return (None, "no high-confidence platform signal in crawled pages")
 
 
@@ -175,7 +182,7 @@ def scan_dir(path):
     n = len(files)
     ga4, ua, gtm = set(), set(), set()
     pages_ga, pages_pixel = 0, 0
-    vstate = wp = uscreen = moodle = enrolmart = indexphp = 0
+    vstate = wp = uscreen = moodle = enrolmart = indexphp = php_form = 0
     generators = Counter()
     social = {}  # normalized "host/handle" -> full url (first seen)
     for fp in files:
@@ -209,12 +216,15 @@ def scan_dir(path):
             enrolmart += 1
         if INDEXPHP_RE.search(html):
             indexphp += 1
+        if PHP_FORM_RE.search(html):
+            php_form += 1
         for host, handle in SOCIAL_RE.findall(html):
             acct = clean_social(host, handle)
             if acct:
                 social.setdefault(acct.lower(), acct)
     label, evidence = platform_from_signals(
-        generators, vstate, wp, uscreen, moodle, enrolmart, indexphp, n)
+        generators, vstate, wp, uscreen, moodle, enrolmart, indexphp,
+        php_form, n)
     return {
         "pages_scanned": n,
         "ga4": sorted(ga4),

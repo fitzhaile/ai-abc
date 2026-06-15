@@ -27,18 +27,26 @@
    "crawled": true
   },
   {
-   "domain": "usps.org",
-   "role": "Legacy parent / member site — unreachable during crawl (timed out)",
-   "crawled": false,
-   "pages_scanned": 0,
-   "ga4": [],
+   "pages_scanned": 1,
+   "ga4": [
+    "G-0M1N6DYNBW"
+   ],
    "universal_analytics": [],
    "gtm": [],
    "meta_pixel_pages": 0,
-   "platform": null,
-   "platform_evidence": "site not crawled",
-   "social": [],
-   "generator_meta": null
+   "platform": "Joomla",
+   "platform_evidence": "generator meta \"Joomla! - Open Source Content Management\"",
+   "generator_meta": "Joomla! - Open Source Content Management",
+   "social": [
+    "facebook.com/uspowersquadrons",
+    "instagram.com/americasboatingclub",
+    "linkedin.com/company/americasboatingclub",
+    "twitter.com/uspsabc",
+    "youtube.com/user/uspowersquadrons"
+   ],
+   "domain": "usps.org",
+   "role": "Legacy parent / member site — homepage captured live 2026-06-14",
+   "crawled": true
   },
   {
    "pages_scanned": 30,
@@ -123,18 +131,22 @@
    "crawled": true
   },
   {
-   "domain": "course.americasboatingcourse.com",
-   "role": "Paid courseware (LMS) — root returned a server error during crawl",
-   "crawled": false,
-   "pages_scanned": 0,
-   "ga4": [],
+   "pages_scanned": 1,
+   "ga4": [
+    "G-HVGVGVG5N3"
+   ],
    "universal_analytics": [],
-   "gtm": [],
+   "gtm": [
+    "GTM-K3R6XKX2"
+   ],
    "meta_pixel_pages": 0,
-   "platform": null,
-   "platform_evidence": "site not crawled",
+   "platform": "Custom PHP",
+   "platform_evidence": "form posts to a .php endpoint on 1/1 pages",
+   "generator_meta": null,
    "social": [],
-   "generator_meta": null
+   "domain": "course.americasboatingcourse.com",
+   "role": "Paid courseware (LMS) — login-gated; sign-in page captured live 2026-06-14",
+   "crawled": true
   },
   {
    "pages_scanned": 55,
