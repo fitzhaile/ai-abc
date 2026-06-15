@@ -178,6 +178,10 @@ section{margin-top:54px}
   margin-top:6px;font-family:var(--display);font-size:10.5px;
   letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);
 }
+/* On phones the KPI strip is dropped entirely: the headline numbers it
+   repeats already appear inside each tab, and the strip otherwise ate a
+   full screen of vertical space before any real content. */
+@media(max-width:700px){.kpis{display:none}}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 /* ---------------- charts ---------------- */
