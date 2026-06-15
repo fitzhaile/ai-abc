@@ -208,6 +208,16 @@ svg text{font-family:var(--mono);fill:var(--ink-soft)}
 #sevbars .barrow .trk{height:48px}
 #sevbars .barrow .fil{font-size:15px}
 #sevbars .barrow .ext{font-size:14px}
+/* severity-scale legend (Problems + Funnels) */
+.sev-legend{margin-top:12px}
+.sev-legend-intro{font-size:12px;color:var(--ink-soft);font-style:italic;margin:0 0 9px}
+.sev-legend-row{display:flex;align-items:baseline;gap:9px;margin:6px 0;font-size:12.5px}
+.sev-legend-row .sev-badge{flex:none;align-self:flex-start}
+.sev-legend-def{color:var(--ink-soft);line-height:1.45}
+/* per-chart "Source:" footer line */
+.src-line{font-family:var(--mono);font-size:10px;color:var(--ink-faint);margin:12px 0 0;padding-top:7px;border-top:1px solid var(--rule);line-height:1.4}
+.src-line a{color:var(--ink-soft);text-decoration-color:var(--rule)}
+.src-line a:hover{text-decoration-color:var(--buoy-gold)}
 .surface{border-bottom:1px solid var(--rule);padding:9px 0}
 .surface:last-child{border-bottom:none}
 .surface-head{display:flex;align-items:center;gap:10px;justify-content:space-between}
@@ -562,7 +572,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
       <div class="card">
         <h3>Findings by severity <span class="h3-flag" id="sev-flag"></span></h3>
         <div id="sevbars"></div>
-        <p class="dim" style="font-size:12px;margin-top:8px">⚑ critical · ▲ high · ■ medium · ● sound (working well)</p>
+        <div id="sev-legend"></div>
       </div>
     </div>
     <div class="card" style="margin-top:22px">
@@ -577,8 +587,11 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
       <span class="lede" id="funnels-lede"></span></div>
     <p class="sec-note audit-note">How a visitor gets from the flagship to the four things the org needs them
     to do — join, find a class, shop, donate — step by step as the audit observed them on 11&nbsp;Jun&nbsp;2026.
-    Red-flagged steps are where a reasonable visitor stalls or leaves. <b>Audit findings, not measured traffic:</b>
-    there is no conversion or drop-off data here, only the observed path and its friction.</p>
+    <b>Each funnel carries one severity pill for the path as a whole</b> — the audit's read of how well it
+    converts, on the same Critical&nbsp;→&nbsp;Sound scale as the Problems tab; red-flagged steps are where a
+    reasonable visitor stalls or leaves. <b>Audit findings, not measured traffic:</b> no conversion or drop-off
+    data here, only the observed path and its friction.</p>
+    <div id="funnel-sev-legend"></div>
     <div id="funnel-list"></div>
   </section>
 
@@ -651,6 +664,26 @@ function placeBarLabel(trk, fil, pct, text, minPct){
 }
 function fmt(n){ return (n===null||n===undefined) ? 'n/a' : n.toLocaleString('en-US'); }
 function usd(n){ return (n===null||n===undefined) ? 'n/a' : '$' + n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+// Primary source URL for a dataset, from the regenerable provenance registry.
+function dsURL(key){
+  var ds = D.provenance && D.provenance.dataset_sources && D.provenance.dataset_sources[key];
+  return ds && ds.links && ds.links.length ? ds.links[0] : null;
+}
+// A "Source:" footer line for a card. specs: [{name, url}] (url optional —
+// omit for sources that aren't a single clean page, e.g. per-property pages).
+function sourceLine(specs){
+  var p = el('p', {class:'src-line'});
+  p.appendChild(document.createTextNode(specs.length > 1 ? 'Sources: ' : 'Source: '));
+  specs.forEach(function(s, i){
+    if(i) p.appendChild(document.createTextNode(' · '));
+    if(s.url){
+      p.appendChild(el('a', {href:s.url, target:'_blank', rel:'noopener noreferrer'}, s.name));
+    } else {
+      p.appendChild(document.createTextNode(s.name));
+    }
+  });
+  return p;
+}
 var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 function countUp(node, target){
   if(reduceMotion || target === null || target === undefined || typeof target !== 'number'){ node.textContent = fmt(target); return; }
@@ -959,7 +992,7 @@ document.getElementById('sched-bystate').textContent =
   entries.forEach(function(kv,i){
     var row = el('div', {class:'barrow'});
     var ym = kv[0].split('-');  // "2026-06" -> month-first "06·26"
-    row.appendChild(el('span', {class:'lab'}, ym[1] + '·' + ym[0].slice(2)));
+    row.appendChild(el('span', {class:'lab'}, ym[1] + '/' + ym[0].slice(2)));
     var trk = el('div', {class:'trk'});
     var pct = kv[1]/max*100;
     var fil = el('div', {class:'fil', style:'width:'+pct+'%;animation-delay:'+(i*45)+'ms'});
@@ -967,7 +1000,23 @@ document.getElementById('sched-bystate').textContent =
     trk.appendChild(fil); row.appendChild(trk); wrap.appendChild(row);
   });
   wrap.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
-    'start month (MM·YY), from each club-details page'));
+    'start month (MM/YY), from each club-details page'));
+  // Fill the card: a stat strip + a read of the booking pattern.
+  var peakM = entries.reduce(function(a,kv){return kv[1]>a[1]?kv:a;}, entries[0]);
+  var peakLabel = peakM[0].split('-')[1] + '/' + peakM[0].slice(2,4);
+  var strip = el('div', {class:'fresh-stats'});
+  [[fmt(D.schedule.total_upcoming),'upcoming'],[peakLabel,'busiest month'],[fmt(D.schedule.clubs_with_classes),'clubs scheduling']].forEach(function(s){
+    var b = el('div', {class:'fresh-stat'});
+    b.appendChild(el('div', {class:'fresh-stat-v'}, s[0]));
+    b.appendChild(el('div', {class:'fresh-stat-l'}, s[1]));
+    strip.appendChild(b);
+  });
+  wrap.appendChild(strip);
+  var mp = el('p', {class:'dim', style:'font-size:12px;margin-top:10px;line-height:1.55'});
+  mp.innerHTML = 'The calendar peaks at <b>' + peakM[1] + '</b> in ' + peakLabel + ' and thins into 2027 — and <b>' +
+    fmt(D.schedule.clubs_checked - D.schedule.clubs_with_classes) + ' of ' + fmt(D.schedule.clubs_checked) +
+    '</b> clubs have nothing scheduled yet.';
+  wrap.appendChild(mp);
 })();
 
 /* top titles table */
@@ -1010,6 +1059,13 @@ document.getElementById('sched-bystate').textContent =
     row.appendChild(el('td', {class:'num'}, String(c.classes)));
     tbl.appendChild(row);
   });
+  var topSum = (D.schedule.most_active_clubs||[]).reduce(function(a,c){return a+(c.classes||0);}, 0);
+  var nTop = (D.schedule.most_active_clubs||[]).length;
+  if(nTop && D.schedule.total_upcoming){
+    tbl.parentNode.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:10px;line-height:1.5'},
+      'These ' + nTop + ' clubs run ' + topSum + ' of the ' + fmt(D.schedule.total_upcoming) + ' classes on the calendar (' +
+      Math.round(topSum/D.schedule.total_upcoming*100) + '%) — scheduling is highly concentrated.'));
+  }
 })();
 
 /* catalog chips */
@@ -1496,6 +1552,27 @@ var SEV = {
   MEDIUM:   {g:'■', cls:'sev-med',  rank:2},
   SOUND:    {g:'●', cls:'sev-sound',rank:3}
 };
+// Plain-language meaning of the audit's severity scale (business impact, not
+// technical purity). Shared by the Problems and Funnels tabs so the pills are
+// explained in both places.
+var SEV_DEFS = [
+  ['CRITICAL','a core action breaks — a first-time visitor hits it within a minute'],
+  ['HIGH','a significant flaw that hurts conversion, search, or trust, short of fully breaking it'],
+  ['MEDIUM','a real but lower-impact flaw'],
+  ['SOUND','working well — flagged as a strength, not a problem']
+];
+function severityLegend(intro){
+  var box = el('div', {class:'sev-legend'});
+  box.appendChild(el('p', {class:'sev-legend-intro'}, intro));
+  SEV_DEFS.forEach(function(d){
+    var sv = SEV[d[0]];
+    var row = el('div', {class:'sev-legend-row'});
+    row.appendChild(el('span', {class:'sev-badge ' + sv.cls}, sv.g + ' ' + d[0]));
+    row.appendChild(el('span', {class:'sev-legend-def'}, '— ' + d[1]));
+    box.appendChild(row);
+  });
+  return box;
+}
 (function(){
   var surfaces = [
     ['Join','CRITICAL','No price anywhere on the flagship. Default paths: email HQ or phone a named staffer at an extension.'],
@@ -1557,6 +1634,8 @@ var SEV = {
     placeBarLabel(trk, fil, pct, counts[k], 12);
     trk.appendChild(fil); row.appendChild(trk); sb.appendChild(row);
   });
+  document.getElementById('sev-legend').appendChild(
+    severityLegend('What the levels mean — severity is business impact, not technical purity:'));
   /* findings list */
   document.getElementById('findings-flag').textContent = '4 critical · 8 high · 7 medium · 5 sound';
   var fw = document.getElementById('findings');
@@ -1606,6 +1685,8 @@ var SEV = {
   ];
   document.getElementById('funnels-lede').textContent =
     FUNNELS.length + ' conversion paths · click a step to open that page · audit observed 11 Jun 2026';
+  document.getElementById('funnel-sev-legend').appendChild(
+    severityLegend('Each path’s pill rates the whole funnel’s health on this scale:'));
   var wrap = document.getElementById('funnel-list');
   FUNNELS.forEach(function(f){
     var sv = SEV[f.sev];
@@ -1774,6 +1855,53 @@ var SEV = {
         'no live URL — computed from already-collected local files'));
     }
     div.appendChild(dt); div.appendChild(dd); dl.appendChild(div);
+  });
+})();
+
+/* ---------- per-chart source links ---------- */
+(function(){
+  // chart container id -> source spec(s). URLs resolve from the regenerable
+  // provenance registry (dsURL). The club schedule charts point at the
+  // Find-a-Club locator (the reachable gateway) rather than the slow
+  // club-details page; matrix/platform/audit sources have no single clean page
+  // so they show as plain text.
+  var findaclub = dsURL('clubs');
+  var SRC = {
+    clubmap:[{name:'Find-a-Club locator',url:findaclub}],
+    statebars:[{name:'Find-a-Club locator',url:findaclub}],
+    reach:[{name:'Find-a-Club locator',url:findaclub}],
+    topstates:[{name:'Find-a-Club locator',url:findaclub}],
+    overseas:[{name:'Find-a-Club locator',url:findaclub}],
+    naming:[{name:'Find-a-Club locator',url:findaclub}],
+    nndist:[{name:'Find-a-Club coordinates (derived)',url:findaclub}],
+    monthchart:[{name:'Club details · via Find-a-Club',url:findaclub}],
+    toptitles:[{name:'Club details · via Find-a-Club',url:findaclub}],
+    busiest:[{name:'Club details · via Find-a-Club',url:findaclub}],
+    catalog:[{name:'Course & seminar catalog',url:dsURL('education_catalog')}],
+    enrolstats:[{name:'EnrolMart',url:dsURL('enrolmart_products')}],
+    storecats:[{name:'Ship’s Store catalog',url:dsURL('store_products')}],
+    manifest:[{name:'Ship’s Store catalog',url:dsURL('store_products')}],
+    pricehist:[{name:'Ship’s Store catalog',url:dsURL('store_products')}],
+    satellites:[{name:'Satellite storefronts',url:dsURL('satellite_stores')}],
+    pricestats:[{name:'Ship’s Store',url:dsURL('store_products')},{name:'EnrolMart',url:dsURL('enrolmart_products')},{name:'C.P. Dean',url:dsURL('satellite_stores')}],
+    rangeplot:[{name:'Ship’s Store',url:dsURL('store_products')},{name:'EnrolMart',url:dsURL('enrolmart_products')},{name:'C.P. Dean',url:dsURL('satellite_stores')}],
+    yearchart:[{name:'Channel catalog',url:dsURL('videos')}],
+    durations:[{name:'Channel catalog',url:dsURL('videos')}],
+    longest:[{name:'Channel catalog',url:dsURL('videos')}],
+    hoursyear:[{name:'Channel catalog',url:dsURL('videos')}],
+    lenyear:[{name:'Channel catalog',url:dsURL('videos')}],
+    'catalog-cats':[{name:'Channel catalog',url:dsURL('videos')}],
+    freshchart:[{name:'Main-site sitemap',url:dsURL('content_dates')}],
+    'analytics-matrix':[{name:'each property’s own page source (the 11 listed above)'}],
+    'platform-table':[{name:'each property’s own page source (the 11 listed above)'}],
+    sevbars:[{name:'External web-estate audit · page-sourced 11 Jun 2026'}]
+  };
+  Object.keys(SRC).forEach(function(id){
+    var node = document.getElementById(id);
+    if(!node) return;
+    var card = node.closest('.card');
+    if(!card || card.querySelector(':scope > .src-line')) return;
+    card.appendChild(sourceLine(SRC[id]));
   });
 })();
 
