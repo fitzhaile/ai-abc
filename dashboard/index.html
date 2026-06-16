@@ -1860,6 +1860,15 @@ function severityLegend(intro){
 
 /* ---------- CH7 · provenance ---------- */
 (function(){
+  // "2026-06-11T15:32:33Z" -> "Jun 11, 2026, 3:32 PM UTC" (kept in UTC so the
+  // shown time still matches the stored timestamp, not the viewer's zone).
+  function fmtStamp(iso){
+    var m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/.exec(iso || '');
+    if(!m) return iso || '';
+    var mon = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+m[2]-1];
+    var h = +m[4], ap = h < 12 ? 'AM' : 'PM', h12 = h % 12 || 12;
+    return mon + ' ' + (+m[3]) + ', ' + m[1] + ', ' + h12 + ':' + m[5] + ' ' + ap + ' UTC';
+  }
   var pipe = document.getElementById('pipeline');
   D.provenance.pipeline.forEach(function(st, i){
     if(i){ var a = el('span', {class:'arrow'}, '➜'); pipe.appendChild(a); }
@@ -1876,7 +1885,7 @@ function severityLegend(intro){
     var dd = el('dd');
     dd.appendChild(document.createTextNode(kv[1].description + ' '));
     var when = kv[1].fetched_at || kv[1].extracted_at;
-    if(when){ dd.appendChild(el('span', {class:'when'}, '[' + when + ']')); }
+    if(when){ dd.appendChild(el('span', {class:'when'}, 'captured ' + fmtStamp(when))); }
     var links = kv[1].links || [];
     if(links.length){
       var lw = el('div', {class:'src-links'});
