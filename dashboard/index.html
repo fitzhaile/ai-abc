@@ -126,6 +126,9 @@ header.mast::after{ /* faint compass rose */
 /* ---------------- layout ---------------- */
 main{max-width:1240px;margin:0 auto;padding:8px 28px 80px}
 section{margin-top:54px}
+/* On phones there is no KPI strip above the first section, so the section's
+   full top margin would leave a big void under the sticky nav — tighten it. */
+@media(max-width:700px){main>section{margin-top:18px}}
 .sec-head{
   display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--ink);
   padding-bottom:6px;margin-bottom:4px;
@@ -452,10 +455,6 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     </div>
     <div class="grid g3" style="margin-top:22px">
       <div class="card"><h3>Reachability</h3><div id="reach"></div></div>
-      <div class="card"><h3>Most clubs</h3><div id="topstates"></div></div>
-      <div class="card"><h3>Beyond the states</h3><div id="overseas"></div></div>
-    </div>
-    <div class="grid g2e" style="margin-top:22px">
       <div class="card">
         <h3>What the clubs call themselves <span class="h3-flag">rebrand watch</span></h3>
         <div id="naming"></div>
@@ -542,8 +541,8 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     (schema.org VideoObject); this is the channel-wide tally.</p>
     <div class="grid g3">
       <div class="card"><h3>Videos published per year</h3><svg id="yearchart" viewBox="0 0 360 210"></svg><div id="yearchart-note"></div></div>
-      <div class="card"><h3>Running time</h3><div id="durations"></div></div>
-      <div class="card"><h3>Longest videos</h3><table class="log" id="longest"></table></div>
+      <div class="card"><h3>Running time <span class="h3-flag">all-time</span></h3><div id="durations"></div></div>
+      <div class="card"><h3>Longest videos <span class="h3-flag">all-time</span></h3><table class="log" id="longest"></table></div>
     </div>
     <div class="grid g2e" style="margin-top:22px">
       <div class="card">
@@ -958,7 +957,7 @@ document.getElementById('clubs-lede').textContent =
   }
 })();
 
-/* reachability + top states + overseas */
+/* reachability */
 (function(){
   var r = document.getElementById('reach');
   [['with a website', D.clubs.with_website],
@@ -972,23 +971,6 @@ document.getElementById('clubs-lede').textContent =
     placeBarLabel(trk, fil, pct, kv[1] + ' / ' + D.clubs.total, 40);
     trk.appendChild(fil); row.appendChild(trk); r.appendChild(row);
   });
-  var ts = document.getElementById('topstates');
-  Object.entries(D.clubs.by_state).slice(0,5).forEach(function(kv){
-    var p = el('div', {style:'display:flex;justify-content:space-between;border-bottom:1px solid var(--rule);padding:4px 0'});
-    p.appendChild(el('span', {}, kv[0]));
-    var b = el('b', {style:'font-family:var(--mono)'}, kv[1] + ' clubs');
-    p.appendChild(b); ts.appendChild(p);
-  });
-  var ov = document.getElementById('overseas');
-  if(D.clubs.outside_us_states.length){
-    D.clubs.outside_us_states.forEach(function(name){
-      ov.appendChild(el('p', {style:'font-size:13.5px'}, name));
-    });
-    ov.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
-      'Clubs whose directory address has no US state — charted by name only.'));
-  } else {
-    ov.appendChild(el('p', {class:'dim'}, 'Every club in the directory lists a US state.'));
-  }
 })();
 
 /* naming eras + nearest-neighbor distances */
@@ -1366,8 +1348,8 @@ document.getElementById('vid-lede').textContent =
 
   var dw = document.getElementById('durations');
   var line = el('p', {style:'font-size:13.5px;margin-bottom:8px'});
-  line.innerHTML = 'Total runtime <b>' + fmt(D.videos.total_runtime_hours) + ' hours</b>; the median video runs <b>' +
-    fmt(D.videos.median_duration_minutes) + ' min</b>.';
+  line.innerHTML = 'Total runtime <b>' + fmt(D.videos.total_runtime_hours) + ' hours</b> across <b>' +
+    fmt(D.videos.total) + '</b> videos.';
   dw.appendChild(line);
   var max2 = Math.max.apply(null, D.videos.duration_buckets.map(function(kv){return kv[1];}));
   D.videos.duration_buckets.forEach(function(kv){
@@ -1430,6 +1412,8 @@ document.getElementById('vid-lede').textContent =
       row.appendChild(el('span', {class:'runtot', style:'width:'+totCh+'ch'}, 'total ' + d.cumulative_hours));
       hwrap.appendChild(row);
     });
+    hwrap.appendChild(el('p', {class:'dim', style:'font-size:12px;margin-top:6px'},
+      'Each bar is that year’s new hours; the “total” beside it is the running cumulative through that year.'));
   }
   var wrap = document.getElementById('lenyear');
   if(wrap && years.length){
@@ -1934,8 +1918,6 @@ function severityLegend(intro){
     clubmap:[{name:'Find-a-Club locator',url:findaclub}],
     statebars:[{name:'Find-a-Club locator',url:findaclub}],
     reach:[{name:'Find-a-Club locator',url:findaclub}],
-    topstates:[{name:'Find-a-Club locator',url:findaclub}],
-    overseas:[{name:'Find-a-Club locator',url:findaclub}],
     naming:[{name:'Find-a-Club locator',url:findaclub}],
     nndist:[{name:'Find-a-Club coordinates (derived)',url:findaclub}],
     monthchart:[{name:'Club details · via Find-a-Club',url:findaclub}],
