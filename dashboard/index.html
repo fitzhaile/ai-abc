@@ -42,7 +42,10 @@ body{
 header.mast{
   background:linear-gradient(180deg,#0e2742 0%,#12304e 80%,#1a3c5e 100%);
   color:#f2ecdd;
-  padding:34px 28px 30px;
+  /* Horizontal padding lives on .mast-inner (below), not here, so the title
+     lines up with the tab bar and main content — which also pad inside their
+     1240px container. The banner itself stays full-width. */
+  padding:34px 0 30px;
   position:relative;
   overflow:hidden;
   border-bottom:5px double var(--buoy-gold);
@@ -61,7 +64,7 @@ header.mast::after{ /* faint compass rose */
   border-radius:50%;
   box-shadow:inset 0 0 0 38px rgba(242,236,221,.05), inset 0 0 0 39px rgba(242,236,221,.18);
 }
-.mast-inner{max-width:1240px;margin:0 auto;position:relative;z-index:1}
+.mast-inner{max-width:1240px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
 .mast h1{
   font-family:var(--display);font-weight:600;letter-spacing:.045em;
   font-size:clamp(26px,4.2vw,44px);text-transform:uppercase;line-height:1.08;
@@ -246,9 +249,12 @@ svg text{font-family:var(--mono);fill:var(--ink-soft)}
 #sevbars .barrow .fil{font-size:15px}
 #sevbars .barrow .ext{font-size:14px}
 /* severity-scale legend (Problems + Funnels) */
-.sev-legend{margin:12px 0;display:flex;flex-wrap:wrap;align-items:center;gap:9px 18px}
-.sev-legend-intro{width:100%;font-size:12px;color:var(--ink-soft);font-style:italic;margin:0}
+/* 2×2 grid so the four levels never wrap 3-and-1; intro spans the top row.
+   Collapses to a single column on small phones. */
+.sev-legend{margin:12px 0;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:9px 18px}
+.sev-legend-intro{grid-column:1/-1;font-size:12px;color:var(--ink-soft);font-style:italic;margin:0}
 .sev-legend-item{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-size:12px}
+@media(max-width:560px){.sev-legend{grid-template-columns:1fr}}
 .sev-legend-def{color:var(--ink-soft)}
 /* per-chart "Source:" footer line */
 .src-line{font-family:var(--mono);font-size:10px;color:var(--ink-faint);margin:12px 0 0;padding-top:7px;border-top:1px solid var(--rule);line-height:1.4}
@@ -266,6 +272,8 @@ svg text{font-family:var(--mono);fill:var(--ink-soft)}
 .finding-detail{font-size:13px;margin:6px 0 0;color:var(--ink-soft);line-height:1.5}
 .finding-note{font-size:12px;margin:5px 0 0;color:#2e6e4e;font-style:italic}
 .finding-ev{font-family:var(--mono);font-size:10.5px;margin:5px 0 0;color:var(--ink-faint)}
+.finding-link{color:var(--port-red);text-decoration:none;white-space:nowrap}
+.finding-link:hover{text-decoration:underline;text-decoration-color:var(--port-red)}
 .funnel-card{margin-bottom:22px}
 .funnel-blurb{font-size:13.5px;color:var(--ink-soft);margin:0 0 14px;font-style:italic}
 .funnel-steps{display:flex;align-items:stretch;flex-wrap:wrap;gap:6px}
@@ -1626,27 +1634,66 @@ function severityLegend(intro){
     ['CRITICAL','CONVERSION','Primary class-finder is a 1990s CGI form','“Classes Near Me” sends prospects to a usps.org cfindx.cgi script: ISO-8859-1 encoding, dropdowns packed with insider codes, and a “you are not logged on as a USPS member” notice shown to first-time visitors.','cfindx.cgi'],
     ['HIGH','CONVERSION','Ship’s Store checkout is offline — phone orders only','A sitewide banner says the store is “currently closed for online orders” and directs shoppers to note item numbers, size and color, then call 888-367-8777 x221 or 212. Browsing works; self-service purchase doesn’t. The banner is a raster image, so the number isn’t tappable.','store banner + /Apparel'],
     ['CRITICAL','CONVERSION','Donation site frozen since January 2021','giveabc.org carries COVID-era urgency copy, “107 years” (five years out of date), © 2021, and a typo in the hero headline (“make boating boater”). It is the “Learn more” destination from the flagship homepage’s Donate section.','giveabc.org','Confirmed: © 2021 on 41 crawled pages; platform WordPress/GiveWP 4.11.'],
-    ['CRITICAL','SEARCH','Zero owned visibility in the category SERP test','A “boating safety course near me Georgia” search returned Boat-Ed, BoatUS Foundation, BoaterExam, Recademics, and the GA DNR referral page. No ABC-owned domain appeared.','SERP test, 11 Jun 2026'],
+    ['CRITICAL','SEARCH','Zero owned visibility in the category SERP test','A “boating safety course near me Georgia” search returned Boat-Ed, BoatUS Foundation, BoaterExam, Recademics, and the GA DNR referral page. No ABC-owned domain appeared.','Google search “boating safety course near me Georgia,” 11 Jun 2026 — no ABC domain on page 1 (re-run to verify)'],
     ['HIGH','IDENTITY','Five separate login systems advertised in the header','Member Website (usps.org), Membership Portal (iMIS), ABC Course Online (ColdFusion), Other Online Courses (Moodle), MMSI (PHP). A member can plausibly hold four credential sets.','flagship header, all pages'],
     ['HIGH','SEARCH','Non-SEF URLs and duplicate paths without canonicals','Every flagship URL carries /index.php/. usps.org links the same pages without it, so both variants resolve. No canonical tag was observed on any flagship page fetched.','all flagship fetches','Confirmed: our platform check keys Joomla off this exact /index.php/ routing.'],
     ['HIGH','SEARCH','Heading hierarchy broken across templates','The News listing renders every article-card title as an H1 (~20 H1s on one page). The Learn page carries a stray second H1 from a promo module. The homepage has multiple H1s.','/about/news-and-information · /learn'],
     ['HIGH','IDENTITY','Search equity for video leaks to vendor subdomain','americasboatingchannel.com canonicalizes to americasboatingchannel.uscreen.io/catalog. Every link and ranking earned accrues to Uscreen’s domain.','channel meta canonical','Confirmed in our crawl of the channel pages.'],
     ['HIGH','ARCHITECTURE','Three parallel LMS platforms','ColdFusion courseware for the flagship course, EnrolMart for ~30 seminars, Moodle for “other” courses. Triple the maintenance surface and login confusion.','header logins · Available Online menu','Platform table confirms EnrolMart and Moodle; ColdFusion root errored so is uncrawled.'],
-    ['HIGH','IDENTITY','Three Twitter/X identities, three Facebook pages, two YouTube channels','@uspsabc (flagship), @boatingisfun (store + giveabc), @AmericasBoating (channel). giveabc.org also links a personal linkedin.com/in/ profile for the org instead of the company page.','footers across properties','Confirmed — see the social handles gathered on the Opportunities tab.'],
+    ['HIGH','IDENTITY','Three Twitter/X identities, three Facebook pages, two YouTube channels','@uspsabc (flagship), @boatingisfun (store + giveabc), @AmericasBoating (channel). giveabc.org also links a personal linkedin.com/in/ profile for the org instead of the company page.','social icons in the footers of americasboatingclub.org, giveabc.org, and americasboatingchannel.com','Confirmed — see the social handles gathered on the Opportunities tab.'],
     ['HIGH','TRUST','Stale event banner + template-token leak on the join page','The portal join page — the actual conversion surface — promotes “2025 Fall Governing Board Meeting” in June 2026 and renders raw ##LOC[OK]## / ##LOC[Cancel]## strings.','portal USPS-ABC-Join.aspx'],
     ['MEDIUM','TRUST','Copy errors concentrated on revenue pages','“make boating boater” (donation hero), “Knits and Lines” (course sales page), “on a e boat” and “the, spring boating season” (blog). Collectively they read as unattended.','giveabc · course site · blog'],
     ['MEDIUM','SEARCH','Listing pages shipped without SEO basics','News listing title is “News and Information” — no brand, no meta description. usps.org homepage title is “Home” with no description.','news listing meta · usps.org meta'],
     ['MEDIUM','CONVERSION','Member-benefits CTA exposes a raw component URL','The /join page’s “Members Only Benefits” button links to /index.php/component/content/article/142?Itemid=265 — an internal Joomla path where a friendly URL belongs.','/index.php/join'],
     ['MEDIUM','DATA','Corrupted entries in the class-finder state list','The state dropdown contains “CN” and “Ja” alongside valid codes — visible data corruption in the org’s primary local-search tool.','cfindx.cgi state select'],
-    ['MEDIUM','TRUST','Copyright years disagree across the family','© 2026 (flagship, course, store), © 2025 (usps.org), © 2024 (channel), © 2021 (giveabc). Date drift is the visible symptom of no shared content governance.','property footers'],
+    ['MEDIUM','TRUST','Copyright years disagree across the family','© 2026 (flagship, course, store), © 2025 (usps.org), © 2024 (channel), © 2021 (giveabc). Date drift is the visible symptom of no shared content governance.','page footers: flagship © 2026 · usps.org © 2025 · channel © 2024 · giveabc.org © 2021'],
     ['MEDIUM','ARCHITECTURE','Flagship paid-course LMS root errored during crawl','course.americasboatingcourse.com returned a server error on direct fetch of the root URL; the /sign-in path responded. Paying customers may hit this.','fetch attempt, 11 Jun 2026','Reproduced: it is marked “not crawled” in our matrix for this reason.'],
     ['MEDIUM','CONVERSION','Email capture popup with no offer','The flagship popup asks “Want to be a better boater?” with a bare email field — no lead magnet, no stated cadence, no incentive.','flagship homepage popup'],
     ['SOUND','CONTENT','Blog is alive and aimed at real keywords','Recent posts (VHF radio how-to, 2026 Vessel Safety Check, National Safe Boating Week) plus state-targeted pieces. The strategy is right; the technical layer underneath it is what’s failing.','/about/news-and-information'],
     ['SOUND','CONVERSION','Course sales site is the model the rest should follow','americasboatingcourse.com shows the price, leads with Enroll Now, lists chapters, and maintains state-law pages — proof the org can ship a coherent funnel when one team owns it.','americasboatingcourse.com'],
-    ['SOUND','BRAND','Real differentiation assets exist but go unsaid','On-the-water training, 300 local clubs, free vessel safety checks, a human follow-up from a local boater after purchase — none of it is framed against the free online competitors that own the SERP.','course-details copy · SERP test'],
+    ['SOUND','BRAND','Real differentiation assets exist but go unsaid','On-the-water training, 300 local clubs, free vessel safety checks, a human follow-up from a local boater after purchase — none of it is framed against the free online competitors that own the SERP.','flagship course-details pages vs. the free competitors from the SERP test above'],
     ['SOUND','REACH','boatlive365.org shows the family can do SEO hygiene','Canonical, OG tags, robots directives all present. The competence exists in-house or in-vendor; it just hasn’t been applied to the flagship.','boatlive365 meta','Confirmed: our platform check reads it as WordPress with full meta.'],
     ['SOUND','DATA','Analytics exists on at least one property','GTM (GTM-TRBZFNR5) fires on the portal. The audit could not confirm GA4/GTM on the flagship from extracted text.','portal page source','CORRECTION: our crawl DID find GA4 on the flagship (G-0M1N6DYNBW, G-GGW5NS7YYS) — see the matrix.']
   ];
+  // A live page where each finding can be seen, aligned 1:1 with FIND above
+  // (keep in sync). Every URL is one we actually fetched (HTTP 200 in the crawl
+  // index) or a funnel step already re-checked reachable — none typed from
+  // memory. null = the finding is diffuse (a SERP test, drift across footers)
+  // with no single page; its evidence text names where to look instead.
+  var FIND_URLS = [
+    'https://americasboatingclub.org/index.php/join',                                      // membership price absent
+    'https://www.usps.org/cgi-bin-nat/eddept/800/cfindx.cgi',                               // 1990s CGI class-finder
+    'https://store.shopusps.org/Catalog/Apparel/',                                          // store checkout offline
+    'https://giveabc.org/',                                                                 // donation site frozen
+    null,                                                                                   // SERP visibility test
+    'https://americasboatingclub.org/',                                                     // five header logins
+    'https://americasboatingclub.org/index.php/join',                                       // non-SEF /index.php/ URLs
+    'https://americasboatingclub.org/index.php/about/news-and-information',                  // broken heading hierarchy
+    'https://americasboatingchannel.uscreen.io/catalog',                                    // video equity → uscreen
+    'https://americasboatingclub.org/',                                                     // three LMS platforms (header menu)
+    null,                                                                                   // social-identity sprawl
+    'https://portal.americasboatingclub.org/Shared_Content/Membership/USPS-ABC-Join.aspx',  // stale banner + token leak
+    'https://giveabc.org/',                                                                 // copy errors (donation hero)
+    'https://americasboatingclub.org/index.php/about/news-and-information',                 // listing pages no SEO
+    'https://americasboatingclub.org/index.php/join',                                       // raw component URL CTA
+    'https://www.usps.org/cgi-bin-nat/eddept/800/cfindx.cgi',                               // corrupted state list
+    null,                                                                                   // copyright-year drift
+    'https://course.americasboatingcourse.com/',                                            // paid-course LMS root errored
+    'https://americasboatingclub.org/',                                                     // email popup no offer
+    'https://americasboatingclub.org/index.php/about/news-and-information',                 // blog is alive (sound)
+    'https://www.americasboatingcourse.com/',                                               // course sales site (sound)
+    null,                                                                                   // differentiation unsaid
+    'https://boatlive365.org/',                                                             // boatlive365 SEO (sound)
+    'https://portal.americasboatingclub.org/'                                               // analytics on portal (sound)
+  ];
+  // Map each finding (by object reference, so it survives the sort below) to its
+  // page. Warn loudly if the two arrays fall out of alignment.
+  var urlOf = new Map();
+  if(FIND_URLS.length !== FIND.length){
+    console.warn('Problems: FIND_URLS (' + FIND_URLS.length + ') and FIND (' + FIND.length +
+      ') are out of sync — finding links may be attached to the wrong rows. Re-align FIND_URLS.');
+  }
+  FIND.forEach(function(f, i){ if(FIND_URLS[i]) urlOf.set(f, FIND_URLS[i]); });
   /* surfaces */
   var sw = document.getElementById('surfaces');
   surfaces.forEach(function(s){
@@ -1690,11 +1737,20 @@ function severityLegend(intro){
     card.appendChild(head);
     card.appendChild(el('p', {class:'finding-detail'}, f[3]));
     if(f[5]) card.appendChild(el('p', {class:'finding-note'}, '↳ our crawl: ' + f[5]));
-    card.appendChild(el('p', {class:'finding-ev'}, 'evidence · ' + f[4]));
+    var ev = el('p', {class:'finding-ev'});
+    ev.appendChild(document.createTextNode('evidence · ' + f[4]));
+    var url = urlOf.get(f);
+    if(url){
+      ev.appendChild(document.createTextNode(' · '));
+      ev.appendChild(el('a', {class:'finding-link', href:url, target:'_blank',
+        rel:'noopener noreferrer', title:'Open ' + url},
+        '↗ ' + url.replace(/^https?:\/\//, '').replace(/\/$/, '')));
+    }
+    card.appendChild(ev);
     fw.appendChild(card);
   });
   document.getElementById('problems-lede').textContent =
-    FIND.length + ' findings across 12 properties · external audit, page-sourced 11 Jun 2026';
+    FIND.length + ' findings · external audit, page-sourced 11 Jun 2026';
 })();
 
 /* ---------- CH7 · funnels — reproduces the same external audit ---------- */
