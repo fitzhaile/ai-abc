@@ -358,6 +358,20 @@ table.log tr:hover td{background:rgba(18,48,78,.045)}
 /* chart SVGs scale to their card instead of overflowing on narrow screens */
 .card svg{max-width:100%}
 #freshchart{width:100%;height:auto;display:block}
+/* Web Properties — live homepage screenshot gallery */
+.prop-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:18px;margin-top:4px}
+.prop-card{border:1px solid var(--rule);background:var(--card);overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:0 8px 20px -16px rgba(18,48,78,.55);transition:box-shadow .15s,transform .15s}
+.prop-card:hover{box-shadow:0 14px 28px -16px rgba(18,48,78,.6);transform:translateY(-2px)}
+.prop-shot{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top center;
+  border-bottom:1px solid var(--rule);background:#e9eef3}
+.prop-body{padding:9px 12px 11px}
+.prop-name{font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.02em;color:var(--ink);
+  text-decoration:none;word-break:break-all}
+.prop-name:hover{text-decoration:underline;text-decoration-color:var(--port-red)}
+.prop-name .ext{color:var(--port-red);font-size:9.5px}
+.prop-role{font-size:11.5px;color:var(--ink-soft);margin:3px 0 7px;line-height:1.35}
+.prop-meta{font-family:var(--mono);font-size:10px;color:var(--ink-faint);line-height:1.6}
 #clubmap .dot{fill:#12304e;opacity:.5;transition:r .15s}
 #clubmap .dot.active{fill:var(--buoy-gold);stroke:#12304e;stroke-width:1;opacity:.95}
 #clubmap .dot:hover{opacity:1}
@@ -619,6 +633,10 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     means the site was down or its root errored, and is labeled as such rather than left to read
     as a clean bill of health.</p>
     <div class="card">
+      <h3>Property profiles <span class="h3-flag">live homepages</span></h3>
+      <div id="property-gallery" class="prop-gallery"></div>
+    </div>
+    <div class="card" style="margin-top:22px">
       <h3>Analytics coverage matrix <span class="h3-flag">IDs shown; blank = not detected</span></h3>
       <div style="overflow-x:auto"><table class="log matrix" id="analytics-matrix"></table></div>
       <p class="dim" id="analytics-note" style="font-size:12px;margin-top:8px"></p>
@@ -1825,6 +1843,34 @@ document.getElementById('vid-lede').textContent =
     recentYears[0] + '–' + recentYears[recentYears.length-1] + ', the freshest stretch; the oldest dated pages go back to ' +
     years[0] + '.';
   wrap.appendChild(p);
+})();
+
+/* ---------- Web Properties · live homepage gallery ---------- */
+(function(){
+  var gal = document.getElementById('property-gallery');
+  if(!gal || !(D.tech && D.tech.properties)) return;
+  D.tech.properties.forEach(function(p){
+    var url = 'https://' + p.domain;
+    var card = el('div', {class:'prop-card'});
+    var shot = el('a', {href:url, target:'_blank', rel:'noopener noreferrer', title:'Open ' + p.domain});
+    shot.appendChild(el('img', {class:'prop-shot', loading:'lazy',
+      src:'assets/screens/' + p.domain + '.jpg', alt:p.domain + ' homepage'}));
+    card.appendChild(shot);
+    var body = el('div', {class:'prop-body'});
+    var name = el('a', {class:'prop-name', href:url, target:'_blank', rel:'noopener noreferrer'});
+    name.appendChild(document.createTextNode(p.domain + ' '));
+    name.appendChild(el('span', {class:'ext'}, '↗'));
+    body.appendChild(name);
+    body.appendChild(el('div', {class:'prop-role'}, (p.role || '').split('—')[0].trim()));
+    var idCount = (p.ga4||[]).length + (p.universal_analytics||[]).length + (p.gtm||[]).length;
+    var meta = [];
+    if(p.platform) meta.push(p.platform.split('·')[0].trim());
+    meta.push(fmt(p.pages_scanned) + (p.pages_scanned === 1 ? ' page' : ' pages'));
+    meta.push(idCount + (idCount === 1 ? ' analytics ID' : ' analytics IDs'));
+    body.appendChild(el('div', {class:'prop-meta'}, meta.join('  ·  ')));
+    card.appendChild(body);
+    gal.appendChild(card);
+  });
 })();
 
 /* ---------- CH6 · problems — reproduces an external audit (11 Jun 2026) ----------
