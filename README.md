@@ -69,6 +69,13 @@ a `scrape/` script) and spot-verified against the per-category pages.
                     tags + tech platform + social handles, with the page-source
                     evidence for each — powers the Web Properties matrix/table)
 
+3c. STATE GEO     python3 derive/build_geo.py      (fetches US Census state
+                  boundaries + population into data/geo_raw/ if absent, then
+                  parses them with a stdlib shapefile reader — no GDAL)
+                  → data/extracted/state_geo.json  (simplified state polygons +
+                    2023 population — powers the Club Network map's "Clubs by
+                    state" and "Per million residents" choropleths)
+
 4. DERIVE         python3 derive/build_dashboard_data.py    (offline)
                   → dashboard/data.js + dashboard/data.json
 ```
@@ -117,6 +124,16 @@ files from capped runs.
 - **Schedule placeholders**: a few club pages render blank class rows dated
   "Jan 01 1970" with no title. These are excluded and counted
   (`placeholder_rows_excluded` in `class_schedule.json`).
+- **State-map coverage**: the Club Network map (50 states + DC + Puerto Rico +
+  US Virgin Islands, from the 1:5M Census boundaries) covers every club except
+  the single Tokyo club, which has no US state and is reported as "beyond this
+  sheet." The Census *population* file has no Virgin Islands figure, so USVI is
+  shaded on the count views but shown as no-data on the per-capita view (logged
+  when `build_geo.py` runs). Hawaii has zero clubs (lightest shade). Three
+  waterfront clubs (Santa Barbara CA, Buzzards Bay MA, Marinette WI) have
+  find-a-club coordinates that fall in the adjacent water, so their dots sit
+  just off the coastline — the points are genuinely offshore, not a projection
+  error.
 
 ## Politeness
 
@@ -142,6 +159,8 @@ and commit the regenerated `dashboard/data.js` + `data.json`.
 scrape/    crawlers and interactive capture scripts (stdlib only)
 derive/    offline extraction + dashboard-data derivation (stdlib only)
 data/      crawl index/log, raw HTML, interactive captures, extracted datasets
+           (data/geo_raw/ holds the re-downloadable Census shapefile + population
+            CSV and is gitignored; the simplified state_geo.json IS committed)
 dashboard/ index.html (static, no dependencies) + generated data.js/data.json
 docs/      screenshots from the verification pass
 ```

@@ -159,6 +159,7 @@ def main():
     link_graph = load(EXTRACTED, "link_graph.json")
     content_dates = load(EXTRACTED, "content_dates.json")
     clubs_d = load(INTERACTIVE, "clubs.json")
+    state_geo = load(EXTRACTED, "state_geo.json")
     schedule_d = load(INTERACTIVE, "class_schedule.json")
     store_d = load(INTERACTIVE, "store_products.json")
     satellite = load(INTERACTIVE, "satellite_stores.json")
@@ -182,6 +183,28 @@ def main():
          "classes": classes_by_sqdno.get(c.get("sqdno"), 0),
          "sqdno": c.get("sqdno")}
         for c in clubs if c.get("latitude") is not None]
+    # Per-state choropleth data: join the simplified Census state polygons
+    # (geometry + population) with our club counts, and compute clubs-per-capita.
+    # Per million reads cleaner than per-100k here (values land around 1–6
+    # instead of 0.0x). States with no club count come through as 0, not absent,
+    # so the choropleth draws every state.
+    PERCAP_SCALE = 1_000_000
+    for st_abbr in by_state:
+        if st_abbr not in state_geo["states"]:
+            log("clubs: state '%s' has %d club(s) but no polygon in state_geo "
+                "(not in cb_2020_us_state_20m) — it will be absent from the map."
+                % (st_abbr, by_state[st_abbr]))
+    state_map = {}
+    for abbr, s in state_geo["states"].items():
+        n = by_state.get(abbr, 0)
+        pop = s.get("population")
+        state_map[abbr] = {
+            "name": s["name"],
+            "clubs": n,
+            "population": pop,
+            "per_million": round(n / pop * PERCAP_SCALE, 2) if pop else None,
+            "rings": s["rings"],
+        }
     clubs_block = {
         "total": len(clubs),
         "states_with_clubs": len(by_state),
@@ -191,6 +214,8 @@ def main():
         "with_facebook": sum(1 for c in clubs if c.get("facebook")),
         "outside_us_states": [c["name"] for c in clubs if not c["state"]],
         "map_points": club_map_points,
+        "state_map": state_map,
+        "percap_scale": PERCAP_SCALE,
     }
     # Naming eras: the rebrand to "America's Boating Club ..." vs the legacy
     # "... Sail and Power Squadron" names, counted from the directory names.
