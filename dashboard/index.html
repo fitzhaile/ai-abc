@@ -143,6 +143,9 @@ section{margin-top:54px}
 .sec-head .lede{margin-left:auto;font-size:13px;color:var(--ink-soft);font-style:italic}
 .sec-note{font-size:13.5px;color:var(--ink-soft);margin:8px 0 18px;max-width:900px}
 .grid{display:grid;gap:22px}
+/* grid items default to min-width:auto, which lets a wide table/chart force the
+   column (and the page) wider than the screen; allow them to shrink instead */
+.grid>*{min-width:0}
 .g2{grid-template-columns:3fr 2fr}
 .g2e{grid-template-columns:1fr 1fr}
 .g3{grid-template-columns:1fr 1fr 1fr}
@@ -167,7 +170,7 @@ section{margin-top:54px}
 /* ---------------- KPI strip ---------------- */
 .kpis{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  border:2px solid var(--ink);background:var(--card);margin-top:34px;
+  border:2px solid var(--ink);background:var(--card);margin:14px 0 6px;
   box-shadow:0 14px 30px -20px rgba(18,48,78,.5);
 }
 .kpi{
@@ -272,7 +275,7 @@ svg text{font-family:var(--mono);fill:var(--ink-soft)}
 .finding-detail{font-size:13px;margin:6px 0 0;color:var(--ink-soft);line-height:1.5}
 .finding-note{font-size:12px;margin:5px 0 0;color:#2e6e4e;font-style:italic}
 .finding-ev{font-family:var(--mono);font-size:10.5px;margin:5px 0 0;color:var(--ink-faint)}
-.finding-link{color:var(--port-red);text-decoration:none;white-space:nowrap}
+.finding-link{color:var(--port-red);text-decoration:none;overflow-wrap:anywhere}
 .finding-link:hover{text-decoration:underline;text-decoration-color:var(--port-red)}
 .funnel-card{margin-bottom:22px}
 .funnel-blurb{font-size:13.5px;color:var(--ink-soft);margin:0 0 14px;font-style:italic}
@@ -286,6 +289,18 @@ a.funnel-step:hover .funnel-step-label{text-decoration:underline;text-decoration
 .funnel-step-n{font-family:var(--display);font-size:9px;letter-spacing:.16em;color:var(--ink-faint)}
 .funnel-step-label{font-family:var(--display);font-size:12.5px;color:var(--ink);font-weight:600;line-height:1.2}
 .funnel-step-detail{font-size:11.5px;color:var(--ink-soft);line-height:1.4}
+/* ---- mobile layout fixes (narrow phones) ---- */
+@media(max-width:560px){
+  /* Funnels: stack the steps full-width so they're even, arrows point down */
+  .funnel-steps{flex-direction:column}
+  .funnel-arrow{align-self:center;transform:rotate(90deg)}
+  /* Sources: stack the crawl pipeline stages vertically (source list column
+     count is handled on the base dl.sources rule via min(320px,100%)) */
+  .pipe{flex-direction:column}
+  .pipe .arrow{align-self:center;transform:rotate(90deg);padding:4px 0}
+  /* let a long card-heading flag (e.g. the findings tally) wrap instead of overflow */
+  .card .h3-flag{white-space:normal;text-align:left;margin-left:0}
+}
 /* ---------------- analytics matrix + channel catalog ---------------- */
 table.matrix td, table.matrix th{padding:6px 10px;vertical-align:middle}
 table.matrix .prop{font-family:var(--mono);font-size:11.5px;color:var(--ink)}
@@ -340,9 +355,26 @@ table.log tr:hover td{background:rgba(18,48,78,.045)}
 }
 /* ---------------- map ---------------- */
 #clubmap{width:100%;height:auto;display:block}
+/* chart SVGs scale to their card instead of overflowing on narrow screens */
+.card svg{max-width:100%}
+#freshchart{width:100%;height:auto;display:block}
 #clubmap .dot{fill:#12304e;opacity:.5;transition:r .15s}
 #clubmap .dot.active{fill:var(--buoy-gold);stroke:#12304e;stroke-width:1;opacity:.95}
 #clubmap .dot:hover{opacity:1}
+#clubmap .cstate{transition:fill .15s}
+#clubmap .cstate.clickable:hover{stroke:var(--port-red)!important;stroke-width:1.3!important}
+/* segmented control switching the map between its three views */
+.map-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px;margin-bottom:10px}
+.maptabs{display:inline-flex;border:1px solid var(--ink);border-radius:2px;overflow:hidden}
+.maptabs button{appearance:none;border:none;border-right:1px solid var(--ink);background:var(--card);
+  cursor:pointer;font-family:var(--display);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-soft);padding:6px 13px}
+.maptabs button:last-child{border-right:none}
+.maptabs button:hover{color:var(--ink);background:var(--paper)}
+.maptabs button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+#choro-legend{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:10px;font-size:12px;color:var(--ink-soft)}
+.choro-bar{height:11px;width:160px;border:1px solid var(--rule);display:inline-block}
+@media(max-width:560px){.maptabs button{padding:6px 9px;font-size:10px;letter-spacing:.04em}}
 .sched-dot{
   display:inline-block;width:7px;height:7px;border-radius:50%;
   background:var(--buoy-gold);border:1px solid var(--ink);
@@ -376,7 +408,7 @@ table.log tr:hover td{background:rgba(18,48,78,.045)}
 .pipe .stage b{font-family:var(--display);letter-spacing:.1em;font-size:11px;text-transform:uppercase}
 .pipe .stage code{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft)}
 .pipe .arrow{align-self:center;padding:0 8px;color:var(--buoy-gold);font-size:18px}
-dl.sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px 26px;align-items:start}
+dl.sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:16px 26px;align-items:start}
 dl.sources>div{border-left:3px solid var(--buoy-gold);padding:2px 0 2px 10px}
 dl.sources dt{font-family:var(--display);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
 dl.sources dd{font-size:12.5px;color:var(--ink-soft)}
@@ -436,30 +468,35 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
 
 <main id="app" hidden>
 
-  <!-- KPI strip -->
-  <div class="kpis" id="kpis"></div>
-
   <!-- 1. CLUB NETWORK -->
   <section id="clubs" role="tabpanel" hidden>
     <div class="sec-head"><h2>The Club Network</h2>
       <span class="lede" id="clubs-lede"></span></div>
-    <p class="sec-note">Plotted from the coordinates the find-a-club search returns. There is no
-    basemap here — the clubs themselves draw the shape.</p>
-    <div class="grid g2">
-      <div class="card">
-        <h3>Every club by coordinate <span class="h3-flag" id="map-flag"></span></h3>
-        <svg id="clubmap" viewBox="0 0 920 560" role="img" aria-label="Dot map of clubs"></svg>
-        <div class="legend">
-          <span><span class="sw" style="background:#c8922a"></span><span id="legend-active">clubs with upcoming classes</span></span>
-          <span><span class="sw" style="background:#12304e"></span>no classes currently scheduled</span>
-          <span id="offchart" class="dim"></span>
+    <div class="kpis" data-kpis="clubs"></div>
+    <p class="sec-note">Three views of the same 255 clubs from the find-a-club search: each club as a
+    point, the totals shaded by state, and clubs relative to each state&rsquo;s population. State
+    outlines are US Census boundaries; population is the Census 2023 estimate.</p>
+    <div class="card">
+      <div class="map-head">
+        <h3>Where the clubs are <span class="h3-flag" id="map-flag"></span></h3>
+        <div class="maptabs" id="maptabs" role="tablist" aria-label="Map view">
+          <button type="button" data-mt="dots" aria-selected="true">Individual clubs</button>
+          <button type="button" data-mt="clubs" aria-selected="false">Clubs by state</button>
+          <button type="button" data-mt="percap" aria-selected="false">Per million residents</button>
         </div>
       </div>
-      <div class="card">
-        <h3>Clubs per state <span class="h3-flag">top 18</span></h3>
-        <div id="statebars"></div>
-        <div id="stateRest" class="dim" style="font-size:12px;margin-top:8px"></div>
+      <svg id="clubmap" viewBox="0 0 920 700" role="img" aria-label="Map of America's Boating Club clubs"></svg>
+      <div class="legend" id="dot-legend">
+        <span><span class="sw" style="background:#c8922a"></span><span id="legend-active">clubs with upcoming classes</span></span>
+        <span><span class="sw" style="background:#12304e"></span>no classes currently scheduled</span>
+        <span id="offchart" class="dim"></span>
       </div>
+      <div id="choro-legend" hidden></div>
+    </div>
+    <div class="card" style="margin-top:22px">
+      <h3>Clubs per state <span class="h3-flag">top 18</span></h3>
+      <div id="statebars"></div>
+      <div id="stateRest" class="dim" style="font-size:12px;margin-top:8px"></div>
     </div>
     <div class="grid g3" style="margin-top:22px">
       <div class="card"><h3>Reachability</h3><div id="reach"></div></div>
@@ -478,6 +515,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   <section id="education" role="tabpanel" hidden>
     <div class="sec-head"><h2>Education &amp; Training</h2>
       <span class="lede" id="edu-lede"></span></div>
+    <div class="kpis" data-kpis="education"></div>
     <p class="sec-note">The national course catalog comes from the main site's course and seminar pages.
     The live schedule comes from each club's details page — the same page a visitor reaches after
     using "Find a Club".</p>
@@ -515,6 +553,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   <section id="commerce" role="tabpanel" hidden>
     <div class="sec-head"><h2>Ship's Store &amp; Commerce</h2>
       <span class="lede" id="com-lede"></span></div>
+    <div class="kpis" data-kpis="commerce"></div>
     <p class="sec-note">The Ship's Store catalog was walked at the 20-second pace its robots.txt
     requests. Satellite storefronts on vendor domains are charted, including one that has gone dark.</p>
     <div class="grid g3">
@@ -545,6 +584,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   <section id="channel" role="tabpanel" hidden>
     <div class="sec-head"><h2>America's Boating Channel</h2>
       <span class="lede" id="vid-lede"></span></div>
+    <div class="kpis" data-kpis="channel"></div>
     <p class="sec-note">Every video page on the channel embeds machine-readable metadata
     (schema.org VideoObject); this is the channel-wide tally.</p>
     <div class="grid g3">
@@ -573,6 +613,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   <section id="fleet" role="tabpanel" hidden>
     <div class="sec-head"><h2>The Web Properties</h2>
       <span class="lede" id="fleet-lede"></span></div>
+    <div class="kpis" data-kpis="fleet"></div>
     <p class="sec-note">Who measures what, and what each property runs on — read from the page
     source of every property we could crawl. Blank means scanned but not detected; "not crawled"
     means the site was down or its root errored, and is labeled as such rather than left to read
@@ -585,7 +626,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     <div class="grid g2" style="margin-top:22px">
       <div class="card">
         <h3>Tech platform by property <span class="h3-flag">from page source</span></h3>
-        <table class="log" id="platform-table"></table>
+        <div style="overflow-x:auto"><table class="log" id="platform-table"></table></div>
         <p class="dim" id="platform-note" style="font-size:12px;margin-top:8px"></p>
       </div>
       <div class="card">
@@ -600,6 +641,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   <section id="problems" role="tabpanel" hidden>
     <div class="sec-head"><h2>Problems &amp; Findings</h2>
       <span class="lede" id="problems-lede"></span></div>
+    <div class="kpis" data-kpis="problems"></div>
     <p class="sec-note audit-note">An external web-estate audit of America&rsquo;s Boating Club&rsquo;s web
     properties, page-sourced on 11&nbsp;Jun&nbsp;2026 and AI-assisted. These are <b>findings and judgments, not our measured data</b> —
     severity reflects business impact, not technical purity, and the audit itself flags its numbers as
@@ -625,6 +667,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   <section id="funnels" role="tabpanel" hidden>
     <div class="sec-head"><h2>Conversion Funnels</h2>
       <span class="lede" id="funnels-lede"></span></div>
+    <div class="kpis" data-kpis="funnels"></div>
     <p class="sec-note audit-note">How a visitor gets from the flagship to the four things the org needs them
     to do — join, find a class, shop, donate — step by step as the audit observed them on 11&nbsp;Jun&nbsp;2026.
     <b>Each funnel carries one severity pill for the path as a whole</b> — the audit's read of how well it
@@ -639,6 +682,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   <section id="opportunities" role="tabpanel" hidden>
     <div class="sec-head"><h2>Opportunities</h2>
       <span class="lede" id="opps-lede"></span></div>
+    <div class="kpis" data-kpis="opportunities"></div>
     <p class="sec-note">Recommendations, ranked roughly by impact-per-effort. The <b>figures</b> in each
     card are computed live from the crawl data and update on every refresh; the <b>recommendations</b>
     wrapped around them are editorial judgment — some from our own read of the data, some from the
@@ -653,6 +697,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
   <section id="provenance" role="tabpanel" hidden>
     <div class="sec-head"><h2>Sources &amp; Methods</h2>
       <span class="lede">every figure regenerable</span></div>
+    <div class="kpis" data-kpis="provenance"></div>
     <div class="titleblock" style="margin-top:18px">
       <p class="tb-head">This chart was assembled by a four-stage pipeline. Each stage is an
       independently runnable script; re-running the pipeline against the saved raw data reproduces
@@ -731,7 +776,7 @@ function countUp(node, target){
   function step(ts){
     if(!t0) t0 = ts;
     var p = Math.min(1,(ts-t0)/dur); p = 1-Math.pow(1-p,3);
-    node.textContent = fmt(Math.round(target*p));
+    node.textContent = p<1 ? fmt(Math.round(target*p)) : fmt(target);
     if(p<1) requestAnimationFrame(step);
   }
   requestAnimationFrame(step);
@@ -819,49 +864,88 @@ window.addEventListener('hashchange', function(){
 activateTab((location.hash || '').replace('#', '') || TABS[0][0], false);
 updateNavScroll();
 
-/* ---------- KPI strip ---------- */
-var totalProducts = D.commerce.ships_store.products + D.commerce.enrolmart.products + D.commerce.cpdean_awards.products;
-var kpis = [
-  [D.clubs.total, 'Local clubs located'],
-  [D.clubs.states_with_clubs, 'States with a club'],
-  [D.schedule.total_upcoming, 'Classes on the calendar'],
-  [D.education.courses + D.education.seminars, 'Courses & seminars taught'],
-  [totalProducts, 'Products across 3 stores'],
-  [D.videos.total, 'Channel videos'],
-  [D.site.pages_fetched, 'Pages crawled'],
-];
-var kwrap = document.getElementById('kpis');
-kpis.forEach(function(k, i){
-  var d = el('div', {class:'kpi', style:'animation-delay:'+(i*70)+'ms'});
-  var v = el('div', {class:'v'}, '0');
-  d.appendChild(v);
-  d.appendChild(el('div', {class:'l'}, k[1]));
-  kwrap.appendChild(d);
-  countUp(v, k[0]);
-});
-
-/* ---------- CH1 · club map (Albers equal-area conic for CONUS+PR) ---------- */
-(function(){
-  var all = D.clubs.map_points;
-  var conus = [], alaska = [], carib = [], off = [];
-  all.forEach(function(p){
-    if(p.lng >= -60) off.push(p);              // e.g. Tokyo
-    else if(p.lat > 50) alaska.push(p);        // Alaska
-    else if(p.lat < 20) carib.push(p);         // Puerto Rico / USVI
-    else conus.push(p);
+/* ---------- per-tab KPI strips ---------- */
+// Each tab carries its own KPI row summarizing that tab's content (not one
+// global strip). buildKPIs fills the <div class="kpis" data-kpis="<tab>"> that
+// sits under each section heading. Editorial tabs (problems/funnels/
+// opportunities) fill theirs from inside their own render blocks, where the
+// finding/funnel/recommendation arrays live.
+function kpiHost(tab){ return document.querySelector('.kpis[data-kpis="' + tab + '"]'); }
+function buildKPIs(host, items){
+  if(!host) return;
+  items.forEach(function(k, i){
+    var d = el('div', {class:'kpi', style:'animation-delay:'+(i*70)+'ms'});
+    var v = el('div', {class:'v'}, '0');
+    d.appendChild(v);
+    d.appendChild(el('div', {class:'l'}, k[1]));
+    host.appendChild(d);
+    countUp(v, k[0]);
   });
-  document.getElementById('map-flag').textContent =
-    (conus.length + alaska.length + carib.length) + ' plotted';
-  var activeCount = all.filter(function(p){ return p.classes > 0; }).length;
-  document.getElementById('legend-active').textContent =
-    activeCount + ' clubs with upcoming classes';
-  document.getElementById('offchart').textContent =
-    off.length ? off.length + ' club' + (off.length>1?'s':'') + ' beyond this sheet: ' +
-      off.map(function(p){return p.name;}).join(', ') : '';
+}
 
+var totalProducts = D.commerce.ships_store.products + D.commerce.enrolmart.products + D.commerce.cpdean_awards.products;
+// Analytics IDs across the properties (GA4 + Universal Analytics + GTM): how
+// many distinct IDs, and how many of those are reused on more than one property.
+var analyticsIdUse = {};
+(D.tech && D.tech.properties ? D.tech.properties : []).forEach(function(p){
+  [].concat(p.ga4 || [], p.universal_analytics || [], p.gtm || []).forEach(function(id){
+    analyticsIdUse[id] = (analyticsIdUse[id] || 0) + 1;
+  });
+});
+var distinctAnalyticsIds = Object.keys(analyticsIdUse).length;
+var sharedAnalyticsIds = Object.keys(analyticsIdUse).filter(function(id){ return analyticsIdUse[id] > 1; }).length;
+// Distinct underlying platforms (collapse "Joomla · Helix"→"Joomla", etc.).
+var platformSet = {};
+(D.tech && D.tech.properties ? D.tech.properties : []).forEach(function(p){
+  if(p.platform) platformSet[p.platform.split('·')[0].trim()] = 1;
+});
+var distinctPlatforms = Object.keys(platformSet).length;
+
+buildKPIs(kpiHost('clubs'), [
+  [D.clubs.total, 'Local clubs'],
+  [D.clubs.states_with_clubs, 'States & territories'],
+  [D.schedule.total_upcoming, 'Upcoming classes'],
+  [D.schedule.clubs_with_classes, 'Clubs teaching now']
+]);
+buildKPIs(kpiHost('education'), [
+  [D.education.courses, 'Courses'],
+  [D.education.seminars, 'Seminars'],
+  [D.commerce.enrolmart.products, 'Online courses (EnrolMart)']
+]);
+buildKPIs(kpiHost('commerce'), [
+  [totalProducts, 'Products across 3 stores'],
+  [D.commerce.ships_store.products, 'Ship’s Store items'],
+  [D.commerce.enrolmart.products, 'EnrolMart courses'],
+  [D.commerce.cpdean_awards.products, 'C.P. Dean awards']
+]);
+buildKPIs(kpiHost('channel'), [
+  [D.videos.total, 'Videos'],
+  [D.videos.total_runtime_hours, 'Hours of content'],
+  [D.videos.catalog_categories.categories.length, 'Categories'],
+  [D.videos.median_duration_minutes, 'Median minutes']
+]);
+buildKPIs(kpiHost('fleet'), [
+  [D.tech.properties.length, 'Web properties'],
+  [D.site.pages_fetched, 'Pages surveyed'],
+  [distinctAnalyticsIds, 'Analytics IDs · ' + sharedAnalyticsIds + ' shared'],
+  [distinctPlatforms, 'Tech platforms']
+]);
+buildKPIs(kpiHost('provenance'), [
+  [D.site.pages_fetched, 'Pages surveyed'],
+  [D.tech.properties.length, 'Web properties'],
+  [Object.keys(D.provenance.dataset_sources).length, 'Datasets'],
+  [D.provenance.pipeline.length, 'Pipeline stages']
+]);
+
+/* ---------- CH1 · club map: three views (dots / clubs-by-state / per-capita) ----------
+   The two state views are choropleths over US Census polygons (D.clubs.state_map);
+   the dot view plots individual clubs over the same states as a faint basemap. All
+   three share one Albers projection per panel (CONUS + AK/HI/PR insets). */
+(function(){
   var svg = document.getElementById('clubmap');
   var tip = document.getElementById('maptip');
-  var W=920, H=560;
+  var SM  = D.clubs.state_map;
+  var ALL = D.clubs.map_points;
   var d2r = Math.PI/180;
 
   function albers(p1d, p2d, lat0d, lng0d){
@@ -875,68 +959,221 @@ kpis.forEach(function(k, i){
       return [rho*Math.sin(th), rho0-rho*Math.cos(th)];
     };
   }
-  function addDot(X, Y, p, r){
-    var c = svgel('circle', {cx:X.toFixed(1), cy:Y.toFixed(1), r:r,
-      class:'dot' + (p.classes ? ' active' : '')});
-    c.addEventListener('mousemove', function(ev){
-      tip.style.opacity = 1;
-      tip.style.left = ev.clientX + 'px';
-      tip.style.top = ev.clientY + 'px';
-      tip.textContent = p.name + (p.state ? ' · ' + p.state : '') +
-        (p.classes ? ' · ' + p.classes + ' upcoming class' +
-          (p.classes > 1 ? 'es' : '') : '');
-    });
-    c.addEventListener('mouseleave', function(){ tip.style.opacity = 0; });
-    svg.appendChild(c);
+
+  // States → panel by abbreviation (everything not an inset is CONUS). VI has a
+  // club but no Census polygon, so it never gets a shaded shape — only a dot.
+  var INSET = {AK:'ak', HI:'hi', PR:'carib', VI:'carib'};
+  var statePanels = {conus:[], ak:[], hi:[], carib:[]};
+  Object.keys(SM).forEach(function(ab){
+    if(SM[ab].rings && SM[ab].rings.length) statePanels[INSET[ab]||'conus'].push(ab);
+  });
+  // Dots → panel by location (robust for VI, which has no polygon).
+  var dotPanels = {conus:[], ak:[], hi:[], carib:[], off:[]};
+  ALL.forEach(function(p){
+    if(p.lng >= -60) dotPanels.off.push(p);          // e.g. Tokyo
+    else if(p.lat > 50) dotPanels.ak.push(p);        // Alaska
+    else if(p.lat < 20) dotPanels.carib.push(p);     // Puerto Rico / USVI
+    else dotPanels.conus.push(p);
+  });
+
+  // CONUS fills the full width (aspect 1.5836); AK/HI/PR-VI sit in a band BELOW
+  // it, so nothing overlaps the southern states (which reach the map's bottom).
+  var PANELS = [
+    {key:'conus', proj:albers(29.5,45.5,23,-96),   frame:{x:4,y:2,w:912,h:576}},
+    {key:'ak',    proj:albers(55,65,50,-154),      frame:{x:34,y:604,w:150,h:72}, box:'ALASKA'},
+    {key:'hi',    proj:albers(19,22,20.5,-157),    frame:{x:208,y:604,w:100,h:72}, box:'HAWAII'},
+    {key:'carib', proj:albers(17.6,18.4,18,-65.8), frame:{x:332,y:604,w:160,h:72}, box:'PUERTO RICO & USVI'}
+  ];
+
+  // Sequential light→navy ramp; gamma spreads the many low-count states apart.
+  function colorFor(t){
+    t = Math.max(0, Math.min(1, t));
+    var g = Math.pow(t, 0.6);
+    function mix(a,b){ return Math.round(a + (b-a)*g); }
+    return 'rgb(' + mix(233,18) + ',' + mix(238,48) + ',' + mix(243,78) + ')';
   }
-  // Draw one chart panel: project pts, fit into frame, optional graticule+box
-  function panel(pts, project, frame, opts){
-    if(!pts.length) return;
-    var proj = pts.map(function(p){ var xy=project(p.lat,p.lng); return {p:p,x:xy[0],y:xy[1]}; });
-    var xs=proj.map(function(q){return q.x;}), ys=proj.map(function(q){return q.y;});
-    var minx=Math.min.apply(null,xs), maxx=Math.max.apply(null,xs)||minx+1e-6;
-    var miny=Math.min.apply(null,ys), maxy=Math.max.apply(null,ys)||miny+1e-6;
-    var s=Math.min(frame.w/(maxx-minx||1e-6), frame.h/(maxy-miny||1e-6));
-    var ox=frame.x+(frame.w-(maxx-minx)*s)/2, oy=frame.y+(frame.h-(maxy-miny)*s)/2;
-    function place(x,y){ return [ox+(x-minx)*s, frame.y+frame.h-(oy-frame.y)-(y-miny)*s]; }
-    if(opts && opts.grat){
-      for(var lat=opts.grat.lat0; lat<=opts.grat.lat1; lat+=5){
-        var path='';
-        for(var lng=opts.grat.lng0; lng<=opts.grat.lng1; lng+=2){
-          var xy=project(lat,lng), P=place(xy[0],xy[1]);
-          path+=(path?'L':'M')+P[0].toFixed(1)+' '+P[1].toFixed(1);
-        }
-        svg.appendChild(svgel('path',{d:path,fill:'none',stroke:'rgba(18,48,78,.13)','stroke-width':1}));
-      }
-      for(var lng2=opts.grat.lng0; lng2<=opts.grat.lng1; lng2+=5){
-        var path2='';
-        for(var lat2=opts.grat.lat0; lat2<=opts.grat.lat1; lat2+=1){
-          var xy2=project(lat2,lng2), P2=place(xy2[0],xy2[1]);
-          path2+=(path2?'L':'M')+P2[0].toFixed(1)+' '+P2[1].toFixed(1);
-        }
-        svg.appendChild(svgel('path',{d:path2,fill:'none',stroke:'rgba(18,48,78,.13)','stroke-width':1}));
-      }
-    }
-    if(opts && opts.box){
-      svg.appendChild(svgel('rect',{x:frame.x-10,y:frame.y-18,width:frame.w+20,height:frame.h+28,
-        fill:'rgba(18,48,78,.03)',stroke:'rgba(18,48,78,.35)','stroke-width':1,'stroke-dasharray':'4 3'}));
-      var lab=svgel('text',{x:frame.x-4,y:frame.y-6,'font-size':'10.5','letter-spacing':'.15em'});
-      lab.textContent=opts.box; svg.appendChild(lab);
-    }
-    proj.forEach(function(q){
-      var P=place(q.x,q.y);
-      addDot(P[0],P[1],q.p,opts&&opts.r||4.2);
+  function showTip(ev, text){
+    tip.style.opacity = 1; tip.style.left = ev.clientX + 'px';
+    tip.style.top = ev.clientY + 'px'; tip.textContent = text;
+  }
+  function hideTip(){ tip.style.opacity = 0; }
+
+  function drawPanel(pn, mode, metric, maxVal){
+    var projd = (statePanels[pn.key] || []).map(function(ab){
+      return {ab:ab, rings: SM[ab].rings.map(function(ring){
+        return ring.map(function(c){ return pn.proj(c[1], c[0]); });   // [lng,lat] → projected
+      })};
     });
+    if(!projd.length) return;
+    var minx=Infinity,maxx=-Infinity,miny=Infinity,maxy=-Infinity;
+    projd.forEach(function(s){ s.rings.forEach(function(r){ r.forEach(function(xy){
+      if(xy[0]<minx)minx=xy[0]; if(xy[0]>maxx)maxx=xy[0];
+      if(xy[1]<miny)miny=xy[1]; if(xy[1]>maxy)maxy=xy[1];
+    });});});
+    var fr=pn.frame;
+    var s=Math.min(fr.w/((maxx-minx)||1e-6), fr.h/((maxy-miny)||1e-6));
+    var ox=fr.x+(fr.w-(maxx-minx)*s)/2, oy=fr.y+(fr.h-(maxy-miny)*s)/2;
+    function place(x,y){ return [ox+(x-minx)*s, fr.y+fr.h-(oy-fr.y)-(y-miny)*s]; }
+
+    // Faint plotting-sheet graticule under the CONUS sheet, so the open ocean
+    // reads as sea on a chart rather than blank paper.
+    if(pn.key==='conus'){
+      var grat='';
+      for(var la=25; la<=50; la+=5){
+        for(var lo=-125; lo<=-66; lo+=2){
+          var g1=place.apply(null, pn.proj(la,lo));
+          grat += (lo===-125?'M':'L') + g1[0].toFixed(1)+' '+g1[1].toFixed(1);
+        }
+      }
+      for(var lo2=-120; lo2<=-70; lo2+=10){
+        for(var la2=25; la2<=50; la2+=1){
+          var g2=place.apply(null, pn.proj(la2,lo2));
+          grat += (la2===25?'M':'L') + g2[0].toFixed(1)+' '+g2[1].toFixed(1);
+        }
+      }
+      svg.appendChild(svgel('path',{d:grat, fill:'none', stroke:'rgba(18,48,78,.09)', 'stroke-width':0.6}));
+    }
+
+    if(pn.box){
+      svg.appendChild(svgel('rect',{x:fr.x-7,y:fr.y-14,width:fr.w+14,height:fr.h+22,
+        fill:'rgba(245,239,226,.82)',stroke:'rgba(18,48,78,.16)','stroke-width':0.7}));
+      var lab=svgel('text',{x:fr.x-2, y:fr.y-4, 'font-size':'9', 'letter-spacing':'.12em',
+        fill:'#7a8a98'});
+      lab.textContent=pn.box; svg.appendChild(lab);
+    }
+    projd.forEach(function(st){
+      var d='';
+      st.rings.forEach(function(r){
+        r.forEach(function(xy,i){ var P=place(xy[0],xy[1]); d+=(i?'L':'M')+P[0].toFixed(1)+' '+P[1].toFixed(1); });
+        d+='Z';
+      });
+      var val = metric ? metric(SM[st.ab]) : null, fill, stroke, sw;
+      if(metric){
+        fill = (val==null) ? 'rgba(18,48,78,.05)' : colorFor(maxVal ? val/maxVal : 0);
+        stroke = 'rgba(245,239,226,.85)'; sw = 0.6;
+      } else {
+        fill = 'rgba(18,48,78,.05)'; stroke = 'rgba(18,48,78,.25)'; sw = 0.7;
+      }
+      var path = svgel('path',{d:d, fill:fill, stroke:stroke, 'stroke-width':sw,
+        class:'cstate' + (metric ? ' clickable' : '')});
+      if(metric){
+        var nm=SM[st.ab].name, cn=SM[st.ab].clubs;
+        var txt = mode==='clubs'
+          ? nm + ' · ' + cn + ' club' + (cn===1?'':'s')
+          : nm + ' · ' + (val==null?'n/a':val + ' per million') + ' (' + cn + ' club' + (cn===1?'':'s') + ')';
+        path.addEventListener('mousemove', function(ev){ showTip(ev, txt); });
+        path.addEventListener('mouseleave', hideTip);
+      }
+      svg.appendChild(path);
+    });
+    if(mode==='dots'){
+      (dotPanels[pn.key]||[]).forEach(function(p){
+        var xy=pn.proj(p.lat,p.lng), P=place(xy[0],xy[1]);
+        var c=svgel('circle',{cx:P[0].toFixed(1), cy:P[1].toFixed(1),
+          r:(pn.key==='conus'?3.8:4.4), class:'dot'+(p.classes?' active':'')});
+        c.addEventListener('mousemove', function(ev){
+          showTip(ev, p.name + (p.state?' · '+p.state:'') +
+            (p.classes?' · '+p.classes+' upcoming class'+(p.classes>1?'es':''):''));
+        });
+        c.addEventListener('mouseleave', hideTip);
+        svg.appendChild(c);
+      });
+    }
   }
 
-  // Main CONUS sheet (Albers, the classic US parameters)
-  panel(conus, albers(29.5,45.5,23,-96), {x:40,y:30,w:840,h:380},
-        {grat:{lat0:25,lat1:50,lng0:-126,lng1:-64}});
-  // Insets, like any proper US chart
-  panel(alaska, albers(55,65,50,-154), {x:60,y:470,w:150,h:60},
-        {box:'ALASKA',r:4.6});
-  panel(carib, albers(17,19,16,-66), {x:660,y:470,w:190,h:60},
-        {box:'PUERTO RICO & USVI',r:4.6});
+  var dotLegend = document.getElementById('dot-legend');
+  var choroLegend = document.getElementById('choro-legend');
+  document.getElementById('legend-active').textContent =
+    ALL.filter(function(p){return p.classes>0;}).length + ' clubs with upcoming classes';
+  var off = dotPanels.off;
+  document.getElementById('offchart').textContent =
+    off.length ? off.length+' club'+(off.length>1?'s':'')+' beyond this sheet: '+
+      off.map(function(p){return p.name;}).join(', ') : '';
+
+  // Chart furniture that fills the empty canvas: a compass rose in the open
+  // Pacific and a per-view stat cartouche in the bottom inset band.
+  function drawDecor(mode){
+    var cx=866, cy=352, r=22;
+    svg.appendChild(svgel('circle',{cx:cx,cy:cy,r:r,fill:'none',stroke:'rgba(18,48,78,.22)','stroke-width':1}));
+    svg.appendChild(svgel('circle',{cx:cx,cy:cy,r:r*0.6,fill:'none',stroke:'rgba(18,48,78,.15)','stroke-width':0.7}));
+    for(var a=0;a<360;a+=45){
+      var rad=a*Math.PI/180, card=(a%90===0), rr=card?r:r*0.6;
+      svg.appendChild(svgel('line',{x1:cx,y1:cy,x2:(cx+Math.sin(rad)*rr).toFixed(1),
+        y2:(cy-Math.cos(rad)*rr).toFixed(1),stroke:'rgba(18,48,78,.18)','stroke-width':card?0.8:0.5}));
+    }
+    svg.appendChild(svgel('path',{d:'M'+cx+' '+(cy-r)+'L'+(cx-3.2)+' '+(cy-r*0.5).toFixed(1)+
+      'L'+(cx+3.2)+' '+(cy-r*0.5).toFixed(1)+'Z',fill:'rgba(179,56,46,.55)'}));
+    var nlab=svgel('text',{x:cx,y:cy-r-3,'font-size':'8','text-anchor':'middle','letter-spacing':'.1em',
+      fill:'rgba(18,48,78,.45)'}); nlab.textContent='N'; svg.appendChild(nlab);
+
+    var lines;
+    if(mode==='dots'){
+      var active=ALL.filter(function(p){return p.classes>0;}).length;
+      lines=['INDIVIDUAL CLUBS',
+             D.clubs.total+' clubs · '+D.clubs.states_with_clubs+' states · '+active+' teaching now'];
+    } else {
+      var ranked=Object.keys(SM).filter(function(a){return SM[a].clubs>0;});
+      if(mode==='clubs'){
+        ranked.sort(function(a,b){return SM[b].clubs-SM[a].clubs;});
+        lines=['CLUBS BY STATE',
+               'most: '+ranked.slice(0,3).map(function(a){return a+' '+SM[a].clubs;}).join(' · ')];
+      } else {
+        ranked.sort(function(a,b){return SM[b].per_million-SM[a].per_million;});
+        lines=['CLUBS PER MILLION RESIDENTS',
+               'highest: '+ranked.slice(0,3).map(function(a){return a+' '+SM[a].per_million;}).join(' · ')];
+      }
+    }
+    var bx=536, by=630, bw=360, bh=52;
+    svg.appendChild(svgel('rect',{x:bx,y:by,width:bw,height:bh,fill:'rgba(245,239,226,.9)',
+      stroke:'rgba(18,48,78,.32)','stroke-width':1}));
+    var t1=svgel('text',{x:bx+12,y:by+19,'font-size':'10.5','font-family':'var(--display)',
+      'letter-spacing':'.12em',fill:'var(--ink)'}); t1.textContent=lines[0]; svg.appendChild(t1);
+    var t2=svgel('text',{x:bx+12,y:by+35,'font-size':'10','font-family':'var(--mono)',
+      fill:'var(--ink-soft)'}); t2.textContent=lines[1]; svg.appendChild(t2);
+  }
+
+  function renderMap(mode){
+    while(svg.firstChild) svg.removeChild(svg.firstChild);
+    var metric = mode==='clubs'  ? function(s){ return s.clubs; } :
+                 mode==='percap' ? function(s){ return s.per_million; } : null;
+    var maxVal=0, maxAb=null;
+    if(metric){
+      Object.keys(SM).forEach(function(ab){
+        var v=metric(SM[ab]); if(v!=null && v>maxVal){ maxVal=v; maxAb=ab; }
+      });
+    }
+    PANELS.forEach(function(pn){ drawPanel(pn, mode, metric, maxVal); });
+    drawDecor(mode);
+
+    if(mode==='dots'){
+      document.getElementById('map-flag').textContent =
+        (dotPanels.conus.length+dotPanels.ak.length+dotPanels.carib.length)+' plotted';
+      dotLegend.style.display=''; choroLegend.style.display='none';
+    } else {
+      document.getElementById('map-flag').textContent = D.clubs.states_with_clubs+' states with clubs';
+      dotLegend.style.display='none'; choroLegend.style.display='flex';
+      var unit = mode==='clubs' ? 'clubs in the state' : 'clubs per million residents';
+      choroLegend.innerHTML='';
+      choroLegend.appendChild(el('span', {}, 'fewer'));
+      var bar=el('span', {class:'choro-bar'});
+      bar.style.background='linear-gradient(to right,'+colorFor(0)+','+colorFor(0.45)+','+colorFor(1)+')';
+      choroLegend.appendChild(bar);
+      choroLegend.appendChild(el('span', {}, 'more'));
+      choroLegend.appendChild(el('span', {style:'margin-left:8px'},
+        '· ' + unit + ' · darkest: ' + (maxAb?SM[maxAb].name:'—') + ' (' + maxVal +
+        (mode==='percap'?' per million':'') + ')'));
+    }
+  }
+
+  var mtabs=document.getElementById('maptabs');
+  mtabs.querySelectorAll('button').forEach(function(b){
+    b.addEventListener('click', function(){
+      mtabs.querySelectorAll('button').forEach(function(x){
+        x.setAttribute('aria-selected', x===b ? 'true' : 'false'); });
+      renderMap(b.getAttribute('data-mt'));
+    });
+  });
+  renderMap('dots');
 })();
 
 document.getElementById('clubs-lede').textContent =
@@ -1599,7 +1836,7 @@ var SEV = {
   CRITICAL: {g:'⚑', cls:'sev-crit', rank:0},
   HIGH:     {g:'▲', cls:'sev-high', rank:1},
   MEDIUM:   {g:'■', cls:'sev-med',  rank:2},
-  SOUND:    {g:'●', cls:'sev-sound',rank:3}
+  STABLE:   {g:'●', cls:'sev-sound',rank:3}
 };
 // Plain-language meaning of the audit's severity scale (business impact, not
 // technical purity). Shared by the Problems and Funnels tabs so the pills are
@@ -1608,7 +1845,7 @@ var SEV_DEFS = [
   ['CRITICAL','core action breaks'],
   ['HIGH','significant flaw'],
   ['MEDIUM','minor flaw'],
-  ['SOUND','working well']
+  ['STABLE','working well']
 ];
 function severityLegend(intro){
   var box = el('div', {class:'sev-legend'});
@@ -1649,11 +1886,11 @@ function severityLegend(intro){
     ['MEDIUM','TRUST','Copyright years disagree across the family','© 2026 (flagship, course, store), © 2025 (usps.org), © 2024 (channel), © 2021 (giveabc). Date drift is the visible symptom of no shared content governance.','page footers: flagship © 2026 · usps.org © 2025 · channel © 2024 · giveabc.org © 2021'],
     ['MEDIUM','ARCHITECTURE','Flagship paid-course LMS root errored during crawl','course.americasboatingcourse.com returned a server error on direct fetch of the root URL; the /sign-in path responded. Paying customers may hit this.','fetch attempt, 11 Jun 2026','Reproduced: it is marked “not crawled” in our matrix for this reason.'],
     ['MEDIUM','CONVERSION','Email capture popup with no offer','The flagship popup asks “Want to be a better boater?” with a bare email field — no lead magnet, no stated cadence, no incentive.','flagship homepage popup'],
-    ['SOUND','CONTENT','Blog is alive and aimed at real keywords','Recent posts (VHF radio how-to, 2026 Vessel Safety Check, National Safe Boating Week) plus state-targeted pieces. The strategy is right; the technical layer underneath it is what’s failing.','/about/news-and-information'],
-    ['SOUND','CONVERSION','Course sales site is the model the rest should follow','americasboatingcourse.com shows the price, leads with Enroll Now, lists chapters, and maintains state-law pages — proof the org can ship a coherent funnel when one team owns it.','americasboatingcourse.com'],
-    ['SOUND','BRAND','Real differentiation assets exist but go unsaid','On-the-water training, 300 local clubs, free vessel safety checks, a human follow-up from a local boater after purchase — none of it is framed against the free online competitors that own the SERP.','flagship course-details pages vs. the free competitors from the SERP test above'],
-    ['SOUND','REACH','boatlive365.org shows the family can do SEO hygiene','Canonical, OG tags, robots directives all present. The competence exists in-house or in-vendor; it just hasn’t been applied to the flagship.','boatlive365 meta','Confirmed: our platform check reads it as WordPress with full meta.'],
-    ['SOUND','DATA','Analytics exists on at least one property','GTM (GTM-TRBZFNR5) fires on the portal. The audit could not confirm GA4/GTM on the flagship from extracted text.','portal page source','CORRECTION: our crawl DID find GA4 on the flagship (G-0M1N6DYNBW, G-GGW5NS7YYS) — see the matrix.']
+    ['STABLE','CONTENT','Blog is alive and aimed at real keywords','Recent posts (VHF radio how-to, 2026 Vessel Safety Check, National Safe Boating Week) plus state-targeted pieces. The strategy is right; the technical layer underneath it is what’s failing.','/about/news-and-information'],
+    ['STABLE','CONVERSION','Course sales site is the model the rest should follow','americasboatingcourse.com shows the price, leads with Enroll Now, lists chapters, and maintains state-law pages — proof the org can ship a coherent funnel when one team owns it.','americasboatingcourse.com'],
+    ['STABLE','BRAND','Real differentiation assets exist but go unsaid','On-the-water training, 300 local clubs, free vessel safety checks, a human follow-up from a local boater after purchase — none of it is framed against the free online competitors that own the SERP.','flagship course-details pages vs. the free competitors from the SERP test above'],
+    ['STABLE','REACH','boatlive365.org shows the family can do SEO hygiene','Canonical, OG tags, robots directives all present. The competence exists in-house or in-vendor; it just hasn’t been applied to the flagship.','boatlive365 meta','Confirmed: our platform check reads it as WordPress with full meta.'],
+    ['STABLE','DATA','Analytics exists on at least one property','GTM (GTM-TRBZFNR5) fires on the portal. The audit could not confirm GA4/GTM on the flagship from extracted text.','portal page source','CORRECTION: our crawl DID find GA4 on the flagship (G-0M1N6DYNBW, G-GGW5NS7YYS) — see the matrix.']
   ];
   // A live page where each finding can be seen, aligned 1:1 with FIND above
   // (keep in sync). Every URL is one we actually fetched (HTTP 200 in the crawl
@@ -1707,12 +1944,12 @@ function severityLegend(intro){
     sw.appendChild(row);
   });
   /* severity bars */
-  var counts = {CRITICAL:0,HIGH:0,MEDIUM:0,SOUND:0};
+  var counts = {CRITICAL:0,HIGH:0,MEDIUM:0,STABLE:0};
   FIND.forEach(function(f){ counts[f[0]]++; });
   document.getElementById('sev-flag').textContent = FIND.length + ' findings';
   var sb = document.getElementById('sevbars');
   var maxc = Math.max.apply(null, Object.keys(counts).map(function(k){return counts[k];}));
-  ['CRITICAL','HIGH','MEDIUM','SOUND'].forEach(function(k){
+  ['CRITICAL','HIGH','MEDIUM','STABLE'].forEach(function(k){
     var sv = SEV[k];
     var row = el('div', {class:'barrow'});
     row.appendChild(el('span', {class:'lab', style:'width:78px'}, sv.g + ' ' + k.toLowerCase()));
@@ -1725,7 +1962,7 @@ function severityLegend(intro){
   document.getElementById('sev-legend').appendChild(
     severityLegend('What the levels mean — severity is business impact, not technical purity:'));
   /* findings list */
-  document.getElementById('findings-flag').textContent = '4 critical · 8 high · 7 medium · 5 sound';
+  document.getElementById('findings-flag').textContent = '4 critical · 8 high · 7 medium · 5 stable';
   var fw = document.getElementById('findings');
   FIND.slice().sort(function(a,b){return SEV[a[0]].rank-SEV[b[0]].rank;}).forEach(function(f){
     var sv = SEV[f[0]];
@@ -1751,6 +1988,12 @@ function severityLegend(intro){
   });
   document.getElementById('problems-lede').textContent =
     FIND.length + ' findings · external audit, page-sourced 11 Jun 2026';
+  buildKPIs(kpiHost('problems'), [
+    [FIND.length, 'Findings'],
+    [counts.CRITICAL, 'Critical'],
+    [counts.HIGH, 'High'],
+    [counts.STABLE, 'Stable']
+  ]);
 })();
 
 /* ---------- CH7 · funnels — reproduces the same external audit ---------- */
@@ -1782,6 +2025,11 @@ function severityLegend(intro){
   ];
   document.getElementById('funnels-lede').textContent =
     FUNNELS.length + ' conversion paths · click a step to open that page · audit observed 11 Jun 2026';
+  buildKPIs(kpiHost('funnels'), [
+    [FUNNELS.length, 'Conversion paths'],
+    [FUNNELS.filter(function(f){return f.sev==='CRITICAL';}).length, 'Critical paths'],
+    [FUNNELS.reduce(function(n,f){return n+f.steps.length;},0), 'Steps mapped']
+  ]);
   document.getElementById('funnel-sev-legend').appendChild(
     severityLegend('Each path’s pill rates the whole funnel’s health on this scale:'));
   var wrap = document.getElementById('funnel-list');
@@ -1912,6 +2160,11 @@ function severityLegend(intro){
   document.getElementById('opps-lede').textContent =
     RECS.length + ' recommendations · ' + RECS.filter(function(r){return r.src==='data';}).length +
     ' computed from our crawl, ' + RECS.filter(function(r){return r.src==='audit';}).length + ' from the audit (verified)';
+  buildKPIs(kpiHost('opportunities'), [
+    [RECS.length, 'Recommendations'],
+    [RECS.filter(function(r){return r.col==='current';}).length, 'Quick wins'],
+    [RECS.filter(function(r){return r.col==='new';}).length, 'Bigger plays']
+  ]);
 })();
 
 /* ---------- CH7 · provenance ---------- */
