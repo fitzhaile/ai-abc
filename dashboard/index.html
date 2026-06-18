@@ -73,6 +73,19 @@ header.mast::after{ /* faint compass rose */
 .mast .sub{
   margin-top:12px;max-width:860px;color:#c7d3df;font-size:14.5px;
 }
+/* Masthead has desktop/mobile text variants: one-line title on desktop,
+   stacked "America's / Boating Club" on phones; "An audit…" vs "Audit…";
+   and a long vs short intro line. Only one of each pair shows at a time. */
+.mast h1 .h1-break{display:none}
+.mast .subtitle-mob{display:none}
+.mast .copy-mob{display:none}
+@media(max-width:560px){
+  .mast h1 .h1-break{display:inline}
+  .mast .subtitle-desk{display:none}
+  .mast .subtitle-mob{display:inline}
+  .mast .copy-desk{display:none}
+  .mast .copy-mob{display:block}
+}
 /* ---------------- top deck: the whole masthead + tabs stay pinned ---------------- */
 .topdeck{position:sticky;top:0;z-index:60}
 /* ---------------- tab navigation ---------------- */
@@ -453,11 +466,12 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
 <div class="topdeck" id="topdeck">
 <header class="mast">
   <div class="mast-inner">
-    <h1>America's Boating Club<br><em>An audit of the Web Ecosystem</em></h1>
-    <p class="sub">Every figure on this chart was computed by script from pages crawled across the
-    America's Boating Club web ecosystem and from data captured by interacting with its club locator,
-    schedule pages, and storefronts. Nothing here is typed in by hand — see the
+    <h1>America's<br class="h1-break"> Boating Club<br><em class="subtitle-desk">An audit of the Web Ecosystem</em><em class="subtitle-mob">Audit of the Web Ecosystem</em></h1>
+    <p class="sub copy-desk">Every figure here is computed by script from a crawl of the America's Boating
+    Club web ecosystem and its locator, schedules, and storefronts — nothing typed by hand. See the
     <a href="#provenance" style="color:#e8d9ae">Sources &amp; Methods</a> block.</p>
+    <p class="sub copy-mob">Every figure is computed, not typed by hand — see
+    <a href="#provenance" style="color:#e8d9ae">Sources &amp; Methods</a>.</p>
   </div>
 </header>
 
@@ -938,7 +952,7 @@ buildKPIs(kpiHost('commerce'), [
   [totalProducts, 'Products across 3 stores'],
   [D.commerce.ships_store.products, 'Ship’s Store items'],
   [D.commerce.enrolmart.products, 'EnrolMart courses'],
-  [D.commerce.cpdean_awards.products, 'C.P. Dean awards']
+  [D.commerce.cpdean_awards.products, 'Award Products']
 ]);
 buildKPIs(kpiHost('channel'), [
   [D.videos.total, 'Videos'],
@@ -952,11 +966,17 @@ buildKPIs(kpiHost('fleet'), [
   [distinctAnalyticsIds, 'Analytics IDs · ' + sharedAnalyticsIds + ' shared'],
   [distinctPlatforms, 'Tech platforms']
 ]);
+// Source scripts = distinct scripts named across the pipeline stages (one
+// stage — interactive captures — runs several), counted from the data so the
+// KPI can't drift from D.provenance.
+var provScripts = {};
+D.provenance.pipeline.forEach(function(st){
+  (st.script || '').split(',').forEach(function(s){ s = s.trim(); if(s) provScripts[s] = 1; });
+});
 buildKPIs(kpiHost('provenance'), [
-  [D.site.pages_fetched, 'Pages surveyed'],
-  [D.tech.properties.length, 'Web properties'],
   [Object.keys(D.provenance.dataset_sources).length, 'Datasets'],
-  [D.provenance.pipeline.length, 'Pipeline stages']
+  [D.provenance.pipeline.length, 'Pipeline stages'],
+  [Object.keys(provScripts).length, 'Source scripts']
 ]);
 
 /* ---------- CH1 · club map: three views (dots / clubs-by-state / per-capita) ----------
@@ -1886,7 +1906,7 @@ var SEV = {
   CRITICAL: {g:'⚑', cls:'sev-crit', rank:0},
   HIGH:     {g:'▲', cls:'sev-high', rank:1},
   MEDIUM:   {g:'■', cls:'sev-med',  rank:2},
-  STABLE:   {g:'●', cls:'sev-sound',rank:3}
+  WORKING:  {g:'●', cls:'sev-sound',rank:3}
 };
 // Plain-language meaning of the audit's severity scale (business impact, not
 // technical purity). Shared by the Problems and Funnels tabs so the pills are
@@ -1895,7 +1915,7 @@ var SEV_DEFS = [
   ['CRITICAL','core action breaks'],
   ['HIGH','significant flaw'],
   ['MEDIUM','minor flaw'],
-  ['STABLE','working well']
+  ['WORKING','healthy, no action needed']
 ];
 function severityLegend(intro){
   var box = el('div', {class:'sev-legend'});
@@ -1936,11 +1956,11 @@ function severityLegend(intro){
     ['MEDIUM','TRUST','Copyright years disagree across the family','© 2026 (flagship, course, store), © 2025 (usps.org), © 2024 (channel), © 2021 (giveabc). Date drift is the visible symptom of no shared content governance.','page footers: flagship © 2026 · usps.org © 2025 · channel © 2024 · giveabc.org © 2021'],
     ['MEDIUM','ARCHITECTURE','Flagship paid-course LMS root errored during crawl','course.americasboatingcourse.com returned a server error on direct fetch of the root URL; the /sign-in path responded. Paying customers may hit this.','fetch attempt, 11 Jun 2026','Reproduced: it is marked “not crawled” in our matrix for this reason.'],
     ['MEDIUM','CONVERSION','Email capture popup with no offer','The flagship popup asks “Want to be a better boater?” with a bare email field — no lead magnet, no stated cadence, no incentive.','flagship homepage popup'],
-    ['STABLE','CONTENT','Blog is alive and aimed at real keywords','Recent posts (VHF radio how-to, 2026 Vessel Safety Check, National Safe Boating Week) plus state-targeted pieces. The strategy is right; the technical layer underneath it is what’s failing.','/about/news-and-information'],
-    ['STABLE','CONVERSION','Course sales site is the model the rest should follow','americasboatingcourse.com shows the price, leads with Enroll Now, lists chapters, and maintains state-law pages — proof the org can ship a coherent funnel when one team owns it.','americasboatingcourse.com'],
-    ['STABLE','BRAND','Real differentiation assets exist but go unsaid','On-the-water training, 300 local clubs, free vessel safety checks, a human follow-up from a local boater after purchase — none of it is framed against the free online competitors that own the SERP.','flagship course-details pages vs. the free competitors from the SERP test above'],
-    ['STABLE','REACH','boatlive365.org shows the family can do SEO hygiene','Canonical, OG tags, robots directives all present. The competence exists in-house or in-vendor; it just hasn’t been applied to the flagship.','boatlive365 meta','Confirmed: our platform check reads it as WordPress with full meta.'],
-    ['STABLE','DATA','Analytics exists on at least one property','GTM (GTM-TRBZFNR5) fires on the portal. The audit could not confirm GA4/GTM on the flagship from extracted text.','portal page source','CORRECTION: our crawl DID find GA4 on the flagship (G-0M1N6DYNBW, G-GGW5NS7YYS) — see the matrix.']
+    ['WORKING','CONTENT','Blog is alive and aimed at real keywords','Recent posts (VHF radio how-to, 2026 Vessel Safety Check, National Safe Boating Week) plus state-targeted pieces. The strategy is right; the technical layer underneath it is what’s failing.','/about/news-and-information'],
+    ['WORKING','CONVERSION','Course sales site is the model the rest should follow','americasboatingcourse.com shows the price, leads with Enroll Now, lists chapters, and maintains state-law pages — proof the org can ship a coherent funnel when one team owns it.','americasboatingcourse.com'],
+    ['WORKING','BRAND','Real differentiation assets exist but go unsaid','On-the-water training, 300 local clubs, free vessel safety checks, a human follow-up from a local boater after purchase — none of it is framed against the free online competitors that own the SERP.','flagship course-details pages vs. the free competitors from the SERP test above'],
+    ['WORKING','REACH','boatlive365.org shows the family can do SEO hygiene','Canonical, OG tags, robots directives all present. The competence exists in-house or in-vendor; it just hasn’t been applied to the flagship.','boatlive365 meta','Confirmed: our platform check reads it as WordPress with full meta.'],
+    ['WORKING','DATA','Analytics exists on at least one property','GTM (GTM-TRBZFNR5) fires on the portal. The audit could not confirm GA4/GTM on the flagship from extracted text.','portal page source','CORRECTION: our crawl DID find GA4 on the flagship (G-0M1N6DYNBW, G-GGW5NS7YYS) — see the matrix.']
   ];
   // A live page where each finding can be seen, aligned 1:1 with FIND above
   // (keep in sync). Every URL is one we actually fetched (HTTP 200 in the crawl
@@ -1994,12 +2014,12 @@ function severityLegend(intro){
     sw.appendChild(row);
   });
   /* severity bars */
-  var counts = {CRITICAL:0,HIGH:0,MEDIUM:0,STABLE:0};
+  var counts = {CRITICAL:0,HIGH:0,MEDIUM:0,WORKING:0};
   FIND.forEach(function(f){ counts[f[0]]++; });
   document.getElementById('sev-flag').textContent = FIND.length + ' findings';
   var sb = document.getElementById('sevbars');
   var maxc = Math.max.apply(null, Object.keys(counts).map(function(k){return counts[k];}));
-  ['CRITICAL','HIGH','MEDIUM','STABLE'].forEach(function(k){
+  ['CRITICAL','HIGH','MEDIUM','WORKING'].forEach(function(k){
     var sv = SEV[k];
     var row = el('div', {class:'barrow'});
     row.appendChild(el('span', {class:'lab', style:'width:78px'}, sv.g + ' ' + k.toLowerCase()));
@@ -2012,7 +2032,7 @@ function severityLegend(intro){
   document.getElementById('sev-legend').appendChild(
     severityLegend('What the levels mean — severity is business impact, not technical purity:'));
   /* findings list */
-  document.getElementById('findings-flag').textContent = '4 critical · 8 high · 7 medium · 5 stable';
+  document.getElementById('findings-flag').textContent = '4 critical · 8 high · 7 medium · 5 working';
   var fw = document.getElementById('findings');
   FIND.slice().sort(function(a,b){return SEV[a[0]].rank-SEV[b[0]].rank;}).forEach(function(f){
     var sv = SEV[f[0]];
@@ -2042,7 +2062,7 @@ function severityLegend(intro){
     [FIND.length, 'Findings'],
     [counts.CRITICAL, 'Critical'],
     [counts.HIGH, 'High'],
-    [counts.STABLE, 'Stable']
+    [counts.WORKING, 'Working']
   ]);
 })();
 
