@@ -656,9 +656,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
       <span class="lede" id="fleet-lede"></span></div>
     <div class="kpis" data-kpis="fleet"></div>
     <p class="sec-note">Who measures what, and what each property runs on — read from the page
-    source of every property we could crawl. Blank means scanned but not detected; "not crawled"
-    means the site was down or its root errored, and is labeled as such rather than left to read
-    as a clean bill of health.</p>
+    source of every property in the estate. A blank cell means scanned but nothing detected, not a guess.</p>
     <div class="card">
       <h3>Property profiles <span class="h3-flag">live homepages</span></h3>
       <div id="property-gallery" class="prop-gallery"></div>
@@ -2190,13 +2188,15 @@ function severityLegend(intro){
        D.commerce.ships_store.unpriced_items + ' of ' + D.commerce.ships_store.products +
        ' products list no price.'; },
      act:'Cheap, visible wins. Start with the pages a sitemap still advertises to search engines, then the unpriced store items — a price-less product is a dead end for a self-service buyer.'},
-    {col:'current', src:'data', link:'fleet', title:'Move the Ship’s Store off retired Universal Analytics',
-     ev:function(){ var s = D.tech.properties.filter(function(p){return p.domain==='store.shopusps.org';})[0];
-       var ua = (s && s.universal_analytics) || []; var ga4 = (s && s.ga4) || [];
-       return 'store.shopusps.org still fires Universal Analytics (' + (ua.join(', ') || 'UA-') + ')' +
-       (ga4.length ? '' : ' and carries no GA4') + '. Google stopped processing Universal Analytics on 1 July 2023, ' +
-       'so the store’s traffic and sales numbers now go nowhere — read from the store’s own page source in our crawl.'; },
-     act:'Add a GA4 tag (or a GTM container) to the store and retire the dead UA property. It’s the one storefront with real revenue and currently no working analytics — a small change for a real blind spot.'},
+    {col:'current', src:'data', link:'fleet', title:'Retire the dead Universal Analytics tags',
+     ev:function(){ var ua = D.tech.properties.filter(function(p){return (p.universal_analytics||[]).length;});
+       var names = ua.map(function(p){ return p.domain + ' (' + p.universal_analytics.join(', ') + ')'; });
+       var blind = ua.filter(function(p){ return !(p.ga4||[]).length; }).map(function(p){ return p.domain; });
+       return names.length + (names.length===1?' property':' properties') + ' still load retired Universal ' +
+       'Analytics — ' + names.join(' and ') + '. Google stopped processing it on 1 July 2023, so those hits go ' +
+       'nowhere' + (blind.length ? '; ' + blind.join(' and ') + ' fires UA and no GA4 at all, so it is flying blind' : '') +
+       '. Read from each property’s page source in our crawl.'; },
+     act:'Delete the dead UA tags from both, and give the Ship’s Store a GA4 (or GTM) tag — it’s the one storefront with real revenue and, today, no working analytics at all.'},
     /* ---- bigger moves (col:'new') ---- */
     {col:'new', src:'data', link:'fleet', title:'Normalize the social identities',
      ev:function(){ var by = socialIdentities();
