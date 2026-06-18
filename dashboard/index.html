@@ -922,13 +922,14 @@ var distinctPlatforms = Object.keys(platformSet).length;
 buildKPIs(kpiHost('clubs'), [
   [D.clubs.total, 'Local clubs'],
   [D.clubs.states_with_clubs, 'States & territories'],
-  [D.schedule.total_upcoming, 'Upcoming classes'],
-  [D.schedule.clubs_with_classes, 'Clubs teaching now']
+  [D.clubs.with_website, 'With a website'],
+  [D.clubs.nearest_neighbor.median_miles, 'Median miles to nearest club']
 ]);
 buildKPIs(kpiHost('education'), [
   [D.education.courses, 'Courses'],
   [D.education.seminars, 'Seminars'],
-  [D.commerce.enrolmart.products, 'Online courses (EnrolMart)']
+  [D.schedule.total_upcoming, 'Upcoming classes'],
+  [D.schedule.clubs_with_classes, 'Clubs teaching now']
 ]);
 buildKPIs(kpiHost('commerce'), [
   [totalProducts, 'Products across 3 stores'],
