@@ -225,3 +225,41 @@
 [2026-06-14T01:12:36Z]   americasboatingclub.org: 103 fetched, 0 skipped, 4 failed
 [2026-06-14T01:12:36Z] Index: /Users/fhaile/Dropbox/Sites/FH Website/ai-abc/data/crawl/index.jsonl
 [2026-06-14T01:12:36Z] External (uncrawled) domains report: /Users/fhaile/Dropbox/Sites/FH Website/ai-abc/data/crawl/external_domains.json
+[2026-06-18T20:43:12Z] Resuming: found 2288 URLs already handled in a previous run; they will not be fetched again.
+[2026-06-18T20:43:12Z] Crawl starting for 1 domains: www.usps.org
+[2026-06-18T20:43:43Z] www.usps.org: FAILED https://www.usps.org/donations/DonationGenFund.php?ref=MMSI&ret_link=index.php (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:43:55Z] www.usps.org: progress — 25 pages fetched, 50 queued.
+[2026-06-18T20:44:03Z] www.usps.org: FAILED https://www.usps.org/donations/DonationGenFund.php?ref=MMSI (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:44:22Z] www.usps.org: FAILED https://www.usps.org/pompanosafeboating.com/ (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:44:46Z] www.usps.org: progress — 50 pages fetched, 172 queued.
+[2026-06-18T20:45:01Z] www.usps.org: FAILED https://www.usps.org/sewan (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:45:15Z] www.usps.org: FAILED https://www.usps.org/dearborn-sss (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:45:18Z] www.usps.org: FAILED https://www.usps.org/href='https://www.usps.org/localusps/ithaca (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:45:38Z] www.usps.org: progress — 75 pages fetched, 357 queued.
+[2026-06-18T20:46:19Z] www.usps.org: progress — 100 pages fetched, 329 queued.
+[2026-06-18T20:46:32Z] www.usps.org: FAILED https://www.usps.org/localusps/keywest/rendezvous.htm (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:46:53Z] www.usps.org: FAILED http://www.usps.org/national/itcom/disclaimer.html (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:46:55Z] www.usps.org: FAILED http://www.usps.org/national/itcom/privacy.html (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:46:56Z] www.usps.org: FAILED http://www.usps.org/national/itcom/trademark.html (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:47:04Z] www.usps.org: progress — 125 pages fetched, 299 queued.
+[2026-06-18T20:47:41Z] www.usps.org: progress — 150 pages fetched, 267 queued.
+[2026-06-18T20:48:07Z] www.usps.org: FAILED https://www.usps.org/localusps/coos/aboutbackground.html (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:48:21Z] www.usps.org: progress — 175 pages fetched, 239 queued.
+[2026-06-18T20:48:57Z] www.usps.org: FAILED https://www.usps.org/index.php/2016-01-06-11-01-04/sss-cooperative-charting (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:49:01Z] www.usps.org: FAILED http://www.usps.org/newpublic2/join.html (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:49:03Z] www.usps.org: progress — 200 pages fetched, 203 queued.
+[2026-06-18T20:49:30Z] www.usps.org: FAILED http://www.usps.org/newpublic2/about.html (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:49:31Z] www.usps.org: FAILED https://www.usps.org/localusps/patuxent/contact@abcsomd.org (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:49:43Z] www.usps.org: progress — 225 pages fetched, 166 queued.
+[2026-06-18T20:49:51Z] www.usps.org: FAILED https://www.usps.org/localusps/smithtown/summer%20boating%20course%20schedule.htm (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:50:04Z] www.usps.org: FAILED https://www.usps.org/localusps/smithtown/Boat%20Safety%20District3usps%20New%20York_files (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:50:12Z] www.usps.org: FAILED http://www.usps.org/national/rules/Squadron_Bylaws.html (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:50:17Z] www.usps.org: FAILED http://usps.org/national/itcom/disclaimer.html (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:50:18Z] www.usps.org: FAILED http://usps.org/national/itcom/trademark.html (HTTPError: HTTP Error 404: Not Found)
+[2026-06-18T20:50:35Z] www.usps.org: progress — 250 pages fetched, 132 queued.
+[2026-06-18T20:50:35Z] www.usps.org: page cap of 250 reached — 132 discovered URLs were NOT fetched. They are listed in unfetched_www.usps.org.json; raise max_pages for this domain and re-run to get them (already-fetched pages are skipped on resume).
+[2026-06-18T20:50:35Z] ======================================================================
+[2026-06-18T20:50:35Z] Crawl finished in 7.4 minutes. Per-domain results:
+[2026-06-18T20:50:35Z]   www.usps.org: 250 fetched, 40 skipped, 20 failed, 132 left unfetched at cap
+[2026-06-18T20:50:35Z] Index: /Users/fhaile/Dropbox/Sites/FH Website/ai-abc/data/crawl/index.jsonl
+[2026-06-18T20:50:35Z] External (uncrawled) domains report: /Users/fhaile/Dropbox/Sites/FH Website/ai-abc/data/crawl/external_domains.json

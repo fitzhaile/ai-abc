@@ -1,18 +1,18 @@
 {
-  "finished_at": "2026-06-11T16:12:42Z",
-  "duration_minutes": 20.7,
+  "finished_at": "2026-06-18T20:50:35Z",
+  "duration_minutes": 7.4,
   "per_domain": {
     "americasboatingclub.org": {
-      "fetched": 2,
-      "skipped": 0,
-      "failed": 2,
-      "capped": 0
-    },
-    "www.usps.org": {
       "fetched": 0,
       "skipped": 0,
       "failed": 0,
       "capped": 0
+    },
+    "www.usps.org": {
+      "fetched": 250,
+      "skipped": 40,
+      "failed": 20,
+      "capped": 132
     },
     "www.americasboatingcourse.com": {
       "fetched": 0,
@@ -21,7 +21,7 @@
       "capped": 0
     },
     "americasboatingchannel.uscreen.io": {
-      "fetched": 998,
+      "fetched": 0,
       "skipped": 0,
       "failed": 0,
       "capped": 0
@@ -51,10 +51,10 @@
       "capped": 0
     },
     "portal.americasboatingclub.org": {
-      "fetched": 25,
+      "fetched": 0,
       "skipped": 0,
-      "failed": 3,
-      "capped": 20
+      "failed": 0,
+      "capped": 0
     },
     "www.uspsonline.org": {
       "fetched": 0,
@@ -63,5 +63,5 @@
       "capped": 0
     }
   },
-  "total_records": 1030
+  "total_records": 310
 }

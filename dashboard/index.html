@@ -154,6 +154,12 @@ section{margin-top:54px}
   letter-spacing:.14em;font-size:19px;
 }
 .sec-head .lede{margin-left:auto;font-size:13px;color:var(--ink-soft);font-style:italic}
+/* On phones the lede can't share the heading row with a short h2 (e.g. the
+   one-word "Opportunities") — drop it to its own line under the heading. */
+@media(max-width:700px){
+  .sec-head{flex-wrap:wrap}
+  .sec-head .lede{flex-basis:100%;margin-left:0;margin-top:3px;text-align:left}
+}
 .sec-note{font-size:13.5px;color:var(--ink-soft);margin:8px 0 18px;max-width:900px}
 .grid{display:grid;gap:22px}
 /* grid items default to min-width:auto, which lets a wide table/chart force the
@@ -180,6 +186,10 @@ section{margin-top:54px}
   margin-left:auto;text-align:right;white-space:nowrap;
   font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);
 }
+/* The schedule card's flag is long ("41 of 255 clubs · 98 courses / 50
+   seminars") and overflows the narrow 3-up card. Drop it to its own
+   full-width line under the stacked title and let it wrap. */
+.sched-h3 .h3-flag{flex-basis:100%;margin-left:0;text-align:left;white-space:normal}
 /* ---------------- KPI strip ---------------- */
 .kpis{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
@@ -552,7 +562,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     the catalog-by-subject card below breaks down.</p>
     <div class="grid g3">
       <div class="card">
-        <h3>Upcoming classes by start month <span class="h3-flag" id="sched-flag"></span></h3>
+        <h3 class="sched-h3"><span>Upcoming classes<br>by start month</span> <span class="h3-flag" id="sched-flag"></span></h3>
         <div id="monthchart"></div>
         <p class="dim" id="sched-bystate" style="font-size:12px;margin-top:6px"></p>
       </div>
@@ -706,7 +716,7 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     <p class="sec-note audit-note">How a visitor gets from the flagship to the four things the org needs them
     to do — join, find a class, shop, donate — step by step as the audit observed them on 11&nbsp;Jun&nbsp;2026.
     <b>Each funnel carries one severity pill for the path as a whole</b> — the audit's read of how well it
-    converts, on the same Critical&nbsp;→&nbsp;Sound scale as the Problems tab; red-flagged steps are where a
+    converts, on the same Critical&nbsp;→&nbsp;Working scale as the Problems tab; red-flagged steps are where a
     reasonable visitor stalls or leaves. <b>Audit findings, not measured traffic:</b> no conversion or drop-off
     data here, only the observed path and its friction.</p>
     <div id="funnel-sev-legend"></div>
@@ -1950,10 +1960,10 @@ function severityLegend(intro){
     ['HIGH','IDENTITY','Three Twitter/X identities, three Facebook pages, two YouTube channels','@uspsabc (flagship), @boatingisfun (store + giveabc), @AmericasBoating (channel). giveabc.org also links a personal linkedin.com/in/ profile for the org instead of the company page.','social icons in the footers of americasboatingclub.org, giveabc.org, and americasboatingchannel.com','Confirmed — see the social handles gathered on the Opportunities tab.'],
     ['HIGH','TRUST','Stale event banner + template-token leak on the join page','The portal join page — the actual conversion surface — promotes “2025 Fall Governing Board Meeting” in June 2026 and renders raw ##LOC[OK]## / ##LOC[Cancel]## strings.','portal USPS-ABC-Join.aspx'],
     ['MEDIUM','TRUST','Copy errors concentrated on revenue pages','“make boating boater” (donation hero), “Knits and Lines” (course sales page), “on a e boat” and “the, spring boating season” (blog). Collectively they read as unattended.','giveabc · course site · blog'],
-    ['MEDIUM','SEARCH','Listing pages shipped without SEO basics','News listing title is “News and Information” — no brand, no meta description. usps.org homepage title is “Home” with no description.','news listing meta · usps.org meta'],
+    ['MEDIUM','SEARCH','Listing pages shipped without SEO basics','News listing title is “News and Information” — no brand, no meta description. usps.org homepage title is “Home” with no description.','news listing meta · usps.org meta','Re-crawled usps.org (now reachable): its homepage <title> is still just “Home”, no meta description — confirmed.'],
     ['MEDIUM','CONVERSION','Member-benefits CTA exposes a raw component URL','The /join page’s “Members Only Benefits” button links to /index.php/component/content/article/142?Itemid=265 — an internal Joomla path where a friendly URL belongs.','/index.php/join'],
     ['MEDIUM','DATA','Corrupted entries in the class-finder state list','The state dropdown contains “CN” and “Ja” alongside valid codes — visible data corruption in the org’s primary local-search tool.','cfindx.cgi state select'],
-    ['MEDIUM','TRUST','Copyright years disagree across the family','© 2026 (flagship, course, store), © 2025 (usps.org), © 2024 (channel), © 2021 (giveabc). Date drift is the visible symptom of no shared content governance.','page footers: flagship © 2026 · usps.org © 2025 · channel © 2024 · giveabc.org © 2021'],
+    ['MEDIUM','TRUST','Copyright years disagree across the family','© 2026 (flagship, course, store), © 2025 (usps.org), © 2024 (channel), © 2021 (giveabc). Date drift is the visible symptom of no shared content governance.','page footers: flagship © 2026 · usps.org © 2025 · channel © 2024 · giveabc.org © 2021','Re-crawled usps.org: its own 244 pages carry © years spanning 2005–2026 — the drift runs inside this one legacy site too.'],
     ['MEDIUM','ARCHITECTURE','Flagship paid-course LMS root errored during crawl','course.americasboatingcourse.com returned a server error on direct fetch of the root URL; the /sign-in path responded. Paying customers may hit this.','fetch attempt, 11 Jun 2026','Reproduced: it is marked “not crawled” in our matrix for this reason.'],
     ['MEDIUM','CONVERSION','Email capture popup with no offer','The flagship popup asks “Want to be a better boater?” with a bare email field — no lead magnet, no stated cadence, no incentive.','flagship homepage popup'],
     ['WORKING','CONTENT','Blog is alive and aimed at real keywords','Recent posts (VHF radio how-to, 2026 Vessel Safety Check, National Safe Boating Week) plus state-targeted pieces. The strategy is right; the technical layer underneath it is what’s failing.','/about/news-and-information'],
@@ -1987,11 +1997,11 @@ function severityLegend(intro){
     null,                                                                                   // copyright-year drift
     'https://course.americasboatingcourse.com/',                                            // paid-course LMS root errored
     'https://americasboatingclub.org/',                                                     // email popup no offer
-    'https://americasboatingclub.org/index.php/about/news-and-information',                 // blog is alive (sound)
-    'https://www.americasboatingcourse.com/',                                               // course sales site (sound)
+    'https://americasboatingclub.org/index.php/about/news-and-information',                 // blog is alive (working)
+    'https://www.americasboatingcourse.com/',                                               // course sales site (working)
     null,                                                                                   // differentiation unsaid
-    'https://boatlive365.org/',                                                             // boatlive365 SEO (sound)
-    'https://portal.americasboatingclub.org/'                                               // analytics on portal (sound)
+    'https://boatlive365.org/',                                                             // boatlive365 SEO (working)
+    'https://portal.americasboatingclub.org/'                                               // analytics on portal (working)
   ];
   // Map each finding (by object reference, so it survives the sort below) to its
   // page. Warn loudly if the two arrays fall out of alignment.
@@ -2180,6 +2190,13 @@ function severityLegend(intro){
        D.commerce.ships_store.unpriced_items + ' of ' + D.commerce.ships_store.products +
        ' products list no price.'; },
      act:'Cheap, visible wins. Start with the pages a sitemap still advertises to search engines, then the unpriced store items — a price-less product is a dead end for a self-service buyer.'},
+    {col:'current', src:'data', link:'fleet', title:'Move the Ship’s Store off retired Universal Analytics',
+     ev:function(){ var s = D.tech.properties.filter(function(p){return p.domain==='store.shopusps.org';})[0];
+       var ua = (s && s.universal_analytics) || []; var ga4 = (s && s.ga4) || [];
+       return 'store.shopusps.org still fires Universal Analytics (' + (ua.join(', ') || 'UA-') + ')' +
+       (ga4.length ? '' : ' and carries no GA4') + '. Google stopped processing Universal Analytics on 1 July 2023, ' +
+       'so the store’s traffic and sales numbers now go nowhere — read from the store’s own page source in our crawl.'; },
+     act:'Add a GA4 tag (or a GTM container) to the store and retire the dead UA property. It’s the one storefront with real revenue and currently no working analytics — a small change for a real blind spot.'},
     /* ---- bigger moves (col:'new') ---- */
     {col:'new', src:'data', link:'fleet', title:'Normalize the social identities',
      ev:function(){ var by = socialIdentities();
@@ -2195,16 +2212,25 @@ function severityLegend(intro){
      act:'Serve the channel on the owned domain — or at minimum fix the canonical tags — so search equity stops leaking to Uscreen.'},
     {col:'new', src:'data', link:'fleet', title:'Decide the legacy parent site’s fate',
      ev:function(){ var u = D.tech.properties.filter(function(p){return p.domain==='usps.org';})[0];
-       return 'usps.org could not be crawled at all — it timed out on every attempt, ' +
-       (u && !u.crawled ? 'and is marked “not crawled” in the matrix' : 'confirmed again today') +
-       '. Yet the flagship still routes “Find a class” to a CGI form hosted on it.'; },
-     act:'If members still need what lives there, stabilize or move it; if not, retire it behind redirects. A flagship-adjacent property that times out erodes trust in every link still pointing at it.'},
+       var ua = (u && u.universal_analytics) || [];
+       return 'Reachable again, usps.org now crawls — ' + (u ? u.pages_scanned : 'many') + ' pages of legacy ' +
+       (u ? u.platform : 'custom') + (ua.length ? ', still firing retired Universal Analytics (' + ua.join(', ') + ')' : '') +
+       '. The flagship still routes “Find a class” to a CGI form hosted on it.'; },
+     act:'If members still need what lives there, stabilize or move it; if not, retire it behind redirects. A flagship-adjacent legacy site — old stack, retired analytics — erodes trust in every link still pointing at it.'},
     {col:'new', src:'audit', link:'problems', title:'Content governance sweep + SSO roadmap',
      ev:function(){ var plats = {}; D.tech.properties.forEach(function(p){ if(p.platform){ plats[p.platform.split(' ·')[0].split(' (')[0]]=1; } });
        return 'Copyright years drift across the family (flagship © 2026, giveabc © 2021) and the platform table ' +
        'shows ' + Object.keys(plats).length + ' distinct stacks — each its own login. A member can plausibly hold ' +
        'four separate credential sets.'; },
-     act:'Near-term: fix the typos on revenue pages, the stale banners, the copyright drift. Long-term: a single-sign-on plan to collapse the logins — a large iMIS-centered project, but the header shouldn’t list five credential systems forever.'}
+     act:'Near-term: fix the typos on revenue pages, the stale banners, the copyright drift. Long-term: a single-sign-on plan to collapse the logins — a large iMIS-centered project, but the header shouldn’t list five credential systems forever.'},
+    {col:'new', src:'data', link:'fleet', title:'Consolidate the scattered analytics IDs',
+     ev:function(){ var use={}; D.tech.properties.forEach(function(p){
+         (p.ga4||[]).concat(p.universal_analytics||[], p.gtm||[]).forEach(function(id){ use[id]=(use[id]||0)+1; }); });
+       var distinct=Object.keys(use).length, shared=Object.keys(use).filter(function(k){return use[k]>1;}).length;
+       return distinct + ' distinct GA4 / Universal-Analytics / GTM measurement IDs fire across the ' +
+       D.tech.properties.length + ' crawled properties, only ' + shared + ' shared between any two — read from each ' +
+       'property’s page source. No single account sees a visitor’s path across the family.'; },
+     act:'Pick one GA4 property and a shared GTM container, then map every site onto it. Cross-domain measurement is the only way to see the join, shop, and donate funnels that already span four domains.'}
   ];
   var cols = {current: document.getElementById('opps-current'), 'new': document.getElementById('opps-new')};
   RECS.forEach(function(r){

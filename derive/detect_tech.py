@@ -45,7 +45,7 @@ PROPERTIES = [
     ("americasboatingclub.org",            "americasboatingclub.org",
      "Public flagship site"),
     ("usps.org",                           "www.usps.org",
-     "Legacy parent / member site — homepage captured live 2026-06-14"),
+     "Legacy parent / member site — full site crawled 2026-06-18"),
     ("portal.americasboatingclub.org",     "portal.americasboatingclub.org",
      "Membership portal — join, events, donations"),
     ("store.shopusps.org",                 "store.shopusps.org",

@@ -104,16 +104,19 @@ files from capped runs.
 
 ## Known limitations (deliberate, documented)
 
-- **www.usps.org could not be crawled.** It answered one request at the start
-  of the session, then timed out from every network tried (local, browser,
-  remote fetcher), and was still down on a 2026-06-13 re-check. The trade-off:
-  its pages are absent from the corpus; its inbound/outbound links still appear
-  in the link graph. Operator-visible consequence: it shows as **"not crawled"**
-  in the Web Properties analytics matrix and platform table (a labeled gap, not a
-  blank that reads as "measured, found nothing"). Re-run
-  `python3 scrape/crawl.py --domains www.usps.org` when the site is reachable
-  again. The same applies to `course.americasboatingcourse.com`, whose root
-  returned a server error during the crawl (only `/sign-in` responded).
+- **www.usps.org is now fully crawled (re-crawled 2026-06-18).** It timed out
+  from every network during the original session (still down on a 2026-06-13
+  re-check), so early builds carried only a single live homepage capture. The
+  site has since come back up and was re-crawled: 250 pages fetched (244 HTML),
+  20 failed, 132 left at the page cap and listed in
+  `data/crawl/unfetched_www.usps.org.json` (raise `max_pages` and re-run to get
+  them). It now appears as a **measured** property in the Web Properties matrix —
+  a legacy Custom-PHP site running GA4 plus a retired Universal Analytics tag.
+- **course.americasboatingcourse.com is login-gated.** Its root now
+  302-redirects to the marketing site (`www.americasboatingcourse.com`); during
+  the original crawl that root returned a server error. Only its public
+  `/sign-in` page is reachable without credentials, so it shows as a single
+  measured page rather than a full crawl.
 - **portal.americasboatingclub.org is login-gated** (iMIS). Only its public
   login/news pages (25) were fetched; 20 deeper URLs were left at the page cap
   and are listed in `data/crawl/unfetched_portal.americasboatingclub.org.json`.

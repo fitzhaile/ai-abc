@@ -2,7 +2,7 @@
  "_provenance": {
   "description": "One record per URL the crawler handled, with per-domain totals. Source of truth is data/crawl/index.jsonl.",
   "script": "derive/extract.py",
-  "extracted_at": "2026-06-11T21:18:15Z",
+  "extracted_at": "2026-06-18T20:51:32Z",
   "sources": [
    "data/crawl/index.jsonl"
   ],
@@ -23,9 +23,9 @@
    "fetched": 1248
   },
   "americasboatingclub.org": {
-   "fetched": 452,
-   "other": 23,
-   "failed": 21,
+   "fetched": 555,
+   "other": 27,
+   "failed": 25,
    "skipped": 2
   },
   "boatlive365.org": {
@@ -63,10 +63,11 @@
    "failed": 4
   },
   "www.usps.org": {
-   "other": 14,
-   "failed": 10,
-   "skipped": 1,
-   "pdf_recorded": 3
+   "fetched": 248,
+   "other": 62,
+   "skipped": 4,
+   "pdf_recorded": 36,
+   "failed": 20
   }
  },
  "broken_links": [
@@ -146,6 +147,16 @@
    "linked_from": "sitemap:https://americasboatingclub.org/index.php?option=com_jmap&view=sitemap&format=xml"
   },
   {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/cold-water-safety-what-you-need-to-know-as-temperatures-drop",
+   "domain": "americasboatingclub.org",
+   "linked_from": "unfetched queue from a previous run"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/benefits",
+   "domain": "americasboatingclub.org",
+   "linked_from": "unfetched queue from a previous run"
+  },
+  {
    "url": "https://www.americasboatingclub.org/index.php/component/content/article/142?Itemid=265",
    "domain": "americasboatingclub.org",
    "linked_from": "https://www.americasboatingclub.org/index.php/join"
@@ -161,9 +172,19 @@
    "linked_from": "https://www.americasboatingclub.org/index.php/get-a-replacement-boating-card"
   },
   {
+   "url": "https://www.americasboatingclub.org/index.php/find-a-class-near-you",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-is-a-boating-safety-course"
+  },
+  {
    "url": "https://www.americasboatingclub.org/index.php/member-benefits",
    "domain": "americasboatingclub.org",
    "linked_from": "unfetched queue from a previous run"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/seminars/safety/ais-electronics-for-boaters",
+   "domain": "americasboatingclub.org",
+   "linked_from": "https://www.americasboatingclub.org/index.php/about/news-and-information/why-take-our-boating-safety-classes"
   },
   {
    "url": "https://boatlive365.org/resources/bobber-water-safety-dog/www.bobber.info",
@@ -194,6 +215,106 @@
    "url": "https://www.americasboatingcourse.com/additional-training",
    "domain": "www.americasboatingcourse.com",
    "linked_from": "sitemap:https://www.americasboatingcourse.com/sitemap.xml"
+  },
+  {
+   "url": "http://usps.org/national/itcom/disclaimer.html",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/localusps/smithtown/"
+  },
+  {
+   "url": "http://usps.org/national/itcom/trademark.html",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/localusps/smithtown/"
+  },
+  {
+   "url": "http://www.usps.org/national/itcom/disclaimer.html",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/localusps/keywest/"
+  },
+  {
+   "url": "http://www.usps.org/national/itcom/privacy.html",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/localusps/keywest/"
+  },
+  {
+   "url": "http://www.usps.org/national/itcom/trademark.html",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/localusps/keywest/"
+  },
+  {
+   "url": "http://www.usps.org/national/rules/Squadron_Bylaws.html",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/localusps/smithtown/"
+  },
+  {
+   "url": "http://www.usps.org/newpublic2/about.html",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/localusps/patuxent/"
+  },
+  {
+   "url": "http://www.usps.org/newpublic2/join.html",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/localusps/neworleans/"
+  },
+  {
+   "url": "https://www.usps.org/dearborn-sss",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/club-locations"
+  },
+  {
+   "url": "https://www.usps.org/donations/DonationGenFund.php?ref=MMSI",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/php/mmsi_new/"
+  },
+  {
+   "url": "https://www.usps.org/donations/DonationGenFund.php?ref=MMSI&ret_link=index.php",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/php/mmsi_new/mmsiLogin.php?ret_link=index.php"
+  },
+  {
+   "url": "https://www.usps.org/href='https://www.usps.org/localusps/ithaca",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/club-locations"
+  },
+  {
+   "url": "https://www.usps.org/index.php/2016-01-06-11-01-04/sss-cooperative-charting",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/localusps/neworleans/"
+  },
+  {
+   "url": "https://www.usps.org/localusps/coos/aboutbackground.html",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/localusps/coos/"
+  },
+  {
+   "url": "https://www.usps.org/localusps/keywest/rendezvous.htm",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/localusps/keywest/"
+  },
+  {
+   "url": "https://www.usps.org/localusps/patuxent/contact@abcsomd.org",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/localusps/patuxent/"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/Boat%20Safety%20District3usps%20New%20York_files",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/localusps/smithtown/"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/summer%20boating%20course%20schedule.htm",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/localusps/smithtown/"
+  },
+  {
+   "url": "https://www.usps.org/pompanosafeboating.com/",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/club-locations"
+  },
+  {
+   "url": "https://www.usps.org/sewan",
+   "domain": "www.usps.org",
+   "linked_from": "https://www.usps.org/club-locations"
   }
  ],
  "pages": [
@@ -4946,16 +5067,6 @@
    "depth": 0,
    "bytes": 236174,
    "fetched_at": "2026-06-11T15:26:51Z"
-  },
-  {
-   "url": "https://www.usps.org/",
-   "domain": "www.usps.org",
-   "title": null,
-   "http_status": null,
-   "outcome": "failed — URLError: <urlopen error timed out>. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
-   "depth": 0,
-   "bytes": null,
-   "fetched_at": "2026-06-11T15:25:32Z"
   },
   {
    "url": "https://americasboatingchannel.uscreen.io/programs/s1e16-man-overboard-c5d360",
@@ -11426,136 +11537,6 @@
    "depth": 3,
    "bytes": 74232,
    "fetched_at": "2026-06-11T15:38:43Z"
-  },
-  {
-   "url": "https://www.usps.org/cgi-bin-nat/eddept/800/cfindx.cgi",
-   "domain": "www.usps.org",
-   "title": null,
-   "http_status": null,
-   "outcome": "failed — URLError: <urlopen error timed out>",
-   "depth": 0,
-   "bytes": null,
-   "fetched_at": "2026-06-11T15:39:05Z"
-  },
-  {
-   "url": "https://www.usps.org/login/member-s-log-in",
-   "domain": "www.usps.org",
-   "title": null,
-   "http_status": null,
-   "outcome": "skipped — URL matches do-not-crawl pattern '/login'",
-   "depth": 0,
-   "bytes": null,
-   "fetched_at": "2026-06-11T15:40:25Z"
-  },
-  {
-   "url": "https://www.usps.org/php/mmsi_new/mmsiLogin.php?ret_link=index.php",
-   "domain": "www.usps.org",
-   "title": null,
-   "http_status": null,
-   "outcome": "failed — URLError: <urlopen error timed out>",
-   "depth": 0,
-   "bytes": null,
-   "fetched_at": "2026-06-11T15:40:26Z"
-  },
-  {
-   "url": "https://www.usps.org/php/eddept/glossary/glossary.php",
-   "domain": "www.usps.org",
-   "title": null,
-   "http_status": null,
-   "outcome": "failed — URLError: <urlopen error timed out>",
-   "depth": 0,
-   "bytes": null,
-   "fetched_at": "2026-06-11T15:41:48Z"
-  },
-  {
-   "url": "https://www.usps.org/php/mmsi_new/",
-   "domain": "www.usps.org",
-   "title": null,
-   "http_status": null,
-   "outcome": "failed — URLError: <urlopen error timed out>",
-   "depth": 0,
-   "bytes": null,
-   "fetched_at": "2026-06-11T15:43:09Z"
-  },
-  {
-   "url": "https://www.usps.org/php/reservations_new/meetings.php",
-   "domain": "www.usps.org",
-   "title": null,
-   "http_status": null,
-   "outcome": "failed — URLError: <urlopen error timed out>",
-   "depth": 0,
-   "bytes": null,
-   "fetched_at": "2026-06-11T15:44:30Z"
-  },
-  {
-   "url": "https://www.usps.org/images/secretary/itcom/disclaimer.pdf",
-   "domain": "www.usps.org",
-   "title": null,
-   "http_status": null,
-   "outcome": "recorded link only — PDF document, body not downloaded",
-   "depth": 0,
-   "bytes": null,
-   "fetched_at": "2026-06-11T15:45:50Z"
-  },
-  {
-   "url": "https://www.usps.org/images/secretary/itcom/trademark.pdf",
-   "domain": "www.usps.org",
-   "title": null,
-   "http_status": null,
-   "outcome": "recorded link only — PDF document, body not downloaded",
-   "depth": 0,
-   "bytes": null,
-   "fetched_at": "2026-06-11T15:45:50Z"
-  },
-  {
-   "url": "https://www.usps.org/images/secretary/itcom/privacy.pdf",
-   "domain": "www.usps.org",
-   "title": null,
-   "http_status": null,
-   "outcome": "recorded link only — PDF document, body not downloaded",
-   "depth": 0,
-   "bytes": null,
-   "fetched_at": "2026-06-11T15:45:50Z"
-  },
-  {
-   "url": "https://usps.org/springfield",
-   "domain": "www.usps.org",
-   "title": null,
-   "http_status": null,
-   "outcome": "failed — URLError: <urlopen error timed out>",
-   "depth": 0,
-   "bytes": null,
-   "fetched_at": "2026-06-11T15:45:51Z"
-  },
-  {
-   "url": "http://www.usps.org/national/eddept/s/main.htm",
-   "domain": "www.usps.org",
-   "title": null,
-   "http_status": null,
-   "outcome": "failed — URLError: <urlopen error timed out>",
-   "depth": 0,
-   "bytes": null,
-   "fetched_at": "2026-06-11T15:47:13Z"
-  },
-  {
-   "url": "http://www.usps.org/cgi-bin-nat/eddept/cfind.cgi",
-   "domain": "www.usps.org",
-   "title": null,
-   "http_status": null,
-   "outcome": "failed — URLError: <urlopen error timed out>",
-   "depth": 0,
-   "bytes": null,
-   "fetched_at": "2026-06-11T15:48:34Z"
-  },
-  {
-   "url": "http://www.usps.org/national/eddept/p/main.htm",
-   "domain": "www.usps.org",
-   "title": null,
-   "http_status": null,
-   "outcome": "failed — URLError: <urlopen error timed out>",
-   "depth": 0,
-   "bytes": null,
-   "fetched_at": "2026-06-11T15:49:55Z"
   },
   {
    "url": "https://americasboatingchannel.uscreen.io/programs/super-hero-life-jacket-21bcbc",
@@ -22146,6 +22127,4176 @@
    "depth": 1,
    "bytes": 96368,
    "fetched_at": "2026-06-11T16:12:41Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/navigating-with-nautical-charts",
+   "domain": "americasboatingclub.org",
+   "title": "Navigating with Nautical Charts: A Beginner’s Guide",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 76504,
+   "fetched_at": "2026-06-14T01:10:04Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-maintain-signal-devices",
+   "domain": "americasboatingclub.org",
+   "title": "How to Properly Use and Maintain Signal Devices and Emergency Flares",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 74077,
+   "fetched_at": "2026-06-14T01:10:06Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-is-the-dragon-boat-festival",
+   "domain": "americasboatingclub.org",
+   "title": "What is the Dragon Boat Festival?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 74725,
+   "fetched_at": "2026-06-14T01:10:08Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-is-a-boating-safety-course",
+   "domain": "americasboatingclub.org",
+   "title": "What is a Boating Safety Course?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 73508,
+   "fetched_at": "2026-06-14T01:10:09Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/top-boating-destinations-in-the-world",
+   "domain": "americasboatingclub.org",
+   "title": "Top Boating Destinations in the World",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72981,
+   "fetched_at": "2026-06-14T01:10:11Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/navigating-in-bad-weather",
+   "domain": "americasboatingclub.org",
+   "title": "Navigating in Bad Weather: What Every Boater Needs to Know",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 74505,
+   "fetched_at": "2026-06-14T01:10:12Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-properly-perform-a-boat-hull-cleaning-and-maintain-it",
+   "domain": "americasboatingclub.org",
+   "title": "How to Properly Perform a Boat Hull Cleaning and Maintain It",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 74022,
+   "fetched_at": "2026-06-14T01:10:13Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-navigate-locks-and-dams",
+   "domain": "americasboatingclub.org",
+   "title": "How to Navigate Locks & Dams",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 74791,
+   "fetched_at": "2026-06-14T01:10:15Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-file-a-float-plan",
+   "domain": "americasboatingclub.org",
+   "title": "How to File a Float Plan",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72866,
+   "fetched_at": "2026-06-14T01:10:16Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-conserve-fuel-while-boating",
+   "domain": "americasboatingclub.org",
+   "title": "How to Conserve Fuel While Boating",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72631,
+   "fetched_at": "2026-06-14T01:10:18Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-tides-and-currents-affect-your-boating-experience",
+   "domain": "americasboatingclub.org",
+   "title": "How Tides and Currents Affect Your Boating Experience",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72050,
+   "fetched_at": "2026-06-14T01:10:19Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/dive-into-our-partners",
+   "domain": "americasboatingclub.org",
+   "title": "Dive into Our Partners",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 73340,
+   "fetched_at": "2026-06-14T01:10:21Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/water-sports-safety",
+   "domain": "americasboatingclub.org",
+   "title": "Water Sports Safety",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 73848,
+   "fetched_at": "2026-06-14T01:10:22Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/diving-and-snorkeling-safety",
+   "domain": "americasboatingclub.org",
+   "title": "Diving and Snorkeling Safety",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72072,
+   "fetched_at": "2026-06-14T01:10:24Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-marine-gps-works",
+   "domain": "americasboatingclub.org",
+   "title": "How Marine GPS Works",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71817,
+   "fetched_at": "2026-06-14T01:10:25Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/essential-first-aid-tips-for-boaters",
+   "domain": "americasboatingclub.org",
+   "title": "Essential First Aid Tips for Boaters",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71678,
+   "fetched_at": "2026-06-14T01:10:27Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/navigating-through-no-wake-zones",
+   "domain": "americasboatingclub.org",
+   "title": "Navigating Through No-Wake Zones",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71156,
+   "fetched_at": "2026-06-14T01:10:29Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-use-a-marine-vhf-radio",
+   "domain": "americasboatingclub.org",
+   "title": "How to Use a Marine VHF Radio",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 75131,
+   "fetched_at": "2026-06-14T01:10:30Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-is-the-mariners-compass",
+   "domain": "americasboatingclub.org",
+   "title": "What is the Mariner’s Compass?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71779,
+   "fetched_at": "2026-06-14T01:10:31Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/using-nautical-charts-and-maps",
+   "domain": "americasboatingclub.org",
+   "title": "Using Nautical Charts & Maps to Navigate Safely",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72622,
+   "fetched_at": "2026-06-14T01:10:33Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tips-for-piloting-a-boat",
+   "domain": "americasboatingclub.org",
+   "title": "Tips for Piloting a Boat",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 73153,
+   "fetched_at": "2026-06-14T01:10:34Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-conduct-a-thorough-pre-departure-safety-check",
+   "domain": "americasboatingclub.org",
+   "title": "How to Conduct a Thorough Pre-Departure Safety Check",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 74132,
+   "fetched_at": "2026-06-14T01:10:36Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/celebrating-thanksgiving-onboard-your-vessel",
+   "domain": "americasboatingclub.org",
+   "title": "Celebrating Thanksgiving Onboard your Vessel",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72742,
+   "fetched_at": "2026-06-14T01:10:37Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tips-for-boating-with-dogs-and-other-pets",
+   "domain": "americasboatingclub.org",
+   "title": "Tips for Boating With Dogs & Other Pets",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72102,
+   "fetched_at": "2026-06-14T01:10:39Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/types-of-boat-navigation-lights",
+   "domain": "americasboatingclub.org",
+   "title": "Types of Boat Navigation Lights",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 76037,
+   "fetched_at": "2026-06-14T01:10:40Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/types-of-powerboat-hulls",
+   "domain": "americasboatingclub.org",
+   "title": "Types of Powerboat Hulls",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 73617,
+   "fetched_at": "2026-06-14T01:10:42Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/benefits-of-joining-a-boat-club",
+   "domain": "americasboatingclub.org",
+   "title": "Benefits of Joining a Boat Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72854,
+   "fetched_at": "2026-06-14T01:10:43Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-make-family-boating-a-fun-adventure-for-everyone",
+   "domain": "americasboatingclub.org",
+   "title": "How to Make Family Boating a Fun Adventure for Everyone",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71832,
+   "fetched_at": "2026-06-14T01:10:44Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/navigating-in-low-light-conditions",
+   "domain": "americasboatingclub.org",
+   "title": "Navigating in Low Light Conditions: Tips for Safe Boating",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 73387,
+   "fetched_at": "2026-06-14T01:10:46Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/catamaran-sailing-guide-what-you-need-to-know",
+   "domain": "americasboatingclub.org",
+   "title": "Catamaran Sailing Guide: What You Need to Know",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 73457,
+   "fetched_at": "2026-06-14T01:10:47Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/becoming-a-boat-owner",
+   "domain": "americasboatingclub.org",
+   "title": "Becoming a Boat Owner: Support & Guidance",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 74058,
+   "fetched_at": "2026-06-14T01:10:48Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/understanding-tides-and-current-for-safe-navigation",
+   "domain": "americasboatingclub.org",
+   "title": "Understanding Tides and Currents for Safe Navigation",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72118,
+   "fetched_at": "2026-06-14T01:10:50Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/safe-boating-in-cold-water",
+   "domain": "americasboatingclub.org",
+   "title": "Safe Boating in Cold Water",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 73366,
+   "fetched_at": "2026-06-14T01:10:52Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/top-destinations-for-fall-boating",
+   "domain": "americasboatingclub.org",
+   "title": "Top Destinations for Fall Boating",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72237,
+   "fetched_at": "2026-06-14T01:10:54Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/safe-handling-of-towlines-and-ropes",
+   "domain": "americasboatingclub.org",
+   "title": "Safe Handling of Towlines and Ropes",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 75467,
+   "fetched_at": "2026-06-14T01:10:55Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/fall-boating-activities-spotlight-on-squadrons",
+   "domain": "americasboatingclub.org",
+   "title": "Fall Boating Activities: Spotlight on Squadrons",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72246,
+   "fetched_at": "2026-06-14T01:10:56Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-conduct-a-boat-safety-drill",
+   "domain": "americasboatingclub.org",
+   "title": "How to Conduct a Boat Safety Drill",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72945,
+   "fetched_at": "2026-06-14T01:10:58Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/planning-a-safe-boating-adventure-with-friends",
+   "domain": "americasboatingclub.org",
+   "title": "Planning a Safe Boating Adventure with Friends",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72265,
+   "fetched_at": "2026-06-14T01:10:59Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/fort-lauderdale-boat-show-2024",
+   "domain": "americasboatingclub.org",
+   "title": "Get Ready for the Fort Lauderdale Boat Show!",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 73516,
+   "fetched_at": "2026-06-14T01:11:01Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/top-10-boating-tips-to-make-your-life-easier",
+   "domain": "americasboatingclub.org",
+   "title": "Top 10 Boating Tips to Make Your Life Easier",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 73351,
+   "fetched_at": "2026-06-14T01:11:02Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/choosing-the-right-boat-trailer",
+   "domain": "americasboatingclub.org",
+   "title": "Choosing the Right Boat Trailer for Your Boat",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 76641,
+   "fetched_at": "2026-06-14T01:11:04Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/haunting-mysteries-of-creepy-ghost-ships",
+   "domain": "americasboatingclub.org",
+   "title": "Haunting Mysteries of the World's Creepiest Ghost Ships",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 74418,
+   "fetched_at": "2026-06-14T01:11:05Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/navigating-boating-safety-courses",
+   "domain": "americasboatingclub.org",
+   "title": "Navigating Boating Safety Courses",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72232,
+   "fetched_at": "2026-06-14T01:11:07Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/sustainable-boating-habits",
+   "domain": "americasboatingclub.org",
+   "title": "Sustainable Boating Habits",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72727,
+   "fetched_at": "2026-06-14T01:11:08Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-are-bass-boats-for",
+   "domain": "americasboatingclub.org",
+   "title": "What Are Bass Boats for?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71848,
+   "fetched_at": "2026-06-14T01:11:09Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/importance-of-regular-boat-maintenance-for-safety",
+   "domain": "americasboatingclub.org",
+   "title": "The Importance of Regular Boat Maintenance for Safety",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72202,
+   "fetched_at": "2026-06-14T01:11:11Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-is-a-vessel-safety-check",
+   "domain": "americasboatingclub.org",
+   "title": "What Is A Vessel Safety Check?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 70766,
+   "fetched_at": "2026-06-14T01:11:12Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-dock-a-boat",
+   "domain": "americasboatingclub.org",
+   "title": "How to Dock a Boat: Step-by-Step Guide",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 75010,
+   "fetched_at": "2026-06-14T01:11:13Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/required-safety-equipment-on-your-boat",
+   "domain": "americasboatingclub.org",
+   "title": "Safety Equipment Required on Your Boat",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72589,
+   "fetched_at": "2026-06-14T01:11:15Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tips-for-navigating-busy-intracoastal-waterways",
+   "domain": "americasboatingclub.org",
+   "title": "Tips for Navigating Busy Intracoastal Waterways",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72171,
+   "fetched_at": "2026-06-14T01:11:16Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/why-take-our-boating-safety-classes",
+   "domain": "americasboatingclub.org",
+   "title": "Why Take America’s Boating Club Boating Safety Classes?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72212,
+   "fetched_at": "2026-06-14T01:11:18Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/expectations-of-our-boating-safety-course",
+   "domain": "americasboatingclub.org",
+   "title": "What to Expect When You Take Our Boating Safety Course?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72028,
+   "fetched_at": "2026-06-14T01:11:19Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-handle-a-water-emergency",
+   "domain": "americasboatingclub.org",
+   "title": "How To Handle A Water Emergency On A Boat",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 74359,
+   "fetched_at": "2026-06-14T01:11:21Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/understanding-boating-forecasts-and-weather",
+   "domain": "americasboatingclub.org",
+   "title": "Understanding Boating Forecasts & Weather",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 73073,
+   "fetched_at": "2026-06-14T01:11:22Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/electric-boat-motors",
+   "domain": "americasboatingclub.org",
+   "title": "Electric Boat Motors",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 73344,
+   "fetched_at": "2026-06-14T01:11:23Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/safe-boats-for-family-boating-with-kids",
+   "domain": "americasboatingclub.org",
+   "title": "Safe Boats for Family Boating with Kids",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72439,
+   "fetched_at": "2026-06-14T01:11:25Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tips-for-choosing-the-best-marine-electronics",
+   "domain": "americasboatingclub.org",
+   "title": "Tips for Choosing the Best Marine Electronics",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72839,
+   "fetched_at": "2026-06-14T01:11:26Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/preparing-your-boat-for-fall-boat-safety-checklist",
+   "domain": "americasboatingclub.org",
+   "title": "Preparing Your Boat for Fall: Boat Safety Checklist",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71869,
+   "fetched_at": "2026-06-14T01:11:28Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/essential-sailing-docking-tips",
+   "domain": "americasboatingclub.org",
+   "title": "Essential Sailboat Docking Tips",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71397,
+   "fetched_at": "2026-06-14T01:11:29Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/spotlight-on-boating-education-courses",
+   "domain": "americasboatingclub.org",
+   "title": "Spotlight on our Boating Education Courses",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72460,
+   "fetched_at": "2026-06-14T01:11:30Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tips-for-safe-boating-with-kids-life-jackets",
+   "domain": "americasboatingclub.org",
+   "title": "Tips for Safe Boating with Kids Life Jackets",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71315,
+   "fetched_at": "2026-06-14T01:11:32Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tips-for-effective-boat-signals-and-communication",
+   "domain": "americasboatingclub.org",
+   "title": "Tips for Effective Boat Signals & Communication",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72838,
+   "fetched_at": "2026-06-14T01:11:33Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/safe-boat-anchor-tips",
+   "domain": "americasboatingclub.org",
+   "title": "Safe Boat Anchor Tips",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72374,
+   "fetched_at": "2026-06-14T01:11:34Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/fishing-tips-and-techniques",
+   "domain": "americasboatingclub.org",
+   "title": "Fishing Tips & Techniques",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72035,
+   "fetched_at": "2026-06-14T01:11:36Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/boat-emergency-kit-preparation",
+   "domain": "americasboatingclub.org",
+   "title": "Boat Emergency Kit Preparation",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72897,
+   "fetched_at": "2026-06-14T01:11:37Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/spotlight-on-women-in-boating",
+   "domain": "americasboatingclub.org",
+   "title": "Women On Boats Leading Change In The Boating Industry",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71643,
+   "fetched_at": "2026-06-14T01:11:39Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/the-importance-of-boat-fire-extinguishers",
+   "domain": "americasboatingclub.org",
+   "title": "The Importance of Boat Fire Extinguishers & Other Fire Safety Equipment",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71343,
+   "fetched_at": "2026-06-14T01:11:40Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/safe-boating-in-high-traffic-areas",
+   "domain": "americasboatingclub.org",
+   "title": "Safe Boating In High Traffic Areas",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71827,
+   "fetched_at": "2026-06-14T01:11:41Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/choosing-the-best-boats-for-families",
+   "domain": "americasboatingclub.org",
+   "title": "Choosing The Best Boats For Families",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71936,
+   "fetched_at": "2026-06-14T01:11:43Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tools-and-apps-for-boating-navigation",
+   "domain": "americasboatingclub.org",
+   "title": "Best Tools and Apps for Boating Navigation",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72862,
+   "fetched_at": "2026-06-14T01:11:44Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/benefits-of-boat-clubs",
+   "domain": "americasboatingclub.org",
+   "title": "Top Benefits of Boat Clubs",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 70986,
+   "fetched_at": "2026-06-14T01:11:45Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/essential-boating-safety-skills",
+   "domain": "americasboatingclub.org",
+   "title": "Top 5 Essential Boating Safety Skills Every Captain Should Learn",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 72416,
+   "fetched_at": "2026-06-14T01:11:47Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/the-importance-of-life-jackets",
+   "domain": "americasboatingclub.org",
+   "title": "The Importance of Life Jackets: How to Choose and Use Them Properly",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71855,
+   "fetched_at": "2026-06-14T01:11:48Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/spiny-lobster-season",
+   "domain": "americasboatingclub.org",
+   "title": "Navigating Spiny Lobster Season",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71632,
+   "fetched_at": "2026-06-14T01:11:49Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-tie-a-boat-knot",
+   "domain": "americasboatingclub.org",
+   "title": "How To Tie A Boat Knot",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 71650,
+   "fetched_at": "2026-06-14T01:11:51Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-is-boating-etiquette",
+   "domain": "americasboatingclub.org",
+   "title": "Proper Boating Etiquette | Learn with America’s Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 75375,
+   "fetched_at": "2026-06-14T01:11:52Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/get-a-replacement-boating-card",
+   "domain": "americasboatingclub.org",
+   "title": "Get A Replacement Boating Card | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 76157,
+   "fetched_at": "2026-06-14T01:11:54Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/seminars/boat-handling/rules-of-the-road",
+   "domain": "americasboatingclub.org",
+   "title": "Rules of the Road Seminar | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 94143,
+   "fetched_at": "2026-06-14T01:11:55Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/seminars/boat-handling/confidence-in-docking-and-undocking",
+   "domain": "americasboatingclub.org",
+   "title": "Docking and Undocking Seminar | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 93935,
+   "fetched_at": "2026-06-14T01:11:56Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/seminars/boat-handling/anchoring-with-assurance",
+   "domain": "americasboatingclub.org",
+   "title": "Anchoring with Assurance Seminar | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 94514,
+   "fetched_at": "2026-06-14T01:11:58Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/seminars/boat-handling/emergencies-on-board",
+   "domain": "americasboatingclub.org",
+   "title": "Emergencies on Board Seminar | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 94178,
+   "fetched_at": "2026-06-14T01:11:59Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/seminars/boat-handling/knots-and-line-handling",
+   "domain": "americasboatingclub.org",
+   "title": "Knots and Line Handling Seminar | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 93770,
+   "fetched_at": "2026-06-14T01:12:01Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-maintain-signal-devices?highlight=WyJ2aGYiXQ==",
+   "domain": "americasboatingclub.org",
+   "title": "How to Properly Use and Maintain Signal Devices and Emergency Flares",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 74269,
+   "fetched_at": "2026-06-14T01:12:02Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/seminars/electronics/introduction-to-marine-batteries?highlight=WyJtYXJpbmUiLCJiYXR0ZXJ5Il0=",
+   "domain": "americasboatingclub.org",
+   "title": "Introduction to Marine Batteries | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 93842,
+   "fetched_at": "2026-06-14T01:12:04Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/scheduling-a-free-vessel-safety-check?highlight=WyJ2ZXNzZWwiLCJzYWZldHkiLCJjaGVjayJd",
+   "domain": "americasboatingclub.org",
+   "title": "Scheduling A Free Vessel Safety Check | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 93770,
+   "fetched_at": "2026-06-14T01:12:05Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/looking-for-hands-on-training-on-the-water?highlight=WyJoYW5kcyIsIm9uIiwidHJhaW5pbmciXQ==",
+   "domain": "americasboatingclub.org",
+   "title": "Hands On Training On The Water | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 93936,
+   "fetched_at": "2026-06-14T01:12:07Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/seminars/boat-handling/confidence-in-docking-and-undocking?highlight=WyJib2F0IiwiZG9ja2luZyJd",
+   "domain": "americasboatingclub.org",
+   "title": "Docking and Undocking Seminar | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 94162,
+   "fetched_at": "2026-06-14T01:12:08Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-dock-a-boat?highlight=WyJib2F0IiwiZG9ja2luZyJd",
+   "domain": "americasboatingclub.org",
+   "title": "How to Dock a Boat: Step-by-Step Guide",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 75225,
+   "fetched_at": "2026-06-14T01:12:09Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/app?highlight=WyJhcHAiXQ==",
+   "domain": "americasboatingclub.org",
+   "title": "Get the App | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 68684,
+   "fetched_at": "2026-06-14T01:12:11Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/courses",
+   "domain": "americasboatingclub.org",
+   "title": "All Boating Courses Available | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 70019,
+   "fetched_at": "2026-06-14T01:12:12Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/safe-boat-anchor-tips?highlight=WyJhbmNob3JpbmciXQ==",
+   "domain": "americasboatingclub.org",
+   "title": "Safe Boat Anchor Tips",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 72582,
+   "fetched_at": "2026-06-14T01:12:13Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/seminars/boat-handling/anchoring-with-assurance?highlight=WyJhbmNob3JpbmciXQ==",
+   "domain": "americasboatingclub.org",
+   "title": "Anchoring with Assurance Seminar | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 94731,
+   "fetched_at": "2026-06-14T01:12:15Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/winterizing-your-boat?highlight=WyJ3aW50ZXIiXQ==",
+   "domain": "americasboatingclub.org",
+   "title": "Winterizing Your Boat: Step-by-Step Guide",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 72526,
+   "fetched_at": "2026-06-14T01:12:16Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/purpose-of-a-float-plan?highlight=WyJmbG9hdCIsInBsYW4iXQ==",
+   "domain": "americasboatingclub.org",
+   "title": "What is the Purpose of Filing a Float Plan?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 77363,
+   "fetched_at": "2026-06-14T01:12:18Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/what-is-a-boating-safety-course?highlight=WyJib2F0aW5nIiwic2FmZXR5IiwiY291cnNlIl0=",
+   "domain": "americasboatingclub.org",
+   "title": "What is a Boating Safety Course?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 73752,
+   "fetched_at": "2026-06-14T01:12:20Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/how-to-file-a-float-plan?highlight=WyJmbG9hdCIsInBsYW4iXQ==",
+   "domain": "americasboatingclub.org",
+   "title": "How to File a Float Plan",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 73081,
+   "fetched_at": "2026-06-14T01:12:21Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/spotlight-on-our-boating-safety-tips?highlight=WyJib2F0aW5nIiwic2FmZXR5Il0=",
+   "domain": "americasboatingclub.org",
+   "title": "Spotlight On Our Boating Safety Tips",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 72568,
+   "fetched_at": "2026-06-14T01:12:23Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/tips-for-choosing-the-best-marine-electronics?highlight=WyJiYXR0ZXJ5Il0=",
+   "domain": "americasboatingclub.org",
+   "title": "Tips for Choosing the Best Marine Electronics",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 73038,
+   "fetched_at": "2026-06-14T01:12:24Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/component/finder/search?q=float+plan&Itemid=119",
+   "domain": "americasboatingclub.org",
+   "title": "Boating Education & Safety Courses | America’s Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 101469,
+   "fetched_at": "2026-06-14T01:12:25Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/benefits",
+   "domain": "americasboatingclub.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 4,
+   "bytes": null,
+   "fetched_at": "2026-06-14T01:12:27Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/app",
+   "domain": "americasboatingclub.org",
+   "title": "Get the App | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 68478,
+   "fetched_at": "2026-06-14T01:12:28Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/about/news-and-information/cold-water-safety-what-you-need-to-know-as-temperatures-drop",
+   "domain": "americasboatingclub.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 4,
+   "bytes": null,
+   "fetched_at": "2026-06-14T01:12:29Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/find-a-class-near-you",
+   "domain": "americasboatingclub.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 4,
+   "bytes": null,
+   "fetched_at": "2026-06-14T01:12:30Z"
+  },
+  {
+   "url": "https://americasboatingclub.org/index.php/join",
+   "domain": "americasboatingclub.org",
+   "title": "Join One of Our Local Squadrons | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 69931,
+   "fetched_at": "2026-06-14T01:12:31Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/scheduling-a-free-vessel-safety-check",
+   "domain": "americasboatingclub.org",
+   "title": "Scheduling A Free Vessel Safety Check | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 93519,
+   "fetched_at": "2026-06-14T01:12:33Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/index.php/seminars/safety/ais-electronics-for-boaters",
+   "domain": "americasboatingclub.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 4,
+   "bytes": null,
+   "fetched_at": "2026-06-14T01:12:34Z"
+  },
+  {
+   "url": "https://www.americasboatingclub.org/courses/boat-systems/engine-maintenance",
+   "domain": "americasboatingclub.org",
+   "title": "Engine Maintenance Course | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 4,
+   "bytes": 93652,
+   "fetched_at": "2026-06-14T01:12:35Z"
+  },
+  {
+   "url": "https://www.usps.org/",
+   "domain": "www.usps.org",
+   "title": "Home",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 0,
+   "bytes": 37194,
+   "fetched_at": "2026-06-18T20:43:14Z"
+  },
+  {
+   "url": "https://www.usps.org/login/member-s-log-in",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "skipped — URL matches do-not-crawl pattern '/login'",
+   "depth": 1,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:43:14Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/mmsiLogin.php?ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": "Login",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 1,
+   "bytes": 10297,
+   "fetched_at": "2026-06-18T20:43:16Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/",
+   "domain": "www.usps.org",
+   "title": "index",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 1,
+   "bytes": 9343,
+   "fetched_at": "2026-06-18T20:43:17Z"
+  },
+  {
+   "url": "https://www.usps.org/ebooks/FormRedeem.php",
+   "domain": "www.usps.org",
+   "title": "EBook Redemption Form",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 1,
+   "bytes": 4516,
+   "fetched_at": "2026-06-18T20:43:19Z"
+  },
+  {
+   "url": "https://www.usps.org/php/eddept/glossary/glossary.php",
+   "domain": "www.usps.org",
+   "title": "Search USPS Glossary Database",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 1,
+   "bytes": 8659,
+   "fetched_at": "2026-06-18T20:43:20Z"
+  },
+  {
+   "url": "https://www.usps.org/club-locations",
+   "domain": "www.usps.org",
+   "title": "Club Locations",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 1,
+   "bytes": 41531,
+   "fetched_at": "2026-06-18T20:43:22Z"
+  },
+  {
+   "url": "https://www.usps.org/images/secretary/itcom/disclaimer.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 1,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:43:22Z"
+  },
+  {
+   "url": "https://www.usps.org/images/secretary/itcom/trademark.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 1,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:43:22Z"
+  },
+  {
+   "url": "https://www.usps.org/images/secretary/itcom/privacy.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 1,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:43:22Z"
+  },
+  {
+   "url": "https://www.usps.org/?ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": "Home",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 37194,
+   "fetched_at": "2026-06-18T20:43:24Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/index.php?ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": "index",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 9754,
+   "fetched_at": "2026-06-18T20:43:26Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/what.php?ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": "What is an MMSI?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 8401,
+   "fetched_at": "2026-06-18T20:43:27Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/why.php?ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": "Why do I need an MMSI?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 8555,
+   "fetched_at": "2026-06-18T20:43:29Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/epirb.php?ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": "How do I register an EPIRB?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 8468,
+   "fetched_at": "2026-06-18T20:43:30Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/vhfdxc.php?ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": "How do I use a VHF-DSC?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 7907,
+   "fetched_at": "2026-06-18T20:43:32Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/ais.php?ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": "What is AIS?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 8114,
+   "fetched_at": "2026-06-18T20:43:33Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/gps.php?ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": "Do I need a GPS?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 7754,
+   "fetched_at": "2026-06-18T20:43:35Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/gmdss.php?ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": "What is GMDSS?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 12696,
+   "fetched_at": "2026-06-18T20:43:37Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/rules.php?ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": "Do I qualify?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 13660,
+   "fetched_at": "2026-06-18T20:43:39Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/selling.php?ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": "Selling or trading your boat",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 7221,
+   "fetched_at": "2026-06-18T20:43:41Z"
+  },
+  {
+   "url": "https://www.usps.org/donations/DonationGenFund.php?ref=MMSI&ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 2,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:43:42Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/createlogin.php?ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": "createlogin",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 21180,
+   "fetched_at": "2026-06-18T20:43:44Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/sendPINlink.php?ret_link=index.php",
+   "domain": "www.usps.org",
+   "title": "sendPINlink",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 9131,
+   "fetched_at": "2026-06-18T20:43:45Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/index.php",
+   "domain": "www.usps.org",
+   "title": "index",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 9343,
+   "fetched_at": "2026-06-18T20:43:47Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/what.php",
+   "domain": "www.usps.org",
+   "title": "What is an MMSI?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 8028,
+   "fetched_at": "2026-06-18T20:43:48Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/why.php",
+   "domain": "www.usps.org",
+   "title": "Why do I need an MMSI?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 8182,
+   "fetched_at": "2026-06-18T20:43:50Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/epirb.php",
+   "domain": "www.usps.org",
+   "title": "How do I register an EPIRB?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 8095,
+   "fetched_at": "2026-06-18T20:43:51Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/vhfdxc.php",
+   "domain": "www.usps.org",
+   "title": "How do I use a VHF-DSC?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 7534,
+   "fetched_at": "2026-06-18T20:43:53Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/ais.php",
+   "domain": "www.usps.org",
+   "title": "What is AIS?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 7741,
+   "fetched_at": "2026-06-18T20:43:55Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/gps.php",
+   "domain": "www.usps.org",
+   "title": "Do I need a GPS?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 7381,
+   "fetched_at": "2026-06-18T20:43:56Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/gmdss.php",
+   "domain": "www.usps.org",
+   "title": "What is GMDSS?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 12323,
+   "fetched_at": "2026-06-18T20:43:58Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/rules.php",
+   "domain": "www.usps.org",
+   "title": "Do I qualify?",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 13287,
+   "fetched_at": "2026-06-18T20:43:59Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/selling.php",
+   "domain": "www.usps.org",
+   "title": "Selling or trading your boat",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 6848,
+   "fetched_at": "2026-06-18T20:44:01Z"
+  },
+  {
+   "url": "https://www.usps.org/donations/DonationGenFund.php?ref=MMSI",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 2,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:44:03Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/createlogin.php",
+   "domain": "www.usps.org",
+   "title": "createlogin",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 20746,
+   "fetched_at": "2026-06-18T20:44:04Z"
+  },
+  {
+   "url": "https://www.usps.org/php/mmsi_new/sendPINlink.php",
+   "domain": "www.usps.org",
+   "title": "sendPINlink",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 8678,
+   "fetched_at": "2026-06-18T20:44:06Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/eddept/800/cfindx.cgi",
+   "domain": "www.usps.org",
+   "title": "Locate a Boating Course/Seminar/Course/Training",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 12515,
+   "fetched_at": "2026-06-18T20:44:07Z"
+  },
+  {
+   "url": "https://www.usps.org/arrowhead",
+   "domain": "www.usps.org",
+   "title": "Arrowhead",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 43080,
+   "fetched_at": "2026-06-18T20:44:09Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/",
+   "domain": "www.usps.org",
+   "title": "Anna Maria Island Power Squadron boating opportunities",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 23371,
+   "fetched_at": "2026-06-18T20:44:11Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/sss-fm/",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 142,
+   "fetched_at": "2026-06-18T20:44:13Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/keywest/",
+   "domain": "www.usps.org",
+   "title": "Key West Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 15767,
+   "fetched_at": "2026-06-18T20:44:15Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/sss-ld/",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 142,
+   "fetched_at": "2026-06-18T20:44:17Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/sss-ns/",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 142,
+   "fetched_at": "2026-06-18T20:44:18Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/pensacola/",
+   "domain": "www.usps.org",
+   "title": "Mainhome",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 6768,
+   "fetched_at": "2026-06-18T20:44:20Z"
+  },
+  {
+   "url": "https://www.usps.org/pompanosafeboating.com/",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 2,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:44:22Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/sancap/",
+   "domain": "www.usps.org",
+   "title": "Sanibel Captiva Sail and Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 221,
+   "fetched_at": "2026-06-18T20:44:24Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/venice/",
+   "domain": "www.usps.org",
+   "title": "Venice Sail and Power Squadron ( VSPS )- Venice, Florida",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 15528,
+   "fetched_at": "2026-06-18T20:44:25Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/arecibo/",
+   "domain": "www.usps.org",
+   "title": "Arecibo Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 2554,
+   "fetched_at": "2026-06-18T20:44:27Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaverton/",
+   "domain": "www.usps.org",
+   "title": "Beaverton Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 6676,
+   "fetched_at": "2026-06-18T20:44:29Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/susquehannock/",
+   "domain": "www.usps.org",
+   "title": "America's Boating Club of Central Pennsylvania <br> Susquehannock Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 14566,
+   "fetched_at": "2026-06-18T20:44:30Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/charles/",
+   "domain": "www.usps.org",
+   "title": "Home",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 7543,
+   "fetched_at": "2026-06-18T20:44:32Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/coos/",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 6375,
+   "fetched_at": "2026-06-18T20:44:34Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/erie/",
+   "domain": "www.usps.org",
+   "title": "Home Page",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 19175,
+   "fetched_at": "2026-06-18T20:44:36Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/mansfield/",
+   "domain": "www.usps.org",
+   "title": "MPS Home",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 22842,
+   "fetched_at": "2026-06-18T20:44:37Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/uspsmm/",
+   "domain": "www.usps.org",
+   "title": "index",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 15191,
+   "fetched_at": "2026-06-18T20:44:39Z"
+  },
+  {
+   "url": "https://www.usps.org/mid-michigan",
+   "domain": "www.usps.org",
+   "title": "Mid Michigan",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 46132,
+   "fetched_at": "2026-06-18T20:44:41Z"
+  },
+  {
+   "url": "https://www.neptuneboatingclub.com/",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": 200,
+   "outcome": "fetched but redirected OUT of ABC scope to www.neptuneboatingclub.com — body not saved",
+   "depth": 2,
+   "bytes": 479909,
+   "fetched_at": "2026-06-18T20:44:47Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/",
+   "domain": "www.usps.org",
+   "title": "New Orleans Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 10963,
+   "fetched_at": "2026-06-18T20:44:52Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/northstrand/",
+   "domain": "www.usps.org",
+   "title": "Apache HTTP Server Test Page powered by CentOS",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 4961,
+   "fetched_at": "2026-06-18T20:44:53Z"
+  },
+  {
+   "url": "https://www.norwalksailandpowersquadron.org/",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": 200,
+   "outcome": "fetched but redirected OUT of ABC scope to www.norwalksailandpowersquadron.org — body not saved",
+   "depth": 2,
+   "bytes": 144852,
+   "fetched_at": "2026-06-18T20:44:55Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/oakridge/",
+   "domain": "www.usps.org",
+   "title": "Oak Ridge Power Squadron Home Page",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 1133,
+   "fetched_at": "2026-06-18T20:44:57Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/",
+   "domain": "www.usps.org",
+   "title": "Beaufort Sail & Power Squadron / Boat Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 22610,
+   "fetched_at": "2026-06-18T20:44:59Z"
+  },
+  {
+   "url": "https://www.usps.org/sewan",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 2,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:45:01Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/patuxent/",
+   "domain": "www.usps.org",
+   "title": "America's Boating Club Southern Maryland",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 13079,
+   "fetched_at": "2026-06-18T20:45:02Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/",
+   "domain": "www.usps.org",
+   "title": "WELCOME",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 31224,
+   "fetched_at": "2026-06-18T20:45:04Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/swiftwater/",
+   "domain": "www.usps.org",
+   "title": "Swiftwater Sail and Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 888,
+   "fetched_at": "2026-06-18T20:45:06Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/swampfox/",
+   "domain": "www.usps.org",
+   "title": "Swamp Fox Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 13987,
+   "fetched_at": "2026-06-18T20:45:07Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/vermilion/",
+   "domain": "www.usps.org",
+   "title": "Vermilion Sail and Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 11167,
+   "fetched_at": "2026-06-18T20:45:09Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/waterbury/",
+   "domain": "www.usps.org",
+   "title": "Waterbury Sail and Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 1316,
+   "fetched_at": "2026-06-18T20:45:11Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/anchorbay/",
+   "domain": "www.usps.org",
+   "title": "Anchor Bay Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 13291,
+   "fetched_at": "2026-06-18T20:45:13Z"
+  },
+  {
+   "url": "https://www.usps.org/dearborn-sss",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 2,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:45:15Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/delhigh/",
+   "domain": "www.usps.org",
+   "title": "Delhigh",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 45982,
+   "fetched_at": "2026-06-18T20:45:16Z"
+  },
+  {
+   "url": "https://www.usps.org/href='https://www.usps.org/localusps/ithaca",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 2,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:45:18Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/lockport/",
+   "domain": "www.usps.org",
+   "title": "Home",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 7778,
+   "fetched_at": "2026-06-18T20:45:20Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/newyork/",
+   "domain": "www.usps.org",
+   "title": "The New York Sail and Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 19552,
+   "fetched_at": "2026-06-18T20:45:21Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/ok/",
+   "domain": "www.usps.org",
+   "title": "Oklahoma City Sail and Power Squadron - OKCSPS Home Page",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 20908,
+   "fetched_at": "2026-06-18T20:45:23Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/potomac/",
+   "domain": "www.usps.org",
+   "title": "United States Power Squadrons - Potomac River Unit",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 26189,
+   "fetched_at": "2026-06-18T20:45:25Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/saybrook/",
+   "domain": "www.usps.org",
+   "title": "Saybrook Sail and Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 8269,
+   "fetched_at": "2026-06-18T20:45:27Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/d2/storm_king/",
+   "domain": "www.usps.org",
+   "title": "Storm King Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 2,
+   "bytes": 22734,
+   "fetched_at": "2026-06-18T20:45:29Z"
+  },
+  {
+   "url": "https://www.usps.org/national/eddept/edonline/",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 104,
+   "fetched_at": "2026-06-18T20:45:31Z"
+  },
+  {
+   "url": "https://www.usps.org/eddept/boc/main.htm",
+   "domain": "www.usps.org",
+   "title": "USPS Educational Department - Boat Operator Certification",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 1595,
+   "fetched_at": "2026-06-18T20:45:32Z"
+  },
+  {
+   "url": "https://www.usps.org/sss-home",
+   "domain": "www.usps.org",
+   "title": "Home",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 47054,
+   "fetched_at": "2026-06-18T20:45:34Z"
+  },
+  {
+   "url": "https://www.usps.org/sss-boating-courses",
+   "domain": "www.usps.org",
+   "title": "Boating Courses",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 42352,
+   "fetched_at": "2026-06-18T20:45:36Z"
+  },
+  {
+   "url": "https://www.usps.org/civic-service/sss-our-services",
+   "domain": "www.usps.org",
+   "title": "Our Services",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 33096,
+   "fetched_at": "2026-06-18T20:45:38Z"
+  },
+  {
+   "url": "https://www.usps.org/civic-service/sss-vessel-examinations",
+   "domain": "www.usps.org",
+   "title": "Vessel Examinations",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 34964,
+   "fetched_at": "2026-06-18T20:45:40Z"
+  },
+  {
+   "url": "https://www.usps.org/civic-service/sss-cooperative-charting",
+   "domain": "www.usps.org",
+   "title": "Cooperative Charting",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 31104,
+   "fetched_at": "2026-06-18T20:45:42Z"
+  },
+  {
+   "url": "https://www.usps.org/sss-join-us/sss-join-us",
+   "domain": "www.usps.org",
+   "title": "Our Organization",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 33702,
+   "fetched_at": "2026-06-18T20:45:43Z"
+  },
+  {
+   "url": "https://www.usps.org/national/hq/forms/MemCom1.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:45:44Z"
+  },
+  {
+   "url": "https://www.usps.org/index.php/memberbenefits2",
+   "domain": "www.usps.org",
+   "title": "Member Benefits",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 28714,
+   "fetched_at": "2026-06-18T20:45:45Z"
+  },
+  {
+   "url": "https://www.usps.org/sss-join-us/contact-request",
+   "domain": "www.usps.org",
+   "title": "Contact RequestUntitled 1",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 32723,
+   "fetched_at": "2026-06-18T20:45:47Z"
+  },
+  {
+   "url": "https://www.usps.org/club-info/sss-squad-data",
+   "domain": "www.usps.org",
+   "title": "Officers & Documents",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 31821,
+   "fetched_at": "2026-06-18T20:45:49Z"
+  },
+  {
+   "url": "https://www.usps.org/club-info/sss-newsletter",
+   "domain": "www.usps.org",
+   "title": "Newsletter",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 35020,
+   "fetched_at": "2026-06-18T20:45:51Z"
+  },
+  {
+   "url": "https://www.usps.org/sss-memb-login",
+   "domain": "www.usps.org",
+   "title": "Member Log In",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 31754,
+   "fetched_at": "2026-06-18T20:45:53Z"
+  },
+  {
+   "url": "https://www.usps.org/login/member-s-log-in",
+   "domain": "www.usps.org",
+   "title": "Member Website",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 32305,
+   "fetched_at": "2026-06-18T20:45:55Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/index.html",
+   "domain": "www.usps.org",
+   "title": "Anna Maria Island Power Squadron boating opportunities",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 23371,
+   "fetched_at": "2026-06-18T20:45:57Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/about.html",
+   "domain": "www.usps.org",
+   "title": "About Anna Maria Island Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 5095,
+   "fetched_at": "2026-06-18T20:45:58Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/bridge.html",
+   "domain": "www.usps.org",
+   "title": "The Bridge - Anna Maria Island Sail and Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 7498,
+   "fetched_at": "2026-06-18T20:46:00Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/welcome.html",
+   "domain": "www.usps.org",
+   "title": "Welcome to the Anna Maria Island Sail and Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 6660,
+   "fetched_at": "2026-06-18T20:46:01Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/courses.html",
+   "domain": "www.usps.org",
+   "title": "Boating Courses",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 5538,
+   "fetched_at": "2026-06-18T20:46:03Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/history.html",
+   "domain": "www.usps.org",
+   "title": "History of the Anna Maria Island Sail and Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 6454,
+   "fetched_at": "2026-06-18T20:46:04Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/members.html",
+   "domain": "www.usps.org",
+   "title": "Members - Anna Maria Island Power Squadron boating opportunities",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 4325,
+   "fetched_at": "2026-06-18T20:46:06Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/events.html",
+   "domain": "www.usps.org",
+   "title": "Events - Anna Maria Island Power Squadron boating opportunities",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 2464,
+   "fetched_at": "2026-06-18T20:46:07Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/gallery.html",
+   "domain": "www.usps.org",
+   "title": "Gallery - Anna Maria Island Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 5937,
+   "fetched_at": "2026-06-18T20:46:08Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/contact.html",
+   "domain": "www.usps.org",
+   "title": "Contact - Anna Maria Island Sail and Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 5620,
+   "fetched_at": "2026-06-18T20:46:10Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22922",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 393,
+   "fetched_at": "2026-06-18T20:46:11Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/ABC/2026-06-06_ABC_Schedule.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:46:11Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/ABC/ATON-Quiz.htm",
+   "domain": "www.usps.org",
+   "title": "ATON Quiz",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 24133,
+   "fetched_at": "2026-06-18T20:46:13Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/ABC/ABC-Quiz-40questions.htm",
+   "domain": "www.usps.org",
+   "title": "Boating Safety Quiz - for America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 29039,
+   "fetched_at": "2026-06-18T20:46:14Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/ABC%20Boating%20Videos.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:46:14Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9958",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 392,
+   "fetched_at": "2026-06-18T20:46:16Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9959",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 392,
+   "fetched_at": "2026-06-18T20:46:17Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?S-9960",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 392,
+   "fetched_at": "2026-06-18T20:46:19Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregform.cgi?C-22069",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 393,
+   "fetched_at": "2026-06-18T20:46:20Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/vesselcheck.html",
+   "domain": "www.usps.org",
+   "title": "Vessel Safety Check",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 13536,
+   "fetched_at": "2026-06-18T20:46:21Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/map.html",
+   "domain": "www.usps.org",
+   "title": "Map to AMISPS",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 2667,
+   "fetched_at": "2026-06-18T20:46:23Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/annamaria/accessibility.html",
+   "domain": "www.usps.org",
+   "title": "Accessibility Statement",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 2744,
+   "fetched_at": "2026-06-18T20:46:24Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/keywest/index.htm",
+   "domain": "www.usps.org",
+   "title": "Key West Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 15767,
+   "fetched_at": "2026-06-18T20:46:26Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/keywest/activities.htm",
+   "domain": "www.usps.org",
+   "title": "Key West Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 18427,
+   "fetched_at": "2026-06-18T20:46:27Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/keywest/courses.htm",
+   "domain": "www.usps.org",
+   "title": "Key West Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 24468,
+   "fetched_at": "2026-06-18T20:46:29Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/keywest/membership.htm",
+   "domain": "www.usps.org",
+   "title": "Key West Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 13864,
+   "fetched_at": "2026-06-18T20:46:30Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/keywest/rendezvous.htm",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:46:32Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/keywest/bridge.htm",
+   "domain": "www.usps.org",
+   "title": "Key West Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 11851,
+   "fetched_at": "2026-06-18T20:46:33Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/keywest/safety.htm",
+   "domain": "www.usps.org",
+   "title": "Key West Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 12710,
+   "fetched_at": "2026-06-18T20:46:35Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/keywest/ussquadrons.htm",
+   "domain": "www.usps.org",
+   "title": "Key West Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 12092,
+   "fetched_at": "2026-06-18T20:46:36Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/keywest/visitors.htm",
+   "domain": "www.usps.org",
+   "title": "Key West Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 11585,
+   "fetched_at": "2026-06-18T20:46:38Z"
+  },
+  {
+   "url": "https://www.usps.org/index.php",
+   "domain": "www.usps.org",
+   "title": "Home",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 37194,
+   "fetched_at": "2026-06-18T20:46:39Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregformx.cgi?B-19810",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 269,
+   "fetched_at": "2026-06-18T20:46:41Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregformx.cgi?B-19809",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 269,
+   "fetched_at": "2026-06-18T20:46:43Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/eddept/800/getregformx.cgi?B-19506",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 269,
+   "fetched_at": "2026-06-18T20:46:45Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/eddept/getregform.cgi?L-16247",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 393,
+   "fetched_at": "2026-06-18T20:46:47Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/eddept/getregform.cgi?S-7361",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 392,
+   "fetched_at": "2026-06-18T20:46:48Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/eddept/getregform.cgi?L-14021",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 393,
+   "fetched_at": "2026-06-18T20:46:50Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/eddept/getregform.cgi?L-14060",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 393,
+   "fetched_at": "2026-06-18T20:46:51Z"
+  },
+  {
+   "url": "http://www.usps.org/national/itcom/disclaimer.html",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:46:53Z"
+  },
+  {
+   "url": "http://www.usps.org/national/itcom/privacy.html",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:46:54Z"
+  },
+  {
+   "url": "http://www.usps.org/national/itcom/trademark.html",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:46:56Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/pensacola/Mainhome.html",
+   "domain": "www.usps.org",
+   "title": "Mainhome",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 6705,
+   "fetched_at": "2026-06-18T20:46:57Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/pensacola/Logs.html",
+   "domain": "www.usps.org",
+   "title": "Logs",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 7850,
+   "fetched_at": "2026-06-18T20:46:59Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/pensacola/Boating-Education.html",
+   "domain": "www.usps.org",
+   "title": "Boating Education",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 7381,
+   "fetched_at": "2026-06-18T20:47:00Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/pensacola/Officers-and-Staff.html",
+   "domain": "www.usps.org",
+   "title": "Officers and Staff",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 6482,
+   "fetched_at": "2026-06-18T20:47:02Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/pensacola/files/psps_history-1.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:47:02Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/venice/about-us.htm",
+   "domain": "www.usps.org",
+   "title": "Venice Sail and Power Squadron - Who We Are",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 4726,
+   "fetched_at": "2026-06-18T20:47:03Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/venice/boat-smart.htm",
+   "domain": "www.usps.org",
+   "title": "Venice Sail and Power Squadron - America's Boating Course",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 5288,
+   "fetched_at": "2026-06-18T20:47:05Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/venice/education.htm",
+   "domain": "www.usps.org",
+   "title": "Venice Sail and Power Squadron - Education",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 6185,
+   "fetched_at": "2026-06-18T20:47:06Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/venice/vessel-safety-check.htm",
+   "domain": "www.usps.org",
+   "title": "Venice Sail and Power Squadron - Vessel Safety Check",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 4233,
+   "fetched_at": "2026-06-18T20:47:08Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/venice/flag-officers.htm",
+   "domain": "www.usps.org",
+   "title": "Venice Sail and Power Squadron - Flag Officers",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 5452,
+   "fetched_at": "2026-06-18T20:47:09Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/venice/activities.htm",
+   "domain": "www.usps.org",
+   "title": "Venice Sail and Power Squadron - Activities",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 8517,
+   "fetched_at": "2026-06-18T20:47:11Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/venice/links.htm",
+   "domain": "www.usps.org",
+   "title": "Venice Sail and Power Squadron - Online Resources",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 5509,
+   "fetched_at": "2026-06-18T20:47:12Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/venice/pdf/application.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:47:12Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/venice/index.htm",
+   "domain": "www.usps.org",
+   "title": "Venice Sail and Power Squadron ( VSPS )- Venice, Florida",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 15528,
+   "fetched_at": "2026-06-18T20:47:14Z"
+  },
+  {
+   "url": "http://www.usps.org/arecibo/docs/L430.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:47:14Z"
+  },
+  {
+   "url": "https://www.usps.org/arecibo/pregSBC.html",
+   "domain": "www.usps.org",
+   "title": "Preguntas Asignatura Cursos Squadron Boating Course",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 7309,
+   "fetched_at": "2026-06-18T20:47:15Z"
+  },
+  {
+   "url": "http://www.usps.org/arecibo/abcSup2022.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:47:15Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaverton/currentevents.htm",
+   "domain": "www.usps.org",
+   "title": "Beaverton Sail & Power Squadron - Current Events",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 17389,
+   "fetched_at": "2026-06-18T20:47:17Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaverton/education.htm",
+   "domain": "www.usps.org",
+   "title": "Beaverton Sail & Power Squadron - Educational Program",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 27956,
+   "fetched_at": "2026-06-18T20:47:18Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaverton/vsc.htm",
+   "domain": "www.usps.org",
+   "title": "Vessel Safety Exams",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 3894,
+   "fetched_at": "2026-06-18T20:47:20Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaverton/charting.htm",
+   "domain": "www.usps.org",
+   "title": "Beaverton Sail & Power Squadron - Cooperative Charting",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 4732,
+   "fetched_at": "2026-06-18T20:47:21Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/d32/",
+   "domain": "www.usps.org",
+   "title": "USPS District 32",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 712,
+   "fetched_at": "2026-06-18T20:47:23Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaverton/foghorn.htm",
+   "domain": "www.usps.org",
+   "title": "Beaverton Sail & Power Squadron - The Foghorn",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 21184,
+   "fetched_at": "2026-06-18T20:47:24Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaverton/PDF/schedule.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:47:25Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaverton/PDF/2014 District 32 Changes of Watch.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:47:25Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaverton/officers.htm",
+   "domain": "www.usps.org",
+   "title": "Beaverton Sail & Power Squadron - Officers",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 22946,
+   "fetched_at": "2026-06-18T20:47:26Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/eddept/cfind.cgi",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 381,
+   "fetched_at": "2026-06-18T20:47:27Z"
+  },
+  {
+   "url": "https://www.usps.org/e_stuff/Basic.html",
+   "domain": "www.usps.org",
+   "title": "USPS Educational Department - Replaced Page",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 7768,
+   "fetched_at": "2026-06-18T20:47:29Z"
+  },
+  {
+   "url": "https://www.usps.org/national/tools/gate.html",
+   "domain": "www.usps.org",
+   "title": "USPS WebGate Interface",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 1391,
+   "fetched_at": "2026-06-18T20:47:31Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/susquehannock/bridge.html",
+   "domain": "www.usps.org",
+   "title": "Susquehannock Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 7249,
+   "fetched_at": "2026-06-18T20:47:32Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/susquehannock/events.html",
+   "domain": "www.usps.org",
+   "title": "Susquehannock Calendar of Events",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 2906,
+   "fetched_at": "2026-06-18T20:47:34Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/susquehannock/vsc2.html",
+   "domain": "www.usps.org",
+   "title": "Susquehannock Calendar of Events",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 13672,
+   "fetched_at": "2026-06-18T20:47:35Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/susquehannock/2023Election.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:47:35Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/susquehannock/2019Bylaws.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:47:35Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/susquehannock/index.html",
+   "domain": "www.usps.org",
+   "title": "America's Boating Club of Central Pennsylvania <br> Susquehannock Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 14566,
+   "fetched_at": "2026-06-18T20:47:37Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/susquehannock/education.html",
+   "domain": "www.usps.org",
+   "title": "Susquehannock Classes",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 11999,
+   "fetched_at": "2026-06-18T20:47:38Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/charles/index.html",
+   "domain": "www.usps.org",
+   "title": "Home",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 7543,
+   "fetched_at": "2026-06-18T20:47:40Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/charles/about/default.html",
+   "domain": "www.usps.org",
+   "title": "Commander's Welcome",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 8462,
+   "fetched_at": "2026-06-18T20:47:41Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/charles/bridge/default.html",
+   "domain": "www.usps.org",
+   "title": "Bridge Officers",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 10646,
+   "fetched_at": "2026-06-18T20:47:42Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/charles/calendar/default.html",
+   "domain": "www.usps.org",
+   "title": "Calendar of Events",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 7967,
+   "fetched_at": "2026-06-18T20:47:44Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/charles/courses/default.html",
+   "domain": "www.usps.org",
+   "title": "Contact",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 5195,
+   "fetched_at": "2026-06-18T20:47:45Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/charles/newsletter/default.html",
+   "domain": "www.usps.org",
+   "title": "Newsletter",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 11062,
+   "fetched_at": "2026-06-18T20:47:47Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/charles/photo_gallery/default.html",
+   "domain": "www.usps.org",
+   "title": "Photo Gallery",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 6402,
+   "fetched_at": "2026-06-18T20:47:48Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/charles/information_links/default.html",
+   "domain": "www.usps.org",
+   "title": "Information Links",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 8430,
+   "fetched_at": "2026-06-18T20:47:50Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/charles/membership/membership.html",
+   "domain": "www.usps.org",
+   "title": "Membership",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 6767,
+   "fetched_at": "2026-06-18T20:47:51Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/charles/VSC/default.html",
+   "domain": "www.usps.org",
+   "title": "Charles River Sail & Power Squad",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 6773,
+   "fetched_at": "2026-06-18T20:47:53Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin/usmap.cgi?34",
+   "domain": "www.usps.org",
+   "title": "USPS Squadrons & Districts",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 1248,
+   "fetched_at": "2026-06-18T20:47:54Z"
+  },
+  {
+   "url": "http://www.usps.org//images/secretary/itcom/trademark.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:47:55Z"
+  },
+  {
+   "url": "http://www.usps.org//images/secretary/itcom/disclaimer.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:47:55Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/charles/contact/default.html",
+   "domain": "www.usps.org",
+   "title": "Contact",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 5400,
+   "fetched_at": "2026-06-18T20:47:56Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/sds-D32/",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 141,
+   "fetched_at": "2026-06-18T20:47:58Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/coos/index26.html#top",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 6375,
+   "fetched_at": "2026-06-18T20:47:59Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/coos/main1.html#nav",
+   "domain": "www.usps.org",
+   "title": "main",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 13804,
+   "fetched_at": "2026-06-18T20:48:01Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/coos/public_service.html#officers",
+   "domain": "www.usps.org",
+   "title": "public_service",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 12073,
+   "fetched_at": "2026-06-18T20:48:02Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/coos/cblinks.html",
+   "domain": "www.usps.org",
+   "title": "cblnks",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 11200,
+   "fetched_at": "2026-06-18T20:48:04Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/coos/lastpage.html",
+   "domain": "www.usps.org",
+   "title": "lastpage",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 4264,
+   "fetched_at": "2026-06-18T20:48:05Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/coos/aboutbackground.html",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:48:07Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/erie/index.htm",
+   "domain": "www.usps.org",
+   "title": "Home Page",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 19175,
+   "fetched_at": "2026-06-18T20:48:08Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/erie/public%20information.htm",
+   "domain": "www.usps.org",
+   "title": "Public Information - Erie Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 17941,
+   "fetched_at": "2026-06-18T20:48:10Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/erie/publiccourses.htm",
+   "domain": "www.usps.org",
+   "title": "Public Boating Courses - Erie Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 18053,
+   "fetched_at": "2026-06-18T20:48:11Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/erie/membership.htm",
+   "domain": "www.usps.org",
+   "title": "Membership - Erie Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 34429,
+   "fetched_at": "2026-06-18T20:48:13Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/erie/member%20information.htm",
+   "domain": "www.usps.org",
+   "title": "Member Information - Erie Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 15951,
+   "fetched_at": "2026-06-18T20:48:14Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/erie/membercourses.htm",
+   "domain": "www.usps.org",
+   "title": "Member courses - Erie Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 20239,
+   "fetched_at": "2026-06-18T20:48:16Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/erie/vesselsafety.htm",
+   "domain": "www.usps.org",
+   "title": "Vessel Safety Check - Erie Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 16037,
+   "fetched_at": "2026-06-18T20:48:17Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/erie/schedule.htm",
+   "domain": "www.usps.org",
+   "title": "Calendar of Events - Erie Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 13858,
+   "fetched_at": "2026-06-18T20:48:19Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/erie/newsletter.htm",
+   "domain": "www.usps.org",
+   "title": "Newsletter - Erie Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 14698,
+   "fetched_at": "2026-06-18T20:48:20Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/erie/officers.htm",
+   "domain": "www.usps.org",
+   "title": "Officers - Erie Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 17152,
+   "fetched_at": "2026-06-18T20:48:22Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/erie/links.htm",
+   "domain": "www.usps.org",
+   "title": "Links - Erie Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 17595,
+   "fetched_at": "2026-06-18T20:48:24Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/erie/photogallery.htm",
+   "domain": "www.usps.org",
+   "title": "Photo Gallery - Erie Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 13302,
+   "fetched_at": "2026-06-18T20:48:25Z"
+  },
+  {
+   "url": "https://www.usps.org/national/PortC/",
+   "domain": "www.usps.org",
+   "title": "Port Captains",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 15124,
+   "fetched_at": "2026-06-18T20:48:27Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/mansfield/index.html",
+   "domain": "www.usps.org",
+   "title": "MPS Home",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 22842,
+   "fetched_at": "2026-06-18T20:48:29Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/mansfield/classes.html",
+   "domain": "www.usps.org",
+   "title": "MPS Classes",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 23814,
+   "fetched_at": "2026-06-18T20:48:30Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/mansfield/safety.html",
+   "domain": "www.usps.org",
+   "title": "MPS Better Boater",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 21136,
+   "fetched_at": "2026-06-18T20:48:32Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/mansfield/vsc.html",
+   "domain": "www.usps.org",
+   "title": "MPS Vessel Safety Checks",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 16232,
+   "fetched_at": "2026-06-18T20:48:33Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/mansfield/calendar.html",
+   "domain": "www.usps.org",
+   "title": "MPS Template",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 15003,
+   "fetched_at": "2026-06-18T20:48:35Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/mansfield/officers.html",
+   "domain": "www.usps.org",
+   "title": "MPS Officers",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 16272,
+   "fetched_at": "2026-06-18T20:48:36Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/mansfield/photos.html",
+   "domain": "www.usps.org",
+   "title": "MPS Classes",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 18661,
+   "fetched_at": "2026-06-18T20:48:38Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/mansfield/news.html",
+   "domain": "www.usps.org",
+   "title": "MPS News",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 17640,
+   "fetched_at": "2026-06-18T20:48:39Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/mansfield/links.html",
+   "domain": "www.usps.org",
+   "title": "MPS Links",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 34379,
+   "fetched_at": "2026-06-18T20:48:41Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/mansfield/Images/mapd7-mps-w.jpg",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "skipped — binary/static file type",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:48:41Z"
+  },
+  {
+   "url": "https://www.usps.org/php/reservations_new/meetings.php?mtg_id=22",
+   "domain": "www.usps.org",
+   "title": "meetings",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 16185,
+   "fetched_at": "2026-06-18T20:48:42Z"
+  },
+  {
+   "url": "http://www.usps.org/national/itcom/pdf/trademark.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:48:43Z"
+  },
+  {
+   "url": "http://www.usps.org/national/itcom/pdf/privacy.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:48:43Z"
+  },
+  {
+   "url": "http://www.usps.org/national/itcom/pdf/disclaimer.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:48:43Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/uspsmm/index.html",
+   "domain": "www.usps.org",
+   "title": "index",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 15191,
+   "fetched_at": "2026-06-18T20:48:44Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/uspsmm/page3.html",
+   "domain": "www.usps.org",
+   "title": "Vessel Safety",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 8097,
+   "fetched_at": "2026-06-18T20:48:46Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/uspsmm/page5.html",
+   "domain": "www.usps.org",
+   "title": "Leadership",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 11868,
+   "fetched_at": "2026-06-18T20:48:47Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/uspsmm/page4.html",
+   "domain": "www.usps.org",
+   "title": "Newsletters",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 13867,
+   "fetched_at": "2026-06-18T20:48:49Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/uspsmm/page2.html",
+   "domain": "www.usps.org",
+   "title": "Join Us",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 8044,
+   "fetched_at": "2026-06-18T20:48:50Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/uspsmm/Float-Plan-BoatUSform.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:48:50Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/uspsmm/2020MembershipBenefits.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:48:50Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/uspsmm/VSC_Brochure_2025.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:48:50Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/d15/",
+   "domain": "www.usps.org",
+   "title": "District 15",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 9520,
+   "fetched_at": "2026-06-18T20:48:52Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/council_2012_part2_agenda.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:48:52Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/index.htm",
+   "domain": "www.usps.org",
+   "title": "New Orleans Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 10963,
+   "fetched_at": "2026-06-18T20:48:54Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/Calendar.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:48:54Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/Bridge.htm",
+   "domain": "www.usps.org",
+   "title": "New Orleans Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 13059,
+   "fetched_at": "2026-06-18T20:48:55Z"
+  },
+  {
+   "url": "https://www.usps.org/index.php/2016-01-06-11-01-04/sss-cooperative-charting",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:48:56Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/Education.htm",
+   "domain": "www.usps.org",
+   "title": "New Orleans Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 11949,
+   "fetched_at": "2026-06-18T20:48:58Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/FAQS.htm",
+   "domain": "www.usps.org",
+   "title": "New Orleans Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 22215,
+   "fetched_at": "2026-06-18T20:49:00Z"
+  },
+  {
+   "url": "http://www.usps.org/newpublic2/join.html",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:01Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/Miscellaneous.htm",
+   "domain": "www.usps.org",
+   "title": "New Orleans Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 12423,
+   "fetched_at": "2026-06-18T20:49:03Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/Publications.htm",
+   "domain": "www.usps.org",
+   "title": "New Orleans Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 12570,
+   "fetched_at": "2026-06-18T20:49:05Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/Photos.htm",
+   "domain": "www.usps.org",
+   "title": "New Orleans Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 10356,
+   "fetched_at": "2026-06-18T20:49:06Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/vsc.htm",
+   "domain": "www.usps.org",
+   "title": "New Orleans Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 11146,
+   "fetched_at": "2026-06-18T20:49:08Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/Links.htm",
+   "domain": "www.usps.org",
+   "title": "New Orleans Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 10740,
+   "fetched_at": "2026-06-18T20:49:09Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/NOPS_DockPolicy.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:09Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/ABC2510.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:09Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/Bunco.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:09Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/Lobster.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:09Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/neworleans/25COWpics.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:09Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/about.html",
+   "domain": "www.usps.org",
+   "title": "About BS&PS",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 9748,
+   "fetched_at": "2026-06-18T20:49:10Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/index.html",
+   "domain": "www.usps.org",
+   "title": "Beaufort Sail & Power Squadron / Boat Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 22610,
+   "fetched_at": "2026-06-18T20:49:12Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/Bridge.html",
+   "domain": "www.usps.org",
+   "title": "BS&PS Bridge Officers",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 13797,
+   "fetched_at": "2026-06-18T20:49:13Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/TheLog.html",
+   "domain": "www.usps.org",
+   "title": "Newsletter BS&PS",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 13247,
+   "fetched_at": "2026-06-18T20:49:15Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/charting.html",
+   "domain": "www.usps.org",
+   "title": "Coop Charting BS&PS",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 7343,
+   "fetched_at": "2026-06-18T20:49:16Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/Library/Port%20Captains.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:17Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/vsc.html",
+   "domain": "www.usps.org",
+   "title": "Vessel Safety Checks BS&PS",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 9301,
+   "fetched_at": "2026-06-18T20:49:18Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/member/BSPS%202021%20New%20Members%20Booklet.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:18Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/member/Beaufort 10.22.2023 Bylaws.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:18Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/member/MembersOnly.html",
+   "domain": "www.usps.org",
+   "title": "Members Only BS&PS",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 8466,
+   "fetched_at": "2026-06-18T20:49:19Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/contact.html",
+   "domain": "www.usps.org",
+   "title": "Contacts BS&PS",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 6256,
+   "fetched_at": "2026-06-18T20:49:21Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/Membership.html",
+   "domain": "www.usps.org",
+   "title": "BS&PS Membership Info",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 8096,
+   "fetched_at": "2026-06-18T20:49:22Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/photo_cruises.html",
+   "domain": "www.usps.org",
+   "title": "Beaufort Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 8002,
+   "fetched_at": "2026-06-18T20:49:24Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/photo_classes.html",
+   "domain": "www.usps.org",
+   "title": "Beaufort Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 7959,
+   "fetched_at": "2026-06-18T20:49:25Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/photo_events.html",
+   "domain": "www.usps.org",
+   "title": "Beaufort Sail & Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 8116,
+   "fetched_at": "2026-06-18T20:49:27Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/abc1.html",
+   "domain": "www.usps.org",
+   "title": "BS&PS ABC Course",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 8044,
+   "fetched_at": "2026-06-18T20:49:28Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/Library/BSPS 2026 Meeting Schedule.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:28Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/beaufort/Library/Port Captains.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:28Z"
+  },
+  {
+   "url": "http://www.usps.org/newpublic2/about.html",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:29Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/patuxent/contact@abcsomd.org",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:31Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/patuxent/index.html",
+   "domain": "www.usps.org",
+   "title": "America's Boating Club Southern Maryland",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 13079,
+   "fetched_at": "2026-06-18T20:49:32Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/patuxent/bridge.html",
+   "domain": "www.usps.org",
+   "title": "America's Boating Club Southern Maryland",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 24444,
+   "fetched_at": "2026-06-18T20:49:34Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/patuxent/officer_reports.html",
+   "domain": "www.usps.org",
+   "title": "America's Boating Club Southern Maryland",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 10507,
+   "fetched_at": "2026-06-18T20:49:35Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/patuxent/calendar.html",
+   "domain": "www.usps.org",
+   "title": "Patuxent River Sail and Power Squadron",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 7935,
+   "fetched_at": "2026-06-18T20:49:37Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/patuxent/vsc.html",
+   "domain": "www.usps.org",
+   "title": "America's Boating Club Southern Maryland",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 16259,
+   "fetched_at": "2026-06-18T20:49:38Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/patuxent/cruise-sched.html",
+   "domain": "www.usps.org",
+   "title": "America's Boating Club Southern Maryland",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 107121,
+   "fetched_at": "2026-06-18T20:49:40Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/patuxent/training.html",
+   "domain": "www.usps.org",
+   "title": "America's Boating Club Southern Maryland",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 21360,
+   "fetched_at": "2026-06-18T20:49:41Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/patuxent/boat-links.html",
+   "domain": "www.usps.org",
+   "title": "America's Boating Club Southern Maryland",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 13425,
+   "fetched_at": "2026-06-18T20:49:43Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/patuxent/photos.html",
+   "domain": "www.usps.org",
+   "title": "America's Boating Club Southern Maryland",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 15242,
+   "fetched_at": "2026-06-18T20:49:44Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/d5/",
+   "domain": "www.usps.org",
+   "title": "District 5 Website Moved",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 667,
+   "fetched_at": "2026-06-18T20:49:46Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/SBPS%20mission%202018.docx",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "skipped — binary/static file type",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:46Z"
+  },
+  {
+   "url": "https://americasboatingclub.org/join",
+   "domain": "www.usps.org",
+   "title": "Join One of Our Local Squadrons | America's Boating Club",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 69932,
+   "fetched_at": "2026-06-18T20:49:47Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/abc3_cover.jpg",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "skipped — binary/static file type",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:48Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/boating%20course%20schedule.htm",
+   "domain": "www.usps.org",
+   "title": "SMITHTOWN BAY POWER SQUADRON",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 44822,
+   "fetched_at": "2026-06-18T20:49:50Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/summer%20boating%20course%20schedule.htm",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:49:51Z"
+  },
+  {
+   "url": "https://www.usps.org/e_stuff/member_courses.htm",
+   "domain": "www.usps.org",
+   "title": "USPS Educational Department - Member Courses",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 12174,
+   "fetched_at": "2026-06-18T20:49:53Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/meet_the_smithtown_bay_bridge.htm",
+   "domain": "www.usps.org",
+   "title": "MEET THE SMITHTOWN BAY BRIDGE",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 10698,
+   "fetched_at": "2026-06-18T20:49:54Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/education_department.htm",
+   "domain": "www.usps.org",
+   "title": "EDUCATION DEPARTMENT",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 14281,
+   "fetched_at": "2026-06-18T20:49:56Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/committee_reports.htm",
+   "domain": "www.usps.org",
+   "title": "COMMITTEE REPORTS",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 3107868,
+   "fetched_at": "2026-06-18T20:49:57Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/committee_chairperson.htm",
+   "domain": "www.usps.org",
+   "title": "COMMITTEE CHAIRPERSON",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 18692,
+   "fetched_at": "2026-06-18T20:50:00Z"
+  },
+  {
+   "url": "https://www.usps.org/national/admin_dept/membenefits.htm",
+   "domain": "www.usps.org",
+   "title": "Member Benefits",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 68354,
+   "fetched_at": "2026-06-18T20:50:02Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/Boat%20Safety%20District3usps%20New%20York_files",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:50:03Z"
+  },
+  {
+   "url": "https://www.usps.org/national/coch/",
+   "domain": "www.usps.org",
+   "title": "Apache HTTP Server Test Page powered by CentOS",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 4961,
+   "fetched_at": "2026-06-18T20:50:05Z"
+  },
+  {
+   "url": "https://www.usps.org/f_stuff/sigflgs.html",
+   "domain": "www.usps.org",
+   "title": "Flag and Etiquette Committee",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 20726,
+   "fetched_at": "2026-06-18T20:50:07Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/nautical_links.htm",
+   "domain": "www.usps.org",
+   "title": "NAUTICAL LINKS",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 12573,
+   "fetched_at": "2026-06-18T20:50:09Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/squadron_history.htm",
+   "domain": "www.usps.org",
+   "title": "SQUADRON HISTORY",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 28234,
+   "fetched_at": "2026-06-18T20:50:10Z"
+  },
+  {
+   "url": "http://www.usps.org/national/rules/Squadron_Bylaws.html",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:50:12Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/PHOTO%20ALBUM%20INDEX%20PAGE.htm",
+   "domain": "www.usps.org",
+   "title": "SQUADRON ACTIVITY PHOTO ALBUMS",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 7602,
+   "fetched_at": "2026-06-18T20:50:13Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/smithtown/vesselsafety2.htm",
+   "domain": "www.usps.org",
+   "title": "Untitled Form Page",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 5491,
+   "fetched_at": "2026-06-18T20:50:15Z"
+  },
+  {
+   "url": "http://usps.org/national/itcom/disclaimer.html",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:50:16Z"
+  },
+  {
+   "url": "http://usps.org/national/itcom/trademark.html",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "failed — HTTPError: HTTP Error 404: Not Found. Next check: open the URL in a browser; if it loads, the server may be blocking automated clients.",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:50:18Z"
+  },
+  {
+   "url": "https://www.usps.org/national/historian/uspshistory.html",
+   "domain": "www.usps.org",
+   "title": "USPS Historians Committee",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 39843,
+   "fetched_at": "2026-06-18T20:50:19Z"
+  },
+  {
+   "url": "https://www.usps.org/cgi-bin-nat/historian/heraldry.cgi?A5765",
+   "domain": "www.usps.org",
+   "title": "Burgee & Heraldry Display",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 3594,
+   "fetched_at": "2026-06-18T20:50:21Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/d26/",
+   "domain": "www.usps.org",
+   "title": "",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 314,
+   "fetched_at": "2026-06-18T20:50:23Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/swampfox/SFcalendar.html",
+   "domain": "www.usps.org",
+   "title": "SF Calendar.html",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 4061,
+   "fetched_at": "2026-06-18T20:50:24Z"
+  },
+  {
+   "url": "https://www.usps.org/localusps/swampfox/bridge",
+   "domain": "www.usps.org",
+   "title": "SF Bridge 16.html",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 6138,
+   "fetched_at": "2026-06-18T20:50:26Z"
+  },
+  {
+   "url": "https://www.usps.org/login/member-s-log-in",
+   "domain": "www.usps.org",
+   "title": "Member Website",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 32305,
+   "fetched_at": "2026-06-18T20:50:28Z"
+  },
+  {
+   "url": "http://www.usps.org/localusps/swampfox/documents/2019Directory-1a.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:50:29Z"
+  },
+  {
+   "url": "https://www.usps.org/login/member-s-log-in",
+   "domain": "www.usps.org",
+   "title": "Member Website",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 32305,
+   "fetched_at": "2026-06-18T20:50:30Z"
+  },
+  {
+   "url": "http://www.usps.org/localusps/swampfox/documents/foxtales_oct-nov17.pdf",
+   "domain": "www.usps.org",
+   "title": null,
+   "http_status": null,
+   "outcome": "recorded link only — PDF document, body not downloaded",
+   "depth": 3,
+   "bytes": null,
+   "fetched_at": "2026-06-18T20:50:31Z"
+  },
+  {
+   "url": "https://www.usps.org/login/member-s-log-in",
+   "domain": "www.usps.org",
+   "title": "Member Website",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 32305,
+   "fetched_at": "2026-06-18T20:50:32Z"
+  },
+  {
+   "url": "https://www.usps.org/login/member-s-log-in",
+   "domain": "www.usps.org",
+   "title": "Member Website",
+   "http_status": 200,
+   "outcome": "fetched ok",
+   "depth": 3,
+   "bytes": 32305,
+   "fetched_at": "2026-06-18T20:50:34Z"
   }
  ]
 }

@@ -1,0 +1,666 @@
+{
+  "explanation": "URLs discovered for this domain but not fetched because the page cap or time limit was reached. Raise max_pages in scrape/crawl.py and re-run; already-fetched pages are skipped automatically.",
+  "count": 132,
+  "urls": [
+    {
+      "url": "http://www.usps.org/national/vsc/",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/swampfox/"
+    },
+    {
+      "url": "http://www.usps.org/localusps/swampfox/uspsNews.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/swampfox/"
+    },
+    {
+      "url": "http://www.usps.org/national/natsec/stormcentral.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/swampfox/"
+    },
+    {
+      "url": "http://www.usps.org/DB2000/DB2000HelpIndex.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/swampfox/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/vermilion/vermilion.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/vermilion/vps_bridge.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/vermilion/vps_vsc.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/vermilion/vps_classes.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/vermilion/vps_recent_events.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "http://www.usps.org/national/admin_dept/membenefits.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/vermilion/Ball_May26.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/vermilion/Ball_Apr26.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/vermilion/Ball_Mar26.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/vermilion/Ball_Feb26.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/vermilion/Ball_Dec25.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/vermilion/Ball_Nov25.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/vermilion/Ball_Oct25.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/vermilion/VSPS_Bylaws_2012.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "http://www.USPS.org/newpublic2/index.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/vermilion/"
+    },
+    {
+      "url": "http://www.usps.org/localusps/d9/",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/anchorbay/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/anchorbay/Officers.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/anchorbay/"
+    },
+    {
+      "url": "http://www.usps.org/cgi-bin-nat/tools/roster/index.cgi?0120",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/anchorbay/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/anchorbay/vsc.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/anchorbay/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/anchorbay/Forms.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/anchorbay/"
+    },
+    {
+      "url": "http://www.usps.org/cgi-bin-nsbt/test.cgi",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/anchorbay/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/anchorbay/Classes.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/anchorbay/"
+    },
+    {
+      "url": "http://www.usps.org/nsbt/modules.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/anchorbay/"
+    },
+    {
+      "url": "https://www.usps.org/newpublic2/meritmarks/criteria.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/anchorbay/"
+    },
+    {
+      "url": "https://www.usps.org/national/itcom/disclaimer.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/anchorbay/"
+    },
+    {
+      "url": "https://www.usps.org/national/itcom/privacy.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/anchorbay/"
+    },
+    {
+      "url": "https://www.usps.org/national/itcom/trademark.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/anchorbay/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/calendar.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2026%20IceCreamSocial.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2026%20July%20Meeting.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2026%20Summer%20Rendezvous.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2026%20Musikfest.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2026%20IronPigs.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/MemCom1.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2026%20Beltzville.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2026%20MayMeeting.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2026April%20Meet.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2026St%20Pattys.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2026COW.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2026%20Jan%20ABC.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2025Holiday.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2025Oktoberfest.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2025%20Musikfest.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2025%20Phantoms.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2025%20ABCourse.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2024WinePairing.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2024November%20Meeting.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2024chili.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2024%20August%20Meeting.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2024FoundersDay.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/2023%20Cookout.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "http://www.usps.org/national/membership/youth/",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "http://www.usps.org/national/admin_dept/membenefitslist.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "http://www.usps.org/delhigh/MemCom1.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "http://www.usps.org/php/membership/im_process.php",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/Classes.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/Delhighlights.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/Delhighlights/2012-5_Oct_Nov.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/Delhighlights/2011-5_oct_nov.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/Delhighlights/2011-4_aug_sep.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/Delhighlights/2012-1_feb_mar.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/delhigh/Bridge.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/delhigh/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/lockport/index.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/lockport/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/lockport/education.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/lockport/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/lockport/officers.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/lockport/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/lockport/meetings.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/lockport/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/lockport/newsletters.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/lockport/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/lockport/vsc.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/lockport/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/lockport/join.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/lockport/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/lockport/neighbors.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/lockport/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/lockport/PixPage.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/lockport/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/lockport/archives.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/lockport/"
+    },
+    {
+      "url": "http://www.usps.org/localusps/newyork/index.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/newyork/officers.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/newyork/courses-new.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/newyork/events.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/newyork/calendar.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/newyork/meetings.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/newyork/history.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/newyork/crowsnestnewsletter.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/newyork/nauticallinks.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/newyork/contact.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "http://www.usps.org/national/pubcom/ccDistinction.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "http://www.usps.org/national/eddept/main.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/newyork/Piloting Interactive.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "http://usps.org/national/itcom/privacy.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/newyork/By Laws.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/newyork/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/ok/welcome.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/ok/aboutus.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/ok/dingy.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/ok/deskcdr.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/ok/educatn.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/ok/safety.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/ok/mbrinfo.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/ok/bylaws.doc",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/ok/index.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/ok/calendar.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/ok/links.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/ok/mbrship.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "http://www.usps.org/d21/",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "http://www.usps.org/national/envcom/",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "http://www.usps.org/newpublic2/partners.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/ok/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/potomac/index.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/potomac/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/potomac/ribber/March 2022 Ribber.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/potomac/"
+    },
+    {
+      "url": "http://usps.org/index.php/2015-05-08-10-34-31",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/potomac/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/saybrook/events.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/saybrook/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/saybrook/bridge.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/saybrook/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/saybrook/classes.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/saybrook/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/saybrook/history.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/saybrook/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/saybrook/the_outer_light.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/saybrook/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/saybrook/safety_check.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/saybrook/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/saybrook/links.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/saybrook/"
+    },
+    {
+      "url": "http://usps.org",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/saybrook/"
+    },
+    {
+      "url": "http://www.usps.org/localusps/d1/",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/saybrook/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/d2/storm_king/skwhat.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/d2/storm_king/"
+    },
+    {
+      "url": "http://www.usps.org/national/admin_dept/benefitsdescription.htm#Educational",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/d2/storm_king/"
+    },
+    {
+      "url": "http://www.usps.org/national/govprcom",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/d2/storm_king/"
+    },
+    {
+      "url": "http://www.usps.org/x/x.pl/x/x.cgi?admin_dept/memberbenefits/RigidBoatsDisc.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/d2/storm_king/"
+    },
+    {
+      "url": "http://www.usps.org/x/x.pl/x/x.cgi?admin_dept/memberbenefits/movingdayboxes.pdf",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/d2/storm_king/"
+    },
+    {
+      "url": "http://www.usps.org/national/admin_dept/memberbenefits/maritech.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/d2/storm_king/"
+    },
+    {
+      "url": "http://www.usps.org/localusps/d2/d2event.html#skc",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/d2/storm_king/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/d2/storm_king/skoff1a.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/d2/storm_king/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/d2/storm_king/skcrown.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/d2/storm_king/"
+    },
+    {
+      "url": "http://www.usps.org/d2/d2event.html#ske",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/d2/storm_king/"
+    },
+    {
+      "url": "https://www.usps.org/localusps/d2/storm_king/sklog.htm",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/d2/storm_king/"
+    },
+    {
+      "url": "http://www.usps.org/d2/d2links.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/d2/storm_king/"
+    },
+    {
+      "url": "http://www.usps.org/localusps/d2/d2links.html",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/d2/storm_king/"
+    },
+    {
+      "url": "http://www.usps.org/d2/",
+      "depth": 3,
+      "discovered_from": "https://www.usps.org/localusps/d2/storm_king/"
+    }
+  ]
+}

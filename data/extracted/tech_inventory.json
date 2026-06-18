@@ -27,25 +27,50 @@
    "crawled": true
   },
   {
-   "pages_scanned": 1,
+   "pages_scanned": 244,
    "ga4": [
-    "G-0M1N6DYNBW"
+    "G-0M1N6DYNBW",
+    "G-GGW5NS7YYS"
    ],
-   "universal_analytics": [],
+   "universal_analytics": [
+    "UA-30121804-1"
+   ],
    "gtm": [],
    "meta_pixel_pages": 0,
-   "platform": "Joomla",
-   "platform_evidence": "generator meta \"Joomla! - Open Source Content Management\"",
-   "generator_meta": "Joomla! - Open Source Content Management",
+   "platform": "Custom PHP",
+   "platform_evidence": "form posts to a .php endpoint on 11/244 pages",
+   "generator_meta": "CodeCharge Studio 5.1.1.18990",
    "social": [
+    "facebook.com/beaufortpwrsquadron",
+    "facebook.com/eriepowersquadron",
+    "facebook.com/facebook.com",
+    "facebook.com/groups",
+    "facebook.com/keywestsailpowersquadron",
+    "facebook.com/media",
+    "facebook.com/ny.sailpower.squadron",
+    "facebook.com/okcusps",
+    "facebook.com/prsps",
+    "facebook.com/seeyouonthewater",
+    "facebook.com/smithtownbaypowersquadron",
+    "facebook.com/susquehannocksps",
     "facebook.com/uspowersquadrons",
+    "facebook.com/usps.charlesriver",
+    "facebook.com/uspsmemberbenefits",
+    "facebook.com/uspsmidmich",
     "instagram.com/americasboatingclub",
     "linkedin.com/company/americasboatingclub",
+    "linkedin.com/company/united-states-power-squadrons",
+    "twitter.com/boatingisfun",
+    "twitter.com/nysailpower",
+    "twitter.com/official_amisps",
+    "twitter.com/okcusps",
+    "twitter.com/smithtownbay",
     "twitter.com/uspsabc",
+    "youtube.com/channel/UC1c_rFyt1fGqvdiSauAijAg",
     "youtube.com/user/uspowersquadrons"
    ],
    "domain": "usps.org",
-   "role": "Legacy parent / member site — homepage captured live 2026-06-14",
+   "role": "Legacy parent / member site — full site crawled 2026-06-18",
    "crawled": true
   },
   {
