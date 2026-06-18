@@ -383,6 +383,9 @@ table.log tr:hover td{background:rgba(18,48,78,.045)}
 #freshchart{width:100%;height:auto;display:block}
 /* Web Properties — live homepage screenshot gallery */
 .prop-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:18px;margin-top:4px}
+/* On phones the gallery stacks to one column; give the cards more vertical
+   room so each property reads as its own entity, not one continuous strip. */
+@media(max-width:560px){.prop-gallery{gap:30px}}
 .prop-card{border:1px solid var(--rule);background:var(--card);overflow:hidden;display:flex;flex-direction:column;
   box-shadow:0 8px 20px -16px rgba(18,48,78,.55);transition:box-shadow .15s,transform .15s}
 .prop-card:hover{box-shadow:0 14px 28px -16px rgba(18,48,78,.6);transform:translateY(-2px)}
