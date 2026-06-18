@@ -383,9 +383,6 @@ table.log tr:hover td{background:rgba(18,48,78,.045)}
 #freshchart{width:100%;height:auto;display:block}
 /* Web Properties — live homepage screenshot gallery */
 .prop-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:18px;margin-top:4px}
-/* On phones the gallery stacks to one column; give the cards more vertical
-   room so each property reads as its own entity, not one continuous strip. */
-@media(max-width:560px){.prop-gallery{gap:30px}}
 .prop-card{border:1px solid var(--rule);background:var(--card);overflow:hidden;display:flex;flex-direction:column;
   box-shadow:0 8px 20px -16px rgba(18,48,78,.55);transition:box-shadow .15s,transform .15s}
 .prop-card:hover{box-shadow:0 14px 28px -16px rgba(18,48,78,.6);transform:translateY(-2px)}
@@ -398,6 +395,15 @@ table.log tr:hover td{background:rgba(18,48,78,.045)}
 .prop-name .ext{color:var(--port-red);font-size:9.5px}
 .prop-role{font-size:11.5px;color:var(--ink-soft);margin:3px 0 7px;line-height:1.35}
 .prop-meta{font-family:var(--mono);font-size:10px;color:var(--ink-faint);line-height:1.6}
+/* On phones the gallery stacks to one column; give the cards more vertical
+   room and a slightly firmer edge so each property reads as its own entity,
+   not one continuous strip. Placed after the base .prop-card rules so the
+   border override wins (media queries add no specificity). Desktop keeps the
+   lighter --rule border. */
+@media(max-width:560px){
+  .prop-gallery{gap:30px}
+  .prop-card{border-color:var(--ink-faint)}
+}
 #clubmap .dot{fill:#12304e;opacity:.5;transition:r .15s}
 #clubmap .dot.active{fill:var(--buoy-gold);stroke:#12304e;stroke-width:1;opacity:.95}
 #clubmap .dot:hover{opacity:1}
