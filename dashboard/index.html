@@ -277,7 +277,7 @@ svg text{font-family:var(--mono);fill:var(--ink-soft)}
 /* severity-scale legend (Problems + Funnels) */
 /* 2×2 grid so the four levels never wrap 3-and-1; intro spans the top row.
    Collapses to a single column on small phones. */
-.sev-legend{margin:12px 0;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:9px 18px}
+.sev-legend{margin:12px 0;display:grid;grid-template-columns:auto auto;justify-content:start;align-items:center;gap:9px 18px}
 .sev-legend-intro{grid-column:1/-1;font-size:12px;color:var(--ink-soft);font-style:italic;margin:0}
 .sev-legend-item{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-size:12px}
 @media(max-width:560px){.sev-legend{grid-template-columns:1fr}}
