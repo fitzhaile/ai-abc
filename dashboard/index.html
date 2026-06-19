@@ -135,6 +135,25 @@ header.mast::after{ /* faint compass rose */
   50%{transform:translateY(-50%) translateX(5px)}
 }
 @media(prefers-reduced-motion:reduce){.tabbar::after{animation:none}}
+/* Wide tables (analytics matrix, platform table) scroll sideways on narrow
+   screens. Reuse the tab bar's affordance: a fading right-edge chevron, shown
+   by JS (.more-right) only while the table can still scroll right. */
+.xscroll{position:relative}
+.xscroll-in{overflow-x:auto}
+.xscroll::before{
+  content:"";position:absolute;top:0;right:0;bottom:0;width:40px;z-index:2;
+  background:linear-gradient(to right, rgba(250,246,236,0), var(--card) 72%);
+  opacity:0;transition:opacity .18s ease;pointer-events:none;
+}
+.xscroll::after{
+  content:"\203A";position:absolute;top:50%;right:7px;z-index:3;
+  transform:translateY(-50%);
+  font-family:var(--display);font-weight:700;font-size:23px;line-height:1;
+  color:var(--ink);opacity:0;transition:opacity .18s ease;pointer-events:none;
+  animation:tabNudge 1.2s ease-in-out infinite;
+}
+.xscroll.more-right::before,.xscroll.more-right::after{opacity:1}
+@media(prefers-reduced-motion:reduce){.xscroll::after{animation:none}}
 @media(max-width:700px){
   .tabbar .tabs{padding:0 16px}
   .tabbar button{padding:10px 11px 8px;font-size:11px;letter-spacing:.1em}
@@ -673,13 +692,13 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     </div>
     <div class="card" style="margin-top:22px">
       <h3>Analytics coverage matrix <span class="h3-flag">IDs shown; blank = not detected</span></h3>
-      <div style="overflow-x:auto"><table class="log matrix" id="analytics-matrix"></table></div>
+      <div class="xscroll"><div class="xscroll-in"><table class="log matrix" id="analytics-matrix"></table></div></div>
       <p class="dim" id="analytics-note" style="font-size:12px;margin-top:8px"></p>
     </div>
     <div class="grid g2" style="margin-top:22px">
       <div class="card">
         <h3>Tech platform by property <span class="h3-flag">from page source</span></h3>
-        <div style="overflow-x:auto"><table class="log" id="platform-table"></table></div>
+        <div class="xscroll"><div class="xscroll-in"><table class="log" id="platform-table"></table></div></div>
         <p class="dim" id="platform-note" style="font-size:12px;margin-top:8px"></p>
       </div>
       <div class="card">
@@ -916,6 +935,24 @@ window.addEventListener('hashchange', function(){
 });
 activateTab((location.hash || '').replace('#', '') || TABS[0][0], false);
 updateNavScroll();
+
+/* Wide tables (analytics matrix, platform table) scroll sideways on narrow
+   screens — show the tab bar's fading chevron while there is more to the right.
+   A ResizeObserver on the table covers what plain listeners miss: each table is
+   filled by JS after load and lives in a panel that starts hidden, so it has no
+   width until its tab is opened. The scroll listener hides the chevron once you
+   reach the end. */
+document.querySelectorAll('.xscroll').forEach(function(wrap){
+  var inner = wrap.querySelector('.xscroll-in');
+  if(!inner) return;
+  var table = inner.querySelector('table');
+  function upd(){ wrap.classList.toggle('more-right',
+    inner.scrollWidth - inner.clientWidth - inner.scrollLeft > 4); }
+  inner.addEventListener('scroll', upd, {passive:true});
+  window.addEventListener('resize', upd);
+  if(window.ResizeObserver && table){ new ResizeObserver(upd).observe(table); }
+  upd();
+});
 
 /* ---------- per-tab KPI strips ---------- */
 // Each tab carries its own KPI row summarizing that tab's content (not one
@@ -1901,7 +1938,7 @@ document.getElementById('vid-lede').textContent =
     var body = el('div', {class:'prop-body'});
     var name = el('a', {class:'prop-name', href:url, target:'_blank', rel:'noopener noreferrer'});
     name.appendChild(document.createTextNode(p.domain + ' '));
-    name.appendChild(el('span', {class:'ext'}, '↗'));
+    name.appendChild(el('span', {class:'ext'}, '↗︎'));  // U+FE0E = force red text arrow, not an emoji on iOS
     body.appendChild(name);
     body.appendChild(el('div', {class:'prop-role'}, (p.role || '').split('—')[0].trim()));
     var idCount = (p.ga4||[]).length + (p.universal_analytics||[]).length + (p.gtm||[]).length;
@@ -2069,7 +2106,7 @@ function severityLegend(intro){
       ev.appendChild(document.createTextNode(' · '));
       ev.appendChild(el('a', {class:'finding-link', href:url, target:'_blank',
         rel:'noopener noreferrer', title:'Open ' + url},
-        '↗ ' + url.replace(/^https?:\/\//, '').replace(/\/$/, '')));
+        '↗︎ ' + url.replace(/^https?:\/\//, '').replace(/\/$/, '')));  // U+FE0E forces text, not emoji
     }
     card.appendChild(ev);
     fw.appendChild(card);
@@ -2138,7 +2175,7 @@ function severityLegend(intro){
                    target:'_blank', rel:'noopener noreferrer', title:'Open ' + url})
         : el('div', {class:'funnel-step'});
       var n = el('span', {class:'funnel-step-n'}, 'STEP ' + (i+1));
-      if(url) n.appendChild(el('span', {class:'funnel-step-ext'}, ' ↗'));
+      if(url) n.appendChild(el('span', {class:'funnel-step-ext'}, ' ↗︎'));  // U+FE0E forces text, not emoji
       st.appendChild(n);
       st.appendChild(el('span', {class:'funnel-step-label'}, s[0]));
       st.appendChild(el('span', {class:'funnel-step-detail'}, s[1]));
