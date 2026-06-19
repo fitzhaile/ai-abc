@@ -690,7 +690,22 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     </div>
   </section>
 
-  <!-- 6. PROBLEMS -->
+  <!-- 6. FUNNELS -->
+  <section id="funnels" role="tabpanel" hidden>
+    <div class="sec-head"><h2>Conversion Funnels</h2>
+      <span class="lede" id="funnels-lede"></span></div>
+    <div class="kpis" data-kpis="funnels"></div>
+    <p class="sec-note audit-note">How a visitor gets from the flagship to the four things the org needs them
+    to do — join, find a class, shop, donate — step by step as the audit observed them on 11&nbsp;Jun&nbsp;2026.
+    <b>Each funnel carries one severity pill for the path as a whole</b> — the audit's read of how well it
+    converts, on the same Critical&nbsp;→&nbsp;Working scale as the Problems tab; red-flagged steps are where a
+    reasonable visitor stalls or leaves. <b>Audit findings, not measured traffic:</b> no conversion or drop-off
+    data here, only the observed path and its friction.</p>
+    <div id="funnel-sev-legend"></div>
+    <div id="funnel-list"></div>
+  </section>
+
+  <!-- 7. PROBLEMS -->
   <section id="problems" role="tabpanel" hidden>
     <div class="sec-head"><h2>Problems &amp; Findings</h2>
       <span class="lede" id="problems-lede"></span></div>
@@ -714,21 +729,6 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
       <h3>All findings <span class="h3-flag" id="findings-flag"></span></h3>
       <div id="findings"></div>
     </div>
-  </section>
-
-  <!-- 7. FUNNELS -->
-  <section id="funnels" role="tabpanel" hidden>
-    <div class="sec-head"><h2>Conversion Funnels</h2>
-      <span class="lede" id="funnels-lede"></span></div>
-    <div class="kpis" data-kpis="funnels"></div>
-    <p class="sec-note audit-note">How a visitor gets from the flagship to the four things the org needs them
-    to do — join, find a class, shop, donate — step by step as the audit observed them on 11&nbsp;Jun&nbsp;2026.
-    <b>Each funnel carries one severity pill for the path as a whole</b> — the audit's read of how well it
-    converts, on the same Critical&nbsp;→&nbsp;Working scale as the Problems tab; red-flagged steps are where a
-    reasonable visitor stalls or leaves. <b>Audit findings, not measured traffic:</b> no conversion or drop-off
-    data here, only the observed path and its friction.</p>
-    <div id="funnel-sev-legend"></div>
-    <div id="funnel-list"></div>
   </section>
 
   <!-- 8. OPPORTUNITIES -->
@@ -842,8 +842,8 @@ var TABS = [
   ['commerce',      'Commerce'],
   ['channel',       'Channel'],
   ['fleet',         'Web Properties'],
-  ['problems',      'Problems'],
   ['funnels',       'Funnels'],
+  ['problems',      'Problems'],
   ['opportunities', 'Opportunities'],
   ['provenance',    'Sources']
 ];
