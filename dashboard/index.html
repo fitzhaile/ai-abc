@@ -114,7 +114,7 @@ header.mast::after{ /* faint compass rose */
 .tabbar button[aria-selected="true"]{
   color:var(--paper);background:var(--ink);border-bottom-color:var(--buoy-gold);
 }
-/* "more tabs this way" affordance: a paper fade + a gently nudging chevron at
+/* "more tabs this way" affordance: a paper fade + a static chevron at
    the right edge, shown by JS (.more-right) only while the row can still scroll
    right. Both are click-through so they never block the tab underneath. */
 .tabbar::before{
@@ -124,17 +124,15 @@ header.mast::after{ /* faint compass rose */
 }
 .tabbar::after{
   content:"\203A";position:absolute;top:50%;right:11px;z-index:3;
-  transform:translateY(-50%);
+  transform:translateY(calc(-50% - 2px));
   font-family:var(--display);font-weight:700;font-size:27px;line-height:1;
   color:var(--ink);opacity:0;transition:opacity .18s ease;pointer-events:none;
-  animation:tabNudge 1.2s ease-in-out infinite;
 }
 .tabbar.more-right::before,.tabbar.more-right::after{opacity:1}
 @keyframes tabNudge{
   0%,100%{transform:translateY(-50%) translateX(0)}
   50%{transform:translateY(-50%) translateX(5px)}
 }
-@media(prefers-reduced-motion:reduce){.tabbar::after{animation:none}}
 /* Wide tables (analytics matrix, platform table) scroll sideways on narrow
    screens. Reuse the tab bar's affordance: a fading right-edge chevron, shown
    by JS (.more-right) only while the table can still scroll right. */
@@ -625,17 +623,9 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
     <div class="kpis" data-kpis="commerce"></div>
     <p class="sec-note">The Ship's Store catalog was walked at the 20-second pace its robots.txt
     requests. Satellite storefronts on vendor domains are charted, including one that has gone dark.</p>
-    <div class="grid g3">
+    <div class="grid g2e">
       <div class="card"><h3>Ship's Store by department</h3><div id="storecats"></div></div>
-      <div class="card"><h3>Price summary (USD)</h3><div id="pricestats"></div></div>
       <div class="card"><h3>Satellite storefronts</h3><div id="satellites"></div></div>
-    </div>
-    <div class="card" style="margin-top:22px">
-      <h3>Ship's Store — full product list <span class="h3-flag" id="manifest-flag"></span></h3>
-      <div style="max-height:420px;overflow-y:auto;border-bottom:1px solid var(--rule)">
-        <table class="log" id="manifest"></table>
-      </div>
-      <p class="dim" style="font-size:12px;margin-top:8px">scroll for the full list — every product is listed</p>
     </div>
     <div class="grid g2e" style="margin-top:22px">
       <div class="card">
@@ -646,6 +636,13 @@ a{color:var(--ink);text-decoration-color:var(--buoy-gold)}
         <h3>Price ranges across the three storefronts</h3>
         <svg id="rangeplot" viewBox="0 0 560 190"></svg>
       </div>
+    </div>
+    <div class="card" style="margin-top:22px">
+      <h3>Ship's Store — full product list <span class="h3-flag" id="manifest-flag"></span></h3>
+      <div style="max-height:420px;overflow-y:auto;border-bottom:1px solid var(--rule)">
+        <table class="log" id="manifest"></table>
+      </div>
+      <p class="dim" style="font-size:12px;margin-top:8px">scroll for the full list — every product is listed</p>
     </div>
   </section>
 
@@ -1544,18 +1541,6 @@ document.getElementById('com-lede').textContent =
   sc.appendChild(el('p',{class:'dim',style:'font-size:12px;margin-top:6px'},
     'a product can sail under several departments'));
 
-  var ps = document.getElementById('pricestats');
-  [['Ship’s Store', D.commerce.ships_store.price_stats],
-   ['EnrolMart (study)', D.commerce.enrolmart.price_stats],
-   ['C.P. Dean (awards)', D.commerce.cpdean_awards.price_stats]].forEach(function(kv){
-    var blk = el('div', {style:'border-bottom:1px solid var(--rule);padding:16px 0'});
-    blk.appendChild(el('div', {style:'font-family:var(--display);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)'}, kv[0]));
-    var s = kv[1];
-    blk.appendChild(el('div', {style:'font-family:var(--mono);font-size:12.5px;margin-top:2px'},
-      s ? (s.count + ' items · ' + usd(s.min) + ' – ' + usd(s.max) + ' · median ' + usd(s.median)) : 'no priced items captured'));
-    ps.appendChild(blk);
-  });
-
   var sat = document.getElementById('satellites');
   var g = D.commerce.geiger_vessel_examiner;
   var notice = el('div', {class:'notice', style:'margin-top:2px'});
@@ -2389,7 +2374,6 @@ function severityLegend(intro){
     manifest:[{name:'Ship’s Store catalog',url:dsURL('store_products')}],
     pricehist:[{name:'Ship’s Store catalog',url:dsURL('store_products')}],
     satellites:[{name:'Geiger vessel-examiner',url:geigerURL},{name:'C.P. Dean awards',url:cpdeanURL}],
-    pricestats:[{name:'Ship’s Store',url:dsURL('store_products')},{name:'EnrolMart',url:dsURL('enrolmart_products')},{name:'C.P. Dean',url:cpdeanURL}],
     rangeplot:[{name:'Ship’s Store',url:dsURL('store_products')},{name:'EnrolMart',url:dsURL('enrolmart_products')},{name:'C.P. Dean',url:cpdeanURL}],
     yearchart:[{name:'Channel catalog',url:dsURL('videos')}],
     durations:[{name:'Channel catalog',url:dsURL('videos')}],
