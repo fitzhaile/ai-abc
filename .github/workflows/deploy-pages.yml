@@ -1,11 +1,13 @@
 # Publishes the static dashboard to GitHub Pages.
 #
-# What it does, in plain English: on every push to main that touches the
-# dashboard (or this workflow), it takes the already-built dashboard/ folder
-# — index.html plus the committed data.js/data.json — and serves that folder
-# as the site root. No build step: the site is pre-built and committed, exactly
-# like the Render setup in render.yaml. Because dashboard/ becomes the site
-# root, index.html's relative <script src="data.js"> resolves correctly.
+# What it does, in plain English: on every push to main, it takes the
+# already-built dashboard/ folder — index.html plus the committed
+# data.js/data.json — and serves that folder as the site root. No build step:
+# the site is pre-built and committed, exactly like the Render setup in
+# render.yaml. Triggering on every push (no path filter) keeps this Pages site
+# in lockstep with Render, which also redeploys on every push — so both URLs
+# always show the same content. Because dashboard/ becomes the site root,
+# index.html's relative <script src="data.js"> resolves correctly.
 #
 # Prerequisites (one-time, in repo Settings → Pages):
 #   - Set "Source" to "GitHub Actions".
@@ -20,10 +22,7 @@ name: Deploy dashboard to GitHub Pages
 
 on:
   push:
-    branches: [main]
-    paths:
-      - 'dashboard/**'
-      - '.github/workflows/deploy-pages.yml'
+    branches: [main]        # every push redeploys, matching Render — no path filter
   workflow_dispatch:        # allow manual redeploys from the Actions tab
 
 # Least-privilege token: read the repo, write Pages, mint the OIDC token
