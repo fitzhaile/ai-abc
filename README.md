@@ -146,15 +146,23 @@ explicit "what was left unfetched" reports, resumable crawls, and a hard
 wall-clock limit. The find-a-club searches replay the exact form POST the
 page itself makes, a handful of times, seconds apart.
 
-## Deploying (Render)
+## Deploying (Render + GitHub Pages)
 
-`render.yaml` defines the dashboard as a Render **static site** publishing
-the `dashboard/` directory with no build step (the generated `data.js` is
-committed). To set it up: push this repo to GitHub, then in the Render
-dashboard choose **New → Blueprint**, select the repo, and approve the
-`abc-ecosystem-dashboard` service it finds. Every later `git push` to the
-default branch auto-deploys. To publish refreshed data, re-run the pipeline
-and commit the regenerated `dashboard/data.js` + `data.json`.
+The dashboard is published two ways. Both auto-deploy the `dashboard/`
+directory on every push to `main` with no build step (the generated `data.js`
+is committed), so the two URLs always show the same content:
+
+- **Render** (`render.yaml`) — a static-site Blueprint. To set it up: push this
+  repo to GitHub, then in the Render dashboard choose **New → Blueprint**,
+  select the repo, and approve the `abc-ecosystem-dashboard` service it finds.
+- **GitHub Pages** (`.github/workflows/deploy-pages.yml`) — a GitHub Actions
+  workflow that uploads `dashboard/` as the Pages artifact, live at
+  https://fitzhaile.github.io/ai-abc/. Repo **Settings → Pages** must have
+  **Source: GitHub Actions**. Free Pages requires the repo to be **public**
+  (Render works regardless of repo visibility).
+
+To publish refreshed data, re-run the pipeline and commit the regenerated
+`dashboard/data.js` + `data.json`; the next push redeploys both.
 
 ## Layout
 
@@ -165,5 +173,5 @@ data/      crawl index/log, raw HTML, interactive captures, extracted datasets
            (data/geo_raw/ holds the re-downloadable Census shapefile + population
             CSV and is gitignored; the simplified state_geo.json IS committed)
 dashboard/ index.html (static, no dependencies) + generated data.js/data.json
-docs/      screenshots from the verification pass
+.github/   workflows/deploy-pages.yml — GitHub Pages deploy (see Deploying)
 ```
