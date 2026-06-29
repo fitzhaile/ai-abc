@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Deploy the pre-built static dashboard to data.fitzhaile.com/d/americas-boating/
+# Deploy the pre-built static dashboard to data.fitzhaile.com/d/americas-boating-club/
 # on Bluehost via FTP. There is no build step: index.html + data.js + assets/
 # are committed and uploaded as-is.
 #
@@ -57,4 +57,4 @@ for f in $(cd "${SRC}" && find . -type f -not -name data.json -not -name '.DS_St
 done
 
 echo "==> done: ${count} files uploaded"
-echo "    live at https://data.fitzhaile.com/d/americas-boating/"
+echo "    live at https://data.fitzhaile.com/d/americas-boating-club/"
