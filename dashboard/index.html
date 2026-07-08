@@ -17,20 +17,57 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="America's Boating Club — An audit of the Web Ecosystem">
 <meta name="twitter:card" content="summary_large_image">
-<!-- Google tag (gtag.js) — only on the production host, so Render/Pages
-     deploys and local previews don't pollute analytics -->
+
+<!-- BEGIN: Google tag (gtag.js) — allowlisted to data.fitzhaile.com only, so
+     local previews and the Render/Pages mirrors don't pollute analytics.
+     Tab switches (hash changes) are sent as virtual page_views. -->
 <script>
-if (location.hostname === 'data.fitzhaile.com') {
-  var gtagScript = document.createElement('script');
-  gtagScript.async = true;
-  gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-GED32DB63G';
-  document.head.appendChild(gtagScript);
+(function () {
+  // Allowlist, not blocklist: GA4 runs ONLY on the production host. Local
+  // previews, the Render/Pages mirrors, and any future host stay silent
+  // without needing to be enumerated here.
+  var PRODUCTION_HOST = 'data.fitzhaile.com';
+  if (location.hostname !== PRODUCTION_HOST) {
+    console.debug('[analytics] disabled: host "' + location.hostname +
+      '" is not the production host "' + PRODUCTION_HOST + '" — no GA4 script loaded, nothing fires');
+    return;
+  }
+
+  // Load gtag.js dynamically (replaces the <script async src=...> tag)
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GED32DB63G';
+  document.head.appendChild(s);
+
   window.dataLayer = window.dataLayer || [];
+  // On window (not a local function) so console debugging and any future
+  // inline handlers can call gtag() too.
   window.gtag = function(){dataLayer.push(arguments);};
   gtag('js', new Date());
-  gtag('config', 'G-GED32DB63G');
-}
+  gtag('config', 'G-GED32DB63G', { send_page_view: false });
+
+  function tabUrl() {
+    var frag = location.hash.replace('#', '');
+    return location.origin + location.pathname + (frag ? frag + '/' : '');
+  }
+
+  var lastUrl = null;
+  function sendPageView() {
+    var url = tabUrl();
+    if (url === lastUrl) return;
+    lastUrl = url;
+    gtag('event', 'page_view', {
+      page_location: url,
+      page_title: document.title
+    });
+  }
+
+  sendPageView();
+  window.addEventListener('hashchange', sendPageView);
+})();
 </script>
+<!-- END: Google tag (gtag.js) -->
+
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2312304e'/%3E%3Ccircle cx='8' cy='8' r='4' fill='%23f5efe2'/%3E%3Ccircle cx='8' cy='8' r='1.6' fill='%23b3382e'/%3E%3C/svg%3E">
 <style>
 /* ============================================================
