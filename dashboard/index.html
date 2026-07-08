@@ -23,6 +23,30 @@
      Tab switches (hash changes) are sent as virtual page_views. -->
 <script>
 (function () {
+  // Opt-out for the board (and us): visiting once with ?notrack in the URL
+  // marks this browser in localStorage and GA4 never loads here again.
+  // Visiting with ?track undoes it. Checked before the host guard so the
+  // whole cycle is testable on localhost.
+  try {
+    var params = new URLSearchParams(location.search);
+    if (params.has('notrack')) {
+      localStorage.setItem('ga-optout', '1');
+      console.debug('[analytics] opt-out saved: this browser will no longer be tracked, even after the ?notrack is gone from the URL. Visit with ?track to undo.');
+    } else if (params.has('track')) {
+      localStorage.removeItem('ga-optout');
+      console.debug('[analytics] opt-out cleared: this browser will be tracked again on the production host.');
+    }
+    if (localStorage.getItem('ga-optout') === '1') {
+      window['ga-disable-G-GED32DB63G'] = true; // official gtag kill switch, in case a future edit loads gtag some other way
+      console.debug('[analytics] disabled: this browser opted out via the ?notrack link — no GA4 script loaded, nothing fires.');
+      return;
+    }
+  } catch (e) {
+    // localStorage unavailable (blocked storage, some private modes): opt-out
+    // cannot persist here, so tracking proceeds as normal.
+    console.debug('[analytics] note: localStorage unavailable (' + e + ') — the ?notrack opt-out cannot work in this browser, tracking proceeds.');
+  }
+
   // Allowlist, not blocklist: GA4 runs ONLY on the production host. Local
   // previews, the Render/Pages mirrors, and any future host stay silent
   // without needing to be enumerated here.
